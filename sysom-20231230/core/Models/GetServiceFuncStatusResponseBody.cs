@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization succeeds.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. If the authorization fails, check the <c>message</c> field for the detailed fault message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Locks { get; set; }
 
                 /// <summary>
-                /// <para>The tracing cycle.</para>
+                /// <para>The tracing interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -114,9 +114,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>If code is Success, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>result: code=1 msg=(Request failed, status_code != 200)</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

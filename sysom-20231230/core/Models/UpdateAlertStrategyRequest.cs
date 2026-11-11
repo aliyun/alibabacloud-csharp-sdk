@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The Kubernetes label.</para>
+        /// <para>The Kubernetes labels.</para>
         /// </summary>
         [NameInMap("k8sLabel")]
         [Validation(Required=false)]
         public bool? K8sLabel { get; set; }
 
         /// <summary>
-        /// <para>The alert policy name.</para>
+        /// <para>The alerting Policy Name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public UpdateAlertStrategyRequestStrategy Strategy { get; set; }
         public class UpdateAlertStrategyRequestStrategy : TeaModel {
             /// <summary>
-            /// <para>The collection of clusters that receive alerts.</para>
+            /// <para>The list of clusters that receive alerts.</para>
             /// </summary>
             [NameInMap("clusters")]
             [Validation(Required=false)]
@@ -72,11 +72,18 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public List<int?> Destinations { get; set; }
 
             /// <summary>
-            /// <para>The collection of exception items that trigger alerts.</para>
+            /// <para>The list of anomaly items that trigger alerts.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<string> Items { get; set; }
+
+            /// <summary>
+            /// <para>The list of alert severity levels.</para>
+            /// </summary>
+            [NameInMap("levels")]
+            [Validation(Required=false)]
+            public List<string> Levels { get; set; }
 
         }
 

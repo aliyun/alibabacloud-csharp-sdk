@@ -1,3 +1,10 @@
+2026-11-11 Version: 3.3.1
+- Update API CreateAlertStrategy: add request parameters body.strategy.levels.
+- Update API GetAlertStrategy: add response parameters Body.data.strategy.levels.
+- Update API ListAlertStrategies: add response parameters Body.data.$.strategy.levels.
+- Update API UpdateAlertStrategy: add request parameters body.strategy.levels.
+
+
 2026-10-30 Version: 3.2.0
 - Support API CreateCopilotSession.
 - Support API DeleteCopilotSession.

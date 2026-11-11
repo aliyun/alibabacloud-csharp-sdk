@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Current { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve per request.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The Policy Name of the alerting policy.</para>
+        /// <para>The alert policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>strategy1</para>

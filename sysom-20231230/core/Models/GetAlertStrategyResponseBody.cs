@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The status code.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. If the authorization fails, check the <c>message</c> field for the detailed fault message.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. If the authorization failed, check the <c>message</c> field to obtain the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes label.</para>
+            /// <para>The K8s labels.</para>
             /// </summary>
             [NameInMap("k8sLabel")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public GetAlertStrategyResponseBodyDataStrategy Strategy { get; set; }
             public class GetAlertStrategyResponseBodyDataStrategy : TeaModel {
                 /// <summary>
-                /// <para>The clusters that receive alerts.</para>
+                /// <para>The collection of clusters that receive alerts.</para>
                 /// </summary>
                 [NameInMap("clusters")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public object Destinations { get; set; }
 
                 /// <summary>
-                /// <para>The list of anomaly items that trigger alerts.</para>
+                /// <para>The list of anomaly items that receive alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node CPU usage detection</para>
@@ -110,6 +110,13 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public object Items { get; set; }
+
+                /// <summary>
+                /// <para>The collection of alert levels.</para>
+                /// </summary>
+                [NameInMap("levels")]
+                [Validation(Required=false)]
+                public List<string> Levels { get; set; }
 
             }
 

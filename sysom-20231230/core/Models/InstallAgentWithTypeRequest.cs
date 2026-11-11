@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InstallAgentWithTypeRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<InstallAgentWithTypeRequestTag> Tag { get; set; }
         public class InstallAgentWithTypeRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_tag_key</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_tag_value</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -46,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID of the component to install.</para>
+        /// <para>The ID of the component configuration to install.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f0078fbb-4213-11f0-a19b-00163e4ae208</para>

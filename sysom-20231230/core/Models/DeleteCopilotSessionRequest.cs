@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class DeleteCopilotSessionRequest : TeaModel {
         /// <summary>
+        /// <para>The agent identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sre_agent</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

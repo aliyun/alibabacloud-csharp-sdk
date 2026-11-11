@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The status code.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. If the authorization failed, check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. If the authorization fails, check the <c>message</c> field for the detailed fault message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public GetCveHotfixResponseBodyDataHotfix Hotfix { get; set; }
             public class GetCveHotfixResponseBodyDataHotfix : TeaModel {
                 /// <summary>
-                /// <para>The hotfix description.</para>
+                /// <para>The description of the hotfix.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Fixes the kernel issue corresponding to the CVE</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The hotfix name.</para>
+                /// <para>The name of the hotfix.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string HotfixName { get; set; }
 
                 /// <summary>
-                /// <para>The hotfix module name.</para>
+                /// <para>The module name of the hotfix.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kpatch_example</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string ModuleName { get; set; }
 
                 /// <summary>
-                /// <para>The list of published packages that meet the kernel requirements.</para>
+                /// <para>The list of published packages that meet the kernel conditions.</para>
                 /// </summary>
                 [NameInMap("packages")]
                 [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                     public string Arch { get; set; }
 
                     /// <summary>
-                    /// <para>The distribution. This value is null if the distribution is not registered.</para>
+                    /// <para>The distribution. The value is null if the distribution is not registered.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>alinux3</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                     public string Distro { get; set; }
 
                     /// <summary>
-                    /// <para>The compatible full kernel version.</para>
+                    /// <para>The adapted full kernel version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5.10.134-18.al8.x86_64</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 }
 
                 /// <summary>
-                /// <para>The hotfix version.</para>
+                /// <para>The version of the hotfix.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0</para>

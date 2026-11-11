@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. If the authorization failed, check the <c>message</c> field for the detailed fault message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public class InstallAgentWithTypeResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The task ID.</para>
-            /// <para>You can use this task ID to call the GetAgentTask operation to check the task execution status.</para>
+            /// <para>You can use this task ID to call the GetAgentTask operation to query the execution status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26b3cd97389c43dcad6bc4901c36fcec</para>
