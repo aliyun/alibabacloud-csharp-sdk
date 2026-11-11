@@ -68,6 +68,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Reserved parameter</para>
+        /// </summary>
+        [NameInMap("TargetInstanceName")]
+        [Validation(Required=false)]
+        public string TargetInstanceName { get; set; }
+
     }
 
 }

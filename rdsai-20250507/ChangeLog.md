@@ -1,3 +1,8 @@
+2026-11-11 Version: 3.10.2
+- Update API ModifyAppInstance: add request parameters MigrationMode.
+- Update API ModifyAppInstance: add response parameters Body.TargetInstanceName.
+
+
 2026-11-10 Version: 3.10.1
 - Update API CreateContextDatabaseWorkspace: add request parameters ClusterId.
 - Update API CreateContextDatabaseWorkspace: add request parameters GenerateInitialKey.

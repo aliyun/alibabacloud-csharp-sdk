@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
     public class ModifyAppInstanceRequest : TeaModel {
         /// <summary>
         /// <para>The reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Reserved parameter</para>
         /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure idempotence.</para>
+        /// <para>The idempotency parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -56,6 +59,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The instance ID of the ApsaraDB RDS for PostgreSQL database connected to the AI application.</para>
+        /// <para><notice>Only <b>newly purchased empty ApsaraDB RDS for PostgreSQL instances</b> are supported. The major engine version must be <b>17</b>, and the minor engine version must be <b>20250630 or later</b>.</notice></para>
+        /// 
         /// <b>Example:</b>
         /// <para>pgm-2ze49qv594vi****</para>
         /// </summary>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Currently, only <b>rdsai.supabase.basic</b> is supported.</para>
+        /// <para>The instance type. Only <b>rdsai.supabase.basic</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rdsai.supabase.basic</para>
@@ -82,6 +88,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        /// <summary>
+        /// <para>The reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Reserved parameter</para>
+        /// </summary>
+        [NameInMap("MigrationMode")]
+        [Validation(Required=false)]
+        public string MigrationMode { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

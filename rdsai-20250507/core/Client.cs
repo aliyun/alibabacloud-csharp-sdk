@@ -14449,14 +14449,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the modules of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Modifies the modules of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -14504,6 +14504,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationMode))
+            {
+                query["MigrationMode"] = request.MigrationMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14529,14 +14533,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the modules of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Modifies the modules of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -14584,6 +14588,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["InstanceName"] = request.InstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationMode))
+            {
+                query["MigrationMode"] = request.MigrationMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -14609,14 +14617,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the modules of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Modifies the modules of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -14635,14 +14643,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the modules of an ApsaraDB RDS AI application instance.</para>
+        /// <para>Modifies the modules of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS PostgreSQL</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for PostgreSQL</para>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
