@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string AccessEndpoint { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the sandbox is allowed to access external networks.</para>
+        /// <para>Specifies whether the sandbox is allowed to access the external network.</para>
         /// </summary>
         [NameInMap("allowInternetAccess")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public Dictionary<string, string> EnvVars { get; set; }
 
         /// <summary>
-        /// <para>The authentication credential for accessing the envd daemon process inside the sandbox, in UUID format. Automatically generated only when secure is set to true.</para>
+        /// <para>The authentication token for accessing the envd daemon process in the sandbox, in UUID format. This token is automatically generated only when secure is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4b1e9d07-****</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string FcInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The Function Compute session ID corresponding to the sandbox, in UUID format. Used to locate the underlying session when pausing, resuming, or deleting the sandbox.</para>
+        /// <para>The Function Compute session ID of the sandbox, in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3a7ecd09-****</para>
@@ -158,6 +158,35 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
+        /// <para>The resource tags.</para>
+        /// </summary>
+        [NameInMap("resourceTags")]
+        [Validation(Required=false)]
+        public List<E2BSandboxResourceTags> ResourceTags { get; set; }
+        public class E2BSandboxResourceTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo</para>
+            /// </summary>
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The runtime configuration.</para>
         /// </summary>
         [NameInMap("runtime")]
@@ -175,6 +204,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string SandboxID { get; set; }
 
         /// <summary>
+        /// <para>The snapshot ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0d66****b374</para>
+        /// </summary>
+        [NameInMap("snapshotID")]
+        [Validation(Required=false)]
+        public string SnapshotID { get; set; }
+
+        /// <summary>
         /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
@@ -185,7 +224,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string StartedAt { get; set; }
 
         /// <summary>
-        /// <para>The sandbox status. Valid values:</para>
+        /// <para>The sandbox state. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>running: Running.</description></item>
         /// <item><description>pausing: Pausing.</description></item>
@@ -193,8 +232,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         /// <item><description>resuming: Resuming.</description></item>
         /// <item><description>pause_fail: Pause failed.</description></item>
         /// <item><description>resume_fail: Resume failed.</description></item>
-        /// <item><description>snapshotting: Creating a snapshot.</description></item>
-        /// <item><description>snapshot_failed: Snapshot creation failed.</description></item>
+        /// <item><description>snapshotting: Snapshotting.</description></item>
+        /// <item><description>snapshot_failed: Snapshot failed.</description></item>
         /// <item><description>terminated: Terminated.</description></item>
         /// </list>
         /// 
@@ -226,7 +265,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamName { get; set; }
 
         /// <summary>
-        /// <para>The QoS version.</para>
+        /// <para>The QoS edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eco</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public bool? AllowInternetAccess { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically pause after timeout.</para>
+        /// <para>Specifies whether to automatically pause the sandbox after a timeout.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public bool? AutoPause { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically resume.</para>
+        /// <para>Specifies whether to automatically resume the sandbox.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -78,6 +78,26 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public bool? Secure { get; set; }
 
         /// <summary>
+        /// <para>The snapshot ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0d66****b374</para>
+        /// </summary>
+        [NameInMap("snapshotID")]
+        [Validation(Required=false)]
+        public string SnapshotID { get; set; }
+
+        /// <summary>
+        /// <para>The snapshot name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name</para>
+        /// </summary>
+        [NameInMap("snapshotName")]
+        [Validation(Required=false)]
+        public string SnapshotName { get; set; }
+
+        /// <summary>
         /// <para>The unique identifier of the team.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +118,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TemplateID { get; set; }
 
         /// <summary>
-        /// <para>The timeout period. Unit: seconds.</para>
+        /// <para>The timeout period, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180</para>

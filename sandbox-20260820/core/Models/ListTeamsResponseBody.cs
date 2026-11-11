@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class ListTeamsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message. The value is success if the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The page number of the current query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page for the current query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of teams.</para>
+        /// </summary>
         [NameInMap("teams")]
         [Validation(Required=false)]
         public List<E2BTeam> Teams { get; set; }
 
         /// <summary>
+        /// <para>The total number of teams that meet the query conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>65</para>
         /// </summary>

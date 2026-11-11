@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string BucketPath { get; set; }
 
         /// <summary>
-        /// <para>The OSS endpoint address.</para>
+        /// <para>The OSS endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the mount directory has read-only access permissions after the OSS bucket is mounted. Valid values:</para>
+        /// <para>Specifies whether the access permissions of the mounted directory are read-only after the OSS bucket is mounted. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Read-only.</description></item>
         /// <item><description>false: Read and write.</description></item>

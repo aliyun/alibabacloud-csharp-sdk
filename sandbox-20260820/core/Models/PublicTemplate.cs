@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicTemplate : TeaModel {
         /// <summary>
-        /// <para>The creation time of the template, in UTC and formatted as RFC 3339.</para>
+        /// <para>The time when the template was created, in UTC and RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-20T08:30:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The template name, which is unique within the same team.</para>
+        /// <para>The name of the template, which is unique within a team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python-data-analysis</para>
@@ -40,7 +40,36 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
-        /// <para>The runtime configuration of the template, which determines the specifications and environment of sandbox instances created from this template.</para>
+        /// <para>The resource tags.</para>
+        /// </summary>
+        [NameInMap("resourceTags")]
+        [Validation(Required=false)]
+        public List<PublicTemplateResourceTags> ResourceTags { get; set; }
+        public class PublicTemplateResourceTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo</para>
+            /// </summary>
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The runtime configuration of the template, which determines the specifications and environment of the sandbox instances created from the template.</para>
         /// </summary>
         [NameInMap("runtimeConfig")]
         [Validation(Required=false)]
@@ -64,7 +93,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamID { get; set; }
 
         /// <summary>
-        /// <para>The team name.</para>
+        /// <para>The name of the team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sandbox-dev</para>
@@ -74,7 +103,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamName { get; set; }
 
         /// <summary>
-        /// <para>The sandbox template ID.</para>
+        /// <para>The ID of the sandbox template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tm-8f3a2c7b5e14d806</para>

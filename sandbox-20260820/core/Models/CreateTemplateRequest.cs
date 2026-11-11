@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class CreateTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>The request struct for creating a template.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateTemplateInput Body { get; set; }

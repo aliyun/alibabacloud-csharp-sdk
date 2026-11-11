@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Sandbox";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("sandbox", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 ApiKey</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 ApiKey</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 ApiKey</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -140,7 +143,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 ApiKey</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -159,7 +162,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Team</para>
+        /// <para>Creates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -200,7 +203,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Team</para>
+        /// <para>Creates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -241,7 +244,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Team</para>
+        /// <para>Creates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -260,7 +263,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Team</para>
+        /// <para>Creates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -279,7 +282,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Template</para>
+        /// <para>Creates a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -320,7 +323,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Template</para>
+        /// <para>Creates a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -361,7 +364,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Template</para>
+        /// <para>Creates a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -380,7 +383,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Template</para>
+        /// <para>Creates a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -399,7 +402,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板缓存</para>
+        /// <para>Creates a template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -440,7 +443,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板缓存</para>
+        /// <para>Creates a template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -481,7 +484,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板缓存</para>
+        /// <para>Creates a template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -500,7 +503,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板缓存</para>
+        /// <para>Creates a template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -519,7 +522,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Volume</para>
+        /// <para>Creates a storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -560,7 +563,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Volume</para>
+        /// <para>Creates a storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -601,7 +604,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Volume</para>
+        /// <para>Creates a storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -620,7 +623,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Volume</para>
+        /// <para>Creates a storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -639,7 +642,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 ApiKey </para>
+        /// <para>Deletes a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -679,7 +682,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 ApiKey </para>
+        /// <para>Deletes a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -719,7 +722,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 ApiKey </para>
+        /// <para>Deletes a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -738,7 +741,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 ApiKey </para>
+        /// <para>Deletes a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -757,7 +760,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 quota 配置</para>
+        /// <para>Deletes the quota configuration for a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -803,7 +806,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 quota 配置</para>
+        /// <para>Deletes the quota configuration for a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -849,7 +852,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 quota 配置</para>
+        /// <para>Deletes the quota configuration for a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -868,7 +871,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 quota 配置</para>
+        /// <para>Deletes the quota configuration for a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -887,7 +890,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Team</para>
+        /// <para>Deletes a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -927,7 +930,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Team</para>
+        /// <para>Deletes a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -967,7 +970,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Team</para>
+        /// <para>Deletes a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -986,7 +989,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Team</para>
+        /// <para>Deletes a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1005,7 +1008,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Template</para>
+        /// <para>Deletes a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1051,7 +1054,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Template</para>
+        /// <para>Deletes a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1097,7 +1100,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Template</para>
+        /// <para>Deletes a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1116,7 +1119,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Template</para>
+        /// <para>Deletes a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1135,7 +1138,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板缓存</para>
+        /// <para>Deletes the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1184,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板缓存</para>
+        /// <para>Deletes the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1227,7 +1230,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板缓存</para>
+        /// <para>Deletes the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1246,7 +1249,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板缓存</para>
+        /// <para>Deletes the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1265,7 +1268,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Volume </para>
+        /// <para>Deletes a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1311,7 +1314,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Volume </para>
+        /// <para>Deletes a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1357,7 +1360,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Volume </para>
+        /// <para>Deletes a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1376,7 +1379,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Volume </para>
+        /// <para>Deletes a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1395,7 +1398,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 ApiKey</para>
+        /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1435,7 +1438,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 ApiKey</para>
+        /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1475,7 +1478,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 ApiKey</para>
+        /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1494,7 +1497,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 ApiKey</para>
+        /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1513,7 +1516,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 quota 配置</para>
+        /// <para>Queries the quota configuration of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1559,7 +1562,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 quota 配置</para>
+        /// <para>Queries the quota configuration of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1605,7 +1608,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 quota 配置</para>
+        /// <para>Queries the quota configuration of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1624,7 +1627,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 quota 配置</para>
+        /// <para>Queries the quota configuration of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1643,7 +1646,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模板缓存</para>
+        /// <para>Queries the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1689,7 +1692,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模板缓存</para>
+        /// <para>Queries the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1735,7 +1738,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模板缓存</para>
+        /// <para>Queries the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1754,7 +1757,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模板缓存</para>
+        /// <para>Queries the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1773,7 +1776,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Team详情</para>
+        /// <para>Queries the details of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1813,7 +1816,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Team详情</para>
+        /// <para>Queries the details of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1853,7 +1856,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Team详情</para>
+        /// <para>Queries the details of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1872,7 +1875,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Team详情</para>
+        /// <para>Queries the details of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1891,7 +1894,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Template</para>
+        /// <para>Queries a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1937,7 +1940,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Template</para>
+        /// <para>Queries a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1983,7 +1986,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Template</para>
+        /// <para>Queries a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2002,7 +2005,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Template</para>
+        /// <para>Queries a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2021,7 +2024,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 Volume</para>
+        /// <para>Queries the details of a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2067,7 +2070,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 Volume</para>
+        /// <para>Queries the details of a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2113,7 +2116,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 Volume</para>
+        /// <para>Queries the details of a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2132,7 +2135,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看 Volume</para>
+        /// <para>Queries the details of a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2151,7 +2154,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 ApiKey</para>
+        /// <para>Queries the list of API keys by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2221,7 +2224,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 ApiKey</para>
+        /// <para>Queries the list of API keys by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2291,7 +2294,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 ApiKey</para>
+        /// <para>Queries the list of API keys by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2310,7 +2313,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 ApiKey</para>
+        /// <para>Queries the list of API keys by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2329,7 +2332,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 quota 配置</para>
+        /// <para>Performs a paging query to retrieve the quota configuration list for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2379,7 +2382,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 quota 配置</para>
+        /// <para>Performs a paging query to retrieve the quota configuration list for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2429,7 +2432,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 quota 配置</para>
+        /// <para>Performs a paging query to retrieve the quota configuration list for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2448,7 +2451,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 quota 配置</para>
+        /// <para>Performs a paging query to retrieve the quota configuration list for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2467,7 +2470,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Team 列表</para>
+        /// <para>Queries the team list by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2529,7 +2532,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Team 列表</para>
+        /// <para>Queries the team list by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2591,7 +2594,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Team 列表</para>
+        /// <para>Queries the team list by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2610,7 +2613,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Team 列表</para>
+        /// <para>Queries the team list by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2629,7 +2632,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询模板缓存</para>
+        /// <para>Performs a paged query on template caches with paging support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2691,7 +2694,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询模板缓存</para>
+        /// <para>Performs a paged query on template caches with paging support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2753,7 +2756,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询模板缓存</para>
+        /// <para>Performs a paged query on template caches with paging support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2772,7 +2775,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询模板缓存</para>
+        /// <para>Performs a paged query on template caches with paging support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2791,7 +2794,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 Template</para>
+        /// <para>Performs a paged query to retrieve the template list with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2845,7 +2848,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 Template</para>
+        /// <para>Performs a paged query to retrieve the template list with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2899,7 +2902,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 Template</para>
+        /// <para>Performs a paged query to retrieve the template list with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2918,7 +2921,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 Template</para>
+        /// <para>Performs a paged query to retrieve the template list with paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2937,7 +2940,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 Volumes</para>
+        /// <para>Queries the list of storage volumes by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3011,7 +3014,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 Volumes</para>
+        /// <para>Queries the list of storage volumes by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3085,7 +3088,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 Volumes</para>
+        /// <para>Queries the list of storage volumes by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3104,7 +3107,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 Volumes</para>
+        /// <para>Queries the list of storage volumes by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3123,7 +3126,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 ApiKey </para>
+        /// <para>Resets a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3163,7 +3166,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 ApiKey </para>
+        /// <para>Resets a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3203,7 +3206,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 ApiKey </para>
+        /// <para>Resets a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3222,7 +3225,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 ApiKey </para>
+        /// <para>Resets a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3241,7 +3244,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 ApiKey</para>
+        /// <para>Updates the configuration of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3282,7 +3285,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 ApiKey</para>
+        /// <para>Updates the configuration of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3323,7 +3326,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 ApiKey</para>
+        /// <para>Updates the configuration of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3342,7 +3345,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 ApiKey</para>
+        /// <para>Updates the configuration of a specified API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3361,7 +3364,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 quota 配置</para>
+        /// <para>Updates the quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3402,7 +3405,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 quota 配置</para>
+        /// <para>Updates the quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3443,7 +3446,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 quota 配置</para>
+        /// <para>Updates the quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3462,7 +3465,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 quota 配置</para>
+        /// <para>Updates the quota configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3481,7 +3484,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Team</para>
+        /// <para>Updates the information of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3522,7 +3525,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Team</para>
+        /// <para>Updates the information of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3563,7 +3566,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Team</para>
+        /// <para>Updates the information of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3582,7 +3585,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Team</para>
+        /// <para>Updates the information of a specified team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3601,7 +3604,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Template</para>
+        /// <para>Updates a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3648,7 +3651,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Template</para>
+        /// <para>Updates a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3695,7 +3698,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Template</para>
+        /// <para>Updates a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3714,7 +3717,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Template</para>
+        /// <para>Updates a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3733,7 +3736,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Volume</para>
+        /// <para>Updates the configuration of a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3780,7 +3783,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Volume</para>
+        /// <para>Updates the configuration of a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3827,7 +3830,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Volume</para>
+        /// <para>Updates the configuration of a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3846,7 +3849,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Volume</para>
+        /// <para>Updates the configuration of a specified storage volume.</para>
         /// </summary>
         /// 
         /// <param name="request">

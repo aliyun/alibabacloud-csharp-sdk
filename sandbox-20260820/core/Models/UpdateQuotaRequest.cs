@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class UpdateQuotaRequest : TeaModel {
+        /// <summary>
+        /// <para>The request parameters for updating the quota configuration.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public Quota Body { get; set; }

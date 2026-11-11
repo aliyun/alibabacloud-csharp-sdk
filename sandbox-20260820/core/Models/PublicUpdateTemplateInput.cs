@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public PublicUpdateTemplateBuildConfig BuildConfig { get; set; }
 
         /// <summary>
+        /// <para>The subscription plan for the team. Valid values: eco, std, and pro.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pro</para>
+        /// </summary>
+        [NameInMap("plan")]
+        [Validation(Required=false)]
+        public string Plan { get; set; }
+
+        /// <summary>
         /// <para>The runtime configuration.</para>
         /// </summary>
         [NameInMap("runtimeConfig")]

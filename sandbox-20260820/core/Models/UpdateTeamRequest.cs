@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class UpdateTeamRequest : TeaModel {
+        /// <summary>
+        /// <para>The request parameters for updating a team.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateTeamInput Body { get; set; }

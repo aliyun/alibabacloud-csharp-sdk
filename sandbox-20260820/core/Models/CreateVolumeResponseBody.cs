@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class CreateVolumeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message. The value is success if the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</para>
         /// </summary>
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The storage volume information.</para>
+        /// </summary>
         [NameInMap("volume")]
         [Validation(Required=false)]
         public E2BVolume Volume { get; set; }

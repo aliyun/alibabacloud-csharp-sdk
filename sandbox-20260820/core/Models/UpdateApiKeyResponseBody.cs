@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class UpdateApiKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The API key information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>asdfjoY87-9IUHH</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public ApiKey ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The response code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP blacklist rules.</para>
+        /// </summary>
         [NameInMap("ipBlacklist")]
         [Validation(Required=false)]
         public List<IPConfig> IpBlacklist { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP address whitelist rules.</para>
+        /// </summary>
         [NameInMap("ipWhitelist")]
         [Validation(Required=false)]
         public List<IPConfig> IpWhitelist { get; set; }
 
         /// <summary>
+        /// <para>The response message. The value is success if the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2BCFAE0A-9FA9-5F72-8E8B-724632BC19A9</para>
         /// </summary>

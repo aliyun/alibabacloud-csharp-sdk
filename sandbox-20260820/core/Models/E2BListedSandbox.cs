@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? CpuCount { get; set; }
 
         /// <summary>
-        /// <para>The temporary disk specification.</para>
+        /// <para>The ephemeral disk size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? Generation { get; set; }
 
         /// <summary>
-        /// <para>The memory specification.</para>
+        /// <para>The memory size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -77,6 +77,35 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
+        /// <para>The resource tags.</para>
+        /// </summary>
+        [NameInMap("resourceTags")]
+        [Validation(Required=false)]
+        public List<E2BListedSandboxResourceTags> ResourceTags { get; set; }
+        public class E2BListedSandboxResourceTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo</para>
+            /// </summary>
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The sandbox ID.</para>
         /// 
         /// <b>Example:</b>
@@ -85,6 +114,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("sandboxID")]
         [Validation(Required=false)]
         public string SandboxID { get; set; }
+
+        /// <summary>
+        /// <para>The snapshot ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0d66****b374</para>
+        /// </summary>
+        [NameInMap("snapshotID")]
+        [Validation(Required=false)]
+        public string SnapshotID { get; set; }
 
         /// <summary>
         /// <para>The start time.</para>
@@ -97,16 +136,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string StartedAt { get; set; }
 
         /// <summary>
-        /// <para>The sandbox status. Valid values:</para>
+        /// <para>The sandbox state. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>running: Running.</description></item>
-        /// <item><description>pausing: Being paused.</description></item>
+        /// <item><description>pausing: Pausing.</description></item>
         /// <item><description>paused: Paused.</description></item>
-        /// <item><description>resuming: Being resumed.</description></item>
-        /// <item><description>pause_fail: Failed to pause.</description></item>
-        /// <item><description>resume_fail: Failed to resume.</description></item>
+        /// <item><description>resuming: Resuming.</description></item>
+        /// <item><description>pause_fail: Pause failed.</description></item>
+        /// <item><description>resume_fail: Resume failed.</description></item>
         /// <item><description>snapshotting: Creating a snapshot.</description></item>
-        /// <item><description>snapshot_failed: Failed to create a snapshot.</description></item>
+        /// <item><description>snapshot_failed: Snapshot creation failed.</description></item>
         /// <item><description>terminated: Terminated.</description></item>
         /// </list>
         /// 

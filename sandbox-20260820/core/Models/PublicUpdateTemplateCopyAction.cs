@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string AcrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether image replication is enabled.</para>
+        /// <para>Specifies whether image replication is enabled.</para>
         /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public PublicUpdateTemplateRegistryConfig RegistryConfig { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination repository.</para>
+        /// <para>The destination repository type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acr</para>

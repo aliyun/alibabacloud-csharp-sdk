@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicUpdateTemplateSandboxConfig : TeaModel {
         /// <summary>
-        /// <para>The ID of the Container Registry Enterprise instance.</para>
+        /// <para>The ID of the ACR Enterprise instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-abc123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string AcrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sandbox generation. A value of 1 indicates rund, and a value of 2 indicates micro.</para>
+        /// <para>The sandbox generation. Valid values: 1: rund. 2: micro.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The readiness probe command for the micro sandbox. Only the second generation supports this parameter.</para>
+        /// <para>The readiness probe command for the micro sandbox. This command is supported only by the second generation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/ready</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string RegistryType { get; set; }
 
         /// <summary>
-        /// <para>The startup command for the micro sandbox. Only the second generation supports this parameter.</para>
+        /// <para>The startup command for the micro sandbox. This command is supported only by the second generation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/start-coroutines.sh</para>
@@ -85,6 +85,13 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("startCommand")]
         [Validation(Required=false)]
         public string StartCommand { get; set; }
+
+        /// <summary>
+        /// <para>The list of custom build steps. If you do not specify this parameter, the original steps are retained. If you pass an empty array, the steps are cleared.</para>
+        /// </summary>
+        [NameInMap("steps")]
+        [Validation(Required=false)]
+        public List<PublicUpdateTemplateStep> Steps { get; set; }
 
     }
 

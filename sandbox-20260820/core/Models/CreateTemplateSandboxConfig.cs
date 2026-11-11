@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The sandbox readiness probe command. A successful execution indicates that the sandbox is ready to accept requests. This parameter is supported only for first-generation sandboxes.</para>
+        /// <para>The readiness probe command for the sandbox. A successful execution indicates that the sandbox is ready to receive requests. This parameter is supported only by first-generation sandboxes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>curl -sf <a href="http://127.0.0.1:49983/health">http://127.0.0.1:49983/health</a></para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ReadyCommand { get; set; }
 
         /// <summary>
-        /// <para>The credential, TLS, and network configuration required to access the source image repository.</para>
+        /// <para>The credentials, TLS, and network configurations required to access the source image repository.</para>
         /// </summary>
         [NameInMap("registryConfig")]
         [Validation(Required=false)]
         public CreateTemplateRegistryConfig RegistryConfig { get; set; }
 
         /// <summary>
-        /// <para>The image repository type. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), and acree (Container Registry Enterprise Edition). If not specified, the type is inferred from the image address.</para>
+        /// <para>The type of the image repository. Valid values: oci (standard OCI repository), acr (Container Registry Personal Edition), and acree (Container Registry Enterprise Edition). The default value is inferred from the image address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acree</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string RegistryType { get; set; }
 
         /// <summary>
-        /// <para>The startup command for the sandbox container. This parameter is supported only for first-generation sandboxes.</para>
+        /// <para>The startup command for the sandbox container. This parameter is supported only by first-generation sandboxes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/usr/local/bin/start.sh</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string StartCommand { get; set; }
 
         /// <summary>
-        /// <para>The list of custom build instructions. This is not supported in the current version. Passing a non-empty list returns an error.</para>
+        /// <para>The list of custom build steps.</para>
         /// </summary>
         [NameInMap("steps")]
         [Validation(Required=false)]

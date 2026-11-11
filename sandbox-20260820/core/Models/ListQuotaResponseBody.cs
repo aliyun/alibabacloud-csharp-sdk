@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class ListQuotaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries returned per page. This field is returned only if a positive integer is specified for maxResults in the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The response message. The value is success if the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page, which can be used in subsequent queries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qxGrXje86XMrYQ51aJMy</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The list of quota configurations.</para>
+        /// </summary>
         [NameInMap("quotas")]
         [Validation(Required=false)]
         public List<Quota> Quotas { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</para>
         /// </summary>

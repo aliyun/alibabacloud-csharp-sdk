@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class ListVolumesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries per page for the current query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The response message. A value of success indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page, which is used for subsequent queries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qxGrXje86XMrYQ51aJMy</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</para>
         /// </summary>
@@ -49,6 +59,9 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of storage volumes.</para>
+        /// </summary>
         [NameInMap("volumes")]
         [Validation(Required=false)]
         public List<E2BVolume> Volumes { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class DescribeTemplateCacheRequest : TeaModel {
         /// <summary>
+        /// <para>The team ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13b721e6-8cc8-5df2-af13-80316f7508af</para>
         /// </summary>

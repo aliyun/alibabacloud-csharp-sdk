@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicTemplateVPCConfig : TeaModel {
         /// <summary>
-        /// <para>The ARN of the RAM role that the sandbox instance assumes when accessing the VPC. The format is acs:ram::{account ID}:role/{role name}.</para>
+        /// <para>The ARN of the RAM role assumed by the sandbox instance when accessing the VPC. The format is acs:ram::{account ID}:role/{role name}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1234567890123456:role/aliyunfcdefaultrole</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitch IDs that the sandbox instance connects to.</para>
+        /// <para>The list of vSwitch IDs to which the sandbox instance is connected.</para>
         /// </summary>
         [NameInMap("vSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC that the sandbox instance connects to.</para>
+        /// <para>The ID of the VPC to which the sandbox instance is connected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-****</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class ListTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. The value 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries returned per page in the current response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page. This parameter is empty if no more results are available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</para>
         /// </summary>
@@ -49,6 +59,9 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of template objects.</para>
+        /// </summary>
         [NameInMap("templates")]
         [Validation(Required=false)]
         public List<PublicTemplate> Templates { get; set; }
