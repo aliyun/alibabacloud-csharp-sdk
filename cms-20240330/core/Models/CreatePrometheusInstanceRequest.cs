@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days that data is automatically archived after the storage period expires. A value of 0 indicates that data is not archived. Valid values for the archive duration:</para>
+        /// <para>The number of days to automatically archive data after the storage period expires. A value of 0 indicates that data is not archived. Valid values for the archive duration:</para>
         /// <list type="bullet">
         /// <item><description>V1: 60 to 365 days.</description></item>
-        /// <item><description>V2: 60 to 3650 days (3650 indicates permanent retention).</description></item>
+        /// <item><description>V2: 60 to 3650 days. A value of 3650 indicates permanent retention.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? ArchiveDuration { get; set; }
 
         /// <summary>
-        /// <para>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</para>
+        /// <para>The authentication-free read policy. IP address ranges and VPC IDs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -65,7 +65,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeWritePolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable authentication-free read. This parameter is supported only for V2 instances.</para>
+        /// <para>Specifies whether to perform a dry run only. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs a dry run without creating the instance. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, an error is returned. If the request passes the check, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false: sends a normal request and creates the instance directly after the request passes the check. This is the default value.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("dryrun")]
+        [Validation(Required=false)]
+        public bool? Dryrun { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable authentication-free read access. This feature is supported only in V2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -75,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable authentication-free write. This parameter is supported only for V2 instances.</para>
+        /// <para>Specifies whether to enable authentication-free write access. This feature is supported only in V2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -85,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeWrite { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the authorization token. This parameter is supported only for V1 instances.</para>
+        /// <para>Specifies whether to enable the authorization token. This feature is supported only in V1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -95,11 +106,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// <para>The billable methods. Valid values:</para>
+        /// <para>Billable methods. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>POSTPAY: pay-as-you-go by metric reporting volume.</description></item>
-        /// <item><description>POSTPAY_GB: pay-as-you-go by metric write volume.
-        /// If this parameter is left empty, the default billing method configured by the user is used. If the user has not configured a default billing method, the system uses pay-as-you-go by metric reporting volume.</description></item>
+        /// <item><description>POSTPAY: pay-as-you-go based on the volume of reported metrics.</description></item>
+        /// <item><description>POSTPAY_GB: pay-as-you-go based on the volume of written metrics.
+        /// Note: If this parameter is left empty, the default billing method configured for the user is used. If no default billing method is configured, the system uses the pay-as-you-go billing method based on the volume of reported metrics by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +132,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekz5qqvjyatgoy</para>
@@ -141,10 +152,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage duration (in days):</para>
+        /// <para>The storage duration in days.</para>
         /// <list type="bullet">
-        /// <item><description>By write volume: 90 or 180.</description></item>
-        /// <item><description>By metric reporting volume: 15, 30, 60, 90, or 180.</description></item>
+        /// <item><description>By written data volume: 90 and 180.</description></item>
+        /// <item><description>By reported metric volume: 15, 30, 60, 90, and 180.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

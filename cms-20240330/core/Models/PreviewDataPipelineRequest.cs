@@ -125,6 +125,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                     /// <summary>
                     /// <para>The extended parameters.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;vendor&quot;:&quot;example&quot;}</para>
                     /// </summary>
                     [NameInMap("parameters")]
                     [Validation(Required=false)]
@@ -197,9 +200,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         /// <para>The mask character.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <list type="bullet">
-                        /// <item><description></description></item>
-                        /// </list>
+                        /// <h1></h1>
                         /// </summary>
                         [NameInMap("maskChar")]
                         [Validation(Required=false)]
@@ -216,7 +217,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Mode { get; set; }
 
                         /// <summary>
-                        /// <para>The built-in sensitive data types.</para>
+                        /// <para>The built-in sensitive types.</para>
                         /// </summary>
                         [NameInMap("types")]
                         [Validation(Required=false)]
@@ -515,6 +516,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                 /// <summary>
                 /// <para>The extended parameters.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;vendor&quot;:&quot;example&quot;}</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
@@ -587,9 +591,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     /// <para>The mask character.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <list type="bullet">
-                    /// <item><description></description></item>
-                    /// </list>
+                    /// <h1></h1>
                     /// </summary>
                     [NameInMap("maskChar")]
                     [Validation(Required=false)]
@@ -606,7 +608,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string Mode { get; set; }
 
                     /// <summary>
-                    /// <para>The built-in sensitive data types.</para>
+                    /// <para>The built-in sensitive types.</para>
                     /// </summary>
                     [NameInMap("types")]
                     [Validation(Required=false)]
@@ -832,7 +834,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<PreviewDataPipelineRequestSinks> Sinks { get; set; }
         public class PreviewDataPipelineRequestSinks : TeaModel {
             /// <summary>
-            /// <para>The list of datasets.</para>
+            /// <para>The dataset list.</para>
             /// </summary>
             [NameInMap("datasets")]
             [Validation(Required=false)]
@@ -849,7 +851,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>The name of the output destination.</para>
+            /// <para>The output destination name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error-archive</para>
@@ -869,7 +871,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The type of the output destination.</para>
+            /// <para>The output destination type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logstore</para>
@@ -946,7 +948,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The type of the data source.</para>
+            /// <para>The data source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>traces-default</para>
@@ -958,7 +960,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The end time for the preview. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The end time for the preview, specified as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784566800</para>

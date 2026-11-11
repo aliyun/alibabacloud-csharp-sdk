@@ -38,6 +38,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>是否自动纳管同 domain、同实体 group 且由指定关系直接出边关联的子实体，历史缺省为 false。</para>
+        /// </summary>
+        [NameInMap("includeRelatedEntities")]
+        [Validation(Required=false)]
+        public bool? IncludeRelatedEntities { get; set; }
+
+        /// <summary>
         /// <para>手动指定的实例 ID 列表（枚举型，含 1.0 手动实例同步）。</para>
         /// </summary>
         [NameInMap("instanceIds")]

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The service description. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Mag test application</para>
+        /// <para>mag test application</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The display name. This parameter is valid only when serviceType is set to RUM.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Mag test application</para>
+        /// <para>mag test application</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag array.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

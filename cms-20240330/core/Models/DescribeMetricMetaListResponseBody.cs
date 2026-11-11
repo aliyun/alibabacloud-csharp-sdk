@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The metric configuration information of the resources.</para>
+        /// <para>The configuration information of the metrics in the resource.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The dimension information description.</para>
+            /// <para>The description of the dimension information.</para>
             /// </summary>
             [NameInMap("dimensionDescription")]
             [Validation(Required=false)]
@@ -84,18 +84,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>The CloudMonitor labels. This parameter is returned only when metaFormat is set to CMS.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;DefaultTemplate&quot;:&quot;false&quot;,&quot;alertDefault&quot;:&quot;80&quot;,&quot;alertUnit&quot;:&quot;%&quot;,&quot;is_alarm&quot;:&quot;true&quot;,&quot;metricCategory&quot;:&quot;instanceId&quot;,&quot;minAlertPeriod&quot;:&quot;60&quot;,&quot;productCategory&quot;:&quot;ecs&quot;,&quot;unitFactor&quot;:&quot;1&quot;}</para>
             /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
             public Dictionary<string, string> Labels { get; set; }
 
             /// <summary>
-            /// <para>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor Basic monitoring metrics.</para>
+            /// <para>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics, and PROM_BASIC indicates Prometheus CloudMonitor basic monitoring metrics.</para>
             /// <para>Example value:
             /// CMS
             /// Valid values:
             /// CMS
-            /// PROM_BASIC.</para>
+            /// PROM_BASIC</para>
             /// 
             /// <b>Example:</b>
             /// <para>PROM_BASIC</para>

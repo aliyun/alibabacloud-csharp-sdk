@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentEventStruct : TeaModel {
         /// <summary>
-        /// <para>The time of automatic recovery.</para>
+        /// <para>The automatic recovery time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Detected that the CPU usage of the user-service instance i-abc123 has reached 95%, triggering an alert.</para>
+        /// <para>The CPU utilization of the user-service instance i-abc123 reached 95%, triggering an alert</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The statistical count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -41,13 +41,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The dimension.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</para>
         /// </summary>
         [NameInMap("dimension")]
         [Validation(Required=false)]
         public Dictionary<string, string> Dimension { get; set; }
 
         /// <summary>
-        /// <para>The dimension for grouping.</para>
+        /// <para>The dimension used for grouping.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;severity&quot;:&quot;Critical&quot;}</para>
         /// </summary>
         [NameInMap("groupBy")]
         [Validation(Required=false)]
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>The time of the last occurrence.</para>
+        /// <para>The last time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? LastTime { get; set; }
 
         /// <summary>
-        /// <para>The time of manual recovery.</para>
+        /// <para>The manual recovery time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -94,7 +100,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? RecoverTime { get; set; }
 
         /// <summary>
-        /// <para>The resource associated with the event.</para>
+        /// <para>The information about the resources associated with the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;resourceId&quot;:&quot;i-example001&quot;}</para>
         /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]
@@ -124,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>User service CPU usage is too high.</para>
+        /// <para>High CPU utilization of the user service</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

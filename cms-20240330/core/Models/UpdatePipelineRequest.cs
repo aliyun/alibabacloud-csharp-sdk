@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdatePipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The pipeline description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test pipeline</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The one-time execution configuration.</para>
+            /// <para>The configuration for one-time execution.</para>
             /// </summary>
             [NameInMap("runOnce")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The scheduled execution configuration.</para>
+            /// <para>The configuration for scheduled execution.</para>
             /// </summary>
             [NameInMap("scheduled")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public long? FromTime { get; set; }
 
                 /// <summary>
-                /// <para>The execution interval.</para>
+                /// <para>The time interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public UpdatePipelineRequestPipeline Pipeline { get; set; }
         public class UpdatePipelineRequestPipeline : TeaModel {
             /// <summary>
-            /// <para>The pipeline nodes.</para>
+            /// <para>The nodes.</para>
             /// </summary>
             [NameInMap("nodes")]
             [Validation(Required=false)]
@@ -121,7 +121,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The node parameters.</para>
+                /// <para>The parameters.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;output&quot;:&quot;ID,key_0,key_2,key_3,key_4&quot;,&quot;workspace&quot;:&quot;workspace-test-dataset&quot;,&quot;field&quot;:&quot;key_0&quot;,&quot;global&quot;:true,&quot;dataset&quot;:&quot;dataset_1&quot;}</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
@@ -142,21 +145,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The data sink configuration.</para>
+        /// <para>The data sink.</para>
         /// </summary>
         [NameInMap("sink")]
         [Validation(Required=false)]
         public UpdatePipelineRequestSink Sink { get; set; }
         public class UpdatePipelineRequestSink : TeaModel {
             /// <summary>
-            /// <para>The destination dataset configuration.</para>
+            /// <para>The dataset.</para>
             /// </summary>
             [NameInMap("dataset")]
             [Validation(Required=false)]
             public UpdatePipelineRequestSinkDataset Dataset { get; set; }
             public class UpdatePipelineRequestSinkDataset : TeaModel {
                 /// <summary>
-                /// <para>The dataset name.</para>
+                /// <para>The dataset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataset_1</para>
@@ -178,7 +181,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The sink type.</para>
+            /// <para>The data sink type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataset</para>
@@ -190,21 +193,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The data source configuration.</para>
+        /// <para>The data source.</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]
         public UpdatePipelineRequestSource Source { get; set; }
         public class UpdatePipelineRequestSource : TeaModel {
             /// <summary>
-            /// <para>The Log Service Logstore configuration.</para>
+            /// <para>The Simple Log Service Logstore information.</para>
             /// </summary>
             [NameInMap("logstore")]
             [Validation(Required=false)]
             public UpdatePipelineRequestSourceLogstore Logstore { get; set; }
             public class UpdatePipelineRequestSourceLogstore : TeaModel {
                 /// <summary>
-                /// <para>The Logstore name.</para>
+                /// <para>The Simple Log Service Logstore name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-logstore</para>
@@ -214,7 +217,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The filter query.</para>
+                /// <para>The filter statement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>status:500 and method:GET</para>
@@ -226,7 +229,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The source type.</para>
+            /// <para>The data source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logstore</para>

@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class AlertRuleLabelFilter : TeaModel {
         /// <summary>
         /// <para>The label filter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;regionId&quot;:&quot;cn-shanghai&quot;}</para>
         /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// <para>The relational operator between multiple labels.</para>
+        /// <para>The relational operator for multiple labels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AND</para>

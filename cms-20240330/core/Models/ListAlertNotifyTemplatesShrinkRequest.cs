@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertNotifyTemplateIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification template name.</para>
+        /// <para>The name of the notification template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alert notification template</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The template locale.</para>
+        /// <para>The template language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GO</para>

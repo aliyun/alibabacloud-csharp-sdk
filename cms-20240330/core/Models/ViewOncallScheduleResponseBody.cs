@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The on-call calendar. The key is the shift name, and the value is a list of on-call shifts for the shift within the queried date range.</para>
+        /// <para>The on-call calendar. The key is the shift name, and the value is the list of on-call periods for the shift within the queried date range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;testName&quot;:[{&quot;contactId&quot;:&quot;testId&quot;,&quot;contactName&quot;:&quot;Zhang San&quot;,&quot;start&quot;:&quot;2024-10-10 09:00&quot;,&quot;end&quot;:&quot;2024-10-15 18:00&quot;}]}</para>

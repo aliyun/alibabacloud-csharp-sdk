@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</para>
+            /// <para>The time when the instance was created. The time is displayed in UTC+0 and formatted as yyyy-MM-ddTHH:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The payment type. Valid values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>POSTPAY: Pay-as-you-go by metric volume.</description></item>
-            /// <item><description>POSTPAY_GB: Pay-as-you-go by write volume.</description></item>
+            /// <item><description>POSTPAY: Pay-as-you-go based on the number of metrics.</description></item>
+            /// <item><description>POSTPAY_GB: Pay-as-you-go based on the amount of written data.</description></item>
             /// <item><description>PREPAY: Subscription.</description></item>
             /// <item><description>FREE: Free.</description></item>
             /// </list>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The backend data storage status.</para>
+            /// <para>The status of the backend data storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pending2Running</para>
@@ -181,9 +181,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The version.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>V1</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

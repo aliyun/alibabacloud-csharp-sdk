@@ -1,3 +1,9 @@
+2026-11-11 Version: 10.10.0
+- Support API EnsureSharedPrometheusInstance.
+- Update API CreatePrometheusInstance: add request parameters body.dryrun.
+- Update API UpdatePrometheusInstance: add request parameters body.dryrun.
+
+
 2026-10-28 Version: 10.9.0
 - Support API ListAlertHistories.
 

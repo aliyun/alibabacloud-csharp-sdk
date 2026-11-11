@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RobotId { get; set; }
 
         /// <summary>
-        /// <para>The signature key of the robot.</para>
+        /// <para>The signing key of the robot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc123</para>

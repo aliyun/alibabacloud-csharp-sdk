@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The table schema.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;message&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;chn&quot;:true}}</para>
         /// </summary>
         [NameInMap("schema")]
         [Validation(Required=false)]

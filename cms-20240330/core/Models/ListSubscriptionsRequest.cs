@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListSubscriptionsRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the AI agent. This parameter is used to filter subscriptions of a specified AI agent.</para>
+        /// <para>The UUID of the AI agent. This parameter is used to filter subscriptions for a specified AI agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-rca-001</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NotifyStrategyUuid { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id</para>
@@ -104,11 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SubscriptionName { get; set; }
 
         /// <summary>
-        /// <para>The type of the subscription. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>NORMAL: Standard subscription.</description></item>
-        /// <item><description>AI_AGENT: AI agent subscription.</description></item>
-        /// </list>
+        /// <para>The type of the subscription. Valid values: NORMAL (standard subscription) and AI_AGENT (AI agent subscription).</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>

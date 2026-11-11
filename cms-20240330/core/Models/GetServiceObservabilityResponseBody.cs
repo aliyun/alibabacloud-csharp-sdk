@@ -70,6 +70,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The quota configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;arms_agent_hour&quot;:&quot;48&quot;}</para>
         /// </summary>
         [NameInMap("quotas")]
         [Validation(Required=false)]
@@ -97,6 +100,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The system configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;trace_aggregate&quot;:&quot;enable&quot;}</para>
         /// </summary>
         [NameInMap("settings")]
         [Validation(Required=false)]

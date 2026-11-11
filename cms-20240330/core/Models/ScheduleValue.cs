@@ -20,16 +20,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContactId { get; set; }
 
         /// <summary>
-        /// <para>The name of the on-call contact.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testName</para>
-        /// </summary>
-        [NameInMap("contactName")]
-        [Validation(Required=false)]
-        public string ContactName { get; set; }
-
-        /// <summary>
         /// <para>The end time. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +38,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("start")]
         [Validation(Required=false)]
         public string Start { get; set; }
+
+        /// <summary>
+        /// <para>The name of the on-call contact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testName</para>
+        /// </summary>
+        [NameInMap("contactName")]
+        [Validation(Required=false)]
+        public string ContactName { get; set; }
 
     }
 

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyStrategyForModify Body { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

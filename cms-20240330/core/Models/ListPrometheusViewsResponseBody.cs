@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusViewsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>prom-view: new version of the aggregate view</description></item>
-            /// <item><description>global-view: legacy version of the aggregate view</description></item>
+            /// <item><description>prom-view: New version aggregate view.</description></item>
+            /// <item><description>global-view: Legacy version aggregate view.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The billing method. The value is fixed to FREE.</para>
+            /// <para>The billing method. Currently, the value is fixed to FREE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREE</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxx</para>

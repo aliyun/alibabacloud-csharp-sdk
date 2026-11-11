@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<GetOncallScheduleResponseBodyRotations> Rotations { get; set; }
         public class GetOncallScheduleResponseBodyRotations : TeaModel {
             /// <summary>
-            /// <para>The days of the week when the rotation is active.</para>
+            /// <para>The days of the week when the rotation takes effect.</para>
             /// </summary>
             [NameInMap("activeDays")]
             [Validation(Required=false)]
             public List<int?> ActiveDays { get; set; }
 
             /// <summary>
-            /// <para>The contact ID.</para>
+            /// <para>The IDs of the contacts.</para>
             /// </summary>
             [NameInMap("contacts")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RotationStartTime { get; set; }
 
             /// <summary>
-            /// <para>The length of the shift rotation cycle. Used in combination with shiftRecurrenceFrequency. For example, set this parameter to 3 to rotate to the next on-call contact every 3 days.</para>
+            /// <para>The length of the shift recurrence period. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every 3 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? ShiftLength { get; set; }
 
             /// <summary>
-            /// <para>The unit of the shift rotation cycle. Used in combination with shiftRecurrenceFrequency. For example, set this parameter to Week to rotate to the next on-call contact every week.</para>
+            /// <para>The unit of the shift recurrence frequency. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every 1 week.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WEEKLY</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string StartDate { get; set; }
 
             /// <summary>
-            /// <para>The time zone name based on the IANA Time Zone Database standard. Example: Asia/Shanghai.</para>
+            /// <para>The name of the time zone. Uses the IANA Time Zone Database standard, such as Asia/Shanghai.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the shift reminder chatbot.</para>
+        /// <para>The ID of the robot for shift change reminders.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testId</para>

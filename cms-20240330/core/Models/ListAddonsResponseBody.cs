@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The list of tags for the integration component.</para>
+            /// <para>The list of categories for the integration component.</para>
             /// </summary>
             [NameInMap("categories")]
             [Validation(Required=false)]
@@ -134,6 +134,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                     /// <summary>
                     /// <para>The probes required for integration dependencies.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;metric-agent&quot;:true}</para>
                     /// </summary>
                     [NameInMap("features")]
                     [Validation(Required=false)]
@@ -159,7 +162,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether it is enabled.</para>
+                /// <para>Specifies whether the integration policy type is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -206,7 +209,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string AlertDefaultStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to install by default.</para>
+                    /// <para>Specifies whether to install the component by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -242,7 +245,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>Specifies whether to initiate a pod restart guide immediately after the plug-in installation is completed during integration.</para>
+                    /// <para>Specifies whether to trigger a pod restart guide immediately after the plug-in installation is completed during integration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -252,14 +255,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public bool? NeedRestartAfterIntegration { get; set; }
 
                     /// <summary>
-                    /// <para>The supported protocol types for configuration.</para>
+                    /// <para>The supported protocol types in the configuration.</para>
                     /// </summary>
                     [NameInMap("protocols")]
                     [Validation(Required=false)]
                     public List<ListAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols> Protocols { get; set; }
                     public class ListAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols : TeaModel {
                         /// <summary>
-                        /// <para>The protocol description.</para>
+                        /// <para>The description of the protocol.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Support OpenTelemetry Protocal</para>
@@ -269,7 +272,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>The icon URL.</para>
+                        /// <para>The URL of the icon.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="http://xxxxxxx">http://xxxxxxx</a></para>
@@ -289,7 +292,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The protocol name.</para>
+                        /// <para>The name of the protocol.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>openTelemetry</para>
@@ -313,7 +316,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The integration center policy type.</para>
+                /// <para>The policy type of the integration center.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CS</para>
@@ -325,7 +328,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The icon URL.</para>
+            /// <para>The URL of the icon.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxxxxx">http://xxxxxxx</a></para>
@@ -352,7 +355,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The time of the latest release. The time is in ISO 8601 format and includes the UTC identifier or time zone offset.</para>
+            /// <para>The time when the latest version was created. The time follows the ISO 8601 standard and includes a UTC identifier or time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-03T03:15:56Z</para>
@@ -382,7 +385,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Once { get; set; }
 
             /// <summary>
-            /// <para>The component scenario.</para>
+            /// <para>The scenario of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>middleware</para>
@@ -392,7 +395,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>The component version.</para>
+            /// <para>The version of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">

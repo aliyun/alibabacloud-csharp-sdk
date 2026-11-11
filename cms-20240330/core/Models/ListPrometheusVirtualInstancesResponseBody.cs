@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The HTTP API endpoint.</para>
+            /// <para>The HTTP API URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxxxxxx">http://xxxxxxxx</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiUrl { get; set; }
 
             /// <summary>
-            /// <para>The applicable data source type: PROMETHEUS_DS.</para>
+            /// <para>Applicable data source type: PROMETHEUS_DS.</para>
             /// <para>The Prometheus instance ID.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The applicable query type: CMS_BASIC_QUERY.</para>
+            /// <para>Applicable query type: CMS_BASIC_QUERY.</para>
             /// <para>The namespace of the metric.</para>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next token for the next page. This parameter is empty when all results are returned.</para>
+        /// <para>The next token for pagination. It is empty when all results are returned.</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
@@ -109,6 +109,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The total number of returned instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

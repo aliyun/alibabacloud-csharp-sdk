@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public CreateAddonReleaseResponseBodyRelease Release { get; set; }
         public class CreateAddonReleaseResponseBodyRelease : TeaModel {
             /// <summary>
-            /// <para>The name of the addon for the integrated monitoring component.</para>
+            /// <para>The name of the add-on integrated for monitoring.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cs-gpu</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? AlertRuleCount { get; set; }
 
             /// <summary>
-            /// <para>The component installation stage information.</para>
+            /// <para>The component installation phase information.</para>
             /// </summary>
             [NameInMap("conditions")]
             [Validation(Required=false)]
             public List<CreateAddonReleaseResponseBodyReleaseConditions> Conditions { get; set; }
             public class CreateAddonReleaseResponseBodyReleaseConditions : TeaModel {
                 /// <summary>
-                /// <para>The first transition time in ISO 8601 format, including the UTC identifier or time zone offset.</para>
+                /// <para>The first transition time in ISO 8601 format, including the UTC designator or time zone offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-04T16:10:22+08:00</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string FirstTransitionTime { get; set; }
 
                 /// <summary>
-                /// <para>The last transition time in ISO 8601 format, including the UTC identifier or time zone offset.</para>
+                /// <para>The last transition time in ISO 8601 format, including the UTC designator or time zone offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-04T16:10:22+08:00</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string LastTransitionTime { get; set; }
 
                 /// <summary>
-                /// <para>The details.</para>
+                /// <para>The detailed information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The addon loaded successfully</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The stage status.</para>
+                /// <para>The phase status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;phase\&quot;: \&quot;Created\&quot;, \&quot;executionDetails\&quot;: [], \&quot;invocations\&quot;: [], \&quot;latestExecError\&quot;: {\&quot;message\&quot;: \&quot;\&quot;, \&quot;code\&quot;: \&quot;\&quot;, \&quot;requestId\&quot;: \&quot;\&quot;, \&quot;extraInfo\&quot;: \&quot;\&quot;, \&quot;title\&quot;: \&quot;\&quot;}}</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The stage type.</para>
+                /// <para>The phase type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Loaded</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The integration time in ISO 8601 format, including the UTC identifier or time zone offset.</para>
+            /// <para>The integration time in ISO 8601 format, including the UTC designator or time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-05T15:21:30+08:00</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The number of plugins.</para>
+            /// <para>The number of exporters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? ExporterCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a configuration exists.</para>
+            /// <para>Indicates whether a configuration is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the component is managed.</para>
+            /// <para>Indicates whether the component is a managed component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Managed { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent add-on release.</para>
+            /// <para>The parent AddonReleaseId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policy-xxxxxxxxxxx</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ReleaseId { get; set; }
 
             /// <summary>
-            /// <para>The name of the release.</para>
+            /// <para>The release name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-gpu-integration-name</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time in ISO 8601 format, including the UTC identifier or time zone offset.</para>
+            /// <para>The update time in ISO 8601 format, including the UTC designator or time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-13T02:21:02Z</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the owner.</para>
+            /// <para>The ID of the owner user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>165421896xxxxxx</para>

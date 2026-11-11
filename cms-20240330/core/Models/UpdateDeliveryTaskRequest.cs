@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateDeliveryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The data source ID (Prometheus instance ID).</para>
+        /// <para>The data source ID, which is the Prometheus instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-5f2b4sc7es4d66</para>
@@ -20,14 +20,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</para>
+        /// <para>The additional labels appended to all shipped metrics. The key is the label name, and the value is the label value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</para>
         /// </summary>
         [NameInMap("externalLabels")]
         [Validation(Required=false)]
         public Dictionary<string, string> ExternalLabels { get; set; }
 
         /// <summary>
-        /// <para>The metric filter conditions. The entire value is replaced and incremental merging is not performed.</para>
+        /// <para>The metric filtering conditions. The existing conditions are entirely replaced rather than incrementally merged.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;<b>name</b>&quot;:&quot;up&quot;}</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
@@ -54,21 +60,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of delivery targets.</para>
+        /// <para>The list of shipping destinations.</para>
         /// </summary>
         [NameInMap("sinkList")]
         [Validation(Required=false)]
         public List<UpdateDeliveryTaskRequestSinkList> SinkList { get; set; }
         public class UpdateDeliveryTaskRequestSinkList : TeaModel {
             /// <summary>
-            /// <para>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType.</para>
+            /// <para>The detailed configuration of the shipping destination. The meanings of keys and values vary based on the sink type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;Url&quot;:&quot;<a href="https://example.com/api/v1/write%22,%22Network%22:%22PublicNetwork%22,%22AuthType%22:%22None%22%7D">https://example.com/api/v1/write&quot;,&quot;Network&quot;:&quot;PublicNetwork&quot;,&quot;AuthType&quot;:&quot;None&quot;}</a></para>
             /// </summary>
             [NameInMap("sinkConfigs")]
             [Validation(Required=false)]
             public Dictionary<string, string> SinkConfigs { get; set; }
 
             /// <summary>
-            /// <para>The delivery target type.</para>
+            /// <para>The type of the shipping destination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Prometheus</para>
@@ -83,15 +92,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The task status. This parameter is used to start or stop a task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Enable: enables the task.</description></item>
-        /// <item><description>Disable: disables the task.</description></item>
-        /// <item><description>Running: the task is running.</description></item>
-        /// </list>
+        /// <para>The task status, which is used to start or stop the task. Valid values:</para>
+        /// <para>Enable: Starts the task.</para>
+        /// <para>Disable: Stops the task.</para>
+        /// <para>Running: The task is running.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Enable</para>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
@@ -108,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TaskDescription { get; set; }
 
         /// <summary>
-        /// <para>The task name. The name can contain letters, digits, underscores (_), and hyphens (-), and can be in Chinese.</para>
+        /// <para>The task name. Chinese characters, English letters, underscores (_), and hyphens (-) are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>new-task-name</para>

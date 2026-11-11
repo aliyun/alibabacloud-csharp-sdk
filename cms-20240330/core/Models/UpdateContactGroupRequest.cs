@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateContactGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the contact.</para>
+        /// <para>The IDs of the contacts.</para>
         /// </summary>
         [NameInMap("contacts")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContactsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of contacts.</para>
+        /// <para>The list of alert contacts.</para>
         /// </summary>
         [NameInMap("contacts")]
         [Validation(Required=false)]
         public List<ListContactsResponseBodyContacts> Contacts { get; set; }
         public class ListContactsResponseBodyContacts : TeaModel {
             /// <summary>
-            /// <para>The ID of the on-duty contact.</para>
+            /// <para>The ID of the alert contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContactId { get; set; }
 
             /// <summary>
-            /// <para>The email address of the contact.</para>
+            /// <para>The email address of the alert contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@aliyun.com">test@aliyun.com</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the email address is activated.</para>
+            /// <para>Indicates whether the email address is verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,14 +47,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EmailVerify { get; set; }
 
             /// <summary>
-            /// <para>The contact groups to which the contact belongs.</para>
+            /// <para>The alert contact groups to which the alert contact belongs.</para>
             /// </summary>
             [NameInMap("groupList")]
             [Validation(Required=false)]
             public List<string> GroupList { get; set; }
 
             /// <summary>
-            /// <para>The IM user ID mapping. Multiple instant messaging tools are supported.</para>
+            /// <para>The mapping of IM user IDs. Multiple instant messaging tools are supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;dingtalk&quot;:&quot;abc123&quot;,&quot;wechat&quot;:&quot;def456&quot;}</para>
             /// </summary>
             [NameInMap("imUserIds")]
             [Validation(Required=false)]
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>The name of the contact.</para>
+            /// <para>The name of the alert contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number of the contact.</para>
+            /// <para>The phone number of the alert contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>130123456789</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the mobile phone number of the contact is activated.</para>
+            /// <para>Indicates whether the phone number is verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

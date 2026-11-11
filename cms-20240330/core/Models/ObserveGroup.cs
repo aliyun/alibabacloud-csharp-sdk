@@ -136,6 +136,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SourceOrigin { get; set; }
 
         /// <summary>
+        /// <para>源云监控 1.0 分组是否已持久只读，true 时目标 2.0 分组可独立维护。</para>
+        /// </summary>
+        [NameInMap("sourceReadOnly")]
+        [Validation(Required=false)]
+        public bool? SourceReadOnly { get; set; }
+
+        /// <summary>
         /// <para>资源标签（阿里云标准标签），键值对数组。</para>
         /// </summary>
         [NameInMap("tags")]

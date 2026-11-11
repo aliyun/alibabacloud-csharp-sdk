@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Filters the results by region ID. Currently, only a single region ID is supported.</para>
+        /// <para>The region IDs used for filtering. Currently, only a single region ID is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou,cn-beijing</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FilterRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The instance version.</para>
+        /// <para>The instance version. Valid values: V1 and V2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>

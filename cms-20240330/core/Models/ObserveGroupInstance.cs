@@ -31,6 +31,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EntityDomain { get; set; }
 
         /// <summary>
+        /// <para>UModel 实体 ID，与实体域和类型共同标识成员。</para>
+        /// </summary>
+        [NameInMap("entityId")]
+        [Validation(Required=false)]
+        public string EntityId { get; set; }
+
+        /// <summary>
+        /// <para>实体角色，main 为主实体、related 为关联子实体。</para>
+        /// </summary>
+        [NameInMap("entityRole")]
+        [Validation(Required=false)]
+        public string EntityRole { get; set; }
+
+        /// <summary>
         /// <para>实体类型（如 acs.ecs.instance）。</para>
         /// </summary>
         [NameInMap("entityType")]

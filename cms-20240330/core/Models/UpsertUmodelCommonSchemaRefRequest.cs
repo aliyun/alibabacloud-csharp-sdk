@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpsertUmodelCommonSchemaRefRequest : TeaModel {
         /// <summary>
-        /// <para>The group of the common Umodel schema.</para>
+        /// <para>The public Umodel schema group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

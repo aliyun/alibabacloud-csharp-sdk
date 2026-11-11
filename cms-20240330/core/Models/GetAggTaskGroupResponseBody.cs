@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AggTaskGroupConfig { get; set; }
 
             /// <summary>
-            /// <para>The summary of the aggregation task group configuration.</para>
+            /// <para>The hash of the aggregation task group configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a54136xxx</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp in seconds that corresponds to the start time of the scheduling. This parameter is not yet in effect.</para>
+            /// <para>The UNIX timestamp in seconds for the scheduling start time. This parameter is not yet in effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757409495</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? FromTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of retries to execute the aggregation task.</para>
+            /// <para>The maximum number of retries for executing the aggregation task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? MaxRetries { get; set; }
 
             /// <summary>
-            /// <para>The maximum runtime of the aggregation task, in seconds.</para>
+            /// <para>The maximum retry time to execute the aggregation task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? MaxRunTimeInSeconds { get; set; }
 
             /// <summary>
-            /// <para>The dry run configuration.</para>
+            /// <para>The precheck configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;rw-xx&quot;,&quot;query&quot;:&quot;noPrecheck&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;none&quot;}</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ScheduleTimeExpr { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source Prometheus instance for the aggregation task group.</para>
+            /// <para>The source Prometheus instance ID for the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-xxx</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The ID of the target Prometheus instance for the aggregation task group.</para>
+            /// <para>The target Prometheus instance ID for the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-xxx</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TargetPrometheusId { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp in seconds that corresponds to the end time of the scheduling.</para>
+            /// <para>The UNIX timestamp in seconds for the scheduling end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757409495</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? ToTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the aggregation task group was updated. This is a timestamp.</para>
+            /// <para>The update time of the aggregation task group. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757409499000</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

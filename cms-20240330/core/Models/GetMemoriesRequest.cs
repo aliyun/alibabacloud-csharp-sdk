@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The application\&quot;s agent ID.</para>
+        /// <para>The agent ID of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>952730652285943809</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The Application ID.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>150130323</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The filter criteria.</para>
+        /// <para>The filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;<b>strategy_type</b>&quot;:&quot;Fact&quot;}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The Run ID.</para>
+        /// <para>The run ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jr-80ded1d6953c64ea</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>The User ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_user_001</para>

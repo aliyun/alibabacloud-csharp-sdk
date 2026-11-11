@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class ListPrometheusVirtualInstancesRequest : TeaModel {
         /// <summary>
         /// <para>The maximum number of instances to return per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The next token for the paging query.</para>
+        /// <para>The next paging token for a paged query.</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDeliveryTasksRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the keywords used to perform a fuzzy search by task name or task ID.</para>
+        /// <para>The keywords used to perform a fuzzy search by task name or task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-task</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token. Do not specify this parameter for the first request. For subsequent requests, specify the nextToken value returned from the previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</para>

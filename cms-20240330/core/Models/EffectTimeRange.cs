@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EffectTimeRange : TeaModel {
         /// <summary>
-        /// <para>The values 0 to 6 indicate Sunday to Saturday.</para>
+        /// <para>The day of the week, where 0 to 6 indicate Sunday to Saturday.</para>
         /// </summary>
         [NameInMap("dayInWeek")]
         [Validation(Required=false)]

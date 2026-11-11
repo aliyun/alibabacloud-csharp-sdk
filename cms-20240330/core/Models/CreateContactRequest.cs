@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The instant messaging (IM) user ID mapping, which supports multi-platform integration. The key is the IM type (such as DING or WEIXIN), and the value is the corresponding user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;DING&quot;:&quot;ding_user_abc&quot;,&quot;WEIXIN&quot;:&quot;wx_user_def&quot;}</para>
         /// </summary>
         [NameInMap("imUserIds")]
         [Validation(Required=false)]
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number. Currently, only mobile phone numbers in the Chinese mainland are supported.</para>
+        /// <para>The mobile phone number. Currently, only mobile phone numbers in China are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13012345678</para>
@@ -65,6 +68,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("phone")]
         [Validation(Required=false)]
         public string Phone { get; set; }
+
+        /// <summary>
+        /// <para>The country code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0086</para>
+        /// </summary>
+        [NameInMap("phoneCode")]
+        [Validation(Required=false)]
+        public string PhoneCode { get; set; }
 
         /// <summary>
         /// <para>The name of the workspace.</para>

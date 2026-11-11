@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleAlertMetricParamDef : TeaModel {
         /// <summary>
-        /// <para>The maximum width of the input box, which applies only to SELECT_PARAM and INPUT_PARAM.</para>
+        /// <para>The maximum width of the input box. This parameter takes effect only for SELECT_PARAM and INPUT_PARAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxWidth { get; set; }
 
         /// <summary>
-        /// <para>The minimum width of the input box, which applies only to SELECT_PARAM and INPUT_PARAM.</para>
+        /// <para>The minimum width of the input box. This parameter takes effect only for SELECT_PARAM and INPUT_PARAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The Chinese placeholder for frontend display, which applies only to INPUT_PARAM.</para>
+        /// <para>The Chinese placeholder for frontend display. This parameter takes effect only for INPUT_PARAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>请输入值</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PlaceholderCn { get; set; }
 
         /// <summary>
-        /// <para>The English placeholder for frontend display, which applies only to INPUT_PARAM.</para>
+        /// <para>The English placeholder for frontend display. This parameter takes effect only for INPUT_PARAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enter value</para>
@@ -60,11 +60,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PlaceholderEn { get; set; }
 
         /// <summary>
-        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>TEXT_PARAM: Read-only text parameter defined by the backend. No user input control is displayed on the frontend.</description></item>
         /// <item><description>INPUT_PARAM: Input box parameter.</description></item>
-        /// <item><description>SELECT_PARAM: Selection box parameter.</description></item>
+        /// <item><description>SELECT_PARAM: Select box parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Value { get; set; }
 
         /// <summary>
-        /// <para>The list of selectable values for the drop-down list, which applies only to SELECT_PARAM.</para>
+        /// <para>The list of selectable values for the drop-down list. This parameter takes effect only for SELECT_PARAM.</para>
         /// </summary>
         [NameInMap("values")]
         [Validation(Required=false)]

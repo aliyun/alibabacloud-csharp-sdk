@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ApiVersion { get; set; }
 
             /// <summary>
-            /// <para>The information about the bound resources.</para>
+            /// <para>The bound resource information.</para>
             /// </summary>
             [NameInMap("bindResource")]
             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxxxx</para>
+                /// <para>Access policy for production environment resources</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesAnnotations> Annotations { get; set; }
                     public class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesAnnotations : TeaModel {
                         /// <summary>
-                        /// <para>The operation to be performed.</para>
+                        /// <para>The operation performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public List<string> FieldValues { get; set; }
 
                         /// <summary>
-                        /// <para>The operation to be performed.</para>
+                        /// <para>The operation performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<string> InstanceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The IP matching rule.</para>
+                    /// <para>The IP address matching rule.</para>
                     /// </summary>
                     [NameInMap("ipMatchRule")]
                     [Validation(Required=false)]
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string IpCidr { get; set; }
 
                         /// <summary>
-                        /// <para>The key of the IP field.</para>
+                        /// <para>The key of the IP address field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test-key</para>
@@ -262,14 +262,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The tags.</para>
+                    /// <para>The labels.</para>
                     /// </summary>
                     [NameInMap("labels")]
                     [Validation(Required=false)]
                     public List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesLabels> Labels { get; set; }
                     public class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesLabels : TeaModel {
                         /// <summary>
-                        /// <para>The operation to be performed.</para>
+                        /// <para>The operation performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesTags> Tags { get; set; }
                     public class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesTags : TeaModel {
                         /// <summary>
-                        /// <para>The operation to be performed.</para>
+                        /// <para>The operation performed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>add</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ControlPolicy4DetailVportInfo</para>

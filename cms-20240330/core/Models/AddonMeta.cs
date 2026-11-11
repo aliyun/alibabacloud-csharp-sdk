@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AddonMeta : TeaModel {
         /// <summary>
-        /// <para>The alias of the component. This is the display name.</para>
+        /// <para>The component alias and display name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS 监控</para>
+        /// <para>ECS monitoring</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>The categorization information of the component.</para>
+        /// <para>The component category information.</para>
         /// </summary>
         [NameInMap("categories")]
         [Validation(Required=false)]
         public List<string> Categories { get; set; }
 
         /// <summary>
-        /// <para>A list of component diagrams.</para>
+        /// <para>The list of component diagrams.</para>
         /// </summary>
         [NameInMap("dashboards")]
         [Validation(Required=false)]
@@ -37,24 +37,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>描述信息</para>
+            /// <para>Description information</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the diagram.</para>
+            /// <para>The diagram name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ECS 监控概览大盘</para>
+            /// <para>ECS monitoring overview dashboard</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The URL of the diagram.</para>
+            /// <para>The diagram URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>assets/dashboards/ecs.png</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<AddonMetaEnvironments> Environments { get; set; }
         public class AddonMetaEnvironments : TeaModel {
             /// <summary>
-            /// <para>The list of attached CommonSchemas.</para>
+            /// <para>The list of associated CommonSchemas.</para>
             /// </summary>
             [NameInMap("commonSchemaRefs")]
             [Validation(Required=false)]
@@ -126,7 +126,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public List<string> ClusterTypes { get; set; }
 
                 /// <summary>
-                /// <para>The probe dependency description. This is the component name. In later versions, this field is replaced by the collectors field.</para>
+                /// <para>The probe dependency description and component name. This field is replaced by the collectors field in the new version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;metric-agent&quot;:true}</para>
                 /// </summary>
                 [NameInMap("features")]
                 [Validation(Required=false)]
@@ -145,17 +148,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The description of the environment type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>支持容器集群的工作覆盖监控</para>
+            /// <para>Supports workload coverage monitoring for container clusters</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the environment type is enabled.</para>
+            /// <para>Specifies whether it is enabled.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true/false</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
@@ -165,14 +168,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The display name of the environment type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>容器环境</para>
+            /// <para>Container environment</para>
             /// </summary>
             [NameInMap("label")]
             [Validation(Required=false)]
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The name of the environment type.</para>
+            /// <para>The environment type name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CS/ECS/Cloud/Client</para>
@@ -182,14 +185,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Information about the control policy group for the component.</para>
+            /// <para>The control policy combination information of the component.</para>
             /// </summary>
             [NameInMap("policies")]
             [Validation(Required=false)]
             public AddonMetaEnvironmentsPolicies Policies { get; set; }
             public class AddonMetaEnvironmentsPolicies : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the alert rule is enabled by default after installation.</para>
+                /// <para>Specifies whether alert rules are enabled after default installation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RUNNING</para>
@@ -199,27 +202,27 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string AlertDefaultStatus { get; set; }
 
                 /// <summary>
-                /// <para>The default mode. This integration mode does not require attaching an entity.</para>
+                /// <para>The default mode, which is an integration mode that does not require binding entities.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true/false</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("bindDefaultPolicy")]
                 [Validation(Required=false)]
                 public bool? BindDefaultPolicy { get; set; }
 
                 /// <summary>
-                /// <para>Information about the attached target entity.</para>
+                /// <para>The bound target entity information.</para>
                 /// </summary>
                 [NameInMap("bindEntity")]
                 [Validation(Required=false)]
                 public AddonMetaEnvironmentsPoliciesBindEntity BindEntity { get; set; }
                 public class AddonMetaEnvironmentsPoliciesBindEntity : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether group mode is used.</para>
+                    /// <para>Specifies whether it is in group mode.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>true/false</para>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("entityGroupMode")]
                     [Validation(Required=false)]
@@ -236,17 +239,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string EntityType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether single-entity mode is used.</para>
+                    /// <para>Specifies whether it is in single-entity mode.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>true/false</para>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("singleEntityMode")]
                     [Validation(Required=false)]
                     public bool? SingleEntityMode { get; set; }
 
                     /// <summary>
-                    /// <para>The field in the entity from which to fetch the VPC ID.</para>
+                    /// <para>The field used to extract the VPC ID information from the entity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpcId</para>
@@ -258,20 +261,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the component is installed by default.</para>
+                /// <para>Specifies whether to install by default.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true/false</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("defaultInstall")]
                 [Validation(Required=false)]
                 public bool? DefaultInstall { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to enable internal authorization token allocation.</para>
+                /// <para>Specifies whether to enable internal authorization token allocation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true/false</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("enableServiceAccount")]
                 [Validation(Required=false)]
@@ -285,7 +288,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public AddonMetaEnvironmentsPoliciesMetricCheckRule MetricCheckRule { get; set; }
                 public class AddonMetaEnvironmentsPoliciesMetricCheckRule : TeaModel {
                     /// <summary>
-                    /// <para>The Prometheus Query Language (PromQL) for the check rule.</para>
+                    /// <para>The PromQL for the check rule.</para>
                     /// </summary>
                     [NameInMap("promQL")]
                     [Validation(Required=false)]
@@ -294,34 +297,34 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether to prompt for a workload restart after integration.</para>
+                /// <para>Specifies whether to prompt to restart the workload after integration.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true/false</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("needRestartAfterIntegration")]
                 [Validation(Required=false)]
                 public bool? NeedRestartAfterIntegration { get; set; }
 
                 /// <summary>
-                /// <para>The list of supported client protocols.</para>
+                /// <para>The list of supported client protocol information.</para>
                 /// </summary>
                 [NameInMap("protocols")]
                 [Validation(Required=false)]
                 public List<AddonMetaEnvironmentsPoliciesProtocols> Protocols { get; set; }
                 public class AddonMetaEnvironmentsPoliciesProtocols : TeaModel {
                     /// <summary>
-                    /// <para>The description of the protocol.</para>
+                    /// <para>The protocol description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>使用 Prometheus 协议写入指标数据</para>
+                    /// <para>Use the Prometheus protocol to write metric data</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The display icon for the protocol.</para>
+                    /// <para>The protocol display icon.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>assets/logos/ecs.svg</para>
@@ -331,17 +334,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string Icon { get; set; }
 
                     /// <summary>
-                    /// <para>The display name of the protocol.</para>
+                    /// <para>The protocol display name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Prometheus 协议</para>
+                    /// <para>Prometheus protocol</para>
                     /// </summary>
                     [NameInMap("label")]
                     [Validation(Required=false)]
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the protocol.</para>
+                    /// <para>The protocol name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Prometheus</para>
@@ -353,7 +356,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the target component for redirection.</para>
+                /// <para>The name of the target component to navigate to.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud-acs-ecs</para>
@@ -377,7 +380,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The icon of the component.</para>
+        /// <para>The component icon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>assets/logos/ecs.svg</para>
@@ -396,10 +399,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>zh: Chinese (default)</para>
-        /// </description></item>
-        /// <item><description><para>en: English</para>
-        /// </description></item>
+        /// <item><description>zh: Chinese (default).</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -410,7 +411,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The last time the component was integrated.</para>
+        /// <para>The last integration time of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-25 09:12:12</para>
@@ -420,7 +421,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LatestReleaseCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the component.</para>
+        /// <para>The component name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud-acs-ecs</para>
@@ -430,10 +431,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the component can be installed only once under a policy.</para>
+        /// <para>Specifies whether the component can be installed only once under the policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true/false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("once")]
         [Validation(Required=false)]
@@ -460,7 +461,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The sorting weight of the component.</para>
+        /// <para>The component sorting weight.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

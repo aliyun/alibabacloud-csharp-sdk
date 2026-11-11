@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The collection of HTTP request headers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;X-Total-Count&quot;:&quot;0&quot;}</para>
         /// </summary>
         [NameInMap("headers")]
         [Validation(Required=false)]

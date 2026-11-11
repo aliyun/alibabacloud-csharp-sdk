@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the email address is authenticated.</para>
+        /// <para>Indicates whether the email address is verified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EmailVerify { get; set; }
 
         /// <summary>
-        /// <para>An extension field used to store additional information.</para>
+        /// <para>The extension field used to store additional information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{ &quot;department&quot;: &quot;运维部&quot;, &quot;role&quot;: &quot;工程师&quot; }</para>
+        /// <para>{ &quot;department&quot;: &quot;Operations Department&quot;, &quot;role&quot;: &quot;Engineer&quot; }</para>
         /// </summary>
         [NameInMap("extend")]
         [Validation(Required=false)]
         public Dictionary<string, object> Extend { get; set; }
 
         /// <summary>
-        /// <para>The time when the contact was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The time when the contact was last modified.</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name of the contact.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Phone { get; set; }
 
         /// <summary>
-        /// <para>The country code for the mobile phone number.</para>
+        /// <para>The country code of the mobile phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PhoneCode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the mobile phone number is authenticated.</para>
+        /// <para>Indicates whether the mobile phone number is verified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

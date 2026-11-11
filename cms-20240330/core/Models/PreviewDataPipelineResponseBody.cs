@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<PreviewDataPipelineResponseBodyDatasetsMeta> Meta { get; set; }
             public class PreviewDataPipelineResponseBodyDatasetsMeta : TeaModel {
                 /// <summary>
-                /// <para>The name of the field.</para>
+                /// <para>The field name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>trace_id</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The name of the dataset.</para>
+            /// <para>The dataset name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error_spans</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of samples.</para>
+            /// <para>The sample count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The aggregation diagnostics.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;emittedPoints&quot;:2,&quot;displayTruncated&quot;:false}</para>
         /// </summary>
         [NameInMap("diagnostics")]
         [Validation(Required=false)]

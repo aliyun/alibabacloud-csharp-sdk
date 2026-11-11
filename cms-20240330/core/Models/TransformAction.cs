@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The mapping configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;warning&quot;:&quot;WARNING&quot;}</para>
         /// </summary>
         [NameInMap("mapping")]
         [Validation(Required=false)]
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The value to set.</para>
+        /// <para>The set value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>value1</para>

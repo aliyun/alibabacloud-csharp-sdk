@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class NotifyConfigUnified : TeaModel {
         /// <summary>
-        /// <para>The days of the week on which notifications are sent, 1-7.</para>
+        /// <para>The days of the week when notifications are sent, ranging from 1 to 7.</para>
         /// </summary>
         [NameInMap("activeDays")]
         [Validation(Required=false)]
         public List<int?> ActiveDays { get; set; }
 
         /// <summary>
-        /// <para>The daily notification effective end time.</para>
+        /// <para>The daily end time for the notification effective period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ActiveEndTime { get; set; }
 
         /// <summary>
-        /// <para>The daily notification effective start time.</para>
+        /// <para>The daily start time for the notification effective period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08:00</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<DirectNotifyChannel> Channels { get; set; }
 
         /// <summary>
-        /// <para>The list of notification policy IDs (type=NOTIFY_POLICY, currently a maximum of 1 per service. Mutually exclusive with channels/silenceTimeSecs/activeDays/activeStartTime/activeEndTime/utcOffset of DIRECT_NOTIFY).</para>
+        /// <para>The list of notification policy IDs.</para>
         /// </summary>
         [NameInMap("notifyStrategies")]
         [Validation(Required=false)]
         public List<string> NotifyStrategies { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to send recovery notifications (type=DIRECT_NOTIFY). Default value: true. Each severity level in severityChannels can independently override this setting.</para>
+        /// <para>Specifies whether to send a recovery notification. Default value: true. This setting can be independently overridden for each severity level in severityChannels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -61,14 +61,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? SendRecoverNotification { get; set; }
 
         /// <summary>
-        /// <para>The Notification Recipients and channels configured by severity level (type=DIRECT_NOTIFY, new mode, mutually exclusive with channels). The key is the severity level: CRITICAL/ERROR/WARNING/INFO.</para>
+        /// <para>The notification recipients and channels configured for each severity level. The key is the severity level: CRITICAL, ERROR, WARNING, or INFO.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;CRITICAL&quot;:{&quot;sendRecoverNotification&quot;:true}}</para>
         /// </summary>
         [NameInMap("severityChannels")]
         [Validation(Required=false)]
         public Dictionary<string, SeverityNotifyConfig> SeverityChannels { get; set; }
 
         /// <summary>
-        /// <para>The mute for epoch in seconds.</para>
+        /// <para>The mute epoch in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

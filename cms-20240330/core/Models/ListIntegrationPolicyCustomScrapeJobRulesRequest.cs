@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPolicyCustomScrapeJobRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the addon release.</para>
+        /// <para>The name of the add-on release.</para>
         /// 
         /// <b>Example:</b>
         /// <para>release12345678</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonReleaseName { get; set; }
 
         /// <summary>
-        /// <para>The probe identifier. If a release exists, pass the release name. If no release exists, pass the component name.</para>
+        /// <para>The collector identifier. If a release exists, pass the release name. Otherwise, pass the component name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>collector:metric-agent:policy:policy-bfd3d455fd6f4bc8</para>

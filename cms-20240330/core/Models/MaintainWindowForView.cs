@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The crontab expression.</para>
+        /// <para>The Crontab expression.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

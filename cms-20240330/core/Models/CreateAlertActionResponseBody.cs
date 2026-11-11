@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAlertActionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the alert action integration.</para>
+        /// <para>The ID of the action integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testId</para>

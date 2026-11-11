@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertActionName { get; set; }
 
             /// <summary>
-            /// <para>The event bus parameters.</para>
+            /// <para>The EventBridge parameters.</para>
             /// </summary>
             [NameInMap("ebParam")]
             [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public GetAlertActionResponseBodyAlertActionsFc3Param Fc3Param { get; set; }
             public class GetAlertActionResponseBodyAlertActionsFc3Param : TeaModel {
                 /// <summary>
-                /// <para>The name of the function.</para>
+                /// <para>The function name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The service name in Function Compute.</para>
+                /// <para>The service name of Function Compute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public GetAlertActionResponseBodyAlertActionsMnsParam MnsParam { get; set; }
             public class GetAlertActionResponseBodyAlertActionsMnsParam : TeaModel {
                 /// <summary>
-                /// <para>The resource type of Simple Message Queue (formerly MNS).</para>
+                /// <para>The Simple Message Queue (formerly MNS) resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>queue</para>
@@ -220,10 +220,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string MnsType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource.</para>
+                /// <para>The resource name.</para>
                 /// <list type="bullet">
-                /// <item><description>If the resource type is queue, the resource name is the name of the queue.</description></item>
-                /// <item><description>If the resource type is topic, the resource name is the name of the topic.</description></item>
+                /// <item><description>If the resource type is queue, the resource name is the queue name.</description></item>
+                /// <item><description>If the resource type is topic, the resource name is the topic name.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public GetAlertActionResponseBodyAlertActionsPagerDutyParam PagerDutyParam { get; set; }
             public class GetAlertActionResponseBodyAlertActionsPagerDutyParam : TeaModel {
                 /// <summary>
-                /// <para>The integration key of PagerDuty.</para>
+                /// <para>The integration key for PagerDuty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EWR4WR4T4GREG4ET453T5Y</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The integration webhook URL for PagerDuty. V1 and V2 are supported.</para>
+                /// <para>The PagerDuty integration webhook. Versions 1 and 2 are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The type of the alert action integration.</para>
+            /// <para>The alert action integration type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FC</para>
@@ -342,6 +342,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                 /// <summary>
                 /// <para>The request header information.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;X-Total-Count&quot;:&quot;0&quot;}</para>
                 /// </summary>
                 [NameInMap("headers")]
                 [Validation(Required=false)]

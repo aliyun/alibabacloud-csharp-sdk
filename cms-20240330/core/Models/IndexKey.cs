@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IndexKey : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the value contains Chinese characters.</para>
+        /// <para>Specifies whether Chinese characters are included.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Contains Chinese characters.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: Does not contain Chinese characters.</para>
-        /// </description></item>
+        /// <item><description>true: Chinese characters are included.</description></item>
+        /// <item><description>false: Chinese characters are not included.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Chn { get; set; }
 
         /// <summary>
-        /// <para>Specifies the model name.</para>
+        /// <para>The model name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text-embedding-v4</para>
@@ -36,14 +34,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Embedding { get; set; }
 
         /// <summary>
-        /// <para>Describes the json keys.</para>
+        /// <para>json key</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;message&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;chn&quot;:true}}</para>
         /// </summary>
         [NameInMap("jsonKeys")]
         [Validation(Required=false)]
         public Dictionary<string, IndexJsonKey> JsonKeys { get; set; }
 
         /// <summary>
-        /// <para>Specifies the field type.</para>
+        /// <para>The field type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>

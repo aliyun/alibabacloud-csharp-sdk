@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Cms";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the contact channel.</para>
+        /// <para>Activates a contact channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the contact channel.</para>
+        /// <para>Activates a contact channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -182,7 +185,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the contact channel.</para>
+        /// <para>Activates a contact channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -201,7 +204,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the contact channel.</para>
+        /// <para>Activates a contact channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1769,7 +1772,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a webhook notification recipient.</para>
+        /// <para>Creates a webhook Notification Recipient.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1848,7 +1851,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a webhook notification recipient.</para>
+        /// <para>Creates a webhook Notification Recipient.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1927,7 +1930,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a webhook notification recipient.</para>
+        /// <para>Creates a webhook Notification Recipient.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1951,7 +1954,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a webhook notification recipient.</para>
+        /// <para>Creates a webhook Notification Recipient.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2278,6 +2281,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["phone"] = request.Phone;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneCode))
+            {
+                body["phoneCode"] = request.PhoneCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
                 body["workspace"] = request.Workspace;
@@ -2347,6 +2354,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
             {
                 body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneCode))
+            {
+                body["phoneCode"] = request.PhoneCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
@@ -3519,7 +3530,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates an event integration.</para>
+        /// <para>Creates an event integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3594,7 +3605,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates an event integration.</para>
+        /// <para>Creates an event integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3669,7 +3680,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates an event integration.</para>
+        /// <para>Creates an event integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3693,7 +3704,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates an event integration.</para>
+        /// <para>Creates an event integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3717,7 +3728,8 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally. When you create a policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</para>
+        /// <para>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
+        /// When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3769,7 +3781,8 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally. When you create a policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</para>
+        /// <para>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
+        /// When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3821,7 +3834,8 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally. When you create a policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</para>
+        /// <para>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
+        /// When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3845,7 +3859,8 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally. When you create a policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</para>
+        /// <para>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
+        /// When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4388,7 +4403,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a pipeline.</para>
+        /// <para>Creates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4454,7 +4469,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a pipeline.</para>
+        /// <para>Creates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4520,7 +4535,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a pipeline.</para>
+        /// <para>Creates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4539,7 +4554,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a pipeline.</para>
+        /// <para>Creates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4558,7 +4573,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Managed Service for Prometheus instance.</para>
+        /// <para>Creates a Prometheus monitoring instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4589,6 +4604,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthFreeWritePolicy))
             {
                 body["authFreeWritePolicy"] = request.AuthFreeWritePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dryrun))
+            {
+                body["dryrun"] = request.Dryrun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAuthFreeRead))
             {
@@ -4652,7 +4671,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Managed Service for Prometheus instance.</para>
+        /// <para>Creates a Prometheus monitoring instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4683,6 +4702,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthFreeWritePolicy))
             {
                 body["authFreeWritePolicy"] = request.AuthFreeWritePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dryrun))
+            {
+                body["dryrun"] = request.Dryrun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAuthFreeRead))
             {
@@ -4746,7 +4769,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Managed Service for Prometheus instance.</para>
+        /// <para>Creates a Prometheus monitoring instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4765,7 +4788,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Managed Service for Prometheus instance.</para>
+        /// <para>Creates a Prometheus monitoring instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5358,7 +5381,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates application observability and prepares the prerequisite resources required for integration.</para>
+        /// <para>Creates application observability and completes prerequisite resource preparations for integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5398,7 +5421,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates application observability and prepares the prerequisite resources required for integration.</para>
+        /// <para>Creates application observability and completes prerequisite resource preparations for integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5438,7 +5461,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates application observability and prepares the prerequisite resources required for integration.</para>
+        /// <para>Creates application observability and completes prerequisite resource preparations for integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5457,7 +5480,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates application observability and prepares the prerequisite resources required for integration.</para>
+        /// <para>Creates application observability and completes prerequisite resource preparations for integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5476,7 +5499,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</para>
+        /// <para>Creates a service association entry to configure associations for the application monitoring service, such as log associations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5526,7 +5549,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</para>
+        /// <para>Creates a service association entry to configure associations for the application monitoring service, such as log associations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5576,7 +5599,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</para>
+        /// <para>Creates a service association entry to configure associations for the application monitoring service, such as log associations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5595,7 +5618,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</para>
+        /// <para>Creates a service association entry to configure associations for the application monitoring service, such as log associations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5623,10 +5646,10 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// Common use cases:</para>
         /// <list type="bullet">
         /// <item><description>heapdump: Triggers a JVM heap dump.</description></item>
-        /// <item><description>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</description></item>
-        /// <item><description>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</description></item>
-        /// <item><description>LiveDebug Code Replace: Performs hot code replacement.
-        /// After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</description></item>
+        /// <item><description>LiveDebug Probe: Dynamically instruments target methods (logs, snapshots, metrics, spans, etc.).</description></item>
+        /// <item><description>LiveDebug Command: One-time proactive inspection (OGNL, decompilation, thread or memory information, etc.).</description></item>
+        /// <item><description>LiveDebug Code Replace: Hot code replacement.
+        /// After the task is created, a taskId is returned. You can subsequently manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5690,10 +5713,10 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// Common use cases:</para>
         /// <list type="bullet">
         /// <item><description>heapdump: Triggers a JVM heap dump.</description></item>
-        /// <item><description>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</description></item>
-        /// <item><description>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</description></item>
-        /// <item><description>LiveDebug Code Replace: Performs hot code replacement.
-        /// After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</description></item>
+        /// <item><description>LiveDebug Probe: Dynamically instruments target methods (logs, snapshots, metrics, spans, etc.).</description></item>
+        /// <item><description>LiveDebug Command: One-time proactive inspection (OGNL, decompilation, thread or memory information, etc.).</description></item>
+        /// <item><description>LiveDebug Code Replace: Hot code replacement.
+        /// After the task is created, a taskId is returned. You can subsequently manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5757,10 +5780,10 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// Common use cases:</para>
         /// <list type="bullet">
         /// <item><description>heapdump: Triggers a JVM heap dump.</description></item>
-        /// <item><description>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</description></item>
-        /// <item><description>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</description></item>
-        /// <item><description>LiveDebug Code Replace: Performs hot code replacement.
-        /// After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</description></item>
+        /// <item><description>LiveDebug Probe: Dynamically instruments target methods (logs, snapshots, metrics, spans, etc.).</description></item>
+        /// <item><description>LiveDebug Command: One-time proactive inspection (OGNL, decompilation, thread or memory information, etc.).</description></item>
+        /// <item><description>LiveDebug Code Replace: Hot code replacement.
+        /// After the task is created, a taskId is returned. You can subsequently manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5789,10 +5812,10 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// Common use cases:</para>
         /// <list type="bullet">
         /// <item><description>heapdump: Triggers a JVM heap dump.</description></item>
-        /// <item><description>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</description></item>
-        /// <item><description>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</description></item>
-        /// <item><description>LiveDebug Code Replace: Performs hot code replacement.
-        /// After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</description></item>
+        /// <item><description>LiveDebug Probe: Dynamically instruments target methods (logs, snapshots, metrics, spans, etc.).</description></item>
+        /// <item><description>LiveDebug Command: One-time proactive inspection (OGNL, decompilation, thread or memory information, etc.).</description></item>
+        /// <item><description>LiveDebug Code Replace: Hot code replacement.
+        /// After the task is created, a taskId is returned. You can subsequently manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5944,7 +5967,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
+        /// <para>Creates a ticket for password-free access. You can use the ticket to construct a password-free URL to share console pages with other users or embed them into third-party systems.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5994,7 +6017,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
+        /// <para>Creates a ticket for password-free access. You can use the ticket to construct a password-free URL to share console pages with other users or embed them into third-party systems.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6044,7 +6067,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
+        /// <para>Creates a ticket for password-free access. You can use the ticket to construct a password-free URL to share console pages with other users or embed them into third-party systems.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6063,7 +6086,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</para>
+        /// <para>Creates a ticket for password-free access. You can use the ticket to construct a password-free URL to share console pages with other users or embed them into third-party systems.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6496,7 +6519,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert action integration.</para>
+        /// <para>Deletes alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6548,7 +6571,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert action integration.</para>
+        /// <para>Deletes alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6600,7 +6623,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert action integration.</para>
+        /// <para>Deletes alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6619,7 +6642,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert action integration.</para>
+        /// <para>Deletes alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7292,7 +7315,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes contact groups.</para>
+        /// <para>Deletes a contact group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7344,7 +7367,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes contact groups.</para>
+        /// <para>Deletes a contact group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7396,7 +7419,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes contact groups.</para>
+        /// <para>Deletes a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7415,7 +7438,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes contact groups.</para>
+        /// <para>Deletes a contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7434,7 +7457,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a contact.</para>
+        /// <para>Deletes contacts.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7486,7 +7509,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a contact.</para>
+        /// <para>Deletes contacts.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7538,7 +7561,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a contact.</para>
+        /// <para>Deletes contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7557,7 +7580,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a contact.</para>
+        /// <para>Deletes contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8324,7 +8347,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a delivery task.</para>
+        /// <para>Deletes a data delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8364,7 +8387,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a delivery task.</para>
+        /// <para>Deletes a data delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8404,7 +8427,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a delivery task.</para>
+        /// <para>Deletes a data delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8423,7 +8446,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a delivery task.</para>
+        /// <para>Deletes a data delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9944,7 +9967,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Prometheus virtual instance by its ID.</para>
+        /// <para>Deletes a Prometheus virtual instance by virtual instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9984,7 +10007,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Prometheus virtual instance by its ID.</para>
+        /// <para>Deletes a Prometheus virtual instance by virtual instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10024,7 +10047,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Prometheus virtual instance by its ID.</para>
+        /// <para>Deletes a Prometheus virtual instance by virtual instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10043,7 +10066,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Prometheus virtual instance by its ID.</para>
+        /// <para>Deletes a Prometheus virtual instance by virtual instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11170,12 +11193,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metric metadata.</para>
+        /// <para>Queries metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of CloudMonitor monitoring metrics metadata.</para>
+        /// <para>Queries the metadata details of CloudMonitor monitoring metrics.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11259,12 +11282,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metric metadata.</para>
+        /// <para>Queries metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of CloudMonitor monitoring metrics metadata.</para>
+        /// <para>Queries the metadata details of CloudMonitor monitoring metrics.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11348,12 +11371,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metric metadata.</para>
+        /// <para>Queries metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of CloudMonitor monitoring metrics metadata.</para>
+        /// <para>Queries the metadata details of CloudMonitor monitoring metrics.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11372,12 +11395,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metric metadata.</para>
+        /// <para>Queries metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of CloudMonitor monitoring metrics metadata.</para>
+        /// <para>Queries the metadata details of CloudMonitor monitoring metrics.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12256,7 +12279,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a subscription.</para>
+        /// <para>Starts a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12302,7 +12325,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a subscription.</para>
+        /// <para>Starts a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12348,7 +12371,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a subscription.</para>
+        /// <para>Starts a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12367,7 +12390,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a subscription.</para>
+        /// <para>Starts a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12382,6 +12405,176 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await EnableSubscriptionWithOptionsAsync(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves or creates a shared Prometheus instance for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves or creates a shared Prometheus instance for a workspace. If the instance does not exist, it is created. If the instance already exists, it is directly returned. Currently, only shareScope=Workspace is supported. Each workspace corresponds to only one shared instance in the requested region, and the instance name is generated by the server. The caller identity is the user. If the workspace does not exist, a 404 error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnsureSharedPrometheusInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnsureSharedPrometheusInstanceResponse
+        /// </returns>
+        public EnsureSharedPrometheusInstanceResponse EnsureSharedPrometheusInstanceWithOptions(EnsureSharedPrometheusInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["aliyunLang"] = request.AliyunLang;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareScope))
+            {
+                body["shareScope"] = request.ShareScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                body["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnsureSharedPrometheusInstance",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/shared-prometheus-instances",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnsureSharedPrometheusInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves or creates a shared Prometheus instance for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves or creates a shared Prometheus instance for a workspace. If the instance does not exist, it is created. If the instance already exists, it is directly returned. Currently, only shareScope=Workspace is supported. Each workspace corresponds to only one shared instance in the requested region, and the instance name is generated by the server. The caller identity is the user. If the workspace does not exist, a 404 error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnsureSharedPrometheusInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnsureSharedPrometheusInstanceResponse
+        /// </returns>
+        public async Task<EnsureSharedPrometheusInstanceResponse> EnsureSharedPrometheusInstanceWithOptionsAsync(EnsureSharedPrometheusInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["aliyunLang"] = request.AliyunLang;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareScope))
+            {
+                body["shareScope"] = request.ShareScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                body["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnsureSharedPrometheusInstance",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/shared-prometheus-instances",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnsureSharedPrometheusInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves or creates a shared Prometheus instance for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves or creates a shared Prometheus instance for a workspace. If the instance does not exist, it is created. If the instance already exists, it is directly returned. Currently, only shareScope=Workspace is supported. Each workspace corresponds to only one shared instance in the requested region, and the instance name is generated by the server. The caller identity is the user. If the workspace does not exist, a 404 error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnsureSharedPrometheusInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnsureSharedPrometheusInstanceResponse
+        /// </returns>
+        public EnsureSharedPrometheusInstanceResponse EnsureSharedPrometheusInstance(EnsureSharedPrometheusInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnsureSharedPrometheusInstanceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves or creates a shared Prometheus instance for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves or creates a shared Prometheus instance for a workspace. If the instance does not exist, it is created. If the instance already exists, it is directly returned. Currently, only shareScope=Workspace is supported. Each workspace corresponds to only one shared instance in the requested region, and the instance name is generated by the server. The caller identity is the user. If the workspace does not exist, a 404 error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnsureSharedPrometheusInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnsureSharedPrometheusInstanceResponse
+        /// </returns>
+        public async Task<EnsureSharedPrometheusInstanceResponse> EnsureSharedPrometheusInstanceAsync(EnsureSharedPrometheusInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnsureSharedPrometheusInstanceWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12682,12 +12875,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Details of an add-on schema.</para>
+        /// <para>Retrieves the schema details of an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to modify version <c>1</c> of alert template <c>123456</c>. In this example, the alert level is set to <c>Critical</c>, the statistical method is set to <c>Average</c>, the comparison operator for the alert threshold is set to <c>GreaterThanOrEqualToThreshold</c>, the alert threshold is set to <c>90</c>, and the number of retries is set to <c>3</c>. The response indicates that the alert template was successfully modified.</para>
+        /// <para>This topic provides an example of modifying alert template <c>123456</c> of version <c>1</c>. The alert level is changed to <c>Critical</c>, the statistical method to <c>Average</c>, the threshold comparison operator to <c>GreaterThanOrEqualToThreshold</c>, the threshold to <c>90</c>, and the number of retries to <c>3</c>. The response indicates that the alert template was modified successfully.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12741,12 +12934,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Details of an add-on schema.</para>
+        /// <para>Retrieves the schema details of an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to modify version <c>1</c> of alert template <c>123456</c>. In this example, the alert level is set to <c>Critical</c>, the statistical method is set to <c>Average</c>, the comparison operator for the alert threshold is set to <c>GreaterThanOrEqualToThreshold</c>, the alert threshold is set to <c>90</c>, and the number of retries is set to <c>3</c>. The response indicates that the alert template was successfully modified.</para>
+        /// <para>This topic provides an example of modifying alert template <c>123456</c> of version <c>1</c>. The alert level is changed to <c>Critical</c>, the statistical method to <c>Average</c>, the threshold comparison operator to <c>GreaterThanOrEqualToThreshold</c>, the threshold to <c>90</c>, and the number of retries to <c>3</c>. The response indicates that the alert template was modified successfully.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12800,12 +12993,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Details of an add-on schema.</para>
+        /// <para>Retrieves the schema details of an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to modify version <c>1</c> of alert template <c>123456</c>. In this example, the alert level is set to <c>Critical</c>, the statistical method is set to <c>Average</c>, the comparison operator for the alert threshold is set to <c>GreaterThanOrEqualToThreshold</c>, the alert threshold is set to <c>90</c>, and the number of retries is set to <c>3</c>. The response indicates that the alert template was successfully modified.</para>
+        /// <para>This topic provides an example of modifying alert template <c>123456</c> of version <c>1</c>. The alert level is changed to <c>Critical</c>, the statistical method to <c>Average</c>, the threshold comparison operator to <c>GreaterThanOrEqualToThreshold</c>, the threshold to <c>90</c>, and the number of retries to <c>3</c>. The response indicates that the alert template was modified successfully.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12824,12 +13017,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Details of an add-on schema.</para>
+        /// <para>Retrieves the schema details of an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to modify version <c>1</c> of alert template <c>123456</c>. In this example, the alert level is set to <c>Critical</c>, the statistical method is set to <c>Average</c>, the comparison operator for the alert threshold is set to <c>GreaterThanOrEqualToThreshold</c>, the alert threshold is set to <c>90</c>, and the number of retries is set to <c>3</c>. The response indicates that the alert template was successfully modified.</para>
+        /// <para>This topic provides an example of modifying alert template <c>123456</c> of version <c>1</c>. The alert level is changed to <c>Critical</c>, the statistical method to <c>Average</c>, the threshold comparison operator to <c>GreaterThanOrEqualToThreshold</c>, the threshold to <c>90</c>, and the number of retries to <c>3</c>. The response indicates that the alert template was modified successfully.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12848,7 +13041,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details and accessed state of an add-on release.</para>
+        /// <para>Queries the details of an add-on release to check the accessed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12888,7 +13081,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details and accessed state of an add-on release.</para>
+        /// <para>Queries the details of an add-on release to check the accessed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12928,7 +13121,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details and accessed state of an add-on release.</para>
+        /// <para>Queries the details of an add-on release to check the accessed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12947,7 +13140,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details and accessed state of an add-on release.</para>
+        /// <para>Queries the details of an add-on release to check the accessed state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13140,7 +13333,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an aggregation task group.</para>
+        /// <para>Queries the details of an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13180,7 +13373,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an aggregation task group.</para>
+        /// <para>Queries the details of an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13220,7 +13413,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an aggregation task group.</para>
+        /// <para>Queries the details of an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13239,7 +13432,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an aggregation task group.</para>
+        /// <para>Queries the details of an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16154,7 +16347,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pipeline.</para>
+        /// <para>Queries pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16194,7 +16387,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pipeline.</para>
+        /// <para>Queries pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16234,7 +16427,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pipeline.</para>
+        /// <para>Queries pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16253,7 +16446,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a pipeline.</para>
+        /// <para>Queries pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16272,12 +16465,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified Managed Service for Prometheus instance.</para>
+        /// <para>Queries the details of a specified Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a Managed Service for Prometheus instance.</para>
+        /// <para>Retrieves the details of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16327,12 +16520,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified Managed Service for Prometheus instance.</para>
+        /// <para>Queries the details of a specified Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a Managed Service for Prometheus instance.</para>
+        /// <para>Retrieves the details of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16382,12 +16575,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified Managed Service for Prometheus instance.</para>
+        /// <para>Queries the details of a specified Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a Managed Service for Prometheus instance.</para>
+        /// <para>Retrieves the details of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16406,12 +16599,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified Managed Service for Prometheus instance.</para>
+        /// <para>Queries the details of a specified Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a Managed Service for Prometheus instance.</para>
+        /// <para>Retrieves the details of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16430,7 +16623,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the user settings for Prometheus.</para>
+        /// <para>Queries the Prometheus user settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16476,7 +16669,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the user settings for Prometheus.</para>
+        /// <para>Queries the Prometheus user settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16522,7 +16715,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the user settings for Prometheus.</para>
+        /// <para>Queries the Prometheus user settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16541,7 +16734,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the user settings for Prometheus.</para>
+        /// <para>Queries the Prometheus user settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17104,13 +17297,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single ServiceTask under a specified application.</para>
+        /// <para>Queries the details of a single service task for a specified application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a single service task based on the taskId.
-        /// The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</para>
+        /// <para>Queries the details of a single service task based on the task ID. The response content varies based on the task type. For heapdump, the heap dump task information is returned. For LiveDebug, the task records and fields such as taskConfig (extraInfo) are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17156,13 +17348,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single ServiceTask under a specified application.</para>
+        /// <para>Queries the details of a single service task for a specified application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a single service task based on the taskId.
-        /// The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</para>
+        /// <para>Queries the details of a single service task based on the task ID. The response content varies based on the task type. For heapdump, the heap dump task information is returned. For LiveDebug, the task records and fields such as taskConfig (extraInfo) are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17208,13 +17399,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single ServiceTask under a specified application.</para>
+        /// <para>Queries the details of a single service task for a specified application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a single service task based on the taskId.
-        /// The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</para>
+        /// <para>Queries the details of a single service task based on the task ID. The response content varies based on the task type. For heapdump, the heap dump task information is returned. For LiveDebug, the task records and fields such as taskConfig (extraInfo) are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17233,13 +17423,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single ServiceTask under a specified application.</para>
+        /// <para>Queries the details of a single service task for a specified application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a single service task based on the taskId.
-        /// The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</para>
+        /// <para>Queries the details of a single service task based on the task ID. The response content varies based on the task type. For heapdump, the heap dump task information is returned. For LiveDebug, the task records and fields such as taskConfig (extraInfo) are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17924,12 +18113,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists add-on releases.</para>
+        /// <para>Lists the releases of an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of add-on configurations.</para>
+        /// <para>Queries the list of integration configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17987,12 +18176,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists add-on releases.</para>
+        /// <para>Lists the releases of an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of add-on configurations.</para>
+        /// <para>Queries the list of integration configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18050,12 +18239,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists add-on releases.</para>
+        /// <para>Lists the releases of an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of add-on configurations.</para>
+        /// <para>Queries the list of integration configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18074,12 +18263,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists add-on releases.</para>
+        /// <para>Lists the releases of an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of add-on configurations.</para>
+        /// <para>Queries the list of integration configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18652,12 +18841,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CloudMonitor 2.0 alert history records.</para>
+        /// <para>Queries the list of alert history records for the CloudMonitor 2.0 monitoring service by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
+        /// <para>Uses paging to retrieve the list of alert history records for the CloudMonitor 2.0 monitoring service. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18813,12 +19002,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CloudMonitor 2.0 alert history records.</para>
+        /// <para>Queries the list of alert history records for the CloudMonitor 2.0 monitoring service by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
+        /// <para>Uses paging to retrieve the list of alert history records for the CloudMonitor 2.0 monitoring service. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18974,12 +19163,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CloudMonitor 2.0 alert history records.</para>
+        /// <para>Queries the list of alert history records for the CloudMonitor 2.0 monitoring service by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
+        /// <para>Uses paging to retrieve the list of alert history records for the CloudMonitor 2.0 monitoring service. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18998,12 +19187,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries CloudMonitor 2.0 alert history records.</para>
+        /// <para>Queries the list of alert history records for the CloudMonitor 2.0 monitoring service by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
+        /// <para>Uses paging to retrieve the list of alert history records for the CloudMonitor 2.0 monitoring service. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19204,12 +19393,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries chatbots.</para>
+        /// <para>Queries robots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</para>
+        /// <para>Queries the alert robots under the current account. Alert robots act as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -19285,12 +19474,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries chatbots.</para>
+        /// <para>Queries robots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</para>
+        /// <para>Queries the alert robots under the current account. Alert robots act as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -19366,12 +19555,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries chatbots.</para>
+        /// <para>Queries robots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</para>
+        /// <para>Queries the alert robots under the current account. Alert robots act as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19390,12 +19579,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries chatbots.</para>
+        /// <para>Queries robots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</para>
+        /// <para>Queries the alert robots under the current account. Alert robots act as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19928,7 +20117,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries contacts.</para>
+        /// <para>Queries alert contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20017,7 +20206,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries contacts.</para>
+        /// <para>Queries alert contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20106,7 +20295,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries contacts.</para>
+        /// <para>Queries alert contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20130,7 +20319,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries contacts.</para>
+        /// <para>Queries alert contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20446,12 +20635,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data pipelines.</para>
+        /// <para>Queries a list of data pipelines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries data pipelines in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query of data streams in a specified workspace. Supports paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20501,12 +20690,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data pipelines.</para>
+        /// <para>Queries a list of data pipelines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries data pipelines in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query of data streams in a specified workspace. Supports paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20556,12 +20745,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data pipelines.</para>
+        /// <para>Queries a list of data pipelines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries data pipelines in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query of data streams in a specified workspace. Supports paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20580,12 +20769,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data pipelines.</para>
+        /// <para>Queries a list of data pipelines.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries data pipelines in a specified workspace by using paging.</para>
+        /// <para>Performs a paged query of data streams in a specified workspace. Supports paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20750,7 +20939,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data delivery tasks.</para>
+        /// <para>Queries the list of data delivery tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20818,7 +21007,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data delivery tasks.</para>
+        /// <para>Queries the list of data delivery tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20886,7 +21075,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data delivery tasks.</para>
+        /// <para>Queries the list of data delivery tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20905,7 +21094,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data delivery tasks.</para>
+        /// <para>Queries the list of data delivery tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21474,7 +21663,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the custom service discovery rules of a Provisioning policy.</para>
+        /// <para>Retrieves the custom service discovery rules for an integration center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21532,7 +21721,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the custom service discovery rules of a Provisioning policy.</para>
+        /// <para>Retrieves the custom service discovery rules for an integration center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21590,7 +21779,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the custom service discovery rules of a Provisioning policy.</para>
+        /// <para>Retrieves the custom service discovery rules for an integration center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21609,7 +21798,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the custom service discovery rules of a Provisioning policy.</para>
+        /// <para>Retrieves the custom service discovery rules for an integration center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22122,13 +22311,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the storage requirements for an Integration Center policy.</para>
+        /// <para>Retrieves the storage requirements of an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
-        /// This topic provides an example of creating a policy named <c>PauseNotify</c>. This policy pauses alert notifications for application group <c>7301****</c> from <c>1622949300000</c> to <c>1623208500000</c> (from <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c> UTC+8).</para>
+        /// <para>During the effective period of the policy, no alert notifications are sent for any alerts that occur in the application group. This topic provides an example on how to create a pause alert notification policy named <c>PauseNotify</c> for the application group <c>7301****</c>. The application group will pause alerts from <c>1622949300000</c> to <c>1623208500000</c> (UTC+8 <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22182,13 +22370,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the storage requirements for an Integration Center policy.</para>
+        /// <para>Retrieves the storage requirements of an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
-        /// This topic provides an example of creating a policy named <c>PauseNotify</c>. This policy pauses alert notifications for application group <c>7301****</c> from <c>1622949300000</c> to <c>1623208500000</c> (from <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c> UTC+8).</para>
+        /// <para>During the effective period of the policy, no alert notifications are sent for any alerts that occur in the application group. This topic provides an example on how to create a pause alert notification policy named <c>PauseNotify</c> for the application group <c>7301****</c>. The application group will pause alerts from <c>1622949300000</c> to <c>1623208500000</c> (UTC+8 <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22242,13 +22429,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the storage requirements for an Integration Center policy.</para>
+        /// <para>Retrieves the storage requirements of an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
-        /// This topic provides an example of creating a policy named <c>PauseNotify</c>. This policy pauses alert notifications for application group <c>7301****</c> from <c>1622949300000</c> to <c>1623208500000</c> (from <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c> UTC+8).</para>
+        /// <para>During the effective period of the policy, no alert notifications are sent for any alerts that occur in the application group. This topic provides an example on how to create a pause alert notification policy named <c>PauseNotify</c> for the application group <c>7301****</c>. The application group will pause alerts from <c>1622949300000</c> to <c>1623208500000</c> (UTC+8 <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22267,13 +22453,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the storage requirements for an Integration Center policy.</para>
+        /// <para>Retrieves the storage requirements of an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
-        /// This topic provides an example of creating a policy named <c>PauseNotify</c>. This policy pauses alert notifications for application group <c>7301****</c> from <c>1622949300000</c> to <c>1623208500000</c> (from <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c> UTC+8).</para>
+        /// <para>During the effective period of the policy, no alert notifications are sent for any alerts that occur in the application group. This topic provides an example on how to create a pause alert notification policy named <c>PauseNotify</c> for the application group <c>7301****</c>. The application group will pause alerts from <c>1622949300000</c> to <c>1623208500000</c> (UTC+8 <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22648,12 +22833,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists notify policies.</para>
+        /// <para>Lists notification policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</para>
+        /// <para>Queries the list of notification policies in a specified workspace by using paging. Supports fuzzy filtering by name. Returns a list of NotifyPolicySummary lightweight views.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22719,12 +22904,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists notify policies.</para>
+        /// <para>Lists notification policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</para>
+        /// <para>Queries the list of notification policies in a specified workspace by using paging. Supports fuzzy filtering by name. Returns a list of NotifyPolicySummary lightweight views.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22790,12 +22975,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists notify policies.</para>
+        /// <para>Lists notification policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</para>
+        /// <para>Queries the list of notification policies in a specified workspace by using paging. Supports fuzzy filtering by name. Returns a list of NotifyPolicySummary lightweight views.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22814,12 +22999,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists notify policies.</para>
+        /// <para>Lists notification policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</para>
+        /// <para>Queries the list of notification policies in a specified workspace by using paging. Supports fuzzy filtering by name. Returns a list of NotifyPolicySummary lightweight views.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22838,7 +23023,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the on-call contacts at a specified time.</para>
+        /// <para>Queries the on-call personnel at a specified time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22889,7 +23074,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the on-call contacts at a specified time.</para>
+        /// <para>Queries the on-call personnel at a specified time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22940,7 +23125,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the on-call contacts at a specified time.</para>
+        /// <para>Queries the on-call personnel at a specified time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22964,7 +23149,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the on-call contacts at a specified time.</para>
+        /// <para>Queries the on-call personnel at a specified time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22988,7 +23173,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries on-call schedules.</para>
+        /// <para>Queries the on-call schedules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23056,7 +23241,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries on-call schedules.</para>
+        /// <para>Queries the on-call schedules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23124,7 +23309,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries on-call schedules.</para>
+        /// <para>Queries the on-call schedules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23143,7 +23328,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries on-call schedules.</para>
+        /// <para>Queries the on-call schedules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23466,12 +23651,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
+        /// <para>Retrieves a list of Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
+        /// <para>Retrieves a list of Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23559,12 +23744,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
+        /// <para>Retrieves a list of Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
+        /// <para>Retrieves a list of Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23652,12 +23837,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
+        /// <para>Retrieves a list of Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
+        /// <para>Retrieves a list of Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23676,12 +23861,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
+        /// <para>Retrieves a list of Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
+        /// <para>Retrieves a list of Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23700,12 +23885,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Prometheus view instances.</para>
+        /// <para>Retrieves a list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of Prometheus view instances.</para>
+        /// <para>Retrieves a list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23793,12 +23978,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Prometheus view instances.</para>
+        /// <para>Retrieves a list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of Prometheus view instances.</para>
+        /// <para>Retrieves a list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23886,12 +24071,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Prometheus view instances.</para>
+        /// <para>Retrieves a list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of Prometheus view instances.</para>
+        /// <para>Retrieves a list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23910,12 +24095,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Prometheus view instances.</para>
+        /// <para>Retrieves a list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of Prometheus view instances.</para>
+        /// <para>Retrieves a list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25042,7 +25227,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
+        /// <para>Queries the delivery history of alert notifications in a specified workspace. You can filter the results by notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25180,7 +25365,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
+        /// <para>Queries the delivery history of alert notifications in a specified workspace. You can filter the results by notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25318,7 +25503,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
+        /// <para>Queries the delivery history of alert notifications in a specified workspace. You can filter the results by notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25337,7 +25522,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
+        /// <para>Queries the delivery history of alert notifications in a specified workspace. You can filter the results by notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25580,6 +25765,10 @@ namespace AlibabaCloud.SDK.Cms20240330
                 request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallSource))
             {
                 query["callSource"] = request.CallSource;
@@ -25638,6 +25827,10 @@ namespace AlibabaCloud.SDK.Cms20240330
                 request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallSource))
             {
                 query["callSource"] = request.CallSource;
@@ -26040,12 +26233,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
+        /// <para>Renders template content in Go template syntax along with context data, and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview capabilities in frontend template editors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
+        /// <para>Renders template content in Go template syntax along with context data, and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview capabilities in frontend template editors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26095,12 +26288,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
+        /// <para>Renders template content in Go template syntax along with context data, and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview capabilities in frontend template editors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
+        /// <para>Renders template content in Go template syntax along with context data, and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview capabilities in frontend template editors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26150,12 +26343,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
+        /// <para>Renders template content in Go template syntax along with context data, and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview capabilities in frontend template editors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
+        /// <para>Renders template content in Go template syntax along with context data, and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview capabilities in frontend template editors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26174,12 +26367,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
+        /// <para>Renders template content in Go template syntax along with context data, and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview capabilities in frontend template editors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</para>
+        /// <para>Renders template content in Go template syntax along with context data, and returns the rendering results for each template. Supports previewing multiple templates simultaneously, such as title and content, to enable real-time preview capabilities in frontend template editors.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26365,7 +26558,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of querying the list of alert templates. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying the alert template list. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26440,7 +26633,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of querying the list of alert templates. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying the alert template list. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26515,7 +26708,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of querying the list of alert templates. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying the alert template list. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26539,7 +26732,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of querying the list of alert templates. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying the alert template list. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26863,9 +27056,9 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <c>acs_ecs_dashboard</c> instance <c>i-uf6j91r34rnwawoo****</c>. The alert contact group of the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <para>This topic provides an example of setting a threshold alert rule for the <c>cpu_total</c> metric of the <c>i-uf6j91r34rnwawoo****</c> instance in the <c>acs_ecs_dashboard</c> namespace of Elastic Compute Service. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the number of alert retries for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</para>
+        /// <para>On August 15, 2024, Statistics validation was added. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -26957,9 +27150,9 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <c>acs_ecs_dashboard</c> instance <c>i-uf6j91r34rnwawoo****</c>. The alert contact group of the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <para>This topic provides an example of setting a threshold alert rule for the <c>cpu_total</c> metric of the <c>i-uf6j91r34rnwawoo****</c> instance in the <c>acs_ecs_dashboard</c> namespace of Elastic Compute Service. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the number of alert retries for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</para>
+        /// <para>On August 15, 2024, Statistics validation was added. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27051,9 +27244,9 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <c>acs_ecs_dashboard</c> instance <c>i-uf6j91r34rnwawoo****</c>. The alert contact group of the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <para>This topic provides an example of setting a threshold alert rule for the <c>cpu_total</c> metric of the <c>i-uf6j91r34rnwawoo****</c> instance in the <c>acs_ecs_dashboard</c> namespace of Elastic Compute Service. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the number of alert retries for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</para>
+        /// <para>On August 15, 2024, Statistics validation was added. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27078,9 +27271,9 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <c>acs_ecs_dashboard</c> instance <c>i-uf6j91r34rnwawoo****</c>. The alert contact group of the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <para>This topic provides an example of setting a threshold alert rule for the <c>cpu_total</c> metric of the <c>i-uf6j91r34rnwawoo****</c> instance in the <c>acs_ecs_dashboard</c> namespace of Elastic Compute Service. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the number of alert retries for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</para>
+        /// <para>On August 15, 2024, Statistics validation was added. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27100,7 +27293,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches labels to resources.</para>
+        /// <para>Attaches tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27154,7 +27347,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches labels to resources.</para>
+        /// <para>Attaches tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27208,7 +27401,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches labels to resources.</para>
+        /// <para>Attaches tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27227,7 +27420,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches labels to resources.</para>
+        /// <para>Attaches tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28294,7 +28487,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an alert robot.</para>
+        /// <para>Updates a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28360,7 +28553,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an alert robot.</para>
+        /// <para>Updates a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28426,7 +28619,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an alert robot.</para>
+        /// <para>Updates a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28445,7 +28638,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an alert robot.</para>
+        /// <para>Updates a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28828,6 +29021,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["phone"] = request.Phone;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneCode))
+            {
+                body["phoneCode"] = request.PhoneCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -28889,6 +29086,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phone))
             {
                 body["phone"] = request.Phone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneCode))
+            {
+                body["phoneCode"] = request.PhoneCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -29088,7 +29289,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a context.</para>
+        /// <para>Updates the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29150,7 +29351,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a context.</para>
+        /// <para>Updates the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29212,7 +29413,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a context.</para>
+        /// <para>Updates the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29231,7 +29432,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a context.</para>
+        /// <para>Updates the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29433,7 +29634,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the specified data pipeline with a full candidate configuration.</para>
+        /// <para>Modifies the specified data pipeline by using a complete candidate configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29508,7 +29709,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the specified data pipeline with a full candidate configuration.</para>
+        /// <para>Modifies the specified data pipeline by using a complete candidate configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29583,7 +29784,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the specified data pipeline with a full candidate configuration.</para>
+        /// <para>Modifies the specified data pipeline by using a complete candidate configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29607,7 +29808,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the specified data pipeline with a full candidate configuration.</para>
+        /// <para>Modifies the specified data pipeline by using a complete candidate configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29756,7 +29957,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data delivery task.</para>
+        /// <para>Updates a data shipping task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29834,7 +30035,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data delivery task.</para>
+        /// <para>Updates a data shipping task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29912,7 +30113,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data delivery task.</para>
+        /// <para>Updates a data shipping task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29931,7 +30132,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data delivery task.</para>
+        /// <para>Updates a data shipping task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31010,7 +31211,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update pipeline</para>
+        /// <para>Updates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31072,7 +31273,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update pipeline</para>
+        /// <para>Updates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31134,7 +31335,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update pipeline</para>
+        /// <para>Updates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31153,7 +31354,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update pipeline</para>
+        /// <para>Updates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31172,12 +31373,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
+        /// <para>Updates a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31208,6 +31409,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthFreeWritePolicy))
             {
                 body["authFreeWritePolicy"] = request.AuthFreeWritePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dryrun))
+            {
+                body["dryrun"] = request.Dryrun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAuthFreeRead))
             {
@@ -31267,12 +31472,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
+        /// <para>Updates a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31303,6 +31508,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthFreeWritePolicy))
             {
                 body["authFreeWritePolicy"] = request.AuthFreeWritePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dryrun))
+            {
+                body["dryrun"] = request.Dryrun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAuthFreeRead))
             {
@@ -31362,12 +31571,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
+        /// <para>Updates a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31386,12 +31595,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
+        /// <para>Updates a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32332,7 +32541,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upserts a common Umodel schema reference.</para>
+        /// <para>Updates the referenced public Umodel schema.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32382,7 +32591,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upserts a common Umodel schema reference.</para>
+        /// <para>Updates the referenced public Umodel schema.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32432,7 +32641,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upserts a common Umodel schema reference.</para>
+        /// <para>Updates the referenced public Umodel schema.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32451,7 +32660,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upserts a common Umodel schema reference.</para>
+        /// <para>Updates the referenced public Umodel schema.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32612,12 +32821,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</para>
+        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range and returns the contacts and start and end times of each on-call period grouped by shift name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</para>
+        /// <para>Queries the on-call calendar and returns the on-call arrangements for a specified on-call schedule within a given date range. The shift name is used as the key, and the value is the list of on-call periods for the shift. Each period includes the on-call contact and the start and end times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32667,12 +32876,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</para>
+        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range and returns the contacts and start and end times of each on-call period grouped by shift name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</para>
+        /// <para>Queries the on-call calendar and returns the on-call arrangements for a specified on-call schedule within a given date range. The shift name is used as the key, and the value is the list of on-call periods for the shift. Each period includes the on-call contact and the start and end times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32722,12 +32931,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</para>
+        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range and returns the contacts and start and end times of each on-call period grouped by shift name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</para>
+        /// <para>Queries the on-call calendar and returns the on-call arrangements for a specified on-call schedule within a given date range. The shift name is used as the key, and the value is the list of on-call periods for the shift. Each period includes the on-call contact and the start and end times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32746,12 +32955,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</para>
+        /// <para>Queries the on-call calendar of a specified on-call schedule within a given date range and returns the contacts and start and end times of each on-call period grouped by shift name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</para>
+        /// <para>Queries the on-call calendar and returns the on-call arrangements for a specified on-call schedule within a given date range. The shift name is used as the key, and the value is the list of on-call periods for the shift. Each period includes the on-call contact and the start and end times.</para>
         /// </description>
         /// 
         /// <param name="request">

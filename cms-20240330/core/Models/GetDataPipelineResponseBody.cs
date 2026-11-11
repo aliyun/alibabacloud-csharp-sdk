@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetDataPipelineResponseBodyPipeline Pipeline { get; set; }
         public class GetDataPipelineResponseBodyPipeline : TeaModel {
             /// <summary>
-            /// <para>The creation time in ISO 8601 format in UTC, such as 2026-08-10T05:00:00Z.</para>
+            /// <para>The creation time in UTC, following the ISO 8601 format, such as 2026-08-10T05:00:00Z.</para>
             /// <para>This parameter is required.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
@@ -136,6 +136,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                         /// <summary>
                         /// <para>The extended parameters.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>{&quot;vendor&quot;:&quot;example&quot;}</para>
                         /// </summary>
                         [NameInMap("parameters")]
                         [Validation(Required=false)]
@@ -178,7 +181,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules> Rules { get; set; }
                         public class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules : TeaModel {
                             /// <summary>
-                            /// <para>The prefix retention length.</para>
+                            /// <para>The length of the prefix to retain.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>2</para>
@@ -188,7 +191,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                             public int? KeepPrefix { get; set; }
 
                             /// <summary>
-                            /// <para>The suffix retention length.</para>
+                            /// <para>The length of the suffix to retain.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>2</para>
@@ -208,9 +211,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                             /// <para>The mask character.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <list type="bullet">
-                            /// <item><description></description></item>
-                            /// </list>
+                            /// <h1></h1>
                             /// </summary>
                             [NameInMap("maskChar")]
                             [Validation(Required=false)]
@@ -227,7 +228,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                             public string Mode { get; set; }
 
                             /// <summary>
-                            /// <para>The built-in sensitive types.</para>
+                            /// <para>The built-in sensitive data type.</para>
                             /// </summary>
                             [NameInMap("types")]
                             [Validation(Required=false)]
@@ -236,7 +237,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         }
 
                         /// <summary>
-                        /// <para>The pipeline processing scope.</para>
+                        /// <para>The effective scope of pipeline processing.</para>
                         /// </summary>
                         [NameInMap("scope")]
                         [Validation(Required=false)]
@@ -391,7 +392,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigSelector Selector { get; set; }
                         public class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigSelector : TeaModel {
                             /// <summary>
-                            /// <para>The service name list.</para>
+                            /// <para>The list of service names.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>[&quot;checkout-*&quot;,&quot;order-service&quot;]</para>
@@ -528,6 +529,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                     /// <summary>
                     /// <para>The extended parameters.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;vendor&quot;:&quot;example&quot;}</para>
                     /// </summary>
                     [NameInMap("parameters")]
                     [Validation(Required=false)]
@@ -570,7 +574,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<GetDataPipelineResponseBodyPipelineProcessorsConfigRules> Rules { get; set; }
                     public class GetDataPipelineResponseBodyPipelineProcessorsConfigRules : TeaModel {
                         /// <summary>
-                        /// <para>The prefix retention length.</para>
+                        /// <para>The length of the prefix to retain.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -580,7 +584,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public int? KeepPrefix { get; set; }
 
                         /// <summary>
-                        /// <para>The suffix retention length.</para>
+                        /// <para>The length of the suffix to retain.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -600,9 +604,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         /// <para>The mask character.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <list type="bullet">
-                        /// <item><description></description></item>
-                        /// </list>
+                        /// <h1></h1>
                         /// </summary>
                         [NameInMap("maskChar")]
                         [Validation(Required=false)]
@@ -619,7 +621,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Mode { get; set; }
 
                         /// <summary>
-                        /// <para>The built-in sensitive types.</para>
+                        /// <para>The built-in sensitive data type.</para>
                         /// </summary>
                         [NameInMap("types")]
                         [Validation(Required=false)]
@@ -662,7 +664,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                                 /// <para>The reference data type.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>explorer_link</para>
+                                /// <para>field</para>
                                 /// </summary>
                                 [NameInMap("kind")]
                                 [Validation(Required=false)]
@@ -783,7 +785,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public GetDataPipelineResponseBodyPipelineProcessorsConfigSelector Selector { get; set; }
                     public class GetDataPipelineResponseBodyPipelineProcessorsConfigSelector : TeaModel {
                         /// <summary>
-                        /// <para>The service name list.</para>
+                        /// <para>The list of service names.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[&quot;checkout-*&quot;,&quot;order-service&quot;]</para>
@@ -849,7 +851,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string SignalType { get; set; }
 
             /// <summary>
-            /// <para>The data sinks.</para>
+            /// <para>The output destinations.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("sinks")]
@@ -874,7 +876,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data sink.</para>
+                /// <para>The name of the output destination.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>error-archive</para>
@@ -894,7 +896,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The type of the data sink.</para>
+                /// <para>The type of the output destination.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>logstore</para>
@@ -931,7 +933,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string RunMode { get; set; }
 
                     /// <summary>
-                    /// <para>The starting point for reading.</para>
+                    /// <para>The read start point.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>latest</para>
@@ -972,7 +974,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the data source.</para>
+                /// <para>The data source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>traces-default</para>
@@ -1005,7 +1007,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string StatusMessage { get; set; }
 
             /// <summary>
-            /// <para>The update time in ISO 8601 format in UTC, such as 2026-08-10T05:10:00Z.</para>
+            /// <para>The update time in UTC, following the ISO 8601 format, such as 2026-08-10T05:10:00Z.</para>
             /// <para>This parameter is required.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 

@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The labels.</para>
-        /// <para>You can attach up to 20 labels.</para>
+        /// <para>The tags.</para>
+        /// <para>You can attach up to 20 tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteAlertNotifyTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The actual number of deleted records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("deletedCount")]
+        [Validation(Required=false)]
+        public int? DeletedCount { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>

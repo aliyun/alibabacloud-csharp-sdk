@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class Queries : TeaModel {
         /// <summary>
-        /// <para>The end offset of the time range for SLS_MULTI_QUERY (mutually exclusive with window).</para>
+        /// <para>The end offset of the time range for SLS_MULTI_QUERY, which is mutually exclusive with window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? End { get; set; }
 
         /// <summary>
-        /// <para>The query expression (PromQL for PROMETHEUS_MULTI_QUERY and SPL for SLS_MULTI_QUERY).</para>
+        /// <para>The query expression, which is PromQL for PROMETHEUS_MULTI_QUERY and SPL for SLS_MULTI_QUERY.</para>
         /// 
         /// <b>Example:</b>
         /// <para>示例值</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Expr { get; set; }
 
         /// <summary>
-        /// <para>The label filter conditions for UMODEL_METRICSET_MULTI_QUERY (optional and independent per query).</para>
+        /// <para>The label filter conditions for UMODEL_METRICSET_MULTI_QUERY, which are optional and independent per query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;:&quot;env&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;value&quot;:&quot;prod&quot;}]</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetricSet { get; set; }
 
         /// <summary>
-        /// <para>The query name for PROMETHEUS_MULTI_QUERY or UMODEL_METRICSET_MULTI_QUERY (such as $A or $B, referenced by condition triggers).</para>
+        /// <para>The query name for PROMETHEUS_MULTI_QUERY or UMODEL_METRICSET_MULTI_QUERY, such as $A or $B, which is referenced by condition triggers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>示例名称</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The start offset of the time range for SLS_MULTI_QUERY (mutually exclusive with window).</para>
+        /// <para>The start offset of the time range for SLS_MULTI_QUERY, which is mutually exclusive with window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Start { get; set; }
 
         /// <summary>
-        /// <para>The time unit for SLS_MULTI_QUERY (day, hour, minute, or second).</para>
+        /// <para>The time unit for SLS_MULTI_QUERY, which can be day, hour, minute, or second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>second</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TimeUnit { get; set; }
 
         /// <summary>
-        /// <para>The alignment window size for SLS_MULTI_QUERY (mutually exclusive with start and end).</para>
+        /// <para>The alignment window size for SLS_MULTI_QUERY, which is mutually exclusive with start and end.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

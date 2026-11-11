@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Not yet enabled.</para>
+        /// <para>Not enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether authentication-free read is supported.</para>
+        /// <para>Specifies whether password-free read is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether authToken is supported.</para>
+        /// <para>Specifies whether AuthToken is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The Prometheus view name.</para>
+        /// <para>The name of the Prometheus view.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,17 +116,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Not yet enabled.</para>
+        /// <para>Not enabled.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The operation to perform.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -155,10 +155,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>V1: Legacy version.</description></item>
-        /// <item><description>V2: New version.</description></item>
+        /// <item><description>V1: legacy version</description></item>
+        /// <item><description>V2: new version</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

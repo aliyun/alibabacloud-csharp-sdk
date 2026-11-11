@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListServicesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of records to return for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekxxzuad5zzzz</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The application service name.</para>
+        /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-demo</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The service type.</para>
+        /// <para>The type of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TRACE</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The array of tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

@@ -133,6 +133,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                 /// <summary>
                 /// <para>The parameters.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;output&quot;:&quot;ID,key_0,key_2,key_3,key_4&quot;,&quot;workspace&quot;:&quot;workspace-test-dataset&quot;,&quot;field&quot;:&quot;key_0&quot;,&quot;global&quot;:true,&quot;dataset&quot;:&quot;dataset_1&quot;}</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
@@ -183,7 +186,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The output destination.</para>
+        /// <para>The data sink.</para>
         /// </summary>
         [NameInMap("sink")]
         [Validation(Required=false)]
@@ -219,7 +222,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The output destination type.</para>
+            /// <para>The data sink type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataset</para>

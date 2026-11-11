@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteContactsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The actual number of deleted records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("deletedCount")]
+        [Validation(Required=false)]
+        public int? DeletedCount { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description of the notification policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生产环境告警通知策略</para>
+        /// <para>Production environment alert notification policy</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The noise reduction settings.</para>
+        /// <para>The grouping and merging settings.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("groupingSetting")]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyStrategyConfigGroupingSetting GroupingSetting { get; set; }
         public class NotifyStrategyConfigGroupingSetting : TeaModel {
             /// <summary>
-            /// <para>The event fields by which events are grouped. Events in the same group are merged into a single notification. An empty array indicates no grouping.</para>
+            /// <para>The event fields used for grouping and merging. Events in the same group are merged into a single notification. An empty array indicates no grouping.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;alertname&quot;]</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> GroupingKeys { get; set; }
 
             /// <summary>
-            /// <para>This parameter does not take effect for this operation. You do not need to set this parameter.</para>
+            /// <para>This parameter does not take effect for this API operation and does not need to be set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? PeriodMin { get; set; }
 
             /// <summary>
-            /// <para>This parameter does not take effect for this operation. You do not need to set this parameter.</para>
+            /// <para>This parameter does not take effect for this API operation and does not need to be set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? SilenceSec { get; set; }
 
             /// <summary>
-            /// <para>This parameter does not take effect for this operation. You do not need to set this parameter.</para>
+            /// <para>This parameter does not take effect for this API operation and does not need to be set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -123,18 +123,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<NotifyStrategyConfigRoutesChannels> Channels { get; set; }
             public class NotifyStrategyConfigRoutesChannels : TeaModel {
                 /// <summary>
-                /// <para>The channel type. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP. Lowercase values are not supported. For email, text message, or phone call notifications, use CONTACT with enabledSubChannels.</para>
+                /// <para>The type of the channel. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP. The values must be in uppercase. Lowercase values are not supported. For email, text messages, and voice calls, use CONTACT with enabledSubChannels.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>WEBHOOK</para>
+                /// <para>DING</para>
                 /// </summary>
                 [NameInMap("channelType")]
                 [Validation(Required=false)]
                 public string ChannelType { get; set; }
 
                 /// <summary>
-                /// <para>Required only for CONTACT, GROUP, or DUTY. The sub-channel types in uppercase. Valid values: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK.</para>
+                /// <para>Required only for CONTACT, GROUP, and DUTY. Valid values for sub-channels: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK. The values must be in uppercase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;EMAIL&quot;,&quot;SMS&quot;]</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public List<string> EnabledSubChannels { get; set; }
 
                 /// <summary>
-                /// <para>The list of receiver identifiers. At least one receiver is required. Specify a webhook UUID for WEBHOOK, a robot UUID for chatbots, or a contact ID for CONTACT.</para>
+                /// <para>The list of receiver identifiers. At least one receiver is required. For WEBHOOK, specify the webhook UUID. For a chatbot, specify the chatbot UUID. For CONTACT, specify the contact ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -157,10 +157,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The digital employee name. Required when enableRca is set to true.</para>
+            /// <para>The name of the digital employee. This parameter is required when enableRca is set to true.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数字员工名</para>
+            /// <para>Digital employee name</para>
             /// </summary>
             [NameInMap("digitalEmployeeName")]
             [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public NotifyStrategyConfigRoutesEffectTimeRange EffectTimeRange { get; set; }
             public class NotifyStrategyConfigRoutesEffectTimeRange : TeaModel {
                 /// <summary>
-                /// <para>The effective days. Valid values: 0 to 6 (0 = Sunday, 6 = Saturday). The value 7 is not supported.</para>
+                /// <para>The effective days of the week. Valid values: 0 to 6. A value of 0 indicates Sunday, and 6 indicates Saturday. The value 7 is not supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[0,1,2,3,4,5,6]</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EnableRca { get; set; }
 
             /// <summary>
-            /// <para>The route-level event filter conditions.</para>
+            /// <para>The route-level event filtering conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>

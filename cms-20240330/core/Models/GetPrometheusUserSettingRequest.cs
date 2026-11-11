@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetPrometheusUserSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh and en. Default value: zh.</para>
+        /// <para>The locale. Default value: zh. Valid values: zh, en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

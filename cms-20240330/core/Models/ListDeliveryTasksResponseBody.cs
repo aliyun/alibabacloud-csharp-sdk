@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDeliveryTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of delivery tasks.</para>
+        /// <para>The list of data delivery tasks.</para>
         /// </summary>
         [NameInMap("deliveryTasks")]
         [Validation(Required=false)]
         public List<ListDeliveryTasksResponseBodyDeliveryTasks> DeliveryTasks { get; set; }
         public class ListDeliveryTasksResponseBodyDeliveryTasks : TeaModel {
             /// <summary>
-            /// <para>The creation time. The time is displayed in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format and is displayed in UTC.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source, which is the ID of the Prometheus instance.</para>
+            /// <para>The data source ID, which is the Prometheus instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-5f2b4c7e66342s</para>
@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</para>
             /// </summary>
             [NameInMap("externalLabels")]
             [Validation(Required=false)]
@@ -61,14 +64,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The metric filtering conditions, used in conjunction with labelFiltersType. The key is the metric label name, and the value is the matching value.</para>
+            /// <para>The metric filter conditions, used in conjunction with labelFiltersType. The key is the metric label name, and the value is the matched value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;<b>name</b>&quot;:&quot;up&quot;}</para>
             /// </summary>
             [NameInMap("labelFilters")]
             [Validation(Required=false)]
             public Dictionary<string, string> LabelFilters { get; set; }
 
             /// <summary>
-            /// <para>The metric filtering mode.</para>
+            /// <para>The metric filter mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Allow</para>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The list of delivery sinks. You can configure multiple sinks.</para>
+            /// <para>The list of delivery sinks. Multiple sinks are supported.</para>
             /// </summary>
             [NameInMap("sinkList")]
             [Validation(Required=false)]
@@ -96,6 +102,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public class ListDeliveryTasksResponseBodyDeliveryTasksSinkList : TeaModel {
                 /// <summary>
                 /// <para>The detailed configuration of the delivery sink. The meanings of the key and value vary based on the sinkType.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;Url&quot;:&quot;<a href="https://example.com/api/v1/write%22,%22Network%22:%22PublicNetwork%22,%22AuthType%22:%22None%22%7D">https://example.com/api/v1/write&quot;,&quot;Network&quot;:&quot;PublicNetwork&quot;,&quot;AuthType&quot;:&quot;None&quot;}</a></para>
                 /// </summary>
                 [NameInMap("sinkConfigs")]
                 [Validation(Required=false)]
@@ -153,7 +162,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The description of the task.</para>
+            /// <para>The task description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my delivery task</para>
@@ -163,7 +172,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>db21f8a126d96953</para>
@@ -173,7 +182,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-task</para>
@@ -183,7 +192,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The update time. The time is displayed in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</para>
+            /// <para>The update time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format and is displayed in UTC.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -196,7 +205,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results returned. Maximum value: 100.</para>
+        /// <para>The maximum number of results to return. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -216,7 +225,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7D7DF334-B2F2-5453-AD51-A27B337E3191</para>

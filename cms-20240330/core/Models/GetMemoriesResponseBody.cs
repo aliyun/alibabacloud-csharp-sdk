@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetMemoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of relations.</para>
+        /// <para>The relationships.</para>
         /// </summary>
         [NameInMap("relations")]
         [Validation(Required=false)]
         public List<GetMemoriesResponseBodyRelations> Relations { get; set; }
         public class GetMemoriesResponseBodyRelations : TeaModel {
             /// <summary>
-            /// <para>The destination of the relation.</para>
+            /// <para>The destination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Destination { get; set; }
 
             /// <summary>
-            /// <para>The type of the relation.</para>
+            /// <para>The relationships.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Relationship { get; set; }
 
             /// <summary>
-            /// <para>The source of the relation.</para>
+            /// <para>The source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_namespace/RegistryModule-test2153b9f3-0be6-455e-9efd-05fd31f62885/alicloud</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of results.</para>
+        /// <para>The results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ActorId { get; set; }
 
             /// <summary>
-            /// <para>The agent ID.</para>
+            /// <para>The agent ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>980565235819266048</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The memory hash.</para>
+            /// <para>The memory hash value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>73ad89f2d56c2f8615e5dd0cef7b4c41c074277c91fa0e31fc5b41802c0481f2</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The memory content.</para>
+            /// <para>The memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>My name is Zhang San and I live in Hangzhou.</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The role that sent the message.</para>
+            /// <para>The role of the message initiator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>

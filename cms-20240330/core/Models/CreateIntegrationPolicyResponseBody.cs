@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Created { get; set; }
 
         /// <summary>
-        /// <para>The uploaded policy.</para>
+        /// <para>The policy.</para>
         /// </summary>
         [NameInMap("policy")]
         [Validation(Required=false)]

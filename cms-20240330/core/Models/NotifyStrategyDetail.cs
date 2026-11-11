@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description of the notification policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生产环境告警通知策略</para>
+        /// <para>Production environment alert notification policy</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyStrategyDetailGroupingSetting GroupingSetting { get; set; }
         public class NotifyStrategyDetailGroupingSetting : TeaModel {
             /// <summary>
-            /// <para>The event fields by which events are grouped for noise reduction. Events in the same group are merged into a single notification. An empty array indicates no grouping.</para>
+            /// <para>The event fields used for grouping and merging. Events in the same group are merged into a single notification. An empty array indicates that no grouping is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;alertname&quot;]</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? PeriodMin { get; set; }
 
             /// <summary>
-            /// <para>The silence duration in seconds.</para>
+            /// <para>The mute period in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? SilenceSec { get; set; }
 
             /// <summary>
-            /// <para>The number of trigger times.</para>
+            /// <para>The number of triggers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<NotifyStrategyDetailRoutesChannels> Channels { get; set; }
             public class NotifyStrategyDetailRoutesChannels : TeaModel {
                 /// <summary>
-                /// <para>The channel type. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP.</para>
+                /// <para>The type of the channel. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>WEBHOOK</para>
+                /// <para>DING</para>
                 /// </summary>
                 [NameInMap("channelType")]
                 [Validation(Required=false)]
@@ -153,10 +153,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The digital employee name. This parameter is required when enableRca is set to true.</para>
+            /// <para>The name of the digital employee. This parameter is required when enableRca is set to true.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数字员工名</para>
+            /// <para>Digital employee name</para>
             /// </summary>
             [NameInMap("digitalEmployeeName")]
             [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public NotifyStrategyDetailRoutesEffectTimeRange EffectTimeRange { get; set; }
             public class NotifyStrategyDetailRoutesEffectTimeRange : TeaModel {
                 /// <summary>
-                /// <para>The effective days of the week. Valid values: 0 to 6 (0 = Sunday, 6 = Saturday). The value 7 is not supported.</para>
+                /// <para>The days of the week when the policy takes effect. Valid values: 0 to 6. 0 indicates Sunday, and 6 indicates Saturday. The value 7 is not supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[0,1,2,3,4,5,6]</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable root cause analysis (RCA).</para>
+            /// <para>Specifies whether to enable Root Cause Analysis (RCA).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EnableRca { get; set; }
 
             /// <summary>
-            /// <para>The route-level event filter conditions.</para>
+            /// <para>The route-level event filtering conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>

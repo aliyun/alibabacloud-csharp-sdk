@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetAddonResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of data corresponding to the request header.</para>
+        /// <para>The data list corresponding to the request header.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The list of categories for the integrated component.</para>
+            /// <para>The list of category directories for the integrated component.</para>
             /// </summary>
             [NameInMap("categories")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>The additional dependencies.</para>
+                /// <para>The additional dependency files.</para>
                 /// </summary>
                 [NameInMap("dependencies")]
                 [Validation(Required=false)]
@@ -134,6 +134,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                     /// <summary>
                     /// <para>The dependencies on probes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;metric-agent&quot;:true}</para>
                     /// </summary>
                     [NameInMap("features")]
                     [Validation(Required=false)]
@@ -159,7 +162,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the environment is enabled.</para>
+                /// <para>Specifies whether the environment is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -196,7 +199,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public GetAddonResponseBodyDataEnvironmentsPolicies Policies { get; set; }
                 public class GetAddonResponseBodyDataEnvironmentsPolicies : TeaModel {
                     /// <summary>
-                    /// <para>The enabled status of the default alert rule policy.</para>
+                    /// <para>The enabling status of the default policy for alert rules.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -206,7 +209,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string AlertDefaultStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the add-on is installed by default.</para>
+                    /// <para>Specifies whether the add-on is installed by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -216,7 +219,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public bool? DefaultInstall { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether a service account is assigned to communicate with the Console API.</para>
+                    /// <para>Specifies whether a service account is assigned for communication with the console API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -242,7 +245,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>Indicates whether a pod restart is triggered immediately after the add-on is installed during integration.</para>
+                    /// <para>Specifies whether the pod restart guide is triggered immediately after the add-on is installed during integration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -301,7 +304,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The name of the target add-on for redirection.</para>
+                    /// <para>The name of the target add-on to redirect to.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-default</para>
@@ -352,7 +355,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The latest creation time.</para>
+            /// <para>The latest release creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-12 12:30:30</para>
@@ -372,7 +375,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the add-on can be installed only once.</para>
+            /// <para>Specifies whether the add-on can be installed only once.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -382,7 +385,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Once { get; set; }
 
             /// <summary>
-            /// <para>The scenario of the component.</para>
+            /// <para>The component scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>middleware</para>
@@ -392,7 +395,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>The version of the component.</para>
+            /// <para>The component version.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">

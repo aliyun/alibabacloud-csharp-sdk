@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListUserNotifyHistoriesResponseBodyHistoryList> HistoryList { get; set; }
         public class ListUserNotifyHistoriesResponseBodyHistoryList : TeaModel {
             /// <summary>
-            /// <para>The notification channel. The valid values are the same as those of the <c>channel</c> request parameter.</para>
+            /// <para>The notification channel. The valid values are the same as those of the channel request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DING</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The list of contacts. Multiple contacts are separated by commas.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Zhang San, Li Si</para>
+            /// <para>Zhang San,Li Si</para>
             /// </summary>
             [NameInMap("contacts")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The list of contact groups. Multiple contact groups are separated by commas.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>O&amp;M group, on-call group</para>
+            /// <para>O&amp;M group,On-call group</para>
             /// </summary>
             [NameInMap("groups")]
             [Validation(Required=false)]
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>Indicates whether the notification record has no actual delivery channel. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The notification record has no actual delivery channel, and the notifyResult is NO_CHANNEL.</description></item>
-            /// <item><description>false: The notification record has an actual delivery channel.</description></item>
+            /// <item><description>true: the record has no channel, which means the notifyResult is NO_CHANNEL.</description></item>
+            /// <item><description>false: the record has an actual delivery channel.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("noChannel")]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string NotifyStrategyName { get; set; }
 
             /// <summary>
-            /// <para>The recipient address, such as a phone number, email address, or webhook URL, depending on the notification channel.</para>
+            /// <para>The recipient address, such as a phone number, email address, or webhook address, depending on the notification channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13800138000</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Receiver { get; set; }
 
             /// <summary>
-            /// <para>The notification delivery result details. This is the raw response content returned by the channel, such as the API response from a DingTalk or Lark bot.</para>
+            /// <para>The details of the notification delivery result. This is the raw response content returned by the channel, such as the API response from a DingTalk or Lark bot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <item><description>CRITICAL: critical</description></item>
             /// <item><description>ERROR: error</description></item>
             /// <item><description>WARNING: warning</description></item>
-            /// <item><description>INFO: information</description></item>
+            /// <item><description>INFO: info</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -212,8 +212,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>Indicates whether the notification was delivered successfully. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The notification was delivered successfully.</description></item>
-            /// <item><description>false: The notification delivery failed.</description></item>
+            /// <item><description>true: the delivery was successful.</description></item>
+            /// <item><description>false: the delivery failed.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("success")]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The time when the notification record was generated. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The time when the notification was recorded. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1729400000</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned by this request.</para>
+        /// <para>The maximum number of entries returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

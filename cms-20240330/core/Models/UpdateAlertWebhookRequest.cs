@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAlertWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>The content type. Valid values:</para>
+        /// <para>The data content type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>JSON</description></item>
         /// <item><description>FORM</description></item>
@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>headers</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;X-Total-Count&quot;:&quot;0&quot;}</para>
         /// </summary>
         [NameInMap("headers")]
         [Validation(Required=false)]
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The name of the webhook.</para>
+        /// <para>The webhook name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The URL of the alert callback.</para>
+        /// <para>The alert callback URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://aliyun.com/test">http://aliyun.com/test</a></para>

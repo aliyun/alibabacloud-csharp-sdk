@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The region IDs for filtering, separated by commas. Currently, only a single region ID is supported.</para>
+        /// <para>The list of region IDs used for filtering, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs, separated by commas.</para>
+        /// <para>The list of instance IDs, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-00001,rw-00002,rw-00003</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance name. Fuzzy match is supported.</para>
+        /// <para>The instance name. Partial match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The instance version. Valid values: V1 and V2.</para>
+        /// <para>The instance version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>

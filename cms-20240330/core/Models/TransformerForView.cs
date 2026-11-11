@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<TransformAction> Actions { get; set; }
 
         /// <summary>
-        /// <para>The time when the converter was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the converter is enabled.</para>
+        /// <para>Indicates whether it is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to exit after a match is processed.</para>
+        /// <para>Indicates whether to exit after match processing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? QuitAfterMatch { get; set; }
 
         /// <summary>
-        /// <para>The sort ID.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? SortId { get; set; }
 
         /// <summary>
-        /// <para>The transformer ID.</para>
+        /// <para>transformer Id</para>
         /// 
         /// <b>Example:</b>
         /// <para>1123123123123</para>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test processing flow.</para>
+        /// <para>测试处理流</para>
         /// </summary>
         [NameInMap("transformerName")]
         [Validation(Required=false)]
         public string TransformerName { get; set; }
 
         /// <summary>
-        /// <para>The time when the converter was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-16T02:27:01Z</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The workspace.</para>
+        /// <para>workspace</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

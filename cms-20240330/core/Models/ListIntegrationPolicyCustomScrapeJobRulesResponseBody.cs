@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules> CustomScrapeJobRules { get; set; }
         public class ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules : TeaModel {
             /// <summary>
-            /// <para>The addon name.</para>
+            /// <para>The add-on name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-ecs</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonName { get; set; }
 
             /// <summary>
-            /// <para>The addon release name.</para>
+            /// <para>The add-on release name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release-12345678</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// <para>The addon version.</para>
+            /// <para>The add-on version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonVersion { get; set; }
 
             /// <summary>
-            /// <para>The configuration YAML.</para>
+            /// <para>The YAML configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scrape_cofnigs:</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string MetricsPath { get; set; }
 
                 /// <summary>
-                /// <para>The invocation method.</para>
+                /// <para>The scheme.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>http</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned. Maximum value: 200.</para>
+        /// <para>The maximum number of results to return. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Attributes { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the service was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-01T02:23:59Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The service description. This parameter is valid only when serviceType is set to RUM.</para>
+            /// <para>The description of the service. This parameter is valid only when serviceType is set to RUM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspace api monitor test</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ARMS application ID for backward compatibility.</para>
+            /// <para>The legacy ARMS application ID for backward compatibility.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kgcsf@192197e828d51aa</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekxxzuad5zzzz</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The service ID.</para>
+            /// <para>The ID of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jm2pl0yoqf@d4905cb11a4f218dfb0a8</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The service status. This parameter is valid only when serviceType is set to RUM.</para>
+            /// <para>The status of the service. This parameter is valid only when serviceType is set to RUM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ServiceStatus { get; set; }
 
             /// <summary>
-            /// <para>The service type.</para>
+            /// <para>The type of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TRACE</para>

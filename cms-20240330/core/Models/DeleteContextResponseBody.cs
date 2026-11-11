@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteContextResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the deleted context.</para>
+        /// <para>The ID of the generated record or event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>897294a7-67a4-4f60-976c-e136edc5f97e</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The deletion status. For example, deleted.</para>
+        /// <para>The deletion status, such as deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deleted</para>

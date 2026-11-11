@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>The category.</para>
+        /// <para>The directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>Filters resources by label. The following labels are available:</para>
+        /// <para>Filters resources by label. The existing labels are described as follows:</para>
         /// <list type="bullet">
-        /// <item><description>metricCategory: the metric category description.</description></item>
+        /// <item><description>metricCategory: the category description of the metric.</description></item>
         /// <item><description>alertEnable: specifies whether alerting is required.</description></item>
         /// <item><description>alertUnit: the recommended alert unit.</description></item>
         /// <item><description>unitFactor: the unit conversion factor.</description></item>
         /// <item><description>minAlertPeriod: the minimum alert period.</description></item>
-        /// <item><description>productCategory: the product type category.</description></item>
+        /// <item><description>productCategory: the product category.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("labels")]
@@ -77,11 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The metadata source. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CMS: CloudMonitor Basic monitoring metrics.</description></item>
-        /// <item><description>PROM_BASIC: Prometheus CloudMonitor Basic monitoring metrics.</description></item>
-        /// </list>
+        /// <para>The metadata source. Valid values: CMS for CloudMonitor Basic monitoring metrics, and PROM_BASIC for Prometheus CloudMonitor basic monitoring metrics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CMS</para>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The namespace, which is used to distinguish between services.</para>
+        /// <para>The namespace used to distinguish products.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_ecs_dashboard</para>

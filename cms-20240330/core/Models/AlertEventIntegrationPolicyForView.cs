@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether it is enabled.</para>
+        /// <para>Indicates whether it is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IntegrationSetting { get; set; }
 
         /// <summary>
-        /// <para>The reporting entry key for the integration.</para>
+        /// <para>The key for the integrated reporting endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10-16818f1445e10a1d012922b285bfb334</para>

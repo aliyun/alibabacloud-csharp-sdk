@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public class PreviewNotifyTemplateResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The mapping of failed rendering results. The key is the template identifier, and the value is the cause of the failure, such as a template syntax error or a reference to an undefined variable.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;subject&quot;:&quot;Template syntax error&quot;}</para>
             /// </summary>
             [NameInMap("failed")]
             [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>The mapping of successful rendering results. The key is the template identifier, which corresponds to templates[].key in the request, and the value is the rendered string content.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;subject&quot;:&quot;Alert notification&quot;}</para>
             /// </summary>
             [NameInMap("success")]
             [Validation(Required=false)]
@@ -53,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The request is successful.</description></item>
         /// <item><description>false: The request fails.</description></item>

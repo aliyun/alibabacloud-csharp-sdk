@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the pipeline.</para>
+        /// <para>The pipeline name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pipeline-name-1</para>

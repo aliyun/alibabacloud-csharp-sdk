@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAlertActionRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the alert action integration.</para>
+        /// <para>The unique identifier of the action integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertActionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert action integration.</para>
+        /// <para>The name of the action integration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -197,14 +197,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</para>
+        /// <para>The Simple Message Queue (formerly MNS) parameters.</para>
         /// </summary>
         [NameInMap("mnsParam")]
         [Validation(Required=false)]
         public CreateAlertActionRequestMnsParam MnsParam { get; set; }
         public class CreateAlertActionRequestMnsParam : TeaModel {
             /// <summary>
-            /// <para>The resource type of Simple Message Queue (formerly MNS) (MSMQ).</para>
+            /// <para>The Simple Message Queue (formerly MNS) resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>queue</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string MnsType { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource.</para>
+            /// <para>The resource name.</para>
             /// <list type="bullet">
             /// <item><description>If the resource type is queue, the resource name is the queue name.</description></item>
             /// <item><description>If the resource type is topic, the resource name is the topic name.</description></item>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public CreateAlertActionRequestPagerDutyParam PagerDutyParam { get; set; }
         public class CreateAlertActionRequestPagerDutyParam : TeaModel {
             /// <summary>
-            /// <para>The integration key of PagerDuty.</para>
+            /// <para>The integration key for PagerDuty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fds3wr54rvcxfr4543t6435</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The integration webhook URL of PagerDuty. Both V1 and V2 are supported.</para>
+            /// <para>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public CreateAlertActionRequestSlsParam SlsParam { get; set; }
         public class CreateAlertActionRequestSlsParam : TeaModel {
             /// <summary>
-            /// <para>The name of the Logstore in Simple Log Service.</para>
+            /// <para>The name of the Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testLogstore。</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>The name of the project in Simple Log Service.</para>
+            /// <para>The name of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testProject</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The type of the alert action integration.</para>
+        /// <para>The action integration type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> Headers { get; set; }
 
             /// <summary>
-            /// <para>The webhook request method.</para>
+            /// <para>The HTTP method for the webhook request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POST</para>

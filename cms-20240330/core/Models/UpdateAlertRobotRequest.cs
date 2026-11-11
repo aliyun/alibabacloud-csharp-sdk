@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the robot.</para>
+        /// <para>The name of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The signature key of the robot.</para>
+        /// <para>The signing key of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc123</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RobotSignKey { get; set; }
 
         /// <summary>
-        /// <para>The type of the robot.</para>
+        /// <para>The type of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DING</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The webhook URL of the robot.</para>
+        /// <para>The webhook URL of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**************</para>

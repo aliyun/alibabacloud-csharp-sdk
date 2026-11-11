@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertHistoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of alert histories that match the query conditions.</para>
+        /// <para>The list of alert history records that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;alertHistoryId&quot;:&quot;ah_123456&quot;,&quot;alertRuleId&quot;:&quot;rule_789&quot;,&quot;status&quot;:&quot;ALARM&quot;,&quot;startTime&quot;:1704067200000}]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListAlertHistoriesResponseBodyData> Data { get; set; }
         public class ListAlertHistoriesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the alert history.</para>
+            /// <para>The unique identifier of the alert history record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>u1oe4i7c197uucfmvscum4u797</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertHistoryId { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the alert rule that generated the alert history.</para>
+            /// <para>The unique identifier of the alert rule that generated the alert history record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>51d0da46-bb65-4a14-8d65-de73f41e495f</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertRuleId { get; set; }
 
             /// <summary>
-            /// <para>The snapshot of the annotations of the alert rule. The annotations are stored as key-value pairs and copied from the rule when the alert is triggered.</para>
+            /// <para>The snapshot of the annotations of the alert rule, stored as key-value pairs and copied from the rule when the alert is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;_cms_alert_explore_url&quot;:&quot;<a href="https://sls.console.aliyun.com/...%22%7D">https://sls.console.aliyun.com/...&quot;}</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string BizSource { get; set; }
 
             /// <summary>
-            /// <para>The cumulative number of alerts (alert events) during the alert duration.</para>
+            /// <para>The cumulative number of alert events during the alert duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The end time (recovery time) of the alert. This field has a value only when the alert history enters the OK state. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The end time of the alert, which is the recovery time. This field has a value only when the alert history enters the OK state. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1740535517000</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The detailed information of the alert object. The information is stored as key-value pairs.</para>
+            /// <para>The detailed information of the alert object, stored as key-value pairs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;datasourceInfo&quot;:{&quot;type&quot;:&quot;SLS_MULTI_DS&quot;}}</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> InstanceDetail { get; set; }
 
             /// <summary>
-            /// <para>The unique key (instanceKey) used to identify the alert object instance.</para>
+            /// <para>The unique key value (instanceKey) that identifies the alert object instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>entity/apm/apm.service/6dc9e46fda6d012537b48c3250ff806b</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceKey { get; set; }
 
             /// <summary>
-            /// <para>The snapshot of the labels of the alert rule. The labels are stored as key-value pairs and copied from the rule when the alert is triggered.</para>
+            /// <para>The snapshot of the labels of the alert rule, stored as key-value pairs and copied from the rule when the alert is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;_cms_rule_id&quot;:&quot;42c0f464-a3b0-4c4b-b426-6242289244f8&quot;,&quot;tenant_id&quot;:&quot;mygt&quot;}</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the observed object is in the global scope. The value is copied from the rule when the alert history is created.</para>
+            /// <para>Indicates whether the observed object is in the global scope. This value is copied from the rule when the alert history record is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? ObserveResourceGlobalScope { get; set; }
 
             /// <summary>
-            /// <para>The serialized string of the observed object list. The value is copied from the rule when the alert history is created.</para>
+            /// <para>The serialized string of the observed object list. This value is copied from the rule when the alert history record is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;resourceId&quot;:&quot;i-bp1234567890abcdef&quot;,&quot;resourceType&quot;:&quot;ACS::ECS::Instance&quot;}]</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ObserveResourceList { get; set; }
 
             /// <summary>
-            /// <para>The type of the observed object, such as PROMETHEUS, APM, RUM, or cms_basic. The value is copied from the rule when the alert history is created.</para>
+            /// <para>The type of the observed object, such as PROMETHEUS, APM, RUM, or cms_basic. This value is copied from the rule when the alert history record is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PROMETHEUS</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ObserveResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region to which the alert history belongs.</para>
+            /// <para>The ID of the region to which the alert history record belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RuleDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The notification sending configuration information corresponding to the alert history.</para>
+            /// <para>The notification sending configuration information corresponding to the alert history record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;notification&quot;:{&quot;contacts&quot;:[&quot;ops-team&quot;],&quot;silenceTime&quot;:3600}}</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public AlertRuleSend Send { get; set; }
 
             /// <summary>
-            /// <para>The start time of the alert history. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The start time of the alert history record. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751508233000</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the workspace to which the alert history belongs.</para>
+            /// <para>The identifier of the workspace to which the alert history record belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-cms-<userId>-cn-hangzhou</para>

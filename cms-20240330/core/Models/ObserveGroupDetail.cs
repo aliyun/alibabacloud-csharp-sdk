@@ -72,6 +72,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string EntityType { get; set; }
 
+            /// <summary>
+            /// <para>该类型主实体数量。</para>
+            /// </summary>
+            [NameInMap("mainCount")]
+            [Validation(Required=false)]
+            public long? MainCount { get; set; }
+
+            /// <summary>
+            /// <para>该类型关联子实体数量。</para>
+            /// </summary>
+            [NameInMap("relatedCount")]
+            [Validation(Required=false)]
+            public long? RelatedCount { get; set; }
+
         }
 
         /// <summary>
@@ -149,11 +163,25 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>各纳管规则的主实体、关联子实体及总数。</para>
+        /// </summary>
+        [NameInMap("ruleCounts")]
+        [Validation(Required=false)]
+        public List<ObserveGroupRuleCount> RuleCounts { get; set; }
+
+        /// <summary>
         /// <para>数据来源：native_2_0（2.0 原生）/ synced_from_1_0（从 1.0 应用分组同步）。</para>
         /// </summary>
         [NameInMap("sourceOrigin")]
         [Validation(Required=false)]
         public string SourceOrigin { get; set; }
+
+        /// <summary>
+        /// <para>源云监控 1.0 分组是否已持久只读，true 时目标 2.0 分组可独立维护。</para>
+        /// </summary>
+        [NameInMap("sourceReadOnly")]
+        [Validation(Required=false)]
+        public bool? SourceReadOnly { get; set; }
 
         /// <summary>
         /// <para>资源标签（阿里云标准标签），键值对数组。</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListNotifyPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of records to return for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The policy name used for fuzzy filtering.</para>
+        /// <para>The fuzzy filter for the policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod-alert</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first page. For subsequent pages, set this parameter to the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token. Leave empty for the first page. For subsequent pages, pass the nextToken returned from the previous page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJjdXJzb3IiOjEwfQ==</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. Valid values: createTime, updateTime, and name.</para>
+        /// <para>The field to sort by. Valid values include createTime, updateTime, and name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>createTime</para>
@@ -50,11 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to sort results in descending order. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: descending order.</description></item>
-        /// <item><description>false: ascending order.</description></item>
-        /// </list>
+        /// <para>Specifies whether to sort in descending order. Set to true for descending order, or false for ascending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string OrderDesc { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. This parameter is used to isolate notify policy resources across different business spaces.</para>
+        /// <para>The workspace ID, used to isolate notification policy resources for different business workspaces.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

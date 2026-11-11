@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<ListOncallSchedulesResponseBodyOncallSchedulesRotations> Rotations { get; set; }
             public class ListOncallSchedulesResponseBodyOncallSchedulesRotations : TeaModel {
                 /// <summary>
-                /// <para>The days of the week when the rotation is active.</para>
+                /// <para>The days of the week when the rotation takes effect.</para>
                 /// </summary>
                 [NameInMap("activeDays")]
                 [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string RotationStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The length of the shift interval. Used in conjunction with shiftRecurrenceFrequency. For example, a value of 3 indicates that the on-call personnel rotates every 3 days.</para>
+                /// <para>The length of the shift cycle. This parameter is used together with shiftRecurrenceFrequency. For example, a value of 3 indicates that the on-call personnel changes every 3 days.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public int? ShiftLength { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the shift interval. Used in conjunction with shiftLength. For example, a value of Week indicates that the on-call personnel rotates every week.</para>
+                /// <para>The unit of the shift cycle. This parameter is used together with shiftLength. For example, a value of Week indicates that the on-call personnel changes every week.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WEEKLY</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The ID of the chatbot that sends shift reminders.</para>
+            /// <para>The ID of the robot that sends shift change reminders.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testId</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

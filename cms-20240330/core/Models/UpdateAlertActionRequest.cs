@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAlertActionRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the alert action integration.</para>
+        /// <para>The name of the action integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertActionName { get; set; }
 
         /// <summary>
-        /// <para>The event bus.</para>
+        /// <para>The event bus parameters.</para>
         /// </summary>
         [NameInMap("ebParam")]
         [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The service name in Function Compute.</para>
+            /// <para>The service name of Function Compute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testService</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public UpdateAlertActionRequestMnsParam MnsParam { get; set; }
         public class UpdateAlertActionRequestMnsParam : TeaModel {
             /// <summary>
-            /// <para>The resource type of Simple Message Queue (formerly MNS).</para>
+            /// <para>The Simple Message Queue (formerly MNS) resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>queue</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string MnsType { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource.</para>
+            /// <para>The resource name.</para>
             /// <list type="bullet">
             /// <item><description>If the resource type is queue, the resource name is the queue name.</description></item>
             /// <item><description>If the resource type is topic, the resource name is the topic name.</description></item>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public UpdateAlertActionRequestPagerDutyParam PagerDutyParam { get; set; }
         public class UpdateAlertActionRequestPagerDutyParam : TeaModel {
             /// <summary>
-            /// <para>The integration key of PagerDuty.</para>
+            /// <para>The integration key for PagerDuty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fwe4rwr543t543t43t43t43</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The integration webhook of PagerDuty. V1 and V2 are supported.</para>
+            /// <para>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The type of the alert action integration.</para>
+        /// <para>The action integration type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC</para>
@@ -325,6 +325,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>The request headers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;X-Total-Count&quot;:&quot;0&quot;}</para>
             /// </summary>
             [NameInMap("headers")]
             [Validation(Required=false)]
@@ -341,7 +344,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>The alert callback URL.</para>
+            /// <para>The URL for the alert callback.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.test.com">http://www.test.com</a></para>

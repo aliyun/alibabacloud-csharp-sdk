@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListAlertNotifyTemplatesResponseBodyAlertNotifyTemplates> AlertNotifyTemplates { get; set; }
         public class ListAlertNotifyTemplatesResponseBodyAlertNotifyTemplates : TeaModel {
             /// <summary>
-            /// <para>The notification template ID.</para>
+            /// <para>The ID of the notification template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>template-abc123</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertNotifyTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The notification template name.</para>
+            /// <para>The name of the notification template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>High-availability alert template</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertNotifyTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The template syntax type. The current template syntax is fixed to GO and uses the Go template syntax.</para>
+            /// <para>Filters by template syntax type. The current template syntax is fixed to GO and uses Go template syntax.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GO</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

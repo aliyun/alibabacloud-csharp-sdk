@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAddonReleasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The next page token.</para>
+        /// <para>The token for the next page.</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The collection of onboarded component information.</para>
+        /// <para>The collection of integrated component information.</para>
         /// </summary>
         [NameInMap("releases")]
         [Validation(Required=false)]
         public List<ListAddonReleasesResponseBodyReleases> Releases { get; set; }
         public class ListAddonReleasesResponseBodyReleases : TeaModel {
             /// <summary>
-            /// <para>The addon name.</para>
+            /// <para>The name of the add-on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cs-gpu</para>
@@ -54,24 +54,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ApiVersion { get; set; }
 
             /// <summary>
-            /// <para>The summary of installation phase conditions.</para>
-            /// <para>Type includes four values: Loaded (loads configurations), Installed (executes installation), Ready (performs a readiness check after installation), and UnInstalled (executes uninstallation). These four conditions theoretically occur in sequence.</para>
-            /// <para>Status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Unknown: The current phase is being executed.</description></item>
-            /// <item><description>True: The execution is ready.</description></item>
-            /// <item><description>False: The execution failed.</description></item>
-            /// </list>
-            /// <para>Complete status determination rules:
-            /// If the Status of Loaded, Installed, or Ready is False, the installation fails. If the Status of Ready is True, the installation succeeds. In other cases, the installation is in progress.</para>
-            /// <para>If UnInstalled exists, an uninstallation is in progress. If Status is True, the uninstallation succeeds. If Status is Unknown, the uninstallation is in progress. If Status is False, the uninstallation fails.</para>
+            /// <para>The installation phase information.</para>
             /// </summary>
             [NameInMap("conditions")]
             [Validation(Required=false)]
             public List<ListAddonReleasesResponseBodyReleasesConditions> Conditions { get; set; }
             public class ListAddonReleasesResponseBodyReleasesConditions : TeaModel {
                 /// <summary>
-                /// <para>The first transition time.</para>
+                /// <para>The time of the first transition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-04T16:10:22+08:00</para>
@@ -81,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string FirstTransitionTime { get; set; }
 
                 /// <summary>
-                /// <para>The last transition time.</para>
+                /// <para>The time of the last transition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-04T16:10:22+08:00</para>
@@ -91,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string LastTransitionTime { get; set; }
 
                 /// <summary>
-                /// <para>The details.</para>
+                /// <para>The detailed information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The addon loaded successfully</para>
@@ -101,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The phase status.</para>
+                /// <para>The status of the phase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -111,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The phase type.</para>
+                /// <para>The type of the phase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Loaded</para>
@@ -123,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The component configuration information.</para>
+            /// <para>The configuration information of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</para>
@@ -133,7 +123,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The onboarding time.</para>
+            /// <para>The integration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-04T16:10:12+08:00</para>
@@ -160,7 +150,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public EntityGroupBase EntityRules { get; set; }
 
             /// <summary>
-            /// <para>The environment type.</para>
+            /// <para>The type of the environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CS</para>
@@ -170,7 +160,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The environment ID.</para>
+            /// <para>The ID of the environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policy-xxxxxxxxxxxx</para>
@@ -180,7 +170,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The number of exporters.</para>
+            /// <para>The number of plugins.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -190,7 +180,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? ExporterCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a configuration is available.</para>
+            /// <para>Indicates whether configurations exist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -200,7 +190,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? HaveConfig { get; set; }
 
             /// <summary>
-            /// <para>The ID of the onboarding user.</para>
+            /// <para>The ID of the integration user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>175xxxxxxxxx</para>
@@ -220,7 +210,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the component is managed.</para>
+            /// <para>Indicates whether the component is a managed component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -230,7 +220,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? Managed { get; set; }
 
             /// <summary>
-            /// <para>The starting version number for the remaining list.</para>
+            /// <para>The starting version number of the remaining list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -250,7 +240,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ParentAddonReleaseId { get; set; }
 
             /// <summary>
-            /// <para>The policy ID.</para>
+            /// <para>The ID of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policy-xxxxxxxxxxxxxx</para>
@@ -280,7 +270,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ReleaseId { get; set; }
 
             /// <summary>
-            /// <para>The release name.</para>
+            /// <para>The name of the release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-gpu-integration-name</para>
@@ -290,7 +280,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ReleaseName { get; set; }
 
             /// <summary>
-            /// <para>The component scenario.</para>
+            /// <para>The scenario of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>container</para>
@@ -310,7 +300,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The statistics information of sub-addon releases.</para>
+            /// <para>The statistics information of the sub-add-on release.</para>
             /// </summary>
             [NameInMap("subAddonRelease")]
             [Validation(Required=false)]
@@ -359,7 +349,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The component version.</para>
+            /// <para>The version of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.2</para>

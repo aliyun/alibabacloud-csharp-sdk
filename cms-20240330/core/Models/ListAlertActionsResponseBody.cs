@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertActionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of alert action integration configurations.</para>
+        /// <para>The list of action integration configurations.</para>
         /// </summary>
         [NameInMap("alertActions")]
         [Validation(Required=false)]
         public List<ListAlertActionsResponseBodyAlertActions> AlertActions { get; set; }
         public class ListAlertActionsResponseBodyAlertActions : TeaModel {
             /// <summary>
-            /// <para>The unique identifiers of the alert action integrations.</para>
+            /// <para>The unique identifiers of the action integrations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertActionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert action integration.</para>
+            /// <para>The name of the action integration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The elastic scaling parameters.</para>
+            /// <para>The Auto Scaling parameters.</para>
             /// </summary>
             [NameInMap("essParam")]
             [Validation(Required=false)]
             public ListAlertActionsResponseBodyAlertActionsEssParam EssParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsEssParam : TeaModel {
                 /// <summary>
-                /// <para>The ID of the elastic scaling group.</para>
+                /// <para>The ID of the Auto Scaling group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testId</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string EssGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the elastic scaling rule.</para>
+                /// <para>The ID of the Auto Scaling rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testId</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public ListAlertActionsResponseBodyAlertActionsMnsParam MnsParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsMnsParam : TeaModel {
                 /// <summary>
-                /// <para>The resource type in Simple Message Queue (formerly MNS).</para>
+                /// <para>The resource type of Simple Message Queue (formerly MNS).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>queue</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</para>
+                /// <para>The integration webhook for PagerDuty. Both V1 and V2 are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The type of the alert action integration.</para>
+            /// <para>The type of the action integration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FC</para>
@@ -342,6 +342,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
                 /// <summary>
                 /// <para>The request headers.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;X-Total-Count&quot;:&quot;0&quot;}</para>
                 /// </summary>
                 [NameInMap("headers")]
                 [Validation(Required=false)]
@@ -358,7 +361,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Method { get; set; }
 
                 /// <summary>
-                /// <para>The alert callback URL.</para>
+                /// <para>The URL of the alert callback.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.test.com">http://www.test.com</a></para>

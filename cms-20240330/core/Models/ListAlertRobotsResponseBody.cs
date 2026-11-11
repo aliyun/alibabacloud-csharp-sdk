@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The chatbot IDs.</para>
+        /// <para>The robot IDs.</para>
         /// </summary>
         [NameInMap("robots")]
         [Validation(Required=false)]
         public List<ListAlertRobotsResponseBodyRobots> Robots { get; set; }
         public class ListAlertRobotsResponseBodyRobots : TeaModel {
             /// <summary>
-            /// <para>The name of the digital employee.</para>
+            /// <para>The digital employee name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apsara-ops</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>The name of the chatbot.</para>
+            /// <para>The robot name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the chatbot.</para>
+            /// <para>The unique ID of the robot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RobotId { get; set; }
 
             /// <summary>
-            /// <para>The signature key of the chatbot.</para>
+            /// <para>The signing key of the robot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc123</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RobotSignKey { get; set; }
 
             /// <summary>
-            /// <para>The chatbot types.</para>
+            /// <para>The robot types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DING</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL of the chatbot.</para>
+            /// <para>The webhook URL of the robot.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertHistoryId { get; set; }
 
         /// <summary>
-        /// <para>Filters the history records by a specific alert rule. Specify the unique identifier (ruleUuid) of the alert rule.</para>
+        /// <para>Filters the history records of a specified alert rule. Specify the unique identifier (ruleUuid) of the alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mig_prom_v2_11308451</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertRuleId { get; set; }
 
         /// <summary>
-        /// <para>The business source of the alert history. For example, <c>managed_service_for_prometheus</c> indicates the managed type of the Prometheus integration center. The default value is empty. Leave this parameter empty if you are unsure about the value.</para>
+        /// <para>Specifies the business source of the alert history. For example, managed_service_for_prometheus indicates the managed type of the Prometheus integration center. Default value: empty. Leave this parameter empty if you are unsure how to specify it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>managed_service_for_prometheus</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BizSource { get; set; }
 
         /// <summary>
-        /// <para>The namespace of CloudMonitor. Examples: acs_rds_dashboard and acs_ecs_dashboard.</para>
+        /// <para>The namespace of CloudMonitor, such as acs_rds_dashboard and acs_ecs_dashboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_rds_dashboard</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CmsProductCategory { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for fuzzy matching and filtering based on the display name of the alert rule.</para>
+        /// <para>Filters the records by performing fuzzy matching on the keywords in the display name of the alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>keyword</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayNameKeyWord { get; set; }
 
         /// <summary>
-        /// <para>The unique key (instanceKey) used to identify the alert object instance.</para>
+        /// <para>The unique key value (instanceKey) that identifies the alert object instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>entity/apm/apm.service/6dc9e46fda6d012537b48c3250ff806b</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LabelFilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The level of the most recent alert during the alert duration. Valid values: CRITICAL, WARN, and INFO.</para>
+        /// <para>The level of the most recent alert during the alert duration. Valid values: CRITICAL (critical), WARN (warning), and INFO (info).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CRITICAL</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LatestLevel { get; set; }
 
         /// <summary>
-        /// <para>The highest alert level reached during the alert duration. Valid values: CRITICAL, WARN, and INFO.</para>
+        /// <para>The highest alert level reached during the alert duration. Valid values: CRITICAL (critical), WARN (warning), and INFO (info).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CRITICAL</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MaxLevel { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return on each page. This parameter is not supported. Use pageSize and pageNumber for pagination.</para>
+        /// <para>The maximum number of results returned per page in a paged query. This parameter is not supported. Use pageSize and pageNumber for paged queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The migration status of the alert history.</para>
+        /// <para>The migration status value of the alert history.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MigrationStatus { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used for the next query. This parameter is not supported. Use pageSize and pageNumber for pagination.</para>
+        /// <para>The paging token for querying the next page. This parameter is not supported. Use pageSize and pageNumber for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
@@ -137,14 +137,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Filters alert rules that contain specific notification recipients. Only rules that contain at least one of the notification recipients specified in notifyTargets are returned in the result list.</para>
+        /// <para>Filters alert rules that contain specified notification recipients. Only rules that contain any notification recipient specified in notifyTargets are returned in the result list.</para>
         /// </summary>
         [NameInMap("notificationFilter")]
         [Validation(Required=false)]
         public string NotificationFilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The relation type of the observed object. Examples: GROUP, INSTANCE, and TAG.</para>
+        /// <para>The relation type of the observed object, such as GROUP, INSTANCE, and TAG.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ObserveResourceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the observed object. Examples: PROMETHEUS, APM, RUM, and cms_basic.</para>
+        /// <para>The type of the observed object, such as PROMETHEUS, APM, RUM, and cms_basic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PROMETHEUS</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ObserveResourceType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number for a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of alert history records to return on each page. Default value: 10.</para>
+        /// <para>The number of alert history records returned per page in a paged query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The key used for data partitioning. Typically, you do not need to specify this parameter.</para>
+        /// <para>The key value used for data partitioning. Typically, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PartitionKey { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the time range for the alert start time. The value is a UNIX timestamp in milliseconds. If not specified, the default value is the time 30 days ago.</para>
+        /// <para>The start timestamp of the time range for the alert start time. The value is a UNIX timestamp in milliseconds. If not specified, the default value is 30 days ago.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1739866071668</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? StartTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The current status of the alert history. Valid values: OK and ALARM.</para>
+        /// <para>The current status of the alert history. Valid values: OK (recovered) and ALARM (alerting).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALARM</para>

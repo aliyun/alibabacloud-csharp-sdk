@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public QueryAlertRulesInput Body { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client token that is used to ensure idempotence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxx-xxxx-xxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the starting position for the current read operation. If this parameter is left empty, the read operation starts from the beginning.</para>
+        /// <para>The token that marks the position from which the read operation starts. If this parameter is left empty, the read operation starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The query filter conditions in JSON string format. The field semantics are the same as those in the request body. Supported fields include filter (such as uuid, displayName, labels, status, and enabled, where sibling fields use the AND logical operator), pagination (pageNumber and pageSize), and workspace. You must specify either this parameter or the body parameter. If both are specified, the body parameter takes precedence.</para>
+        /// <para>The query filter conditions in JSON string format. The field semantics are the same as those in the request body. Supported fields include filter (such as uuid, displayName, labels, status, and enabled, where sibling fields use the AND logical operator), pagination (pageNumber and pageSize), and workspace. You can specify either this parameter or the body parameter. If both are specified, the body parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;filter&quot;:{&quot;displayName&quot;:{&quot;contains&quot;:&quot;my-rule&quot;}},&quot;pagination&quot;:{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:20}}</para>

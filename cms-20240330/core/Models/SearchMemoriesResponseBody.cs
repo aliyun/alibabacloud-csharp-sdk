@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SearchMemoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The relations.</para>
+        /// <para>The relationships.</para>
         /// </summary>
         [NameInMap("relations")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Destination { get; set; }
 
             /// <summary>
-            /// <para>The relations.</para>
+            /// <para>The relationships.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The return values.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The memory hash value.</para>
+            /// <para>The hash value of the memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d791bf27236c5532056a13279baad3517042bb8d5b1bdb02e7871fa632debffe</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The memory content.</para>
+            /// <para>The memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>My name is Zhang San and I live in Hangzhou.</para>

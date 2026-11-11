@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class PrometheusInstanceStoreConfig : TeaModel {
         /// <summary>
-        /// <para>The concurrency per host. If this parameter is not specified, the default value is 2. Valid values: 1 to 8.</para>
+        /// <para>The concurrency per host. Valid values: 1 to 8. Default value: 2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,19 +20,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? ParallelCountPerHost { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable parallel query. If this parameter is not specified, the value is considered as false.</para>
+        /// <para>Specifies whether to enable parallel query. If not returned, the value is considered false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("parallelEnable")]
         [Validation(Required=false)]
         public bool? ParallelEnable { get; set; }
 
         /// <summary>
-        /// <para>The parallel query mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>auto</description></item>
-        /// <item><description>static</description></item>
-        /// </list>
-        /// <para>If this parameter is not specified, the default value is auto.</para>
+        /// <para>The parallel query mode. Valid values: auto, static. Default value: auto.</para>
         /// 
         /// <b>Example:</b>
         /// <para>static</para>
@@ -42,14 +40,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ParallelMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable query cache. If this parameter is not specified, the value is considered as false.</para>
+        /// <para>Specifies whether to enable the query cache. If not returned, the value is considered false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("queryCacheEnable")]
         [Validation(Required=false)]
         public bool? QueryCacheEnable { get; set; }
 
         /// <summary>
-        /// <para>The global concurrency. If this parameter is not specified, the default value is 8. Valid values: 2 to 64.</para>
+        /// <para>The global concurrency. Valid values: 2 to 64. Default value: 8.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

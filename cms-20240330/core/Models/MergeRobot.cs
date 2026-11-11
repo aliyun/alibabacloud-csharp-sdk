@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MergeRobot : TeaModel {
         /// <summary>
-        /// <para>The time when the bot was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CardTemplate { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the daily on-duty report.</para>
+            /// <para>Specifies whether the daily on-call report is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? DailyNoc { get; set; }
 
             /// <summary>
-            /// <para>The time for the daily on-duty report.</para>
+            /// <para>The time for the daily on-call report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>09:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DailyNocTime { get; set; }
 
             /// <summary>
-            /// <para>The signature key for DingTalk.</para>
+            /// <para>The DingTalk signing key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc123</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DingSignKey { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable outbound requests.</para>
+            /// <para>Specifies whether outgoing requests are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The time when the bot was last modified.</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58.789Z</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name of the bot.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>运维告警机器人</para>
+        /// <para>O&amp;M Alert Bot</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

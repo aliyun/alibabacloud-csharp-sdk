@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateIntegrationPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The policy creation version. Valid values: v1 and v2. If this parameter is not specified or is left empty, v2 is used. If v1 is specified, a v1-compatible environment is created for ECS and Cloud.</para>
+        /// <para>The policy creation version. Valid values: v1 and v2. If you do not specify this parameter or leave it empty, v2 is used. If you specify v1, a v1-compatible environment is created for ECS and Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// <para>The entity group used to create the policy. You can use the entity group for quick creation. The clusterId and vpcId parameters are independent of each other.</para>
+        /// <para>The entity group used to create the policy. You can quickly create the policy by using the entity group. The clusterId and vpcId parameters are independent of each other.</para>
         /// </summary>
         [NameInMap("entityGroup")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ClusterNamespace { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to disable the unique binding of the policy. If this parameter is set to true, you can create multiple policies for a single container cluster.</para>
+            /// <para>Specifies whether to disable unique policy binding. If this feature is enabled, you can create multiple policies for a single container cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The policy type. Valid values: CS, ECS, and Cloud.</para>
+        /// <para>The policy type, such as CS, ECS, or Cloud.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The workspace.</para>
+        /// <para>The workspace. If you do not specify this parameter, a default workspace is created or used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prometheus</para>

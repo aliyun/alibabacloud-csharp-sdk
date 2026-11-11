@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentForView : TeaModel {
         /// <summary>
-        /// <para>The expiration time of the notification block.</para>
+        /// <para>The expiration time for suppressing notifications.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>-1 indicates that notifications are not blocked</para>
+        /// <para>-1</para>
         /// </summary>
         [NameInMap("blockingExpireTimestamp")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The detailed content of the incident.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service delay&quot;}&quot;</para>
+        /// <para>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service latency&quot;}&quot;</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<IncidentEscalationPolicyForView> Escalations { get; set; }
 
         /// <summary>
-        /// <para>The group identifier.</para>
+        /// <para>The identifier of the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;group-123456&quot;</para>
@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The grouping key-value pairs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;resourceId&quot;:&quot;i-bp123456&quot;,&quot;severity&quot;:&quot;Critical&quot;}</para>
         /// </summary>
         [NameInMap("groupingKeys")]
         [Validation(Required=false)]
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NotifyStrategyUuid { get; set; }
 
         /// <summary>
-        /// <para>The operator information.</para>
+        /// <para>The information about the operator.</para>
         /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
@@ -179,14 +182,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SubscriptionUuid { get; set; }
 
         /// <summary>
-        /// <para>The array of tags.</para>
+        /// <para>The tag array.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the incident was created.</para>
+        /// <para>The creation timestamp of the incident.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1743876000000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListUserNotifyHistoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The notification batch ID. Used to filter the notification history for notifications delivered in the same batch.</para>
+        /// <para>The notification batch ID. Used to filter the notification history for notifications sent in the same batch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3fa85f64-5717-4562-b3fc-2c963f66afa7</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This is an internal reserved parameter used only for business source filtering in internal platform scenarios. Do not pass this parameter in external calls.</para>
+        /// <para><b>[Deprecated]</b> This is an internal reserved parameter used only for business source filtering in internal platform scenarios. Do not specify this parameter in external calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms</para>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The notification channel. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ALI_YUNGE_SMS: text message</description></item>
-        /// <item><description>ALI_YUNGE_CALL: voice call</description></item>
+        /// <item><description>ALI_YUNGE_CALL: phone call</description></item>
         /// <item><description>ALI_YUNGE_MAIL: email</description></item>
         /// <item><description>ALI_YUNGE_ALIUID: internal message</description></item>
         /// <item><description>DING: DingTalk</description></item>
-        /// <item><description>DING_COOL_APP: DingTalk Cool App</description></item>
+        /// <item><description>DING_COOL_APP: DingTalk cool app</description></item>
         /// <item><description>FEISHU: Lark</description></item>
         /// <item><description>WEIXIN: WeCom</description></item>
         /// <item><description>SLACK: Slack</description></item>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The channel category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WEBHOOK: webhook-based channels, such as DingTalk, Lark, WeCom, Slack, Teams, and custom webhooks</description></item>
-        /// <item><description>YUNGE: Yunge communication channels, such as text messages, voice calls, and emails</description></item>
+        /// <item><description>WEBHOOK: webhook channels, such as DingTalk, Lark, WeCom, Slack, Teams, and custom webhooks.</description></item>
+        /// <item><description>YUNGE: communication channels, such as text messages, phone calls, and emails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ChannelCategory { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The value is a UNIX timestamp in seconds. Default value: 6 hours before the <c>to</c> parameter value.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds. Default value: 6 hours before the to parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1729400000</para>
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>Specifies whether to include notification records that have no actual delivery channel. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The records are included.</description></item>
-        /// <item><description>false: The records are not included. Only records that were actually delivered through a channel are returned.
+        /// <item><description>true: includes the records.</description></item>
+        /// <item><description>false: excludes the records and returns only records that were actually sent through a channel.
         /// Default value: true.</description></item>
         /// </list>
         /// </summary>
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>Specifies whether to sort the results in descending order of time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The results are sorted in descending order, with the latest records appearing first.</description></item>
-        /// <item><description>false: The results are sorted in ascending order.
+        /// <item><description>true: descending order, with the latest records first.</description></item>
+        /// <item><description>false: ascending order.
         /// Default value: true.</description></item>
         /// </list>
         /// </summary>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This is an internal reserved parameter used only for dedicated notification history query paths in internal platform scenarios. Do not pass this parameter in external calls.</para>
+        /// <para><b>[Deprecated]</b> This is an internal reserved parameter used only for dedicated notification history query paths in internal platform scenarios. Do not specify this parameter in external calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PartitionKey { get; set; }
 
         /// <summary>
-        /// <para>The recipient. Used to filter the notification history by recipient address, such as a phone number, email address, or webhook URL.</para>
+        /// <para>The recipient. Used to filter the notification history by recipient address, such as a phone number, email address, or webhook address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13800138000</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Receiver { get; set; }
 
         /// <summary>
-        /// <para>The alert rule ID. Used to filter the notification history triggered by a specified alert rule. Exact match is applied.</para>
+        /// <para>The alert rule ID. Used to filter the notification history triggered by a specified alert rule. Exact match is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3fa85f64-5717-4562-b3fc-2c963f66afa6</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <item><description>CRITICAL: critical</description></item>
         /// <item><description>ERROR: error</description></item>
         /// <item><description>WARNING: warning</description></item>
-        /// <item><description>INFO: information</description></item>
+        /// <item><description>INFO: info</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -269,8 +269,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>Specifies whether to filter by delivery result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Only successfully delivered records are returned.</description></item>
-        /// <item><description>false: Only failed delivery records are returned.
+        /// <item><description>true: returns only successfully delivered records.</description></item>
+        /// <item><description>false: returns only failed delivery records.
         /// If you do not specify this parameter, the results are not filtered by delivery result.</description></item>
         /// </list>
         /// </summary>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? To { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The workspace identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
