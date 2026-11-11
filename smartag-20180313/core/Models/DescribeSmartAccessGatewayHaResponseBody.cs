@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSmartAccessGatewayHaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The serial number of the standby SAG device.</para>
+        /// <para>The serial number of the standby device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag11axxxx</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string BackupDeviceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether device-based HA is enabled. Valid values:</para>
+        /// <para>The device-level backup state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: enabled</description></item>
-        /// <item><description><b>OFF</b>: disabled</description></item>
+        /// <item><description><b>ON</b>: Enabled.</description></item>
+        /// <item><description><b>OFF</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DeviceLevelBackupState { get; set; }
 
         /// <summary>
-        /// <para>The deployment mode of the SAG devices that have HA enabled. Valid values:</para>
+        /// <para>The device-level high-availability type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>warm_backup</b>: active-active mode.</description></item>
-        /// <item><description><b>cold_backup</b>: active-standby mode.</description></item>
-        /// <item><description><b>no_backup</b>: HA is disabled.</description></item>
+        /// <item><description><b>warm_backup</b>: Active-active mode.</description></item>
+        /// <item><description><b>cold_backup</b>: Active-standby mode.</description></item>
+        /// <item><description><b>no_backup</b>: No backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The serial number of the active SAG device.</para>
+        /// <para>The serial number of the active device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag11axxxx</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string MainDeviceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>582FE511-FEFE-42BC-BBF4-4F8ECF92Exxx</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-i8mogwi9kisigc3xxxx</para>

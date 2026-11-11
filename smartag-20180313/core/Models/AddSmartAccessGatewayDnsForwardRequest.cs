@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The domain name.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Wildcard domain names are supported. You can use the wildcard character asterisk (\*) to specify a wildcard domain name.</description></item>
+        /// <item><description>Wildcard domain names and full match are supported. You can enter an asterisk (*) for the domain name to match all. Examples:
+        /// *.baidu.com. The allowed input format is baidu.com.</description></item>
         /// </list>
-        /// <para>For example, you can enter \*.baidu.com to specify the domain name baidu.com.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The forwarding mode.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is not in use. Ignore this parameter.</description></item>
+        /// <item><description>This field is invalid. You can ignore it.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>first</para>
@@ -53,13 +53,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The number of the egress port.</para>
+        /// <para>The outbound port index.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is optional if OutboundPortType is set to PhysicalPort. Ignore this parameter if OutboundPortType is set to Tunnel.</description></item>
-        /// <item><description>The value of OutboundPortIndex is the unique index of the port name specified by poOutboundPortName. For example, 0 is the index for the port named eth0, and 2 is the index for the port named lte.</description></item>
+        /// <item><description>This parameter is optional when OutboundPortType is set to PhysicalPort, and is not required when OutboundPortType is set to Tunnel.</description></item>
+        /// <item><description>OutboundPortIndex and OutboundPortName have a one-to-one mapping: 0 - eth0; 2 - lte.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -69,13 +69,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string OutboundPortIndex { get; set; }
 
         /// <summary>
-        /// <para>The egress port.</para>
+        /// <para>The outbound port.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is optional if OutboundPortType is set to PhysicalPort. Ignore this parameter if OutboundPortType is set to Tunnel.</description></item>
-        /// <item><description>The value of OutboundPortIndex is the unique index of the port name specified by poOutboundPortName. For example, 0 is the index for the port named eth0, and 2 is the index for the port named lte.</description></item>
+        /// <item><description>This parameter is optional when OutboundPortType is set to PhysicalPort, and is not required when OutboundPortType is set to Tunnel.</description></item>
+        /// <item><description>OutboundPortIndex and OutboundPortName have a one-to-one mapping: 0 - eth0; 2 - lte.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>eth0</para>
@@ -85,12 +85,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string OutboundPortName { get; set; }
 
         /// <summary>
-        /// <para>The type of the egress port.</para>
+        /// <para>The outbound port type.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>A value of Tunnel specifies a tunnel, and a value of PhysicalPort specifies a physical port.</description></item>
+        /// <item><description>A value of Tunnel indicates a tunnel port, and a value of PhysicalPort indicates a physical port.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Tunnel</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string OutboundPortType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagInsId { get; set; }
 
         /// <summary>
-        /// <para>The serial number (SN) of the device.</para>
+        /// <para>The serial number of the device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

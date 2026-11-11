@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh-CN</b> (default): Chinese</para>
+        /// <item><description><para><b>zh-CN</b> (default): Chinese.</para>
         /// </description></item>
-        /// <item><description><para><b>en-US</b>: English</para>
+        /// <item><description><para><b>en-US</b>: English.</para>
         /// </description></item>
-        /// <item><description><para><b>ja</b>: Japanese</para>
+        /// <item><description><para><b>ja</b>: Japanese.</para>
         /// </description></item>
         /// </list>
         /// 

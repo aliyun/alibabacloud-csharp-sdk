@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateFlowLogRequest : TeaModel {
         /// <summary>
-        /// <para>The output interval under active connections. Valid values: <b>60 to 6000</b>. Unit: seconds. Default value: <b>300</b>.</para>
+        /// <para>The output interval for active flows. Valid values: <b>60</b> to <b>6000</b>. Unit: seconds. Default value: <b>300</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? ActiveAging { get; set; }
 
         /// <summary>
-        /// <para>The description of the flow log.</para>
+        /// <para>The description of the flow log instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The output interval under inactive connections. Valid values: <b>10 to 600</b>. Unit: seconds. Default value: <b>15</b>.</para>
+        /// <para>The output interval for inactive flows. Valid values: <b>10</b> to <b>600</b>. Unit: seconds. Default value: <b>15</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? InactiveAging { get; set; }
 
         /// <summary>
-        /// <para>The Logstore in Log Service.</para>
-        /// <para>If OutputType is set to <b>sls</b> or <b>all</b>, this parameter is required.</para>
+        /// <para>The name of the Simple Log Service Logstore.</para>
+        /// <para>This parameter is required when the output type of the flow log is <b>sls</b> or <b>all</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>config-operation-log</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string LogstoreName { get; set; }
 
         /// <summary>
-        /// <para>The name of the flow log.</para>
+        /// <para>The name of the flow log instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-flowlog-1</para>
@@ -61,8 +61,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the NetFlow collector where the flow log is stored.</para>
-        /// <para>If OutputType is set to <b>netflow</b> or <b>all</b>, this parameter is required.</para>
+        /// <para>The IP address of the NetFlow server that stores the flow log.</para>
+        /// <para>This parameter is required when the output type of the flow log is <b>netflow</b> or <b>all</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.2</para>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string NetflowServerIp { get; set; }
 
         /// <summary>
-        /// <para>The port number of the NetFlow collector where the flow log is stored. Default value: <b>9995</b>.</para>
-        /// <para>If OutputType is set to <b>netflow</b> or <b>all</b>, this parameter is required.</para>
+        /// <para>The server port of the NetFlow server that stores the flow log. Default value: <b>9995</b>.</para>
+        /// <para>This parameter is required when the output type of the flow log is <b>netflow</b> or <b>all</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9995</para>
@@ -83,8 +83,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? NetflowServerPort { get; set; }
 
         /// <summary>
-        /// <para>The version of the NetFlow collector where the flow log is stored. Valid values: <b>V5</b>, <b>V9</b>, and <b>V10</b>. Default value: <b>V9</b>.</para>
-        /// <para>If OutputType is set to <b>netflow</b> or <b>all</b>, this parameter is required.</para>
+        /// <para>The version of the NetFlow protocol used to store the flow log. Valid values: <b>V5</b>, <b>V9</b>, and <b>V10</b>. Default value: <b>V9</b>.</para>
+        /// <para>This parameter is required when the output type of the flow log is <b>netflow</b> or <b>all</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V9</para>
@@ -94,11 +94,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string NetflowVersion { get; set; }
 
         /// <summary>
-        /// <para>The type of the flow log. Valid values:</para>
+        /// <para>The output type of the flow log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sls</b>: The flow log is stored in Log Service.</description></item>
-        /// <item><description><b>netflow</b>: The flow log is stored on a NetFlow collector.</description></item>
-        /// <item><description><b>all</b>: The flow log is stored both in Log Service and on a NetFlow collector.</description></item>
+        /// <item><description><para><b>sls</b>: The flow log is stored in Simple Log Service.</para>
+        /// </description></item>
+        /// <item><description><para><b>netflow</b>: The flow log is stored on the NetFlow server that you configure.</para>
+        /// </description></item>
+        /// <item><description><para><b>all</b>: The flow log is stored in both Simple Log Service and the NetFlow server that you configure.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,8 +120,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The project in Log Service.</para>
-        /// <para>If OutputType is set to <b>sls</b> or <b>all</b>, this parameter is required.</para>
+        /// <para>The name of the Simple Log Service project.</para>
+        /// <para>This parameter is required when the output type of the flow log is <b>sls</b> or <b>all</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-flowlog-shanghai</para>
@@ -128,8 +131,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the flow log belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the flow log instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,8 +151,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where Log Service is deployed.</para>
-        /// <para>If OutputType is set to <b>sls</b> or <b>all</b>, this parameter is required.</para>
+        /// <para>The region ID of Simple Log Service.</para>
+        /// <para>This parameter is required when the output type of the flow log is <b>sls</b> or <b>all</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

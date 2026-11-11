@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateSmartAccessGatewaySoftwareResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the order that you placed to purchase the SAG app instance.</para>
+        /// <para>The order ID for purchasing the Smart Access Gateway app instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>203000000000000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24675405-74DF-4C94-82C6-B749580C498E</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the SAG app instance belongs.</para>
+        /// <para>The ID of the resource group to which the Smart Access Gateway app instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2iu4fnc****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG app instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway app.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-gnhe6sywtare5******</para>

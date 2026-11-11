@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public List<ListDpiGroupsResponseBodyDpiGroup> DpiGroup { get; set; }
         public class ListDpiGroupsResponseBodyDpiGroup : TeaModel {
             /// <summary>
-            /// <para>The ID of the application group.</para>
+            /// <para>The application group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string DpiGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application group.</para>
+            /// <para>The application group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>P2P</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string DpiGroupName { get; set; }
 
             /// <summary>
-            /// <para>The minimum version of the deep packet inspection (DPI) engine that supports the application group.</para>
+            /// <para>The minimum database engine version of the DPI engine that supports the application group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0-0.0.1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string MinEngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The minimum version of the signature database that supports the application group.</para>
+            /// <para>The minimum signature database version that supports the application group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20201117_1_0-0.0.1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFPSpX59Ebw****</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of application groups returned.</para>
+        /// <para>The total number of application groups returned by the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>

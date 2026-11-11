@@ -1,3 +1,15 @@
+2026-11-11 Version: 2.1.3
+- Update API AttachCcnInstanceToCen: add request parameters CidrAllocationMode.
+- Update API AttachCcnInstanceToCen: add request parameters RegionBindingList.
+- Update API DescribeCloudConnectNetworks: add response parameters Body.CloudConnectNetworks.$.AssociatedVpcStatus.
+- Update API DescribeCloudConnectNetworks: add response parameters Body.CloudConnectNetworks.$.TrNetworkConfig.
+- Update API DescribeCloudConnectNetworks: add response parameters Body.CloudConnectNetworks.$.VpcNetworkConfig.
+- Update API DescribeCloudConnectNetworks: add response parameters Body.CloudConnectNetworks.$.VpcStatusErrorCode.
+- Update API DescribeCloudConnectNetworks: add response parameters Body.CloudConnectNetworks.$.VpcStatusErrorMessage.
+- Update API DetachCcnInstanceFromCen: add request parameters RegionBindingList.
+- Update API UpgradeSmartAccessGateway: add request parameters RestoreTime.
+
+
 2026-08-06 Version: 2.1.2
 - Update API DescribeCloudConnectNetworks: add response parameters Body.CloudConnectNetworks.$.AssociatedCenStatus.
 - Update API DescribeCloudConnectNetworks: add response parameters Body.CloudConnectNetworks.$.CenStatusErrorCode.

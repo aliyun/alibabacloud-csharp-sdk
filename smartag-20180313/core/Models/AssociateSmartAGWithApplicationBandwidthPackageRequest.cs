@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class AssociateSmartAGWithApplicationBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bandwidth plan for application acceleration.</para>
+        /// <para>The instance ID of the bandwidth plan for application acceleration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ApplicationBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The configuration of application acceleration.</para>
+        /// <para>The list of Smart Access Gateway instances to be associated.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AssociateConfigs")]
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public List<AssociateSmartAGWithApplicationBandwidthPackageRequestAssociateConfigs> AssociateConfigs { get; set; }
         public class AssociateSmartAGWithApplicationBandwidthPackageRequestAssociateConfigs : TeaModel {
             /// <summary>
-            /// <para>The maximum bandwidth value for application acceleration. Unit: Mbit/s.</para>
+            /// <para>The peak bandwidth for application acceleration of the Smart Access Gateway instance. Unit: Mbit/s.</para>
             /// <remarks>
-            /// <para> The maximum bandwidth value of each SAG instance cannot exceed that of the associated bandwidth plan for application acceleration.</para>
+            /// <para>The peak bandwidth for application acceleration of each Smart Access Gateway instance cannot exceed the peak bandwidth of the associated bandwidth plan for application acceleration.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SAG instance.</para>
+            /// <para>The Smart Access Gateway instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the association request. The dry run includes permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends the request. After the request passes the check, the bandwidth plan for application acceleration is associated with the SAG instance.</description></item>
-        /// <item><description><b>true</b>: prechecks the request but does not associate the bandwidth plan for application acceleration with the SAG instance. If you use this value, the system checks the required parameters and the request syntax. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request and associates the bandwidth plan for application acceleration with the Smart Access Gateway instance after the request passes the check.</description></item>
+        /// <item><description><b>true</b>: Sends a check request and performs only the check without associating the bandwidth plan for application acceleration with the Smart Access Gateway instance. The check items include whether required parameters are specified and whether the request format is valid. If the request fails the check, an error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bandwidth plan for application acceleration.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region to which the bandwidth plan for application acceleration belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

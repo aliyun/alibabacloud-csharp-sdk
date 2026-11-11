@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the new resource group.</para>
-        /// <para>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> to view resource group IDs.</para>
+        /// <para>The ID of the destination resource group.</para>
+        /// <para>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,15 +61,15 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>smartag</b>: an SAG CPE or SAG vCPE instance</description></item>
-        /// <item><description><b>smartag_s</b>: an SAG app instance</description></item>
-        /// <item><description><b>acl</b>: an access control list (ACL)</description></item>
-        /// <item><description><b>flowlog</b>: a flow log</description></item>
-        /// <item><description><b>qos</b>: a quality of service (QoS) policy</description></item>
-        /// <item><description><b>ccn</b>: a Cloud Connect Network (CCN) instance</description></item>
-        /// <item><description><b>abwp</b>: a bandwidth plan for application acceleration</description></item>
+        /// <item><description><b>smartag</b>: Smart Access Gateway hardware instance or vCPE instance.</description></item>
+        /// <item><description><b>smartag_s</b>: SAG app instance.</description></item>
+        /// <item><description><b>acl</b>: Access control instance.</description></item>
+        /// <item><description><b>flowlog</b>: Flow log instance.</description></item>
+        /// <item><description><b>qos</b>: QoS policy instance.</description></item>
+        /// <item><description><b>ccn</b>: Cloud Connect Network (CCN) instance.</description></item>
+        /// <item><description><b>abwp</b>: Bandwidth plan for application acceleration instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

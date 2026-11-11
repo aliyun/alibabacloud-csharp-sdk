@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SAG instance.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>The routing protocol. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>STATIC</b>: static routing protocol</description></item>
-        /// <item><description><b>OSPF</b>: Open Shortest Path First protocol (OSPF)</description></item>
-        /// <item><description><b>BGP</b>: Border Gateway Protocol (BGP)</description></item>
+        /// <item><description><b>OSPF</b>: OSPF dynamic routing protocol</description></item>
+        /// <item><description><b>BGP</b>: BGP dynamic routing protocol</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RouteProtocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device that is associated with the SAG instance.</para>
+        /// <para>The serial number of the associated Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

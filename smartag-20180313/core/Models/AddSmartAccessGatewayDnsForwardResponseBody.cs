@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class AddSmartAccessGatewayDnsForwardResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of 200 indicates that the call is successful.</para>
+        /// <para>The error code. A value of 200 indicates that the task was queried successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information returned for the request.</para>
+        /// <para>The business data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sagv3dnsforward-nc7qabskj17werc7su</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The number of the egress port.</para>
+            /// <para>The outbound port index.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? OutboundPortIndex { get; set; }
 
             /// <summary>
-            /// <para>The egress port.</para>
+            /// <para>The outbound port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eth0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string OutboundPortName { get; set; }
 
             /// <summary>
-            /// <para>The type of the egress port.</para>
+            /// <para>The outbound port type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PhysicalPort</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>

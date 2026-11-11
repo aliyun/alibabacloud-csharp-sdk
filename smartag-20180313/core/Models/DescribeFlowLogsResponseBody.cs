@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44F4E2D0-77F7-4DEC-969B-061688946143</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of flow logs.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

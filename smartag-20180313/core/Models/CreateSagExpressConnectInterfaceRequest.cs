@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IP { get; set; }
 
         /// <summary>
-        /// <para>The subnet mask of the IP address.</para>
+        /// <para>The IP address mask.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Express Connect port.</para>
+        /// <para>The name of the dedicated connection port.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string PortName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Smart Access Gateway (SAG) instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device associated with the SAG instance.</para>
+        /// <para>The serial number of the bound Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,14 +92,16 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGSn { get; set; }
 
         /// <summary>
-        /// <para>The VLAN ID of the subinterface.</para>
-        /// <para>Value: <b>0 to 4094</b>.</para>
+        /// <para>The VLAN ID of the dedicated connection sub-interface.</para>
+        /// <para>Valid values: <b>0 to 4094</b>.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the VLAN ID is 0, the port is a physical port and the VLAN sub-interface mode is not used.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If the VLAN ID is 0, this port is a physical port and does not support VLAN subinterfaces.</description></item>
-        /// <item><description>If the VLAN ID is 1 to 4094, this port supports VLAN subinterfaces based on the Layer 3 protocols.</description></item>
-        /// <item><description>You can create a maximum of 5 VLAN subinterfaces.</description></item>
+        /// <item><description>If the VLAN ID is 1 to 4094, the port uses a VLAN-based Layer 3 sub-interface.</description></item>
+        /// <item><description>You can create up to 5 VLANs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

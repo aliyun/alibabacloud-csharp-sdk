@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifySmartAccessGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The CIDR blocks of terminals in the private network. Make sure that the CIDR blocks do not overlap with each other.</para>
-        /// <para>If the LAN ports of the terminals use dynamic routing, the IP addresses within the first private CIDR block are allocated to the terminals that have Dynamic Host Configuration Protocol (DHCP) enabled.</para>
+        /// <para>The private CIDR block used by clients at the on-premises site for communication. Make sure that private CIDR blocks do not conflict with each other. </para>
+        /// <para>If the LAN port of the Smart Access Gateway device is configured in dynamic mode, the IP addresses used by on-premises clients with DHCP enabled are allocated from the first private CIDR block that you specify.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.0.0/24</para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The description of the SAG instance.</para>
-        /// <para>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the Smart Access Gateway instance. </para>
+        /// <para>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAG description</para>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to audit the network connection logs of the SAS app instance.</para>
+        /// <para>Specifies whether to enable connection log auditing for the SAG app. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: yes</para>
+        /// <item><description><para><b>true</b>: enables connection log auditing for the SAG app.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: no</para>
+        /// <item><description><para><b>false</b>: disables connection log auditing for the SAG app.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? EnableSoftwareConnectionAudit { get; set; }
 
         /// <summary>
-        /// <para>The name of the SAG instance.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The name of the Smart Access Gateway instance. </para>
+        /// <para>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAG</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The location where the SAG instance is deployed.</para>
+        /// <para>The location where the Smart Access Gateway instance is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[ { &quot;adcode&quot;:&quot;&quot;, &quot;label&quot;:&quot;Hangzhou, Zhejiang xx zone xx Road xx number&quot;, &quot;value&quot;:&quot;B0FFGxxxx&quot;, &quot;center&quot;:&quot;120.190xxxx, 30.182xxxx&quot;, &quot;_new&quot;:&quot;true&quot; } ]</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Position { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,11 +96,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to advertise routes to Alibaba Cloud. Valid values:</para>
+        /// <para>The route synchronization mode for the on-premises network. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>static</b>: static routing</para>
+        /// <item><description><para><b>static</b>: static routing.</para>
         /// </description></item>
-        /// <item><description><para><b>dynamic</b>: dynamic routing</para>
+        /// <item><description><para><b>dynamic</b>: dynamic routing.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RoutingStrategy { get; set; }
 
         /// <summary>
-        /// <para>The time during which the disconnected SAG instance remains locked. Valid values: an integer that is greater than or equal to 0.</para>
+        /// <para>The threshold configured by the user for the offline lock feature. The value must be greater than or equal to 0.</para>
         /// <para>Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? SecurityLockThreshold { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

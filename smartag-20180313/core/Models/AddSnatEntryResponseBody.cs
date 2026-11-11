@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class AddSnatEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the SNAT instance.</para>
+        /// <para>The SNAT instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>snat-m2obgkt5ya1puz****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56BF6C79-C77D-41A0-86DD-A4B156E784EA</para>

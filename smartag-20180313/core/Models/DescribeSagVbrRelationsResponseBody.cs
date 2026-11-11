@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagVbrRelationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17D79124-104A-42DB-8FCA-CE2957CD1723</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the specified VBR is associated with an SAG instance.</para>
+        /// <para>The association information.</para>
         /// </summary>
         [NameInMap("SagVbrRelations")]
         [Validation(Required=false)]
         public List<DescribeSagVbrRelationsResponseBodySagVbrRelations> SagVbrRelations { get; set; }
         public class DescribeSagVbrRelationsResponseBodySagVbrRelations : TeaModel {
             /// <summary>
-            /// <para>The ID of the SAG instance.</para>
+            /// <para>The instance ID of the Smart Access Gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sag-0nnteglltw6z4b****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string SagInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the SAG instance belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the Smart Access Gateway instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16884015121212****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string SagUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VBR.</para>
+            /// <para>The instance ID of the virtual border router (VBR) used for routing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vbr-bp15ihkk93ezxppk****</para>

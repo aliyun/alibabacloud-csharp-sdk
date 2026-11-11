@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ListDpiConfigErrorRequest : TeaModel {
         /// <summary>
-        /// <para>The type of instance for which the DPI feature is configured:</para>
+        /// <para>The type of the instance for which the DPI feature is configured. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>acl</b>: a Resource Access Management instance.</description></item>
+        /// <item><description><b>acl</b>: an access control instance.</description></item>
         /// <item><description><b>qos</b>: a QoS policy instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DpiConfigType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of configuration errors to return on each page.</para>
+        /// <para>The maximum number of entries allowed per page in a paged query.</para>
         /// <para>Valid values: <b>1</b> to <b>100</b>.</para>
         /// <para>Default value: <b>10</b>.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -47,7 +47,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Smart Access Gateway instance is deployed. You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the regions and their IDs that Smart Access Gateway supports.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.
+        /// You can invoke the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the regions supported by Smart Access Gateway and the corresponding region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +59,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which the DPI feature is configured.</para>
+        /// <para>The instance ID for which the DPI feature is configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-1strcafl4wghpb****</para>
@@ -68,7 +69,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RuleInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Smart Access Gateway instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-1e8sgws6b133b8****</para>

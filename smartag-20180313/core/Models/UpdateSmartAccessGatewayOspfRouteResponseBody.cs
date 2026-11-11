@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class UpdateSmartAccessGatewayOspfRouteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The status code. 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: no.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

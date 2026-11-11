@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateACLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access control instance ID.</para>
+        /// <para>The ID of the access control instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl-o6yol7zowii5n2****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The type of the Smart Access Gateway instance associated with the access control instance.</para>
+        /// <para>The type of the Smart Access Gateway (SAG) instance associated with the access control instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl-hardware</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID of the access control instance.</para>
+        /// <para>The ID of the resource group to which the access control instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2iu4fnc****</para>

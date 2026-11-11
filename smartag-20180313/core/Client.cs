@@ -18,20 +18,10 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Smartag";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"eu-central-1", "smartag.eu-central-1.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "smartag.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "smartag.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "smartag.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "smartag.cn-hangzhou.aliyuncs.com"},
-                {"ap-southeast-5", "smartag.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "smartag.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "smartag.ap-southeast-2.aliyuncs.com"},
-                {"ap-southeast-1", "smartag.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-1", "smartag.ap-northeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("smartag", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -52,7 +42,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a Smart Access Gateway (SAG) device.</para>
+        /// <para>Activates a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -114,7 +104,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a Smart Access Gateway (SAG) device.</para>
+        /// <para>Activates a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -176,7 +166,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a Smart Access Gateway (SAG) device.</para>
+        /// <para>Activates a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -194,7 +184,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates a Smart Access Gateway (SAG) device.</para>
+        /// <para>Activates a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -212,7 +202,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a flow log.</para>
+        /// <para>Activates a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -274,7 +264,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a flow log.</para>
+        /// <para>Activates a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -336,7 +326,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a flow log.</para>
+        /// <para>Activates a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -354,7 +344,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a flow log.</para>
+        /// <para>Activates a flow log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -636,7 +626,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Adds a DNAT entry to a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -722,7 +712,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Adds a DNAT entry to a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -808,7 +798,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Adds a DNAT entry to a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -826,7 +816,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a destination network address translation (DNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Adds a DNAT entry to a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -844,7 +834,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</para>
+        /// <para>Adds DNS forwarding for Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -922,7 +912,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</para>
+        /// <para>Adds DNS forwarding for Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1000,7 +990,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</para>
+        /// <para>Adds DNS forwarding for Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1018,7 +1008,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds DNS forwarding configurations to an SCG5000 or SCG5000-5G instance. The device version must be 3.4.2 or later.</para>
+        /// <para>Adds DNS forwarding for Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1036,7 +1026,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Adds a private SNAT entry to a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1106,7 +1096,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Adds a private SNAT entry to a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1176,7 +1166,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Adds a private SNAT entry to a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1194,7 +1184,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a source network address translation (SNAT) entry to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Adds a private SNAT entry to a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1212,7 +1202,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates an access control list with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1278,7 +1268,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates an access control list with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1344,7 +1334,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates an access control list with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1362,7 +1352,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an access control list (ACL) with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates an access control list with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1548,7 +1538,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates a QoS policy with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1614,7 +1604,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates a QoS policy with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1680,7 +1670,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates a QoS policy with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1698,7 +1688,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies a Quality of Service (QoS) policy to a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates a QoS policy with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1716,18 +1706,18 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</para>
+        /// <para>Before you associate a bandwidth plan for application acceleration with a Smart Access Gateway instance, make sure that the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
-        /// If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</description></item>
-        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
-        /// If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</description></item>
-        /// <item><description>The SAG instance to be associated is in the available state.</description></item>
+        /// <item><description>If you want to associate the bandwidth plan with a Smart Access Gateway hardware instance, make sure that the version of the Smart Access Gateway device is 2.4.0 or later.
+        /// If the version of your Smart Access Gateway device is earlier than 2.4.0, upgrade the device. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version</a>.</description></item>
+        /// <item><description>If you want to associate the bandwidth plan with a SAG app instance, make sure that the version of the SAG app client you downloaded is 2.4.0 or later.
+        /// If the version of your client is earlier than 2.4.0, upgrade the client. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the client</a>.</description></item>
+        /// <item><description>The Smart Access Gateway instance that you want to associate is in the Available state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1786,18 +1776,18 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</para>
+        /// <para>Before you associate a bandwidth plan for application acceleration with a Smart Access Gateway instance, make sure that the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
-        /// If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</description></item>
-        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
-        /// If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</description></item>
-        /// <item><description>The SAG instance to be associated is in the available state.</description></item>
+        /// <item><description>If you want to associate the bandwidth plan with a Smart Access Gateway hardware instance, make sure that the version of the Smart Access Gateway device is 2.4.0 or later.
+        /// If the version of your Smart Access Gateway device is earlier than 2.4.0, upgrade the device. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version</a>.</description></item>
+        /// <item><description>If you want to associate the bandwidth plan with a SAG app instance, make sure that the version of the SAG app client you downloaded is 2.4.0 or later.
+        /// If the version of your client is earlier than 2.4.0, upgrade the client. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the client</a>.</description></item>
+        /// <item><description>The Smart Access Gateway instance that you want to associate is in the Available state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1856,18 +1846,18 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</para>
+        /// <para>Before you associate a bandwidth plan for application acceleration with a Smart Access Gateway instance, make sure that the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
-        /// If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</description></item>
-        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
-        /// If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</description></item>
-        /// <item><description>The SAG instance to be associated is in the available state.</description></item>
+        /// <item><description>If you want to associate the bandwidth plan with a Smart Access Gateway hardware instance, make sure that the version of the Smart Access Gateway device is 2.4.0 or later.
+        /// If the version of your Smart Access Gateway device is earlier than 2.4.0, upgrade the device. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version</a>.</description></item>
+        /// <item><description>If you want to associate the bandwidth plan with a SAG app instance, make sure that the version of the SAG app client you downloaded is 2.4.0 or later.
+        /// If the version of your client is earlier than 2.4.0, upgrade the client. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the client</a>.</description></item>
+        /// <item><description>The Smart Access Gateway instance that you want to associate is in the Available state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1886,18 +1876,18 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Associates a bandwidth plan for application acceleration with a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you associate a bandwidth plan for application acceleration with an SAG instance, make sure that the following requirements are met:</para>
+        /// <para>Before you associate a bandwidth plan for application acceleration with a Smart Access Gateway instance, make sure that the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG CPE instance, the version of the SAG device associated with the SAG CPE instance must be 2.4.0 or later.
-        /// If the version of the SAG device is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version of an SAG device</a>.</description></item>
-        /// <item><description>If you want to associate a bandwidth plan for application acceleration with an SAG app instance, the version of the SAG app must be 2.4.0 or later.
-        /// If the version of the SAG app is earlier than 2.4.0, update it. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the SAG app</a>.</description></item>
-        /// <item><description>The SAG instance to be associated is in the available state.</description></item>
+        /// <item><description>If you want to associate the bandwidth plan with a Smart Access Gateway hardware instance, make sure that the version of the Smart Access Gateway device is 2.4.0 or later.
+        /// If the version of your Smart Access Gateway device is earlier than 2.4.0, upgrade the device. For more information, see <a href="https://help.aliyun.com/document_detail/163948.html">Update the version</a>.</description></item>
+        /// <item><description>If you want to associate the bandwidth plan with a SAG app instance, make sure that the version of the SAG app client you downloaded is 2.4.0 or later.
+        /// If the version of your client is earlier than 2.4.0, upgrade the client. For more information, see <a href="https://help.aliyun.com/document_detail/102544.html">Install the client</a>.</description></item>
+        /// <item><description>The Smart Access Gateway instance that you want to associate is in the Available state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1916,15 +1906,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AttachCcnInstanceToCenRequest
         /// </param>
         /// <param name="runtime">
@@ -1934,9 +1924,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
         /// <returns>
         /// AttachCcnInstanceToCenResponse
         /// </returns>
-        public AttachCcnInstanceToCenResponse AttachCcnInstanceToCenWithOptions(AttachCcnInstanceToCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AttachCcnInstanceToCenResponse AttachCcnInstanceToCenWithOptions(AttachCcnInstanceToCenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachCcnInstanceToCenShrinkRequest request = new AttachCcnInstanceToCenShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RegionBindingList))
+            {
+                request.RegionBindingListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RegionBindingList, "RegionBindingList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CcnId))
             {
@@ -1945,6 +1941,14 @@ namespace AlibabaCloud.SDK.Smartag20180313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CidrAllocationMode))
+            {
+                query["CidrAllocationMode"] = request.CidrAllocationMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionBindingListShrink))
+            {
+                query["RegionBindingList"] = request.RegionBindingListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1975,15 +1979,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// AttachCcnInstanceToCenRequest
         /// </param>
         /// <param name="runtime">
@@ -1993,9 +1997,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
         /// <returns>
         /// AttachCcnInstanceToCenResponse
         /// </returns>
-        public async Task<AttachCcnInstanceToCenResponse> AttachCcnInstanceToCenWithOptionsAsync(AttachCcnInstanceToCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AttachCcnInstanceToCenResponse> AttachCcnInstanceToCenWithOptionsAsync(AttachCcnInstanceToCenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachCcnInstanceToCenShrinkRequest request = new AttachCcnInstanceToCenShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RegionBindingList))
+            {
+                request.RegionBindingListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RegionBindingList, "RegionBindingList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CcnId))
             {
@@ -2004,6 +2014,14 @@ namespace AlibabaCloud.SDK.Smartag20180313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CidrAllocationMode))
+            {
+                query["CidrAllocationMode"] = request.CidrAllocationMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionBindingListShrink))
+            {
+                query["RegionBindingList"] = request.RegionBindingListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2034,12 +2052,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2057,12 +2075,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Attaches a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2248,7 +2266,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Binds a Smart Access Gateway (SAG) instance to a specified Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2318,7 +2336,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Binds a Smart Access Gateway (SAG) instance to a specified Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2388,7 +2406,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Binds a Smart Access Gateway (SAG) instance to a specified Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2406,7 +2424,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Smart Access Gateway (SAG) instance with a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Binds a Smart Access Gateway (SAG) instance to a specified Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2608,7 +2626,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</para>
+        /// <para>Resets the key of a Smart Access Gateway (vCPE) device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2674,7 +2692,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</para>
+        /// <para>Resets the key of a Smart Access Gateway (vCPE) device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2740,7 +2758,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</para>
+        /// <para>Resets the key of a Smart Access Gateway (vCPE) device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2758,7 +2776,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a virtual customer-premises equipment (vCPE) device of Smart Access Gateway (SAG).</para>
+        /// <para>Resets the key of a Smart Access Gateway (vCPE) device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2936,7 +2954,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control instance by calling the CreateACL operation.</para>
+        /// <para>Creates an access control instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3002,7 +3020,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control instance by calling the CreateACL operation.</para>
+        /// <para>Creates an access control instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3068,7 +3086,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control instance by calling the CreateACL operation.</para>
+        /// <para>Creates an access control instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3086,7 +3104,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control instance by calling the CreateACL operation.</para>
+        /// <para>Creates an access control instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3308,7 +3326,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an enterprise code by calling CreateEnterpriseCode.</para>
+        /// <para>Creates an enterprise code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3358,7 +3376,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an enterprise code by calling CreateEnterpriseCode.</para>
+        /// <para>Creates an enterprise code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3408,7 +3426,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an enterprise code by calling CreateEnterpriseCode.</para>
+        /// <para>Creates an enterprise code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3426,7 +3444,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an enterprise code by calling CreateEnterpriseCode.</para>
+        /// <para>Creates an enterprise code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3444,7 +3462,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log.</para>
+        /// <para>Creates a flow log instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3546,7 +3564,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log.</para>
+        /// <para>Creates a flow log instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3648,7 +3666,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log.</para>
+        /// <para>Creates a flow log instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3666,7 +3684,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a flow log.</para>
+        /// <para>Creates a flow log instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4580,12 +4598,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a traffic classification rule for a QoS policy by calling the CreateQosPolicy operation.</para>
+        /// <para>Creates a traffic classification rule for a quality of service (QoS) policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a 5-tuple rule for a QoS policy, make sure that you have created a rate limiting rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
+        /// <para>Before you create 5-tuple rules for a QoS policy, make sure that you have created a bandwidth throttling rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4695,12 +4713,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a traffic classification rule for a QoS policy by calling the CreateQosPolicy operation.</para>
+        /// <para>Creates a traffic classification rule for a quality of service (QoS) policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a 5-tuple rule for a QoS policy, make sure that you have created a rate limiting rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
+        /// <para>Before you create 5-tuple rules for a QoS policy, make sure that you have created a bandwidth throttling rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4810,12 +4828,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a traffic classification rule for a QoS policy by calling the CreateQosPolicy operation.</para>
+        /// <para>Creates a traffic classification rule for a quality of service (QoS) policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a 5-tuple rule for a QoS policy, make sure that you have created a rate limiting rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
+        /// <para>Before you create 5-tuple rules for a QoS policy, make sure that you have created a bandwidth throttling rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4833,12 +4851,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a traffic classification rule for a QoS policy by calling the CreateQosPolicy operation.</para>
+        /// <para>Creates a traffic classification rule for a quality of service (QoS) policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a 5-tuple rule for a QoS policy, make sure that you have created a rate limiting rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
+        /// <para>Before you create 5-tuple rules for a QoS policy, make sure that you have created a bandwidth throttling rule for the QoS policy. For more information, see <a href="https://help.aliyun.com/document_detail/131806.html">CreateQosCar</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4856,7 +4874,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subinterface for an Express Connect circuit.</para>
+        /// <para>Creates a dedicated connection sub-interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4938,7 +4956,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subinterface for an Express Connect circuit.</para>
+        /// <para>Creates a dedicated connection sub-interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5020,7 +5038,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subinterface for an Express Connect circuit.</para>
+        /// <para>Creates a dedicated connection sub-interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5038,7 +5056,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subinterface for an Express Connect circuit.</para>
+        /// <para>Creates a dedicated connection sub-interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6616,13 +6634,13 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Deletes a Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Make sure that the CCN instance you want to delete is not associated with a Smart Access Gateway (SAG) instance or a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Ensure that the Cloud Connect Network (CCN) to be deleted is not associated with any Smart Access Gateway instances or Cloud Enterprise Networks.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6685,13 +6703,13 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Deletes a Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Make sure that the CCN instance you want to delete is not associated with a Smart Access Gateway (SAG) instance or a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Ensure that the Cloud Connect Network (CCN) to be deleted is not associated with any Smart Access Gateway instances or Cloud Enterprise Networks.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6754,13 +6772,13 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Deletes a Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Make sure that the CCN instance you want to delete is not associated with a Smart Access Gateway (SAG) instance or a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Ensure that the Cloud Connect Network (CCN) to be deleted is not associated with any Smart Access Gateway instances or Cloud Enterprise Networks.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6779,13 +6797,13 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Deletes a Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Make sure that the CCN instance you want to delete is not associated with a Smart Access Gateway (SAG) instance or a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Ensure that the Cloud Connect Network (CCN) to be deleted is not associated with any Smart Access Gateway instances or Cloud Enterprise Networks.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6972,17 +6990,17 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified enterprise code by calling DeleteEnterpriseCode.</para>
+        /// <para>Deletes a specified enterprise code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete an enterprise code, note the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Default enterprise codes cannot be deleted.
-        /// If the enterprise code that you want to delete is a default enterprise code, change it to a common enterprise code first, and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
-        /// <item><description>Enterprise codes that are attached to Smart Access Gateway app instances cannot be deleted.
-        /// If the enterprise code that you want to delete is attached to Smart Access Gateway app instances, change the enterprise code of the Smart Access Gateway app instances to another enterprise code first, and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete the default enterprise code.
+        /// If the enterprise code you want to delete is the default enterprise code, change the default enterprise code to a regular enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete an enterprise code that is attached to a Smart Access Gateway app instance.
+        /// If the enterprise code you want to delete has an attached Smart Access Gateway app instance, change the enterprise code of the Smart Access Gateway app instance to another enterprise code and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7033,17 +7051,17 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified enterprise code by calling DeleteEnterpriseCode.</para>
+        /// <para>Deletes a specified enterprise code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete an enterprise code, note the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Default enterprise codes cannot be deleted.
-        /// If the enterprise code that you want to delete is a default enterprise code, change it to a common enterprise code first, and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
-        /// <item><description>Enterprise codes that are attached to Smart Access Gateway app instances cannot be deleted.
-        /// If the enterprise code that you want to delete is attached to Smart Access Gateway app instances, change the enterprise code of the Smart Access Gateway app instances to another enterprise code first, and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete the default enterprise code.
+        /// If the enterprise code you want to delete is the default enterprise code, change the default enterprise code to a regular enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete an enterprise code that is attached to a Smart Access Gateway app instance.
+        /// If the enterprise code you want to delete has an attached Smart Access Gateway app instance, change the enterprise code of the Smart Access Gateway app instance to another enterprise code and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7094,17 +7112,17 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified enterprise code by calling DeleteEnterpriseCode.</para>
+        /// <para>Deletes a specified enterprise code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete an enterprise code, note the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Default enterprise codes cannot be deleted.
-        /// If the enterprise code that you want to delete is a default enterprise code, change it to a common enterprise code first, and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
-        /// <item><description>Enterprise codes that are attached to Smart Access Gateway app instances cannot be deleted.
-        /// If the enterprise code that you want to delete is attached to Smart Access Gateway app instances, change the enterprise code of the Smart Access Gateway app instances to another enterprise code first, and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete the default enterprise code.
+        /// If the enterprise code you want to delete is the default enterprise code, change the default enterprise code to a regular enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete an enterprise code that is attached to a Smart Access Gateway app instance.
+        /// If the enterprise code you want to delete has an attached Smart Access Gateway app instance, change the enterprise code of the Smart Access Gateway app instance to another enterprise code and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7123,17 +7141,17 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified enterprise code by calling DeleteEnterpriseCode.</para>
+        /// <para>Deletes a specified enterprise code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you delete an enterprise code, note the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Default enterprise codes cannot be deleted.
-        /// If the enterprise code that you want to delete is a default enterprise code, change it to a common enterprise code first, and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
-        /// <item><description>Enterprise codes that are attached to Smart Access Gateway app instances cannot be deleted.
-        /// If the enterprise code that you want to delete is attached to Smart Access Gateway app instances, change the enterprise code of the Smart Access Gateway app instances to another enterprise code first, and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete the default enterprise code.
+        /// If the enterprise code you want to delete is the default enterprise code, change the default enterprise code to a regular enterprise code and then delete it. For more information, see <a href="https://help.aliyun.com/document_detail/197700.html">UpdateEnterpriseCode</a>.</description></item>
+        /// <item><description>You cannot delete an enterprise code that is attached to a Smart Access Gateway app instance.
+        /// If the enterprise code you want to delete has an attached Smart Access Gateway app instance, change the enterprise code of the Smart Access Gateway app instance to another enterprise code and then delete the current enterprise code. For more information, see <a href="https://help.aliyun.com/document_detail/197701.html">UpdateSmartAGEnterpriseCode</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7152,7 +7170,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a flow log.</para>
+        /// <para>Deletes a flow log instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7214,7 +7232,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a flow log.</para>
+        /// <para>Deletes a flow log instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7276,7 +7294,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a flow log.</para>
+        /// <para>Deletes a flow log instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7294,7 +7312,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a flow log.</para>
+        /// <para>Deletes a flow log instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8824,15 +8842,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Deletes a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</para>
         /// <list type="bullet">
-        /// <item><description>The SAG instance that you want to delete is locked due to overdue payments.</description></item>
-        /// <item><description>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is a hardware instance or a vCPE instance.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is in the financial lock state.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is not associated with any Cloud Connect Network (CCN) or Virtual Border Router (VBR) instances. If the instance is associated with network instances, disassociate them first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Disassociate a network instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8883,15 +8901,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Deletes a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</para>
         /// <list type="bullet">
-        /// <item><description>The SAG instance that you want to delete is locked due to overdue payments.</description></item>
-        /// <item><description>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is a hardware instance or a vCPE instance.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is in the financial lock state.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is not associated with any Cloud Connect Network (CCN) or Virtual Border Router (VBR) instances. If the instance is associated with network instances, disassociate them first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Disassociate a network instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8942,15 +8960,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Deletes a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</para>
         /// <list type="bullet">
-        /// <item><description>The SAG instance that you want to delete is locked due to overdue payments.</description></item>
-        /// <item><description>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is a hardware instance or a vCPE instance.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is in the financial lock state.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is not associated with any Cloud Connect Network (CCN) or Virtual Border Router (VBR) instances. If the instance is associated with network instances, disassociate them first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Disassociate a network instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8969,15 +8987,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Deletes a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The SAG instance that you want to delete is an SAG CPE instance or an SAG vCPE instance.</para>
         /// <list type="bullet">
-        /// <item><description>The SAG instance that you want to delete is locked due to overdue payments.</description></item>
-        /// <item><description>The SAG instance that you want to delete is not associated with a Cloud Connect Network (CCN) instance or a virtual border router (VBR). If the SAG instance is associated with a CCN instance or a VBR, dissociate the SAG instance from the CCN instance or VBR first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Detach a network</a>.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is a hardware instance or a vCPE instance.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is in the financial lock state.</description></item>
+        /// <item><description>The Smart Access Gateway instance you want to delete is not associated with any Cloud Connect Network (CCN) or Virtual Border Router (VBR) instances. If the instance is associated with network instances, disassociate them first. For more information, see <a href="https://help.aliyun.com/document_detail/164903.html">Disassociate a network instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9164,7 +9182,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a DNS forwarding rule. This operation is applicable only to Smart Access Gateway (SAG) instances that are created using an SCG5000 or SCG5000-5G device with firmware version 3.4.2 or later.</para>
+        /// <para>Deletes DNS forwarding for a Smart Access Gateway instance. This operation applies to instances with the SCG5000 or SCG5000-5G device type and a device version of 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9218,7 +9236,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a DNS forwarding rule. This operation is applicable only to Smart Access Gateway (SAG) instances that are created using an SCG5000 or SCG5000-5G device with firmware version 3.4.2 or later.</para>
+        /// <para>Deletes DNS forwarding for a Smart Access Gateway instance. This operation applies to instances with the SCG5000 or SCG5000-5G device type and a device version of 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9272,7 +9290,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a DNS forwarding rule. This operation is applicable only to Smart Access Gateway (SAG) instances that are created using an SCG5000 or SCG5000-5G device with firmware version 3.4.2 or later.</para>
+        /// <para>Deletes DNS forwarding for a Smart Access Gateway instance. This operation applies to instances with the SCG5000 or SCG5000-5G device type and a device version of 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9290,7 +9308,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a DNS forwarding rule. This operation is applicable only to Smart Access Gateway (SAG) instances that are created using an SCG5000 or SCG5000-5G device with firmware version 3.4.2 or later.</para>
+        /// <para>Deletes DNS forwarding for a Smart Access Gateway instance. This operation applies to instances with the SCG5000 or SCG5000-5G device type and a device version of 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9476,7 +9494,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeACLAttribute to query the information about a specified access control list (ACL) instance.</para>
+        /// <para>Queries the details of a specified access control instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9558,7 +9576,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeACLAttribute to query the information about a specified access control list (ACL) instance.</para>
+        /// <para>Queries the details of a specified access control instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9640,7 +9658,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeACLAttribute to query the information about a specified access control list (ACL) instance.</para>
+        /// <para>Queries the details of a specified access control instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9658,7 +9676,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeACLAttribute to query the information about a specified access control list (ACL) instance.</para>
+        /// <para>Queries the details of a specified access control instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10068,7 +10086,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</para>
+        /// <para>Invokes DescribeClientUserDNS to query the DNS configuration of a Smart Access Gateway app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10130,7 +10148,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</para>
+        /// <para>Invokes DescribeClientUserDNS to query the DNS configuration of a Smart Access Gateway app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10192,7 +10210,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</para>
+        /// <para>Invokes DescribeClientUserDNS to query the DNS configuration of a Smart Access Gateway app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10210,7 +10228,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS settings of a Smart Access Gateway (SAG) instance associated with SAG app.</para>
+        /// <para>Invokes DescribeClientUserDNS to query the DNS configuration of a Smart Access Gateway app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10228,7 +10246,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</para>
+        /// <para>Queries the information about Cloud Connect Network (CCN) instances created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10306,7 +10324,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</para>
+        /// <para>Queries the information about Cloud Connect Network (CCN) instances created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10384,7 +10402,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</para>
+        /// <para>Queries the information about Cloud Connect Network (CCN) instances created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10402,7 +10420,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</para>
+        /// <para>Queries the information about Cloud Connect Network (CCN) instances created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10956,7 +10974,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries flow logs in a specified region.</para>
+        /// <para>Queries flow log instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11042,7 +11060,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries flow logs in a specified region.</para>
+        /// <para>Queries flow log instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11128,7 +11146,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries flow logs in a specified region.</para>
+        /// <para>Queries flow log instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11146,7 +11164,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries flow logs in a specified region.</para>
+        /// <para>Queries flow log instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12644,7 +12662,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12702,7 +12720,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12760,7 +12778,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12778,7 +12796,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13316,7 +13334,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 Smart Access Gateway instances with the highest packet loss rate in a specified region.</para>
+        /// <para>Queries the top 10 Smart Access Gateway instances with the highest packet loss rates in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13378,7 +13396,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 Smart Access Gateway instances with the highest packet loss rate in a specified region.</para>
+        /// <para>Queries the top 10 Smart Access Gateway instances with the highest packet loss rates in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13440,7 +13458,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 Smart Access Gateway instances with the highest packet loss rate in a specified region.</para>
+        /// <para>Queries the top 10 Smart Access Gateway instances with the highest packet loss rates in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13458,7 +13476,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 Smart Access Gateway instances with the highest packet loss rate in a specified region.</para>
+        /// <para>Queries the top 10 Smart Access Gateway instances with the highest packet loss rates in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13652,7 +13670,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global routing protocol.</para>
+        /// <para>Retrieves the global routing protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13718,7 +13736,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global routing protocol.</para>
+        /// <para>Retrieves the global routing protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13784,7 +13802,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global routing protocol.</para>
+        /// <para>Retrieves the global routing protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13802,7 +13820,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global routing protocol.</para>
+        /// <para>Retrieves the global routing protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13988,7 +14006,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the LAN configurations of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14054,7 +14072,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the LAN configurations of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14120,7 +14138,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the LAN configurations of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14138,7 +14156,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the LAN port settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the LAN configurations of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14156,7 +14174,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the management port settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the management port configuration of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14222,7 +14240,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the management port settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the management port configuration of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14288,7 +14306,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the management port settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the management port configuration of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14306,7 +14324,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the management port settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the management port configuration of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14324,7 +14342,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries online client statistics for Smart Access Gateway (SAG) app instances.</para>
+        /// <para>Queries the online Connections data of Smart Access Gateway app instances for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14386,7 +14404,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries online client statistics for Smart Access Gateway (SAG) app instances.</para>
+        /// <para>Queries the online Connections data of Smart Access Gateway app instances for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14448,7 +14466,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries online client statistics for Smart Access Gateway (SAG) app instances.</para>
+        /// <para>Queries the online Connections data of Smart Access Gateway app instances for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14466,7 +14484,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries online client statistics for Smart Access Gateway (SAG) app instances.</para>
+        /// <para>Queries the online Connections data of Smart Access Gateway app instances for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14484,7 +14502,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a physical port.</para>
+        /// <para>Queries the physical port information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14550,7 +14568,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a physical port.</para>
+        /// <para>Queries the physical port information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14616,7 +14634,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a physical port.</para>
+        /// <para>Queries the physical port information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14634,7 +14652,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a physical port.</para>
+        /// <para>Queries the physical port information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14820,7 +14838,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries remote logon information about a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the remote logon information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14886,7 +14904,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries remote logon information about a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the remote logon information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14952,7 +14970,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries remote logon information about a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the remote logon information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14970,7 +14988,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries remote logon information about a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the remote logon information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14988,7 +15006,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the routes of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the current route list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15054,7 +15072,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the routes of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the current route list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15120,7 +15138,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the routes of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the current route list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15138,7 +15156,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the routes of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the current route list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15156,7 +15174,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</para>
+        /// <para>Retrieves the BGP configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15222,7 +15240,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</para>
+        /// <para>Retrieves the BGP configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15288,7 +15306,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</para>
+        /// <para>Retrieves the BGP configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15306,7 +15324,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of Border Gateway Protocol (BGP) dynamic routing.</para>
+        /// <para>Retrieves the BGP configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15492,7 +15510,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the static routes of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the static routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15558,7 +15576,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the static routes of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the static routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15624,7 +15642,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the static routes of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the static routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15642,7 +15660,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the static routes of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the static routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15660,7 +15678,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</para>
+        /// <para>Queries the top 10 Smart Access Gateway instances by traffic rate in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15722,7 +15740,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</para>
+        /// <para>Queries the top 10 Smart Access Gateway instances by traffic rate in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15784,7 +15802,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</para>
+        /// <para>Queries the top 10 Smart Access Gateway instances by traffic rate in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15802,7 +15820,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 Smart Access Gateway (SAG) instances that have the highest data transfer rates in a specific region.</para>
+        /// <para>Queries the top 10 Smart Access Gateway instances by traffic rate in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15988,7 +16006,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries whether a specified virtual border router (VBR) instance is associated with a Smart Access Gateway instance in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16054,7 +16072,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries whether a specified virtual border router (VBR) instance is associated with a Smart Access Gateway instance in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16120,7 +16138,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries whether a specified virtual border router (VBR) instance is associated with a Smart Access Gateway instance in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16138,7 +16156,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a specified virtual border router (VBR) is associated with a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries whether a specified virtual border router (VBR) instance is associated with a Smart Access Gateway instance in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16156,7 +16174,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Retrieves the WAN 4G NIC information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16222,7 +16240,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Retrieves the WAN 4G NIC information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16288,7 +16306,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Retrieves the WAN 4G NIC information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16306,7 +16324,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the 4G subscriber identity module (SIM) card used by the WAN port of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Retrieves the WAN 4G NIC information of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16660,7 +16678,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the Wi-Fi configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16726,7 +16744,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the Wi-Fi configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16792,7 +16810,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the Wi-Fi configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16810,7 +16828,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Wi-Fi settings of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the Wi-Fi configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16828,7 +16846,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DescribeSmartAccessGatewayAttribute operation to query the information about a specified Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the details of a specified Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16890,7 +16908,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DescribeSmartAccessGatewayAttribute operation to query the information about a specified Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the details of a specified Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16952,7 +16970,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DescribeSmartAccessGatewayAttribute operation to query the information about a specified Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the details of a specified Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16970,7 +16988,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DescribeSmartAccessGatewayAttribute operation to query the information about a specified Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the details of a specified Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17180,7 +17198,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the high-availability configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17242,7 +17260,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the high-availability configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17304,7 +17322,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the high-availability configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17322,7 +17340,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the high availability (HA) settings of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Queries the high-availability configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17340,7 +17358,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the software version information of Smart Access Gateway devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17410,7 +17428,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the software version information of Smart Access Gateway devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17480,7 +17498,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the software version information of Smart Access Gateway devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17498,7 +17516,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Queries the software version information of Smart Access Gateway devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17516,7 +17534,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Smart Access Gateway (SAG) instances.</para>
+        /// <para>Queries Smart Access Gateway instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17646,7 +17664,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Smart Access Gateway (SAG) instances.</para>
+        /// <para>Queries Smart Access Gateway instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17776,7 +17794,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Smart Access Gateway (SAG) instances.</para>
+        /// <para>Queries Smart Access Gateway instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17794,7 +17812,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Smart Access Gateway (SAG) instances.</para>
+        /// <para>Queries Smart Access Gateway instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17988,7 +18006,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</para>
+        /// <para>Invokes DescribeUnbindFlowLogSags to query the Smart Access Gateway instances that are not attached to a flow log instance in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18046,7 +18064,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</para>
+        /// <para>Invokes DescribeUnbindFlowLogSags to query the Smart Access Gateway instances that are not attached to a flow log instance in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18104,7 +18122,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</para>
+        /// <para>Invokes DescribeUnbindFlowLogSags to query the Smart Access Gateway instances that are not attached to a flow log instance in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18122,7 +18140,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Smart Access Gateway (SAG) instances that are not associated with a flow log in a specific region.</para>
+        /// <para>Invokes DescribeUnbindFlowLogSags to query the Smart Access Gateway instances that are not attached to a flow log instance in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18140,7 +18158,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// <para>Queries the traffic statistics of users under a specified Smart Access Gateway app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18210,7 +18228,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// <para>Queries the traffic statistics of users under a specified Smart Access Gateway app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18280,7 +18298,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// <para>Queries the traffic statistics of users under a specified Smart Access Gateway app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18298,7 +18316,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the amount of data transfer generated by each client account of a Smart Access Gateway (SAG) app instance.</para>
+        /// <para>Queries the traffic statistics of users under a specified Smart Access Gateway app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18652,15 +18670,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DetachCcnInstanceFromCenRequest
         /// </param>
         /// <param name="runtime">
@@ -18670,9 +18688,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
         /// <returns>
         /// DetachCcnInstanceFromCenResponse
         /// </returns>
-        public DetachCcnInstanceFromCenResponse DetachCcnInstanceFromCenWithOptions(DetachCcnInstanceFromCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DetachCcnInstanceFromCenResponse DetachCcnInstanceFromCenWithOptions(DetachCcnInstanceFromCenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachCcnInstanceFromCenShrinkRequest request = new DetachCcnInstanceFromCenShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RegionBindingList))
+            {
+                request.RegionBindingListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RegionBindingList, "RegionBindingList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CcnId))
             {
@@ -18681,6 +18705,10 @@ namespace AlibabaCloud.SDK.Smartag20180313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionBindingListShrink))
+            {
+                query["RegionBindingList"] = request.RegionBindingListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -18707,15 +18735,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DetachCcnInstanceFromCenRequest
         /// </param>
         /// <param name="runtime">
@@ -18725,9 +18753,15 @@ namespace AlibabaCloud.SDK.Smartag20180313
         /// <returns>
         /// DetachCcnInstanceFromCenResponse
         /// </returns>
-        public async Task<DetachCcnInstanceFromCenResponse> DetachCcnInstanceFromCenWithOptionsAsync(DetachCcnInstanceFromCenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DetachCcnInstanceFromCenResponse> DetachCcnInstanceFromCenWithOptionsAsync(DetachCcnInstanceFromCenRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachCcnInstanceFromCenShrinkRequest request = new DetachCcnInstanceFromCenShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RegionBindingList))
+            {
+                request.RegionBindingListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RegionBindingList, "RegionBindingList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CcnId))
             {
@@ -18736,6 +18770,10 @@ namespace AlibabaCloud.SDK.Smartag20180313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
             {
                 query["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionBindingListShrink))
+            {
+                query["RegionBindingList"] = request.RegionBindingListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -18762,12 +18800,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18785,12 +18823,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Unbinds a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Disassociates a Cloud Connect Network (CCN) from a Cloud Enterprise Network (CEN).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18808,7 +18846,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables diagnostics for Smart Access Gateway (SAG) devices</para>
+        /// <para>Enables diagnostics for a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18874,7 +18912,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables diagnostics for Smart Access Gateway (SAG) devices</para>
+        /// <para>Enables diagnostics for a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18940,7 +18978,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables diagnostics for Smart Access Gateway (SAG) devices</para>
+        /// <para>Enables diagnostics for a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18958,7 +18996,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables diagnostics for Smart Access Gateway (SAG) devices</para>
+        /// <para>Enables diagnostics for a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18976,7 +19014,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Disables the deep packet inspection (DPI) monitoring feature for a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19046,7 +19084,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Disables the deep packet inspection (DPI) monitoring feature for a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19116,7 +19154,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Disables the deep packet inspection (DPI) monitoring feature for a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19134,7 +19172,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the deep packet inspection (DPI) feature for a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Disables the deep packet inspection (DPI) monitoring feature for a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19992,12 +20030,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</para>
+        /// <para>Disassociates a bandwidth plan for application acceleration from a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call <b>DissociateSmartAGFromApplicationBandwidthPackage</b>, you can set the <b>SmartAGId</b> parameter to specify an SAG instance, or set the <b>SmartAGIdList</b> to specify multiple SAG instances.</para>
+        /// <para>When you call the <b>DissociateSmartAGFromApplicationBandwidthPackage</b> operation, you can specify the <b>SmartAGId</b> parameter to disassociate a bandwidth plan for application acceleration from a specified Smart Access Gateway instance. You can also specify the <b>SmartAGIdList</b> parameter to disassociate the bandwidth plan for application acceleration from multiple Smart Access Gateway instances at the same time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20059,12 +20097,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</para>
+        /// <para>Disassociates a bandwidth plan for application acceleration from a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call <b>DissociateSmartAGFromApplicationBandwidthPackage</b>, you can set the <b>SmartAGId</b> parameter to specify an SAG instance, or set the <b>SmartAGIdList</b> to specify multiple SAG instances.</para>
+        /// <para>When you call the <b>DissociateSmartAGFromApplicationBandwidthPackage</b> operation, you can specify the <b>SmartAGId</b> parameter to disassociate a bandwidth plan for application acceleration from a specified Smart Access Gateway instance. You can also specify the <b>SmartAGIdList</b> parameter to disassociate the bandwidth plan for application acceleration from multiple Smart Access Gateway instances at the same time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20126,12 +20164,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</para>
+        /// <para>Disassociates a bandwidth plan for application acceleration from a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call <b>DissociateSmartAGFromApplicationBandwidthPackage</b>, you can set the <b>SmartAGId</b> parameter to specify an SAG instance, or set the <b>SmartAGIdList</b> to specify multiple SAG instances.</para>
+        /// <para>When you call the <b>DissociateSmartAGFromApplicationBandwidthPackage</b> operation, you can specify the <b>SmartAGId</b> parameter to disassociate a bandwidth plan for application acceleration from a specified Smart Access Gateway instance. You can also specify the <b>SmartAGIdList</b> parameter to disassociate the bandwidth plan for application acceleration from multiple Smart Access Gateway instances at the same time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20149,12 +20187,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a bandwidth plan for application acceleration.</para>
+        /// <para>Disassociates a bandwidth plan for application acceleration from a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call <b>DissociateSmartAGFromApplicationBandwidthPackage</b>, you can set the <b>SmartAGId</b> parameter to specify an SAG instance, or set the <b>SmartAGIdList</b> to specify multiple SAG instances.</para>
+        /// <para>When you call the <b>DissociateSmartAGFromApplicationBandwidthPackage</b> operation, you can specify the <b>SmartAGId</b> parameter to disassociate a bandwidth plan for application acceleration from a specified Smart Access Gateway instance. You can also specify the <b>SmartAGIdList</b> parameter to disassociate the bandwidth plan for application acceleration from multiple Smart Access Gateway instances at the same time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21364,7 +21402,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a quality of service (QoS) policy.</para>
+        /// <para>Queries the details of a quality of service (QoS) policy instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21410,7 +21448,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a quality of service (QoS) policy.</para>
+        /// <para>Queries the details of a quality of service (QoS) policy instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21456,7 +21494,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a quality of service (QoS) policy.</para>
+        /// <para>Queries the details of a quality of service (QoS) policy instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21474,7 +21512,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a quality of service (QoS) policy.</para>
+        /// <para>Queries the details of a quality of service (QoS) policy instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23024,12 +23062,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for deep packet inspection (DPI) configuration errors.</para>
+        /// <para>Queries deep packet inspection (DPI) configuration exceptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you configure an application-based Resource Access Management instance or a Quality of Service (QoS) policy instance and associate it with a Smart Access Gateway instance, you can call this operation to check whether the access control rules or QoS quintuple rules are successfully applied to the target Smart Access Gateway instance. If a configuration fails to apply, this operation returns information about the error.</para>
+        /// <para>If you have configured an application-based access control instance or a quality of service (QoS) policy instance and associated it with a Smart Access Gateway instance, you can invoke this operation to check whether the access control rules or 5-tuple rules of the QoS policy that you created are successfully applied to the destination Smart Access Gateway instance. If any configurations fail to be applied, this operation returns the configuration exception information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23091,12 +23129,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for deep packet inspection (DPI) configuration errors.</para>
+        /// <para>Queries deep packet inspection (DPI) configuration exceptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you configure an application-based Resource Access Management instance or a Quality of Service (QoS) policy instance and associate it with a Smart Access Gateway instance, you can call this operation to check whether the access control rules or QoS quintuple rules are successfully applied to the target Smart Access Gateway instance. If a configuration fails to apply, this operation returns information about the error.</para>
+        /// <para>If you have configured an application-based access control instance or a quality of service (QoS) policy instance and associated it with a Smart Access Gateway instance, you can invoke this operation to check whether the access control rules or 5-tuple rules of the QoS policy that you created are successfully applied to the destination Smart Access Gateway instance. If any configurations fail to be applied, this operation returns the configuration exception information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23158,12 +23196,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for deep packet inspection (DPI) configuration errors.</para>
+        /// <para>Queries deep packet inspection (DPI) configuration exceptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you configure an application-based Resource Access Management instance or a Quality of Service (QoS) policy instance and associate it with a Smart Access Gateway instance, you can call this operation to check whether the access control rules or QoS quintuple rules are successfully applied to the target Smart Access Gateway instance. If a configuration fails to apply, this operation returns information about the error.</para>
+        /// <para>If you have configured an application-based access control instance or a quality of service (QoS) policy instance and associated it with a Smart Access Gateway instance, you can invoke this operation to check whether the access control rules or 5-tuple rules of the QoS policy that you created are successfully applied to the destination Smart Access Gateway instance. If any configurations fail to be applied, this operation returns the configuration exception information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23181,12 +23219,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for deep packet inspection (DPI) configuration errors.</para>
+        /// <para>Queries deep packet inspection (DPI) configuration exceptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you configure an application-based Resource Access Management instance or a Quality of Service (QoS) policy instance and associate it with a Smart Access Gateway instance, you can call this operation to check whether the access control rules or QoS quintuple rules are successfully applied to the target Smart Access Gateway instance. If a configuration fails to apply, this operation returns information about the error.</para>
+        /// <para>If you have configured an application-based access control instance or a quality of service (QoS) policy instance and associated it with a Smart Access Gateway instance, you can invoke this operation to check whether the access control rules or 5-tuple rules of the QoS policy that you created are successfully applied to the destination Smart Access Gateway instance. If any configurations fail to be applied, this operation returns the configuration exception information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23204,7 +23242,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the application groups that Smart Access Gateway supports in a specified region.</para>
+        /// <para>Queries the application groups supported by Smart Access Gateway in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23278,7 +23316,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the application groups that Smart Access Gateway supports in a specified region.</para>
+        /// <para>Queries the application groups supported by Smart Access Gateway in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23352,7 +23390,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the application groups that Smart Access Gateway supports in a specified region.</para>
+        /// <para>Queries the application groups supported by Smart Access Gateway in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23370,7 +23408,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the application groups that Smart Access Gateway supports in a specified region.</para>
+        /// <para>Queries the application groups supported by Smart Access Gateway in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26740,7 +26778,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password that is used to log on to a smart access gateway (SAG) device.</para>
+        /// <para>Modifies the logon password of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26810,7 +26848,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password that is used to log on to a smart access gateway (SAG) device.</para>
+        /// <para>Modifies the logon password of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26880,7 +26918,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password that is used to log on to a smart access gateway (SAG) device.</para>
+        /// <para>Modifies the logon password of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26898,7 +26936,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password that is used to log on to a smart access gateway (SAG) device.</para>
+        /// <para>Modifies the logon password of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27116,7 +27154,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the global routing protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27186,7 +27224,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the global routing protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27256,7 +27294,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the global routing protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27274,7 +27312,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the routing protocol of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the global routing protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27292,7 +27330,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Modifies the high availability (HA) configuration of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27370,7 +27408,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Modifies the high availability (HA) configuration of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27448,7 +27486,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Modifies the high availability (HA) configuration of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27466,7 +27504,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the high availability (HA) settings of a Smart Access Gateway (SAG) device.</para>
+        /// <para>Modifies the high availability (HA) configuration of a Smart Access Gateway device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29120,7 +29158,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the custom DNS settings of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29194,7 +29232,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the custom DNS settings of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29268,7 +29306,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the custom DNS settings of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29286,7 +29324,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the DNS servers used by a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the custom DNS settings of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29996,7 +30034,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30086,7 +30124,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30176,7 +30214,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30194,7 +30232,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Modifies the configuration of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30572,7 +30610,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves Smart Access Gateway (SAG) resources from one resource group to another.</para>
+        /// <para>Modifies the resource group to which a Smart Access Gateway resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30642,7 +30680,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves Smart Access Gateway (SAG) resources from one resource group to another.</para>
+        /// <para>Modifies the resource group to which a Smart Access Gateway resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30712,7 +30750,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves Smart Access Gateway (SAG) resources from one resource group to another.</para>
+        /// <para>Modifies the resource group to which a Smart Access Gateway resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30730,7 +30768,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves Smart Access Gateway (SAG) resources from one resource group to another.</para>
+        /// <para>Modifies the resource group to which a Smart Access Gateway resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31296,7 +31334,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Revokes the authorization of a Cloud Enterprise Network (CEN) for a Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31362,7 +31400,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Revokes the authorization of a Cloud Enterprise Network (CEN) for a Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31428,7 +31466,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Revokes the authorization of a Cloud Enterprise Network (CEN) for a Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31446,7 +31484,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disallows a Cloud Enterprise Network (CEN) instance to communicate with a Cloud Connect Network (CCN) instance.</para>
+        /// <para>Revokes the authorization of a Cloud Enterprise Network (CEN) for a Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31800,12 +31838,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</para>
+        /// <para>Enables client roaming for the SAG app, allowing clients to access the internal network across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call <c>RoamClientUser</c>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</para>
+        /// <para>Before you invoke the <c>RoamClientUser</c> operation, understand the SAG app roaming feature and its description. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure client roaming</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31879,12 +31917,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</para>
+        /// <para>Enables client roaming for the SAG app, allowing clients to access the internal network across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call <c>RoamClientUser</c>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</para>
+        /// <para>Before you invoke the <c>RoamClientUser</c> operation, understand the SAG app roaming feature and its description. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure client roaming</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31958,12 +31996,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</para>
+        /// <para>Enables client roaming for the SAG app, allowing clients to access the internal network across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call <c>RoamClientUser</c>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</para>
+        /// <para>Before you invoke the <c>RoamClientUser</c> operation, understand the SAG app roaming feature and its description. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure client roaming</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31981,12 +32019,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables roaming for the SAG app to allow clients to access Alibaba Cloud across regions.</para>
+        /// <para>Enables client roaming for the SAG app, allowing clients to access the internal network across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call <c>RoamClientUser</c>, we recommend that you read and understand the features and usage notes of roaming. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure roaming on clients</a>.</para>
+        /// <para>Before you invoke the <c>RoamClientUser</c> operation, understand the SAG app roaming feature and its description. For more information, see <a href="https://help.aliyun.com/document_detail/177220.html">Configure client roaming</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32512,7 +32550,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</para>
+        /// <para>Invokes the UnbindSmartAccessGateway operation to disassociate a Smart Access Gateway instance from a specified Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32582,7 +32620,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</para>
+        /// <para>Invokes the UnbindSmartAccessGateway operation to disassociate a Smart Access Gateway instance from a specified Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32652,7 +32690,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</para>
+        /// <para>Invokes the UnbindSmartAccessGateway operation to disassociate a Smart Access Gateway instance from a specified Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32670,7 +32708,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from the associated Cloud Connect Network (CCN) instance.</para>
+        /// <para>Invokes the UnbindSmartAccessGateway operation to disassociate a Smart Access Gateway instance from a specified Cloud Connect Network (CCN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32688,7 +32726,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</para>
+        /// <para>Disassociates a virtual border router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32762,7 +32800,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</para>
+        /// <para>Disassociates a virtual border router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32836,7 +32874,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</para>
+        /// <para>Disassociates a virtual border router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32854,7 +32892,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Smart Access Gateway (SAG) instance from a virtual border router (VBR).</para>
+        /// <para>Disassociates a virtual border router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34096,12 +34134,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Modifies the administrator password of a Smart Access Gateway (SAG) device. This operation applies to SAG instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the administrator password of the Smart Access Gateway device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34163,12 +34201,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Modifies the administrator password of a Smart Access Gateway (SAG) device. This operation applies to SAG instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the administrator password of the Smart Access Gateway device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34230,12 +34268,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Modifies the administrator password of a Smart Access Gateway (SAG) device. This operation applies to SAG instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the administrator password of the Smart Access Gateway device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34253,12 +34291,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the password that is used to log on to an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Modifies the administrator password of a Smart Access Gateway (SAG) device. This operation applies to SAG instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify passwords that are used to log on to only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the administrator password of the Smart Access Gateway device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35048,12 +35086,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configuration of a Smart Access Gateway (SAG) device. This operation is supported only for SAG instances that use the SCG5000 or SCG5000-5G device model and run device version 3.4.2 or later.</para>
+        /// <para>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configurations of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify the OSPF dynamic routing protocol configuration only for SCG5000 and SCG5000-5G devices that run device version 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the OSPF dynamic routing protocol configurations of Smart Access Gateway devices.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35163,12 +35201,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configuration of a Smart Access Gateway (SAG) device. This operation is supported only for SAG instances that use the SCG5000 or SCG5000-5G device model and run device version 3.4.2 or later.</para>
+        /// <para>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configurations of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify the OSPF dynamic routing protocol configuration only for SCG5000 and SCG5000-5G devices that run device version 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the OSPF dynamic routing protocol configurations of Smart Access Gateway devices.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35278,12 +35316,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configuration of a Smart Access Gateway (SAG) device. This operation is supported only for SAG instances that use the SCG5000 or SCG5000-5G device model and run device version 3.4.2 or later.</para>
+        /// <para>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configurations of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify the OSPF dynamic routing protocol configuration only for SCG5000 and SCG5000-5G devices that run device version 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the OSPF dynamic routing protocol configurations of Smart Access Gateway devices.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35301,12 +35339,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configuration of a Smart Access Gateway (SAG) device. This operation is supported only for SAG instances that use the SCG5000 or SCG5000-5G device model and run device version 3.4.2 or later.</para>
+        /// <para>Modifies the Open Shortest Path First (OSPF) dynamic routing protocol configurations of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify the OSPF dynamic routing protocol configuration only for SCG5000 and SCG5000-5G devices that run device version 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support modifying the OSPF dynamic routing protocol configurations of Smart Access Gateway devices.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35900,7 +35938,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Increases the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Upgrades the bandwidth of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35945,6 +35983,10 @@ namespace AlibabaCloud.SDK.Smartag20180313
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
+            {
+                query["RestoreTime"] = request.RestoreTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartAGId))
             {
                 query["SmartAGId"] = request.SmartAGId;
@@ -35970,7 +36012,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Increases the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Upgrades the bandwidth of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36015,6 +36057,10 @@ namespace AlibabaCloud.SDK.Smartag20180313
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
+            {
+                query["RestoreTime"] = request.RestoreTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmartAGId))
             {
                 query["SmartAGId"] = request.SmartAGId;
@@ -36040,7 +36086,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Increases the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Upgrades the bandwidth of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36058,7 +36104,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Increases the bandwidth of a Smart Access Gateway (SAG) instance.</para>
+        /// <para>Upgrades the bandwidth of a Smart Access Gateway instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36432,12 +36478,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Queries the DNS information of a Smart Access Gateway device. This operation is applicable to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Currently, only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support querying the DNS information of Smart Access Gateway devices.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36495,12 +36541,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Queries the DNS information of a Smart Access Gateway device. This operation is applicable to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Currently, only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support querying the DNS information of Smart Access Gateway devices.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36558,12 +36604,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Queries the DNS information of a Smart Access Gateway device. This operation is applicable to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Currently, only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support querying the DNS information of Smart Access Gateway devices.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36581,12 +36627,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS configuration of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Queries the DNS information of a Smart Access Gateway device. This operation is applicable to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the DNS configuration only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Currently, only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support querying the DNS information of Smart Access Gateway devices.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36604,7 +36650,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// <para>Queries the DNS forwarding list. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36654,7 +36700,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// <para>Queries the DNS forwarding list. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36704,7 +36750,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// <para>Queries the DNS forwarding list. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36722,7 +36768,7 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS forwarding list of a Smart Access Gateway (SAG) SCG5000 or SCG5000-5G instance. The version of the device must be 3.4.2 or later.</para>
+        /// <para>Queries the DNS forwarding list. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36740,12 +36786,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Retrieves the global routing protocol of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support retrieving the global routing protocol of a Smart Access Gateway device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36803,12 +36849,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Retrieves the global routing protocol of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support retrieving the global routing protocol of a Smart Access Gateway device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36866,12 +36912,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Retrieves the global routing protocol of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support retrieving the global routing protocol of a Smart Access Gateway device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36889,12 +36935,12 @@ namespace AlibabaCloud.SDK.Smartag20180313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global routing protocol of an SCG5000 or SCG5000-5G device whose version is 3.4.2 or later.</para>
+        /// <para>Retrieves the global routing protocol of a Smart Access Gateway device. This operation applies to Smart Access Gateway instances whose device type is SCG5000 or SCG5000-5G and whose device version is 3.4.2 or later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the global protocol only of SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later.</para>
+        /// <para>Only SCG5000 and SCG5000-5G devices whose version is 3.4.2 or later support retrieving the global routing protocol of a Smart Access Gateway device.</para>
         /// </description>
         /// 
         /// <param name="request">

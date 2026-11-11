@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the SAG APP instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway app instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG APP instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway app instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,8 +48,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The month during which the data transfer statistics are collected.</para>
-        /// <para>If you do not specify a month, the current month is queried.</para>
+        /// <para>The statistical date in the YYYYMM format.</para>
+        /// <remarks>
+        /// <para>If this parameter is not specified, the current month is used by default.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>201905</para>
@@ -59,11 +61,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string StatisticsDate { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames of client accounts. Maximum value of N: 50.</para>
+        /// <para>The list of usernames. The list can contain up to 50 usernames.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12</para>
         /// </summary>
         [NameInMap("UserNames")]
         [Validation(Required=false)]

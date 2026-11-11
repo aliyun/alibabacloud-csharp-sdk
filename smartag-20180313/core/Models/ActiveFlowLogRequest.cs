@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ActiveFlowLogRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the flow log.</para>
+        /// <para>The flow log instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the flow log belongs.</para>
+        /// <para>The region ID of the flow log.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

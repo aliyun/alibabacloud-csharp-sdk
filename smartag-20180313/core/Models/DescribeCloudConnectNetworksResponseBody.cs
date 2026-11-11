@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
                 [Validation(Required=false)]
                 public string AssociatedCloudBoxCount { get; set; }
 
+                [NameInMap("AssociatedVpcStatus")]
+                [Validation(Required=false)]
+                public string AssociatedVpcStatus { get; set; }
+
                 [NameInMap("AvailableCloudBoxCount")]
                 [Validation(Required=false)]
                 public string AvailableCloudBoxCount { get; set; }
@@ -109,6 +113,106 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
                 }
 
+                [NameInMap("TrNetworkConfig")]
+                [Validation(Required=false)]
+                public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTrNetworkConfig TrNetworkConfig { get; set; }
+                public class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTrNetworkConfig : TeaModel {
+                    [NameInMap("CidrAllocationMode")]
+                    [Validation(Required=false)]
+                    public string CidrAllocationMode { get; set; }
+
+                    [NameInMap("RegionBindingList")]
+                    [Validation(Required=false)]
+                    public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTrNetworkConfigRegionBindingList RegionBindingList { get; set; }
+                    public class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTrNetworkConfigRegionBindingList : TeaModel {
+                        [NameInMap("RegionBinding")]
+                        [Validation(Required=false)]
+                        public List<DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTrNetworkConfigRegionBindingListRegionBinding> RegionBinding { get; set; }
+                        public class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkTrNetworkConfigRegionBindingListRegionBinding : TeaModel {
+                            [NameInMap("CidrBlock")]
+                            [Validation(Required=false)]
+                            public string CidrBlock { get; set; }
+
+                            [NameInMap("RegionId")]
+                            [Validation(Required=false)]
+                            public string RegionId { get; set; }
+
+                            [NameInMap("RelayCidrBlock")]
+                            [Validation(Required=false)]
+                            public string RelayCidrBlock { get; set; }
+
+                            [NameInMap("Status")]
+                            [Validation(Required=false)]
+                            public string Status { get; set; }
+
+                            [NameInMap("TransitRouterId")]
+                            [Validation(Required=false)]
+                            public string TransitRouterId { get; set; }
+
+                        }
+
+                    }
+
+                    [NameInMap("Subnet")]
+                    [Validation(Required=false)]
+                    public string Subnet { get; set; }
+
+                }
+
+                [NameInMap("VpcNetworkConfig")]
+                [Validation(Required=false)]
+                public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkVpcNetworkConfig VpcNetworkConfig { get; set; }
+                public class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkVpcNetworkConfig : TeaModel {
+                    [NameInMap("CidrAllocationMode")]
+                    [Validation(Required=false)]
+                    public string CidrAllocationMode { get; set; }
+
+                    [NameInMap("RegionBindingList")]
+                    [Validation(Required=false)]
+                    public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkVpcNetworkConfigRegionBindingList RegionBindingList { get; set; }
+                    public class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkVpcNetworkConfigRegionBindingList : TeaModel {
+                        [NameInMap("RegionBinding")]
+                        [Validation(Required=false)]
+                        public List<DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkVpcNetworkConfigRegionBindingListRegionBinding> RegionBinding { get; set; }
+                        public class DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetworkVpcNetworkConfigRegionBindingListRegionBinding : TeaModel {
+                            [NameInMap("RegionId")]
+                            [Validation(Required=false)]
+                            public string RegionId { get; set; }
+
+                            [NameInMap("RelayCidrBlock")]
+                            [Validation(Required=false)]
+                            public string RelayCidrBlock { get; set; }
+
+                            [NameInMap("Status")]
+                            [Validation(Required=false)]
+                            public string Status { get; set; }
+
+                            [NameInMap("VpcCidrBlock")]
+                            [Validation(Required=false)]
+                            public string VpcCidrBlock { get; set; }
+
+                            [NameInMap("VpcId")]
+                            [Validation(Required=false)]
+                            public string VpcId { get; set; }
+
+                        }
+
+                    }
+
+                    [NameInMap("Subnet")]
+                    [Validation(Required=false)]
+                    public string Subnet { get; set; }
+
+                }
+
+                [NameInMap("VpcStatusErrorCode")]
+                [Validation(Required=false)]
+                public string VpcStatusErrorCode { get; set; }
+
+                [NameInMap("VpcStatusErrorMessage")]
+                [Validation(Required=false)]
+                public string VpcStatusErrorMessage { get; set; }
+
             }
 
         }
@@ -124,7 +228,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging queries.</para>
+        /// <para>The number of entries to return on each page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

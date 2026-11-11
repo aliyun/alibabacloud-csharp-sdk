@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The Smart Access Gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device.</para>
+        /// <para>The serial number of the Smart Access Gateway device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sage62x022502****</para>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGSn { get; set; }
 
         /// <summary>
-        /// <para>The type of software run by the SAG device. Valid values:</para>
+        /// <para>The software type of the Smart Access Gateway device. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Device</b>: The operating system run by the SAG device. This is the default value.</description></item>
-        /// <item><description><b>Dpi</b>: The signature database used by the SAG device.</description></item>
+        /// <item><description><b>Device</b>: the operating system software that runs on the Smart Access Gateway device. Default value.</description></item>
+        /// <item><description><b>Dpi</b>: the application signature library software that runs on the Smart Access Gateway device.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

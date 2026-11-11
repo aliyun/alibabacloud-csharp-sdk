@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeFlowLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the flow log.</para>
+        /// <para>The description of the flow log instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of a flow log.</para>
+        /// <para>The ID of the flow log instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fl-7a56mar1kfw9vj****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string FlowLogId { get; set; }
 
         /// <summary>
-        /// <para>The name of the flow log.</para>
+        /// <para>The name of the flow log instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DDE</para>
@@ -40,11 +40,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
-        /// <para>The location where the flow log is stored. Valid values:</para>
+        /// <para>The output type of the flow log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sls</b>: The flow log is stored in Log Service.</description></item>
-        /// <item><description><b>netflow</b>: The flow log is stored on a NetFlow collector.</description></item>
-        /// <item><description><b>all</b>: The flow log is stored both in Log Service and on a NetFlow collector.</description></item>
+        /// <item><description><para><b>sls</b>: Flow logs are stored in Simple Log Service.</para>
+        /// </description></item>
+        /// <item><description><para><b>netflow</b>: Flow logs are stored on the NetFlow server that you configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>all</b>: Flow logs are stored in both Simple Log Service and the NetFlow server that you configured.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page in a paging query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region that the flow logs are stored.</para>
+        /// <para>The region ID of the flow log instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,10 +105,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the flow log. Valid values:</para>
+        /// <para>The status of the flow log instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: The flow log is enabled.</description></item>
-        /// <item><description><b>Inactive</b>: The flow log is disabled.</description></item>
+        /// <item><description><para><b>Active</b>: Started.</para>
+        /// </description></item>
+        /// <item><description><para><b>Inactive</b>: Not started.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The name of the Cloud Connect Network (CCN) instance.</para>
-        /// <para>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name must be 2 to 100 characters in length, and can contain digits, underscores (_), periods (.), and hyphens (-). It must start with a letter or a Chinese character.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccnname</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>. Maximum value: <b>50</b>.</para>
+        /// <para>The number of entries to return on each page for paging in a paged query. Default value: <b>10</b>. Maximum value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Cloud Connect Network (CCN) instance.</para>
+        /// <para>The ID of the region to which the Cloud Connect Network (CCN) instance belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The labels used to filter Cloud Connect Network (CCN) instances.</para>
+        /// <para>The labels used to query Cloud Connect Network (CCN) instances.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DescribeCloudConnectNetworks</para>
+        /// <para>[{&quot;Key&quot;:&quot;test&quot;,&quot;Value&quot;:&quot;test&quot;}]</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

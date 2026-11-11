@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F026E79-30AD-47B6-9E7D-D1D4BA77F1F1</para>

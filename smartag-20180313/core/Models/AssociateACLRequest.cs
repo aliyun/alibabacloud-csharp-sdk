@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class AssociateACLRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of ACL.</para>
+        /// <para>The ID of the access control list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,8 +29,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the ACL is created.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +48,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance to be associated with the ACL.</para>
+        /// <para>The ID of the Smart Access Gateway instance to which you want to attach the access control list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

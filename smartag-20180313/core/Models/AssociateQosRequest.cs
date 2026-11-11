@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the QoS policy belongs.</para>
+        /// <para>The region ID of the QoS policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance to which the QoS policy is to be applied.</para>
+        /// <para>The Smart Access Gateway instance ID to which the QoS policy is applied.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

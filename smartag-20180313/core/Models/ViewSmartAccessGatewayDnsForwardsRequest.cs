@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ViewSmartAccessGatewayDnsForwardsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region in which the SAG instance resides.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagInsId { get; set; }
 
         /// <summary>
-        /// <para>The serial number (SN) of the device.</para>
+        /// <para>The serial number of the device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

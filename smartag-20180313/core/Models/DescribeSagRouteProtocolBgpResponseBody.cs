@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? HoldTime { get; set; }
 
         /// <summary>
-        /// <para>The time interval at which keep-alive packets are sent. Unit: seconds.</para>
+        /// <para>The keepalive interval. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? KeepAlive { get; set; }
 
         /// <summary>
-        /// <para>The autonomous system (AS) number to which the SAG device belongs.</para>
+        /// <para>The autonomous system (AS) number of the Smart Access Gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65536</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? LocalAs { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F39E4FE-B45C-47FF-9921-95780486F52D</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the BGP router.</para>
+        /// <para>The BGP router ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.XX.XX.1</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RouterId { get; set; }
 
         /// <summary>
-        /// <para>The details about the query task.</para>
+        /// <para>The status of the query task.</para>
         /// </summary>
         [NameInMap("TaskStates")]
         [Validation(Required=false)]
         public List<DescribeSagRouteProtocolBgpResponseBodyTaskStates> TaskStates { get; set; }
         public class DescribeSagRouteProtocolBgpResponseBodyTaskStates : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the task was created.</para>
+            /// <para>The timestamp when the query task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1586765938000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error code returned. A value of 200 indicates that the query task is successful.</para>
+            /// <para>The error code. 200 indicates that the query task succeeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned. A value of Successful indicates that the query task is successful.</para>
+            /// <para>The error message. Successful indicates that the query task succeeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Successful</para>
@@ -97,17 +97,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The state of the query task. Valid values:</para>
+            /// <para>The status of the asynchronous task. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Initialized</b>: The query task is initialized.</description></item>
-            /// <item><description><b>Offline</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. After the SAG device is connected to Alibaba Cloud, Alibaba Cloud assigns the query task to the SAG device.</description></item>
-            /// <item><description><b>Succeed</b>: Alibaba Cloud has assigned the query task to the SAG device.</description></item>
-            /// <item><description><b>Processing</b>: Alibaba Cloud is assigning the query task to the SAG device.</description></item>
-            /// <item><description><b>VersionNotSupport</b>: The query task is not supported by the current version of the SAG device.</description></item>
-            /// <item><description><b>BuildRequestError</b>: The query task is not supported by the controller of the SAG device.</description></item>
-            /// <item><description><b>HardwareError</b>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</description></item>
+            /// <item><description><b>Offline</b>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device comes online.</description></item>
+            /// <item><description><b>Succeed</b>: The query task succeeded.</description></item>
+            /// <item><description><b>Processing</b>: The query task is being delivered.</description></item>
+            /// <item><description><b>VersionNotSupport</b>: The current version of the Smart Access Gateway device does not support this feature.</description></item>
+            /// <item><description><b>BuildRequestError</b>: The management and control system does not support the operation.</description></item>
+            /// <item><description><b>HardwareError</b>: The query task failed to be delivered due to a device error.</description></item>
             /// <item><description><b>TaskNotExist</b>: The query task does not exist.</description></item>
-            /// <item><description><b>OfflineNotConfiged</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. Alibaba Cloud does not assign the query task to the SAG device even after the SAG device is connected to Alibaba Cloud.</description></item>
+            /// <item><description><b>OfflineNotConfiged</b>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered after the device comes online.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

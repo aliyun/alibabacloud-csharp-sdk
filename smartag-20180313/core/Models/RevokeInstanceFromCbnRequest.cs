@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class RevokeInstanceFromCbnRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CCN instance.</para>
+        /// <para>The Cloud Connect Network (CCN) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string CcnInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the CCN instance is deployed.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

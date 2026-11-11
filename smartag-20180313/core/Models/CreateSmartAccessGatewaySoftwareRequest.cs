@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateSmartAccessGatewaySoftwareRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment of the order. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment for the bills of the Smart Access Gateway app instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b> (default): no</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b> (default): no.</description></item>
         /// </list>
-        /// <para>If you set the parameter to false, go to Billing Management to complete the payment after you call this operation. The instance is created only after you complete the payment.</para>
+        /// <para>If you set this parameter to false, you must go to the Orders page in the console to complete the payment after you invoke this operation. Otherwise, the instance cannot be created.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the SAG app instance. Set the value to <b>PREPAY</b>. This value indicates that the SAG app instance is a subscription resource.</para>
+        /// <para>The billing method of the Smart Access Gateway app instance. Valid value: <b>PREPAY</b> (upfront). This value serves as an identity indicating that the Smart Access Gateway app instance is a resource that requires upfront payment before use.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The size of the free data plan that is allocated to each client account per month. Unit: GB. Valid value: <b>5</b>.</para>
+        /// <para>The monthly data plan provided for each client account. Unit: GB. Valid value: <b>5</b>.</para>
         /// <remarks>
-        /// <para> This value specifies that a free data plan of 5 GB is allocated to each client account per month.</para>
+        /// <para>Currently, only a free monthly data plan of 5 GB is supported for each client account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,8 +59,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the SAG app instance. Unit: months.</para>
-        /// <para>Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <para>The purchase duration of the Smart Access Gateway app instance. Unit: months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +70,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to create the SAG app instance.</para>
+        /// <para>The region ID of the Smart Access Gateway app instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +89,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of client accounts that can be created on the SAG app instance.</para>
+        /// <para>The number of client accounts for the Smart Access Gateway app instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

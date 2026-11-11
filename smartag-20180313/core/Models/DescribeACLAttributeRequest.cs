@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeACLAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access control list (ACL) instance.</para>
+        /// <para>The ID of the access control instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The direction of the access control rule. Valid values:</para>
+        /// <para>The direction in which the access control rule is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound. Refers to traffic from external sources accessing the local branch where the Smart Access Gateway (SAG) instance is deployed.</description></item>
-        /// <item><description><b>out</b>: outbound. Refers to traffic from the local branch where the SAG instance is deployed accessing external destinations.</description></item>
+        /// <item><description><b>in</b>: inbound, which indicates traffic from external networks to the local branch where the Smart Access Gateway instance is deployed.</description></item>
+        /// <item><description><b>out</b>: outbound, which indicates traffic from the local branch where the Smart Access Gateway instance is deployed to external networks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The name of the ACL instance.</para>
-        /// <para>The name must be 2 to 100 characters in length and must start with an uppercase letter, a lowercase letter, or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the access control instance.</para>
+        /// <para>The name must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter or Chinese character.</para>
         /// <remarks>
-        /// <para>This parameter supports fuzzy search.</para>
+        /// <para>Fuzzy search is supported for this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number in a paginated query. Default value: <b>1</b>.</para>
+        /// <para>The page number for a paging query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of access control rule entries to display per page in a paginated query.</para>
+        /// <para>The number of access control rule entries to return on each page in a paging query.</para>
         /// <para>Valid values: <b>1</b> to <b>50</b>.</para>
         /// <para>Default value: <b>10</b>.</para>
         /// 
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the access control list (ACL) instance.</para>
+        /// <para>The region ID of the access control instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

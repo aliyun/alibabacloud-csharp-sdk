@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DissociateSmartAGFromApplicationBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bandwidth plan for application acceleration.</para>
+        /// <para>The instance ID of the bandwidth plan for application acceleration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ApplicationBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,10 +34,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to precheck the request. Check items include permissions and the status of the specified cloud resources. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the disassociation request. The dry run includes checks on permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends the request. After the request passes the check, the SAG instance is disassociated from the bandwidth plan for application acceleration.</description></item>
-        /// <item><description><b>true</b>: prechecks the request but does not disassociate the SAG instance from the bandwidth plan for application acceleration. If you use this value, the system checks the required parameters and the request syntax. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, the bandwidth plan for application acceleration is disassociated from the Smart Access Gateway instance.</description></item>
+        /// <item><description><b>true</b>: Sends a dry run request. Only the check is performed, and the bandwidth plan for application acceleration is not disassociated from the Smart Access Gateway instance. Check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The region ID of the bandwidth plan for application acceleration.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +60,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-w11hk4bqxpakem****</para>
@@ -71,7 +70,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The list of the SAG instance id.</para>
+        /// <para>The list of Smart Access Gateway instance IDs.</para>
+        /// <para>You can enter up to 100 Smart Access Gateway instance IDs at a time.</para>
         /// </summary>
         [NameInMap("SmartAGIdList")]
         [Validation(Required=false)]

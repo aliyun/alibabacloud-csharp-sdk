@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagRemoteAccessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. The 200 error code indicates that the query task is successful.</para>
+        /// <para>The error code. 200 indicates that the query task succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. The Successful error message indicates that the query task is successful.</para>
+        /// <para>The error message. Successful indicates that the query task succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E38E950D-28A4-4C41-9428-A8908EC6AE5C</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The Smart Access Gateway instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-1um5x5nwhilymw****</para>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the query task is successful. Valid values:</para>
+        /// <para>Indicates whether the query task succeeded.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The query task is successful.</description></item>
+        /// <item><description><b>true</b>: The query task succeeded.</description></item>
         /// <item><description><b>false</b>: The query task failed.</description></item>
         /// </list>
         /// 

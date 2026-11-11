@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class CreateQosPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the traffic classification rule for the QoS policy.</para>
+        /// <para>The description of the traffic classification rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The time when the traffic classification rule expires.</para>
+        /// <para>The end time when the traffic classification rule of the quality of service (QoS) policy takes effect. The time follows the ISO 8601 standard and uses the UTC+8 time zone, in the YYYY-MM-DDThh:mm:ss+0800 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-09-14T16:41:33+0800</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The protocol type to which the traffic classification rule applies.</para>
+        /// <para>The protocol type applied to the traffic classification rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The name of the traffic classification rule for the QoS policy.</para>
+        /// <para>The name of the traffic classification rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The priority of the rate limiting rule to which the traffic classification rule belongs.</para>
+        /// <para>The priority of the bandwidth throttling rule to which the traffic classification rule belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// <para>The time when the traffic classification rule takes effect.</para>
+        /// <para>The effective start time of the traffic classification rule for the QoS policy. The time is expressed in the ISO 8601 standard and uses the UTC+8 time zone in the YYYY-MM-DDThh:mm:ss+0800 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-14T16:41:33+0800</para>

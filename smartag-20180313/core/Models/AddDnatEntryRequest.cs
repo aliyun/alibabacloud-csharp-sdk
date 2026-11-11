@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class AddDnatEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The public IP address.</para>
+        /// <para>The external public IP address.</para>
         /// <remarks>
-        /// <para> If the DNAT entry is used to forward packets transmitted over the Internet, the DNAT entry automatically recognizes the current public IP address.</para>
+        /// <para>If the DNAT type is Internet, the system automatically identifies the current public IP address. You do not need to specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ExternalIp { get; set; }
 
         /// <summary>
-        /// <para>The public port.</para>
-        /// <para>Valid values: <b>1 to 65535</b>.</para>
+        /// <para>The public port.
+        /// Valid values: <b>1-65535</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string InternalIp { get; set; }
 
         /// <summary>
-        /// <para>The destination private port.</para>
-        /// <para>Valid values: <b>1 to 65535</b>.</para>
+        /// <para>The destination private port number.
+        /// Valid values: <b>1-65535</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string InternalPort { get; set; }
 
         /// <summary>
-        /// <para>The protocol used in DNAT. Valid values:</para>
+        /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>TCP</b>: forwards TCP packets.</description></item>
-        /// <item><description><b>UDP</b>: The NAT gateway forwards UDP packets.</description></item>
+        /// <item><description><b>UDP</b>: forwards UDP packets.</description></item>
         /// <item><description><b>Any</b>: forwards packets of all protocols.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,9 +101,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The ID of the Smart Access Gateway instance.</para>
         /// <remarks>
-        /// <para> Only SAG instances used to manage SAG devices support DNAT.</para>
+        /// <para>Currently, only hardware instances are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagId { get; set; }
 
         /// <summary>
-        /// <para>The type of the DNAT entry. Valid values:</para>
+        /// <para>The DNAT type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Intranet</b>: translates the destination IP address to a specific internal IP address. This is the default value.</description></item>
-        /// <item><description><b>Internet</b>: translates the destination IP address to a specific public IP address.</description></item>
+        /// <item><description><b>Intranet</b>: private network DNAT. This is the default value.</description></item>
+        /// <item><description><b>Internet</b>: public network DNAT.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
     public class CreateQosPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The description of the traffic classification rule for the QoS policy.</para>
-        /// <para>The description must be 1 to 512 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
+        /// <para>The description must be 1 to 512 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter or a Chinese character.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The destination CIDR block.</para>
-        /// <para>The destination CIDR block is in CIDR notation. Example: 192.168.10.0/24.</para>
+        /// <para>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,11 +35,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The destination port range.</para>
         /// <para>Valid values: <b>-1</b> or <b>1</b> to <b>65535</b>.</para>
-        /// <para>Examples of destination port range formats:</para>
+        /// <para>Examples of the destination port range format:</para>
         /// <list type="bullet">
-        /// <item><description><b>1/200</b>: port range 1 to 200.</description></item>
-        /// <item><description><b>80/80</b>: port 80.</description></item>
-        /// <item><description><b>-1/-1</b>: all ports.</description></item>
+        /// <item><description><b>1/200</b>: specifies ports 1 to 200.</description></item>
+        /// <item><description><b>80/80</b>: specifies port 80.</description></item>
+        /// <item><description><b>-1/-1</b>: specifies all ports.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public List<string> DpiSignatureIds { get; set; }
 
         /// <summary>
-        /// <para>The time when the traffic classification rule expires.</para>
-        /// <para>The time is expressed in ISO 8601 format and uses UTC+8. Format: <c>YYYY-MM-DDThh:mm:ss+0800</c>.</para>
+        /// <para>The end time when the traffic classification rule of the quality of service policy takes effect.</para>
+        /// <para>The time is specified in the ISO 8601 standard in the UTC+8 time zone. Format: <c>YYYY-MM-DDThh:mm:ss+0800</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-09-14T16:41:33+0800</para>
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The protocol type to which the traffic classification rule applies.</para>
-        /// <para>For the protocol types supported by the traffic classification rule, refer to the console.</para>
+        /// <para>The protocol type applied to the traffic classification rule.</para>
+        /// <para>For the protocol types supported by traffic classification rules, refer to the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The name of the traffic classification rule for the QoS policy.</para>
-        /// <para>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, hyphens (-), and underscores (_).</para>
+        /// <para>The name must be 2 to 100 characters in length and start with a letter or a Chinese character. It can contain digits, hyphens (-), and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the rate limiting rule to which the traffic classification rule belongs.</para>
+        /// <para>The priority of the bandwidth throttling rule to which the traffic classification rule belongs.</para>
         /// <para>Valid values: <b>1</b> to <b>3</b>. A smaller value indicates a higher priority.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the QoS policy instance.</para>
+        /// <para>The region ID of the QoS policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The source CIDR block.</para>
-        /// <para>The source CIDR block is in CIDR notation. Example: 192.168.1.0/24.</para>
+        /// <para>The source CIDR block must be in CIDR format. Example: 192.168.1.0/24.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -169,11 +169,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The source port range.</para>
         /// <para>Valid values: <b>-1</b> or <b>1</b> to <b>65535</b>.</para>
-        /// <para>Examples of source port range formats:</para>
+        /// <para>Examples of the source port range format:</para>
         /// <list type="bullet">
-        /// <item><description><b>1/200</b>: port range 1 to 200.</description></item>
-        /// <item><description><b>80/80</b>: port 80.</description></item>
-        /// <item><description><b>-1/-1</b>: all ports.</description></item>
+        /// <item><description><b>1/200</b>: specifies ports 1 to 200.</description></item>
+        /// <item><description><b>80/80</b>: specifies port 80.</description></item>
+        /// <item><description><b>-1/-1</b>: specifies all ports.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -185,8 +185,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// <para>The effective period start time of the traffic categorization rule for the QoS policy.</para>
-        /// <para>The time is expressed in ISO 8601 format and uses UTC+8. Format: <c>YYYY-MM-DDThh:mm:ss+0800</c>.</para>
+        /// <para>The start time of the effective period for the traffic classification rule of the QoS policy.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss+0800 format. The time must be in UTC+8.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-14T16:41:33+0800</para>

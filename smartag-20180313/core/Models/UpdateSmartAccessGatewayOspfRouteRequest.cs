@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
     public class UpdateSmartAccessGatewayOspfRouteRequest : TeaModel {
         /// <summary>
         /// <para>The OSPF area ID.</para>
-        /// <para>The value must be an integer from <b>1</b> to <b>2147483647</b>.</para>
+        /// <para>Valid values: <b>1</b> to <b>2147483647</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,11 +22,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? AreaId { get; set; }
 
         /// <summary>
-        /// <para>The authentication method. Valid values:</para>
+        /// <para>The authentication type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONE</b>: No authentication is configured.</description></item>
-        /// <item><description><b>CLEARTEXT</b>: Plaintext authentication is used.</description></item>
-        /// <item><description><b>MD5</b>: MD5 authentication is used.</description></item>
+        /// <item><description><para><b>NONE</b>: disables authentication.</para>
+        /// </description></item>
+        /// <item><description><para><b>CLEARTEXT</b>: uses plaintext authentication.</para>
+        /// </description></item>
+        /// <item><description><para><b>MD5</b>: uses MD5 authentication.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,10 +41,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AuthenticationType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only the SAG instances that belong to other Alibaba Cloud accounts. Valid values:</para>
+        /// <para>Specifies whether to query only cross-account Smart Access Gateway instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): No.</description></item>
-        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><para><b>false</b> (default): no.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: yes.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,8 +57,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? CrossAccount { get; set; }
 
         /// <summary>
-        /// <para>The dead interval. Unit: seconds.</para>
-        /// <para>The value must be an integer from <b>1</b> to <b>65535</b>.</para>
+        /// <para>The OSPF dead interval. Unit: seconds.</para>
+        /// <para>Valid values: <b>1</b> to <b>65535</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +70,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The interval at which Hello packets are sent. Unit: seconds.</para>
-        /// <para>The value must be an integer from <b>1</b> to <b>65535</b>.</para>
+        /// <para>Valid values: <b>1</b> to <b>65535</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +83,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The port name.</para>
         /// <remarks>
-        /// <para>This parameter is not in use.</para>
+        /// <para>This parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,10 +94,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string InterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The MD5 key.</para>
-        /// <para>The value must be 1 to <b>47</b> characters in length.</para>
+        /// <para>The value of the MD5 key.</para>
+        /// <para>Valid values: <b>1</b> to <b>47</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you set <b>AuthenticationType</b> to <b>MD5</b>.</para>
+        /// <para>This parameter is required only when <b>AuthenticationType</b> is set to <b>MD5</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,10 +108,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Md5Key { get; set; }
 
         /// <summary>
-        /// <para>The MD5 key ID.</para>
-        /// <para>The value must be an integer from 1 to <b>2147483647</b>.</para>
+        /// <para>The ID of the MD5 key.</para>
+        /// <para>Valid values: <b>1</b> to <b>2147483647</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you set <b>AuthenticationType</b> to <b>MD5</b>.</para>
+        /// <para>This parameter is required only when <b>AuthenticationType</b> is set to <b>MD5</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,9 +122,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Md5KeyId { get; set; }
 
         /// <summary>
-        /// <para>The network segment.</para>
+        /// <para>The CIDR block.</para>
         /// <remarks>
-        /// <para>This parameter is not in use.</para>
+        /// <para>This parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -130,22 +135,22 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Networks { get; set; }
 
         /// <summary>
-        /// <para>The cost of the OSPF route.</para>
+        /// <para>The OSPF route cost.</para>
         /// <remarks>
-        /// <para>This parameter is not in use.</para>
+        /// <para>This parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>[110/11]</para>
+        /// <para>11</para>
         /// </summary>
         [NameInMap("OspfCost")]
         [Validation(Required=false)]
         public int? OspfCost { get; set; }
 
         /// <summary>
-        /// <para>The OSPF network type.</para>
+        /// <para>The OSPF area type.</para>
         /// <remarks>
-        /// <para>This parameter is not in use.</para>
+        /// <para>This parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -159,7 +164,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <para>The password for plaintext authentication.</para>
         /// <para>The password must be 1 to 8 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
         /// <remarks>
-        /// <para>This parameter is required only when you set <b>AuthenticationType</b> to <b>CLEARTEXT</b>.</para>
+        /// <para>This parameter is required only when <b>AuthenticationType</b> is set to <b>CLEARTEXT</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,7 +177,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The route redistribution protocol.</para>
         /// <remarks>
-        /// <para>This parameter is not in use.</para>
+        /// <para>This parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -183,8 +188,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RedistributeProtocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG instance is deployed.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a>.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to obtain region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -216,7 +221,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RouterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The Smart Access Gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -227,7 +232,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagInsId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device.</para>
+        /// <para>The serial number of the Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

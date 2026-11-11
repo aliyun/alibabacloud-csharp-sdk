@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class ModifySagHaRequest : TeaModel {
         /// <summary>
-        /// <para>The HA mode. Valid values:</para>
+        /// <para>The HA pattern. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NONE</b>: disables HA.</description></item>
-        /// <item><description><b>STATIC</b>: enables static HA.</description></item>
-        /// <item><description><b>DYNAMIC</b>: enables dynamic HA.</description></item>
+        /// <item><description><b>NONE</b>: The HA feature is disabled.</description></item>
+        /// <item><description><b>STATIC</b>: static pattern</description></item>
+        /// <item><description><b>DYNAMIC</b>: dynamic schema</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The port name.</para>
         /// <remarks>
-        /// <para> If Mode is set to STATIC, you must specify a port name.</para>
+        /// <para>If the HA mode is set to STATIC, you must specify a port name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string PortName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SAG instance.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The SAG instance ID.</para>
+        /// <para>The instance ID of the Smart Access Gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device associated with the SAG instance.</para>
+        /// <para>The serial number of the associated Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The virtual IP address.</para>
         /// <remarks>
-        /// <para> If Mode is set to STATIC, you must specify a virtual IP address.</para>
+        /// <para>If the HA mode is set to STATIC, you must specify a virtual IP address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

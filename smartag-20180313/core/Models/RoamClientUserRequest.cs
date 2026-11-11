@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class RoamClientUserRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the SAG app instance.</para>
+        /// <para>The region ID of the source SAG app instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SAG app instance.</para>
+        /// <para>The region ID of the destination SAG app instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string TargetSmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The usernames of the client for which you want to enable roaming.</para>
+        /// <para>The username of the client account to roam.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

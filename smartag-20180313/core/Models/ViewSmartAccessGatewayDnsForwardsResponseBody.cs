@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1914</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>A DNS forwarding list.</para>
+        /// <para>The list of DNS forwarding instances.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sagv3dnsforward-nc7qabskj17werc7su</para>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             /// <summary>
             /// <para>The forwarding mode.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description>This parameter is not in use. Ignore this parameter.</description></item>
+            /// <item><description>Invalid field. Ignore this field.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>first</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The number of the egress port.</para>
+            /// <para>The outbound interface index.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public int? OutboundPortIndex { get; set; }
 
             /// <summary>
-            /// <para>The egress port.</para>
+            /// <para>The outbound interface.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eth0</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string OutboundPortName { get; set; }
 
             /// <summary>
-            /// <para>The type of the egress port.</para>
+            /// <para>The outbound interface type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PhysicalPort</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>

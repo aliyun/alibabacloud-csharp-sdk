@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The IP address of the primary DNS server.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the IP address of the existing DNS server will be cleared.</para>
+        /// <para>If you do not specify this parameter, the DNS configuration is cleared.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The IP address of the secondary DNS server.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the IP address of the existing DNS server will be cleared.</para>
+        /// <para>If you do not specify this parameter, the secondary DNS configuration is cleared.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SlaveDns { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device associated with the SAG instance.</para>
+        /// <para>The serial number of the bound Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

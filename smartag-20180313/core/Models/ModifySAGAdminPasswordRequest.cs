@@ -18,22 +18,22 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new logon password for the SAG device.</para>
-        /// <para>The password must be 8 to 30 characters in length and can contain letters, digits, and underscores (_).</para>
+        /// <para>The new logon password for the Smart Access Gateway device.</para>
+        /// <para>Password format requirements: The password must be 8 to 30 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_).</para>
         /// <remarks>
-        /// <para> In the example, asterisks (\<em>) are used to conceal the real password. This does not mean that the password supports asterisks (\</em>). The actual format requirement prevails.</para>
+        /// <para>The example shows a partially masked synthetic format for demonstration purposes and does not correspond to a real device password. An asterisk (\<em>) indicates a masked character and does not mean that asterisks (\</em>) are supported in passwords. When entering a password, refer to the password format requirements.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>DemoPass_2***</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SmartAGId { get; set; }
 
         /// <summary>
-        /// <para>The serial number (SN) of the SAG device.</para>
+        /// <para>The serial number of the Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

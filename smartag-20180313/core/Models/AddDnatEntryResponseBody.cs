@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class AddDnatEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the DNAT entry.</para>
+        /// <para>The DNAT entry ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fwd-kxe4fq3xuzczze****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DnatEntryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56BF6C79-C77D-41A0-86DD-A4B156E784EA</para>

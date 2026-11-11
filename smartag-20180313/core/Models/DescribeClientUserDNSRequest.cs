@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SAG app instance is deployed.</para>
+        /// <para>The region ID of the Smart Access Gateway app instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SAG app instance.</para>
+        /// <para>The instance ID of the Smart Access Gateway app.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

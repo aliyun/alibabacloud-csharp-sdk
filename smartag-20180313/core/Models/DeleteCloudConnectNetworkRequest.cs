@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DeleteCloudConnectNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CCN instance.</para>
+        /// <para>The ID of the Cloud Connect Network (CCN).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the CCN instance is deployed.</para>
+        /// <para>The ID of the region to which the Cloud Connect Network (CCN) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

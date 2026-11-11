@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         /// <summary>
         /// <para>The authentication type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NONE</b>: authentication is disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>WPA-PSK</b>: WPA-PSK authentication is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>WPA2-PSK</b>: WPA2-PSK authentication is enabled.</para>
-        /// </description></item>
+        /// <item><description><b>NONE</b>: Authentication is disabled.</description></item>
+        /// <item><description><b>WPA-PSK</b>: WPA-PSK authentication is enabled.</description></item>
+        /// <item><description><b>WPA2-PSK</b>: WPA2-PSK authentication is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,14 +25,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AuthenticationType { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth of the Wi-Fi channel. Valid values:</para>
+        /// <para>The spectrum bandwidth. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Automatic</b></para>
-        /// </description></item>
-        /// <item><description><para><b>20 HMz</b></para>
-        /// </description></item>
-        /// <item><description><para><b>40 MHz</b></para>
-        /// </description></item>
+        /// <item><description><b>Auto</b>.</description></item>
+        /// <item><description><b>20MHz</b>.</description></item>
+        /// <item><description><b>40MHz</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +40,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The Wi-Fi channel.</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -56,14 +50,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The encryption algorithm.</para>
+        /// <para>The encryption algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>AUTO</b>: automatically selects the encryption algorithm.</para>
-        /// </description></item>
-        /// <item><description><para><b>TKIP</b>: uses the Temporal Key Integrity Protocol (TKIP).</para>
-        /// </description></item>
-        /// <item><description><para><b>AES</b>: uses the Advanced Encryption Standard authorized by Wi-Fi®.</para>
-        /// </description></item>
+        /// <item><description><b>AUTO</b>: Automatic encryption.</description></item>
+        /// <item><description><b>TKIP</b>: Temporal Key Integrity Protocol.</description></item>
+        /// <item><description><b>AES</b>: Advanced Encryption Standard.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,12 +65,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string EncryptAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether wireless security is enabled.</para>
+        /// <para>Indicates whether the wireless security feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>True</b>: wireless security is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>False</b>: wireless security is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>True</b>: The wireless security feature is enabled.</description></item>
+        /// <item><description><b>False</b>: The wireless security feature is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,12 +79,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IsAuth { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether broadcast over Wi-Fi is enabled. Valid values:</para>
+        /// <para>Indicates whether the Wi-Fi broadcast feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>True</b>: broadcast is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>False</b>: broadcast is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>True</b>: The Wi-Fi broadcast feature is enabled.</description></item>
+        /// <item><description><b>False</b>: The Wi-Fi broadcast feature is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,12 +93,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IsBroadcast { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether wireless connections are enabled. Valid values:</para>
+        /// <para>Indicates whether the wireless feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>True</b>: wireless connections are enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>False</b>: wireless connections are disabled.</para>
-        /// </description></item>
+        /// <item><description><b>True</b>: Enabled.</description></item>
+        /// <item><description><b>False</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,7 +107,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IsEnable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E93884AC-6C21-4FEA-8E3A-7377D33B194F</para>
@@ -132,7 +117,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service set identifier (SSID) of the Wi-Fi network.</para>
+        /// <para>The Wi-Fi name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun_sag_123456***</para>
@@ -142,7 +127,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Ssid { get; set; }
 
         /// <summary>
-        /// <para>The information about the query task.</para>
+        /// <para>The status of the query task.</para>
         /// </summary>
         [NameInMap("TaskStates")]
         [Validation(Required=false)]
@@ -159,7 +144,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error code returned for a query task. The 200 error code indicates that the query task is successful.</para>
+            /// <para>The error code. A value of 200 indicates that the query task is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -169,7 +154,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned for a query task. The Successful error message indicates that the query task is successful.</para>
+            /// <para>The error message. A value of Successful indicates that the query task is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Successful</para>
@@ -179,26 +164,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The status of the query task. Valid values:</para>
+            /// <para>The status of the asynchronous task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Initialized</b>: The query task has been initialized.</para>
-            /// </description></item>
-            /// <item><description><para><b>Offline</b>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will be dispatched after the SAG device is connected to Alibaba Cloud.</para>
-            /// </description></item>
-            /// <item><description><para><b>Succeed</b>: The query task has been dispatched.</para>
-            /// </description></item>
-            /// <item><description><para><b>Processing</b>: The query task is being dispatched.</para>
-            /// </description></item>
-            /// <item><description><para><b>VersionNotSupport</b>: The current version of the SAG device does not support query tasks.</para>
-            /// </description></item>
-            /// <item><description><para><b>BuildRequestError</b>: The SAG control system does not support query tasks.</para>
-            /// </description></item>
-            /// <item><description><para><b>HardwareError</b>: The query task failed to be dispatched due to device errors.</para>
-            /// </description></item>
-            /// <item><description><para><b>TaskNotExist</b>: The query task does not exist.</para>
-            /// </description></item>
-            /// <item><description><para><b>OfflineNotConfiged</b>: The query task is not dispatched because the SAG device is disconnected from Alibaba Cloud. The task will not be dispatched after the device is connected to Alibaba Cloud.</para>
-            /// </description></item>
+            /// <item><description><b>Initialized</b>: The query task is initialized.</description></item>
+            /// <item><description><b>Offline</b>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device goes online.</description></item>
+            /// <item><description><b>Succeed</b>: The query task is delivered.</description></item>
+            /// <item><description><b>Processing</b>: The query task is being delivered.</description></item>
+            /// <item><description><b>VersionNotSupport</b>: The current version of the Smart Access Gateway device does not support this feature.</description></item>
+            /// <item><description><b>BuildRequestError</b>: The management system does not support the operation.</description></item>
+            /// <item><description><b>HardwareError</b>: The query task fails to be delivered due to device errors.</description></item>
+            /// <item><description><b>TaskNotExist</b>: The query task does not exist.</description></item>
+            /// <item><description><b>OfflineNotConfiged</b>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered even after the device goes online.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagWan4GResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IP address of the 4G SIM card.</para>
+        /// <para>The IP address of the 4G NIC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.XX.XX.1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The MAC address of the 4G SIM card.</para>
+        /// <para>The MAC address of the 4G NIC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c4:00:ad:a2:f5:****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Mac { get; set; }
 
         /// <summary>
-        /// <para>The priority of the 4G SIM card. The default value is <b>99</b>, which indicates the lowest priority and cannot be modified.</para>
+        /// <para>The priority of the 4G NIC. The default value is <b>99</b>, which indicates the lowest priority. The priority cannot be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99</para>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the 4G SIM card. Valid value:</para>
+        /// <para>The status of the 4G NIC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: The 4G SIM card is available.</description></item>
-        /// <item><description><b>Abnormal</b>: The 4G SIM card encountered an error.</description></item>
-        /// <item><description><b>Unavailable</b>: No 4G SIM card is inserted.</description></item>
+        /// <item><description><b>Normal</b>: The status is normal.</description></item>
+        /// <item><description><b>Abnormal</b>: The status is abnormal.</description></item>
+        /// <item><description><b>Unavailable</b>: No 4G NIC is available.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,12 +65,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The signal strength of the 4G network. Valid values:</para>
+        /// <para>The 4G signal strength. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>High</b>: strong signals.</description></item>
-        /// <item><description><b>Middle</b>: medium-strength signals.</description></item>
-        /// <item><description><b>Low</b>: weak signals.</description></item>
-        /// <item><description><b>Unavailable</b>: no signal.</description></item>
+        /// <item><description><b>High</b>: Strong.</description></item>
+        /// <item><description><b>Middle</b>: Medium.</description></item>
+        /// <item><description><b>Low</b>: Weak.</description></item>
+        /// <item><description><b>Unavailable</b>: No signal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Strength { get; set; }
 
         /// <summary>
-        /// <para>The network status of the 4G SIM card. Valid values:</para>
+        /// <para>The traffic status of the 4G NIC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>active</b>: The 4G SIM card is used to establish the active connection. Network traffic is transmitted over the 4G SIM card first.</description></item>
-        /// <item><description><b>standby</b>: The 4G SIM card is used to establish a standby connection. Network traffic is not transmitted over the 4G SIM card unless the active connection fails.</description></item>
+        /// <item><description><b>active</b>: The 4G NIC acts as the active link, and current traffic is transmitted through this 4G NIC.</description></item>
+        /// <item><description><b>standby</b>: The 4G NIC acts as the standby link and does not forward traffic. If the active link fails, traffic is transmitted through this 4G NIC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

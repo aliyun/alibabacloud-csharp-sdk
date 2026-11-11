@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class UpdateSmartAccessGatewayAdminPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to query only the SAG instances that belong to another Alibaba Cloud account. Valid values:</para>
+        /// <para>Specifies whether to query only Smart Access Gateway instances that belong to other Alibaba Cloud accounts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b> (default): no.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: yes.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public bool? CrossAccount { get; set; }
 
         /// <summary>
-        /// <para>The new password used to log on to the SAG device.</para>
-        /// <para>The password must be 8 to 30 characters in length and can contain letters, digits, and underscores (_).</para>
+        /// <para>The new logon password for the Smart Access Gateway device.</para>
+        /// <para>Password format requirements: The password must be 8 to 30 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (_).</para>
         /// <remarks>
-        /// <para>In the example, asterisks (\<em>) are used to conceal the real password. This does not mean that the password supports asterisks (\</em>). The actual format requirement prevails.</para>
+        /// <para>Asterisks (*) are used in the sample value to mask the actual password. This does not mean that asterisks are supported in passwords. Specify the password based on the format requirements.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,8 +41,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SAG instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the Smart Access Gateway instance resides.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/69813.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the SAG instance belongs.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the Smart Access Gateway instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>147304382796****</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string ResourceUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Smart Access Gateway (SAG) instance.</para>
+        /// <para>The Smart Access Gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SagInsId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the SAG device.</para>
+        /// <para>The serial number of the Smart Access Gateway device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

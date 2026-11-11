@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class AddACLRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACL.</para>
+        /// <para>The instance ID of the access control instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl-xhwhyuo43l0*******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ACL rule.</para>
+        /// <para>The ID of the access control rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acr-c1hkd054qywi******</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string AcrId { get; set; }
 
         /// <summary>
-        /// <para>The description of the ACL rule.</para>
+        /// <para>The description of the access control rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The destination CIDR block.</para>
-        /// <para>For example: 192.168.10.0/24.</para>
+        /// <para>The destination CIDR block must be in CIDR format. Example: 192.168.10.0/24.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.10.0/24</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string DestPortRange { get; set; }
 
         /// <summary>
-        /// <para>The direction of traffic to which the ACL rule applies. Valid values:</para>
+        /// <para>The direction in which the access control rule is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound. Traffic from an external network to the local branch where the SAG instance is deployed.</description></item>
-        /// <item><description><b>out</b>: outbound. Traffic from the local branch where the SAG instance is deployed to an external network.</description></item>
+        /// <item><description><b>in</b>: inbound. Traffic from external networks to the local branch where the Smart Access Gateway instance is deployed.</description></item>
+        /// <item><description><b>out</b>: outbound. Traffic from the local branch where the Smart Access Gateway instance is deployed to external networks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,8 +95,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The UNIX timestamp when the ACL rule was created.</para>
-        /// <para>This value is a long integer. If rules have the same priority, the one with the earlier timestamp takes precedence.</para>
+        /// <para>The timestamp when the access control rule was created.</para>
+        /// <para>The timestamp is of the Long type. If multiple rules have the same priority, the rule with the smaller timestamp takes effect first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1553766882689</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The protocol to which the ACL rule applies.</para>
+        /// <para>The protocol to which the access control rule is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The name of the ACL rule.</para>
+        /// <para>The name of the access control rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>doctest</para>
@@ -126,10 +126,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The authorization policy of the ACL rule.</para>
+        /// <para>The authorization policy of the access control rule.</para>
         /// <list type="bullet">
-        /// <item><description><b>accept</b>: allows access.</description></item>
-        /// <item><description><b>drop</b>: denies access.</description></item>
+        /// <item><description><para><b>accept</b>: Allows the traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>drop</b>: Denies the traffic.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,8 +142,8 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The priority of the ACL rule.</para>
-        /// <para>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes precedence.</para>
+        /// <para>The priority of the access control rule.</para>
+        /// <para>A smaller value indicates a higher priority. If multiple rules have the same priority, the rule that is first delivered to the Smart Access Gateway device takes effect first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -162,7 +164,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 
         /// <summary>
         /// <para>The source CIDR block.</para>
-        /// <para>The source CIDR block is in the CIDR format. For example: 192.168.1.0/24.</para>
+        /// <para>The source CIDR block must be in CIDR format. Example: 192.168.1.0/24.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.20.0/24</para>
@@ -182,10 +184,12 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string SourcePortRange { get; set; }
 
         /// <summary>
-        /// <para>The type of the ACL rule.</para>
+        /// <para>The type of the access control rule.</para>
         /// <list type="bullet">
-        /// <item><description><b>LAN</b>: private network. The ACL rule controls traffic on private networks.</description></item>
-        /// <item><description><b>WAN</b>: public network. The ACL rule controls traffic on public networks.</description></item>
+        /// <item><description><para><b>LAN</b>: private network, indicating the Settings of access control rules for traffic with a private endpoint.</para>
+        /// </description></item>
+        /// <item><description><para><b>WAN</b>: public network, indicating the Settings of access control rules for traffic with public IP addresses.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

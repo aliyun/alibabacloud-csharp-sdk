@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagPortListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the port information.</para>
+        /// <para>The list of port information.</para>
         /// </summary>
         [NameInMap("Ports")]
         [Validation(Required=false)]
         public List<DescribeSagPortListResponseBodyPorts> Ports { get; set; }
         public class DescribeSagPortListResponseBodyPorts : TeaModel {
             /// <summary>
-            /// <para>The Mac address of the port.</para>
+            /// <para>The MAC address of the port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c4:00:ad:a2:f5:****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string Mac { get; set; }
 
             /// <summary>
-            /// <para>The name of the port.</para>
+            /// <para>The port name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -37,18 +37,14 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string PortName { get; set; }
 
             /// <summary>
-            /// <para>Port role:</para>
+            /// <para>The port role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>NONE</b>: No role is assigned to the port.</para>
-            /// </description></item>
-            /// <item><description><para><b>WAN</b>: The port is used as a WAN port. The WAN port supports a Dynamic Host Configuration Protocol (DHCP) client, PPPoE, or a static IP address to access the Internet.</para>
-            /// </description></item>
-            /// <item><description><para><b>LAN</b>: The port is used as a LAN port. The LAN port supports a DHCP server or a static IP address to connect to a local terminal or switch.</para>
-            /// </description></item>
-            /// <item><description><para><b>ECC</b>: The port is used as a leased line port to connect to a leased line.</para>
-            /// </description></item>
-            /// <item><description><para><b>MGT</b>: The port is used as the management port.</para>
-            /// </description></item>
+            /// <item><description><b>NONE</b>: The port role is unassigned.</description></item>
+            /// <item><description><b>WAN</b>: The port is a WAN port. A WAN port is used to connect to the Internet and supports DHCP client, PPPoE, and static IP access methods.</description></item>
+            /// <item><description><b>LAN</b>: The port is a LAN port. A LAN port is used to connect to local clients or switches and supports DHCP server and static IP access methods.</description></item>
+            /// <item><description><b>ECC</b>: The port is a dedicated connection port used to connect to a dedicated connection.</description></item>
+            /// <item><description><b>MGT</b>: The port is a management port.</description></item>
+            /// <item><description><b>CELLULAR</b>: The port is a 4G port.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,14 +55,11 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>Port states:</para>
+            /// <para>The port status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Up</b>: The port is enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>Down</b>: The port is disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>Unavailable</b>: The SAG device is disconnected from Alibaba Cloud.</para>
-            /// </description></item>
+            /// <item><description><b>Up</b>: The port is enabled.</description></item>
+            /// <item><description><b>Down</b>: The port is disabled.</description></item>
+            /// <item><description><b>Unavailable</b>: The device is offline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +72,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE6642D4-21EB-4168-9BF9-F217953F9892</para>
@@ -89,7 +82,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the query task.</para>
+        /// <para>The status of the query task.</para>
         /// </summary>
         [NameInMap("TaskStates")]
         [Validation(Required=false)]
@@ -106,7 +99,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error code. 200 indicates that the query task is successful.</para>
+            /// <para>The error code. A value of 200 indicates that the query task is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -116,7 +109,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message. Successful indicates that the query task is successful.</para>
+            /// <para>The error message. A value of Successful indicates that the query task is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Successful</para>
@@ -126,26 +119,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>Asynchronous task states:</para>
+            /// <para>The status of the asynchronous task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Initialized</b>: The query task is initialized.</para>
-            /// </description></item>
-            /// <item><description><para><b>Offline</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud continues to assign the query task to the SAG device.</para>
-            /// </description></item>
-            /// <item><description><para><b>Succeed</b>: Alibaba Cloud has assigned the query task to the SAG device.</para>
-            /// </description></item>
-            /// <item><description><para><b>Processing</b>: Alibaba Cloud is assigning the query task to the SAG device.</para>
-            /// </description></item>
-            /// <item><description><para><b>VersionNotSupport</b>: not supported by the current version of the SAG device.</para>
-            /// </description></item>
-            /// <item><description><para><b>BuildRequestError</b>: not supported by the control and management center in the cloud.</para>
-            /// </description></item>
-            /// <item><description><para><b>HardwareError</b>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</para>
-            /// </description></item>
-            /// <item><description><para><b>TaskNotExist</b>: The query task does not exist.</para>
-            /// </description></item>
-            /// <item><description><para><b>OfflineNotConfiged</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. When the SAG device is connected to Alibaba Cloud, Alibaba Cloud does not assign the query task to the SAG device.</para>
-            /// </description></item>
+            /// <item><description><b>Initialized</b>: The query task is initialized.</description></item>
+            /// <item><description><b>Offline</b>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device goes online.</description></item>
+            /// <item><description><b>Succeed</b>: The query task is delivered.</description></item>
+            /// <item><description><b>Processing</b>: The query task is being delivered.</description></item>
+            /// <item><description><b>VersionNotSupport</b>: The current version of the Smart Access Gateway device does not support this feature.</description></item>
+            /// <item><description><b>BuildRequestError</b>: The management and control system does not support this operation.</description></item>
+            /// <item><description><b>HardwareError</b>: The query task failed to be delivered due to a device error.</description></item>
+            /// <item><description><b>TaskNotExist</b>: The query task does not exist.</description></item>
+            /// <item><description><b>OfflineNotConfiged</b>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered after the device goes online.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

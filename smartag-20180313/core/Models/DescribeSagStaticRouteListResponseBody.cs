@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagStaticRouteListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE6642D4-21EB-4168-9BF9-F217953F9892</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the static route.</para>
+        /// <para>The list of static routes.</para>
         /// </summary>
         [NameInMap("StaticRoutes")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string NextHop { get; set; }
 
             /// <summary>
-            /// <para>The name of the port.</para>
+            /// <para>The port name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The state of the query task.</para>
+        /// <para>The status of the query tasks.</para>
         /// </summary>
         [NameInMap("TaskStates")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error code returned. A value of 200 indicates that the query task is successful.</para>
+            /// <para>The error code. A value of 200 indicates that the query task is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -106,17 +106,17 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The state of the query task. Valid values:</para>
+            /// <para>The status of the asynchronous task. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Initialized</b>: The query task is initialized.</description></item>
-            /// <item><description><b>Offline</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. After the SAG device is connected to Alibaba Cloud, Alibaba Cloud assigns the query task to the SAG device.</description></item>
-            /// <item><description><b>Succeed</b>: Alibaba Cloud has assigned the query task to the SAG device.</description></item>
-            /// <item><description><b>Processing</b>: Alibaba Cloud is assigning the query task to the SAG device.</description></item>
-            /// <item><description><b>VersionNotSupport</b>: The query task is not supported by the current version of the SAG device.</description></item>
-            /// <item><description><b>BuildRequestError</b>: The query task is not supported by the controller of the SAG device.</description></item>
-            /// <item><description><b>HardwareError</b>: Alibaba Cloud failed to assign the query task to the SAG device because the SAG device is faulty.</description></item>
+            /// <item><description><b>Offline</b>: The Smart Access Gateway device is offline and the query task is not delivered. The task will be delivered after the device goes online.</description></item>
+            /// <item><description><b>Succeed</b>: The query task is delivered successfully.</description></item>
+            /// <item><description><b>Processing</b>: The query task is being delivered.</description></item>
+            /// <item><description><b>VersionNotSupport</b>: The current version of the Smart Access Gateway device does not support this feature.</description></item>
+            /// <item><description><b>BuildRequestError</b>: The management and control system does not support the request.</description></item>
+            /// <item><description><b>HardwareError</b>: The query task failed to be delivered due to a device error.</description></item>
             /// <item><description><b>TaskNotExist</b>: The query task does not exist.</description></item>
-            /// <item><description><b>OfflineNotConfiged</b>: The SAG device is disconnected from Alibaba Cloud and Alibaba Cloud has not assigned the query task to the SAG device. Alibaba Cloud does not assign the query task to the SAG device even after the SAG device is connected to Alibaba Cloud.</description></item>
+            /// <item><description><b>OfflineNotConfiged</b>: The Smart Access Gateway device is offline and the query task is not delivered. The task will not be delivered even after the device goes online.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

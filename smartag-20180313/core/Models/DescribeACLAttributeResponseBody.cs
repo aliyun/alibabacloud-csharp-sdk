@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         }
 
         /// <summary>
-        /// <para>The page number in a paginated query.</para>
+        /// <para>The page number for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of access control rule entries displayed per page in a paginated query.</para>
+        /// <para>The number of access control rule entries returned on each page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of access control rule entries in the current ACL instance.</para>
+        /// <para>The total number of access control rule entries in the access control instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

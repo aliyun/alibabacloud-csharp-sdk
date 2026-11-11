@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
 {
     public class DescribeSagDropTopNResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of packet loss information about Smart Access Gateway instances.</para>
+        /// <para>The list of packet loss information for the Smart Access Gateway instances.</para>
         /// </summary>
         [NameInMap("DropTopN")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Smartag20180313.Models
             public string DropRate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Smart Access Gateway instance.</para>
+            /// <para>The instance ID of the Smart Access Gateway instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sag-whfn****</para>
