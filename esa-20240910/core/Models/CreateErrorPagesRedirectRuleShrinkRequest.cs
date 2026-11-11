@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateErrorPagesRedirectRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The error code redirection.</para>
+        /// <para>The error code redirect configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ErrorPagesRedirect")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ErrorPagesRedirectShrink { get; set; }
 
         /// <summary>
-        /// <para>The rule content, which uses conditional expressions to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</para>
+        /// <para>The rule content, which uses conditional expressions to match user requests. You do not need to specify this parameter when adding a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
         /// <item><description>Match all incoming requests: Set the value to true.</description></item>
         /// <item><description>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</description></item>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</para>
+        /// <para>Specifies whether to enable the rule. You do not need to specify this parameter when adding a global configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enabled.</description></item>
         /// <item><description>off: Disabled.</description></item>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule. You do not need to set this parameter when adding a global configuration.</para>
+        /// <para>The name of the rule. You do not need to specify this parameter when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</para>
+        /// <para>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</para>
+        /// <para>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: queries global configurations.</description></item>
-        /// <item><description>rule: queries rule configurations.</description></item>
+        /// <item><description>global: Global configurations.</description></item>
+        /// <item><description>rule: Rule configurations.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

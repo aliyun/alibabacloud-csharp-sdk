@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class FieldContentValue : TeaModel {
         /// <summary>
-        /// <para>The sequence number of the fields.</para>
+        /// <para>The sort order of the fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The fields.</para>
+        /// <para>The list of fields.</para>
         /// </summary>
         [NameInMap("FieldList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The description of the field in English.</para>
+            /// <para>The English description of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IP address of the client.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The description of the field in Chinese.</para>
+            /// <para>The Chinese description of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IP</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DescriptionCn { get; set; }
 
             /// <summary>
-            /// <para>The category of the field.</para>
+            /// <para>The category to which the field belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Client</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the field.</para>
+            /// <para>The sort order of the field in the response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SortOrder { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the field is available by default.</para>
+            /// <para>Specifies whether the field is provided by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -95,6 +95,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("IsDefault")]
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether the user plan supports the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("IsSupported")]
+            [Validation(Required=false)]
+            public bool? IsSupported { get; set; }
 
         }
 

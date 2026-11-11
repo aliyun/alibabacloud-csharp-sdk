@@ -5989,7 +5989,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an error code redirection rule.</para>
+        /// <para>Creates an error code redirect rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6061,7 +6061,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an error code redirection rule.</para>
+        /// <para>Creates an error code redirect rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6133,7 +6133,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an error code redirection rule.</para>
+        /// <para>Creates an error code redirect rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6151,7 +6151,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an error code redirection rule.</para>
+        /// <para>Creates an error code redirect rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16141,7 +16141,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the error code redirection configuration.</para>
+        /// <para>Deletes the error code redirect configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16187,7 +16187,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the error code redirection configuration.</para>
+        /// <para>Deletes the error code redirect configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16233,7 +16233,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the error code redirection configuration.</para>
+        /// <para>Deletes the error code redirect configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16251,7 +16251,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the error code redirection configuration.</para>
+        /// <para>Deletes the error code redirect configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35381,7 +35381,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fields in real-time logs based on the log category.</para>
+        /// <para>Retrieves the list of fields for real-time logs based on the log business type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35419,7 +35419,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fields in real-time logs based on the log category.</para>
+        /// <para>Retrieves the list of fields for real-time logs based on the log business type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35457,7 +35457,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fields in real-time logs based on the log category.</para>
+        /// <para>Retrieves the list of fields for real-time logs based on the log business type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35475,7 +35475,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fields in real-time logs based on the log category.</para>
+        /// <para>Retrieves the list of fields for real-time logs based on the log business type.</para>
         /// </summary>
         /// 
         /// <param name="request">

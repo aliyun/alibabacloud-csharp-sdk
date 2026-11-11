@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRealtimeDeliveryFieldResponseBody : TeaModel {
         /// <summary>
-        /// <para>The fields returned.</para>
+        /// <para>The list of response fields.</para>
         /// </summary>
         [NameInMap("FieldContent")]
         [Validation(Required=false)]
