@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class ListRemindersResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public int? ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Detailed description of the error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>参数不合法。</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
+        /// <summary>
+        /// <para>Reminder information.</para>
+        /// </summary>
         [NameInMap("Model")]
         [Validation(Required=false)]
         public ListRemindersResponseBodyModel Model { get; set; }
         public class ListRemindersResponseBodyModel : TeaModel {
+            /// <summary>
+            /// <para>The list of reminder information returned by invoking this API.</para>
+            /// </summary>
             [NameInMap("RemindResponses")]
             [Validation(Required=false)]
             public List<ListRemindersResponseBodyModelRemindResponses> RemindResponses { get; set; }
             public class ListRemindersResponseBodyModelRemindResponses : TeaModel {
                 /// <summary>
+                /// <para>The topic of the action executed by the reminder.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>宝宝快去刷牙</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                 public string ActionTopic { get; set; }
 
                 /// <summary>
+                /// <para>Description of the trigger condition for the reminder.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>每天</para>
                 /// </summary>
@@ -49,11 +63,16 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                 [Validation(Required=false)]
                 public string DayDesc { get; set; }
 
+                /// <summary>
+                /// <para>The schedule information list, which contains detailed timing information for the reminder.</para>
+                /// </summary>
                 [NameInMap("RecurrenceRule")]
                 [Validation(Required=false)]
                 public ListRemindersResponseBodyModelRemindResponsesRecurrenceRule RecurrenceRule { get; set; }
                 public class ListRemindersResponseBodyModelRemindResponsesRecurrenceRule : TeaModel {
                     /// <summary>
+                    /// <para>The date on which the reminder is triggered.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>27</para>
                     /// </summary>
@@ -61,15 +80,23 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                     [Validation(Required=false)]
                     public int? Day { get; set; }
 
+                    /// <summary>
+                    /// <para>Information for monthly reminders.</para>
+                    /// </summary>
                     [NameInMap("DaysOfMonth")]
                     [Validation(Required=false)]
                     public List<int?> DaysOfMonth { get; set; }
 
+                    /// <summary>
+                    /// <para>Information for weekly reminders.</para>
+                    /// </summary>
                     [NameInMap("DaysOfWeek")]
                     [Validation(Required=false)]
                     public List<int?> DaysOfWeek { get; set; }
 
                     /// <summary>
+                    /// <para>The end time when the reminder becomes inactive.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1661598000000</para>
                     /// </summary>
@@ -78,6 +105,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                     public string EndDateTime { get; set; }
 
                     /// <summary>
+                    /// <para>The recurrence epoch of the reminder.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>WEEKLY</para>
                     /// </summary>
@@ -86,6 +115,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                     public string Freq { get; set; }
 
                     /// <summary>
+                    /// <para>The hour of the time when the reminder is triggered.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>18</para>
                     /// </summary>
@@ -94,6 +125,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                     public int? Hour { get; set; }
 
                     /// <summary>
+                    /// <para>The minute of the hour when the reminder is triggered.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -102,6 +135,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                     public int? Minute { get; set; }
 
                     /// <summary>
+                    /// <para>The month when the reminder is triggered.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
                     /// </summary>
@@ -110,6 +145,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                     public int? Month { get; set; }
 
                     /// <summary>
+                    /// <para>The second of the time when the reminder is triggered.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -118,6 +155,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                     public int? Second { get; set; }
 
                     /// <summary>
+                    /// <para>The start time when the reminder becomes effective.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1630054800000</para>
                     /// </summary>
@@ -126,6 +165,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                     public string StartDateTime { get; set; }
 
                     /// <summary>
+                    /// <para>The year when the reminder is triggered.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2021</para>
                     /// </summary>
@@ -136,6 +177,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                 }
 
                 /// <summary>
+                /// <para>The ID of the reminder message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20****1</para>
                 /// </summary>
@@ -144,6 +187,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                 public long? RemindId { get; set; }
 
                 /// <summary>
+                /// <para>The next reminder time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1629850800000</para>
                 /// </summary>
@@ -152,6 +197,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                 public string RemindTime { get; set; }
 
                 /// <summary>
+                /// <para>The number of times the reminder repeats.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -160,6 +207,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
                 public int? RepeatCount { get; set; }
 
                 /// <summary>
+                /// <para>The day of the week on which the reminder is triggered weekly.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>周三</para>
                 /// </summary>
@@ -172,6 +221,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         }
 
         /// <summary>
+        /// <para>Indicates the result of the API call. true indicates success, and false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class PullCashierResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned error code. <c>0</c> indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         [Validation(Required=false)]
         public int? RetCode { get; set; }
 
+        /// <summary>
+        /// <para>The returned error message. No message is returned upon success.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>请求成功</para>
+        /// </summary>
         [NameInMap("RetMsg")]
         [Validation(Required=false)]
         public string RetMsg { get; set; }
 
         /// <summary>
+        /// <para>The result of pulling up the checkout page. true indicates success, and false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

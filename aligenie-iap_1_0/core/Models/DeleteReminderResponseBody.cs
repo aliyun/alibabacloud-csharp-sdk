@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class DeleteReminderResponseBody : TeaModel {
         /// <summary>
+        /// <para>error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public int? ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>参数错误。</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>service success indicator</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

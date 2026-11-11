@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class CallBackThirdRightSendPlanRequest : TeaModel {
         /// <summary>
+        /// <para>device group</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string BizGroup { get; set; }
 
         /// <summary>
+        /// <para>device Type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ailabs</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>1001 daily card, 1002 monthly card, 1003 quarterly card, 1004 annual card</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1001</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public int? CardType { get; set; }
 
         /// <summary>
+        /// <para>error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>领取异常</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>Extension fields</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public Dictionary<string, object> ExtendInfo { get; set; }
 
         /// <summary>
+        /// <para>Genie ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1dsds2FzCXFGVA1ADS</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string GenieOpenId { get; set; }
 
         /// <summary>
+        /// <para>redemption status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public int? ReceiveStatus { get; set; }
 
         /// <summary>
+        /// <para>SN of the device</para>
+        /// 
         /// <b>Example:</b>
         /// <para>01000019100307010000600</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string Sn { get; set; }
 
         /// <summary>
+        /// <para>Supplier ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

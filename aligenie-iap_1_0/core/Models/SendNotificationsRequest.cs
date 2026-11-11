@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class SendNotificationsRequest : TeaModel {
         /// <summary>
+        /// <para>Device identity information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public SendNotificationsRequestDeviceInfo DeviceInfo { get; set; }
         public class SendNotificationsRequestDeviceInfo : TeaModel {
             /// <summary>
+            /// <para>Value corresponding to the encoding type. If the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID. If the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,11 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. There are multiple ways to obtain the device ID for Maojing, and each method corresponds to a different encoding type:  </para>
+            /// <list type="bullet">
+            /// <item><description>PACKAGE_NAME: APK package name, used for the Android application customer link  </description></item>
+            /// <item><description>SKILL_ID: Skill ID, used for the cloud link</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +44,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>Device ID (deviceOpenId or deviceUnionId)</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +55,11 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Type of device ID:  </para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: Default device ID  </description></item>
+            /// <item><description>UNION_ID: Organization-dimension device ID, available only after an organization has been requested on the Maojing Skill Application Open Platform</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +70,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required if IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>
@@ -67,6 +82,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         }
 
         /// <summary>
+        /// <para>Input parameter object for message push.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NotificationUnicastRequest")]
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public SendNotificationsRequestNotificationUnicastRequest NotificationUnicastRequest { get; set; }
         public class SendNotificationsRequestNotificationUnicastRequest : TeaModel {
             /// <summary>
+            /// <para>Debug flag. When the skill application is in the debugging phase, setting this flag determines whether the retrieved skill application information is from the editing state or the online state.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -82,6 +100,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public bool? IsDebug { get; set; }
 
             /// <summary>
+            /// <para>Message template ID obtained when requesting a message template in the Tmall Genie Application Platform.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -92,6 +111,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string MessageTemplateId { get; set; }
 
             /// <summary>
+            /// <para>Placeholder information. For example, for the template [&quot;Hello, {nick}!&quot;], this can be: {&quot;nick&quot;:&quot;Xiao Tian Tian&quot;}. Additionally, within the placeholder parameters, you can append parameters to the application launch link to support hyperlinking to a specific address, such as: <c>{&quot;nick&quot;:&quot;Xiao Tian Tian&quot;,&quot;_URL_SUFFIX_&quot;:&quot;xxx&quot;}</c>. The hyperlink address in the message pop-up will then be: application launch link + <c>${_URL_SUFFIX_}</c>. This feature is only effective for applications that have configured a launch link.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;nick&quot;:&quot;张三&quot;}</para>
             /// </summary>
@@ -100,6 +121,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public Dictionary<string, string> PlaceHolder { get; set; }
 
             /// <summary>
+            /// <para>Target information for message push.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SendTarget")]
@@ -110,6 +132,9 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 
         }
 
+        /// <summary>
+        /// <para>Identity information.</para>
+        /// </summary>
         [NameInMap("TenantInfo")]
         [Validation(Required=false)]
         public SendNotificationsRequestTenantInfo TenantInfo { get; set; }
@@ -117,6 +142,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         }
 
         /// <summary>
+        /// <para>User Identifier information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
@@ -124,6 +150,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public SendNotificationsRequestUserInfo UserInfo { get; set; }
         public class SendNotificationsRequestUserInfo : TeaModel {
             /// <summary>
+            /// <para>Value corresponding to the encoding type. If the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID. If the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -134,6 +161,11 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. There are multiple ways to obtain the Maojing User Identifier, and each method corresponds to a different encoding type:  </para>
+            /// <list type="bullet">
+            /// <item><description>PACKAGE_NAME: APK package name, used for the Android application customer link  </description></item>
+            /// <item><description>SKILL_ID: Skill ID, used for the cloud-based link</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -144,6 +176,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>User Identifier (userOpenId or userUnionId)</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -154,6 +187,11 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Type of the User ID:  </para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: Default User ID identifier  </description></item>
+            /// <item><description>UNION_ID: Organization-dimension User ID identifier, available only after an organization has been requested on the Maojing Skill Application Open Platform</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -164,6 +202,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required if IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>

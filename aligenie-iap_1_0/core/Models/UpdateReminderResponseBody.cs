@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class UpdateReminderResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public int? ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>不能设置过去的时间。</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>ID of the updated reminder</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20****1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public long? Model { get; set; }
 
         /// <summary>
+        /// <para>Service success indicator</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class CheckThirdRightSendPlanResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public int? RetCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         [Validation(Required=false)]
         public string RetMsg { get; set; }
 
+        /// <summary>
+        /// <para>Result of invoking the API</para>
+        /// </summary>
         [NameInMap("RetValue")]
         [Validation(Required=false)]
         public CheckThirdRightSendPlanResponseBodyRetValue RetValue { get; set; }
         public class CheckThirdRightSendPlanResponseBodyRetValue : TeaModel {
             /// <summary>
+            /// <para>Activation time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;1713262192005&quot;</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string ActivateDate { get; set; }
 
             /// <summary>
+            /// <para>Card type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1001 日卡 1002 月卡 1003 季卡 1004 年卡</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public int? CardType { get; set; }
 
             /// <summary>
+            /// <para>Channel code</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TB</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string ChannelCode { get; set; }
 
             /// <summary>
+            /// <para>Channel Name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>淘宝</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string ChannelName { get; set; }
 
             /// <summary>
+            /// <para>Extension field</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public Dictionary<string, object> ExtendInfo { get; set; }
 
             /// <summary>
+            /// <para>Request ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>908FA068-529C-0C20-8DB5-63B0EF7CFF1F</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string RequestId { get; set; }
 
             /// <summary>
+            /// <para>Rights expiration time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;1713262192005&quot;</para>
             /// </summary>

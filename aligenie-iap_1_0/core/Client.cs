@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._productId = "AliGenie";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("aligenie", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用使用时长上报</para>
+        /// <para>Used to report application usage duration on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -120,7 +123,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用使用时长上报</para>
+        /// <para>Used to report application usage duration on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -201,7 +204,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用使用时长上报</para>
+        /// <para>Used to report application usage duration on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -220,7 +223,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用使用时长上报</para>
+        /// <para>Used to report application usage duration on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -239,7 +242,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>三方领取回调接口</para>
+        /// <para>Third-party membership redemption callback API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -336,7 +339,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>三方领取回调接口</para>
+        /// <para>Third-party membership redemption callback API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -433,7 +436,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>三方领取回调接口</para>
+        /// <para>Third-party membership redemption callback API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -452,7 +455,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>三方领取回调接口</para>
+        /// <para>Third-party membership redemption callback API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -471,7 +474,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商业化移动屏三方app领卡校验</para>
+        /// <para>Commercial mobile screen third-party app card issuance validation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -552,7 +555,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商业化移动屏三方app领卡校验</para>
+        /// <para>Commercial mobile screen third-party app card issuance validation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -633,7 +636,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商业化移动屏三方app领卡校验</para>
+        /// <para>Commercial mobile screen third-party app card issuance validation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -652,7 +655,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商业化移动屏三方app领卡校验</para>
+        /// <para>Commercial mobile screen third-party app card issuance validation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -671,7 +674,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建提醒</para>
+        /// <para>Used to create a reminder on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -752,7 +755,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建提醒</para>
+        /// <para>Used to create a reminder on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -833,7 +836,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建提醒</para>
+        /// <para>Used to create a reminder on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -852,7 +855,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建提醒</para>
+        /// <para>Used to create a reminder on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -871,7 +874,179 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除提醒</para>
+        /// <para>携程订单状态变更推送</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CtripOrderPushRequest
+        /// </param>
+        /// <param name="headers">
+        /// CtripOrderPushHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CtripOrderPushResponse
+        /// </returns>
+        public CtripOrderPushResponse CtripOrderPushWithOptions(CtripOrderPushRequest request, CtripOrderPushHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JourneyId))
+            {
+                query["JourneyId"] = request.JourneyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleItem))
+            {
+                query["ScheduleItem"] = request.ScheduleItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
+            {
+                query["Uid"] = request.Uid;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CtripOrderPush",
+                Version = "iap_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/iap/ctripOrderPush",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CtripOrderPushResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>携程订单状态变更推送</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CtripOrderPushRequest
+        /// </param>
+        /// <param name="headers">
+        /// CtripOrderPushHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CtripOrderPushResponse
+        /// </returns>
+        public async Task<CtripOrderPushResponse> CtripOrderPushWithOptionsAsync(CtripOrderPushRequest request, CtripOrderPushHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JourneyId))
+            {
+                query["JourneyId"] = request.JourneyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleItem))
+            {
+                query["ScheduleItem"] = request.ScheduleItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
+            {
+                query["Uid"] = request.Uid;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAligenieAccessToken))
+            {
+                realHeaders["x-acs-aligenie-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAligenieAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CtripOrderPush",
+                Version = "iap_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/iap/ctripOrderPush",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CtripOrderPushResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>携程订单状态变更推送</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CtripOrderPushRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CtripOrderPushResponse
+        /// </returns>
+        public CtripOrderPushResponse CtripOrderPush(CtripOrderPushRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CtripOrderPushHeaders headers = new CtripOrderPushHeaders();
+            return CtripOrderPushWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>携程订单状态变更推送</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CtripOrderPushRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CtripOrderPushResponse
+        /// </returns>
+        public async Task<CtripOrderPushResponse> CtripOrderPushAsync(CtripOrderPushRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CtripOrderPushHeaders headers = new CtripOrderPushHeaders();
+            return await CtripOrderPushWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>User deletes a reminder created on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -952,7 +1127,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除提醒</para>
+        /// <para>User deletes a reminder created on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1033,7 +1208,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除提醒</para>
+        /// <para>User deletes a reminder created on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1052,7 +1227,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除提醒</para>
+        /// <para>User deletes a reminder created on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1071,7 +1246,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会员信息</para>
+        /// <para>Used by developers to obtain membership information in business scenarios that depend on CatGenie Membership.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1152,7 +1327,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会员信息</para>
+        /// <para>Used by developers to obtain membership information in business scenarios that depend on CatGenie Membership.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1233,7 +1408,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会员信息</para>
+        /// <para>Used by developers to obtain membership information in business scenarios that depend on CatGenie Membership.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1252,7 +1427,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会员信息</para>
+        /// <para>Used by developers to obtain membership information in business scenarios that depend on CatGenie Membership.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1271,7 +1446,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用配置</para>
+        /// <para>Obtain application configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1352,7 +1527,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用配置</para>
+        /// <para>Obtain application configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1433,7 +1608,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用配置</para>
+        /// <para>Obtain application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1452,7 +1627,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用配置</para>
+        /// <para>Obtain application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1471,7 +1646,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户手机号获取</para>
+        /// <para>Obtain the phone number bound to the user\&quot;s Maojing device. You must first request this capability on the Maojing Skill Application Platform and obtain user authorization on the device side.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1544,7 +1719,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户手机号获取</para>
+        /// <para>Obtain the phone number bound to the user\&quot;s Maojing device. You must first request this capability on the Maojing Skill Application Platform and obtain user authorization on the device side.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1617,7 +1792,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户手机号获取</para>
+        /// <para>Obtain the phone number bound to the user\&quot;s Maojing device. You must first request this capability on the Maojing Skill Application Platform and obtain user authorization on the device side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1636,7 +1811,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户手机号获取</para>
+        /// <para>Obtain the phone number bound to the user\&quot;s Maojing device. You must first request this capability on the Maojing Skill Application Platform and obtain user authorization on the device side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1655,7 +1830,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询提醒</para>
+        /// <para>User retrieves reminders created on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1736,7 +1911,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询提醒</para>
+        /// <para>User retrieves reminders created on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1817,7 +1992,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询提醒</para>
+        /// <para>User retrieves reminders created on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1836,7 +2011,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询提醒</para>
+        /// <para>User retrieves reminders created on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1855,7 +2030,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询提醒列表</para>
+        /// <para>The User batch retrieves reminders created on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1936,7 +2111,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询提醒列表</para>
+        /// <para>The User batch retrieves reminders created on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2017,7 +2192,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询提醒列表</para>
+        /// <para>The User batch retrieves reminders created on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2036,7 +2211,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询提醒列表</para>
+        /// <para>The User batch retrieves reminders created on Tmall Genie devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2055,7 +2230,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拉取收银台</para>
+        /// <para>The user launches the checkout page on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2136,7 +2311,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拉取收银台</para>
+        /// <para>The user launches the checkout page on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2217,7 +2392,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拉取收银台</para>
+        /// <para>The user launches the checkout page on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2236,7 +2411,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拉取收银台</para>
+        /// <para>The user launches the checkout page on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2255,7 +2430,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>猫精系统消息推送</para>
+        /// <para>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template on the Tmall Genie Skill Application Platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2328,7 +2503,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>猫精系统消息推送</para>
+        /// <para>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template on the Tmall Genie Skill Application Platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2401,7 +2576,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>猫精系统消息推送</para>
+        /// <para>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template on the Tmall Genie Skill Application Platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2420,7 +2595,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>猫精系统消息推送</para>
+        /// <para>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template on the Tmall Genie Skill Application Platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2439,7 +2614,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息推送服务（普通版）</para>
+        /// <para>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template in the Tmall Genie Skill Application Platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2528,7 +2703,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息推送服务（普通版）</para>
+        /// <para>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template in the Tmall Genie Skill Application Platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2617,7 +2792,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息推送服务（普通版）</para>
+        /// <para>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template in the Tmall Genie Skill Application Platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2636,7 +2811,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息推送服务（普通版）</para>
+        /// <para>Execute the message push feature of Tmall Genie. You must first request the capability and configure the message template in the Tmall Genie Skill Application Platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2875,7 +3050,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新提醒</para>
+        /// <para>The user updates a reminder created on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2956,7 +3131,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新提醒</para>
+        /// <para>The user updates a reminder created on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3037,7 +3212,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新提醒</para>
+        /// <para>The user updates a reminder created on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3056,7 +3231,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新提醒</para>
+        /// <para>The user updates a reminder created on a Tmall Genie device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3075,7 +3250,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频类应用会员信息上报</para>
+        /// <para>Used by developers to report membership information in scenarios involving membership collaboration with CatGenie.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3156,7 +3331,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频类应用会员信息上报</para>
+        /// <para>Used by developers to report membership information in scenarios involving membership collaboration with CatGenie.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3237,7 +3412,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频类应用会员信息上报</para>
+        /// <para>Used by developers to report membership information in scenarios involving membership collaboration with CatGenie.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3256,7 +3431,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>视频类应用会员信息上报</para>
+        /// <para>Used by developers to report membership information in scenarios involving membership collaboration with CatGenie.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3275,7 +3450,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>猫精应用唤起</para>
+        /// <para>On a smart speaker with a screen, proactively launch the MeowGenie screen-display application. You must first request this capability on the MeowGenie skill application platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3342,7 +3517,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>猫精应用唤起</para>
+        /// <para>On a smart speaker with a screen, proactively launch the MeowGenie screen-display application. You must first request this capability on the MeowGenie skill application platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3409,7 +3584,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>猫精应用唤起</para>
+        /// <para>On a smart speaker with a screen, proactively launch the MeowGenie screen-display application. You must first request this capability on the MeowGenie skill application platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3428,7 +3603,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>猫精应用唤起</para>
+        /// <para>On a smart speaker with a screen, proactively launch the MeowGenie screen-display application. You must first request this capability on the MeowGenie skill application platform.</para>
         /// </summary>
         /// 
         /// <param name="request">

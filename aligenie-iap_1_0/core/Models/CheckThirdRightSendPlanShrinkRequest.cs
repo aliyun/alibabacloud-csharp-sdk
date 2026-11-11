@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class CheckThirdRightSendPlanShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Device group</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string BizGroup { get; set; }
 
         /// <summary>
+        /// <para>Device type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ailabs</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>Extension field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string ExtendInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Device SN</para>
+        /// 
         /// <b>Example:</b>
         /// <para>01000019100307010000600</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string Sn { get; set; }
 
         /// <summary>
+        /// <para>Supplier ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

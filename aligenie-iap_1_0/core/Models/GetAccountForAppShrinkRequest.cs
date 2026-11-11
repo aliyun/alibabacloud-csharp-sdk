@@ -9,15 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class GetAccountForAppShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Device ID information</para>
+        /// </summary>
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public string DeviceInfoShrink { get; set; }
 
+        /// <summary>
+        /// <para>Business parameters</para>
+        /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public string PayloadShrink { get; set; }
 
         /// <summary>
+        /// <para>User identifier information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

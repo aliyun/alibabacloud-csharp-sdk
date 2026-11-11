@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class CallBackThirdRightSendPlanResponseBody : TeaModel {
         /// <summary>
+        /// <para>fault status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public string RetCode { get; set; }
 
         /// <summary>
+        /// <para>error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         [Validation(Required=false)]
         public string RetMsg { get; set; }
 
+        /// <summary>
+        /// <para>Return Result true/false</para>
+        /// </summary>
         [NameInMap("RetValue")]
         [Validation(Required=false)]
         public bool? RetValue { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>908FA068-529C-0C20-8DB5-63B0EF7CFF1F</para>
         /// </summary>

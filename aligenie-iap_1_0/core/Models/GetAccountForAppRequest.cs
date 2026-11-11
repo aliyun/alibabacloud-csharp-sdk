@@ -9,11 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 {
     public class GetAccountForAppRequest : TeaModel {
+        /// <summary>
+        /// <para>Device ID information</para>
+        /// </summary>
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public GetAccountForAppRequestDeviceInfo DeviceInfo { get; set; }
         public class GetAccountForAppRequestDeviceInfo : TeaModel {
             /// <summary>
+            /// <para>Value corresponding to the encoding type:  </para>
+            /// <list type="bullet">
+            /// <item><description>When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID.  </description></item>
+            /// <item><description>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>12**45</para>
             /// </summary>
@@ -22,6 +31,12 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.</para>
+            /// <list type="bullet">
+            /// <item><description>PACKAGE_NAME: APK package name, used in the Android application customer flow.</description></item>
+            /// <item><description>SKILL_ID: Skill ID, used in the cloud-based flow.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>PACKAGE_NAME</para>
             /// </summary>
@@ -30,6 +45,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>Device ID, set to deviceOpenId or deviceUnionId.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DAFE****ce3ej=</para>
             /// </summary>
@@ -38,6 +55,12 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Type of the device ID:  </para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: Default device ID identifier  </description></item>
+            /// <item><description>UNION_ID: Device ID identifier at the organization dimension. This value is available only after an organization has been requested on the Tmall Genie Skill Application Open Platform.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>OPEN_ID</para>
             /// </summary>
@@ -46,6 +69,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required if IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>
@@ -55,11 +80,16 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
 
         }
 
+        /// <summary>
+        /// <para>Business parameters</para>
+        /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public GetAccountForAppRequestPayload Payload { get; set; }
         public class GetAccountForAppRequestPayload : TeaModel {
             /// <summary>
+            /// <para>Phone number of the authorized membership user.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>188*777</para>
             /// </summary>
@@ -68,6 +98,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string Phone { get; set; }
 
             /// <summary>
+            /// <para>Plaintext UUID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>731D5F********DC3B</para>
             /// </summary>
@@ -78,6 +110,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         }
 
         /// <summary>
+        /// <para>User identifier information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
@@ -85,6 +118,11 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
         public GetAccountForAppRequestUserInfo UserInfo { get; set; }
         public class GetAccountForAppRequestUserInfo : TeaModel {
             /// <summary>
+            /// <para>Value corresponding to the encoding type:  </para>
+            /// <list type="bullet">
+            /// <item><description>When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID.  </description></item>
+            /// <item><description>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -95,6 +133,11 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. There are multiple ways to obtain the user identifier for Tmall Genie, and each way corresponds to a different encoding type:  </para>
+            /// <list type="bullet">
+            /// <item><description>PACKAGE_NAME: APK package name, used for the Android application customer link.  </description></item>
+            /// <item><description>SKILL_ID: Skill ID, used for the cloud-based link.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -105,6 +148,7 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>User identifier, which can be set to userOpenId or userUnionId.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,6 +159,11 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Type of User ID:  </para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: The default user ID identity.  </description></item>
+            /// <item><description>UNION_ID: Organization-dimension user ID identity. This value is available only after an organization has been requested on the Tmall Genie Skill Application Platform.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -125,6 +174,8 @@ namespace AlibabaCloud.SDK.AliGenieiap_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. This field is required if IdType is set to UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>
