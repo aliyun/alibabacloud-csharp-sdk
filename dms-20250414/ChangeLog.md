@@ -1,3 +1,10 @@
+2026-11-11 Version: 4.7.0
+- Support API BatchCreateDataLakePartitions.
+- Support API GetMyAgenticNotificationChannelAuthorizeUrl.
+- Support API ListMyAgenticNotificationChannelConfigs.
+- Support API UpdateMyAgenticNotificationChannelConfig.
+
+
 2026-11-10 Version: 4.6.1
 - Update API SendChatMessage: add request parameters SessionConfig.WorkMode.
 

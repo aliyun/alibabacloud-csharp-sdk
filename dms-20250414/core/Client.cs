@@ -670,6 +670,198 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates multiple partitions for a data lakehouse table.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCreateDataLakePartitionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateDataLakePartitionsResponse
+        /// </returns>
+        public BatchCreateDataLakePartitionsResponse BatchCreateDataLakePartitionsWithOptions(BatchCreateDataLakePartitionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCreateDataLakePartitionsShrinkRequest request = new BatchCreateDataLakePartitionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PartitionInputs))
+            {
+                request.PartitionInputsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PartitionInputs, "PartitionInputs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                query["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IfNotExists))
+            {
+                query["IfNotExists"] = request.IfNotExists;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedResult))
+            {
+                query["NeedResult"] = request.NeedResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionInputsShrink))
+            {
+                body["PartitionInputs"] = request.PartitionInputsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateDataLakePartitions",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateDataLakePartitionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates multiple partitions for a data lakehouse table.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCreateDataLakePartitionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateDataLakePartitionsResponse
+        /// </returns>
+        public async Task<BatchCreateDataLakePartitionsResponse> BatchCreateDataLakePartitionsWithOptionsAsync(BatchCreateDataLakePartitionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCreateDataLakePartitionsShrinkRequest request = new BatchCreateDataLakePartitionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PartitionInputs))
+            {
+                request.PartitionInputsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PartitionInputs, "PartitionInputs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                query["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IfNotExists))
+            {
+                query["IfNotExists"] = request.IfNotExists;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedResult))
+            {
+                query["NeedResult"] = request.NeedResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
+            {
+                query["Tid"] = request.Tid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionInputsShrink))
+            {
+                body["PartitionInputs"] = request.PartitionInputsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateDataLakePartitions",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateDataLakePartitionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates multiple partitions for a data lakehouse table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateDataLakePartitionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateDataLakePartitionsResponse
+        /// </returns>
+        public BatchCreateDataLakePartitionsResponse BatchCreateDataLakePartitions(BatchCreateDataLakePartitionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchCreateDataLakePartitionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates multiple partitions for a data lakehouse table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateDataLakePartitionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateDataLakePartitionsResponse
+        /// </returns>
+        public async Task<BatchCreateDataLakePartitionsResponse> BatchCreateDataLakePartitionsAsync(BatchCreateDataLakePartitionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchCreateDataLakePartitionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>CheckDataAgentMemoryConfig - Queries the memory generation and usage configuration of a DataAgent.</para>
         /// </summary>
         /// 
@@ -9566,6 +9758,126 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the OAuth authorization URL required for the current user to bind a Lark account. After the user completes the authorization, the system automatically binds their Lark account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMyAgenticNotificationChannelAuthorizeUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMyAgenticNotificationChannelAuthorizeUrlResponse
+        /// </returns>
+        public GetMyAgenticNotificationChannelAuthorizeUrlResponse GetMyAgenticNotificationChannelAuthorizeUrlWithOptions(GetMyAgenticNotificationChannelAuthorizeUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMyAgenticNotificationChannelAuthorizeUrl",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMyAgenticNotificationChannelAuthorizeUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OAuth authorization URL required for the current user to bind a Lark account. After the user completes the authorization, the system automatically binds their Lark account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMyAgenticNotificationChannelAuthorizeUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMyAgenticNotificationChannelAuthorizeUrlResponse
+        /// </returns>
+        public async Task<GetMyAgenticNotificationChannelAuthorizeUrlResponse> GetMyAgenticNotificationChannelAuthorizeUrlWithOptionsAsync(GetMyAgenticNotificationChannelAuthorizeUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMyAgenticNotificationChannelAuthorizeUrl",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMyAgenticNotificationChannelAuthorizeUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OAuth authorization URL required for the current user to bind a Lark account. After the user completes the authorization, the system automatically binds their Lark account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMyAgenticNotificationChannelAuthorizeUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMyAgenticNotificationChannelAuthorizeUrlResponse
+        /// </returns>
+        public GetMyAgenticNotificationChannelAuthorizeUrlResponse GetMyAgenticNotificationChannelAuthorizeUrl(GetMyAgenticNotificationChannelAuthorizeUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMyAgenticNotificationChannelAuthorizeUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OAuth authorization URL required for the current user to bind a Lark account. After the user completes the authorization, the system automatically binds their Lark account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMyAgenticNotificationChannelAuthorizeUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMyAgenticNotificationChannelAuthorizeUrlResponse
+        /// </returns>
+        public async Task<GetMyAgenticNotificationChannelAuthorizeUrlResponse> GetMyAgenticNotificationChannelAuthorizeUrlAsync(GetMyAgenticNotificationChannelAuthorizeUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMyAgenticNotificationChannelAuthorizeUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Submits a task to schedule and run a Notebook file.</para>
         /// </summary>
         /// 
@@ -15950,6 +16262,142 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the personal notification channel configurations of the current user in the current tenant, including channel status and bound identity information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMyAgenticNotificationChannelConfigsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMyAgenticNotificationChannelConfigsResponse
+        /// </returns>
+        public ListMyAgenticNotificationChannelConfigsResponse ListMyAgenticNotificationChannelConfigsWithOptions(ListMyAgenticNotificationChannelConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMyAgenticNotificationChannelConfigs",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMyAgenticNotificationChannelConfigsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the personal notification channel configurations of the current user in the current tenant, including channel status and bound identity information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMyAgenticNotificationChannelConfigsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMyAgenticNotificationChannelConfigsResponse
+        /// </returns>
+        public async Task<ListMyAgenticNotificationChannelConfigsResponse> ListMyAgenticNotificationChannelConfigsWithOptionsAsync(ListMyAgenticNotificationChannelConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMyAgenticNotificationChannelConfigs",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMyAgenticNotificationChannelConfigsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the personal notification channel configurations of the current user in the current tenant, including channel status and bound identity information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMyAgenticNotificationChannelConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMyAgenticNotificationChannelConfigsResponse
+        /// </returns>
+        public ListMyAgenticNotificationChannelConfigsResponse ListMyAgenticNotificationChannelConfigs(ListMyAgenticNotificationChannelConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMyAgenticNotificationChannelConfigsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the personal notification channel configurations of the current user in the current tenant, including channel status and bound identity information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMyAgenticNotificationChannelConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMyAgenticNotificationChannelConfigsResponse
+        /// </returns>
+        public async Task<ListMyAgenticNotificationChannelConfigsResponse> ListMyAgenticNotificationChannelConfigsAsync(ListMyAgenticNotificationChannelConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMyAgenticNotificationChannelConfigsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves a list of OSSIE models.</para>
         /// </summary>
         /// 
@@ -18389,10 +18837,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The default value of <c>message_type</c> is <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel the session.</description></item>
-        /// <item><description>The <c>reply_to</c> field specifies the agent message to which this message responds. The default value is <c>0</c>.</description></item>
-        /// <item><description>The <c>question</c> field is required when <c>message_type</c> is set to <c>additional</c>.</description></item>
-        /// <item><description>You can use <c>quoted_message</c> to quote previous user messages.</description></item>
+        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
+        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
+        /// <item><description>The question field is required when message_type is set to additional.</description></item>
+        /// <item><description>You can use quoted_message to quote previous messages from the user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18516,10 +18964,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The default value of <c>message_type</c> is <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel the session.</description></item>
-        /// <item><description>The <c>reply_to</c> field specifies the agent message to which this message responds. The default value is <c>0</c>.</description></item>
-        /// <item><description>The <c>question</c> field is required when <c>message_type</c> is set to <c>additional</c>.</description></item>
-        /// <item><description>You can use <c>quoted_message</c> to quote previous user messages.</description></item>
+        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
+        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
+        /// <item><description>The question field is required when message_type is set to additional.</description></item>
+        /// <item><description>You can use quoted_message to quote previous messages from the user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18643,10 +19091,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The default value of <c>message_type</c> is <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel the session.</description></item>
-        /// <item><description>The <c>reply_to</c> field specifies the agent message to which this message responds. The default value is <c>0</c>.</description></item>
-        /// <item><description>The <c>question</c> field is required when <c>message_type</c> is set to <c>additional</c>.</description></item>
-        /// <item><description>You can use <c>quoted_message</c> to quote previous user messages.</description></item>
+        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
+        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
+        /// <item><description>The question field is required when message_type is set to additional.</description></item>
+        /// <item><description>You can use quoted_message to quote previous messages from the user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18672,10 +19120,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The default value of <c>message_type</c> is <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel the session.</description></item>
-        /// <item><description>The <c>reply_to</c> field specifies the agent message to which this message responds. The default value is <c>0</c>.</description></item>
-        /// <item><description>The <c>question</c> field is required when <c>message_type</c> is set to <c>additional</c>.</description></item>
-        /// <item><description>You can use <c>quoted_message</c> to quote previous user messages.</description></item>
+        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
+        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
+        /// <item><description>The question field is required when message_type is set to additional.</description></item>
+        /// <item><description>You can use quoted_message to quote previous messages from the user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21346,6 +21794,142 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the notification channel switch or Lark account binding information for the current user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMyAgenticNotificationChannelConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMyAgenticNotificationChannelConfigResponse
+        /// </returns>
+        public UpdateMyAgenticNotificationChannelConfigResponse UpdateMyAgenticNotificationChannelConfigWithOptions(UpdateMyAgenticNotificationChannelConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                body["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMyAgenticNotificationChannelConfig",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMyAgenticNotificationChannelConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the notification channel switch or Lark account binding information for the current user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMyAgenticNotificationChannelConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMyAgenticNotificationChannelConfigResponse
+        /// </returns>
+        public async Task<UpdateMyAgenticNotificationChannelConfigResponse> UpdateMyAgenticNotificationChannelConfigWithOptionsAsync(UpdateMyAgenticNotificationChannelConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                body["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMyAgenticNotificationChannelConfig",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMyAgenticNotificationChannelConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the notification channel switch or Lark account binding information for the current user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMyAgenticNotificationChannelConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMyAgenticNotificationChannelConfigResponse
+        /// </returns>
+        public UpdateMyAgenticNotificationChannelConfigResponse UpdateMyAgenticNotificationChannelConfig(UpdateMyAgenticNotificationChannelConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMyAgenticNotificationChannelConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the notification channel switch or Lark account binding information for the current user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMyAgenticNotificationChannelConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMyAgenticNotificationChannelConfigResponse
+        /// </returns>
+        public async Task<UpdateMyAgenticNotificationChannelConfigResponse> UpdateMyAgenticNotificationChannelConfigAsync(UpdateMyAgenticNotificationChannelConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMyAgenticNotificationChannelConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
