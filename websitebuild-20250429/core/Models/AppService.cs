@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The creation time in ISO 8601 format, in the UTC time zone (Z).</para>
+        /// <para>The creation time in ISO 8601 format in the UTC time zone (Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-30T02:08:40Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Deleted { get; set; }
 
         /// <summary>
-        /// <para>The end time in ISO 8601 format, in the UTC time zone (Z).</para>
+        /// <para>The end time in ISO 8601 format in the UTC time zone (Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-18T02:23:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EspBizId { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tue Sep 09 10:27:49 CST 2025</para>
@@ -115,6 +115,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The service type description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Website design service</para>
         /// </summary>
         [NameInMap("ServiceTypeText")]
         [Validation(Required=false)]
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Slug { get; set; }
 
         /// <summary>
-        /// <para>The start time, specified as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1754447102000</para>

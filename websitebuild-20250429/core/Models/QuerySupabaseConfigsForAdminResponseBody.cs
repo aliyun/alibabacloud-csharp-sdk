@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public class QuerySupabaseConfigsForAdminResponseBodyModule : TeaModel {
             /// <summary>
             /// <para>The scope. Valid values: subUser and owner.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;SMS_ALIYUN_SIGN_NAME&quot;:&quot;示例签名&quot;}</para>
             /// </summary>
             [NameInMap("Configs")]
             [Validation(Required=false)]

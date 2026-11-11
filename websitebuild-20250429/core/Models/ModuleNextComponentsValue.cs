@@ -109,6 +109,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>Component instance property configuration</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;中国香港&quot;}]}}</para>
         /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>Module property status</para>
         /// 
         /// <b>Example:</b>
-        /// <para>placeholder</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ModuleAttrStatus")]
         [Validation(Required=false)]

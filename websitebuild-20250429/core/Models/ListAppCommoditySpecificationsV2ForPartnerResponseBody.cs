@@ -116,6 +116,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The default values.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;ModuleAttrStatus&quot;:1,&quot;Properties&quot;:{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;中国香港&quot;}]}}}}</para>
                 /// </summary>
                 [NameInMap("Components")]
                 [Validation(Required=false)]
@@ -133,6 +136,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The duration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;version&quot;:{&quot;Code&quot;:&quot;version&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;V2.0&quot;}]}}</para>
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
@@ -159,6 +165,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The default values.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;ModuleAttrStatus&quot;:1,&quot;Properties&quot;:{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;中国香港&quot;}]}}}}</para>
                 /// </summary>
                 [NameInMap("Components")]
                 [Validation(Required=false)]
@@ -176,6 +185,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The frame rate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;version&quot;:{&quot;Code&quot;:&quot;version&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;V2.0&quot;}]}}</para>
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]

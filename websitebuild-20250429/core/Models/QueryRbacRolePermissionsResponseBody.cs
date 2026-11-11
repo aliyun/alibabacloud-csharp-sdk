@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryRbacRolePermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The application with this name is queried.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not used. Ignore it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para>Indicates whether the move is successful.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public List<QueryRbacRolePermissionsResponseBodyModuleData> Data { get; set; }
             public class QueryRbacRolePermissionsResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>The operation that you want to perform. Set the value to <b>DeleteIntegration</b>.</para>
+                /// <para>The system-defined parameter. Set the value to <b>DeleteIntegration</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>js</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The alert rule name.</para>
+                /// <para>The name of the alert rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>lb-uf6wxzsjwavr2kyq92slf-80-clb4</para>
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>The next feature ID.</para>
+            /// <para>The ID of the next feature.</para>
             /// </summary>
             [NameInMap("Next")]
             [Validation(Required=false)]
             public QueryRbacRolePermissionsResponseBodyModuleNext Next { get; set; }
             public class QueryRbacRolePermissionsResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>The operation that you want to perform. Set the value to <b>GetCreateCustomerInfomation</b>.</para>
+                /// <para>The system-defined parameter. Set the value to <b>GetCreateCustomerInfomation</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>accept</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The statistical method for the Warn level.</para>
-                /// <para>The value of <c>Statistics</c> varies by cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring items</a>.</para>
+                /// <para>The value of <c>Statistics</c> varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mwaf-apisec0629.wafqax.top-waf</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>The server processes up to 1,000 recent records beyond the pagination limit for the current query. If the results exceed 1,000 records, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -265,17 +265,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Specifies whether synchronous processing is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

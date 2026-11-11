@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AppInstanceAggregate : TeaModel {
         /// <summary>
-        /// <para>The list of AI agents associated with the application.</para>
+        /// <para>The list of AI staff associated with the application.</para>
         /// </summary>
         [NameInMap("AiStaffList")]
         [Validation(Required=false)]
         public List<AppAiStaff> AiStaffList { get; set; }
 
         /// <summary>
-        /// <para>The operation address of the application.</para>
+        /// <para>The application operation address.</para>
         /// </summary>
         [NameInMap("AppOperationAddress")]
         [Validation(Required=false)]
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BuildType { get; set; }
 
         /// <summary>
-        /// <para>没有关联会话时为 null。</para>
+        /// <para>The associated conversation information. This field is null if no associated conversation exists.</para>
         /// </summary>
         [NameInMap("ConversationInfo")]
         [Validation(Required=false)]
         public AppInstanceAggregateConversationInfo ConversationInfo { get; set; }
         public class AppInstanceAggregateConversationInfo : TeaModel {
             /// <summary>
-            /// <para>0 表示存在空会话。</para>
+            /// <para>The number of user conversation turns. A value of 0 indicates an empty conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DesignSpecBizId { get; set; }
 
         /// <summary>
-        /// <para>The design specification ID.</para>
+        /// <para>The ID of the design configuration sheet.</para>
         /// </summary>
         [NameInMap("DesignSpecId")]
         [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string GmtDelete { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-28T02:25:41Z</para>
@@ -217,7 +217,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The partner details.</para>
+        /// <para>The current offline status. A value of true explicitly indicates that the website is currently offline. A value of false indicates that the website is not offline, and historical offline reasons do not determine the current status. If the current status cannot be determined or the legacy response does not contain this field, the caller must not default the unknown status to online.</para>
+        /// </summary>
+        [NameInMap("Offline")]
+        [Validation(Required=false)]
+        public bool? Offline { get; set; }
+
+        /// <summary>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("PartnerDetail")]
         [Validation(Required=false)]
@@ -251,7 +258,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Wed Nov 26 10:15:28 CST 2025</para>
@@ -320,7 +327,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PartnerId { get; set; }
 
             /// <summary>
-            /// <para>The partner binding status. Valid values: BOUND (bound) and UNBOUND (unbound).</para>
+            /// <para>The partner binding status. Valid values: BOUND (bound) and UNBOUND (to be bound).</para>
             /// 
             /// <b>Example:</b>
             /// <para>BOUND</para>

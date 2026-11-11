@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListRbacRolesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,15 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The error parameters returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -95,14 +94,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The query results.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListRbacRolesResponseBodyModuleData> Data { get; set; }
             public class ListRbacRolesResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>The creation date. The value is in ISO 8601 format with the time zone set to UTC (Z).</para>
+                /// <para>The creation date in ISO 8601 format in the UTC time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-28T17:59:55Z</para>
@@ -122,10 +121,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether this is the default report. Valid values:</para>
+                /// <para>Specifies whether the report is the default report. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>0</b>: Not the default report.</description></item>
-                /// <item><description><b>1</b>: The default report.</description></item>
+                /// <item><description><b>1</b>: Default report.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -136,7 +135,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the approval template is system-defined. Valid values:</para>
+                /// <para>Specifies whether the approval template is system-defined. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>1: Yes.</description></item>
                 /// <item><description>0: No.</description></item>
@@ -160,7 +159,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>FileName</para>
+                /// <para>File name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -176,7 +175,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public ListRbacRolesResponseBodyModuleNext Next { get; set; }
             public class ListRbacRolesResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>The time when the task was created. The value is in the YYYY-MM-DD HH:mm:ss format.</para>
+                /// <para>The task creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-27 16:02:28</para>
@@ -196,7 +195,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether this is the default dedicated gateway.</para>
+                /// <para>Specifies whether the private gateway is the default one.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -206,7 +205,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the approval template is system-defined. Valid values:</para>
+                /// <para>Specifies whether the approval template is system-defined. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>1: Yes.</description></item>
                 /// <item><description>0: No.</description></item>
@@ -239,7 +238,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether a next page exists.</para>
+            /// <para>Specifies whether a next page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -259,7 +258,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a previous page exists.</para>
+            /// <para>Specifies whether a previous page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -269,7 +268,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the server-side result limit is reached. The server processes up to 1,000 recent records beyond pagination limits. If the results exceed 1,000, <b>ResultLimit</b> is <b>true</b> and you must narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -301,7 +300,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token used to start the next query. If there is no next query, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -331,7 +330,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System exception</para>

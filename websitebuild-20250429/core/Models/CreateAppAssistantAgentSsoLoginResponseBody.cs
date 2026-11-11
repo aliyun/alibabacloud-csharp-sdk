@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>The platform-specific extension fields.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]

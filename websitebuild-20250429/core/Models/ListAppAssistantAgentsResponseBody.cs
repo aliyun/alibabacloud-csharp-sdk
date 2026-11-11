@@ -135,6 +135,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The extension field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("Extra")]
                 [Validation(Required=false)]
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The password.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>Demo****2026</para>
                 /// </summary>
                 [NameInMap("Password")]
                 [Validation(Required=false)]
@@ -171,6 +174,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public class ListAppAssistantAgentsResponseBodyModuleEmbedConfig : TeaModel {
                 /// <summary>
                 /// <para>The extension field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("Extra")]
                 [Validation(Required=false)]
@@ -187,6 +193,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>The extension parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("ExtraParams")]
             [Validation(Required=false)]

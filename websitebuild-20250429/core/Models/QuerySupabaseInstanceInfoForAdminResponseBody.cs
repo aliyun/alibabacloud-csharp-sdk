@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QuerySupabaseInstanceInfoForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <summary>
         /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the specified <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the database instance.</para>
+            /// <para>The time when the database instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbPublicUrl { get; set; }
 
             /// <summary>
-            /// <para>The database type. Valid values: rds, polardb.</para>
+            /// <para>The database type. Valid values: rds and polardb.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ORACLE</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The additional information.</para>
+            /// <para>The extra information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Extra { get; set; }
 
             /// <summary>
-            /// <para>The completion time of the instance creation.</para>
+            /// <para>The time when the instance creation was completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateFinishedTime { get; set; }
 
             /// <summary>
-            /// <para>The creation status of the instance.</para>
+            /// <para>The instance creation status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -187,6 +187,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RdsDatabasePassword { get; set; }
 
             /// <summary>
+            /// <para>The read-only business schema name parsed by the Builder trusted binding. This name cannot be used as input for tenant switching.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tenant_00000000-0000-4000-8000-000000000001_schema</para>
+            /// </summary>
+            [NameInMap("SchemaName")]
+            [Validation(Required=false)]
+            public string SchemaName { get; set; }
+
+            /// <summary>
             /// <para>The service key.</para>
             /// 
             /// <b>Example:</b>
@@ -197,7 +207,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ServiceKey { get; set; }
 
             /// <summary>
-            /// <para>The status. Valid values: 0: Paused. 1: Running.</para>
+            /// <para>The status. Valid values: 0 (Paused) and 1 (Running).</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -207,7 +217,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The password for the Supabase Dashboard.</para>
+            /// <para>The Supabase Dashboard password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -217,7 +227,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseDashboardPassword { get; set; }
 
             /// <summary>
-            /// <para>The username for the Supabase Dashboard.</para>
+            /// <para>The Supabase Dashboard username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -227,7 +237,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseDashboardUserName { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the Supabase instance.</para>
+            /// <para>The time when the Supabase instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -257,7 +267,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseKongUrl { get; set; }
 
             /// <summary>
-            /// <para>The private endpoint of the Supabase instance.</para>
+            /// <para>The private network endpoint of the Supabase instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -297,6 +307,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TenantId { get; set; }
 
             /// <summary>
+            /// <para>The read-only tenant mode. A value of schema indicates the legacy Builder pool, and a value of db or agenticdb indicates the new platform. The history record can be empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>schema</para>
+            /// </summary>
+            [NameInMap("TenantMode")]
+            [Validation(Required=false)]
+            public string TenantMode { get; set; }
+
+            /// <summary>
             /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
@@ -329,7 +349,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The exception message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System exception</para>

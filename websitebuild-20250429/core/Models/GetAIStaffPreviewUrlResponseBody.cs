@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>DtsJobId</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -78,6 +78,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public class GetAIStaffPreviewUrlResponseBodyModule : TeaModel {
             /// <summary>
             /// <para>The preview URL information, including fields such as previewUrl and sessionId.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("UrlMap")]
             [Validation(Required=false)]

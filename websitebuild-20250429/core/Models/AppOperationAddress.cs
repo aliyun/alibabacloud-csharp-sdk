@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The customer service design URL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://example.com/customer-service/config">https://example.com/customer-service/config</a></para>
         /// </summary>
         [NameInMap("AiCustomerConfigUrl")]
         [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The AI design URL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://example.com/ai-design">https://example.com/ai-design</a></para>
         /// </summary>
         [NameInMap("AiDesignUrl")]
         [Validation(Required=false)]

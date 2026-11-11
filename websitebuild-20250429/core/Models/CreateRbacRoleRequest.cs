@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateRbacRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID of the customer.</para>
+        /// <para>The customer business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250731233102000001</para>

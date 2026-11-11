@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The organization role ID, including predefined roles and custom roles:</para>
+        /// <para>The organization role ID, including preset roles and custom roles:</para>
         /// <list type="bullet">
-        /// <item><description>Organization administrator (predefined role): 111111111</description></item>
-        /// <item><description>Permission management administrator (predefined role): 111111112</description></item>
-        /// <item><description>Regular user (predefined role): 111111113</description></item>
+        /// <item><description>Organization administrator (preset role): 111111111</description></item>
+        /// <item><description>Permission management administrator (preset role): 111111112</description></item>
+        /// <item><description>Regular user (preset role): 111111113</description></item>
         /// <item><description>Custom role: the role ID of the custom role</description></item>
         /// </list>
         /// 

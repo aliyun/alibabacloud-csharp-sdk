@@ -115,6 +115,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public class CreateAppAssistantAgentResponseBodyModuleCredential : TeaModel {
                 /// <summary>
                 /// <para>The extended field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("Extra")]
                 [Validation(Required=false)]
@@ -141,6 +144,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public class CreateAppAssistantAgentResponseBodyModuleEmbedConfig : TeaModel {
                 /// <summary>
                 /// <para>The extended field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("Extra")]
                 [Validation(Required=false)]
@@ -157,6 +163,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>The extended parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("ExtraParams")]
             [Validation(Required=false)]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures request idempotence. You can generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210713a117660695309606626a</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The action.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OPEN_SUBSCRIPTION</para>
         /// </summary>
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeployArea { get; set; }
 
         /// <summary>
+        /// <para>The description of the website.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>go-to-the-docks-for-french-fries</para>
         /// </summary>
@@ -86,6 +90,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Extend { get; set; }
 
         /// <summary>
+        /// <para>The name of the website.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>docs</para>
         /// </summary>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The payment type.</para>
+        /// <para>The payment method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AUTO_PAY</para>
@@ -104,13 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>Required. The unit of the subscription period. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Year: year</description></item>
-        /// <item><description>Month: month</description></item>
-        /// <item><description>Day: day</description></item>
-        /// <item><description>Hour: hour.</description></item>
-        /// </list>
+        /// <para>Required. The unit of the subscription period. Valid values: Year, Month, Day, and Hour.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Year</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>Required. The number of instances to subscribe to.</para>
+        /// <para>Required. The number of instances to purchase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryRbacRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:</para>
+        /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.</description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The application with this name is queried.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public QueryRbacRoleResponseBodyModule Module { get; set; }
         public class QueryRbacRoleResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</para>
+            /// <para>The time when the task was created, in ISO 8601 format, such as 2024-01-01T00:00:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-06T10:20:09Z</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The default status. Valid values:</para>
+            /// <para>Indicates whether it is the default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: not default.</description></item>
-            /// <item><description>1: default.</description></item>
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the approval template is system-defined. Valid values:</para>
+            /// <para>Specifies whether the approval template is system-defined. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: Yes.</description></item>
             /// <item><description>0: No.</description></item>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>文件名</para>
+            /// <para>File name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The organization parameters.</para>
+        /// <para>The organizational unit parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;name&quot;:&quot;xx&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrgUnitData { get; set; }
 
         /// <summary>
-        /// <para>The organization ID.</para>
+        /// <para>The organizational unit ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f0534aa7-94ec-4368-a34a-310390f66253</para>

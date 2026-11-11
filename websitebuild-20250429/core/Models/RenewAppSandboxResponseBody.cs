@@ -75,6 +75,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public class RenewAppSandboxResponseBodyModule : TeaModel {
             /// <summary>
             /// <para>The preview URLs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("PreviewUrls")]
             [Validation(Required=false)]

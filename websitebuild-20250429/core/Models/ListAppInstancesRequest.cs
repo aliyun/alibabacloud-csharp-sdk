@@ -10,6 +10,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The application type. Valid values: </para>
+        /// <list type="bullet">
+        /// <item><description>PC_WebSite: web application. </description></item>
+        /// <item><description>Mini_Program: mini program. 
+        /// If this parameter is not specified or left empty, applications are not filtered by type. For compatibility, historical missing, NULL, or empty types are treated as PC_WebSite.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PC_WebSite</para>
+        /// </summary>
+        [NameInMap("ApplicationType")]
+        [Validation(Required=false)]
+        public string ApplicationType { get; set; }
+
+        /// <summary>
         /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
@@ -57,8 +72,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return for each query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results returned per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,7 +82,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. This parameter is empty if no subsequent query is required.</para>
+        /// <para>The token used to start the next query. This parameter is empty if no next query exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -118,7 +132,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query parameters.</para>
+        /// <para>The query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;RequestId\&quot;:\&quot;\&quot;}</para>
@@ -128,7 +142,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The query mode. A value of CONTENT_CREATION indicates a lightweight query for the content creation site selector, which queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</para>
+        /// <para>The query mode. Valid values: </para>
+        /// <list type="bullet">
+        /// <item><description>CONTENT_CREATION: specifies a lightweight query for the content creation site selector. It queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CONTENT_CREATION</para>

@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>trial,draft,live,refunded,expired,released</para>
             /// 
             /// <b>Example:</b>
-            /// <para>NORMAL</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The reason for suspension.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>服务已暂停。</para>
             /// </summary>
             [NameInMap("SuspendReason")]
             [Validation(Required=false)]

@@ -109,6 +109,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>组件实例属性配置</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>模块属性状态</para>
         /// 
         /// <b>Example:</b>
-        /// <para>attr</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ModuleAttrStatus")]
         [Validation(Required=false)]

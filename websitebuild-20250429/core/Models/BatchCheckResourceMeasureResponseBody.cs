@@ -82,6 +82,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>The check results for each resource, where the key is the resourceCode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;InspirationTokens&quot;:{&quot;Passed&quot;:true,&quot;ResourceCode&quot;:&quot;InspirationTokens&quot;}}</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]

@@ -78,6 +78,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public class ListAppCommoditySpecificationsForPartnerResponseBodyModule : TeaModel {
             /// <summary>
             /// <para>The domain name for container health checks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("Versions")]
             [Validation(Required=false)]

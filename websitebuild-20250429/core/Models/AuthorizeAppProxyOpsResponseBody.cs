@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The dynamic error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>请求参数不合法。</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>Indicates whether the service-linked role is authorized.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Y</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Authorized")]
             [Validation(Required=false)]

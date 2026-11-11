@@ -20,13 +20,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The storage management role ID, including preset roles and custom roles.</para>
+        /// <para>The storage management role ID, including predefined and custom roles:</para>
         /// <list type="bullet">
-        /// <item><description>25: storage management administrator (preset role)</description></item>
-        /// <item><description>26: developer (preset role)</description></item>
-        /// <item><description>27: analyst (preset role)</description></item>
-        /// <item><description>30: viewer (preset role)</description></item>
-        /// <item><description>Custom role: the role ID of the custom role</description></item>
+        /// <item><description>25: Storage management administrator (predefined role)</description></item>
+        /// <item><description>26: Developer (predefined role)</description></item>
+        /// <item><description>27: Analyst (predefined role)</description></item>
+        /// <item><description>30: Viewer (predefined role)</description></item>
+        /// <item><description>Custom role: the role ID of the custom role.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

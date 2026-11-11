@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Deleted { get; set; }
 
         /// <summary>
-        /// <para>The end time. It is in ISO 8601 format and uses the UTC time zone (Z).</para>
+        /// <para>The end time in ISO 8601 format in the UTC time zone (Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-18T02:23:00Z</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<TreeNode> NodeList { get; set; }
 
         /// <summary>
-        /// <para>Uniquely identifies an operation.</para>
+        /// <para>The address used to uniquely identify an operation.</para>
         /// </summary>
         [NameInMap("OperationAddress")]
         [Validation(Required=false)]
@@ -128,7 +128,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The description of the service type.</para>
+        /// <para>The service type description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Website design service</para>
         /// </summary>
         [NameInMap("ServiceTypeText")]
         [Validation(Required=false)]
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Slug { get; set; }
 
         /// <summary>
-        /// <para>The start time. It is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1754447102000</para>

@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>Indicates whether this entitlement item is currently available.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>on</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Available")]
                 [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>Indicates whether the instance is running.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Running")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppSupabaseInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> return parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -127,6 +127,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateStatus { get; set; }
 
             /// <summary>
+            /// <para>The read-only business schema name resolved by Builder trusted binding, which cannot be used as input for tenant switching.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tenant_00000000-0000-4000-8000-000000000001_schema</para>
+            /// </summary>
+            [NameInMap("SchemaName")]
+            [Validation(Required=false)]
+            public string SchemaName { get; set; }
+
+            /// <summary>
             /// <para>The service key.</para>
             /// 
             /// <b>Example:</b>
@@ -157,7 +167,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The public URL of the Supabase instance.</para>
+            /// <para>The public URL of Supabase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -165,6 +175,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [NameInMap("SupabasePublicUrl")]
             [Validation(Required=false)]
             public string SupabasePublicUrl { get; set; }
+
+            /// <summary>
+            /// <para>The read-only tenant mode. The schema is the legacy Builder pool, and db/agenticdb is the new platform. History records can be empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>schema</para>
+            /// </summary>
+            [NameInMap("TenantMode")]
+            [Validation(Required=false)]
+            public string TenantMode { get; set; }
 
         }
 
@@ -192,14 +212,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System exception.</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The backup parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The permission parameter.</para>
+        /// <para>The permission parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;resource&quot;:&quot;post&quot;,&quot;action&quot;:&quot;read&quot;,&quot;description&quot;:&quot;read post&quot;}</para>
