@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInventorySynchronizationJobResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The inventory synchronization job.</para>
+        /// </summary>
         [NameInMap("InventorySynchronizationJob")]
         [Validation(Required=false)]
         public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJob InventorySynchronizationJob { get; set; }
         public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJob : TeaModel {
             /// <summary>
-            /// <para>同步任务描述</para>
+            /// <para>The synchronization job description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>No Description</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>同步结束时间</para>
+            /// <para>The synchronization end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761531556</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>同步目标ID</para>
+            /// <para>The synchronization target ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>src_xxxxxx</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InventorySourceId { get; set; }
 
             /// <summary>
-            /// <para>同步任务ID</para>
+            /// <para>The ID of the synchronization task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sync_xxxxxxxxx</para>
@@ -54,21 +57,29 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InventorySynchronizationJobId { get; set; }
 
             /// <summary>
-            /// <para>同步任务结果</para>
+            /// <para>The synchronization node task result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResult Result { get; set; }
             public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResult : TeaModel {
+                /// <summary>
+                /// <para>The agent synchronization result statistics.</para>
+                /// </summary>
                 [NameInMap("AgentStatistics")]
                 [Validation(Required=false)]
                 public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatistics AgentStatistics { get; set; }
                 public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatistics : TeaModel {
+                    /// <summary>
+                    /// <para>The creation result statistics.</para>
+                    /// </summary>
                     [NameInMap("Created")]
                     [Validation(Required=false)]
                     public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatisticsCreated Created { get; set; }
                     public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatisticsCreated : TeaModel {
                         /// <summary>
+                        /// <para>The failure count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -77,6 +88,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
+                        /// <para>The skipped count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -85,6 +98,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
+                        /// <para>The success count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
                         /// </summary>
@@ -93,6 +108,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
+                        /// <para>The total count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
                         /// </summary>
@@ -102,11 +119,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>The deletion result statistics.</para>
+                    /// </summary>
                     [NameInMap("Deleted")]
                     [Validation(Required=false)]
                     public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatisticsDeleted Deleted { get; set; }
                     public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatisticsDeleted : TeaModel {
                         /// <summary>
+                        /// <para>The failure count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -115,6 +137,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
+                        /// <para>The skipped count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -123,6 +147,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
+                        /// <para>The success count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
                         /// </summary>
@@ -131,6 +157,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
+                        /// <para>The total count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
                         /// </summary>
@@ -140,11 +168,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>The unchanged result statistics.</para>
+                    /// </summary>
                     [NameInMap("Same")]
                     [Validation(Required=false)]
                     public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatisticsSame Same { get; set; }
                     public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatisticsSame : TeaModel {
                         /// <summary>
+                        /// <para>The failure count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -153,6 +186,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
+                        /// <para>The skipped count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -161,6 +196,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
+                        /// <para>The success count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
                         /// </summary>
@@ -169,6 +206,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
+                        /// <para>The total count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
                         /// </summary>
@@ -178,11 +217,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>The update result statistics.</para>
+                    /// </summary>
                     [NameInMap("Updated")]
                     [Validation(Required=false)]
                     public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatisticsUpdated Updated { get; set; }
                     public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAgentStatisticsUpdated : TeaModel {
                         /// <summary>
+                        /// <para>The failure count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -191,6 +235,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
+                        /// <para>The skipped count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -199,6 +245,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
+                        /// <para>The success count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
                         /// </summary>
@@ -207,6 +255,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
+                        /// <para>The total count.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
                         /// </summary>
@@ -219,21 +269,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>资产同步结果统计</para>
+                /// <para>The asset synchronization result statistics.</para>
                 /// </summary>
                 [NameInMap("AssetStatistics")]
                 [Validation(Required=false)]
                 public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatistics AssetStatistics { get; set; }
                 public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatistics : TeaModel {
                     /// <summary>
-                    /// <para>创建结果统计</para>
+                    /// <para>The creation result statistics.</para>
                     /// </summary>
                     [NameInMap("Created")]
                     [Validation(Required=false)]
                     public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatisticsCreated Created { get; set; }
                     public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatisticsCreated : TeaModel {
                         /// <summary>
-                        /// <para>失败数目</para>
+                        /// <para>The failure count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -243,7 +293,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>跳过数目</para>
+                        /// <para>The skipped count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -253,7 +303,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>成功数目</para>
+                        /// <para>The success count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -263,7 +313,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>总共数目</para>
+                        /// <para>The total count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -275,14 +325,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>删除结果统计</para>
+                    /// <para>The deletion result statistics.</para>
                     /// </summary>
                     [NameInMap("Deleted")]
                     [Validation(Required=false)]
                     public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatisticsDeleted Deleted { get; set; }
                     public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatisticsDeleted : TeaModel {
                         /// <summary>
-                        /// <para>失败数目</para>
+                        /// <para>The failure count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -292,7 +342,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>跳过数目</para>
+                        /// <para>The skipped count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -302,7 +352,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>成功数目</para>
+                        /// <para>The success count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -312,7 +362,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>总共数目</para>
+                        /// <para>The total count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -324,14 +374,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>相同结果统计</para>
+                    /// <para>The unchanged result statistics.</para>
                     /// </summary>
                     [NameInMap("Same")]
                     [Validation(Required=false)]
                     public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatisticsSame Same { get; set; }
                     public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatisticsSame : TeaModel {
                         /// <summary>
-                        /// <para>失败数目</para>
+                        /// <para>The failure count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -341,7 +391,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>跳过数目</para>
+                        /// <para>The skipped count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -351,7 +401,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>成功数目</para>
+                        /// <para>The success count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -361,7 +411,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>总共数目</para>
+                        /// <para>The total count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -373,14 +423,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>更新结果统计</para>
+                    /// <para>The update result statistics.</para>
                     /// </summary>
                     [NameInMap("Updated")]
                     [Validation(Required=false)]
                     public GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatisticsUpdated Updated { get; set; }
                     public class GetInventorySynchronizationJobResponseBodyInventorySynchronizationJobResultAssetStatisticsUpdated : TeaModel {
                         /// <summary>
-                        /// <para>失败数目</para>
+                        /// <para>The failure count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -390,7 +440,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>跳过数目</para>
+                        /// <para>The skipped count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -400,7 +450,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>成功数目</para>
+                        /// <para>The success count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -410,7 +460,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>总共数目</para>
+                        /// <para>The total count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -424,7 +474,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>同步结果错误码</para>
+                /// <para>The error code of the synchronization result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>No ErrorCode</para>
@@ -434,7 +484,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>同步结果错误信息描述</para>
+                /// <para>The error message description of the synchronization result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>No Error Message</para>
@@ -446,7 +496,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>同步开始时间</para>
+            /// <para>The synchronization start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761531256</para>
@@ -456,7 +506,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>同步任务状态</para>
+            /// <para>The synchronization job status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -466,7 +516,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>同步触发类型</para>
+            /// <para>The synchronization trigger type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>manual</para>
@@ -478,6 +528,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

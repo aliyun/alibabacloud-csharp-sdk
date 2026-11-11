@@ -1,3 +1,6 @@
+2026-11-11 Version: 2.1.1
+- Generated csharp 2021-12-01 for Eiam.
+
 2026-11-10 Version: 2.1.0
 - Support API ActivateCloudAccountPrivilege.
 - Support API CreateCloudPermissionTemplate.

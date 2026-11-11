@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCloudAccountResourcesForCloudPermissionTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of cloud account resources.</para>
+        /// </summary>
         [NameInMap("CloudAccountResources")]
         [Validation(Required=false)]
         public List<ListCloudAccountResourcesForCloudPermissionTemplateResponseBodyCloudAccountResources> CloudAccountResources { get; set; }
         public class ListCloudAccountResourcesForCloudPermissionTemplateResponseBodyCloudAccountResources : TeaModel {
             /// <summary>
-            /// <para>归属云账号ID。</para>
+            /// <para>The ID of the cloud account to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789012xxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>资源实体标识，远端唯一标识。</para>
+            /// <para>The resource entity identifier, which is a unique identifier on the remote end.</para>
             /// 
             /// <b>Example:</b>
             /// <para>System:AliyunIntelligentcockpitReadOnlyAccessexample</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>资源实体类型，枚举值：ram_role。</para>
+            /// <para>The resource entity type. Valid value: ram_role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ram_role</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceEntityType { get; set; }
 
             /// <summary>
-            /// <para>云账号资源标识。</para>
+            /// <para>The identifier of the cloud account resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>car_xxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
@@ -53,11 +56,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountResourceId { get; set; }
 
+            /// <summary>
+            /// <para>The metadata of the resource.</para>
+            /// </summary>
             [NameInMap("CloudAccountResourceMeta")]
             [Validation(Required=false)]
             public ListCloudAccountResourcesForCloudPermissionTemplateResponseBodyCloudAccountResourcesCloudAccountResourceMeta CloudAccountResourceMeta { get; set; }
             public class ListCloudAccountResourcesForCloudPermissionTemplateResponseBodyCloudAccountResourcesCloudAccountResourceMeta : TeaModel {
                 /// <summary>
+                /// <para>The JSON document of the Tencent Cloud CAM policy. This field is returned only for Tencent Cloud accounts.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[]}</para>
                 /// </summary>
@@ -66,6 +74,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CamPolicyDocument { get; set; }
 
                 /// <summary>
+                /// <para>The type of the Tencent Cloud CAM policy. Valid values: qcs, local. This field is returned only for Tencent Cloud accounts.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>qcs</para>
                 /// </summary>
@@ -74,6 +84,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CamPolicyType { get; set; }
 
                 /// <summary>
+                /// <para>The JSON document of the AWS IAM policy. This field is returned only for AWS cloud accounts.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;2012-10-17&quot;,&quot;Statement&quot;:[]}</para>
                 /// </summary>
@@ -82,6 +94,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IamPolicyDocument { get; set; }
 
                 /// <summary>
+                /// <para>The type of the AWS IAM policy. Valid values: aws, local. This field is returned only for AWS cloud accounts.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>aws</para>
                 /// </summary>
@@ -90,6 +104,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IamPolicyType { get; set; }
 
                 /// <summary>
+                /// <para>The JSON document of the RAM policy. This field is returned only by the get operation.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[]}</para>
                 /// </summary>
@@ -98,6 +114,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string RamPolicyDocument { get; set; }
 
                 /// <summary>
+                /// <para>The type of the RAM policy. Valid values: system, custom.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
                 /// </summary>
@@ -108,7 +126,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>资源名称。</para>
+            /// <para>The name of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-sso-role</para>
@@ -118,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceName { get; set; }
 
             /// <summary>
-            /// <para>创建时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the resource was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -128,15 +146,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>用于SSO单点登录的云账号资源</para>
+            /// <para>Cloud account resource used for SSO</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>最近一次更新时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the resource was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649916625000</para>
@@ -148,7 +168,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>分页查询时每页行数。</para>
+        /// <para>The number of entries returned on each page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -158,7 +178,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The query token returned by the current call, which is used for the next paginated query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -168,6 +188,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -176,6 +198,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries in the list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

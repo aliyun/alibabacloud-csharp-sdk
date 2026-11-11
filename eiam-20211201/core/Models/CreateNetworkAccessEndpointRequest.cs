@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Xx-business VPC access endpoint</para>
+        /// <para>xx业务VPC访问端点</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpointName")]
         [Validation(Required=false)]

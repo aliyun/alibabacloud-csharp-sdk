@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>My conditional access policy</para>
+        /// <para>我的条件访问策略</para>
         /// </summary>
         [NameInMap("ConditionalAccessPolicyName")]
         [Validation(Required=false)]
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>Conditional access policy description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test description</para>
+        /// <para>测试描述</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

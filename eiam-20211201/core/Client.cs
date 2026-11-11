@@ -27094,7 +27094,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源同步任务</para>
+        /// <para>Queries resource synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27140,7 +27140,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源同步任务</para>
+        /// <para>Queries resource synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27186,7 +27186,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源同步任务</para>
+        /// <para>Queries resource synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27204,7 +27204,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源同步任务</para>
+        /// <para>Queries resource synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32806,7 +32806,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询权限模板关联的资源列表</para>
+        /// <para>Calls ListCloudAccountResourcesForCloudPermissionTemplate to perform a paging query for the list of cloud account resources associated with a specified cloud permission template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32868,7 +32868,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询权限模板关联的资源列表</para>
+        /// <para>Calls ListCloudAccountResourcesForCloudPermissionTemplate to perform a paging query for the list of cloud account resources associated with a specified cloud permission template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32930,7 +32930,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询权限模板关联的资源列表</para>
+        /// <para>Calls ListCloudAccountResourcesForCloudPermissionTemplate to perform a paging query for the list of cloud account resources associated with a specified cloud permission template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32948,7 +32948,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询权限模板关联的资源列表</para>
+        /// <para>Calls ListCloudAccountResourcesForCloudPermissionTemplate to perform a paging query for the list of cloud account resources associated with a specified cloud permission template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36670,16 +36670,16 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源同步任务列表</para>
+        /// <para>Queries resource synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>支持以下两种方式查看返回数据：</para>
+        /// <para>You can use one of the following two methods to view the returned data:</para>
         /// <list type="bullet">
-        /// <item><description>方式一：分页查询首页时，仅需设置MaxResults以限制返回信息的条目数，返回结果中的NextToken将作为查询后续页的凭证。查询后续页时，将NextToken参数设置为上一次返回结果中获取到的NextToken作为查询凭证，并设置MaxResults限制返回条目数。如果没有下一页时，NextToken不再返回。MaxResults最大值为100。</description></item>
-        /// <item><description>方式二：通过PageSize设置单页返回的条目数，再通过PageNumber设置页码。
-        /// 以上两种方式只能任选其中之一。当返回的条目数较多时，推荐使用方式一。如果设置了MaxResults或NextToken参数，则请求参数PageSize和PageNumber将失效。</description></item>
+        /// <item><description>Method 1: When paged query the first page, you only need to set MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 2: Set PageSize to specify the number of entries to return per page, and set PageNumber to specify the page number.
+        /// You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If you set the MaxResults or NextToken parameter, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36746,16 +36746,16 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源同步任务列表</para>
+        /// <para>Queries resource synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>支持以下两种方式查看返回数据：</para>
+        /// <para>You can use one of the following two methods to view the returned data:</para>
         /// <list type="bullet">
-        /// <item><description>方式一：分页查询首页时，仅需设置MaxResults以限制返回信息的条目数，返回结果中的NextToken将作为查询后续页的凭证。查询后续页时，将NextToken参数设置为上一次返回结果中获取到的NextToken作为查询凭证，并设置MaxResults限制返回条目数。如果没有下一页时，NextToken不再返回。MaxResults最大值为100。</description></item>
-        /// <item><description>方式二：通过PageSize设置单页返回的条目数，再通过PageNumber设置页码。
-        /// 以上两种方式只能任选其中之一。当返回的条目数较多时，推荐使用方式一。如果设置了MaxResults或NextToken参数，则请求参数PageSize和PageNumber将失效。</description></item>
+        /// <item><description>Method 1: When paged query the first page, you only need to set MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 2: Set PageSize to specify the number of entries to return per page, and set PageNumber to specify the page number.
+        /// You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If you set the MaxResults or NextToken parameter, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36822,16 +36822,16 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源同步任务列表</para>
+        /// <para>Queries resource synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>支持以下两种方式查看返回数据：</para>
+        /// <para>You can use one of the following two methods to view the returned data:</para>
         /// <list type="bullet">
-        /// <item><description>方式一：分页查询首页时，仅需设置MaxResults以限制返回信息的条目数，返回结果中的NextToken将作为查询后续页的凭证。查询后续页时，将NextToken参数设置为上一次返回结果中获取到的NextToken作为查询凭证，并设置MaxResults限制返回条目数。如果没有下一页时，NextToken不再返回。MaxResults最大值为100。</description></item>
-        /// <item><description>方式二：通过PageSize设置单页返回的条目数，再通过PageNumber设置页码。
-        /// 以上两种方式只能任选其中之一。当返回的条目数较多时，推荐使用方式一。如果设置了MaxResults或NextToken参数，则请求参数PageSize和PageNumber将失效。</description></item>
+        /// <item><description>Method 1: When paged query the first page, you only need to set MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 2: Set PageSize to specify the number of entries to return per page, and set PageNumber to specify the page number.
+        /// You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If you set the MaxResults or NextToken parameter, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36850,16 +36850,16 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源同步任务列表</para>
+        /// <para>Queries resource synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>支持以下两种方式查看返回数据：</para>
+        /// <para>You can use one of the following two methods to view the returned data:</para>
         /// <list type="bullet">
-        /// <item><description>方式一：分页查询首页时，仅需设置MaxResults以限制返回信息的条目数，返回结果中的NextToken将作为查询后续页的凭证。查询后续页时，将NextToken参数设置为上一次返回结果中获取到的NextToken作为查询凭证，并设置MaxResults限制返回条目数。如果没有下一页时，NextToken不再返回。MaxResults最大值为100。</description></item>
-        /// <item><description>方式二：通过PageSize设置单页返回的条目数，再通过PageNumber设置页码。
-        /// 以上两种方式只能任选其中之一。当返回的条目数较多时，推荐使用方式一。如果设置了MaxResults或NextToken参数，则请求参数PageSize和PageNumber将失效。</description></item>
+        /// <item><description>Method 1: When paged query the first page, you only need to set MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 2: Set PageSize to specify the number of entries to return per page, and set PageNumber to specify the page number.
+        /// You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If you set the MaxResults or NextToken parameter, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -42890,7 +42890,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行资源同步任务</para>
+        /// <para>Runs a resource synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42940,7 +42940,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行资源同步任务</para>
+        /// <para>Runs a resource synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42990,7 +42990,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行资源同步任务</para>
+        /// <para>Runs a resource synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43008,7 +43008,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行资源同步任务</para>
+        /// <para>Runs a resource synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">

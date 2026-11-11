@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The new description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>For production use.</para>
+        /// <para>生产环境使用。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
+        /// <para>eiam-111ccc1111</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

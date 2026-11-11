@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// Maximum length: 512 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Field test</para>
+        /// <para>字段测试</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

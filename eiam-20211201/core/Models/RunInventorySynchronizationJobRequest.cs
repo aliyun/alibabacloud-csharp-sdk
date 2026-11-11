@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class RunInventorySynchronizationJobRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The ID of the IDaaS EIAM instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>同步目标ID</para>
+        /// <para>The ID of the synchronization target.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string InventorySourceId { get; set; }
 
+        /// <summary>
+        /// <para>The resource types.</para>
+        /// </summary>
         [NameInMap("InventoryTypes")]
         [Validation(Required=false)]
         public List<string> InventoryTypes { get; set; }

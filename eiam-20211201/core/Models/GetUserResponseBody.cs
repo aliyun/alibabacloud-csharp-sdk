@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The description of the account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test account</para>
+            /// <para>测试账户</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListInventorySynchronizationJobsRequest : TeaModel {
         /// <summary>
-        /// <para>同步结束时间</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The ID of the IDaaS EIAM instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,12 +30,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the synchronization targets.</para>
+        /// </summary>
         [NameInMap("InventorySourceIds")]
         [Validation(Required=false)]
         public List<string> InventorySourceIds { get; set; }
 
         /// <summary>
-        /// <para>分页查询时每页行数。默认值为20，最大值为100。</para>
+        /// <para>The maximum number of entries to return per page in a paging query. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The query token. The value is the NextToken parameter value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>同步开始时间</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>同步状态[pending,running,suspending,failed,partial_success,success]</para>
+        /// <para>The synchronization status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
