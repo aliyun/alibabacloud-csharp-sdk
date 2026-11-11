@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryCollectionDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The matched results.</para>
-        /// </summary>
         [NameInMap("Matches")]
         [Validation(Required=false)]
         public QueryCollectionDataResponseBodyMatches Matches { get; set; }
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Details about the error, returned if the request fails.</para>
+        /// <para>The detailed information returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1234</para>
@@ -97,12 +94,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the request. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>success</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>fail</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>success</b>: The request is successful.</description></item>
+        /// <item><description><b>fail</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +108,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The total number of hits for the search. This parameter is returned only when the Offset parameter in the request is not 0.</para>
+        /// <para>The total number of hits for the search condition. This parameter is returned only when the Offset parameter in the request is not 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AINodePoolId { get; set; }
 
         /// <summary>
-        /// <para>The AI node specifications.</para>
+        /// <para>The node specifications of the AI node.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AINodeSpecInfos")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<AddAINodeRequestAINodeSpecInfos> AINodeSpecInfos { get; set; }
         public class AddAINodeRequestAINodeSpecInfos : TeaModel {
             /// <summary>
-            /// <para>The number of AI nodes.</para>
+            /// <para>The number of nodes.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string NodeNum { get; set; }
 
             /// <summary>
-            /// <para>The AI node specifications.</para>
+            /// <para>The node specifications.</para>
             /// <pre><c>ADB.AIStandard.1
             /// ADB.AIMedium.1
             /// ADB.AILarge.1
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

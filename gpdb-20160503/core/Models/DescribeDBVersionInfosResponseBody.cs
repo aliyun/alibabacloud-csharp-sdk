@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried minor versions.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("VersionDetails")]
         [Validation(Required=false)]
         public DescribeDBVersionInfosResponseBodyVersionDetails VersionDetails { get; set; }
         public class DescribeDBVersionInfosResponseBodyVersionDetails : TeaModel {
             /// <summary>
-            /// <para>The queried minor version information about the instance in Serverless mode.</para>
+            /// <para>The kernel version information for the cloud-native mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;Serverless&quot;: [
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public object Serverless { get; set; }
 
             /// <summary>
-            /// <para>The queried minor version information about the instance in elastic storage mode.</para>
+            /// <para>The kernel version information for the storage elastic mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;StorageElasic&quot;: [

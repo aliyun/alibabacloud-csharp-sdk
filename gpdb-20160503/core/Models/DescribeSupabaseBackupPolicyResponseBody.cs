@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSupabaseBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The interval between automatic recovery points, in minutes. A value greater than 0 indicates that automatic recovery points are enabled. If the feature is disabled, -1 is returned.</para>
+        /// <para>The interval for automatic recovery points, in minutes. A value greater than 0 indicates that automatic recovery points are enabled. A value of -1 indicates that automatic recovery points are disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? BackupInterval { get; set; }
 
         /// <summary>
-        /// <para>The data backup retention period, in days.</para>
+        /// <para>The retention period for data backups, in days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The interval for the automatic creation of recovery points, in hours. Valid values: 1/6 (10 minutes), 1/2 (30 minutes), 1, 2, 4, and 8. This value is valid only when EnableRecoveryPoint is set to true. If automatic recovery points are shutdown, 0 is returned.</para>
+        /// <para>The interval for the automatic creation of recovery points, in hours. Valid values: 1/6 (10 minutes), 1/2 (30 minutes), 1, 2, 4, and 8. This parameter is valid only when EnableRecoveryPoint is set to true. A value of 0 is returned upon shutdown of automatic recovery points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

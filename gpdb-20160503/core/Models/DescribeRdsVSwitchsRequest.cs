@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>This parameter is no longer used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>rg-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

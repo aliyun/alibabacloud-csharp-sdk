@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gp-bp12ga6v69h86****</para>
+        /// <para>test1234</para>
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gp-bp12ga6v69h86****</para>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5432</para>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

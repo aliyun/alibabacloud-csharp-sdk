@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListDocumentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The detailed information returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The paging token used to start the next paged query. If this parameter is empty, the current page is the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The operation is successful.</description></item>
+        /// <item><description><b>fail</b>: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

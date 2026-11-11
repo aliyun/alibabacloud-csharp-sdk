@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeStreamingJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>Target database account.</para>
+        /// <para>The destination database account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-account</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Account { get; set; }
 
         /// <summary>
-        /// <para>Delivery guarantee.</para>
+        /// <para>The delivery guarantee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ATLEAST / EXACTLY</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Consistency { get; set; }
 
         /// <summary>
-        /// <para>Creation time.</para>
+        /// <para>The creation time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Data source ID.</para>
+        /// <para>The data source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>Data source name.</para>
+        /// <para>The data source name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_kafka</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// <para>Target data table mapping field list.</para>
+        /// <para>The list of mapped columns in the destination table.</para>
         /// </summary>
         [NameInMap("DestColumns")]
         [Validation(Required=false)]
         public List<string> DestColumns { get; set; }
 
         /// <summary>
-        /// <para>Target database name.</para>
+        /// <para>The destination database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dest-db</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DestDatabase { get; set; }
 
         /// <summary>
-        /// <para>Target namespace.</para>
+        /// <para>The destination namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dest-schema</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DestSchema { get; set; }
 
         /// <summary>
-        /// <para>Target table name.</para>
+        /// <para>The destination table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dest-table</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DestTable { get; set; }
 
         /// <summary>
-        /// <para>When data in Kafka does not match the ADBPG target table, it can cause write failures. This value represents the number of error rows allowed; if exceeded, the task will fail.</para>
+        /// <para>The maximum number of allowed error rows. If data in Kafka does not match the destination AnalyticDB for PostgreSQL table, a write failure occurs. If the number of error rows exceeds this value, the job fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? ErrorLimitCount { get; set; }
 
         /// <summary>
-        /// <para>Service status information, such as the reason for an exception. It is empty in the normal Running state.</para>
+        /// <para>The service status message. For example, if an exception occurs, the cause of the exception is displayed. This parameter is empty when the service is in the Running state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -118,9 +118,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>Fallback offset, which is the fallback position</para>
+        /// <para>The fallback offset.</para>
         /// <list type="bullet">
-        /// <item><description>The FallbackOffset parameter defines the behavior when the consumer has not requested a specific offset to consume or the requested offset exceeds the current record\&quot;s offset information in the Kafka cluster. You can choose to start consuming from the earliest (newest) or latest (oldest) offset.</description></item>
+        /// <item><description>The FallbackOffset parameter defines the behavior when a consumer does not request a specific offset to consume, or when the requested offset exceeds the offset range recorded in the current Kafka cluster. You can choose to start consuming from the earliest or latest offset.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FallbackOffset { get; set; }
 
         /// <summary>
-        /// <para>Kafka group name</para>
+        /// <para>The Kafka group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_group</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Job configuration file.</para>
+        /// <para>The job configuration file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DATABASE: adbpgss_test
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string JobConfig { get; set; }
 
         /// <summary>
-        /// <para>Job description.</para>
+        /// <para>The job description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_job</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string JobDescription { get; set; }
 
         /// <summary>
-        /// <para>Job ID.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>Job name.</para>
+        /// <para>The job name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-job</para>
@@ -300,17 +300,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>Match columns, usually all primary key columns of the target table. If all column values in this configuration are the same, the two rows of data are considered duplicates.</para>
+        /// <para>The match columns. Typically, these are all primary key columns of the destination table. If the values of all columns in this configuration are the same, the two rows of data are considered duplicate.</para>
         /// </summary>
         [NameInMap("MatchColumns")]
         [Validation(Required=false)]
         public List<string> MatchColumns { get; set; }
 
         /// <summary>
-        /// <para>Configuration mode</para>
+        /// <para>The configuration mode.</para>
         /// <ol>
-        /// <item><description>Basic mode requires specifying some configuration fields</description></item>
-        /// <item><description>Professional mode supports submitting YAML files</description></item>
+        /// <item><description>basic: requires specific configuration fields.</description></item>
+        /// <item><description>professional: supports submitting YAML files.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>Last modified time.</para>
+        /// <para>The last modification time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>Target database password.</para>
+        /// <para>The destination database password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pwd123</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
@@ -352,22 +352,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Source field list.</para>
+        /// <para>The list of source columns.</para>
         /// </summary>
         [NameInMap("SrcColumns")]
         [Validation(Required=false)]
         public List<string> SrcColumns { get; set; }
 
         /// <summary>
-        /// <para>Service status, with possible values:</para>
+        /// <para>The service status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Init: Initializing</para>
+        /// <item><description><para>Init: initializing.</para>
         /// </description></item>
-        /// <item><description><para>Running: Running</para>
+        /// <item><description><para>Running: running.</para>
         /// </description></item>
-        /// <item><description><para>Exception: Exception</para>
+        /// <item><description><para>Exception: an exception occurred.</para>
         /// </description></item>
-        /// <item><description><para>Paused: Paused</para>
+        /// <item><description><para>Paused: paused.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -379,14 +379,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Update columns, usually all non-primary key columns of the target table. When data duplication is determined through MatchColumns, updating the UpdateColumns column values will result in new data overwriting old data.</para>
+        /// <para>The update columns. Typically, these are all non-primary key columns of the destination table. When duplicate data is identified based on the match columns, the values of the update columns are updated so that the new data overwrites the old data.</para>
         /// </summary>
         [NameInMap("UpdateColumns")]
         [Validation(Required=false)]
         public List<string> UpdateColumns { get; set; }
 
         /// <summary>
-        /// <para>Write mode.</para>
+        /// <para>The write mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSERT/UPDATE/MERGE</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckHadoopDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message. If the service failed, an error message is returned. Otherwise, a pair of double quotation marks (&quot;&quot;) is returned.</para>
+        /// <para>The message returned by the service. If the service is unavailable, an error message is returned. If the service is available, an empty string is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>serivce unavaliable</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the service. Valid values:</para>
+        /// <para>The service status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Running</description></item>
-        /// <item><description>Failed</description></item>
+        /// <item><description><para>Running: The service is available.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The service is unavailable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace. Default value: public.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace, and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list of namespaces.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>mynamespace</para>
@@ -33,7 +36,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The password of the namespace.</para>
+        /// <para>The password for the namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,9 +52,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>The region ID of the instance.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</para>
+        /// <para>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be both empty. If both parameters are specified, this parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-ws-*****</para>

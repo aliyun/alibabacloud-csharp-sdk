@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mynamespace</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The queried namespace.</para>
+        /// <para>The namespace information.</para>
         /// </summary>
         [NameInMap("NamespaceInfo")]
         [Validation(Required=false)]
         public Dictionary<string, string> NamespaceInfo { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The execution is successful.</description></item>
+        /// <item><description><b>fail</b>: The execution fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

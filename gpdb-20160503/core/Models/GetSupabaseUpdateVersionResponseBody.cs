@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseUpdateVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The latest upgradable version.</para>
+        /// <para>The latest available upgrade version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20240731</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string LatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Supabase project.</para>
+        /// <para>The Supabase project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adbtest</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-25T06:59Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not supported in Alibaba Cloud public cloud.</para>
+        /// <para>This parameter is not supported in the public cloud. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>One or more keywords that are used to query error logs.</para>
+        /// <para>The keyword used to search for error logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>error</para>
@@ -64,12 +64,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>The level of the logs to query. Valid values:</para>
+        /// <para>The log level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b>: queries all error logs.</description></item>
-        /// <item><description><b>PANIC</b>: queries only abnormal logs.</description></item>
-        /// <item><description><b>FATAL</b>: queries only critical logs.</description></item>
-        /// <item><description><b>ERROR</b>: queries only error logs.</description></item>
+        /// <item><description><b>ALL</b>: displays logs of all levels.</description></item>
+        /// <item><description><b>PANIC</b>: displays only panic-level logs.</description></item>
+        /// <item><description><b>FATAL</b>: displays only fatal-level logs.</description></item>
+        /// <item><description><b>ERROR</b>: displays only error-level logs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string LogLevel { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-24T06:59Z</para>

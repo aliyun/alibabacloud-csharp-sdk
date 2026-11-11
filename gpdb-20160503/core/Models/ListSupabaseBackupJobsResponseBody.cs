@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The backup mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Automated</b>: automatic backup</description></item>
-            /// <item><description><b>Manual</b>: manual backup</description></item>
+            /// <item><description><b>Automated</b>: automatic backup.</description></item>
+            /// <item><description><b>Manual</b>: manual backup.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupMode { get; set; }
 
             /// <summary>
-            /// <para>The status of the backup task. Valid statuses include: schedule (waiting to be scheduled) and backup (in progress).</para>
+            /// <para>The status of the backup task. Known statuses include: schedule (waiting for scheduling) and backup (in progress).</para>
             /// 
             /// <b>Example:</b>
             /// <para>backup</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupStatus { get; set; }
 
             /// <summary>
-            /// <para>The progress percentage of the backup task, such as 0%. This value may be an empty string when the task is in the schedule (waiting to be scheduled) state.</para>
+            /// <para>The progress of the backup task in percentage, such as 0%. This value may be an empty string when the task is in the schedule state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0%</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Process { get; set; }
 
             /// <summary>
-            /// <para>The start time of the backup task. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format. This value may be an empty string when the task is in the schedule (waiting to be scheduled) state.</para>
+            /// <para>The start time of the backup task. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format. This value may be an empty string when the task is in the schedule state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-09T04:37:01Z</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page, which can be used as the NextToken parameter in the next request.</para>
+        /// <para>The pagination token for the next page. You can use this value as the NextToken parameter in the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckHadoopNetConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <ol>
-        /// <item><description>Either DataSourceId or EmrInstanceId must be specified as input, otherwise an error will occur.</description></item>
-        /// <item><description>If both of the above parameters are specified, EmrInstanceId will be used preferentially.</description></item>
-        /// <item><description>If the data source specified by DataSourceId is a self-built Hadoop cluster, an error will occur directly.</description></item>
+        /// <item><description>You must specify either DataSourceId or EmrInstanceId. Otherwise, an error is returned.</description></item>
+        /// <item><description>If both parameters are specified, EmrInstanceId takes precedence.</description></item>
+        /// <item><description>If the data source specified by DataSourceId is a self-managed Hadoop cluster, an error is returned.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>EMR instance ID.</para>
+        /// <para>The EMR instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-xxx</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EmrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

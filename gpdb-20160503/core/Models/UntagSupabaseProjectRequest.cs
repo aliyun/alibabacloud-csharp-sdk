@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UntagSupabaseProjectRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to unbind all tags from the instance. This parameter takes effect only when TagKey.N is not specified in the request. Valid values:</para>
+        /// <para>Specifies whether to remove all tags from the instance. This parameter is valid only when TagKey.N is not specified in the request. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>instance</c>: reserved mode instance.</description></item>
-        /// <item><description><c>ALIYUN::GPDB::INSTANCE</c>: elastic mode instance.</description></item>
+        /// <item><description><c>instance</c>: reserved mode instance</description></item>
+        /// <item><description><c>ALIYUN::GPDB::INSTANCE</c>: elastic mode instance</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class EnableCollectionGraphRAGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the job. You can use the <c>GetGraphRAGJob</c> to view the job status.</para>
+        /// <para>The job ID. You can use this ID to call the GetGraphRAGJob operation to query the job status later.</para>
         /// 
         /// <b>Example:</b>
         /// <para>231460f8-75dc-405e-a669-0c5204887e91</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: Success.</description></item>
+        /// <item><description><b>fail</b>: Failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

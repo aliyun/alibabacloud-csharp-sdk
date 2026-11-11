@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListSecretsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of access credentials.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The API execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The execution succeeded.</description></item>
+        /// <item><description><b>fail</b>: The execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

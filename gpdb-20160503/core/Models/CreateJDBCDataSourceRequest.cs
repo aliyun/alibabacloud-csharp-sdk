@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The JDBC connection string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>jdbc:mysql://rm-xxx.mysql.rds.aliyuncs.com:3306/testadmin</para>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("JDBCConnectionString")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The password of the database account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testpasswd</para>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("JDBCPassword")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The name of the database account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testuser</para>
+        /// <para>xxxxxx</para>
         /// </summary>
         [NameInMap("JDBCUserName")]
         [Validation(Required=false)]

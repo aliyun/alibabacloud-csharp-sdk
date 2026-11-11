@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// </ol>
             /// 
             /// <b>Example:</b>
-            /// <para>basic / professional</para>
+            /// <para>Basic / Professional</para>
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]

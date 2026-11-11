@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The name of the document collection.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</para>
+        /// <para>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view the created document collections.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The list of entity types.</para>
         /// <remarks>
-        /// <para>If the knowledge graph construction is enabled, this parameter is required.</para>
+        /// <para>This parameter is required when knowledge graph construction is enabled.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,18 +52,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<string> EntityTypes { get; set; }
 
         /// <summary>
-        /// <para>The name of the LLM model.</para>
+        /// <para>The name of the large language model (LLM).</para>
         /// <remarks>
         /// <para>Valid values:</para>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>knowledge-extract-standard: the default value.</para>
-        /// </description></item>
-        /// <item><description><para>knowledge-extract-mini</para>
-        /// </description></item>
+        /// <item><description>knowledge-extract-standard: Default value.</description></item>
+        /// <item><description>knowledge-extract-mini</description></item>
         /// </list>
+        /// </remarks>
         /// <remarks>
-        /// <para>This parameter takes effect only when the knowledge graph construction is enabled.</para>
+        /// <para>This parameter takes effect only when knowledge graph construction is enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,13 +72,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string LLMModel { get; set; }
 
         /// <summary>
-        /// <para>The language used to build the knowledge graph. Valid values:</para>
+        /// <para>The language used to construct the knowledge graph. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Simplified Chinese. The default value.</description></item>
-        /// <item><description>English.</description></item>
+        /// <item><description>Simplified Chinese: Simplified Chinese. Default value.</description></item>
+        /// <item><description>English: English.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only when the knowledge graph construction is enabled.</para>
+        /// <para>This parameter takes effect only when knowledge graph construction is enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The name of the privileged database account that has the rds_superuser permission.</para>
+        /// <para>The name of the administrator account that has the rds_superuser permission.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation to create an account.</para>
         /// </remarks>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ManagerAccount { get; set; }
 
         /// <summary>
-        /// <para>The password for the privileged database account.</para>
+        /// <para>The password of the administrator account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,9 +114,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ManagerAccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace. Default value: public.</para>
+        /// <para>The namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.</para>
+        /// <para>You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to view the namespace list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -129,9 +127,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The password of the namespace.</para>
+        /// <para>The password for the namespace.</para>
         /// <remarks>
-        /// <para>The value of this parameter is specified by <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
+        /// <para>This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -147,9 +145,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -163,7 +161,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The list of relationship edge types.</para>
         /// <remarks>
-        /// <para>If the knowledge graph construction is enabled, this parameter is required.</para>
+        /// <para>This parameter is required when knowledge graph construction is enabled.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

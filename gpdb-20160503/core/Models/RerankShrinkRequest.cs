@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RerankShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>List of documents to be re-ordered.</para>
+        /// <para>The list of documents to be reranked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADBPG is an Alibaba Cloud OLAP database.</para>
@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DocumentsShrink { get; set; }
 
         /// <summary>
+        /// <para>The description of the custom ranking task type. This parameter can be set when RerankModel.Name is qwen3-rerank. It guides the model to use different ranking strategies.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
         /// </summary>
@@ -42,15 +44,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Instruct { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of chunks allowed when the text exceeds the model window:</para>
+        /// <para>The maximum number of chunks allowed when the text exceeds the model window. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>bge-reranker-v2-m3: default value is 10.</description></item>
-        /// <item><description>bge-reranker-v2-minicpm-layerwise: default value is 5:</description></item>
+        /// <item><description>bge-reranker-v2-m3: 10. This is the default value.</description></item>
+        /// <item><description>bge-reranker-v2-minicpm-layerwise: 5. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Example of splitting</para>
+        /// <para>Chunking example</para>
         /// <list type="bullet">
-        /// <item><description>If using the bge-reranker-v2-minicpm-layerwise model, the maximum single inference window is 2048 tokens. If the query is 48 tokens and the content of a single document parameter is 9000 tokens, it will be divided as follows: 1-2000 for the first, 2001-4000 for the second, and so on. If the number of splits exceeds MaxChunksPerDoc, the remaining sentences will be discarded.</description></item>
+        /// <item><description>If you use the bge-reranker-v2-minicpm-layerwise model, the maximum single inference window is 2,048 tokens. If the query is 48 tokens and a single document parameter contains 9,000 tokens, the document is split into chunks: tokens 1 to 2,000 form the first chunk, tokens 2,001 to 4,000 form the second chunk, and so on. If the number of chunks exceeds the value of MaxChunksPerDoc, the subsequent text is discarded.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -62,10 +64,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxChunksPerDoc { get; set; }
 
         /// <summary>
-        /// <para>Rerank model, currently supports:</para>
+        /// <para>The rerank model. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>bge-reranker-v2-m3: (default), better performance, supports 8192 tokens per inference, if exceeded, it will be split, which may reduce the effect.</description></item>
-        /// <item><description>bge-reranker-v2-minicpm-layerwise: better performance than v2-m3, supports 2048 tokens per inference, if exceeded, it will be split, which may reduce the effect.</description></item>
+        /// <item><description>bge-reranker-v2-m3: provides good performance and supports up to 8,192 tokens for a single inference. Text that exceeds this limit is split into chunks, which may degrade performance. This is the default value.</description></item>
+        /// <item><description>bge-reranker-v2-minicpm-layerwise: provides better performance than bge-reranker-v2-m3 and supports up to 2,048 tokens for a single inference. Text that exceeds this limit is split into chunks, which may degrade performance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Query statement for Rerank.</para>
+        /// <para>The query statement for reranking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>What is ADBPG?</para>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Region ID where the instance is located.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>If set to false, does not return the Documents text, only returns the index of the document order and the rerank score.</para>
+        /// <para>Specifies whether to return the document text. If this parameter is set to false, the document text is not returned. Only the indexes and rerank scores of the sorted documents are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? ReturnDocuments { get; set; }
 
         /// <summary>
-        /// <para>Number of most relevant documents to return.</para>
+        /// <para>The number of most relevant documents to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

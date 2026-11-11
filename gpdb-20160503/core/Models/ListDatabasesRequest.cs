@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.</para>
+        /// <para>The access credential created by calling the CreateSecret operation.</para>
         /// <remarks>
-        /// <para> To call the DescribeTable operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.</para>
+        /// <para>When you call this operation as a RAM user, you must have the UseSecret or GetSecretValue permission on the secret ARN.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckJDBCSourceNetConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return message: Error message returned when the connection fails, otherwise returns an empty string (&quot;&quot;).</para>
+        /// <para>The response message. If the connection fails, an error message is returned. Otherwise, an empty string is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>connection timeout</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ConnectionMessage { get; set; }
 
         /// <summary>
-        /// <para>Service status:</para>
+        /// <para>The connection status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Network connected: Success</para>
+        /// <item><description><para>Success: The network is connected.</para>
         /// </description></item>
-        /// <item><description><para>Network not connected: Failed</para>
+        /// <item><description><para>Failed: The network is disconnected.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ConnectionStatus { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>

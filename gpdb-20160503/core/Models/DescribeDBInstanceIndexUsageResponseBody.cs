@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceIndexUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried index usage.</para>
+        /// <para>The list of index usage details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>The time when the table was last deleted, inserted, or updated.</para>
+            /// <para>The time when the table was last updated by a DELETE, INSERT, or UPDATE operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-08T20:00:00Z</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

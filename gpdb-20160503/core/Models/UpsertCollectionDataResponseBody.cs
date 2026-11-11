@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>Successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

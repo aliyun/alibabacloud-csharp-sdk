@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceErrorLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The content of the error log.</para>
+        /// <para>The list of error logs.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceErrorLogResponseBodyItems> Items { get; set; }
         public class DescribeDBInstanceErrorLogResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adbtest</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string LogContext { get; set; }
 
             /// <summary>
-            /// <para>The level of the queried log.</para>
+            /// <para>The level of the collected log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FATAL</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string LogLevel { get; set; }
 
             /// <summary>
-            /// <para>The time when the log was generated. The time is displayed in UTC.</para>
+            /// <para>The time when the log was generated. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-24 11:28:14</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? Time { get; set; }
 
             /// <summary>
-            /// <para>The name of the database account.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adbpguser</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

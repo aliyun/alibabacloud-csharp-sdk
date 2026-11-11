@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListApiKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of API keys.</para>
+        /// <para>The list of items.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the API key.</para>
+            /// <para>The plugin description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my first api key</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to return in this query.</para>
+        /// <para>The maximum number of records to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page in a paged query.</para>
+        /// <para>The token for the next paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

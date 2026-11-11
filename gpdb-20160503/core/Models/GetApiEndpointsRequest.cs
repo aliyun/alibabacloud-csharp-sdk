@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetApiEndpointsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return in this query.</para>
+        /// <para>The maximum number of records to return for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

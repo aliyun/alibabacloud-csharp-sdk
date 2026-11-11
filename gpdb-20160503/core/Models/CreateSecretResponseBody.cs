@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The detailed information returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -30,7 +30,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: <c>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</c>.</para>
+        /// <para>The ARN that uniquely identifies the logon credential and permissions of the Data API account created by the user.
+        /// Format: <c>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}}</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecretArn { get; set; }
 
         /// <summary>
-        /// <para>The name of the access credential.</para>
+        /// <para>The name of the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testsecret</para>
@@ -50,10 +51,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The operation is successful.</description></item>
+        /// <item><description><b>fail</b>: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the access credential.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test secret</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account.</para>
+        /// <para>The password of the target database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pwd123</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the access credential for the created Data API account. Format: <c>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</c>.</para>
+        /// <para>The ARN that uniquely specifies the logon credentials and permissions of the Data API account created by the user. Format: <c>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecretArn { get; set; }
 
         /// <summary>
-        /// <para>The name of the access credential.</para>
+        /// <para>The name of the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testsecret</para>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: Successful.</description></item>
+        /// <item><description><b>fail</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testacc</para>

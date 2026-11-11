@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public GetUploadDocumentJobResponseBodyChunkResult ChunkResult { get; set; }
         public class GetUploadDocumentJobResponseBodyChunkResult : TeaModel {
             /// <summary>
-            /// <para>The URL of the chunked file. The URL is valid for 2 hours. The file is in JSONL format, and each line is in the format <c>{&quot;page_content&quot;:&quot;*****&quot;, &quot;metadata&quot;: {&quot;**&quot;:&quot;***&quot;,&quot;**&quot;:&quot;***&quot;}</c>.</para>
+            /// <para>The URL of the chunked file. The URL is valid for 2 hours. The file format is JSONL, and each line is in the following format: <c>{&quot;page_content&quot;:&quot;*****&quot;, &quot;metadata&quot;: {&quot;**&quot;:&quot;***&quot;,&quot;**&quot;:&quot;***&quot;}</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx/test.jsonl">http://xxx/test.jsonl</a></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ChunkFileUrl { get; set; }
 
             /// <summary>
-            /// <para>The markdown result file parsed by ADBPGLoader. The URL is valid for 2 hours.</para>
+            /// <para>The URL of the Markdown result file parsed by ADBPGLoader. The URL is valid for 2 hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://oss.xxx/adbpg_loader_result.md">http://oss.xxx/adbpg_loader_result.md</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DocumentLoaderResultFileUrl { get; set; }
 
             /// <summary>
-            /// <para>The URL of the chunked file without metadata. The URL is valid for 2 hours. The file is in plain text format, and each line represents a chunk. This file can be conveniently used for embedding.</para>
+            /// <para>The URL of the chunked file without metadata. The URL is valid for 2 hours. The file format is plain text, and each line represents a chunk. This file can be conveniently used for embedding.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx/test.txt">http://xxx/test.txt</a></para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The details of the document upload task.</para>
+        /// <para>The detailed information of the document upload task.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public GetUploadDocumentJobResponseBodyJob Job { get; set; }
         public class GetUploadDocumentJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the operation is complete.</para>
+            /// <para>Indicates whether the operation is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the operation encounters an exception or fails.</para>
+            /// <para>The error message returned when the current operation is abnormal or fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Failed to connect database.</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Job ID。</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>231460f8-75dc-405e-a669-0c5204887e91</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The upload progress. This value is a percentage. A value of 100 indicates that the upload is complete.</para>
+            /// <para>The upload progress. The value is a percentage. A value of 100 indicates that the upload is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -119,10 +119,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Success: The task is successful.</description></item>
-            /// <item><description>Failed: The task failed. You can view the Error field for the failure reason.</description></item>
-            /// <item><description>Cancelling: The task is being canceled.</description></item>
-            /// <item><description>Cancelled: The task is canceled.</description></item>
-            /// <item><description>Start: The task has started.</description></item>
+            /// <item><description>Failed: The task failed. You can view the Error field for the cause of the failure.</description></item>
+            /// <item><description>Cancelling: The task is being cancelled.</description></item>
+            /// <item><description>Cancelled: The task is cancelled.</description></item>
+            /// <item><description>Start: The task is started.</description></item>
             /// <item><description>Running: The task is running.</description></item>
             /// <item><description>Pending: The task is pending.</description></item>
             /// </list>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last updated.</para>
+            /// <para>The time when the task was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-08 16:53:04.864664</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of this operation. Valid values:</para>
+        /// <para>The status of the operation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>success</b>: The operation is successful.</description></item>
         /// <item><description><b>fail</b>: The operation failed.</description></item>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public GetUploadDocumentJobResponseBodyUsage Usage { get; set; }
         public class GetUploadDocumentJobResponseBodyUsage : TeaModel {
             /// <summary>
-            /// <para>The number of entries used during embedding.</para>
+            /// <para>The number of entries used for vectorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? EmbeddingEntries { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens used during embedding.</para>
+            /// <para>The number of tokens used for vectorization.</para>
             /// <remarks>
             /// <para>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</para>
             /// </remarks>

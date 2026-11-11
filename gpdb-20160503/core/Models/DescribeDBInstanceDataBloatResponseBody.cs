@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceDataBloatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried data bloat.</para>
+        /// <para>The list of data bloat details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceDataBloatResponseBodyItems> Items { get; set; }
         public class DescribeDBInstanceDataBloatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The coefficient of data bloat. It is calculated by using the following formula:</para>
-            /// <para>Bloat coefficient = Number of dead rows/Number of active rows.</para>
+            /// <para>The data bloat coefficient. The bloat coefficient is calculated by using the following formula:</para>
+            /// <para>Number of dead rows counted by the system / Number of live rows counted by the system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.03</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BloatCeoff { get; set; }
 
             /// <summary>
-            /// <para>The bloat size of the table. It indicates the amount of space that can be released.</para>
+            /// <para>The size of the bloated data, which indicates the amount of space that can be reclaimed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.2MB</para>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// <para>The expected size of the table.</para>
-            /// <para>It indicates the size of the table that has no data bloat.</para>
+            /// <para>The expected table size.</para>
+            /// <para>The expected table size is the estimated size of the table when no data bloat occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1MB</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ExpectTableSize { get; set; }
 
             /// <summary>
-            /// <para>The actual size of the table.</para>
+            /// <para>The actual table size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.2MB</para>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The storage type of the table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Heap Table</b></description></item>
-            /// <item><description><b>Append-Only Heap Table</b></description></item>
-            /// <item><description><b>Append-Only Columnar Table</b></description></item>
+            /// <item><description><b>Heap Table</b>: heap table</description></item>
+            /// <item><description><b>Append-Only Heap Table</b>: append-only heap table</description></item>
+            /// <item><description><b>Append-Only Columnar Table</b>: column-oriented table</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>The time when the table was last deleted, inserted, or updated.</para>
+            /// <para>The time when the table was last updated by a DELETE, INSERT, or UPDATE operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-08T20:00:00Z</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of tables. The total number of pages is calculated by dividing this value by the page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

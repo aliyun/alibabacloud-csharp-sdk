@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>gp-bp152460513z****</para>
+        /// <para>gp-xxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>854c6949-411c-4b47-aec4-e324735f9574</para>
+            /// <para>doca-1234</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -131,6 +131,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The vector data. The length of the vector data must be the same as the value of Dimension that is specified when you call the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[1.0123,-0.1234]</para>
             /// </summary>
             [NameInMap("Vector")]
             [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string KeyName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return in this query.</para>
+        /// <para>The maximum number of records to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

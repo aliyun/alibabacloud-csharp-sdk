@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried configuration parameters.</para>
+        /// <para>The list of configuration parameters.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CurrentValue { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</para>
+            /// <para>Indicates whether the instance must be restarted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: The instance must be restarted.</description></item>
+            /// <item><description><b>false</b>: The instance does not need to be restarted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>Indicates whether the configuration parameter can be modified. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: The parameter can be modified.</description></item>
+            /// <item><description><b>false</b>: The parameter cannot be modified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string IsChangeableConfig { get; set; }
 
             /// <summary>
-            /// <para>The valid values of the configuration parameter.</para>
+            /// <para>The value range of the configuration parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[0-2147483647]</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>62506167-D284-562A-B7C2-0A**********</para>

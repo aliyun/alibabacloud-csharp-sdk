@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSQLLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried SQL execution logs.</para>
+        /// <para>The list of results.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSQLLogsResponseBodyItems> Items { get; set; }
         public class DescribeSQLLogsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The database account that executes the SQL statement.</para>
+            /// <para>The database account that executed the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testadmin</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The role of the database.</para>
+            /// <para>The database role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>master</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DBRole { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the SQL statement.</para>
+            /// <para>The execution duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public float? ExecuteCost { get; set; }
 
             /// <summary>
-            /// <para>The execution status of the SQL statement. Valid values:</para>
+            /// <para>The execution state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b></description></item>
-            /// <item><description><b>fail</b></description></item>
+            /// <item><description><b>success</b>: Successful.</description></item>
+            /// <item><description><b>fail</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ExecuteState { get; set; }
 
             /// <summary>
-            /// <para>The type of the query language.</para>
+            /// <para>The operation class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DQL</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string OperationClass { get; set; }
 
             /// <summary>
-            /// <para>The time when the SQL statement was executed.</para>
+            /// <para>The execution time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-15T17:02:32Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string OperationExecuteTime { get; set; }
 
             /// <summary>
-            /// <para>The type of the SQL statement.</para>
+            /// <para>The type of the executed SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The number of rows returned in the execution result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SQLPlan { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement.</para>
+            /// <para>The content of the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select 1</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SQLText { get; set; }
 
             /// <summary>
-            /// <para>The number of entries scanned.</para>
+            /// <para>The number of scanned rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SourceIP { get; set; }
 
             /// <summary>
-            /// <para>The number of the source port.</para>
+            /// <para>The source port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50514</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

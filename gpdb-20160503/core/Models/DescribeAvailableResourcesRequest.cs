@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
-        /// </description></item>
-        /// <item><description><para><b>Prepaid</b>: subscription.</para>
-        /// </description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +26,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to query available region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,9 +38,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The availability zone ID.</para>
+        /// <para>The zone ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> API to query available zone IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available zone IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

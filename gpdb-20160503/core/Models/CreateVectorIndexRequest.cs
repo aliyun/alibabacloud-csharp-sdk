@@ -10,15 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateVectorIndexRequest : TeaModel {
         /// <summary>
-        /// <para>The vector indexing algorithm.</para>
-        /// <para>Valid values:</para>
+        /// <para>The vector index algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>hnswflat</c>: (Default) An HNSW index that does not use quantization compression.</para>
-        /// </description></item>
-        /// <item><description><para><c>novam</c>: A graph-based index that does not use quantization compression. This algorithm is suitable for high-performance scenarios, such as real-time recommendations.</para>
-        /// </description></item>
-        /// <item><description><para><c>novad</c>: A partitioned index that uses rabitq quantization. This algorithm is suitable for large-scale, cost-effective retrieval scenarios.</para>
-        /// </description></item>
+        /// <item><description>hnswflat: HNSW index without quantization compression (default).</description></item>
+        /// <item><description>novam: graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendation.</description></item>
+        /// <item><description>novad: partitioned index with RaBitQ quantization, suitable for large-scale, low-cost retrieval scenarios.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The collection name.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to list all collections.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query the list.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,13 +53,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The vector dimension.</para>
+        /// <para>The vector dimensions.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required for dense vectors.</para>
-        /// </description></item>
-        /// <item><description><para>This value must match the length of the <c>Rows.Vector</c> data provided when calling the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> operation.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required for dense vectors.</description></item>
+        /// <item><description>The value must be the same as the length of the vector data Rows.Vector in the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> operation.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -75,18 +69,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Dimension { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use <c>mmap</c> to build the HNSW index. The default value is 0. Set this to 1 for high-performance data uploads in scenarios where data deletion is not required.</para>
+        /// <para>Specifies whether to use mmap to build the HNSW index. Default value: 0. If data does not need to be deleted and you have high requirements for data upload speed, we recommend that you set this parameter to 1.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: (Default) Builds the index by using segmented page storage. This mode uses the <c>shared_buffer</c> in PostgreSQL for caching and supports delete and update operations.</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c>: Builds the index by using <c>mmap</c>. This mode does not support delete and update operations.</para>
-        /// </description></item>
+        /// <item><description>0: uses the default segment-page storage to build the index. In this mode, shared_buffer in PostgreSQL can be used for caching, and operations such as deletion and update are supported.</description></item>
+        /// <item><description>1: uses mmap to build the index. This mode does not support operations such as deletion and update.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: The ExternalStorage parameter is supported only in V6.0. It is not supported in V7.0.</notice></para>
         /// </remarks>
-        /// <para>The <c>ExternalStorage</c> parameter is supported only by AnalyticDB for PostgreSQL V6.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -96,9 +87,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? ExternalStorage { get; set; }
 
         /// <summary>
-        /// <para>The size of the candidate set for the HNSW algorithm during index construction. The value must be in the range of 4 to 1,000. The default value is 64.</para>
+        /// <para>The size of the candidate set when the HNSW algorithm builds the index. Valid values: 4 to 1000. Default value: 64.</para>
         /// <remarks>
-        /// <para>This parameter applies only to AnalyticDB for PostgreSQL V7.0 instances, and its value must be greater than or equal to <c>2 * HnswM</c>.</para>
+        /// <para>This parameter is required only for AnalyticDB for PostgreSQL V7.0 instances, and the value must be greater than or equal to 2 × HNSW_M.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,27 +100,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? HnswEfConstruction { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. The system automatically sets this value based on the vector dimension. You do not typically need to configure this parameter manually.</para>
+        /// <para>The maximum number of neighbors in the HNSW algorithm. The operation automatically sets this value based on the vector dimensions. You do not need to manually set this value in most cases.</para>
         /// <remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>For AnalyticDB for PostgreSQL V6.0 instances: 1 to 1,000.</para>
-        /// </description></item>
-        /// <item><description><para>For AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. The default value is 16.</para>
-        /// </description></item>
+        /// <item><description>AnalyticDB for PostgreSQL V6.0 instances: 1 to 1000.</description></item>
+        /// <item><description>AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. Default value: 16.</description></item>
         /// </list>
         /// </remarks>
         /// <remarks>
-        /// <para>We recommend the following values based on the vector dimension:</para>
+        /// <para>Recommended settings based on vector dimensions:</para>
         /// <list type="bullet">
-        /// <item><description><para>For dimensions of 384 or less: 16</para>
-        /// </description></item>
-        /// <item><description><para>For dimensions from 385 to 768: 32</para>
-        /// </description></item>
-        /// <item><description><para>For dimensions from 769 to 1,024: 64</para>
-        /// </description></item>
-        /// <item><description><para>For dimensions greater than 1,024: 128</para>
-        /// </description></item>
+        /// <item><description>384 or less: 16</description></item>
+        /// <item><description>Greater than 384 and less than or equal to 768: 32</description></item>
+        /// <item><description>Greater than 768 and less than or equal to 1024: 64</description></item>
+        /// <item><description>Greater than 1024: 128</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -141,9 +126,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? HnswM { get; set; }
 
         /// <summary>
-        /// <para>The name of the management account that has <c>rds_superuser</c> permissions.</para>
+        /// <para>The name of the management account that has the rds_superuser permission.</para>
         /// <remarks>
-        /// <para>You can create an account on the \<em>\<em>account management\</em>\</em> page in the console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</para>
+        /// <para>You can create an account in the console by navigating to Account Management, or call the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -168,15 +153,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The distance metric used to build the vector index. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>l2</c>: euclidean distance</para>
-        /// </description></item>
-        /// <item><description><para><c>ip</c>: dot product (inner product)</para>
-        /// </description></item>
-        /// <item><description><para><c>cosine</c>: cosine similarity</para>
-        /// </description></item>
+        /// <item><description>l2: Euclidean distance.</description></item>
+        /// <item><description>ip: inner product.</description></item>
+        /// <item><description>cosine: cosine similarity.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Sparse vectors support only <c>ip</c>.</para>
+        /// <para>Only ip is supported for sparse vectors.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -187,9 +169,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Metrics { get; set; }
 
         /// <summary>
-        /// <para>The namespace. The default value is <c>public</c>.</para>
+        /// <para>The namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list all namespaces.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -200,7 +182,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The number of lists (partitions) for the Novad algorithm. The value must be in the range of 2 to 1,073,741,824. The default value is 256.</para>
+        /// <para>The number of lists (partitions) for Novad. Valid values: 2 to 1073741824. Default value: 256.</para>
         /// 
         /// <b>Example:</b>
         /// <para>256</para>
@@ -214,12 +196,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Product Quantization (PQ) to accelerate indexing. Recommended for collections with over 500,000 vectors. Valid values:</para>
+        /// <para>Specifies whether to enable product quantization (PQ) algorithm acceleration for the index. We recommend that you enable this feature when the data volume exceeds 500,000. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: Disabled.</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c>: Enabled. (Default)</para>
-        /// </description></item>
+        /// <item><description>0: disabled.</description></item>
+        /// <item><description>1: enabled (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -230,7 +210,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PqEnable { get; set; }
 
         /// <summary>
-        /// <para>The number of bits for rabitq compression. The valid range is 1 to 8. The default value is 3.</para>
+        /// <para>The number of bits for RaBitQ compression. Valid values: 1 to 8. Default value: 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -253,10 +233,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The vector type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Dense</c>: (Default) a dense vector</para>
-        /// </description></item>
-        /// <item><description><para><c>Sparse</c>: a sparse vector</para>
-        /// </description></item>
+        /// <item><description>Dense: dense vector (default).</description></item>
+        /// <item><description>Sparse: sparse vector.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<TagSupabaseProjectRequestTag> Tag { get; set; }
         public class TagSupabaseProjectRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. This parameter cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. The value cannot be an empty string. The key can be up to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-key</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. This parameter can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. The value can be an empty string. The value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-value</para>

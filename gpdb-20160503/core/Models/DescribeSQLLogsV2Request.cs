@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("ExecuteState")]
         [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The number of the page to return. The maximum value is 200.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The ID of the resource group to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>rg-bp67acfmxazb4p****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

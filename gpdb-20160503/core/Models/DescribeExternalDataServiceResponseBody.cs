@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeExternalDataServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the service was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-09-08T16:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was last modified.</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-09-08T17:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The description of the service.</para>
+        /// <para>The service description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxf test</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the service.</para>
+        /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-pxf</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the service. Unit: compute units (CUs).</para>
+        /// <para>The service specification (unit: CU).</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -80,7 +80,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceSpec { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation.</para>
+        /// <para>The service status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Init: The service is being initialized.</para>
+        /// </description></item>
+        /// <item><description><para>Running: The service is running.</para>
+        /// </description></item>
+        /// <item><description><para>Exception: An exception occurred.</para>
+        /// </description></item>
+        /// <item><description><para>Paused: The service is paused.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>

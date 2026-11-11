@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The list of returned items.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSQLLogCountResponseBodyItems> Items { get; set; }
         public class DescribeSQLLogCountResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gp-xxxxxxxx</para>
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Details of the audit logs.</para>
+            /// <para>The set of returned values.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribeSQLLogCountResponseBodyItemsSeries> Series { get; set; }
             public class DescribeSQLLogCountResponseBodyItemsSeries : TeaModel {
                 /// <summary>
-                /// <para>Details of the audit logs.</para>
+                /// <para>The returned values.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<DescribeSQLLogCountResponseBodyItemsSeriesValues> Values { get; set; }
                 public class DescribeSQLLogCountResponseBodyItemsSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>The time when the audit logs were generated and the number of the audit logs.</para>
+                    /// <para>None.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]

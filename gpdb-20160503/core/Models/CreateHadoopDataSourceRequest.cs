@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateHadoopDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Service description.</para>
+        /// <para>The service description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxf for hdfs data source</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DataSourceDescription { get; set; }
 
         /// <summary>
-        /// <para>Service name.</para>
+        /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hdfs_pxf</para>
@@ -41,12 +41,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// <para>Type of Hadoop external table to be enabled, with values:</para>
+        /// <para>The type of the Hadoop external table to enable. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>HDFS </para>
-        /// </description></item>
-        /// <item><description><para>Hive</para>
-        /// </description></item>
+        /// <item><description>HDFS</description></item>
+        /// <item><description>Hive</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>When HadoopCreateType=Emr, this field should contain the EMR instance ID.</para>
+        /// <para>The ID of the EMR instance. This parameter is required when HadoopCreateType is set to Emr.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-1234567</para>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EmrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Content string of the Hadoop hdfs-site.xml file. This field is required when enabling an HDFS external table.</para>
+        /// <para>The content string of the Hadoop hdfs-site.xml file. This parameter is required when you enable HDFS external tables.</para>
         /// 
         /// <b>Example:</b>
         /// <?xml version="1.0" ?>
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HDFSConf { get; set; }
 
         /// <summary>
-        /// <para>Content string of the Hadoop core-site.xml file.</para>
+        /// <para>The content string of the Hadoop core-site.xml file.</para>
         /// 
         /// <b>Example:</b>
         /// <?xml version="1.0" ?>
@@ -113,12 +111,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HadoopCoreConf { get; set; }
 
         /// <summary>
-        /// <para>External service type:</para>
+        /// <para>The external service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>emr</para>
-        /// </description></item>
-        /// <item><description><para>hadoop: Self-built Hadoop</para>
-        /// </description></item>
+        /// <item><description>emr</description></item>
+        /// <item><description>hadoop: self-managed Hadoop.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HadoopCreateType { get; set; }
 
         /// <summary>
-        /// <para>Address and hostname of the Hadoop cluster\&quot;s source node in the /etc/hosts file.</para>
+        /// <para>The addresses and hostnames of the source nodes in the Hadoop cluster in the /etc/hosts file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.220.128 master-1-1.c-xxx.cn-shanghai.emr.aliyuncs.com
@@ -141,7 +137,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HadoopHostsAddress { get; set; }
 
         /// <summary>
-        /// <para>Content string of the Hadoop hive-site.xml file. This field is required when enabling a HIVE external table.</para>
+        /// <para>The content string of the Hadoop hive-site.xml file. This parameter is required when you enable Hive external tables.</para>
         /// 
         /// <b>Example:</b>
         /// <?xml version="1.0" ?>
@@ -162,7 +158,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HiveConf { get; set; }
 
         /// <summary>
-        /// <para>Content string of the Hadoop mapred-site.xml file. This field is required when enabling an HDFS external table.</para>
+        /// <para>The content string of the Hadoop mapred-site.xml file. This parameter is required when you enable HDFS external tables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxx</para>
@@ -172,9 +168,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MapReduceConf { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,7 +181,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Content string of the Hadoop yarn-site.xml file. This field is required when enabling an HDFS external table.</para>
+        /// <para>The content string of the Hadoop yarn-site.xml file. This parameter is required when you enable HDFS external tables.</para>
         /// 
         /// <b>Example:</b>
         /// <?xml version="1.0" ?>

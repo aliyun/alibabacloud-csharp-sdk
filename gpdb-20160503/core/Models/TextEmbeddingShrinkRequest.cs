@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The vector dimensions. Default value: the dimensions supported by the embedding model.</para>
+        /// <para>The vector dimensions. The default value is the dimension supported by the vectorization algorithm.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>text-embedding-v3 supports 1024, 768, and 512 dimensions. Default value: 1024.</description></item>
+        /// <item><description>text-embedding-v3 supports 1024, 768, and 512 dimensions. The default value is 1024.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Dimension { get; set; }
 
         /// <summary>
-        /// <para>The list of text content to vectorize. The list can contain up to 100 entries.</para>
+        /// <para>The list of text content to vectorize. The list can contain up to 100 items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>What is ADBPG?</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <list type="bullet">
         /// <item><description>text-embedding-v1: 1536 dimensions</description></item>
         /// <item><description>text-embedding-v2: 1536 dimensions</description></item>
-        /// <item><description>text-embedding-v3 (default): 1024, 768, or 512 dimensions</description></item>
+        /// <item><description>text-embedding-v3 (default): 1024, 768, and 512 dimensions</description></item>
         /// <item><description>text2vec (not recommended): 1024 dimensions</description></item>
         /// <item><description>m3e-base (not recommended): 768 dimensions</description></item>
         /// <item><description>m3e-small (not recommended): 512 dimensions</description></item>

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of service IDs to authorize.</para>
+        /// <para>The IDs of the services to be authorized.</para>
         /// </summary>
         [NameInMap("ServiceIds")]
         [Validation(Required=false)]

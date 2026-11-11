@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpsertChunksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of tokens that are consumed during vectorization.</para>
+        /// <para>The number of tokens used for vectorization.</para>
         /// <remarks>
-        /// <para>A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</para>
+        /// <para>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EmbeddingTokens { get; set; }
 
         /// <summary>
-        /// <para>The job ID. You can use the <c>GetGraphRAGJob</c> to view the job status.</para>
+        /// <para>The job ID. You can use this ID to call the GetGraphRAGJob operation to query the job status later.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the knowledge base is enabled.</para>
+        /// <para>This parameter is returned only when knowledge graph construction is enabled for the knowledge base.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The operation is successful.</description></item>
+        /// <item><description><b>fail</b>: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

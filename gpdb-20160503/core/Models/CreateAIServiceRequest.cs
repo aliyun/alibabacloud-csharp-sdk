@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of IP addresses in IP address whitelist group. You can specify up to 1,000 IP addresses, separated by commas (,). The value 127.0.0.1 indicates that no external IP addresses are allowed to access the instance. The following formats are supported:</para>
+        /// <para>The IP addresses in IP address whitelist. You can add up to 1,000 IP addresses, separated by commas (,). A value of 127.0.0.1 specifies that access from all external IP addresses is denied. Valid formats:</para>
         /// <list type="bullet">
         /// <item><description>10.23.12.24 (IP address)</description></item>
-        /// <item><description>10.23.12.24/24 (CIDR block. The value /24 indicates the length of the prefix in the address, which ranges from 1 to 32.)</description></item>
+        /// <item><description>10.23.12.24/24 (CIDR block. /24 specifies the length of the prefix in the IP address. The prefix length ranges from 1 to 32.)</description></item>
         /// </list>
         /// <remarks>
         /// <para>After the service is created, you can call the ModifyAIServiceSecurityIps operation to modify IP address whitelist.</para>
@@ -51,12 +51,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The service account. The following limits apply:</para>
+        /// <para>The service account. The account must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The account name can contain lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>The account name must start with a lowercase letter and end with a lowercase letter or digit.</description></item>
-        /// <item><description>The account name cannot start with gp.</description></item>
-        /// <item><description>The account name must be 2 to 16 characters in length.</description></item>
+        /// <item><description>It can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>It must start with a lowercase letter and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>It cannot start with gp.</description></item>
+        /// <item><description>It must be 2 to 16 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceAccount { get; set; }
 
         /// <summary>
-        /// <para>The password of the service account. The following limits apply:</para>
+        /// <para>The password of the service account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
         /// <item><description>Supported special characters: !@#$%^&amp;*()_+-=</description></item>
-        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// <item><description>It must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

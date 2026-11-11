@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetUpsertCollectionDataJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the vector data upload job.</para>
+        /// <para>The details of the task for uploading vector data.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public GetUpsertCollectionDataJobResponseBodyJob Job { get; set; }
         public class GetUpsertCollectionDataJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the operation is complete.</para>
+            /// <para>Indicates whether the operation is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public bool? Completed { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was created.</para>
+            /// <para>The time when the task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-08 16:52:04.864664</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message.</para>
+            /// <para>The error message returned when the current operation is abnormal or fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Failed to connect database.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The progress of the vector data upload job. The value of this parameter indicates the number of data entries that have been uploaded.</para>
+            /// <para>The upload progress. The value indicates the number of data records that have been uploaded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1600</para>
@@ -67,24 +67,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The status of the job.</para>
+            /// <para>The task status. Valid values:</para>
             /// <remarks>
-            /// <para> Valid values:</para>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>Success</para>
-            /// </description></item>
-            /// <item><description><para>Failed (See the Error parameter for failure reasons.)</para>
-            /// </description></item>
-            /// <item><description><para>Cancelling</para>
-            /// </description></item>
-            /// <item><description><para>Cancelled</para>
-            /// </description></item>
-            /// <item><description><para>Start</para>
-            /// </description></item>
-            /// <item><description><para>Running</para>
-            /// </description></item>
+            /// <item><description>Success: The task is successful.</description></item>
+            /// <item><description>Failed: The task fails. You can view the Error field for the cause of the failure.</description></item>
+            /// <item><description>Cancelling: The task is being canceled.</description></item>
+            /// <item><description>Cancelled: The task is canceled.</description></item>
+            /// <item><description>Start: The task is started.</description></item>
+            /// <item><description>Running: The task is running.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -94,7 +87,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was updated.</para>
+            /// <para>The time when the task was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-08 16:53:04.864664</para>
@@ -128,8 +121,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The status of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The operation is successful.</description></item>
+        /// <item><description><b>fail</b>: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

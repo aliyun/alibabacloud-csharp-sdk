@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Classic: classic network.</description></item>
+        /// <item><description>Classic: Classic network.</description></item>
         /// <item><description>VPC: VPC.</description></item>
         /// </list>
         /// 

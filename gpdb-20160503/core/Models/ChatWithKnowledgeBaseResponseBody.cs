@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public ChatWithKnowledgeBaseResponseBodyChatCompletion ChatCompletion { get; set; }
         public class ChatWithKnowledgeBaseResponseBodyChatCompletion : TeaModel {
             /// <summary>
-            /// <para>The real-time generated text content.</para>
+            /// <para>The text content generated in real time.</para>
             /// </summary>
             [NameInMap("Choices")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FinishReason { get; set; }
 
                 /// <summary>
-                /// <para>The reply sequence number.</para>
+                /// <para>The reply index.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? Index { get; set; }
 
                 /// <summary>
-                /// <para>The large model reply response.</para>
+                /// <para>The response message from the large language model.</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string ReasoningContent { get; set; }
 
                     /// <summary>
-                    /// <para>The message role:</para>
+                    /// <para>The message role. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>system</description></item>
                     /// <item><description>user</description></item>
@@ -86,21 +86,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>The tool call response list.</para>
+                    /// <para>The list of tool invocation responses.</para>
                     /// </summary>
                     [NameInMap("ToolCalls")]
                     [Validation(Required=false)]
                     public List<ChatWithKnowledgeBaseResponseBodyChatCompletionChoicesMessageToolCalls> ToolCalls { get; set; }
                     public class ChatWithKnowledgeBaseResponseBodyChatCompletionChoicesMessageToolCalls : TeaModel {
                         /// <summary>
-                        /// <para>The called function information.</para>
+                        /// <para>The information about the called function.</para>
                         /// </summary>
                         [NameInMap("Function")]
                         [Validation(Required=false)]
                         public ChatWithKnowledgeBaseResponseBodyChatCompletionChoicesMessageToolCallsFunction Function { get; set; }
                         public class ChatWithKnowledgeBaseResponseBodyChatCompletionChoicesMessageToolCallsFunction : TeaModel {
                             /// <summary>
-                            /// <para>The called function parameters.</para>
+                            /// <para>The arguments of the called function.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{&quot;city&quot;:&quot;hangzhou&quot;}</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                             public string Arguments { get; set; }
 
                             /// <summary>
-                            /// <para>The called function name.</para>
+                            /// <para>The name of the called function.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>&quot;get_weather&quot;</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The tool call sequence number.</para>
+                        /// <para>The ordinal number of the tool invocation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The model name used.</para>
+            /// <para>The name of the model used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The token usage of the large model output.</para>
+            /// <para>The number of tokens used for the large language model output.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public ChatWithKnowledgeBaseResponseBodyChatCompletionUsage Usage { get; set; }
             public class ChatWithKnowledgeBaseResponseBodyChatCompletionUsage : TeaModel {
                 /// <summary>
-                /// <para>The number of tokens consumed for generating content.</para>
+                /// <para>The number of tokens consumed to generate the content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>42</para>
@@ -205,14 +205,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? PromptTokens { get; set; }
 
                 /// <summary>
-                /// <para>The prompt token details.</para>
+                /// <para>The details of the prompt tokens.</para>
                 /// </summary>
                 [NameInMap("PromptTokensDetails")]
                 [Validation(Required=false)]
                 public ChatWithKnowledgeBaseResponseBodyChatCompletionUsagePromptTokensDetails PromptTokensDetails { get; set; }
                 public class ChatWithKnowledgeBaseResponseBodyChatCompletionUsagePromptTokensDetails : TeaModel {
                     /// <summary>
-                    /// <para>The number of tokens that hit the cache.</para>
+                    /// <para>The number of cached tokens.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>24</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The multi-knowledge base recall information.</para>
+        /// <para>The recall information from multiple knowledge bases.</para>
         /// </summary>
         [NameInMap("MultiCollectionRecallResult")]
         [Validation(Required=false)]
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<string> Entities { get; set; }
 
             /// <summary>
-            /// <para>The recall items.</para>
+            /// <para>The recalled items.</para>
             /// </summary>
             [NameInMap("Matches")]
             [Validation(Required=false)]
@@ -289,8 +289,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The public URL of the query result image, valid for 2 hours by default.</para>
-                /// <para>You can specify the validity period using the UrlExpiration input parameter.</para>
+                /// <para>The public URL of the image in the query result. The default validity period is 2 hours. You can specify the validity period by using the UrlExpiration request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/b4d8_207196811002111319_570c0e199f03428f812ab21fcc00dd6a">http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/b4d8_207196811002111319_570c0e199f03428f812ab21fcc00dd6a</a></para>
@@ -310,7 +309,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The metadata information loaded by the document loader.</para>
+                /// <para>The metadata generated when the document loader loads the document.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;page&quot;:1}</para>
@@ -337,7 +336,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public double? RerankScore { get; set; }
 
                 /// <summary>
-                /// <para>The source of the retrieval result. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path recall.</para>
+                /// <para>The source of the retrieve results. 1 indicates AISearch, 2 indicates full-text index, and 3 indicates dual-channel recall.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -347,7 +346,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? RetrievalSource { get; set; }
 
                 /// <summary>
-                /// <para>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified when creating the index (l2/ip/cosine).</para>
+                /// <para>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified when the index is created, such as l2, ip, or cosine.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -366,7 +365,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The relationship edge details.</para>
+            /// <para>The file name.</para>
             /// </summary>
             [NameInMap("Relations")]
             [Validation(Required=false)]
@@ -385,8 +384,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The API execution status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b>: Execution succeeded.</description></item>
-            /// <item><description><b>fail</b>: Execution failed.</description></item>
+            /// <item><description><b>success</b>: The execution is successful.</description></item>
+            /// <item><description><b>fail</b>: The execution fails.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -407,7 +406,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? Tokens { get; set; }
 
             /// <summary>
-            /// <para>The tokens or items consumed by document understanding or embedding.</para>
+            /// <para>The number of tokens or entries consumed for document understanding or embedding.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
@@ -416,7 +415,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// <para>The number of tokens used for vectorization.</para>
                 /// <remarks>
-                /// <para>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, a character, etc.</para>
+                /// <para>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -443,8 +442,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: Succeeded.</description></item>
-        /// <item><description><b>fail</b>: Failed.</description></item>
+        /// <item><description><b>success</b>: The operation is successful.</description></item>
+        /// <item><description><b>fail</b>: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

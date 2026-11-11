@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetServiceAccessInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID where the SaaS service resides.</para>
+        /// <para>The region ID of the SaaS service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

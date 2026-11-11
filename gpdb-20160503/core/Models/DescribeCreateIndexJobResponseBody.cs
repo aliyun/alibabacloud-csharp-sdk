@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeCreateIndexJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the index creation job.</para>
+        /// <para>The details of the index creation task.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public DescribeCreateIndexJobResponseBodyJob Job { get; set; }
         public class DescribeCreateIndexJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the operation is complete.</para>
+            /// <para>Indicates whether the operation is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public bool? Completed { get; set; }
 
             /// <summary>
-            /// <para>The job creation time.</para>
+            /// <para>The time when the task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-08 16:52:04.864664</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message that is returned when the current operation is abnormal or fails.</para>
+            /// <para>The error message returned when the current operation encounters an exception or fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Failed to connect database.</para>
@@ -57,12 +57,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The progress of the index creation job. Unit: %. A value of 100 indicates that the job is complete.</para>
+            /// <para>The creation progress. This value is a percentage, and a value of 100 indicates that the task is completed.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description>Only AnalyticDB for PostgreSQL V7.0 supports the Progress parameter.</description></item>
+            /// <item><description>Only AnalyticDB for PostgreSQL 7.0 instances support progress updates.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -72,12 +72,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The status of the job. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Success.</b></description></item>
-            /// <item><description><b>Failed</b> (See the Error parameter for failure reasons).</description></item>
-            /// <item><description><b>Cancelled.</b></description></item>
-            /// <item><description>**Running.</description></item>
+            /// <item><description><b>Success</b>: Successful.</description></item>
+            /// <item><description><b>Failed</b>: Failed. You can check the Error field for the cause of the failure.</description></item>
+            /// <item><description><b>Cancelled</b>: Canceled.</description></item>
+            /// <item><description><b>Running</b>: Running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The job last updated time.</para>
+            /// <para>The time when the task was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-08 16:53:04.864664</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The detailed information returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>.</description></item>
-        /// <item><description><b>fail</b>.</description></item>
+        /// <item><description><b>success</b>: Successful.</description></item>
+        /// <item><description><b>fail</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

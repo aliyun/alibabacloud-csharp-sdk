@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The resource type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>StorageElastic</b>: elastic storage mode.</description></item>
-        /// <item><description><b>Serverless</b>: Serverless mode.</description></item>
+        /// <item><description><b>StorageElastic</b>: storage elastic mode</description></item>
+        /// <item><description><b>Serverless</b>: Serverless mode</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceMode { get; set; }
 
         /// <summary>
-        /// <para>The minor version number that does not include the prefix.</para>
+        /// <para>The kernel version number without a prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6.3.10.20。</para>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The ID of the resource group to which the instance belongs. For more information about how to obtain a resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>

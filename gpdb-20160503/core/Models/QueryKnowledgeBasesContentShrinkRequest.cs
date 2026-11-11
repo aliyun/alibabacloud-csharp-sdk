@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The reranking factor. If this parameter is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
+        /// <para>The reranking factor. If this value is not empty, the vector retrieve results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>Reranking is slow when document chunks are sparse.</description></item>
-        /// <item><description>The recommended reranking count (TopK × Factor, rounded up) should not exceed 50.</description></item>
+        /// <item><description>We recommend that the number of reranked items (TopK × Factor, rounded up) does not exceed 50.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public double? RerankFactor { get; set; }
 
         /// <summary>
-        /// <para>The reranking model parameters for performing an additional reranking on the overall results after multi-channel merging.</para>
+        /// <para>The parameters of the reranking model used to rerank the merged multi-channel results.</para>
         /// </summary>
         [NameInMap("RerankModel")]
         [Validation(Required=false)]
         public string RerankModelShrink { get; set; }
 
         /// <summary>
-        /// <para>The information about the multiple collections to retrieve.</para>
+        /// <para>The information about multiple collections to be retrieved.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceCollection")]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SourceCollectionShrink { get; set; }
 
         /// <summary>
-        /// <para>The number of top results to return after multi-channel recall merging.</para>
+        /// <para>The number of top results to return after multi-channel recall results are merged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

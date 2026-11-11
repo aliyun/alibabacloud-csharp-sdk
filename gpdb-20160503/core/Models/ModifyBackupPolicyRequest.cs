@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days for which data backup files are retained. Default value: 7. Maximum value: 7. Valid values: 1 to 7.</para>
+        /// <para>The number of days for which data backups are retained. Default value: 7. Maximum value: 7. Valid values: 1 to 7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,12 +34,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic point-in-time backup.</para>
+        /// <para>Specifies whether to enable automatic recovery point creation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.
+        /// Default value: true.</description></item>
         /// </list>
-        /// <para>Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -46,15 +49,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? EnableRecoveryPoint { get; set; }
 
         /// <summary>
-        /// <para>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid values:</para>
+        /// <para>The data backup cycle. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Monday</description></item>
-        /// <item><description>Tuesday</description></item>
-        /// <item><description>Wednesday</description></item>
-        /// <item><description>Thursday</description></item>
-        /// <item><description>Friday</description></item>
-        /// <item><description>Saturday</description></item>
-        /// <item><description>Sunday</description></item>
+        /// <item><description>Monday: Monday.</description></item>
+        /// <item><description>Tuesday: Tuesday.</description></item>
+        /// <item><description>Wednesday: Wednesday.</description></item>
+        /// <item><description>Thursday: Thursday.</description></item>
+        /// <item><description>Friday: Friday.</description></item>
+        /// <item><description>Saturday: Saturday.</description></item>
+        /// <item><description>Sunday: Sunday.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup window. Specify the backup window in the HH:mmZ-HH:mmZ format. The backup window must be in UTC. Default value: 00:00-01:00.</para>
+        /// <para>The data backup time. Default value: 00:00Z-01:00Z. Format: HH:mmZ-HH:mmZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,14 +80,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The frequency of point-in-time backup.</para>
+        /// <para>The frequency of recovery points. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: per hour</description></item>
-        /// <item><description>2: per 2 hours</description></item>
-        /// <item><description>4: per 4 hours</description></item>
-        /// <item><description>8: per 8 hours</description></item>
+        /// <item><description><b>1</b>: Every hour.</description></item>
+        /// <item><description><b>2</b>: Every two hours.</description></item>
+        /// <item><description><b>4</b>: Every four hours.</description></item>
+        /// <item><description><b>8</b>: Every eight hours.
+        /// Default value: <b>1</b>.</description></item>
         /// </list>
-        /// <para>Default value: 8.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

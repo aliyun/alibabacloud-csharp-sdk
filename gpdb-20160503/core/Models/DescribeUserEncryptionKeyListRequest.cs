@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The number of KMS keys to return on each page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-1</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

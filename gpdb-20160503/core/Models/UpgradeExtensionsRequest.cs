@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test01</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The extensions that you want to update. Separate multiple extensions with commas (,).</para>
+        /// <para>The plug-ins to be upgraded. Separate multiple plug-ins with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

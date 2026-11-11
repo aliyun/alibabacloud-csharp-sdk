@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetApiEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of parameters.</para>
+        /// <para>The list of items.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to return in this query.</para>
+        /// <para>The maximum number of records to return for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query during paging. Use this token to start the next query.</para>
+        /// <para>The paging token for the next paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

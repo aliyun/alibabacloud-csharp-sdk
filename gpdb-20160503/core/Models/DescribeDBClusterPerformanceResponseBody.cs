@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The time follows the ISO 8601 standard in the <c>YYYY-MM-DDTHH:mmZ</c> format. The time is displayed in UTC.</para>
+        /// <para>The end time of the query in UTC. Specify the time in the <c>YYYY-MM-DDTHH:mmZ</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-03T15:10Z</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</para>
+        /// <para>The list of performance metric values for the instance.</para>
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public List<DescribeDBClusterPerformanceResponseBodyPerformanceKeys> PerformanceKeys { get; set; }
         public class DescribeDBClusterPerformanceResponseBodyPerformanceKeys : TeaModel {
             /// <summary>
-            /// <para>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</para>
+            /// <para>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance metric table</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adbpg_group_cpu_used_percent</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Details of the performance metric of a node.</para>
+            /// <para>The collection of performance metrics.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// <para>The role of the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>master</b>: primary coordinator node</description></item>
-                /// <item><description><b>standby</b>: standby coordinator node</description></item>
-                /// <item><description><b>segment</b>: compute node</description></item>
+                /// <item><description><b>master</b>: Master node.</description></item>
+                /// <item><description><b>standby</b>: Standby node.</description></item>
+                /// <item><description><b>segment</b>: Compute node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Role { get; set; }
 
                 /// <summary>
-                /// <para>The value of the performance metric collected at a point in time.</para>
+                /// <para>The performance metric values. Each value corresponds to a collection time point.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<DescribeDBClusterPerformanceResponseBodyPerformanceKeysSeriesValues> Values { get; set; }
                 public class DescribeDBClusterPerformanceResponseBodyPerformanceKeysSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>The value of the performance metric and the time when the metric value was collected.</para>
+                    /// <para>The performance metric value.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The unit of the performance metric.</para>
+            /// <para>The unit of the monitoring metrics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time follows the ISO 8601 standard in the <c>YYYY-MM-DDTHH:mmZ</c> format. The time is displayed in UTC.</para>
+        /// <para>The start time of the query in UTC. Specify the time in the <c>YYYY-MM-DDTHH:mmZ</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-03T15:00Z</para>

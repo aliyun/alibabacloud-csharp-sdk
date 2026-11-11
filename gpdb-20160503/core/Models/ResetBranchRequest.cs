@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ResetBranchRequest : TeaModel {
         /// <summary>
-        /// <para>The branch ID that uniquely identifies a Supabase branch.</para>
+        /// <para>The branch ID, which uniquely identifies a Supabase branch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The Supabase project ID that corresponds to the main branch.</para>
+        /// <para>The ID of the Supabase project to which the main branch belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required when you create a main branch. When you create a child branch, the region is inherited from the main branch by default.</para>
+        /// <para>The region ID. This parameter is required when you create a main branch. When you create a child branch, it inherits the region of the main branch by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

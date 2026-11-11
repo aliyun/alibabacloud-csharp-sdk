@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RevokeApiKeyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>API KEY ID。</para>
+        /// <para>The API key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of service IDs to be authorized.</para>
+        /// <para>The list of service IDs to authorize.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ServiceIds")]

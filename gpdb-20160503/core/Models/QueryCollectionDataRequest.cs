@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryCollectionDataRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the collection.</para>
+        /// <para>The collection name.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to list available collections.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to view the list.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
-        /// <para>The content for full-text search. If this parameter is omitted, only vector search is performed. If this parameter is specified, the system performs a hybrid search of vector search and full-text search.</para>
+        /// <para>The content used for full-text retrieval. If this parameter is left empty, only vector retrieval is used. If this parameter is specified, both vector and full-text retrieval are used.</para>
         /// <remarks>
-        /// <para>You must specify one of the Content and Vector parameters.</para>
+        /// <para>This parameter and the Vector parameter cannot be left empty at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details for all AnalyticDB for PostgreSQL instances in a region, including their instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions for data retrieval. It is in the format of a WHERE clause in SQL. This expression returns a boolean value, which can be a simple comparison operator, such as <c>=</c>, <c>&lt;&gt;</c>, <c>!=</c>, <c>&gt;</c>, <c>&lt;</c>, <c>&gt;=</c>, and <c>&lt;=</c>, or a more complex expression combined with logical operators, such as <c>AND</c>, <c>OR</c>, and <c>NOT</c>, and keywords such as <c>IN</c>, <c>BETWEEN</c>, and <c>LIKE</c>.</para>
+        /// <para>The filter condition for the data to query, in the SQL WHERE clause format. It is an expression that returns a Boolean value (true or false). The condition can be a simple comparison operator, such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), or less than or equal to (&lt;=). It can also be a more complex expression combined with logical operators (AND, OR, NOT), or a condition that uses keywords such as IN, BETWEEN, and LIKE.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the syntax, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">PostgreSQL WHERE</a>.</description></item>
+        /// <item><description>For detailed syntax, refer to <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -65,15 +65,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The hybrid search algorithm. If this parameter is empty, the system ranks results by directly comparing the scores from the vector search and the full-text search.</para>
-        /// <para>Valid values:</para>
+        /// <para>The dual-channel recall algorithm. Default value: empty (which means the vector and full-text scores are directly compared and sorting is applied). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>RRF</c>: Reciprocal Rank Fusion. This algorithm has a parameter k to control the fusion effect. For more information, see the description of the <c>HybridSearchArgs</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para><c>Weight</c>: weighted sort. This algorithm uses a parameter alpha to control the score ratio of vector search and full-text search, and then sorts the results. For more information about the parameter, see the <c>HybridSearchArgs</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para><c>Cascaded</c>: performs a full-text search, and then performs a vector search on the search results.</para>
-        /// </description></item>
+        /// <item><description>RRF: reciprocal rank fusion. A parameter k is used to control the fusion effect. For more information, see the HybridSearchArgs configuration.</description></item>
+        /// <item><description>Weight: weighted sorting. A parameter alpha is used to control the weight of the vector and full-text scores before sorting. For more information, see the HybridSearchArgs configuration.</description></item>
+        /// <item><description>Cascaded: full-text retrieval is performed first, and then vector retrieval is performed based on the results.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,9 +80,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HybridSearch { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the hybrid search algorithm. The following algorithms are supported: RRF and Weight.</para>
+        /// <para>The algorithm parameters for hybrid search. RRF and Weight are supported:</para>
         /// <list type="bullet">
-        /// <item><description>For RRF, specify the constant k in the scoring algorithm <c>1/(k+rank_i)</c>. The value must be a positive integer greater than 1. The format is as follows:</description></item>
+        /// <item><description>RRF: specifies the constant k in the score calculation formula <c>1/(k+rank_i)</c>. The value must be a positive integer greater than 1. Format:</description></item>
         /// </list>
         /// <pre><c>{ 
         ///    &quot;RRF&quot;: {
@@ -95,7 +91,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// }
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>For Weight, in the formula <c>alpha * vector_score + (1-alpha) * text_score</c>, the alpha parameter indicates the score ratio of the vector search to the full-text search. The value ranges from 0 to 1. 0 indicates that only the full-text search is used, and 1 indicates that only the vector search is used.</description></item>
+        /// <item><description>Weight: The calculation formula is <c>alpha * vector_score + (1-alpha) * text_score</c>. The parameter alpha represents the weight of the vector and full-text search scores. The value ranges from 0 to 1, where 0 indicates full-text search only and 1 indicates vector search only. Format:</description></item>
         /// </list>
         /// <pre><c>{ 
         ///    &quot;Weight&quot;: {
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public Dictionary<string, Dictionary<string, object>> HybridSearchArgs { get; set; }
 
         /// <summary>
-        /// <para>This parameter is left empty by default. It specifies the metadata fields to be returned. You can specify multiple fields and separate them with commas (,).</para>
+        /// <para>The metadata fields to return. Default value: empty. Separate multiple fields with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,content</para>
@@ -121,10 +117,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>Specifies whether to return sparse vector data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: returns sparse vector data.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: does not return sparse vector data.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: returns sparse vector data.</description></item>
+        /// <item><description><b>false</b>: does not return sparse vector data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,10 +131,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>Specifies whether to return dense vector data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: returns dense vector data.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: does not return dense vector data.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: returns dense vector data.</description></item>
+        /// <item><description><b>false</b>: does not return dense vector data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,17 +143,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeValues { get; set; }
 
         /// <summary>
-        /// <para>The similarity algorithm for search. Valid values:</para>
+        /// <para>The similarity algorithm used during search. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>l2</b>: the Euclidean distance.</para>
-        /// </description></item>
-        /// <item><description><para><b>ip</b>: the dot product distance.</para>
-        /// </description></item>
-        /// <item><description><para><b>cosine</b>: the cosine similarity.</para>
-        /// </description></item>
+        /// <item><description><b>l2</b>: Euclidean distance.</description></item>
+        /// <item><description><b>ip</b>: Dot product (inner product) distance.</description></item>
+        /// <item><description><b>cosine</b>: Cosine similarity.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is not specified, the algorithm specified when the index is created is used.</para>
+        /// <para>If this parameter is left empty, the algorithm specified when the index is built is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,9 +161,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Metrics { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list available namespaces.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -196,15 +185,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NamespacePassword { get; set; }
 
         /// <summary>
-        /// <para>This parameter is left empty by default. It specifies the start position of a paged query. This parameter is not supported in hybrid search.</para>
-        /// <para>The value must be greater than or equal to 0. When this parameter is not empty, Total in the response indicates the total number of hits. This parameter is used with TopK. For example, if you want to retrieve chunks 0 to 44 with a page size of 20, you must send three requests:</para>
+        /// <para>The retrieval starting point during paged queries. Default value: empty. This parameter is not supported in dual-channel recall scenarios.</para>
+        /// <para>The value must be greater than or equal to 0. If this parameter is specified, the Total parameter is returned to indicate the total number of hits. This parameter is used together with TopK. For example, to retrieve chunks with chunk_id ranging from 0 to 44 with a paging size of 20, you must make three requests:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Offset=0, TopK=20</c> returns chunks 0 to 19.</para>
-        /// </description></item>
-        /// <item><description><para><c>Offset=20, TopK=20</c> returns chunks 20 to 39.</para>
-        /// </description></item>
-        /// <item><description><para><c>Offset=40, TopK=20</c> returns chunks 40 to 44.</para>
-        /// </description></item>
+        /// <item><description>Offset=0, TopK=20 returns chunks with chunk_id ranging from 0 to 19.</description></item>
+        /// <item><description>Offset=20, TopK=20 returns chunks with chunk_id ranging from 20 to 39.</description></item>
+        /// <item><description>Offset=30, TopK=20 returns chunks with chunk_id ranging from 40 to 44.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -215,15 +201,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>This parameter is left empty by default. It specifies the field based on which to sort the results. This parameter is not supported in hybrid search.</para>
-        /// <para>The field must be a metadata field or a default field in the table, such as <c>id</c>. The following formats are supported:</para>
+        /// <para>The field based on which the results are sorted. Default value: empty. This parameter is not supported in hybrid search scenarios.</para>
+        /// <para>The field must belong to the metadata or be a default field in the table, such as id. Supported formats:</para>
         /// <list type="bullet">
-        /// <item><description><para>A single field, such as <c>chunk_id</c>.</para>
-        /// </description></item>
-        /// <item><description><para>Multiple fields separated by commas (,), such as <c>block_id, chunk_id</c>.</para>
-        /// </description></item>
-        /// <item><description><para>Descending order, such as <c>block_id DESC, chunk_id DESC</c>.</para>
-        /// </description></item>
+        /// <item><description>A single field, such as chunk_id.</description></item>
+        /// <item><description>Multiple fields separated by commas, such as block_id, chunk_id.</description></item>
+        /// <item><description>Descending order, such as block_id DESC, chunk_id DESC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -249,9 +232,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Uses another relational table to filter vector data, which is similar to the JOIN operation.</para>
+        /// <para>Uses another relational table to filter vector data, similar to the JOIN operation.</para>
         /// <remarks>
-        /// <para>The data of the relational table can be returned by setting the IncludeMetadataFields parameter. For example, <c>rds_table_name.id</c> indicates that the id field of the relational table is returned.</para>
+        /// <para>You can set the IncludeMetadataFields parameter to return data from the relational table. For example, rds_table_name.id indicates that the id field of the relational table is returned.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RelationalTableFilter")]
@@ -259,7 +242,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public QueryCollectionDataRequestRelationalTableFilter RelationalTableFilter { get; set; }
         public class QueryCollectionDataRequestRelationalTableFilter : TeaModel {
             /// <summary>
-            /// <para>The metadata field of the vector collection, which is used to associate with the fields of the vector table.</para>
+            /// <para>The metadata field of the vector collection, which is used to join with the fields of the relational table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>doc_id</para>
@@ -269,7 +252,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CollectionMetadataField { get; set; }
 
             /// <summary>
-            /// <para>The filter conditions for the relational table.</para>
+            /// <para>The filter condition for the relational table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tags @&gt; ARRAY[\&quot;art\&quot;]</para>
@@ -279,7 +262,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The field of the relational table, which is used to associate with the metadata field of the vector collection.</para>
+            /// <para>The field of the relational table, which is used to join with the metadata fields of the vector collection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>id</para>
@@ -301,16 +284,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The sparse vector data.</para>
+        /// <para>The list of sparse vector data.</para>
         /// </summary>
         [NameInMap("SparseVector")]
         [Validation(Required=false)]
         public QueryCollectionDataRequestSparseVector SparseVector { get; set; }
         public class QueryCollectionDataRequestSparseVector : TeaModel {
             /// <summary>
-            /// <para>The array of indexes.</para>
+            /// <para>The index array.</para>
             /// <remarks>
-            /// <para>The number of elements in the array cannot exceed 4,000.</para>
+            /// <para>The list size cannot exceed 4,000.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Indices")]
@@ -318,7 +301,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<long?> Indices { get; set; }
 
             /// <summary>
-            /// <para>The array of sparse vectors.</para>
+            /// <para>The sparse vector array.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -327,7 +310,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Specifies the number of top results to return.</para>
+        /// <para>The number of top results to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -338,13 +321,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? TopK { get; set; }
 
         /// <summary>
-        /// <para>The vector data. The length of the vector data must be the same as that specified in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</para>
+        /// <para>The vector data. The length must be consistent with the dimension specified in the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>If <c>SparseVector</c> is empty, only the dense vector search results are returned.</para>
-        /// </description></item>
-        /// <item><description><para>If both <c>Vector</c> and <c>SparseVector</c> are empty, only the full-text search results are returned.</para>
-        /// </description></item>
+        /// <item><description>If SparseVector is left empty, the system uses it to retrieve only dense vector results.</description></item>
+        /// <item><description>If both Vector and SparseVector are left empty, the system uses it to retrieve only full-text results.</description></item>
         /// </list>
         /// </remarks>
         /// </summary>
@@ -353,7 +334,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<double?> Vector { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace that consists of multiple database instances. You must specify this parameter or the DBInstanceId parameter. If both this parameter and DBInstanceId are specified, this parameter is used.</para>
+        /// <para>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be left empty at the same time. If both parameters are specified, this parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-ws-*****</para>

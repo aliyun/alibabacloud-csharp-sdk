@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteCollectionDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of rows that are affected by the request.</para>
+        /// <para>The applied rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: Execution succeeded.</description></item>
+        /// <item><description><b>fail</b>: Execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

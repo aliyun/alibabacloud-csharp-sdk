@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteVectorIndexRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the collection.</para>
+        /// <para>The collection name.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to view the list.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the manager account that has the rds_superuser permission.</para>
+        /// <para>The name of the management account that has the rds_superuser permission.</para>
         /// <remarks>
-        /// <para> You can create an account on the <b>Account Management</b> page of the AnalyticDB for PostgreSQL console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</para>
+        /// <para>You can create an account on the <b>Accounts</b> page in the console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ManagerAccount { get; set; }
 
         /// <summary>
-        /// <para>The password of the manager account.</para>
+        /// <para>The password of the management account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ManagerAccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace. Default value: public.</para>
+        /// <para>The namespace. Default value: public.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The vector type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dense (default)</description></item>
-        /// <item><description>Sparse</description></item>
+        /// <item><description>Dense: dense vector. This is the default value.</description></item>
+        /// <item><description>Sparse: sparse vector.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -48,16 +48,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             /// <summary>
             /// <para>The backup mode.</para>
-            /// <para>Valid values for automatic backups:</para>
+            /// <para>Valid values for full backups:</para>
             /// <list type="bullet">
-            /// <item><description><b>Automated</b>: automatic system backup.</description></item>
+            /// <item><description><b>Automated</b>: automatic backup performed by the system.</description></item>
             /// <item><description><b>Manual</b>: manual backup.</description></item>
             /// </list>
             /// <para>Valid values for restorable points:</para>
             /// <list type="bullet">
-            /// <item><description><b>Automated</b>: the restorable point after a automatic backup.</description></item>
-            /// <item><description><b>Manual</b>: the restorable point manually triggered by the user.</description></item>
-            /// <item><description><b>Period</b>: the restorable point triggered periodically based on the backup policy.</description></item>
+            /// <item><description><b>Automated</b>: restorable point after a full backup.</description></item>
+            /// <item><description><b>Manual</b>: restorable point manually triggered by the user.</description></item>
+            /// <item><description><b>Period</b>: restorable point triggered periodically based on the backup policy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BaksetName { get; set; }
 
             /// <summary>
-            /// <para>The consistency point in time. The value is a UNIX timestamp in seconds. For a full backup, this parameter indicates the consistency point in time of the backup. For a restorable point, this parameter indicates the point in time to which data can be restored.</para>
+            /// <para>The consistency point in time. The value is a UNIX timestamp in seconds. For a full backup, this indicates the consistency point in time of the backup. For a restorable point, this indicates the point in time to which data can be restored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1791508983</para>

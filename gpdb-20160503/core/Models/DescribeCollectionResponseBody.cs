@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of vector dimensions.</para>
+        /// <para>The vector dimensions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Dimension { get; set; }
 
         /// <summary>
-        /// <para>The fields that are used for full-text search. Multiple fields are separated by commas (,).</para>
+        /// <para>The full-text index fields. Separate multiple fields with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,content</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FullTextRetrievalFields { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The detailed information returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,9 +50,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The metadata of vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</para>
-        /// <para>**</para>
-        /// <para><b>Warning</b> Reserved fields such as id, vector, and to_tsvector cannot be used.</para>
+        /// <para>The metadata of the vector data, which is a JSON string in MAP format. The key represents the field name, and the value represents the data type.</para>
+        /// <remarks>
+        /// <para>Warning: The id, vector, and to_tsvector fields are reserved and cannot be used.</warning></para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Metrics { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mynamespace</para>
@@ -79,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The analyzer that is used for full-text search.</para>
+        /// <para>The tokenizer used for full-text index.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh_cn</para>
@@ -89,7 +90,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Parser { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -109,7 +110,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to create sparse vector indexes.</para>
+        /// <para>The method used to build indexes for sparse vectors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip</para>
@@ -119,10 +120,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SparseVectorMetrics { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The execution is successful.</description></item>
+        /// <item><description><b>fail</b>: The execution fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,7 +134,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether sparse vectors are supported.</para>
+        /// <para>Specifies whether sparse vectors are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

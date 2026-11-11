@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDTHH:mmZ</c> format.</para>
+        /// <para>The end time of the query. Specify the time in the <c>YYYY-MM-DDTHH:mmZ</c> format.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time. The maximum time range that can be specified is seven days.</para>
+        /// <para>The end time must be later than the start time, and the time interval between the start time and the end time cannot exceed 7 days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The performance metric that you want to query. Separate multiple values with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</para>
+        /// <para>The names of the performance metrics. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance metric table</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>master</b>: coordinator node.</description></item>
-        /// <item><description><b>segment</b>: compute node.</description></item>
+        /// <item><description><b>master</b>: Master node.</description></item>
+        /// <item><description><b>segment</b>: Segment node.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the performance metrics of all nodes are returned.</para>
+        /// <para>If you do not specify this parameter, the monitoring metrics of all nodes are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,13 +66,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The nodes for which you want to query performance metrics. Separate multiple values with commas (,). Example: <c>master-10******1,master-10******2</c>. You can call the <a href="https://help.aliyun.com/document_detail/390136.html">DescribeDBClusterNode</a> operation to query the names of nodes.</para>
-        /// <para>You can also filter the nodes based on their metric values. Valid values:</para>
+        /// <para>The names of the nodes for which you want to query monitoring metrics. Separate multiple node names with commas (,), such as <c>master-10******1,master-10******2</c>. You can call the <a href="https://help.aliyun.com/document_detail/390136.html">DescribeDBClusterNode</a> operation to obtain the node names.</para>
+        /// <para>You can also filter nodes based on the values of monitoring metrics. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>top10</b>: the 10 nodes that have the highest metric values.</description></item>
-        /// <item><description><b>top20</b>: the 20 nodes that have the highest metric values.</description></item>
-        /// <item><description><b>bottom10</b>: the 10 nodes that have the lowest metric values.</description></item>
-        /// <item><description><b>bottom20</b>: the 20 nodes that have the lowest metric values.</description></item>
+        /// <item><description><b>top10</b>: The top 10 nodes with the highest monitoring metric values.</description></item>
+        /// <item><description><b>top20</b>: The top 20 nodes with the highest monitoring metric values.</description></item>
+        /// <item><description><b>bottom10</b>: The bottom 10 nodes with the lowest monitoring metric values.</description></item>
+        /// <item><description><b>bottom20</b>: The bottom 20 nodes with the lowest monitoring metric values.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDTHH:mmZ</c> format.</para>
+        /// <para>The start time of the query. Specify the time in the <c>YYYY-MM-DDTHH:mmZ</c> format.</para>
         /// <remarks>
-        /// <para>You can query monitoring information only within the last 30 days.</para>
+        /// <para>You can query monitoring information only for the last 30 days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

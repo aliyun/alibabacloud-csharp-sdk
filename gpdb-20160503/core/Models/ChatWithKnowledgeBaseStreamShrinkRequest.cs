@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API operation to view the instance IDs of all AnalyticDB for PostgreSQL instances in the specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return recall results. Default value: false.</para>
+        /// <para>Specifies whether to return the recall results. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeKnowledgeBaseResults { get; set; }
 
         /// <summary>
-        /// <para>The knowledge retrieval parameter object. If this parameter is not specified, only chat is performed.</para>
+        /// <para>The knowledge retrieval parameters. If this parameter is not specified, only the chat feature is used.</para>
         /// </summary>
         [NameInMap("KnowledgeParams")]
         [Validation(Required=false)]
         public string KnowledgeParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>The large language model (LLM) invocation parameter object.</para>
+        /// <para>The call parameters for the large language model (LLM).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ModelParams")]
@@ -53,17 +53,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The system prompt template. The template must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If not specified, this part does not take effect.</para>
+        /// <para>The system prompt template. It must include {{ text_chunks }}, {{ user_system_prompt }}, {{ graph_entities }}, and {{ graph_relations }}. If this parameter is not specified, this part does not take effect.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;参考以下知识回答问题:{{ text_chunks }}&quot;</para>
+        /// <para>&quot;Answer the question based on the following knowledge: {{ text_chunks }}&quot;</para>
         /// </summary>
         [NameInMap("PromptParams")]
         [Validation(Required=false)]
         public string PromptParams { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

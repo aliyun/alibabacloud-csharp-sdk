@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceNetInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint that is used to connect to the instance.</para>
+        /// <para>The database endpoint.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the information about all endpoints of the instance is returned.</para>
+        /// <para>If you do not specify this parameter, the information about all database endpoints is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

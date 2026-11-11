@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListDatabaseExtensionsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the target region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. The following restrictions apply:</para>
+        /// <para>The database name. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Contain letters, digits, and underscores (_).</description></item>
-        /// <item><description>Must start with a letter.</description></item>
-        /// <item><description>Up to 63 characters in length.</description></item>
+        /// <item><description>It can contain only letters, digits, and underscores (_).</description></item>
+        /// <item><description>It must start with a letter.</description></item>
+        /// <item><description>It can be up to 63 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

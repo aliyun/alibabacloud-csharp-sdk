@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Automated: automatic backup</description></item>
-        /// <item><description>Manual: manual backup</description></item>
+        /// <item><description>Automated: automatic backup.</description></item>
+        /// <item><description>Manual: manual backup.</description></item>
         /// </list>
-        /// <para>If this parameter is not specified, all backup tasks are returned.</para>
+        /// <para>If you do not specify this parameter, all backup tasks are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Automated</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The paging token. Do not specify this parameter for the first query. For subsequent queries, specify the NextToken value returned in the previous response.</para>
+        /// <para>The paging token for a paged query. Do not specify this parameter for the first request. For subsequent requests, specify the NextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the Supabase instance. You can obtain instance ID from the Supabase page in the console.</para>
+        /// <para>Instance ID of the Supabase instance. You can obtain instance ID on the Supabase page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,10 +56,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
-        /// </remarks>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

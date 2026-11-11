@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FinishReason { get; set; }
 
                 /// <summary>
-                /// <para>The response index.</para>
+                /// <para>The index of the reply.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? Index { get; set; }
 
                 /// <summary>
-                /// <para>The large language model response.</para>
+                /// <para>The response message from the large language model.</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string ReasoningContent { get; set; }
 
                     /// <summary>
-                    /// <para>The message role. Valid values:</para>
+                    /// <para>The role of the message. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>system</description></item>
                     /// <item><description>user</description></item>
-                    /// <item><description>assistant.</description></item>
+                    /// <item><description>assistant</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         }
 
                         /// <summary>
-                        /// <para>ID。</para>
+                        /// <para>The ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>&quot;chatcmpl-c1bebafa-cc48-44e2-88c6-1a3572952f8e&quot;</para>
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens used by the large language model output.</para>
+            /// <para>The number of tokens used for the large language model output.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsage Usage { get; set; }
             public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsage : TeaModel {
                 /// <summary>
-                /// <para>The number of tokens consumed for generating the content.</para>
+                /// <para>The number of tokens consumed to generate the content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>42</para>
@@ -205,14 +205,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? PromptTokens { get; set; }
 
                 /// <summary>
-                /// <para>The prompt token details.</para>
+                /// <para>The details of the prompt tokens.</para>
                 /// </summary>
                 [NameInMap("PromptTokensDetails")]
                 [Validation(Required=false)]
                 public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsagePromptTokensDetails PromptTokensDetails { get; set; }
                 public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsagePromptTokensDetails : TeaModel {
                     /// <summary>
-                    /// <para>The number of tokens that hit the cache.</para>
+                    /// <para>The number of cache hit tokens.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>24</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<string> Entities { get; set; }
 
             /// <summary>
-            /// <para>The recall items.</para>
+            /// <para>The recalled items.</para>
             /// </summary>
             [NameInMap("Matches")]
             [Validation(Required=false)]
@@ -289,8 +289,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The public URL of the image in the query result. The URL is valid for 2 hours by default.</para>
-                /// <para>You can specify a custom validity period by using the UrlExpiration parameter.</para>
+                /// <para>The public URL of the image in the query result. The default validity period is 2 hours. You can specify the validity period by using the UrlExpiration request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dailyshort-sh.oss-cn-shanghai.aliyuncs.com/vod-8efba5/f06147795c6c71f080605420848d0302/0ca34d5743a84bf7c68f489a60715dac-ld.mp4">http://dailyshort-sh.oss-cn-shanghai.aliyuncs.com/vod-8efba5/f06147795c6c71f080605420848d0302/0ca34d5743a84bf7c68f489a60715dac-ld.mp4</a></para>
@@ -300,9 +299,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FileURL { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of this vector data entry.</para>
+                /// <para>The unique ID of the vector data.</para>
                 /// <remarks>
-                /// <para>If this value is empty, the database automatically generates a UUID. If this value is not empty and conflicts with an existing ID in the database, the API data overwrites the existing value in the database.</para>
+                /// <para>If this parameter is empty, the ID is automatically generated by the database uuidgen. If this parameter is not empty and conflicts with an existing ID in the database, the value in the database is updated with the data from the API.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -313,7 +312,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The metadata generated by the document loader during loading.</para>
+                /// <para>The metadata generated during document loading.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;page&quot;:1}</para>
@@ -340,7 +339,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public double? RerankScore { get; set; }
 
                 /// <summary>
-                /// <para>The source of the retrieve result. A value of 1 indicates AISearch retrieve, 2 indicates full-text index retrieve, and 3 indicates multi-channel recall.</para>
+                /// <para>The source of the retrieval result. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: AISearch.</description></item>
+                /// <item><description>2: Full-text index.</description></item>
+                /// <item><description>3: Dual-channel recall.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.12</para>
@@ -350,7 +354,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? RetrievalSource { get; set; }
 
                 /// <summary>
-                /// <para>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified during index creation (l2, ip, or cosine).</para>
+                /// <para>The similarity score of the data. The scoring algorithm depends on the algorithm specified when the index is created, such as l2, ip, or cosine.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -369,7 +373,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The relation names.</para>
+            /// <para>The relationship name.</para>
             /// </summary>
             [NameInMap("Relations")]
             [Validation(Required=false)]
@@ -389,7 +393,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The API execution status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>success</b>: The execution is successful.</description></item>
-            /// <item><description><b>fail</b>: The execution failed.</description></item>
+            /// <item><description><b>fail</b>: The execution fails.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -410,16 +414,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? Tokens { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens or entries consumed by document understanding or embedding.</para>
+            /// <para>The number of tokens or items consumed for document understanding or embedding.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultUsage Usage { get; set; }
             public class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultUsage : TeaModel {
                 /// <summary>
-                /// <para>The number of tokens used during vectorization.</para>
+                /// <para>The number of tokens used for vectorization.</para>
                 /// <remarks>
-                /// <para>A token is the smallest unit into which input text is segmented. A token can be a word, a phrase, a punctuation mark, or a character.</para>
+                /// <para>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

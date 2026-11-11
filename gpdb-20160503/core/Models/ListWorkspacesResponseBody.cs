@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<ListWorkspacesResponseBodyItems> Items { get; set; }
         public class ListWorkspacesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The list of API keys for the workspace.</para>
+            /// <para>The list of API keys in the workspace.</para>
             /// </summary>
             [NameInMap("Apikeys")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public List<ListWorkspacesResponseBodyItemsApikeysAuthServices> AuthServices { get; set; }
                 public class ListWorkspacesResponseBodyItemsApikeysAuthServices : TeaModel {
                     /// <summary>
-                    /// <para>The service ID.</para>
+                    /// <para>The ID of the service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>agdb-eqxwj5tj5ojx</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string ServiceId { get; set; }
 
                     /// <summary>
-                    /// <para>The service type. Valid values:</para>
+                    /// <para>The type of the service. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>memory</description></item>
                     /// <item><description>drama</description></item>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 }
 
                 /// <summary>
-                /// <para>The creation time of the API key.</para>
+                /// <para>The time when the API key was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-09T02:26:48Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the workspace was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-09T04:54:08Z</para>
@@ -129,26 +129,50 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public List<ListWorkspacesResponseBodyItemsServicesComponents> Components { get; set; }
                 public class ListWorkspacesResponseBodyItemsServicesComponents : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>2026-03-09T02:26:48Z</para>
+                    /// </summary>
                     [NameInMap("CreateTime")]
                     [Validation(Required=false)]
                     public string CreateTime { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
                     [NameInMap("Cu")]
                     [Validation(Required=false)]
                     public string Cu { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>True</para>
+                    /// </summary>
                     [NameInMap("DeletionProtection")]
                     [Validation(Required=false)]
                     public bool? DeletionProtection { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>sas-xxxx</para>
+                    /// </summary>
                     [NameInMap("componentId")]
                     [Validation(Required=false)]
                     public string ComponentId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>game</para>
+                    /// </summary>
                     [NameInMap("componentType")]
                     [Validation(Required=false)]
                     public string ComponentType { get; set; }
@@ -156,7 +180,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the workspace was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-09T02:26:48Z</para>
@@ -166,7 +190,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The compute resource.</para>
+                /// <para>The compute resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -175,6 +199,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string Cu { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("DeletionProtection")]
                 [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }
@@ -190,15 +218,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The billing type. Valid values:</para>
+                /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
                 /// <item><description><b>PREPAY</b>: subscription.</description></item>
                 /// </list>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>If this parameter is not specified, the default value is pay-as-you-go.</description></item>
-                /// <item><description>In subscription billing mode, a discount is available when you purchase a duration of one year or longer. Select the billing type as needed.</description></item>
+                /// <item><description>If this parameter is not specified, the default value is POSTPAY.</description></item>
+                /// <item><description>In subscription mode, a discount is provided if you purchase a subscription for one year or longer. Select a billing method based on your business requirements.</description></item>
                 /// </list>
                 /// </remarks>
                 /// 
@@ -220,7 +248,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Plan { get; set; }
 
                 /// <summary>
-                /// <para>The service ID.</para>
+                /// <para>The ID of the service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agdb-xxxx</para>
@@ -230,7 +258,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string ServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The service name.</para>
+                /// <para>The name of the service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agdb-xxxx</para>
@@ -240,7 +268,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// <para>The service type. Valid values:</para>
+                /// <para>The type of the service. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>memory</description></item>
                 /// <item><description>drama</description></item>
@@ -254,7 +282,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string ServiceType { get; set; }
 
                 /// <summary>
-                /// <para>The service status. Valid values:</para>
+                /// <para>The status of the service. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>creating: The service is being created.</description></item>
                 /// <item><description>active: The service is running.</description></item>
@@ -270,7 +298,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gp-ws-wkb4fp3j9u79ha</para>
@@ -280,10 +308,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// <list type="bullet">
-            /// <item><description>Maximum length: 50.</description></item>
-            /// <item><description>Must be unique.</description></item>
+            /// <item><description>The maximum length is 50 characters.</description></item>
+            /// <item><description>The name must be unique.</description></item>
             /// <item><description>Special characters are not allowed.</description></item>
             /// </list>
             /// 
@@ -297,7 +325,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Default value: 10.</para>
+        /// <para>The maximum number of entries to return in this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -307,7 +335,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -327,7 +355,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -337,7 +365,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -347,7 +375,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

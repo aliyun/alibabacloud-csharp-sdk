@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSecretValueRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: <c>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</c>.</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) that uniquely specifies the logon credentials and permissions of the Data API account created by the user. Format: <c>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</c></para>
         /// <remarks>
-        /// <para> You must specify one of the SecretArn and SecretName parameters.</para>
+        /// <para>Specify either this parameter or the SecretName parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecretArn { get; set; }
 
         /// <summary>
-        /// <para>The name of the access credential.</para>
+        /// <para>The name of the user credential.</para>
         /// <remarks>
-        /// <para> You must specify one of the SecretArn and SecretName parameters.</para>
+        /// <para>Specify either this parameter or the SecretArn parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</para>
+        /// <para>The ID of the workspace that consists of multiple database instances. This parameter and the DBInstanceId parameter cannot be empty at the same time. If both parameters are specified, this parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-ws-*****</para>

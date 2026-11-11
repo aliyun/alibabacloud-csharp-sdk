@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The API execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: The execution is successful.</description></item>
-        /// <item><description><b>fail</b>: The execution failed.</description></item>
+        /// <item><description><b>success</b>: Execution succeeded.</description></item>
+        /// <item><description><b>fail</b>: Execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The total number of tokens consumed.</para>
+        /// <para>The total number of consumed tokens.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

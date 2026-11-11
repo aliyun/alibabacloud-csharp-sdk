@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint for API debugging.</para>
+        /// <para>The internal URL for API debugging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1/api-docs</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PrivateApiDevUrl { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint of the workbench.</para>
+        /// <para>The internal URL of the workbench.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PrivateWorkbenchUrl { get; set; }
 
         /// <summary>
-        /// <para>The public endpoint for API debugging.</para>
+        /// <para>The public URL for API debugging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.8.8.8/api-docs</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PublicApiDevUrl { get; set; }
 
         /// <summary>
-        /// <para>The public endpoint of the workbench.</para>
+        /// <para>The public URL of the workbench.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.8.8.8</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in the IP address whitelist group, separated by commas (,).</para>
+        /// <para>The list of IP addresses in the IP address whitelist, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -112,8 +112,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The service status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>deploying: being deployed.</description></item>
-        /// <item><description>active: running.</description></item>
+        /// <item><description>deploying: Deploying.</description></item>
+        /// <item><description>active: Running.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

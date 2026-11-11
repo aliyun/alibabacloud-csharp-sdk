@@ -1,3 +1,7 @@
+2026-11-11 Version: 3.15.0
+- Support API GetSaasDataUnitUsage.
+
+
 2026-10-09 Version: 3.14.0
 - Support API CreateSupabaseBackup.
 - Support API DescribeSupabaseBackupPolicy.

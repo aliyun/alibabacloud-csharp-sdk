@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDownloadSQLLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of download records.</para>
+        /// <para>The list of download records.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribeDownloadSQLLogsResponseBodyRecords> Records { get; set; }
         public class DescribeDownloadSQLLogsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>Download record ID.</para>
+            /// <para>The ID of the download record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1150</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? DownloadId { get; set; }
 
             /// <summary>
-            /// <para>Download link.</para>
+            /// <para>The download URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>Error message.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Error message</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ExceptionMsg { get; set; }
 
             /// <summary>
-            /// <para>File name.</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20220509113448-20220509173448.csv</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>Task status, with possible values being:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>running</b>: Downloading.</description></item>
             /// <item><description><b>finished</b>: Completed.</description></item>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FDE9942A-D919-527B-B559-5D0F6F20CCEC</para>

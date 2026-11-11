@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic recovery points. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.
-        /// If this parameter is not specified, false is used.</description></item>
+        /// <item><description>true: enables automatic recovery points.</description></item>
+        /// <item><description>false: disables automatic recovery points.
+        /// Default value: false.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("EnableRecoveryPoint")]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The interval for the automatic creation of recovery points. Unit: hours. Valid values: 1/6 (10 minutes), 1/2 (30 minutes), 1, 2, 4, and 8. This parameter takes effect only when EnableRecoveryPoint is set to true. If this parameter is not specified, the default value 1 is used. If EnableRecoveryPoint is set to false, this parameter is ignored.</para>
+        /// <para>The interval for the automatic creation of recovery points. Unit: hours. Valid values: 1/6 (10 minutes), 1/2 (30 minutes), 1, 2, 4, and 8. This parameter takes effect only when EnableRecoveryPoint is set to true. If EnableRecoveryPoint is set to true and this parameter is not specified, the default value 1 is used. If EnableRecoveryPoint is set to false, this parameter is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

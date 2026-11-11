@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the queried time range.</para>
+        /// <para>The end time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-03T15:10Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The list of performance metrics.</para>
+        /// <para>The list of performance metric values for data sharing.</para>
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The details of the time series data for the metric.</para>
+            /// <para>The performance metric series.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The data points of the time series.</para>
+                /// <para>The list of performance metric values, which consists of one or more values.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<DescribeDataSharePerformanceResponseBodyPerformanceKeysSeriesValues> Values { get; set; }
                 public class DescribeDataSharePerformanceResponseBodyPerformanceKeysSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>An array that contains the timestamp and the corresponding metric value.</para>
+                    /// <para>The performance metric value.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start of the queried time range.</para>
+        /// <para>The start time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-03T15:00Z</para>
