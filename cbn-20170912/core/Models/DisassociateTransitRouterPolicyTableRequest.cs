@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run on the request. Checks include permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run before sending the request. The dry run includes permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, the transit router policy table association is removed.</description></item>
-        /// <item><description><b>true</b>: sends a dry run request. The system only performs the check and does not remove the transit router policy table association. The system checks whether required parameters are specified and whether the request format is valid. If the request fails the check, an error is returned. If the request passes the check, the corresponding request ID is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. After the request passes the dry run, the network instance connection is disassociated from the transit router policy table.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without sending the request. The system checks whether required parameters are specified and validates the request format. If the request fails the dry run, an error is returned. If the request passes the dry run, the request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteTransitRouterPolicyTableResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C46FF5A8-C5F0-4024-8262-B16B639225A0</para>
         /// </summary>

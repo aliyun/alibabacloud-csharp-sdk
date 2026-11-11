@@ -20,11 +20,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>If NextToken is empty, no subsequent query is required.</description></item>
-        /// <item><description>If NextToken is returned, the value indicates the token for the next query.</description></item>
-        /// </list>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
+        /// <para>If NextToken is empty, no next query is to be sent.
+        /// If NextToken is returned, the value indicates the token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dd20****</para>
@@ -41,15 +39,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<DescribeTransitRouterPolicyTablesResponseBodyPolicyTables> PolicyTables { get; set; }
         public class DescribeTransitRouterPolicyTablesResponseBodyPolicyTables : TeaModel {
             /// <summary>
-            /// <para>The network instance attachments associated with the policy route table.</para>
+            /// <para>The attachments associated with the policy route table.</para>
             /// </summary>
             [NameInMap("Attachments")]
             [Validation(Required=false)]
             public List<string> Attachments { get; set; }
 
             /// <summary>
-            /// <para>The time when the policy route table was created.</para>
-            /// <para>The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the policy route table was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -80,7 +77,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The policy routing table instance ID.</para>
+            /// <para>The ID of the policy route table instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ptbl-44m0p68spvlrqq****</para>
@@ -118,7 +115,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags added to the policy route table.</para>
+            /// <para>The tags that are added to the policy route table.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

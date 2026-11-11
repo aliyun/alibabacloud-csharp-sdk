@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteTransitRouterPolicyBasedRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, and you must ensure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run on the deletion request. The dry run includes permission and instance status checks. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the deletion request. The system checks items such as permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends a normal request. After the request passes the dry run, the policy-based route is deleted.</description></item>
-        /// <item><description><b>true</b>: sends a dry run request. The system only performs the dry run and does not delete the policy-based route. The system checks whether required parameters are specified and whether the request format is valid. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the dry run, the policy-based routing rule is deleted.</description></item>
+        /// <item><description><b>true</b>: performs a dry run only and does not delete the policy-based routing rule. The system checks whether required parameters are specified and whether the request format is valid. If the request fails the dry run, an error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

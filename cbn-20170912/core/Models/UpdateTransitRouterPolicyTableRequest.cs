@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class UpdateTransitRouterPolicyTableRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client and make sure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the policy route table.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run on the request, including checks on permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request, including permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, the policy route table is updated.</description></item>
-        /// <item><description><b>true</b>: sends a dry run request. Only the check is performed, and the policy route table is not updated. Check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check passes, the request ID is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request and updates the policy route table if the request passes the check.</description></item>
+        /// <item><description><b>true</b>: sends a dry run request and performs only the check without updating the policy route table. The check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check passes, the request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the policy route table.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string AttachmentId { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the policy routing table.</para>
+            /// <para>The policy routing table instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ptbl-123adfzcx</para>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The status of the association. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Active</b>: Active.</description></item>
-            /// <item><description><b>Associating</b>: Associating.</description></item>
-            /// <item><description><b>Dissociating</b>: Dissociating.</description></item>
+            /// <item><description><b>Active</b>: active.</description></item>
+            /// <item><description><b>Associating</b>: associating.</description></item>
+            /// <item><description><b>Dissociating</b>: dissociating.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page in a paginated query.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query in a paginated query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>

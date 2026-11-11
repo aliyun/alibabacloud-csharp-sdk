@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeTransitRouterPolicyTableAssociationsRequest : TeaModel {
         /// <summary>
-        /// <para>The information about filter conditions. </para>
-        /// <para>You can specify up to five filter conditions at a time.</para>
+        /// <para>The filter conditions. You can specify up to five filter conditions at a time.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -20,11 +19,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The filter condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PolicyTableId</b>: The instance ID of the policy routing table.</description></item>
-            /// <item><description><b>AttachmentId</b>: The instance ID of the network connectivity instance.</description></item>
-            /// <item><description><b>AssociationId</b>: The instance ID of the policy routing table associate relationship.</description></item>
+            /// <item><description><b>PolicyTableId</b>: the policy routing table ID.</description></item>
+            /// <item><description><b>AttachmentId</b>: the network connectivity instance ID.</description></item>
+            /// <item><description><b>AssociationId</b>: the policy routing table associate relationship instance ID.</description></item>
             /// </list>
-            /// <para>By default, multiple filter conditions are connected by the <b>AND</b> operator. A match is found only when all filter conditions are met.</para>
+            /// <para>By default, multiple filter conditions are connected by the <b>AND</b> logical operator. A result is returned only when all filter conditions are met.</para>
             /// <para>You can specify up to five filter conditions at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -36,7 +35,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The value of the filter condition.</para>
-            /// <para>Specify the filter value based on <b>Key</b>. You can specify multiple filter values for a single <b>Key</b>. Multiple filter values are connected by the <b>OR</b> operator. A match is found when any of the filter values is met.</para>
+            /// <para>Specify the filter value based on the <b>Key</b> parameter. You can specify multiple filter values for a single <b>Key</b>. Multiple filter values are connected by the <b>OR</b> logical operator. A result is returned when any of the filter values is met.</para>
             /// <para>You can specify up to five filter values for a single filter condition.</para>
             /// </summary>
             [NameInMap("Value")]
@@ -46,7 +45,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return per page in a paginated query. Valid values: 1 to 100.</para>
+        /// <para>The number of entries to return per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -58,8 +57,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, it indicates that no next query is available.</description></item>
-        /// <item><description>If <b>NextToken</b> returns a value, the value is the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is available.</description></item>
+        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

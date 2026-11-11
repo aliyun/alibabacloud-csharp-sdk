@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate the value from your client. Make sure that the value is unique across different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client and make sure that the value is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run on the request. The dry run includes checks on permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends a normal request. The system performs the check and directly associates the policy route table if the check passes.</description></item>
-        /// <item><description><b>true</b>: sends a dry run request. The system only performs the check and does not associate the policy route table. Check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check passes, the request ID is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request, performs the check, and associates the policy route table if the check passes.</description></item>
+        /// <item><description><b>true</b>: sends a dry run request, performs only the check, and does not associate the policy route table. The check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check passes, the request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

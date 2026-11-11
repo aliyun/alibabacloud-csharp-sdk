@@ -1,3 +1,9 @@
+2026-11-11 Version: 1.7.1
+- Update API CreateTransitRouterPolicyTable: add request parameters Tag.$.Key.
+- Update API CreateTransitRouterPolicyTable: add request parameters Tag.$.Value.
+- Update API DescribeTransitRouterPolicyTables: add request parameters Tag.
+
+
 2026-11-10 Version: 1.7.0
 - Support API AssociateTransitRouterPolicyTable.
 - Support API CreateTransitRouterPolicyBasedRoute.
