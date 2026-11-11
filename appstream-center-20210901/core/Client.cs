@@ -6358,6 +6358,126 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the list of Alibaba Cloud accounts to which the current image is shared.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeShareImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeShareImageResponse
+        /// </returns>
+        public DescribeShareImageResponse DescribeShareImageWithOptions(DescribeShareImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeShareImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeShareImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of Alibaba Cloud accounts to which the current image is shared.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeShareImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeShareImageResponse
+        /// </returns>
+        public async Task<DescribeShareImageResponse> DescribeShareImageWithOptionsAsync(DescribeShareImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeShareImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeShareImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of Alibaba Cloud accounts to which the current image is shared.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeShareImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeShareImageResponse
+        /// </returns>
+        public DescribeShareImageResponse DescribeShareImage(DescribeShareImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeShareImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of Alibaba Cloud accounts to which the current image is shared.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeShareImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeShareImageResponse
+        /// </returns>
+        public async Task<DescribeShareImageResponse> DescribeShareImageAsync(DescribeShareImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeShareImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a development host.</para>
         /// </summary>
         /// 
@@ -6602,6 +6722,150 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeWuyingServerEipInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms the successful verification of the image or application creation process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FinishValidateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FinishValidateResponse
+        /// </returns>
+        public FinishValidateResponse FinishValidateWithOptions(FinishValidateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionId))
+            {
+                body["AppVersionId"] = request.AppVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishValidate",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishValidateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms the successful verification of the image or application creation process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FinishValidateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FinishValidateResponse
+        /// </returns>
+        public async Task<FinishValidateResponse> FinishValidateWithOptionsAsync(FinishValidateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionId))
+            {
+                body["AppVersionId"] = request.AppVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishValidate",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishValidateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms the successful verification of the image or application creation process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FinishValidateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FinishValidateResponse
+        /// </returns>
+        public FinishValidateResponse FinishValidate(FinishValidateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FinishValidateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms the successful verification of the image or application creation process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FinishValidateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FinishValidateResponse
+        /// </returns>
+        public async Task<FinishValidateResponse> FinishValidateAsync(FinishValidateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FinishValidateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7702,6 +7966,194 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the effective versions of an image in various regions, along with its applications, distribution configurations, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the effective image versions in various regions by ImageId. If a newer version is configured in the same region, the newer version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEffectiveImageByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEffectiveImageByIdResponse
+        /// </returns>
+        public GetEffectiveImageByIdResponse GetEffectiveImageByIdWithOptions(GetEffectiveImageByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentLocale))
+            {
+                body["ContentLocale"] = request.ContentLocale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFilter))
+            {
+                body["IgnoreFilter"] = request.IgnoreFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                body["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowHidden))
+            {
+                body["ShowHidden"] = request.ShowHidden;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEffectiveImageById",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEffectiveImageByIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the effective versions of an image in various regions, along with its applications, distribution configurations, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the effective image versions in various regions by ImageId. If a newer version is configured in the same region, the newer version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEffectiveImageByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEffectiveImageByIdResponse
+        /// </returns>
+        public async Task<GetEffectiveImageByIdResponse> GetEffectiveImageByIdWithOptionsAsync(GetEffectiveImageByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentLocale))
+            {
+                body["ContentLocale"] = request.ContentLocale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFilter))
+            {
+                body["IgnoreFilter"] = request.IgnoreFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                body["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowHidden))
+            {
+                body["ShowHidden"] = request.ShowHidden;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEffectiveImageById",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEffectiveImageByIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the effective versions of an image in various regions, along with its applications, distribution configurations, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the effective image versions in various regions by ImageId. If a newer version is configured in the same region, the newer version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEffectiveImageByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEffectiveImageByIdResponse
+        /// </returns>
+        public GetEffectiveImageByIdResponse GetEffectiveImageById(GetEffectiveImageByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetEffectiveImageByIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the effective versions of an image in various regions, along with its applications, distribution configurations, and tags.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the effective image versions in various regions by ImageId. If a newer version is configured in the same region, the newer version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEffectiveImageByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEffectiveImageByIdResponse
+        /// </returns>
+        public async Task<GetEffectiveImageByIdResponse> GetEffectiveImageByIdAsync(GetEffectiveImageByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetEffectiveImageByIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves file upload information.</para>
         /// </summary>
         /// 
@@ -7838,6 +8290,334 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetFileUploadInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the image details, adapted applications, and region distribution information based on the image ID or version ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one of ImageId and VersionId. If you specify only ImageId, the online version is queried. If you specify VersionId, the specified version is queried. If you specify both parameters, the VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetImageByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageByIdResponse
+        /// </returns>
+        public GetImageByIdResponse GetImageByIdWithOptions(GetImageByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFilter))
+            {
+                body["IgnoreFilter"] = request.IgnoreFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowHidden))
+            {
+                body["ShowHidden"] = request.ShowHidden;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageById",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageByIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the image details, adapted applications, and region distribution information based on the image ID or version ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one of ImageId and VersionId. If you specify only ImageId, the online version is queried. If you specify VersionId, the specified version is queried. If you specify both parameters, the VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetImageByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageByIdResponse
+        /// </returns>
+        public async Task<GetImageByIdResponse> GetImageByIdWithOptionsAsync(GetImageByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreFilter))
+            {
+                body["IgnoreFilter"] = request.IgnoreFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowHidden))
+            {
+                body["ShowHidden"] = request.ShowHidden;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageById",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageByIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the image details, adapted applications, and region distribution information based on the image ID or version ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one of ImageId and VersionId. If you specify only ImageId, the online version is queried. If you specify VersionId, the specified version is queried. If you specify both parameters, the VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetImageByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageByIdResponse
+        /// </returns>
+        public GetImageByIdResponse GetImageById(GetImageByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetImageByIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the image details, adapted applications, and region distribution information based on the image ID or version ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one of ImageId and VersionId. If you specify only ImageId, the online version is queried. If you specify VersionId, the specified version is queried. If you specify both parameters, the VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetImageByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageByIdResponse
+        /// </returns>
+        public async Task<GetImageByIdResponse> GetImageByIdAsync(GetImageByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetImageByIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution regions, distribution status, and progress of an image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the corresponding list of region IDs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetImageDistributeInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDistributeInfoResponse
+        /// </returns>
+        public GetImageDistributeInfoResponse GetImageDistributeInfoWithOptions(GetImageDistributeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageDistributeInfo",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageDistributeInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution regions, distribution status, and progress of an image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the corresponding list of region IDs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetImageDistributeInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDistributeInfoResponse
+        /// </returns>
+        public async Task<GetImageDistributeInfoResponse> GetImageDistributeInfoWithOptionsAsync(GetImageDistributeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageDistributeInfo",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageDistributeInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution regions, distribution status, and progress of an image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the corresponding list of region IDs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetImageDistributeInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDistributeInfoResponse
+        /// </returns>
+        public GetImageDistributeInfoResponse GetImageDistributeInfo(GetImageDistributeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetImageDistributeInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution regions, distribution status, and progress of an image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the corresponding list of region IDs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetImageDistributeInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDistributeInfoResponse
+        /// </returns>
+        public async Task<GetImageDistributeInfoResponse> GetImageDistributeInfoAsync(GetImageDistributeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetImageDistributeInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7991,13 +8771,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation to retrieve the credentials and connection information required for a client to establish an MQTT connection.</para>
+        /// <para>Retrieves the credentials and connection information required for a client to establish an MQTT connection.</para>
         /// <ol>
-        /// <item><description>Use <c>MqttUsername</c> and <c>MqttPassword</c> as the username and password for the MQTT client connection.</description></item>
-        /// <item><description>Use <c>MqttEndpoint</c> as the connection endpoint. If the VPC network access requirements are met, you can use <c>MqttVPCEndpoint</c>. <c>MqttInstanceId</c> is used for token authentication, and <c>MqttGroupId</c> is used to concatenate the MQTT ClientId.</description></item>
-        /// <item><description>Distinguish between publish and subscribe topics based on the <c>topic</c>, <c>type</c>, and <c>permission</c> of each item in <c>TopicList</c>. <c>W</c> indicates the publish permission, and <c>R</c> indicates the subscribe permission.</description></item>
-        /// <item><description><c>ExpireTimeStamp</c> is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned by the operation.
-        /// The device identity and request IDs in the documentation are demo data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
+        /// <item><description>Use MqttUsername and MqttPassword as the username and password when connecting the MQTT client.</description></item>
+        /// <item><description>Use MqttEndpoint as the connection endpoint. If the client meets the VPC network access requirements, you can use MqttVPCEndpoint. MqttInstanceId is used for token authentication, and MqttGroupId is used to concatenate the MQTT ClientId.</description></item>
+        /// <item><description>Distinguish between publish and subscribe topics based on the topic, type, and permission fields of each item in TopicList. W indicates publish permission, and R indicates subscribe permission.</description></item>
+        /// <item><description>ExpireTimeStamp is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
+        /// The device identity and request IDs in the documentation are demonstration data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -8067,13 +8847,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation to retrieve the credentials and connection information required for a client to establish an MQTT connection.</para>
+        /// <para>Retrieves the credentials and connection information required for a client to establish an MQTT connection.</para>
         /// <ol>
-        /// <item><description>Use <c>MqttUsername</c> and <c>MqttPassword</c> as the username and password for the MQTT client connection.</description></item>
-        /// <item><description>Use <c>MqttEndpoint</c> as the connection endpoint. If the VPC network access requirements are met, you can use <c>MqttVPCEndpoint</c>. <c>MqttInstanceId</c> is used for token authentication, and <c>MqttGroupId</c> is used to concatenate the MQTT ClientId.</description></item>
-        /// <item><description>Distinguish between publish and subscribe topics based on the <c>topic</c>, <c>type</c>, and <c>permission</c> of each item in <c>TopicList</c>. <c>W</c> indicates the publish permission, and <c>R</c> indicates the subscribe permission.</description></item>
-        /// <item><description><c>ExpireTimeStamp</c> is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned by the operation.
-        /// The device identity and request IDs in the documentation are demo data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
+        /// <item><description>Use MqttUsername and MqttPassword as the username and password when connecting the MQTT client.</description></item>
+        /// <item><description>Use MqttEndpoint as the connection endpoint. If the client meets the VPC network access requirements, you can use MqttVPCEndpoint. MqttInstanceId is used for token authentication, and MqttGroupId is used to concatenate the MQTT ClientId.</description></item>
+        /// <item><description>Distinguish between publish and subscribe topics based on the topic, type, and permission fields of each item in TopicList. W indicates publish permission, and R indicates subscribe permission.</description></item>
+        /// <item><description>ExpireTimeStamp is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
+        /// The device identity and request IDs in the documentation are demonstration data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -8143,13 +8923,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation to retrieve the credentials and connection information required for a client to establish an MQTT connection.</para>
+        /// <para>Retrieves the credentials and connection information required for a client to establish an MQTT connection.</para>
         /// <ol>
-        /// <item><description>Use <c>MqttUsername</c> and <c>MqttPassword</c> as the username and password for the MQTT client connection.</description></item>
-        /// <item><description>Use <c>MqttEndpoint</c> as the connection endpoint. If the VPC network access requirements are met, you can use <c>MqttVPCEndpoint</c>. <c>MqttInstanceId</c> is used for token authentication, and <c>MqttGroupId</c> is used to concatenate the MQTT ClientId.</description></item>
-        /// <item><description>Distinguish between publish and subscribe topics based on the <c>topic</c>, <c>type</c>, and <c>permission</c> of each item in <c>TopicList</c>. <c>W</c> indicates the publish permission, and <c>R</c> indicates the subscribe permission.</description></item>
-        /// <item><description><c>ExpireTimeStamp</c> is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned by the operation.
-        /// The device identity and request IDs in the documentation are demo data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
+        /// <item><description>Use MqttUsername and MqttPassword as the username and password when connecting the MQTT client.</description></item>
+        /// <item><description>Use MqttEndpoint as the connection endpoint. If the client meets the VPC network access requirements, you can use MqttVPCEndpoint. MqttInstanceId is used for token authentication, and MqttGroupId is used to concatenate the MQTT ClientId.</description></item>
+        /// <item><description>Distinguish between publish and subscribe topics based on the topic, type, and permission fields of each item in TopicList. W indicates publish permission, and R indicates subscribe permission.</description></item>
+        /// <item><description>ExpireTimeStamp is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
+        /// The device identity and request IDs in the documentation are demonstration data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -8173,13 +8953,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation to retrieve the credentials and connection information required for a client to establish an MQTT connection.</para>
+        /// <para>Retrieves the credentials and connection information required for a client to establish an MQTT connection.</para>
         /// <ol>
-        /// <item><description>Use <c>MqttUsername</c> and <c>MqttPassword</c> as the username and password for the MQTT client connection.</description></item>
-        /// <item><description>Use <c>MqttEndpoint</c> as the connection endpoint. If the VPC network access requirements are met, you can use <c>MqttVPCEndpoint</c>. <c>MqttInstanceId</c> is used for token authentication, and <c>MqttGroupId</c> is used to concatenate the MQTT ClientId.</description></item>
-        /// <item><description>Distinguish between publish and subscribe topics based on the <c>topic</c>, <c>type</c>, and <c>permission</c> of each item in <c>TopicList</c>. <c>W</c> indicates the publish permission, and <c>R</c> indicates the subscribe permission.</description></item>
-        /// <item><description><c>ExpireTimeStamp</c> is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned by the operation.
-        /// The device identity and request IDs in the documentation are demo data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
+        /// <item><description>Use MqttUsername and MqttPassword as the username and password when connecting the MQTT client.</description></item>
+        /// <item><description>Use MqttEndpoint as the connection endpoint. If the client meets the VPC network access requirements, you can use MqttVPCEndpoint. MqttInstanceId is used for token authentication, and MqttGroupId is used to concatenate the MQTT ClientId.</description></item>
+        /// <item><description>Distinguish between publish and subscribe topics based on the topic, type, and permission fields of each item in TopicList. W indicates publish permission, and R indicates subscribe permission.</description></item>
+        /// <item><description>ExpireTimeStamp is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
+        /// The device identity and request IDs in the documentation are demonstration data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9790,7 +10570,399 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a deduplicated list of version numbers for undeleted agent instances under a specified tenant, aggregated by agent provider and optionally filtered by agent platform. The results are returned in ascending order by version number.</para>
+        /// <para>Retrieves the Object Storage Service (OSS) endpoint, directory, and Security Token Service (STS) temporary credentials required to upload image task files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, FileType only supports TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUploadInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUploadInfoResponse
+        /// </returns>
+        public GetUploadInfoResponse GetUploadInfoWithOptions(GetUploadInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["FileType"] = request.FileType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUploadInfo",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUploadInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Object Storage Service (OSS) endpoint, directory, and Security Token Service (STS) temporary credentials required to upload image task files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, FileType only supports TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUploadInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUploadInfoResponse
+        /// </returns>
+        public async Task<GetUploadInfoResponse> GetUploadInfoWithOptionsAsync(GetUploadInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["FileType"] = request.FileType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUploadInfo",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUploadInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Object Storage Service (OSS) endpoint, directory, and Security Token Service (STS) temporary credentials required to upload image task files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, FileType only supports TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUploadInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUploadInfoResponse
+        /// </returns>
+        public GetUploadInfoResponse GetUploadInfo(GetUploadInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUploadInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Object Storage Service (OSS) endpoint, directory, and Security Token Service (STS) temporary credentials required to upload image task files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, FileType only supports TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUploadInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUploadInfoResponse
+        /// </returns>
+        public async Task<GetUploadInfoResponse> GetUploadInfoAsync(GetUploadInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUploadInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports an image file from Object Storage Service (OSS) as a custom cloud desktop image and returns the image ID and version ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, only ProductType=CloudDesktop is supported. Upload the image file first, and then pass its OSS object path to initiate the import. You can call GetUploadInfo to obtain upload credentials. After the API returns the image and version IDs, you can call GetImageById or GetImageDistributeInfo to query the creation and distribution status. A successful response indicates that the import request has been accepted, not that the image is already available.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportImageResponse
+        /// </returns>
+        public ImportImageResponse ImportImageWithOptions(ImportImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BootMode))
+            {
+                body["BootMode"] = request.BootMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSecurityCheck))
+            {
+                body["EnableSecurityCheck"] = request.EnableSecurityCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuCategory))
+            {
+                body["GpuCategory"] = request.GpuCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuDriverType))
+            {
+                body["GpuDriverType"] = request.GpuDriverType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseType))
+            {
+                body["LicenseType"] = request.LicenseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                body["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssObjectPath))
+            {
+                body["OssObjectPath"] = request.OssObjectPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
+            {
+                body["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                body["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports an image file from Object Storage Service (OSS) as a custom cloud desktop image and returns the image ID and version ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, only ProductType=CloudDesktop is supported. Upload the image file first, and then pass its OSS object path to initiate the import. You can call GetUploadInfo to obtain upload credentials. After the API returns the image and version IDs, you can call GetImageById or GetImageDistributeInfo to query the creation and distribution status. A successful response indicates that the import request has been accepted, not that the image is already available.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportImageResponse
+        /// </returns>
+        public async Task<ImportImageResponse> ImportImageWithOptionsAsync(ImportImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BootMode))
+            {
+                body["BootMode"] = request.BootMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSecurityCheck))
+            {
+                body["EnableSecurityCheck"] = request.EnableSecurityCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuCategory))
+            {
+                body["GpuCategory"] = request.GpuCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuDriverType))
+            {
+                body["GpuDriverType"] = request.GpuDriverType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseType))
+            {
+                body["LicenseType"] = request.LicenseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                body["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssObjectPath))
+            {
+                body["OssObjectPath"] = request.OssObjectPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
+            {
+                body["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                body["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports an image file from Object Storage Service (OSS) as a custom cloud desktop image and returns the image ID and version ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, only ProductType=CloudDesktop is supported. Upload the image file first, and then pass its OSS object path to initiate the import. You can call GetUploadInfo to obtain upload credentials. After the API returns the image and version IDs, you can call GetImageById or GetImageDistributeInfo to query the creation and distribution status. A successful response indicates that the import request has been accepted, not that the image is already available.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportImageResponse
+        /// </returns>
+        public ImportImageResponse ImportImage(ImportImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports an image file from Object Storage Service (OSS) as a custom cloud desktop image and returns the image ID and version ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, only ProductType=CloudDesktop is supported. Upload the image file first, and then pass its OSS object path to initiate the import. You can call GetUploadInfo to obtain upload credentials. After the API returns the image and version IDs, you can call GetImageById or GetImageDistributeInfo to query the creation and distribution status. A successful response indicates that the import request has been accepted, not that the image is already available.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportImageResponse
+        /// </returns>
+        public async Task<ImportImageResponse> ImportImageAsync(ImportImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a deduplicated list of version numbers of undeleted agent instances under a specified tenant, aggregated by agent provider and optionally filtered by agent platform. The results are returned in ascending order of version numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9836,7 +11008,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a deduplicated list of version numbers for undeleted agent instances under a specified tenant, aggregated by agent provider and optionally filtered by agent platform. The results are returned in ascending order by version number.</para>
+        /// <para>Queries a deduplicated list of version numbers of undeleted agent instances under a specified tenant, aggregated by agent provider and optionally filtered by agent platform. The results are returned in ascending order of version numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9882,7 +11054,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a deduplicated list of version numbers for undeleted agent instances under a specified tenant, aggregated by agent provider and optionally filtered by agent platform. The results are returned in ascending order by version number.</para>
+        /// <para>Queries a deduplicated list of version numbers of undeleted agent instances under a specified tenant, aggregated by agent provider and optionally filtered by agent platform. The results are returned in ascending order of version numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9900,7 +11072,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a deduplicated list of version numbers for undeleted agent instances under a specified tenant, aggregated by agent provider and optionally filtered by agent platform. The results are returned in ascending order by version number.</para>
+        /// <para>Queries a deduplicated list of version numbers of undeleted agent instances under a specified tenant, aggregated by agent provider and optionally filtered by agent platform. The results are returned in ascending order of version numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11130,17 +12302,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization, with support for fuzzy filtering by delivery group ID, delivery group name, application ID, and application name.</para>
+        /// <para>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization. Supports paging and fuzzy filtering by delivery group ID, delivery group name, app ID, and app name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of applications deployed in the delivery group.
-        /// Return scope:</para>
+        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of apps deployed in the delivery group.
+        /// Scope of returned results:</para>
         /// <list type="bullet">
-        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual application authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
-        /// <item><description>Only delivery groups that match the specified ProductType and are not deleted are returned. If no applications are deployed in the delivery group image, the delivery group is not returned.</description></item>
+        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual app authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
+        /// <item><description>Only delivery groups whose product type matches ProductType and that are not deleted are returned. If no apps are deployed in the delivery group image, the delivery group is not returned.</description></item>
         /// <item><description>Results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified delivery groups are listed first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
@@ -11149,16 +12321,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// </list>
         /// <h2>Metric description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the <c>InvalidParameter.ProductType</c> error code is returned. If EndUserId is not specified, the <c>InvalidParameter.UserId</c> error code is returned.</description></item>
-        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b> (a match is hit if the string is contained). If multiple filter conditions are specified, all conditions must be met.</description></item>
+        /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the error code <c>InvalidParameter.ProductType</c> is returned. If EndUserId is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</description></item>
+        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b>. A hit occurs if the string is contained. If multiple filter conditions are specified, all conditions must be met.</description></item>
         /// <item><description>PageNumber starts from 1. Valid values for PageSize: 1 to 100.</description></item>
         /// <item><description>If the user does not have any authorization delivery groups that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</description></item>
-        /// <item><description>Call this operation to query the delivery groups authorized for the user and the applications deployed in the delivery groups.</description></item>
-        /// <item><description>To obtain the application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation by using the returned AppInstanceGroupId and the AppId in Apps.</description></item>
+        /// <item><description>Call this operation to query the delivery groups authorized to the user and the apps deployed in the delivery groups.</description></item>
+        /// <item><description>To obtain the app connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -11233,17 +12405,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization, with support for fuzzy filtering by delivery group ID, delivery group name, application ID, and application name.</para>
+        /// <para>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization. Supports paging and fuzzy filtering by delivery group ID, delivery group name, app ID, and app name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of applications deployed in the delivery group.
-        /// Return scope:</para>
+        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of apps deployed in the delivery group.
+        /// Scope of returned results:</para>
         /// <list type="bullet">
-        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual application authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
-        /// <item><description>Only delivery groups that match the specified ProductType and are not deleted are returned. If no applications are deployed in the delivery group image, the delivery group is not returned.</description></item>
+        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual app authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
+        /// <item><description>Only delivery groups whose product type matches ProductType and that are not deleted are returned. If no apps are deployed in the delivery group image, the delivery group is not returned.</description></item>
         /// <item><description>Results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified delivery groups are listed first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
@@ -11252,16 +12424,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// </list>
         /// <h2>Metric description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the <c>InvalidParameter.ProductType</c> error code is returned. If EndUserId is not specified, the <c>InvalidParameter.UserId</c> error code is returned.</description></item>
-        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b> (a match is hit if the string is contained). If multiple filter conditions are specified, all conditions must be met.</description></item>
+        /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the error code <c>InvalidParameter.ProductType</c> is returned. If EndUserId is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</description></item>
+        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b>. A hit occurs if the string is contained. If multiple filter conditions are specified, all conditions must be met.</description></item>
         /// <item><description>PageNumber starts from 1. Valid values for PageSize: 1 to 100.</description></item>
         /// <item><description>If the user does not have any authorization delivery groups that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</description></item>
-        /// <item><description>Call this operation to query the delivery groups authorized for the user and the applications deployed in the delivery groups.</description></item>
-        /// <item><description>To obtain the application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation by using the returned AppInstanceGroupId and the AppId in Apps.</description></item>
+        /// <item><description>Call this operation to query the delivery groups authorized to the user and the apps deployed in the delivery groups.</description></item>
+        /// <item><description>To obtain the app connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -11336,17 +12508,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization, with support for fuzzy filtering by delivery group ID, delivery group name, application ID, and application name.</para>
+        /// <para>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization. Supports paging and fuzzy filtering by delivery group ID, delivery group name, app ID, and app name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of applications deployed in the delivery group.
-        /// Return scope:</para>
+        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of apps deployed in the delivery group.
+        /// Scope of returned results:</para>
         /// <list type="bullet">
-        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual application authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
-        /// <item><description>Only delivery groups that match the specified ProductType and are not deleted are returned. If no applications are deployed in the delivery group image, the delivery group is not returned.</description></item>
+        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual app authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
+        /// <item><description>Only delivery groups whose product type matches ProductType and that are not deleted are returned. If no apps are deployed in the delivery group image, the delivery group is not returned.</description></item>
         /// <item><description>Results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified delivery groups are listed first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
@@ -11355,16 +12527,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// </list>
         /// <h2>Metric description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the <c>InvalidParameter.ProductType</c> error code is returned. If EndUserId is not specified, the <c>InvalidParameter.UserId</c> error code is returned.</description></item>
-        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b> (a match is hit if the string is contained). If multiple filter conditions are specified, all conditions must be met.</description></item>
+        /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the error code <c>InvalidParameter.ProductType</c> is returned. If EndUserId is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</description></item>
+        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b>. A hit occurs if the string is contained. If multiple filter conditions are specified, all conditions must be met.</description></item>
         /// <item><description>PageNumber starts from 1. Valid values for PageSize: 1 to 100.</description></item>
         /// <item><description>If the user does not have any authorization delivery groups that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</description></item>
-        /// <item><description>Call this operation to query the delivery groups authorized for the user and the applications deployed in the delivery groups.</description></item>
-        /// <item><description>To obtain the application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation by using the returned AppInstanceGroupId and the AppId in Apps.</description></item>
+        /// <item><description>Call this operation to query the delivery groups authorized to the user and the apps deployed in the delivery groups.</description></item>
+        /// <item><description>To obtain the app connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -11383,17 +12555,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization, with support for fuzzy filtering by delivery group ID, delivery group name, application ID, and application name.</para>
+        /// <para>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization. Supports paging and fuzzy filtering by delivery group ID, delivery group name, app ID, and app name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of applications deployed in the delivery group.
-        /// Return scope:</para>
+        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of apps deployed in the delivery group.
+        /// Scope of returned results:</para>
         /// <list type="bullet">
-        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual application authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
-        /// <item><description>Only delivery groups that match the specified ProductType and are not deleted are returned. If no applications are deployed in the delivery group image, the delivery group is not returned.</description></item>
+        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual app authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
+        /// <item><description>Only delivery groups whose product type matches ProductType and that are not deleted are returned. If no apps are deployed in the delivery group image, the delivery group is not returned.</description></item>
         /// <item><description>Results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified delivery groups are listed first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
@@ -11402,16 +12574,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// </list>
         /// <h2>Metric description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the <c>InvalidParameter.ProductType</c> error code is returned. If EndUserId is not specified, the <c>InvalidParameter.UserId</c> error code is returned.</description></item>
-        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b> (a match is hit if the string is contained). If multiple filter conditions are specified, all conditions must be met.</description></item>
+        /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the error code <c>InvalidParameter.ProductType</c> is returned. If EndUserId is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</description></item>
+        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b>. A hit occurs if the string is contained. If multiple filter conditions are specified, all conditions must be met.</description></item>
         /// <item><description>PageNumber starts from 1. Valid values for PageSize: 1 to 100.</description></item>
         /// <item><description>If the user does not have any authorization delivery groups that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</description></item>
-        /// <item><description>Call this operation to query the delivery groups authorized for the user and the applications deployed in the delivery groups.</description></item>
-        /// <item><description>To obtain the application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation by using the returned AppInstanceGroupId and the AppId in Apps.</description></item>
+        /// <item><description>Call this operation to query the delivery groups authorized to the user and the apps deployed in the delivery groups.</description></item>
+        /// <item><description>To obtain the app connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12410,7 +13582,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the list of bookmarks in a specified cloud browser group or delivery group set.</para>
+        /// <para>Performs a paging query to retrieve the list of bookmarks under a specified cloud browser group or delivery group set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12468,7 +13640,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the list of bookmarks in a specified cloud browser group or delivery group set.</para>
+        /// <para>Performs a paging query to retrieve the list of bookmarks under a specified cloud browser group or delivery group set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12526,7 +13698,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the list of bookmarks in a specified cloud browser group or delivery group set.</para>
+        /// <para>Performs a paging query to retrieve the list of bookmarks under a specified cloud browser group or delivery group set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12544,7 +13716,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the list of bookmarks in a specified cloud browser group or delivery group set.</para>
+        /// <para>Performs a paging query to retrieve the list of bookmarks under a specified cloud browser group or delivery group set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12846,14 +14018,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of access restriction URLs configured for a specified browser delivery group or delivery group set by using paging.</para>
+        /// <para>Performs a paging query on the list of access restriction URLs configured for a specified browser delivery group or delivery group set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the list of access restriction URLs configured for a cloud browser delivery group or delivery group set by using paging to view the details of the URLs configured in the current access control policy.
+        /// <para>Invoke this operation to perform a paging query on the list of access restriction URLs (Restricted URLs) configured for a cloud browser delivery group or delivery group set to view the details of the URLs configured in the current access control policy.
         /// You must specify either BrowserInstanceGroupId or BrowserInstanceGroupSetId, but not both. If you specify BrowserInstanceGroupId, the restricted URLs for the delivery group are queried. If you specify BrowserInstanceGroupSetId, the restricted URLs for the delivery group set are queried. Specifying both or neither returns a parameter error.
-        /// You can use Keyword to filter restricted URLs by using a contains match. The match is case-insensitive for English characters. If you do not specify this parameter, all restricted URLs are returned. Pagination is controlled by PageNumber and PageSize. Valid values for PageSize: 1 to 200. Default value: 200. Default value for PageNumber: 0. If the value is less than 1, the first page is returned. In the response, TotalCount indicates the total number of records that meet the filter conditions, and Data contains the records on the current page. If no data is found, an empty array is returned.</para>
+        /// You can use Keyword to filter restricted URLs by using a case-insensitive include match. If this parameter is not specified, all restricted URLs are returned. Pagination is controlled by PageNumber and PageSize. Valid values for PageSize: 1 to 200. Default value: 200. Default value for PageNumber: 0. If the value is less than 1, the first page is returned. In the response, TotalCount indicates the total number of records that meet the filter conditions, and Data contains the records on the current page. If no data is found, an empty array is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12911,14 +14083,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of access restriction URLs configured for a specified browser delivery group or delivery group set by using paging.</para>
+        /// <para>Performs a paging query on the list of access restriction URLs configured for a specified browser delivery group or delivery group set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the list of access restriction URLs configured for a cloud browser delivery group or delivery group set by using paging to view the details of the URLs configured in the current access control policy.
+        /// <para>Invoke this operation to perform a paging query on the list of access restriction URLs (Restricted URLs) configured for a cloud browser delivery group or delivery group set to view the details of the URLs configured in the current access control policy.
         /// You must specify either BrowserInstanceGroupId or BrowserInstanceGroupSetId, but not both. If you specify BrowserInstanceGroupId, the restricted URLs for the delivery group are queried. If you specify BrowserInstanceGroupSetId, the restricted URLs for the delivery group set are queried. Specifying both or neither returns a parameter error.
-        /// You can use Keyword to filter restricted URLs by using a contains match. The match is case-insensitive for English characters. If you do not specify this parameter, all restricted URLs are returned. Pagination is controlled by PageNumber and PageSize. Valid values for PageSize: 1 to 200. Default value: 200. Default value for PageNumber: 0. If the value is less than 1, the first page is returned. In the response, TotalCount indicates the total number of records that meet the filter conditions, and Data contains the records on the current page. If no data is found, an empty array is returned.</para>
+        /// You can use Keyword to filter restricted URLs by using a case-insensitive include match. If this parameter is not specified, all restricted URLs are returned. Pagination is controlled by PageNumber and PageSize. Valid values for PageSize: 1 to 200. Default value: 200. Default value for PageNumber: 0. If the value is less than 1, the first page is returned. In the response, TotalCount indicates the total number of records that meet the filter conditions, and Data contains the records on the current page. If no data is found, an empty array is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12976,14 +14148,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of access restriction URLs configured for a specified browser delivery group or delivery group set by using paging.</para>
+        /// <para>Performs a paging query on the list of access restriction URLs configured for a specified browser delivery group or delivery group set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the list of access restriction URLs configured for a cloud browser delivery group or delivery group set by using paging to view the details of the URLs configured in the current access control policy.
+        /// <para>Invoke this operation to perform a paging query on the list of access restriction URLs (Restricted URLs) configured for a cloud browser delivery group or delivery group set to view the details of the URLs configured in the current access control policy.
         /// You must specify either BrowserInstanceGroupId or BrowserInstanceGroupSetId, but not both. If you specify BrowserInstanceGroupId, the restricted URLs for the delivery group are queried. If you specify BrowserInstanceGroupSetId, the restricted URLs for the delivery group set are queried. Specifying both or neither returns a parameter error.
-        /// You can use Keyword to filter restricted URLs by using a contains match. The match is case-insensitive for English characters. If you do not specify this parameter, all restricted URLs are returned. Pagination is controlled by PageNumber and PageSize. Valid values for PageSize: 1 to 200. Default value: 200. Default value for PageNumber: 0. If the value is less than 1, the first page is returned. In the response, TotalCount indicates the total number of records that meet the filter conditions, and Data contains the records on the current page. If no data is found, an empty array is returned.</para>
+        /// You can use Keyword to filter restricted URLs by using a case-insensitive include match. If this parameter is not specified, all restricted URLs are returned. Pagination is controlled by PageNumber and PageSize. Valid values for PageSize: 1 to 200. Default value: 200. Default value for PageNumber: 0. If the value is less than 1, the first page is returned. In the response, TotalCount indicates the total number of records that meet the filter conditions, and Data contains the records on the current page. If no data is found, an empty array is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13001,14 +14173,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of access restriction URLs configured for a specified browser delivery group or delivery group set by using paging.</para>
+        /// <para>Performs a paging query on the list of access restriction URLs configured for a specified browser delivery group or delivery group set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the list of access restriction URLs configured for a cloud browser delivery group or delivery group set by using paging to view the details of the URLs configured in the current access control policy.
+        /// <para>Invoke this operation to perform a paging query on the list of access restriction URLs (Restricted URLs) configured for a cloud browser delivery group or delivery group set to view the details of the URLs configured in the current access control policy.
         /// You must specify either BrowserInstanceGroupId or BrowserInstanceGroupSetId, but not both. If you specify BrowserInstanceGroupId, the restricted URLs for the delivery group are queried. If you specify BrowserInstanceGroupSetId, the restricted URLs for the delivery group set are queried. Specifying both or neither returns a parameter error.
-        /// You can use Keyword to filter restricted URLs by using a contains match. The match is case-insensitive for English characters. If you do not specify this parameter, all restricted URLs are returned. Pagination is controlled by PageNumber and PageSize. Valid values for PageSize: 1 to 200. Default value: 200. Default value for PageNumber: 0. If the value is less than 1, the first page is returned. In the response, TotalCount indicates the total number of records that meet the filter conditions, and Data contains the records on the current page. If no data is found, an empty array is returned.</para>
+        /// You can use Keyword to filter restricted URLs by using a case-insensitive include match. If this parameter is not specified, all restricted URLs are returned. Pagination is controlled by PageNumber and PageSize. Valid values for PageSize: 1 to 200. Default value: 200. Default value for PageNumber: 0. If the value is less than 1, the first page is returned. In the response, TotalCount indicates the total number of records that meet the filter conditions, and Data contains the records on the current page. If no data is found, an empty array is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13642,6 +14814,362 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the basic information of images by using paging and a paged query, including the image name, type, status, and version identity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports filtering by image ID, name, status, type, package type, operating system, business line, product type, and protocol type. Multiple filter conditions take effect simultaneously, and the results are returned in descending order of image creation time. Returns the basic information and version identifiers of images. To obtain specific version and region distribution information, call ListImage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListImageBaseInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageBaseInfoResponse
+        /// </returns>
+        public ListImageBaseInfoResponse ListImageBaseInfoWithOptions(ListImageBaseInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                body["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                body["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
+            {
+                body["PackageType"] = request.PackageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
+            {
+                body["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListImageBaseInfo",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListImageBaseInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the basic information of images by using paging and a paged query, including the image name, type, status, and version identity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports filtering by image ID, name, status, type, package type, operating system, business line, product type, and protocol type. Multiple filter conditions take effect simultaneously, and the results are returned in descending order of image creation time. Returns the basic information and version identifiers of images. To obtain specific version and region distribution information, call ListImage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListImageBaseInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageBaseInfoResponse
+        /// </returns>
+        public async Task<ListImageBaseInfoResponse> ListImageBaseInfoWithOptionsAsync(ListImageBaseInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                body["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                body["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
+            {
+                body["PackageType"] = request.PackageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
+            {
+                body["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListImageBaseInfo",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListImageBaseInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the basic information of images by using paging and a paged query, including the image name, type, status, and version identity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports filtering by image ID, name, status, type, package type, operating system, business line, product type, and protocol type. Multiple filter conditions take effect simultaneously, and the results are returned in descending order of image creation time. Returns the basic information and version identifiers of images. To obtain specific version and region distribution information, call ListImage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListImageBaseInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageBaseInfoResponse
+        /// </returns>
+        public ListImageBaseInfoResponse ListImageBaseInfo(ListImageBaseInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListImageBaseInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the basic information of images by using paging and a paged query, including the image name, type, status, and version identity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports filtering by image ID, name, status, type, package type, operating system, business line, product type, and protocol type. Multiple filter conditions take effect simultaneously, and the results are returned in descending order of image creation time. Returns the basic information and version identifiers of images. To obtain specific version and region distribution information, call ListImage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListImageBaseInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageBaseInfoResponse
+        /// </returns>
+        public async Task<ListImageBaseInfoResponse> ListImageBaseInfoAsync(ListImageBaseInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListImageBaseInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the built-in tags supported by images.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListImageTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageTagsResponse
+        /// </returns>
+        public ListImageTagsResponse ListImageTagsWithOptions(ListImageTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListImageTags",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListImageTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the built-in tags supported by images.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListImageTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageTagsResponse
+        /// </returns>
+        public async Task<ListImageTagsResponse> ListImageTagsWithOptionsAsync(ListImageTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListImageTags",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListImageTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the built-in tags supported by images.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListImageTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageTagsResponse
+        /// </returns>
+        public ListImageTagsResponse ListImageTags(ListImageTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListImageTagsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the built-in tags supported by images.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListImageTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageTagsResponse
+        /// </returns>
+        public async Task<ListImageTagsResponse> ListImageTagsAsync(ListImageTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListImageTagsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15506,28 +17034,28 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by using paging, and supports filtering by delivery group, application, and user authorization status.</para>
+        /// <para>Performs a paged query to retrieve the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account. Supports filtering by delivery group, application, and user authorization during paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
-        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:ListPublishedAppInstanceGroup</c> permission.
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:ListPublishedAppInstanceGroup permission.
         /// Only delivery groups that are in the published state and have deployed applications in their images are included in the query results. This operation only queries information. It does not create delivery groups, assign users, or grant application access permissions.</para>
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
-        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> The page number starts from <c>1</c>, and the number of entries per page ranges from <c>1</c> to <c>100</c>.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support partial matching. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both <c>AppId</c> and <c>AppName</c> are specified, they must be met by the same application.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. A delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
-        /// <item><description><c>ExcludeUserId</c> is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
-        /// <item><description><c>AppId</c> and <c>AppName</c> only filter delivery groups and <b>do not restrict the returned <c>Apps</c> list to the matched applications</b>.</description></item>
+        /// <item><description><b>You must explicitly specify ProductType, PageNumber, and PageSize.</b> The page number starts from 1, and the number of entries per page ranges from 1 to 100.</description></item>
+        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, the same application must meet both conditions.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. The same delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
+        /// <item><description>ExcludeUserId is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
+        /// <item><description>AppId and AppName only filter delivery groups and <b>do not limit the returned Apps list to the matched applications</b>.</description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For common scenarios of Wuying Cloud App, set <c>ProductType</c> to <c>CloudApp</c>.</description></item>
-        /// <item><description>Read <c>AppInstanceGroupModels</c>. To retrieve the next page, keep the product type and filter conditions unchanged, and increment <c>PageNumber</c>. If no delivery groups match the conditions, the total count is <c>0</c> and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
-        /// <item><description>To obtain the details of a single delivery group, pass the complete <c>AppInstanceGroupId</c> returned and the same <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you invoke the operation.</description></item>
+        /// <item><description>Initiate a query with PageNumber=1 and the desired PageSize. For WUYING Cloud App scenarios, set ProductType=CloudApp.</description></item>
+        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
+        /// <item><description>To obtain the details of a single delivery group, pass the complete AppInstanceGroupId returned and the same ProductType to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -15602,28 +17130,28 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by using paging, and supports filtering by delivery group, application, and user authorization status.</para>
+        /// <para>Performs a paged query to retrieve the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account. Supports filtering by delivery group, application, and user authorization during paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
-        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:ListPublishedAppInstanceGroup</c> permission.
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:ListPublishedAppInstanceGroup permission.
         /// Only delivery groups that are in the published state and have deployed applications in their images are included in the query results. This operation only queries information. It does not create delivery groups, assign users, or grant application access permissions.</para>
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
-        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> The page number starts from <c>1</c>, and the number of entries per page ranges from <c>1</c> to <c>100</c>.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support partial matching. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both <c>AppId</c> and <c>AppName</c> are specified, they must be met by the same application.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. A delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
-        /// <item><description><c>ExcludeUserId</c> is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
-        /// <item><description><c>AppId</c> and <c>AppName</c> only filter delivery groups and <b>do not restrict the returned <c>Apps</c> list to the matched applications</b>.</description></item>
+        /// <item><description><b>You must explicitly specify ProductType, PageNumber, and PageSize.</b> The page number starts from 1, and the number of entries per page ranges from 1 to 100.</description></item>
+        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, the same application must meet both conditions.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. The same delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
+        /// <item><description>ExcludeUserId is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
+        /// <item><description>AppId and AppName only filter delivery groups and <b>do not limit the returned Apps list to the matched applications</b>.</description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For common scenarios of Wuying Cloud App, set <c>ProductType</c> to <c>CloudApp</c>.</description></item>
-        /// <item><description>Read <c>AppInstanceGroupModels</c>. To retrieve the next page, keep the product type and filter conditions unchanged, and increment <c>PageNumber</c>. If no delivery groups match the conditions, the total count is <c>0</c> and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
-        /// <item><description>To obtain the details of a single delivery group, pass the complete <c>AppInstanceGroupId</c> returned and the same <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you invoke the operation.</description></item>
+        /// <item><description>Initiate a query with PageNumber=1 and the desired PageSize. For WUYING Cloud App scenarios, set ProductType=CloudApp.</description></item>
+        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
+        /// <item><description>To obtain the details of a single delivery group, pass the complete AppInstanceGroupId returned and the same ProductType to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -15698,28 +17226,28 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by using paging, and supports filtering by delivery group, application, and user authorization status.</para>
+        /// <para>Performs a paged query to retrieve the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account. Supports filtering by delivery group, application, and user authorization during paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
-        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:ListPublishedAppInstanceGroup</c> permission.
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:ListPublishedAppInstanceGroup permission.
         /// Only delivery groups that are in the published state and have deployed applications in their images are included in the query results. This operation only queries information. It does not create delivery groups, assign users, or grant application access permissions.</para>
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
-        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> The page number starts from <c>1</c>, and the number of entries per page ranges from <c>1</c> to <c>100</c>.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support partial matching. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both <c>AppId</c> and <c>AppName</c> are specified, they must be met by the same application.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. A delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
-        /// <item><description><c>ExcludeUserId</c> is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
-        /// <item><description><c>AppId</c> and <c>AppName</c> only filter delivery groups and <b>do not restrict the returned <c>Apps</c> list to the matched applications</b>.</description></item>
+        /// <item><description><b>You must explicitly specify ProductType, PageNumber, and PageSize.</b> The page number starts from 1, and the number of entries per page ranges from 1 to 100.</description></item>
+        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, the same application must meet both conditions.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. The same delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
+        /// <item><description>ExcludeUserId is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
+        /// <item><description>AppId and AppName only filter delivery groups and <b>do not limit the returned Apps list to the matched applications</b>.</description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For common scenarios of Wuying Cloud App, set <c>ProductType</c> to <c>CloudApp</c>.</description></item>
-        /// <item><description>Read <c>AppInstanceGroupModels</c>. To retrieve the next page, keep the product type and filter conditions unchanged, and increment <c>PageNumber</c>. If no delivery groups match the conditions, the total count is <c>0</c> and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
-        /// <item><description>To obtain the details of a single delivery group, pass the complete <c>AppInstanceGroupId</c> returned and the same <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you invoke the operation.</description></item>
+        /// <item><description>Initiate a query with PageNumber=1 and the desired PageSize. For WUYING Cloud App scenarios, set ProductType=CloudApp.</description></item>
+        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
+        /// <item><description>To obtain the details of a single delivery group, pass the complete AppInstanceGroupId returned and the same ProductType to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -15738,28 +17266,28 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by using paging, and supports filtering by delivery group, application, and user authorization status.</para>
+        /// <para>Performs a paged query to retrieve the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account. Supports filtering by delivery group, application, and user authorization during paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
-        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:ListPublishedAppInstanceGroup</c> permission.
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:ListPublishedAppInstanceGroup permission.
         /// Only delivery groups that are in the published state and have deployed applications in their images are included in the query results. This operation only queries information. It does not create delivery groups, assign users, or grant application access permissions.</para>
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
-        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> The page number starts from <c>1</c>, and the number of entries per page ranges from <c>1</c> to <c>100</c>.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support partial matching. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both <c>AppId</c> and <c>AppName</c> are specified, they must be met by the same application.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. A delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
-        /// <item><description><c>ExcludeUserId</c> is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
-        /// <item><description><c>AppId</c> and <c>AppName</c> only filter delivery groups and <b>do not restrict the returned <c>Apps</c> list to the matched applications</b>.</description></item>
+        /// <item><description><b>You must explicitly specify ProductType, PageNumber, and PageSize.</b> The page number starts from 1, and the number of entries per page ranges from 1 to 100.</description></item>
+        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, the same application must meet both conditions.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. The same delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
+        /// <item><description>ExcludeUserId is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
+        /// <item><description>AppId and AppName only filter delivery groups and <b>do not limit the returned Apps list to the matched applications</b>.</description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For common scenarios of Wuying Cloud App, set <c>ProductType</c> to <c>CloudApp</c>.</description></item>
-        /// <item><description>Read <c>AppInstanceGroupModels</c>. To retrieve the next page, keep the product type and filter conditions unchanged, and increment <c>PageNumber</c>. If no delivery groups match the conditions, the total count is <c>0</c> and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
-        /// <item><description>To obtain the details of a single delivery group, pass the complete <c>AppInstanceGroupId</c> returned and the same <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you invoke the operation.</description></item>
+        /// <item><description>Initiate a query with PageNumber=1 and the desired PageSize. For WUYING Cloud App scenarios, set ProductType=CloudApp.</description></item>
+        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
+        /// <item><description>To obtain the details of a single delivery group, pass the complete AppInstanceGroupId returned and the same ProductType to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -16342,6 +17870,142 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRegionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of associated templates, cloud desktops, and cloud desktop pools.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRelatedResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRelatedResourceResponse
+        /// </returns>
+        public ListRelatedResourceResponse ListRelatedResourceWithOptions(ListRelatedResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRelatedResource",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRelatedResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of associated templates, cloud desktops, and cloud desktop pools.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRelatedResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRelatedResourceResponse
+        /// </returns>
+        public async Task<ListRelatedResourceResponse> ListRelatedResourceWithOptionsAsync(ListRelatedResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRelatedResource",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRelatedResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of associated templates, cloud desktops, and cloud desktop pools.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRelatedResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRelatedResourceResponse
+        /// </returns>
+        public ListRelatedResourceResponse ListRelatedResource(ListRelatedResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRelatedResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of associated templates, cloud desktops, and cloud desktop pools.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRelatedResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRelatedResourceResponse
+        /// </returns>
+        public async Task<ListRelatedResourceResponse> ListRelatedResourceAsync(ListRelatedResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRelatedResourceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17714,13 +19378,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling enabled.</para>
+        /// <para>Unregisters all sessions in a pay-as-you-go delivery group that has a scheduled auto scaling policy enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to pay-as-you-go resource delivery groups that have scheduled auto scaling enabled. The operation can be called only outside the scaling time periods specified in the scheduled auto scaling policy.</para>
+        /// <para>This operation is applicable only to pay-as-you-go resource delivery groups that have a scheduled auto scaling policy enabled. It can be called successfully only outside the scaling time windows specified in the scheduled auto scaling policy.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17767,13 +19431,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling enabled.</para>
+        /// <para>Unregisters all sessions in a pay-as-you-go delivery group that has a scheduled auto scaling policy enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to pay-as-you-go resource delivery groups that have scheduled auto scaling enabled. The operation can be called only outside the scaling time periods specified in the scheduled auto scaling policy.</para>
+        /// <para>This operation is applicable only to pay-as-you-go resource delivery groups that have a scheduled auto scaling policy enabled. It can be called successfully only outside the scaling time windows specified in the scheduled auto scaling policy.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17820,13 +19484,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling enabled.</para>
+        /// <para>Unregisters all sessions in a pay-as-you-go delivery group that has a scheduled auto scaling policy enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to pay-as-you-go resource delivery groups that have scheduled auto scaling enabled. The operation can be called only outside the scaling time periods specified in the scheduled auto scaling policy.</para>
+        /// <para>This operation is applicable only to pay-as-you-go resource delivery groups that have a scheduled auto scaling policy enabled. It can be called successfully only outside the scaling time windows specified in the scheduled auto scaling policy.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17845,13 +19509,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs off all sessions in a pay-as-you-go delivery group that has scheduled auto scaling enabled.</para>
+        /// <para>Unregisters all sessions in a pay-as-you-go delivery group that has a scheduled auto scaling policy enabled.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to pay-as-you-go resource delivery groups that have scheduled auto scaling enabled. The operation can be called only outside the scaling time periods specified in the scheduled auto scaling policy.</para>
+        /// <para>This operation is applicable only to pay-as-you-go resource delivery groups that have a scheduled auto scaling policy enabled. It can be called successfully only outside the scaling time windows specified in the scheduled auto scaling policy.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20884,8 +22548,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data is an offline statistical result, organized by day, and returns the session counts at various time points on that date.
-        /// The returned results are aggregated in 10-minute intervals. Each data point is identified by an hour (Hh, values 00 to 23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a specific time point. SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
-        /// You can specify a business region by using BizRegionId and filter by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The actual region used to filter session data is subject to BizRegionId.
+        /// The returned results are aggregated in 10-minute intervals: each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
+        /// You can specify a business region by using BizRegionId and filter session data by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The region actually used to filter session data is subject to BizRegionId.
         /// StatDate is the statistical date in the yyyyMMdd format. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned, and the return code is NO_DATA.</para>
         /// </description>
         /// 
@@ -20946,8 +22610,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data is an offline statistical result, organized by day, and returns the session counts at various time points on that date.
-        /// The returned results are aggregated in 10-minute intervals. Each data point is identified by an hour (Hh, values 00 to 23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a specific time point. SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
-        /// You can specify a business region by using BizRegionId and filter by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The actual region used to filter session data is subject to BizRegionId.
+        /// The returned results are aggregated in 10-minute intervals: each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
+        /// You can specify a business region by using BizRegionId and filter session data by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The region actually used to filter session data is subject to BizRegionId.
         /// StatDate is the statistical date in the yyyyMMdd format. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned, and the return code is NO_DATA.</para>
         /// </description>
         /// 
@@ -21008,8 +22672,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data is an offline statistical result, organized by day, and returns the session counts at various time points on that date.
-        /// The returned results are aggregated in 10-minute intervals. Each data point is identified by an hour (Hh, values 00 to 23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a specific time point. SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
-        /// You can specify a business region by using BizRegionId and filter by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The actual region used to filter session data is subject to BizRegionId.
+        /// The returned results are aggregated in 10-minute intervals: each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
+        /// You can specify a business region by using BizRegionId and filter session data by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The region actually used to filter session data is subject to BizRegionId.
         /// StatDate is the statistical date in the yyyyMMdd format. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned, and the return code is NO_DATA.</para>
         /// </description>
         /// 
@@ -21034,8 +22698,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data is an offline statistical result, organized by day, and returns the session counts at various time points on that date.
-        /// The returned results are aggregated in 10-minute intervals. Each data point is identified by an hour (Hh, values 00 to 23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a specific time point. SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
-        /// You can specify a business region by using BizRegionId and filter by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The actual region used to filter session data is subject to BizRegionId.
+        /// The returned results are aggregated in 10-minute intervals: each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
+        /// You can specify a business region by using BizRegionId and filter session data by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The region actually used to filter session data is subject to BizRegionId.
         /// StatDate is the statistical date in the yyyyMMdd format. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned, and the return code is NO_DATA.</para>
         /// </description>
         /// 
@@ -21974,13 +23638,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a third-party channel configuration from the Agent runtime.</para>
+        /// <para>Removes the third-party channel configuration for an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove a specific third-party channel configuration from Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the removal, the Agent cannot use the third-party channel for conversations.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can call this operation to remove the specific third-party channel configuration for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. After the configuration is removed, the agent cannot use the third-party channel for conversations.
+        /// Make sure that you are fully familiar with the operations and usage of the WUYING Agent Management Center before you call this operation.
+        /// Before you begin:</para>
+        /// <list type="bullet">
+        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The cloud desktops that host these runtimes must be created by using API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use the DesktopId as RuntimeIds.</description></item>
+        /// <item><description>OpenClaw scenario: RuntimeIds are cloud desktop IDs in the format of ecd-xxxx, which are the DesktopId values returned by the ListDesktops operation of the EDS product.</description></item>
+        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The cloud desktops that host these runtimes are also created by using API operations such as CreateDesktop of the EDS product.</description></item>
+        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, it indicates that the corresponding cloud desktop is not managed. In this case, you must first call the CreateDesktop operation of the EDS product to create the cloud desktop. The WUYING Agent Management Center automatically manages the cloud desktop after it receives a desktop lifecycle event. After that, you can call this operation.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22038,13 +23709,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a third-party channel configuration from the Agent runtime.</para>
+        /// <para>Removes the third-party channel configuration for an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove a specific third-party channel configuration from Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the removal, the Agent cannot use the third-party channel for conversations.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can call this operation to remove the specific third-party channel configuration for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. After the configuration is removed, the agent cannot use the third-party channel for conversations.
+        /// Make sure that you are fully familiar with the operations and usage of the WUYING Agent Management Center before you call this operation.
+        /// Before you begin:</para>
+        /// <list type="bullet">
+        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The cloud desktops that host these runtimes must be created by using API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use the DesktopId as RuntimeIds.</description></item>
+        /// <item><description>OpenClaw scenario: RuntimeIds are cloud desktop IDs in the format of ecd-xxxx, which are the DesktopId values returned by the ListDesktops operation of the EDS product.</description></item>
+        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The cloud desktops that host these runtimes are also created by using API operations such as CreateDesktop of the EDS product.</description></item>
+        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, it indicates that the corresponding cloud desktop is not managed. In this case, you must first call the CreateDesktop operation of the EDS product to create the cloud desktop. The WUYING Agent Management Center automatically manages the cloud desktop after it receives a desktop lifecycle event. After that, you can call this operation.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22102,13 +23780,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a third-party channel configuration from the Agent runtime.</para>
+        /// <para>Removes the third-party channel configuration for an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove a specific third-party channel configuration from Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the removal, the Agent cannot use the third-party channel for conversations.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can call this operation to remove the specific third-party channel configuration for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. After the configuration is removed, the agent cannot use the third-party channel for conversations.
+        /// Make sure that you are fully familiar with the operations and usage of the WUYING Agent Management Center before you call this operation.
+        /// Before you begin:</para>
+        /// <list type="bullet">
+        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The cloud desktops that host these runtimes must be created by using API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use the DesktopId as RuntimeIds.</description></item>
+        /// <item><description>OpenClaw scenario: RuntimeIds are cloud desktop IDs in the format of ecd-xxxx, which are the DesktopId values returned by the ListDesktops operation of the EDS product.</description></item>
+        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The cloud desktops that host these runtimes are also created by using API operations such as CreateDesktop of the EDS product.</description></item>
+        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, it indicates that the corresponding cloud desktop is not managed. In this case, you must first call the CreateDesktop operation of the EDS product to create the cloud desktop. The WUYING Agent Management Center automatically manages the cloud desktop after it receives a desktop lifecycle event. After that, you can call this operation.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22126,13 +23811,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a third-party channel configuration from the Agent runtime.</para>
+        /// <para>Removes the third-party channel configuration for an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove a specific third-party channel configuration from Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. After the removal, the Agent cannot use the third-party channel for conversations.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can call this operation to remove the specific third-party channel configuration for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. After the configuration is removed, the agent cannot use the third-party channel for conversations.
+        /// Make sure that you are fully familiar with the operations and usage of the WUYING Agent Management Center before you call this operation.
+        /// Before you begin:</para>
+        /// <list type="bullet">
+        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The cloud desktops that host these runtimes must be created by using API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use the DesktopId as RuntimeIds.</description></item>
+        /// <item><description>OpenClaw scenario: RuntimeIds are cloud desktop IDs in the format of ecd-xxxx, which are the DesktopId values returned by the ListDesktops operation of the EDS product.</description></item>
+        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The cloud desktops that host these runtimes are also created by using API operations such as CreateDesktop of the EDS product.</description></item>
+        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, it indicates that the corresponding cloud desktop is not managed. In this case, you must first call the CreateDesktop operation of the EDS product to create the cloud desktop. The WUYING Agent Management Center automatically manages the cloud desktop after it receives a desktop lifecycle event. After that, you can call this operation.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22150,13 +23842,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a model group from an Agent runtime resource.</para>
+        /// <para>Removes the model group from an agent runtime resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
-        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
+        /// <para>You can remove the model group from agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an agent runtime resource needs to change its model group, you must first call this operation to remove the authorization relationship between the agent runtime resource and the original model group.
+        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22206,13 +23898,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a model group from an Agent runtime resource.</para>
+        /// <para>Removes the model group from an agent runtime resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
-        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
+        /// <para>You can remove the model group from agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an agent runtime resource needs to change its model group, you must first call this operation to remove the authorization relationship between the agent runtime resource and the original model group.
+        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22262,13 +23954,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a model group from an Agent runtime resource.</para>
+        /// <para>Removes the model group from an agent runtime resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
-        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
+        /// <para>You can remove the model group from agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an agent runtime resource needs to change its model group, you must first call this operation to remove the authorization relationship between the agent runtime resource and the original model group.
+        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22286,13 +23978,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a model group from an Agent runtime resource.</para>
+        /// <para>Removes the model group from an agent runtime resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can remove model groups from Agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. When an Agent runtime resource needs to switch to a different model group, call this operation first to remove the authorization relationship between the Agent runtime resource and the existing model group.
-        /// Make sure that you are familiar with the operations and usage of the WUYING Agent Management Center before calling this operation.</para>
+        /// <para>You can remove the model group from agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. When an agent runtime resource needs to change its model group, you must first call this operation to remove the authorization relationship between the agent runtime resource and the original model group.
+        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22842,6 +24534,222 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Starts an image creation task for an existing image version, or resumes an existing creation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartTaskForCreateImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartTaskForCreateImageResponse
+        /// </returns>
+        public StartTaskForCreateImageResponse StartTaskForCreateImageWithOptions(StartTaskForCreateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCreateMode))
+            {
+                body["ImageCreateMode"] = request.ImageCreateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JumpStep))
+            {
+                body["JumpStep"] = request.JumpStep;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceType))
+            {
+                body["PerformanceType"] = request.PerformanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceList))
+            {
+                body["ResourceList"] = request.ResourceList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryType))
+            {
+                body["RetryType"] = request.RetryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                body["RunMode"] = request.RunMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegion))
+            {
+                body["SourceRegion"] = request.SourceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubInstanceId))
+            {
+                body["SubInstanceId"] = request.SubInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                body["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartTaskForCreateImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartTaskForCreateImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an image creation task for an existing image version, or resumes an existing creation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartTaskForCreateImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartTaskForCreateImageResponse
+        /// </returns>
+        public async Task<StartTaskForCreateImageResponse> StartTaskForCreateImageWithOptionsAsync(StartTaskForCreateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCreateMode))
+            {
+                body["ImageCreateMode"] = request.ImageCreateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JumpStep))
+            {
+                body["JumpStep"] = request.JumpStep;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceType))
+            {
+                body["PerformanceType"] = request.PerformanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceList))
+            {
+                body["ResourceList"] = request.ResourceList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryType))
+            {
+                body["RetryType"] = request.RetryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                body["RunMode"] = request.RunMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegion))
+            {
+                body["SourceRegion"] = request.SourceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubInstanceId))
+            {
+                body["SubInstanceId"] = request.SubInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                body["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartTaskForCreateImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartTaskForCreateImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an image creation task for an existing image version, or resumes an existing creation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartTaskForCreateImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartTaskForCreateImageResponse
+        /// </returns>
+        public StartTaskForCreateImageResponse StartTaskForCreateImage(StartTaskForCreateImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartTaskForCreateImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an image creation task for an existing image version, or resumes an existing creation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartTaskForCreateImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartTaskForCreateImageResponse
+        /// </returns>
+        public async Task<StartTaskForCreateImageResponse> StartTaskForCreateImageAsync(StartTaskForCreateImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartTaskForCreateImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Initiates a task to copy an image to other regions.</para>
         /// </summary>
         /// 
@@ -23286,6 +25194,134 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopWuyingServerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms the completion of image creation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitImageResponse
+        /// </returns>
+        public SubmitImageResponse SubmitImageWithOptions(SubmitImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegionList))
+            {
+                body["DestinationRegionList"] = request.DestinationRegionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms the completion of image creation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitImageResponse
+        /// </returns>
+        public async Task<SubmitImageResponse> SubmitImageWithOptionsAsync(SubmitImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegionList))
+            {
+                body["DestinationRegionList"] = request.DestinationRegionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms the completion of image creation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitImageResponse
+        /// </returns>
+        public SubmitImageResponse SubmitImage(SubmitImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms the completion of image creation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitImageResponse
+        /// </returns>
+        public async Task<SubmitImageResponse> SubmitImageAsync(SubmitImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

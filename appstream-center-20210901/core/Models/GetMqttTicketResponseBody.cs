@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetMqttTicketResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned when the request fails. For example, <c>Client.Forbidden</c> indicates that the client is forbidden from establishing a connection.</para>
+        /// <para>The error code returned when the request fails. For example, Client.Forbidden indicates that the client is forbidden from establishing a connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Client.Forbidden</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the MQTT connection password. It is returned as a string representing a UNIX timestamp in milliseconds.</para>
+        /// <para>The expiration time of the MQTT connection password. It is a UNIX timestamp in milliseconds and is returned as a string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1794278400000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The access endpoint for the MQTT client. Use the endpoint returned by this operation to establish a connection.</para>
+        /// <para>The access endpoint for the MQTT client. Use the endpoint returned in this response to establish a connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mqtt.example.com</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string MqttInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The password used to establish an MQTT connection. It consists of publish and subscribe tokens in the format of <c>W|PublishToken|R|SubscribeToken</c>. Use the complete password returned by the operation. The desensitized examples in the documentation cannot be used for connections.</para>
+        /// <para>The password used to establish an MQTT connection. It consists of publish and subscribe tokens in the format of W|PublishToken|R|SubscribeToken. Use the complete password returned in the response. The desensitized examples in the documentation cannot be used for connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>W|pubTokenExample****|R|subTokenExample****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string MqttPassword { get; set; }
 
         /// <summary>
-        /// <para>The username used to establish an MQTT connection. The format is <c>Token|AccessKeyId|InstanceId</c>. AccessKeyId and InstanceId are identifiers used by the server to generate credentials. Use the complete username returned by the operation.</para>
+        /// <para>The username used to establish an MQTT connection. The format is Token|AccessKeyId|InstanceId. AccessKeyId and InstanceId are identifiers used by the server to generate credentials. Use the complete username returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Token|LTAI5tExample****|post-cn-7mz2****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string MqttUsername { get; set; }
 
         /// <summary>
-        /// <para>The VPC access endpoint for MQTT, used by clients that meet the VPC network access requirements.</para>
+        /// <para>The VPC access endpoint for MQTT. It is used by clients that meet the VPC network access requirements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mqtt-vpc.example.com</para>
@@ -110,7 +110,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. <c>true</c> indicates success, and <c>false</c> indicates failure.</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The topic list. Each list element contains <c>topic</c> (the topic name), <c>type</c> (the topic type), and <c>permission</c> (the permission). The list returned by this operation includes topics for publishing, tenant subscription, device subscription, and system subscription. The publish permission is <c>W</c>, and the subscribe permission is <c>R</c>.</para>
+        /// <para>The topic list. Each element in the list contains topic (the topic name), type (the topic type), and permission (the permission). The list returned by this operation includes topics for publishing, tenant subscription, device subscription, and system subscription. The publish permission is W, and the subscribe permission is R.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;topic&quot;:&quot;pub/550e8400-e29b-41d4-a716-446655440000&quot;,&quot;type&quot;:&quot;pub&quot;,&quot;permission&quot;:&quot;W&quot;},{&quot;topic&quot;:&quot;sub/ten/123456789012****&quot;,&quot;type&quot;:&quot;sub-ten&quot;,&quot;permission&quot;:&quot;R&quot;},{&quot;topic&quot;:&quot;sub/uuid/550e8400-e29b-41d4-a716-446655440000&quot;,&quot;type&quot;:&quot;sub-uuid&quot;,&quot;permission&quot;:&quot;R&quot;},{&quot;topic&quot;:&quot;sub/sys&quot;,&quot;type&quot;:&quot;sub-sys&quot;,&quot;permission&quot;:&quot;R&quot;}]</para>

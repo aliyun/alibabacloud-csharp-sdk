@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListBrowserBookmarksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of bookmarks on the current page.</para>
+        /// <para>The bookmarks on the current page.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

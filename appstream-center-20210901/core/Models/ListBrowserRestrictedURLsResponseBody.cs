@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The actual page number used in this query. This is the echoed value of the PageNumber request parameter.</para>
+        /// <para>The actual page number used for this query, which is the echoed value of the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The actual number of entries returned per page in this query. This is the echoed value of the PageSize request parameter.</para>
+        /// <para>The actual number of entries returned per page for this query, which is the echoed value of the PageSize request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to locate call records and troubleshoot issues. The example value is partially masked.</para>
+        /// <para>The ID of the request, which is used to locate call records and troubleshoot issues. The example value is partially masked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4A13D91-****</para>

@@ -21,7 +21,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ClientOS { get; set; }
 
         /// <summary>
-        /// <para>The client type. Valid values: 0: hardware terminal; 1: Windows software terminal; 2: macOS software terminal; 3: iOS client; 4: Android client; 5: web client; 6: tenant console.</para>
+        /// <para>The client type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: hardware terminal</description></item>
+        /// <item><description>1: Windows software terminal</description></item>
+        /// <item><description>2: macOS software terminal</description></item>
+        /// <item><description>3: iOS client</description></item>
+        /// <item><description>4: Android client</description></item>
+        /// <item><description>5: web client</description></item>
+        /// <item><description>6: tenant console</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ClientVersion { get; set; }
 
         /// <summary>
-        /// <para>The extended properties of the client, represented as a JSON object where both keys and values are strings. Example: <c>{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;}</c>. If this parameter is not specified, it is processed as an empty property set.</para>
+        /// <para>The extended properties of the client, represented as a JSON object where both keys and values are strings. Example: <c>{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;}</c>. If this parameter is not specified, an empty property set is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;a&quot;:&quot;1&quot;,&quot;b&quot;:&quot;2&quot;}</para>
@@ -53,7 +62,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PropertiesShrink { get; set; }
 
         /// <summary>
-        /// <para>The device UUID.</para>
+        /// <para>The UUID of the device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

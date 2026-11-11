@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListPublishedAppInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application used to filter delivery groups. Partial matching is supported. The delivery group must contain a deployed application that meets the condition. If this parameter is not specified or is set to an empty string, the results are not filtered by application ID. If this parameter is specified together with <c>AppName</c>, both conditions must be met by the same application.</para>
-        /// <para>This condition does not restrict the returned <c>Apps</c> list to the matched applications.</para>
+        /// <para>The ID of the application used to filter delivery groups. Fuzzy match is supported. The delivery group must contain a deployed application that meets the condition. If this parameter is not specified or is set to an empty string, the results are not filtered by application ID. If this parameter is specified together with AppName, the same application must meet both conditions.</para>
+        /// <para>This condition does not trim the returned Apps list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-i87mycyn419nu****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the delivery group used for filtering. Partial matching is supported. You can pass the complete ID or a continuous segment of it. If this parameter is not specified or is set to an empty string, the results are not filtered by ID. This parameter can be used together with other filter conditions, and the results must meet all conditions.</para>
+        /// <para>The ID of the delivery group used for filtering. Fuzzy match is supported. You can pass the complete ID or a contiguous segment of it. If this parameter is not specified or is set to an empty string, the results are not filtered by ID. This parameter can be used together with other filter conditions, and the results must meet all conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery group used for filtering. Partial matching is supported. For example, if you pass <c>Office applications</c>, delivery groups whose names contain this text are matched. If this parameter is not specified or is set to an empty string, the results are not filtered by name. If this parameter is specified together with the delivery group ID, both the ID and the name must be matched.</para>
+        /// <para>The name of the delivery group used for filtering. Fuzzy match is supported. For example, if you pass Office applications, delivery groups whose names contain this text are matched. If this parameter is not specified or is set to an empty string, the results are not filtered by name. If this parameter is specified together with the delivery group ID, both the ID and the name must be matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Office applications</para>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The name of the application used to filter delivery groups. Partial matching is supported. The delivery group must contain a deployed application whose name contains the specified text. If this parameter is not specified or is set to an empty string, the results are not filtered by application name. If this parameter is specified together with <c>AppId</c>, both conditions must be met by the same application.</para>
-        /// <para>This condition does not restrict the returned <c>Apps</c> list to the matched applications.</para>
+        /// <para>The name of the application used to filter delivery groups. Fuzzy match is supported. The delivery group must contain a deployed application whose name contains the specified text. If this parameter is not specified or is set to an empty string, the results are not filtered by application name. If this parameter is specified together with AppId, the same application must meet both conditions.</para>
+        /// <para>This condition does not trim the returned Apps list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Office applications</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The username to be excluded based on existing authorizations. Exact match by full username is supported, such as <c>alice</c>. If this parameter is specified, delivery groups for which all applications have been directly authorized to the user are excluded. If this parameter is not specified or is set to an empty string, the results are not filtered by user authorization status.</para>
-        /// <para><b>Authorizations for a single application or access permissions obtained through user groups are not fully evaluated by this condition.</b> Do not equate the returned results with a list of delivery groups to which the user has no access at all.</para>
+        /// <para>The username to be excluded based on existing authorizations. Exact match by full username is supported, such as alice. After this parameter is specified, delivery groups for which all applications have been directly authorized to the user are excluded. If this parameter is not specified or is set to an empty string, the results are not excluded based on user authorization.</para>
+        /// <para><b>Authorizations for a single application or access permissions obtained through user groups are not fully determined by this condition.</b> You cannot equate the returned results with a list of delivery groups to which the user has absolutely no access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number. This parameter is required. Start the query from page <c>1</c> and use it in conjunction with <c>PageSize</c>. Keep other filter conditions unchanged when querying subsequent pages.</para>
+        /// <para>The page number. This parameter is required. Start the query from page 1 and use it in conjunction with PageSize. When querying subsequent pages, keep other filter conditions unchanged.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of delivery groups to return per page. This parameter is required. Valid values: <c>1</c> to <c>100</c>. Explicitly specify this parameter and do not use the default values of other query operations.</para>
+        /// <para>The maximum number of delivery groups to return per page. This parameter is required. Valid values: 1 to 100. Unit: delivery groups. Explicitly specify this parameter and do not use the default values of other query operations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,17 +95,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product type. This parameter is required. The value must be the same as the product type of the delivery groups to be queried. Only published delivery groups of this product type are returned. If an unrecognized value is passed, a parameter error is returned.</para>
+        /// <para>The product type. This parameter is required. The value must be the same as the product type to which the delivery groups to be queried belong. Only published delivery groups under this product type are returned. If an unrecognized value is passed, a parameter error is returned.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>CloudApp</c>: Wuying Cloud App.</description></item>
-        /// <item><description><c>CloudBrowser</c>: Cloud browser.</description></item>
-        /// <item><description><c>WuyingServer</c>: Enterprise Edition workstation.</description></item>
-        /// <item><description><c>WuyingWorkstation</c>: Personal Edition Linggou container workstation.</description></item>
-        /// <item><description><c>WuyingWorkstationTeam</c>: Team Edition Linggou container workstation.</description></item>
-        /// <item><description><c>WuyingWorkstationBusiness</c>: Dedicated Edition Linggou container workstation.</description></item>
-        /// <item><description><c>AndroidCloud</c>: Cloud phone.</description></item>
-        /// <item><description><c>AIAgent</c>: AgentBay (AI agent).</description></item>
+        /// <item><description>CloudApp: WUYING Cloud App.</description></item>
+        /// <item><description>CloudBrowser: Cloud Browser.</description></item>
+        /// <item><description>WuyingServer: Enterprise Edition workstation.</description></item>
+        /// <item><description>WuyingWorkstation: Personal Edition Linggou container workstation.</description></item>
+        /// <item><description>WuyingWorkstationTeam: Team Edition Linggou container workstation.</description></item>
+        /// <item><description>WuyingWorkstationBusiness: Dedicated Edition Linggou container workstation.</description></item>
+        /// <item><description>AndroidCloud: Cloud Phone.</description></item>
+        /// <item><description>AIAgent: AgentBay (AI agent).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

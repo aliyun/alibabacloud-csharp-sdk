@@ -1,3 +1,18 @@
+2026-11-11 Version: 5.14.0
+- Support API DescribeShareImage.
+- Support API FinishValidate.
+- Support API GetEffectiveImageById.
+- Support API GetImageById.
+- Support API GetImageDistributeInfo.
+- Support API GetUploadInfo.
+- Support API ImportImage.
+- Support API ListImageBaseInfo.
+- Support API ListImageTags.
+- Support API ListRelatedResource.
+- Support API StartTaskForCreateImage.
+- Support API SubmitImage.
+
+
 2026-11-09 Version: 5.13.0
 - Support API GetMqttTicket.
 

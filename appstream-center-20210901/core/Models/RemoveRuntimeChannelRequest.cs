@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RemoveRuntimeChannelRequest : TeaModel {
         /// <summary>
-        /// <para>The Agent platform.</para>
+        /// <para>The agent platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The Agent provider.</para>
+        /// <para>The agent provider. The mappings with the agent runtime type are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>JVS Computer: Set this parameter to OpenClaw.</description></item>
+        /// <item><description>OpenClaw: Set this parameter to OpenClaw.</description></item>
+        /// <item><description>Hermes Agent: Set this parameter to HermesAgent, and you must also set AgentPlatform to ENTERPRISE_JVS. If AgentPlatform is not specified, the default value is ENTERPRISE, and only OpenClaw is supported in this case.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of Agent runtime IDs.</para>
+        /// <para>The list of agent runtime IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuntimeIds")]

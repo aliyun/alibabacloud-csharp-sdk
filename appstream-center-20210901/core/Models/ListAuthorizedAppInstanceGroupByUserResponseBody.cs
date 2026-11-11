@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModels> AppInstanceGroupModels { get; set; }
         public class ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModels : TeaModel {
             /// <summary>
-            /// <para>The ID of the application image used by the delivery group.</para>
+            /// <para>The ID of the app image used by the delivery group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>img-8z4nztpaqvay4****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The delivery group name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Office applications</para>
+            /// <para>Office apps</para>
             /// </summary>
             [NameInMap("AppInstanceGroupName")]
             [Validation(Required=false)]
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The list of applications deployed in the delivery group. This list includes all applications deployed in the delivery group image and is not affected by the AppId and AppName request parameters.</para>
+            /// <para>The list of apps deployed in the delivery group. This list includes all apps deployed in the delivery group image and is not affected by the AppId and AppName request parameters.</para>
             /// </summary>
             [NameInMap("Apps")]
             [Validation(Required=false)]
             public List<ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModelsApps> Apps { get; set; }
             public class ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModelsApps : TeaModel {
                 /// <summary>
-                /// <para>The URL of the application icon.</para>
+                /// <para>The URL of the app icon.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AppIcon { get; set; }
 
                 /// <summary>
-                /// <para>The application ID. When you call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the connection ticket for the application, specify this value.</para>
+                /// <para>The app ID. When you call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the connection ticket for the app, specify this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ca-i87mycyn419nu****</para>
@@ -84,17 +84,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The application name.</para>
+                /// <para>The app name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Office applications</para>
+                /// <para>Office apps</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The application version number.</para>
+                /// <para>The app version number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AppVersion { get; set; }
 
                 /// <summary>
-                /// <para>The application version name.</para>
+                /// <para>The app version name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Initial version</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The expiration time of the delivery group. The time is in ISO 8601 format with milliseconds and a time zone offset of +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
+            /// <para>The expiration time of the delivery group. The time is displayed in ISO 8601 format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-27T16:00:00.000+00:00</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the delivery group. The time is in ISO 8601 format with milliseconds and a time zone offset of +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
+            /// <para>The creation time of the delivery group. The time is displayed in ISO 8601 format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-26T15:06:16.000+00:00</para>
@@ -148,11 +148,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The status of the delivery group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DEPLOYING: Deploying. The delivery group is creating or starting resources and cannot be connected to.</description></item>
+            /// <item><description>DEPLOYING: Deploying. The delivery group is creating or starting resources and cannot be connected.</description></item>
             /// <item><description>DEPLOYED: Deployed. Resources are ready but the delivery group is not published for external services.</description></item>
-            /// <item><description>PUBLISHED: Published. The delivery group is published and users can connect to it.</description></item>
-            /// <item><description>STOPPING: Unpublishing. The delivery group is stopping services.</description></item>
-            /// <item><description>STOPPED: Unpublished. The delivery group has stopped services and users cannot connect to it.</description></item>
+            /// <item><description>PUBLISHED: Published. The delivery group is published and users can connect to and use it.</description></item>
+            /// <item><description>STOPPING: Delisting. The delivery group is stopping services.</description></item>
+            /// <item><description>STOPPED: Delisted. The delivery group has stopped services and users cannot connect to it.</description></item>
             /// <item><description>MAINTAINING: Updating. The delivery group is undergoing maintenance or changes.</description></item>
             /// <item><description>FAILED: Publishing failed. Resource initialization failed.</description></item>
             /// <item><description>MAINTAIN_FAILED: Update failed. Maintenance or changes were not successful.</description></item>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether mixed authorization of users and user groups is supported.</para>
+            /// <para>Specifies whether mixed authorization for users and user groups is supported.</para>
             /// </summary>
             [NameInMap("SupportUserGroupMixedAuth")]
             [Validation(Required=false)]
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of delivery groups returned per page. The value is the same as the PageSize request parameter.</para>
+        /// <para>The number of delivery groups returned on each page. The value is the same as the PageSize request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAgentInstanceVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of agent instance version numbers, deduplicated and sorted in ascending order by version number.</para>
+        /// <para>The list of agent instance version numbers, which are deduplicated and sorted in ascending order.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

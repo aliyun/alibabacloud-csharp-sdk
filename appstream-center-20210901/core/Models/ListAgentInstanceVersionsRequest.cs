@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAgentInstanceVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The agent platform used to filter version numbers by business type. If not specified, the default value is ENTERPRISE.</para>
+        /// <para>The agent platform used to filter version numbers by business type. If this parameter is not specified, the default value ENTERPRISE is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>

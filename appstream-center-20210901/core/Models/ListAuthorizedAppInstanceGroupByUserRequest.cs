@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAuthorizedAppInstanceGroupByUserRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. Fuzzy match is supported. Delivery groups in which the IDs of deployed applications contain this string are returned. You can obtain the application ID from the Apps list returned by this operation.</para>
-        /// <para>If this parameter is not specified, delivery groups are not filtered by application ID.</para>
+        /// <para>The app ID. Fuzzy match is supported. Delivery groups in which the IDs of deployed apps contain this string are returned. You can obtain the app ID from the Apps list returned by this operation.</para>
+        /// <para>If this parameter is not specified, delivery groups are not filtered by app ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-i87mycyn419nu****</para>
@@ -32,31 +32,31 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group name. Fuzzy match is supported. For example, if you specify Office applications, delivery groups whose names contain Office applications (such as My office applications and Office applications A) are returned.</para>
+        /// <para>The delivery group name. Fuzzy match is supported. For example, if you specify <c>Office apps</c>, delivery groups whose names contain <c>Office apps</c> (such as <c>My office apps</c> and <c>Office apps A</c>) are queried.</para>
         /// <para>If this parameter is not specified, delivery groups are not filtered by delivery group name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Office applications</para>
+        /// <para>Office apps</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The application name. Fuzzy match is supported. Delivery groups in which the names of deployed applications contain this string are returned.</para>
-        /// <para>If this parameter is not specified, delivery groups are not filtered by application name.</para>
+        /// <para>The app name. Fuzzy match is supported. Delivery groups in which the names of deployed apps contain this string are returned.</para>
+        /// <para>If this parameter is not specified, delivery groups are not filtered by app name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Office applications</para>
+        /// <para>Office apps</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The username. Exact match is used to query the delivery groups for which the user has been granted delivery group-level authorization.</para>
+        /// <para>The username. Exact match is used based on the username to query the delivery groups for which the user has been granted delivery group-level authorization.</para>
         /// <remarks>
-        /// <para>This parameter is required. If this parameter is not specified, the InvalidParameter.UserId error code is returned.</para>
+        /// <para>This parameter is required. If this parameter is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of delivery groups to return per page. Valid values: 1 to 100.</para>
+        /// <para>The number of delivery groups to return on each page. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The product type. The value must be the same as the product type of the delivery groups to be queried. Only delivery groups of this product type are returned.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CloudApp: Wuying Cloud App.</description></item>
+        /// <item><description>CloudApp: Cloud App.</description></item>
         /// <item><description>CloudBrowser: Cloud Browser.</description></item>
         /// <item><description>WuyingServer: Enterprise Edition workstation.</description></item>
         /// <item><description>WuyingWorkstation: Personal Edition Linggou container workstation.</description></item>

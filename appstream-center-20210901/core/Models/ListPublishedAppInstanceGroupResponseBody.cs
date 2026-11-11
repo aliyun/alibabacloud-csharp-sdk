@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListPublishedAppInstanceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of published delivery groups on the current page, sorted in descending order of creation time. An empty list is returned if no results match or if the requested page exceeds the result range.</para>
+        /// <para>The list of published delivery groups on the current page, sorted in descending order of creation time. If no results match or the requested page exceeds the result range, an empty list is returned.</para>
         /// </summary>
         [NameInMap("AppInstanceGroupModels")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The list of deployed applications in the image of the delivery group. The <c>AppId</c> and <c>AppName</c> parameters in the request only determine whether the delivery group is selected, and do not restrict this list to the matched applications.</para>
+            /// <para>The list of deployed applications in the image of the delivery group. The AppId and AppName parameters in the request only determine whether the delivery group is selected, and do not trim this list to the matched applications.</para>
             /// </summary>
             [NameInMap("Apps")]
             [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The expiration time of the delivery group. For delivery groups purchased as resources, the expiration time of their resources is returned. For other delivery groups, the expiration time of the delivery group itself is returned. The time is in ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
+            /// <para>The expiration time of the delivery group. For delivery groups sold as resources, the expiration time of their resources is returned. For other delivery groups, the expiration time of the delivery group itself is returned. The time is in the ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-27T16:00:00.000+00:00</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the delivery group. The time is in ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
+            /// <para>The creation time of the delivery group. The time is in the ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-26T15:06:16.000+00:00</para>
@@ -146,9 +146,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the delivery group. This operation only returns delivery groups in the following states:</para>
+            /// <para>The status of the delivery group. This operation only returns delivery groups in the following status:</para>
             /// <list type="bullet">
-            /// <item><description><c>PUBLISHED</c>: The delivery group is published and listed, and can be included in the query results of this operation. This status does not indicate that a specified user has obtained access permissions.</description></item>
+            /// <item><description>PUBLISHED: Published and listed. Delivery groups in this status can be included in the query results of this operation. This status does not indicate that a specified user has obtained access permissions.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether mixed authorization for users and user groups is supported.</para>
+            /// <para>Specifies whether mixed authorization for users and user groups is supported.</para>
             /// </summary>
             [NameInMap("SupportUserGroupMixedAuth")]
             [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of delivery groups per page specified in the request. This value does not represent the actual number of entries returned on the current page. The actual number on the current page may be less than this value.</para>
+        /// <para>The number of delivery groups per page specified in the request. Unit: delivery groups. This value does not represent the actual number of entries returned on the current page. The actual number on the current page may be less than this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, which can be used to troubleshoot request issues.</para>
+        /// <para>The unique identifier of the current request, which can be used to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of delivery groups that meet all filter conditions. This value is not the number of entries returned on the current page. Each delivery group is counted only once. If no results match, the value is <c>0</c>.</para>
+        /// <para>The total number of delivery groups that meet all filter conditions. Unit: delivery groups. This value is not the number of entries returned on the current page. Each delivery group is counted only once. If no results match, the value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

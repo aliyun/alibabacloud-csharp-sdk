@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID, which is a common request parameter for the gateway. The actual region used to filter session data in this operation is specified by BizRegionId.</para>
+        /// <para>The region ID, which is a common request parameter for the gateway. The region actually used to filter session data in this operation is specified by BizRegionId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
