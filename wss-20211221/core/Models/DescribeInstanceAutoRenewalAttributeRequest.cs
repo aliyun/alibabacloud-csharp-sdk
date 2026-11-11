@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeInstanceAutoRenewalAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The auto-renewal status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Auto-renewal is enabled.</description></item>
-        /// <item><description>false: Auto-renewal is disabled.</description></item>
-        /// </list>
+        /// <para>The auto-renewal status. Valid values: true (auto-renewal enabled) and false (auto-renewal disabled).</para>
         /// </summary>
         [NameInMap("AutoRenewal")]
         [Validation(Required=false)]
@@ -68,7 +64,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Example: CorePackage indicates a core-hour package.</para>
+        /// <para>The resource type. Valid value: CorePackage (core-hour package).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CorePackage</para>

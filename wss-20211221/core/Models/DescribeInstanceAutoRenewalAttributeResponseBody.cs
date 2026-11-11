@@ -37,18 +37,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: Auto-renewal is enabled.</description></item>
-            /// <item><description>false: Auto-renewal is disabled.</description></item>
-            /// </list>
+            /// <para>The auto-renewal status. Valid values: true (auto-renewal enabled) and false (auto-renewal disabled).</para>
             /// </summary>
             [NameInMap("AutoRenewal")]
             [Validation(Required=false)]
             public bool? AutoRenewal { get; set; }
 
             /// <summary>
-            /// <para>The instance ID, which identifies the purchased instance.</para>
+            /// <para>The instance ID, which is used to identify the purchased instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cp-0bw2ew49****</para>
@@ -80,7 +76,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number of the paging query, starting from 1.</para>
+        /// <para>The page number for paging, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,7 +96,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The unique identifier of the request, which can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72481C12-69AB-5CE1-8A35-A8EFA921****</para>

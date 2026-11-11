@@ -234,21 +234,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AI 调用明细</para>
+        /// <para>Performs a paging query for AI model invocation records based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</description></item>
-        /// <item><description>支持按模型调用请求ID、请求模型和用户ID进行筛选。</description></item>
-        /// <item><description>查询结果按调用时间倒序返回。</description></item>
-        /// <item><description>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</description></item>
-        /// <item><description>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</description></item>
-        /// <item><description><c>PageNumber</c>与<c>PageSize</c>的乘积不得超过1000000。</description></item>
-        /// <item><description><c>BizType</c>不传时默认为企业版。</description></item>
-        /// <item><description><c>GatewayRegion</c>不传时国内站默认上海，国际站默认新加坡。</description></item>
+        /// <item><description>This operation performs a paging query for AI model invocation details of the current Alibaba Cloud account within a specified business edition, region, and time range.</description></item>
+        /// <item><description>You can filter results by model invocation request ID, requested model, and user ID.</description></item>
+        /// <item><description>Query results are returned in descending order of invocation time.</description></item>
+        /// <item><description>By default, this operation queries data from 00:00:00 (UTC+8) of the current day to the current time. The query time range cannot exceed 30 days and cannot start earlier than three calendar months before the current time.</description></item>
+        /// <item><description>You can only query data for the primary account to which the current caller identity belongs. You cannot specify other accounts.</description></item>
+        /// <item><description>The product of PageNumber and PageSize cannot exceed 1,000,000.</description></item>
+        /// <item><description>If BizType is not specified, the default value is Enterprise Edition.</description></item>
+        /// <item><description>If GatewayRegion is not specified, the default value is Shanghai for the China site and Singapore for the international site.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -323,21 +323,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AI 调用明细</para>
+        /// <para>Performs a paging query for AI model invocation records based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</description></item>
-        /// <item><description>支持按模型调用请求ID、请求模型和用户ID进行筛选。</description></item>
-        /// <item><description>查询结果按调用时间倒序返回。</description></item>
-        /// <item><description>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</description></item>
-        /// <item><description>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</description></item>
-        /// <item><description><c>PageNumber</c>与<c>PageSize</c>的乘积不得超过1000000。</description></item>
-        /// <item><description><c>BizType</c>不传时默认为企业版。</description></item>
-        /// <item><description><c>GatewayRegion</c>不传时国内站默认上海，国际站默认新加坡。</description></item>
+        /// <item><description>This operation performs a paging query for AI model invocation details of the current Alibaba Cloud account within a specified business edition, region, and time range.</description></item>
+        /// <item><description>You can filter results by model invocation request ID, requested model, and user ID.</description></item>
+        /// <item><description>Query results are returned in descending order of invocation time.</description></item>
+        /// <item><description>By default, this operation queries data from 00:00:00 (UTC+8) of the current day to the current time. The query time range cannot exceed 30 days and cannot start earlier than three calendar months before the current time.</description></item>
+        /// <item><description>You can only query data for the primary account to which the current caller identity belongs. You cannot specify other accounts.</description></item>
+        /// <item><description>The product of PageNumber and PageSize cannot exceed 1,000,000.</description></item>
+        /// <item><description>If BizType is not specified, the default value is Enterprise Edition.</description></item>
+        /// <item><description>If GatewayRegion is not specified, the default value is Shanghai for the China site and Singapore for the international site.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -412,21 +412,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AI 调用明细</para>
+        /// <para>Performs a paging query for AI model invocation records based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</description></item>
-        /// <item><description>支持按模型调用请求ID、请求模型和用户ID进行筛选。</description></item>
-        /// <item><description>查询结果按调用时间倒序返回。</description></item>
-        /// <item><description>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</description></item>
-        /// <item><description>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</description></item>
-        /// <item><description><c>PageNumber</c>与<c>PageSize</c>的乘积不得超过1000000。</description></item>
-        /// <item><description><c>BizType</c>不传时默认为企业版。</description></item>
-        /// <item><description><c>GatewayRegion</c>不传时国内站默认上海，国际站默认新加坡。</description></item>
+        /// <item><description>This operation performs a paging query for AI model invocation details of the current Alibaba Cloud account within a specified business edition, region, and time range.</description></item>
+        /// <item><description>You can filter results by model invocation request ID, requested model, and user ID.</description></item>
+        /// <item><description>Query results are returned in descending order of invocation time.</description></item>
+        /// <item><description>By default, this operation queries data from 00:00:00 (UTC+8) of the current day to the current time. The query time range cannot exceed 30 days and cannot start earlier than three calendar months before the current time.</description></item>
+        /// <item><description>You can only query data for the primary account to which the current caller identity belongs. You cannot specify other accounts.</description></item>
+        /// <item><description>The product of PageNumber and PageSize cannot exceed 1,000,000.</description></item>
+        /// <item><description>If BizType is not specified, the default value is Enterprise Edition.</description></item>
+        /// <item><description>If GatewayRegion is not specified, the default value is Shanghai for the China site and Singapore for the international site.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -445,21 +445,21 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AI 调用明细</para>
+        /// <para>Performs a paging query for AI model invocation records based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</description></item>
-        /// <item><description>支持按模型调用请求ID、请求模型和用户ID进行筛选。</description></item>
-        /// <item><description>查询结果按调用时间倒序返回。</description></item>
-        /// <item><description>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</description></item>
-        /// <item><description>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</description></item>
-        /// <item><description><c>PageNumber</c>与<c>PageSize</c>的乘积不得超过1000000。</description></item>
-        /// <item><description><c>BizType</c>不传时默认为企业版。</description></item>
-        /// <item><description><c>GatewayRegion</c>不传时国内站默认上海，国际站默认新加坡。</description></item>
+        /// <item><description>This operation performs a paging query for AI model invocation details of the current Alibaba Cloud account within a specified business edition, region, and time range.</description></item>
+        /// <item><description>You can filter results by model invocation request ID, requested model, and user ID.</description></item>
+        /// <item><description>Query results are returned in descending order of invocation time.</description></item>
+        /// <item><description>By default, this operation queries data from 00:00:00 (UTC+8) of the current day to the current time. The query time range cannot exceed 30 days and cannot start earlier than three calendar months before the current time.</description></item>
+        /// <item><description>You can only query data for the primary account to which the current caller identity belongs. You cannot specify other accounts.</description></item>
+        /// <item><description>The product of PageNumber and PageSize cannot exceed 1,000,000.</description></item>
+        /// <item><description>If BizType is not specified, the default value is Enterprise Edition.</description></item>
+        /// <item><description>If GatewayRegion is not specified, the default value is Shanghai for the China site and Singapore for the international site.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1594,6 +1594,202 @@ namespace AlibabaCloud.SDK.Wss20211221
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceAutoRenewalAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sold instances and their quotas and properties by paging based on resource type, instance ID, business resource ID, and status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries sold instances and their quotas and properties by paging based on resource type, instance ID, business resource ID, and status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstancesResponse
+        /// </returns>
+        public DescribeInstancesResponse DescribeInstancesWithOptions(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoResourceId))
+            {
+                query["NoResourceId"] = request.NoResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyKeyList))
+            {
+                query["PropertyKeyList"] = request.PropertyKeyList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StateList))
+            {
+                query["StateList"] = request.StateList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstances",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sold instances and their quotas and properties by paging based on resource type, instance ID, business resource ID, and status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries sold instances and their quotas and properties by paging based on resource type, instance ID, business resource ID, and status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstancesResponse
+        /// </returns>
+        public async Task<DescribeInstancesResponse> DescribeInstancesWithOptionsAsync(DescribeInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoResourceId))
+            {
+                query["NoResourceId"] = request.NoResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyKeyList))
+            {
+                query["PropertyKeyList"] = request.PropertyKeyList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StateList))
+            {
+                query["StateList"] = request.StateList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstances",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sold instances and their quotas and properties by paging based on resource type, instance ID, business resource ID, and status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries sold instances and their quotas and properties by paging based on resource type, instance ID, business resource ID, and status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstancesResponse
+        /// </returns>
+        public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sold instances and their quotas and properties by paging based on resource type, instance ID, business resource ID, and status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries sold instances and their quotas and properties by paging based on resource type, instance ID, business resource ID, and status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstancesResponse
+        /// </returns>
+        public async Task<DescribeInstancesResponse> DescribeInstancesAsync(DescribeInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstancesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
