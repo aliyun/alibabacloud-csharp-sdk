@@ -10,37 +10,32 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListImportedLogsByProdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListImportedLogsByProdResponseBodyData> Data { get; set; }
         public class ListImportedLogsByProdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether logs are automatically ingested for new accounts. Valid values:</para>
+            /// <para>Indicates whether new accounts are automatically onboarded. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: Logs are automatically ingested.</para>
-            /// </description></item>
-            /// <item><description><para>0: Logs are not automatically ingested.</para>
-            /// </description></item>
+            /// <item><description>1: Automatically onboarded. </description></item>
+            /// <item><description>0: Not automatically onboarded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-11-23 12:30:00</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AutoImported")]
             [Validation(Required=false)]
             public int? AutoImported { get; set; }
 
             /// <summary>
-            /// <para>The multicloud code. Valid values:</para>
+            /// <para>The multi-cloud code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>qcloud: Tencent Cloud.</para>
-            /// </description></item>
-            /// <item><description><para>aliyun: Alibaba Cloud.</para>
-            /// </description></item>
-            /// <item><description><para>hcloud: Huawei Cloud.</para>
-            /// </description></item>
+            /// <item><description>hcloud: Huawei Cloud.</description></item>
+            /// <item><description>qcloud: Tencent Cloud.</description></item>
+            /// <item><description>aliyun: Alibaba Cloud.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,23 +46,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the log is ingested. Valid values:</para>
+            /// <para>Indicates whether the log is onboarded. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: The log is ingested.</para>
-            /// </description></item>
-            /// <item><description><para>0: The log is not ingested.</para>
-            /// </description></item>
+            /// <item><description>1: Onboarded. </description></item>
+            /// <item><description>0: Not onboarded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-11-23 12:30:00</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Imported")]
             [Validation(Required=false)]
             public int? Imported { get; set; }
 
             /// <summary>
-            /// <para>The number of users who have ingested the log.</para>
+            /// <para>The number of users that have onboarded the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -77,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? ImportedUserCount { get; set; }
 
             /// <summary>
-            /// <para>The code of the log.</para>
+            /// <para>The log code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_siem_waf_xxxxx</para>
@@ -87,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogCode { get; set; }
 
             /// <summary>
-            /// <para>The display code of the log.</para>
+            /// <para>The log display code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>${siem.prod. cloud_siem_waf_xxxxx}</para>
@@ -99,21 +92,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The log type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: Ingested on the threat analysis side.</para>
-            /// </description></item>
-            /// <item><description><para>2: Predefined Simple Log Service log. -3: Custom Simple Log Service log.</para>
-            /// </description></item>
+            /// <item><description>1: Centralized onboarding. </description></item>
+            /// <item><description>2: Predefined Log Service. </description></item>
+            /// <item><description>3: Custom Log Service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-11-23 12:30:00</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("LogType")]
             [Validation(Required=false)]
             public int? LogType { get; set; }
 
             /// <summary>
-            /// <para>The time when the log was last ingested.</para>
+            /// <para>The last onboarding time of the log. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-23 12:30:00</para>
@@ -123,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The code of the product to which the log belongs.</para>
+            /// <para>The product code corresponding to the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qcloud_waf</para>
@@ -143,7 +135,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? TotalUserCount { get; set; }
 
             /// <summary>
-            /// <para>The number of users who have not ingested the log.</para>
+            /// <para>The number of users that have not onboarded the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAutomateResponseConfigFeatureRequest : TeaModel {
         /// <summary>
-        /// <para>The type of automated response. Valid values:</para>
+        /// <para>The automated response type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>event: event</para>
-        /// </description></item>
-        /// <item><description><para>alert: alert</para>
-        /// </description></item>
+        /// <item><description>event: Event.</description></item>
+        /// <item><description>alert: Alert.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AutoResponseType { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center of threat analysis is deployed. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Assets in the Chinese mainland and Hong Kong (China).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Assets outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located in regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member. An administrator can use this parameter to switch to the perspective of the member.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -52,12 +48,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of view. Valid values:</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: the view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: the view of all accounts that are managed by the administrator account.</para>
-        /// </description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

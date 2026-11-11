@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListAutomateResponseConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public ListAutomateResponseConfigsResponseBodyDataPageInfo PageInfo { get; set; }
             public class ListAutomateResponseConfigsResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The page number of the returned page.</para>
+                /// <para>The current page number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<ListAutomateResponseConfigsResponseBodyDataResponseData> ResponseData { get; set; }
             public class ListAutomateResponseConfigsResponseBodyDataResponseData : TeaModel {
                 /// <summary>
-                /// <para>The action configuration of the automated response rule. The value is a JSON array.</para>
+                /// <para>The action configuration of the automated response rule, in JSON array format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[
@@ -92,14 +92,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ActionConfig { get; set; }
 
                 /// <summary>
-                /// <para>The handling action. Multiple values are separated by commas. Valid values:</para>
+                /// <para>The types of the actions. Multiple values are separated by commas. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>doPlaybook</b>: executes a playbook.</para>
-                /// </description></item>
-                /// <item><description><para><b>changeEventStatus</b>: changes the status of an event.</para>
-                /// </description></item>
-                /// <item><description><para><b>changeThreatLevel</b>: changes the threat level of an event.</para>
-                /// </description></item>
+                /// <item><description><b>doPlaybook</b>: Execute a playbook.</description></item>
+                /// <item><description><b>changeEventStatus</b>: Change the event status.</description></item>
+                /// <item><description><b>changeThreatLevel</b>: Change the event threat level.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -110,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ActionType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is associated with the rule.</para>
+                /// <para>The ID of the primary Alibaba Cloud account associated with the SIEM rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127608589417****</para>
@@ -122,10 +119,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The type of the automated response. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>event</b></para>
-                /// </description></item>
-                /// <item><description><para><b>alert</b></para>
-                /// </description></item>
+                /// <item><description><b>event</b>: Event.</description></item>
+                /// <item><description><b>alert</b>: Alert.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -139,14 +134,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <para>The data type of the condition field in the automated response rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>varchar</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("DataType")]
                 [Validation(Required=false)]
                 public int? DataType { get; set; }
 
                 /// <summary>
-                /// <para>The trigger condition of the automated response rule. The value is in the JSON format.</para>
+                /// <para>The cause of the automated response rule, in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;left&quot;:{&quot;value&quot;:&quot;alert_name&quot;},&quot;operator&quot;:&quot;containsString&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;webshell_online&quot;}}]</para>
@@ -186,12 +181,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The type of the response rule.</para>
+                /// <para>The type of the response rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>preset: predefined</para>
-                /// </description></item>
-                /// <item><description><para>custom: custom</para>
-                /// </description></item>
+                /// <item><description>preset: Predefined.</description></item>
+                /// <item><description>custom: Custom.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -214,10 +207,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The status of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>0</b>: disabled</para>
-                /// </description></item>
-                /// <item><description><para><b>100</b>: enabled</para>
-                /// </description></item>
+                /// <item><description><b>0</b>: Disabled.</description></item>
+                /// <item><description><b>100</b>: Enabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -242,7 +233,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -252,7 +243,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
@@ -262,12 +253,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class PostAutomateResponseConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the action that is specified in the automated response rule. The value is a JSON array.</para>
+        /// <para>The action configuration of the automated response rule, in JSON array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -28,12 +28,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The type of the action. Separate multiple values with commas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>doPlaybook</b>: runs a playbook</para>
-        /// </description></item>
-        /// <item><description><para><b>changeEventStatus</b>: changes the status of the event</para>
-        /// </description></item>
-        /// <item><description><para><b>changeThreatLevel</b>: changes the threat level of the event</para>
-        /// </description></item>
+        /// <item><description><b>doPlaybook</b>: execute playbook</description></item>
+        /// <item><description><b>changeEventStatus</b>: change event status</description></item>
+        /// <item><description><b>changeThreatLevel</b>: change event threat level</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,10 +43,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The type of the automated response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>event</b>: event</para>
-        /// </description></item>
-        /// <item><description><para><b>alert</b>: alert</para>
-        /// </description></item>
+        /// <item><description><b>event</b>: event</description></item>
+        /// <item><description><b>alert</b>: alert</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AutoResponseType { get; set; }
 
         /// <summary>
-        /// <para>The trigger condition of the automated response rule. The value is in the JSON format.</para>
+        /// <para>The trigger condition of the automated response rule, in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;left&quot;:{&quot;value&quot;:&quot;alert_name&quot;},&quot;operator&quot;:&quot;containsString&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;webshell_online&quot;}}]</para>
@@ -80,12 +75,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center of Threat Analysis is located. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user that the administrator uses to switch the view. This parameter is used when an administrator switches to the perspective of a member.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -106,12 +99,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: the view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: the view of all accounts that are managed by the administrator.</para>
-        /// </description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

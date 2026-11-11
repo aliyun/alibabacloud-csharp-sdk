@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class AddUserSourceLogConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to add or delete the log collection task. Valid values:</para>
+        /// <para>Specifies the ingestion action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>-1: Deletes the task.</para>
-        /// </description></item>
-        /// <item><description><para>0: Adds the task.</para>
-        /// </description></item>
+        /// <item><description>-1: Deletes the ingestion.</description></item>
+        /// <item><description>0: Adds the ingestion.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Deleted { get; set; }
 
         /// <summary>
-        /// <para>The detailed information about the SLS log to be collected.</para>
+        /// <para>The detailed Simple Log Service (SLS) information for log ingestion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai.siem-project.siem-logstore</para>
@@ -36,12 +34,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string DisPlayLine { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center of Threat Analysis is located. Select a region based on the region where your assets reside. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in regions outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The code of the log.</para>
+        /// <para>The log code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_siem_aegis_proc</para>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string SourceLogCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed information about the Simple Log Service (SLS) log to be collected. The value is a JSON string.</para>
+        /// <para>The detailed Simple Log Service (SLS) information for log ingestion in JSON format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string SourceLogInfo { get; set; }
 
         /// <summary>
-        /// <para>The code of the product.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -83,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string SourceProdCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account for which you want to collect logs.</para>
+        /// <para>The Alibaba Cloud account ID for log ingestion.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

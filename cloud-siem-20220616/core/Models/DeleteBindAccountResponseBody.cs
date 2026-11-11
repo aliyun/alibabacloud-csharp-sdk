@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DeleteBindAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteBindAccountResponseBodyData Data { get; set; }
         public class DeleteBindAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of account bindings that are deleted. A value of 1 indicates that the operation was successful. A value of 0 or less indicates that the operation failed.</para>
+            /// <para>The number of deleted account bindings. A value of 1 indicates success, and a value of 0 or less indicates failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

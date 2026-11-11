@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDataSourceParametersRequest : TeaModel {
         /// <summary>
-        /// <para>The code for the multicloud environment.</para>
+        /// <para>The multi-cloud code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values:</para>
+        /// <para>The type of the connected data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ckafka</b>: Tencent Cloud CKafka.</para>
-        /// </description></item>
-        /// <item><description><para><b>obs</b>: Huawei Cloud OBS.</para>
-        /// </description></item>
-        /// <item><description><para><b>wafApi</b>: Tencent Cloud WAF attack log download API.</para>
-        /// </description></item>
+        /// <item><description><b>ckafka</b>: Tencent Cloud CKafka. </description></item>
+        /// <item><description><b>obs</b>: Huawei Cloud OBS. </description></item>
+        /// <item><description><b>wafApi</b>: Tencent Cloud WAF attack log download API.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,12 +37,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center for threat analysis is deployed. Select a region based on the region where your assets are located. Valid values:</para>
+        /// <para>The region of the data management center for Threat Analysis. Select the region of the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

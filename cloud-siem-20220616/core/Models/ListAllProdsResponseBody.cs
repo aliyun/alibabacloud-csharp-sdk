@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListAllProdsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,14 +47,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<ListAllProdsResponseBodyDataProdList> ProdList { get; set; }
             public class ListAllProdsResponseBodyDataProdList : TeaModel {
                 /// <summary>
-                /// <para>The multicloud code. Valid values:</para>
+                /// <para>The code of the cloud service provider. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>qcloud: Tencent Cloud.</para>
-                /// </description></item>
-                /// <item><description><para>aliyun: Alibaba Cloud.</para>
-                /// </description></item>
-                /// <item><description><para>hcloud: Huawei Cloud.</para>
-                /// </description></item>
+                /// <item><description>qcloud: Tencent Cloud.</description></item>
+                /// <item><description>aliyun: Alibaba Cloud.</description></item>
+                /// <item><description>hcloud: Huawei Cloud.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -65,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string CloudCode { get; set; }
 
                 /// <summary>
-                /// <para>The number of ingested logs for the product.</para>
+                /// <para>The number of logs that have been ingested for the product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? ImportedLogCount { get; set; }
 
                 /// <summary>
-                /// <para>The time when logs were last ingested for the product.</para>
+                /// <para>The most recent time when logs were ingested for the product. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-11-23 12:12:12</para>
@@ -85,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The code of the cloud product.</para>
+                /// <para>The product code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas</para>

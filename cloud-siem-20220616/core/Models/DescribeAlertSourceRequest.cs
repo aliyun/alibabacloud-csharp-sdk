@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the query time range. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -20,14 +20,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The threat levels. Valid values:</para>
+        /// <para>The threat level. The value is a JSON array. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>serious</c>: High</para>
-        /// </description></item>
-        /// <item><description><para><c>suspicious</c>: Medium</para>
-        /// </description></item>
-        /// <item><description><para><c>remind</c>: Low</para>
-        /// </description></item>
+        /// <item><description>serious: High.</description></item>
+        /// <item><description>suspicious: Medium.</description></item>
+        /// <item><description>remind: Low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,12 +35,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<string> Level { get; set; }
 
         /// <summary>
-        /// <para>The region of the data management center for threat analysis. Select the data management center that corresponds to the region where your assets are located. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cn-hangzhou</c>: for assets in the Chinese mainland and Hong Kong (China).</para>
-        /// </description></item>
-        /// <item><description><para><c>ap-southeast-1</c>: for assets in regions outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located in regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member whose data you want to view. An administrator uses this parameter to view data from the perspective of a specific member.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -64,12 +59,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of view. Valid values:</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: View data for the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c>: View data for all accounts in the enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The start of the query time range. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>

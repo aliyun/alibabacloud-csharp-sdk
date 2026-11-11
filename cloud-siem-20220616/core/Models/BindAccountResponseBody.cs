@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class BindAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed information returned by the Threat Analysis service.</para>
+        /// <para>The specific content returned by the Threat Analysis service.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public BindAccountResponseBodyData Data { get; set; }
         public class BindAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of account bindings that are added.</para>
+            /// <para>The number of added account bindings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AssetName { get; set; }
 
         /// <summary>
-        /// <para>The current page number. The value must be greater than or equal to 1.</para>
+        /// <para>The page number of the current page. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IncidentUuid { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the alert has been defended. Valid values:</para>
+        /// <para>Specifies whether the threat is blocked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: detected</description></item>
-        /// <item><description>1: blocked</description></item>
+        /// <item><description>0: Detected.</description></item>
+        /// <item><description>1: Blocked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IsDefend { get; set; }
 
         /// <summary>
-        /// <para>The threat level in JSON array format. Valid values:</para>
+        /// <para>The threat level. The value is a JSON array. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>serious: High.</description></item>
         /// <item><description>suspicious: Medium.</description></item>
@@ -151,10 +151,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in Chinese mainland or China (Hong Kong).</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The member account ID of the resource directory.</para>
+        /// <para>The ID of the member account in the resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -177,8 +177,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: the view of the current Alibaba Cloud account.</description></item>
-        /// <item><description>1: the view of all accounts in the enterprise.</description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The alert data source.</para>
+        /// <para>The data source of the alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>

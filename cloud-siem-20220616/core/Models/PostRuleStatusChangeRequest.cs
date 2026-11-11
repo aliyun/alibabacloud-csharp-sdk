@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class PostRuleStatusChangeRequest : TeaModel {
         /// <summary>
-        /// <para>A JSON array of rule IDs.</para>
+        /// <para>The list of rule IDs in JSON array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[123,345]</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Ids { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Valid values:</para>
+        /// <para>The enabling status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enabled</para>
-        /// </description></item>
-        /// <item><description><para>false: disabled</para>
-        /// </description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,12 +34,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public bool? InUse { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center of threat analysis is located. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can specify this parameter to switch to the perspective of the member.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -62,12 +58,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: the view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: the view of all accounts that belong to the enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,12 +72,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>predefine: predefined rule</para>
-        /// </description></item>
-        /// <item><description><para>customize: custom rule</para>
-        /// </description></item>
+        /// <item><description>predefine: Predefined.</description></item>
+        /// <item><description>customize: Custom.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

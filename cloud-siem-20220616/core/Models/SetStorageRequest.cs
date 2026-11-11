@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class SetStorageRequest : TeaModel {
         /// <summary>
-        /// <para>The log storage region.</para>
-        /// <para>If the Data Management center is in cn-hangzhou, the default value of Region is <b>cn-shanghai</b>. If the Data Management center is in <b>ap-southeast-1</b>, the default value of <b>Region</b> is <b>ap-southeast-1</b>.</para>
-        /// <para>The log storage region cannot be changed. To change the region, contact the Threat Analysis operations team.</para>
+        /// <para>The log storage region. </para>
+        /// <para>If the data management center is located in <b>cn-hangzhou</b>, the default value of <b>Region</b> is China (Shanghai) (cn-shanghai). If the data management center is located in <b>ap-southeast-1</b>, the default value of <b>Region</b> is Singapore (ap-southeast-1).</para>
+        /// <para>The log storage region cannot be modified. To modify the region, contact the Threat Analysis operations personnel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -22,12 +22,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center for Threat Analysis. Select the region for the Data Management center based on the region of your assets. Valid values:</para>
+        /// <para>The region of the data management center for Threat Analysis. Select the region based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Select this value if your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Select this value if your assets are in a region outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Select this value if your assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Select this value if your assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member. An administrator can use this parameter to switch to the view of a specific member.</para>
+        /// <para>The ID of the user whose view the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -48,12 +46,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: The view of all accounts in your enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: the view of the current Alibaba Cloud account</description></item>
+        /// <item><description>1: the view of all accounts in the enterprise</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The log storage duration in days. The default value is 180. The minimum value is 30 and the maximum value is 3000.</para>
+        /// <para>The log retention period in days. Default value: 180. Valid values: 30 to 3000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

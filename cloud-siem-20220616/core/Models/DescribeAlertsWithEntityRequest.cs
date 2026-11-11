@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertsWithEntityRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. The value must be greater than or equal to 1.</para>
+        /// <para>The page number of the current page. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The unit is milliseconds.</para>
+        /// <para>The end time of the query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EntityUuid { get; set; }
 
         /// <summary>
-        /// <para>The globally unique ID of the event.</para>
+        /// <para>The globally unique ID of the incident.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85ea4241-798f-4684-a876-65d4f0c3****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IncidentUuid { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,12 +72,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the data management center for threat analysis. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: your assets are in the Chinese mainland and China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member to which the administrator switches.</para>
+        /// <para>The ID of the user whose view the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -98,12 +96,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Valid values:</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: the view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: the view of all accounts that are managed by your enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: the view of the current Alibaba Cloud account</description></item>
+        /// <item><description>1: the view of all accounts in the enterprise</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Security Orchestration, Automation, and Response (SOAR) handling policy.</para>
+        /// <para>The ID of the SOAR playbook.</para>
         /// 
         /// <b>Example:</b>
         /// <para>577bbf90-a770-44a7-8154-586aa2d318fa</para>
@@ -124,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string SophonTaskId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The unit is milliseconds.</para>
+        /// <para>The start time of the query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>

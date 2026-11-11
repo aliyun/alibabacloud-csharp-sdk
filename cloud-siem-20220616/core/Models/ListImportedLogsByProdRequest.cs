@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListImportedLogsByProdRequest : TeaModel {
         /// <summary>
-        /// <para>The multicloud code. Valid values:</para>
+        /// <para>The multi-cloud code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>qcloud: Tencent Cloud.</para>
-        /// </description></item>
-        /// <item><description><para>aliyun: Alibaba Cloud.</para>
-        /// </description></item>
-        /// <item><description><para>hcloud: Huawei Cloud.</para>
-        /// </description></item>
+        /// <item><description>hcloud: Huawei Cloud.</description></item>
+        /// <item><description>qcloud: Tencent Cloud.</description></item>
+        /// <item><description>aliyun: Alibaba Cloud.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// <para>The code of the product.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,12 +37,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string ProdCode { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management hub of threat analysis is deployed. Select the region where your assets are located. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located in regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that the administrator uses to switch to the perspective of a member.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -66,12 +61,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: The view of all accounts within the enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

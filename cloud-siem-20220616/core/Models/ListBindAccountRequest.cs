@@ -10,14 +10,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListBindAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the cloud service provider. Valid values:</para>
+        /// <para>The code of the multi-cloud provider. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>qcloud: Tencent Cloud.</para>
-        /// </description></item>
-        /// <item><description><para>aliyun: Alibaba Cloud.</para>
-        /// </description></item>
-        /// <item><description><para>hcloud: Huawei Cloud.</para>
-        /// </description></item>
+        /// <item><description>qcloud: Tencent Cloud.</description></item>
+        /// <item><description>hcloud: Huawei Cloud.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,12 +25,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Threat Analysis is deployed. Select the region of the data management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the threat detection and response data management center resides. Specify the management center based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member whose perspective the administrator wants to switch to.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -55,12 +49,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: The view of all accounts that are managed by the enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: the current Alibaba Cloud account view.</description></item>
+        /// <item><description>1: the view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

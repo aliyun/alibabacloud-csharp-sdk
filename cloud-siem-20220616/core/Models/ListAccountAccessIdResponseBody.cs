@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAccountAccessIdResponseBodyData> Data { get; set; }
         public class ListAccountAccessIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The attached AccessKey ID.</para>
+            /// <para>The bound AccessKeyId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ABCXXXXXXXX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccessId { get; set; }
 
             /// <summary>
-            /// <para>The MD5 value of the multicloud AccessKey ID.</para>
+            /// <para>The MD5 value of the multi-cloud AccessKeyId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abcXXXXXXXX</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccessIdMd5 { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The information of the account to which the multicloud AccessKey ID belongs. The format is: Alibaba Cloud account ID|Alibaba Cloud account name|Multicloud AccessKey ID.</para>
+            /// <para>The account information of the multi-cloud AccessKeyId. The format is Alibaba Cloud account ID|Alibaba Cloud account name|multi-cloud AccessKeyId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxx|xxxx|ABCXXXXX</para>
@@ -67,12 +67,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountStr { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the AccessKey ID is attached to threat analysis. Valid values:</para>
+            /// <para>Indicates whether the AccessKeyId is bound to threat detection and response. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: Not attached.</para>
-            /// </description></item>
-            /// <item><description><para>1: Attached.</para>
-            /// </description></item>
+            /// <item><description>0: Not bound.</description></item>
+            /// <item><description>1: Bound.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? Bound { get; set; }
 
             /// <summary>
-            /// <para>The code for the multicloud environment.</para>
+            /// <para>The code of the multi-cloud provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hcloud</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that corresponds to the multicloud AccessKey ID.</para>
+            /// <para>The Alibaba Cloud account ID that corresponds to the multi-cloud AccessKeyId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ABCXXXXXXXX</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The returned message description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
@@ -127,10 +125,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

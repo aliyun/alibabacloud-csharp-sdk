@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -40,30 +40,24 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? EntityId { get; set; }
 
             /// <summary>
-            /// <para>The information about the entity.</para>
+            /// <para>The entity information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{ location: &quot;xian&quot;, net_connect_dir: &quot;in&quot;, malware_type: &quot;${aliyun.siem.sas.alert_tag.login_unusual_account}&quot; }</para>
+            /// <para>{&quot;location&quot;: &quot;xian&quot;, &quot;net_connect_dir&quot;: &quot;in&quot;, &quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.login_unusual_account}&quot;}</para>
             /// </summary>
             [NameInMap("EntityInfo")]
             [Validation(Required=false)]
             public Dictionary<string, object> EntityInfo { get; set; }
 
             /// <summary>
-            /// <para>The type of the entity. Valid values:</para>
+            /// <para>The entity type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ip: IP address</para>
-            /// </description></item>
-            /// <item><description><para>domain: domain name</para>
-            /// </description></item>
-            /// <item><description><para>url: URL</para>
-            /// </description></item>
-            /// <item><description><para>process: process</para>
-            /// </description></item>
-            /// <item><description><para>file: file</para>
-            /// </description></item>
-            /// <item><description><para>host: host</para>
-            /// </description></item>
+            /// <item><description>ip: IP address</description></item>
+            /// <item><description>domain: Domain name</description></item>
+            /// <item><description>url: URL</description></item>
+            /// <item><description>process: Process</description></item>
+            /// <item><description>file: File</description></item>
+            /// <item><description>host: Host</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -115,12 +109,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: successful</description></item>
+        /// <item><description>false: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

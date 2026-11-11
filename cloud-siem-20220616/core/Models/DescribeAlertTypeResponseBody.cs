@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertTypeCategory { get; set; }
 
             /// <summary>
-            /// <para>The threat type category name in the language of the current request. Empty if no translation is available.</para>
+            /// <para>The name of the threat type category in the requested language. This parameter is empty if the translation is missing.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Identity and Access</para>
+            /// <para>Identity and access</para>
             /// </summary>
             [NameInMap("AlertTypeCategoryMds")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertTypeMds { get; set; }
 
             /// <summary>
-            /// <para>The English name of the threat type. Empty if no translation is available.</para>
+            /// <para>The English name of the threat type. This parameter is empty if the translation is missing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unusual Logon</para>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertTypeNameEn { get; set; }
 
             /// <summary>
-            /// <para>The Chinese name of the threat type. Empty if no translation is available.</para>
+            /// <para>The Chinese name of the threat type. This parameter is empty if the translation is missing.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>异常登录</para>
+            /// <para>Unusual logon</para>
             /// </summary>
             [NameInMap("AlertTypeNameZh")]
             [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -124,8 +124,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: successful.</description></item>
-        /// <item><description>false: failed.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDataSourceParametersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -19,28 +19,23 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>Indicates whether the parameter is editable. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: The parameter cannot be modified.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: The parameter can be modified.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Modification is disabled. </description></item>
+            /// <item><description><b>1</b>: Modification is allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>wafApi</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("CanEditted")]
             [Validation(Required=false)]
             public int? CanEditted { get; set; }
 
             /// <summary>
-            /// <para>The code for the multicloud environment. Valid values:</para>
+            /// <para>The multi-cloud code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>qcloud</b>: Tencent Cloud.</para>
-            /// </description></item>
-            /// <item><description><para><b>aliyun</b>: Alibaba Cloud.</para>
-            /// </description></item>
-            /// <item><description><para><b>hcloud</b>: Huawei Cloud.</para>
-            /// </description></item>
+            /// <item><description><b>qcloud</b>: Tencent Cloud.</description></item>
+            /// <item><description><b>aliyun</b>: Alibaba Cloud.</description></item>
+            /// <item><description><b>hcloud</b>: Huawei Cloud.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,14 +46,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>The type of the data source. Valid values:</para>
+            /// <para>The data source type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>obs</b>: Huawei Cloud OBS.</para>
-            /// </description></item>
-            /// <item><description><para><b>wafApi</b>: Tencent Cloud WAF download API.</para>
-            /// </description></item>
-            /// <item><description><para><b>ckafka</b>: Tencent Cloud CKafka.</para>
-            /// </description></item>
+            /// <item><description><b>obs</b>: Huawei Cloud OBS.</description></item>
+            /// <item><description><b>wafApi</b>: Tencent Cloud WAF download API. </description></item>
+            /// <item><description><b>ckafka</b>: Tencent Cloud CKafka.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataSourceType { get; set; }
 
             /// <summary>
-            /// <para>The default value of the parameter.</para>
+            /// <para>The default parameter value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wafApi</para>
@@ -79,23 +71,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DefaultValue { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the parameter can be modified. Valid values:</para>
+            /// <para>Indicates whether modification is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The parameter cannot be modified.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The parameter can be modified.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Modification is disabled. </description></item>
+            /// <item><description><b>false</b>: Modification is allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>wafApi</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Disabled")]
             [Validation(Required=false)]
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>The format check method.</para>
+            /// <para>The format validation method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>email</para>
@@ -105,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string FormatCheck { get; set; }
 
             /// <summary>
-            /// <para>Additional information.</para>
+            /// <para>The additional description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>obs docment</para>
@@ -115,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string Hit { get; set; }
 
             /// <summary>
-            /// <para>The code of the parameter.</para>
+            /// <para>The parameter code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>region_code</para>
@@ -125,12 +115,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ParaCode { get; set; }
 
             /// <summary>
-            /// <para>The level of the parameter. Valid values:</para>
+            /// <para>The parameter level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: data source parameter.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: log parameter.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Data source parameter.</description></item>
+            /// <item><description><b>2</b>: Log parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? ParaLevel { get; set; }
 
             /// <summary>
-            /// <para>The name of the parameter.</para>
+            /// <para>The parameter name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>region local</para>
@@ -151,7 +139,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ParaName { get; set; }
 
             /// <summary>
-            /// <para>The type of the parameter.</para>
+            /// <para>The parameter type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string</para>
@@ -161,14 +149,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ParaType { get; set; }
 
             /// <summary>
-            /// <para>The list of parameters.</para>
+            /// <para>The specific parameter list.</para>
             /// </summary>
             [NameInMap("ParamValue")]
             [Validation(Required=false)]
             public List<DescribeDataSourceParametersResponseBodyDataParamValue> ParamValue { get; set; }
             public class DescribeDataSourceParametersResponseBodyDataParamValue : TeaModel {
                 /// <summary>
-                /// <para>The displayed content.</para>
+                /// <para>The display content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>guangzhou</para>
@@ -178,7 +166,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The actual value of the parameter.</para>
+                /// <para>The actual parameter content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ap-guangzhou</para>
@@ -192,21 +180,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>Indicates whether the parameter is required. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: The parameter is required.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: The parameter is optional.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Required.</description></item>
+            /// <item><description><b>0</b>: Optional.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>string</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Required")]
             [Validation(Required=false)]
             public int? Required { get; set; }
 
             /// <summary>
-            /// <para>The prompt for the parameter value.</para>
+            /// <para>The parameter value hint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>obs bucket name</para>
@@ -218,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

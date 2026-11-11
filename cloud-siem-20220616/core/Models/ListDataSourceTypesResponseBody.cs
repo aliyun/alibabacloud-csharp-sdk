@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListDataSourceTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDataSourceTypesResponseBodyData> Data { get; set; }
         public class ListDataSourceTypesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The code of the multicloud service.</para>
+            /// <para>The code of the multi-cloud provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hcloud</para>
@@ -27,14 +27,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CloudCode { get; set; }
 
             /// <summary>
-            /// <para>The type of the data source. Valid values:</para>
+            /// <para>The data source type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>obs: Huawei Cloud OBS.</para>
-            /// </description></item>
-            /// <item><description><para>wafApi: Tencent Cloud WAF download API.</para>
-            /// </description></item>
-            /// <item><description><para>ckafka: Tencent Cloud CKafka.</para>
-            /// </description></item>
+            /// <item><description>obs: Huawei Cloud OBS.</description></item>
+            /// <item><description>wafApi: Tencent Cloud WAF download API. </description></item>
+            /// <item><description>ckafka: Tencent Cloud CKafka.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -47,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListBindDataSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The cloud account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The code of the multicloud environment.</para>
+        /// <para>The code of the multi-cloud provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,12 +32,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center of Threat Analysis is located. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Select the management center region based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

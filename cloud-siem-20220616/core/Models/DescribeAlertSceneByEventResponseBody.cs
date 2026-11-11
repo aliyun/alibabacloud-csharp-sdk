@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertSceneByEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public List<DescribeAlertSceneByEventResponseBodyData> Data { get; set; }
         public class DescribeAlertSceneByEventResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The display name of the alert. The value varies based on the language settings.</para>
+            /// <para>The display value of the alert name, which varies based on the language environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>login_common_ip</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertNameId { get; set; }
 
             /// <summary>
-            /// <para>The display title of the alert. The value varies based on the language settings.</para>
+            /// <para>The display value of the alert title, which varies based on the language environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unusual Logon-login_common_ip</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertTileId { get; set; }
 
             /// <summary>
-            /// <para>The display name of the alert type. The value varies based on the language settings.</para>
+            /// <para>The display value of the alert type, which varies based on the language environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unusual Logon</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertTypeId { get; set; }
 
             /// <summary>
-            /// <para>The objects to be whitelisted.</para>
+            /// <para>The whitelist targets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;Type&quot;: &quot;host_uuid&quot;,&quot;Value&quot;: &quot;441862da-a539-4cc0-a00d-473955826881&quot;,&quot;Values&quot;: [&quot;441862da-a539-4cc0-a00d-473955826881&quot;],&quot;Name&quot;: &quot;${aliyun.siem.entity.host_uuid}&quot;}]</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<DescribeAlertSceneByEventResponseBodyDataTargets> Targets { get; set; }
             public class DescribeAlertSceneByEventResponseBodyDataTargets : TeaModel {
                 /// <summary>
-                /// <para>The display name of the entity property field that can be whitelisted.</para>
+                /// <para>The display name of the entity attribute field that can be whitelisted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>host uuid</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The field of the entity property that can be whitelisted.</para>
+                /// <para>The entity attribute field that can be whitelisted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>host_uuid</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The default right operand displayed for the whitelisting rule.</para>
+                /// <para>The default right value displayed for the whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>441862da-a539-4cc0-a00d-47395582****</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string Value { get; set; }
 
                 /// <summary>
-                /// <para>The available right operands for the whitelisting rule.</para>
+                /// <para>The selectable right values for the whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;441862da-a539-4cc0-a00d-473955826881&quot;]</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -164,12 +164,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

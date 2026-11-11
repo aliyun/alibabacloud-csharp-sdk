@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class BindAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The AccessKey ID of the Alibaba Cloud account.</para>
+        /// <para>The AccessKey ID of the cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AccessId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The ID of the cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,20 +32,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The name of the multicloud account.</para>
+        /// <para>The name of the multi-cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>Sample multi-cloud account</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service provider. Valid values:</para>
+        /// <para>The code of the multi-cloud provider. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aliyun: Alibaba Cloud</description></item>
         /// <item><description>hcloud: Huawei Cloud</description></item>
         /// <item><description>qcloud: Tencent Cloud</description></item>
         /// </list>
@@ -59,10 +58,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Threat Analysis is located. You must select a region for the data management center based on the region where your assets reside. Valid values:</para>
+        /// <para>The region of the data management center for Threat Analysis. Select the region of the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets are deployed in the Chinese mainland or Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: Your assets are deployed in regions outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member to whose view the administrator switches.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -83,10 +82,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: the view of the current Alibaba Cloud account.</description></item>
-        /// <item><description>1: the view of all accounts that belong to the enterprise.</description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

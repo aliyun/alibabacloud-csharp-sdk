@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class SubmitImportLogTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The list of accounts for log ingestion. The value must be a JSON array. Valid values:</para>
+        /// <para>The list of accounts to be onboarded, in JSON array format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AccountId: The ID of the account.</para>
-        /// </description></item>
-        /// <item><description><para>Imported: Specifies whether to enable or disable log ingestion for the account. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>0: Disable ingestion.</para>
-        /// </description></item>
-        /// <item><description><para>1: Enable ingestion.</para>
-        /// </description></item>
+        /// <item><description>AccountId: the ID of the account to be onboarded.</description></item>
+        /// <item><description>Imported: specifies whether to onboard or disconnect the account. Valid values:<list type="bullet">
+        /// <item><description>0: Disconnect the account.</description></item>
+        /// <item><description>1: Onboard the account.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -32,12 +28,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Accounts { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically enable log ingestion for accounts that are configured with the specified log. Valid values:</para>
+        /// <para>Specifies whether to automatically onboard accounts that are configured with the log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: Yes.</para>
-        /// </description></item>
-        /// <item><description><para>0: No.</para>
-        /// </description></item>
+        /// <item><description>1: Automatically onboard. </description></item>
+        /// <item><description>0: Do not automatically onboard.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? AutoImported { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service provider.</para>
+        /// <para>The multi-cloud code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// <para>The list of logs to be ingested. The value must be a JSON array.</para>
+        /// <para>The list of logs to be onboarded, in JSON array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cloud_siem_qcloud_cfw_alert_log&quot;]</para>
@@ -69,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string LogCodes { get; set; }
 
         /// <summary>
-        /// <para>The code of the product.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,12 +74,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string ProdCode { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center for Threat Analysis is located. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region of the data management center for Threat Analysis. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or Hong Kong (China).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member that the administrator wants to access.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -106,12 +98,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of view. Valid values:</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: The view of all accounts within the enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: Current Alibaba Cloud account view.</description></item>
+        /// <item><description>1: View of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

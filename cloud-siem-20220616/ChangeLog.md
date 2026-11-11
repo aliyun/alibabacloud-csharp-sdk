@@ -1,3 +1,7 @@
+2026-11-11 Version: 6.3.1
+- Update API DescribeUserSiemOrderStatus: add response parameters Body.Data.CreditsPostpaidInfo.
+
+
 2026-09-14 Version: 6.3.0
 - Support API DescribeUserSiemOrderStatus.
 

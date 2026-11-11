@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class SubmitImportLogTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitImportLogTasksResponseBodyData Data { get; set; }
         public class SubmitImportLogTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of log ingestion tasks that are successfully submitted.</para>
+            /// <para>The number of log onboarding tasks that are successfully submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

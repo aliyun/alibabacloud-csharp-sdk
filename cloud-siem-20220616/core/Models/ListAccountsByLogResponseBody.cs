@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListAccountsByLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value of the request.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAccountsByLogResponseBodyData> Data { get; set; }
         public class ListAccountsByLogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The ID of the cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Alibaba Cloud account.</para>
+            /// <para>The name of the cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_account_xxx</para>
@@ -37,9 +37,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account has been added. Valid values:
-            /// -1: The account has been added.
-            /// -0: The account has not been added.</para>
+            /// <para>Indicates whether the account is connected. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Connected.</description></item>
+            /// <item><description>0: Not connected.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxxxx</para>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</para>
+            /// <para>The ID of the cloud account that purchased CTDR.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXXX</para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// <para>The code of the product that corresponds to the log.</para>
+            /// <para>The product code corresponding to the log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qcloud_waf</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ProdCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used for Threat Analysis.</para>
+            /// <para>The ID of the CTDR cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXX</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DeleteDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value of the request.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteDataSourceResponseBodyData Data { get; set; }
         public class DeleteDataSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of data sources that are deleted. A value of 1 indicates success. A value of 0 or less indicates failure.</para>
+            /// <para>The number of deleted data sources. A value of 1 indicates success, and a value of 0 or less indicates failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

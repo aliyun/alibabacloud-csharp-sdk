@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether log delivery is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enabled</para>
-        /// </description></item>
-        /// <item><description><para>false: Failed</para>
-        /// </description></item>
+        /// <item><description>true: Log delivery is enabled.</description></item>
+        /// <item><description>false: Log delivery failed to be enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15FD134E-D69B-51E8-B052-73F97BD8****</para>

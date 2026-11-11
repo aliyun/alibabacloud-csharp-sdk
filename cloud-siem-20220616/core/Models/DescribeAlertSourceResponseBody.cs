@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeAlertSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the response. A value of 200 indicates success.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The list of alert sources.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<string> Modules { get; set; }
 
             /// <summary>
-            /// <para>The internal code for the alert source.</para>
+            /// <para>The Medusa code of the alert data source name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun.siem.alert_datasource.sas</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert source.</para>
+            /// <para>The name of the alert data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -81,10 +81,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

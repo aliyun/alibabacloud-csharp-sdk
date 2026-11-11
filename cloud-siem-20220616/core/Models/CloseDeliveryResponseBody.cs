@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class CloseDeliveryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the request. Valid values:</para>
+        /// <para>The result of disabling the service in Threat Analysis. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The service is disabled.</description></item>
+        /// <item><description>false: The service fails to be disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F375A043-4F5B-55F2-A564-CC47FFC6****</para>

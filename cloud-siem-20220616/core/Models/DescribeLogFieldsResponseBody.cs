@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <para>The Medusa code for the field description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sas.cloudsiem.prod.activity_name</para>
+            /// <para>${sas.cloudsiem.prod.alert_desc}</para>
             /// </summary>
             [NameInMap("FieldDesc")]
             [Validation(Required=false)]

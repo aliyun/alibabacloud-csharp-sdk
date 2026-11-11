@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeDisposeAndPlaybookResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public DescribeDisposeAndPlaybookResponseBodyData Data { get; set; }
         public class DescribeDisposeAndPlaybookResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether an available playbook for processing exists.</para>
+            /// </summary>
             [NameInMap("Available")]
             [Validation(Required=false)]
             public bool? Available { get; set; }
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>The number of entries returned per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? AlertNum { get; set; }
 
                 /// <summary>
-                /// <para>The disposition object.</para>
+                /// <para>The object to be processed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.<em>.</em></para>
@@ -122,12 +125,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The entity type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ip: IP address</description></item>
-                /// <item><description>domain: domain name</description></item>
-                /// <item><description>url: URL</description></item>
-                /// <item><description>process: process</description></item>
-                /// <item><description>file: file</description></item>
-                /// <item><description>host: host</description></item>
+                /// <item><description>ip: IP address.</description></item>
+                /// <item><description>domain: Domain name.</description></item>
+                /// <item><description>url: URL.</description></item>
+                /// <item><description>process: Process.</description></item>
+                /// <item><description>file: File.</description></item>
+                /// <item><description>host: Host.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -137,22 +140,28 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string EntityType { get; set; }
 
+                /// <summary>
+                /// <para>The entity UUID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>85ea4241-798f-4684-a876-65d4f0c3****</para>
+                /// </summary>
                 [NameInMap("EntityUuid")]
                 [Validation(Required=false)]
                 public string EntityUuid { get; set; }
 
                 /// <summary>
-                /// <para>The key-value pairs of opcode and oplevel.</para>
+                /// <para>The key-value pairs of opcode and opLevel.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>12345</para>
+                /// <para>{&quot;key&quot;:&quot;{\&quot;7\&quot;,\&quot;2\&quot;}&quot;}</para>
                 /// </summary>
                 [NameInMap("OpcodeMap")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> OpcodeMap { get; set; }
 
                 /// <summary>
-                /// <para>The recommended playbook opcodes for entity disposition.</para>
+                /// <para>The recommended playbook code for processing the entity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[1,3]</para>
@@ -162,17 +171,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public List<string> OpcodeSet { get; set; }
 
                 /// <summary>
-                /// <para>The list of playbooks that can dispose of the entity.</para>
+                /// <para>The list of playbooks that can process the entity.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{&quot;name&quot;:&quot;Security Center - Cloud Server Security&quot;,&quot;code&quot;:&quot;1&quot;}]</para>
+                /// <para>[{&quot;name&quot;:&quot;Security Center-ECS security&quot;,&quot;code&quot;:&quot;1&quot;}]</para>
                 /// </summary>
                 [NameInMap("PlaybookList")]
                 [Validation(Required=false)]
                 public List<DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList> PlaybookList { get; set; }
                 public class DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the playbook is available.</para>
+                    /// <para>Specifies whether the playbook is available. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>1: Available.</description></item>
+                    /// <item><description>0: Unavailable.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -201,16 +214,25 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     [Validation(Required=false)]
                     public string DisplayName { get; set; }
 
+                    /// <summary>
+                    /// <para>The processing status.</para>
+                    /// </summary>
                     [NameInMap("DisposeStatus")]
                     [Validation(Required=false)]
                     public string DisposeStatus { get; set; }
 
+                    /// <summary>
+                    /// <para>The processing error message.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>DisposalEntity failed which description is Aegis Quarantine File , return_info failed which description is Check Aegis Process Result , [ERROR DETAIL] *******.php:file not found</para>
+                    /// </summary>
                     [NameInMap("ErrorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The playbook name, which is the unique identifier of the playbook.</para>
+                    /// <para>The name of the playbook, which is the unique identifier of the playbook.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>kill_process_isolate_file</para>
@@ -220,7 +242,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The playbook opcode, which corresponds to the recommended playbook opcode for entity disposition.</para>
+                    /// <para>The playbook opcode, which corresponds to the recommended playbook opcode for processing the entity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>7</para>
@@ -230,7 +252,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string OpCode { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the playbook is selected by default for one-click incident disposition. Valid values:</para>
+                    /// <para>Specifies whether the one-click processing for the event is selected by default. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>2: Selected. </description></item>
+                    /// <item><description>1: Displayed but not selected.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -240,7 +266,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string OpLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter list of the playbook and the corresponding parameter properties.</para>
+                    /// <para>The list of parameters and the corresponding parameter attributes of the playbook.</para>
                     /// </summary>
                     [NameInMap("ParamConfig")]
                     [Validation(Required=false)]
@@ -257,11 +283,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string TaskConfig { get; set; }
 
                     /// <summary>
-                    /// <para>The code that indicates why the playbook is unavailable.</para>
-                    /// <para>Valid values:</para>
+                    /// <para>The code indicating why the playbook is unavailable. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>PARAM_INVALID: The input parameters are invalid.</description></item>
-                    /// <item><description>NO_INGESTION: The corresponding product is not connected.</description></item>
+                    /// <item><description>PARAM_INVALID: The input parameters are invalid. </description></item>
+                    /// <item><description>NO_INGESTION: The corresponding service is not connected.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -272,7 +297,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string UnAvailableCode { get; set; }
 
                     /// <summary>
-                    /// <para>The playbook UUID, which is the unique identifier of the playbook.</para>
+                    /// <para>The UUID of the playbook, which is the unique identifier of the playbook.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>kill_process_isolate_file</para>
@@ -282,7 +307,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     public string Uuid { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the playbook is a WAF playbook. Valid values:</para>
+                    /// <para>Specifies whether the playbook is a WAF playbook. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true: Yes.</description></item>
+                    /// <item><description>false: No.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -294,7 +323,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 }
 
                 /// <summary>
-                /// <para>The disposition scope, which is the list of user IDs that can perform the disposition.</para>
+                /// <para>The processing scope and the list of user IDs that can be processed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176618589410****</para>
@@ -328,7 +357,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "cloud-siem";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloud-siem", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,8 +42,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a data source to an attached multicloud account.</para>
+        /// <para>Adds a data source under the bound multi-cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to add a data source, complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Call the AddCloudVendorAccountAK operation of Security Center (Sas) to add the AccessKey pair configuration for the multi-cloud account.</description></item>
+        /// <item><description>Call the BindAccount operation to bind the multi-cloud account.</description></item>
+        /// <item><description>Call this operation (AddDataSource) to add a data source under the bound multi-cloud account.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddDataSourceRequest
@@ -105,8 +118,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a data source to an attached multicloud account.</para>
+        /// <para>Adds a data source under the bound multi-cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to add a data source, complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Call the AddCloudVendorAccountAK operation of Security Center (Sas) to add the AccessKey pair configuration for the multi-cloud account.</description></item>
+        /// <item><description>Call the BindAccount operation to bind the multi-cloud account.</description></item>
+        /// <item><description>Call this operation (AddDataSource) to add a data source under the bound multi-cloud account.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddDataSourceRequest
@@ -171,8 +194,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a data source to an attached multicloud account.</para>
+        /// <para>Adds a data source under the bound multi-cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to add a data source, complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Call the AddCloudVendorAccountAK operation of Security Center (Sas) to add the AccessKey pair configuration for the multi-cloud account.</description></item>
+        /// <item><description>Call the BindAccount operation to bind the multi-cloud account.</description></item>
+        /// <item><description>Call this operation (AddDataSource) to add a data source under the bound multi-cloud account.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddDataSourceRequest
@@ -189,8 +222,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a data source to an attached multicloud account.</para>
+        /// <para>Adds a data source under the bound multi-cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to add a data source, complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Call the AddCloudVendorAccountAK operation of Security Center (Sas) to add the AccessKey pair configuration for the multi-cloud account.</description></item>
+        /// <item><description>Call the BindAccount operation to bind the multi-cloud account.</description></item>
+        /// <item><description>Call this operation (AddDataSource) to add a data source under the bound multi-cloud account.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddDataSourceRequest
@@ -207,8 +250,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a log for a data source.</para>
+        /// <para>Adds logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to add logs for a data source, complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Call the EnableAccessForCloudSiem operation to enable the SIEM service role.</description></item>
+        /// <item><description>Call the BindAccount operation to bind a multi-cloud account. You must provide the AccessKey of the third-party cloud provider.</description></item>
+        /// <item><description>Call the AddDataSource operation to create a data source instance and obtain the DataSourceInstanceId.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddDataSourceLogRequest
@@ -269,8 +322,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a log for a data source.</para>
+        /// <para>Adds logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to add logs for a data source, complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Call the EnableAccessForCloudSiem operation to enable the SIEM service role.</description></item>
+        /// <item><description>Call the BindAccount operation to bind a multi-cloud account. You must provide the AccessKey of the third-party cloud provider.</description></item>
+        /// <item><description>Call the AddDataSource operation to create a data source instance and obtain the DataSourceInstanceId.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddDataSourceLogRequest
@@ -331,8 +394,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a log for a data source.</para>
+        /// <para>Adds logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to add logs for a data source, complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Call the EnableAccessForCloudSiem operation to enable the SIEM service role.</description></item>
+        /// <item><description>Call the BindAccount operation to bind a multi-cloud account. You must provide the AccessKey of the third-party cloud provider.</description></item>
+        /// <item><description>Call the AddDataSource operation to create a data source instance and obtain the DataSourceInstanceId.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddDataSourceLogRequest
@@ -349,8 +422,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a log for a data source.</para>
+        /// <para>Adds logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to add logs for a data source, complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Call the EnableAccessForCloudSiem operation to enable the SIEM service role.</description></item>
+        /// <item><description>Call the BindAccount operation to bind a multi-cloud account. You must provide the AccessKey of the third-party cloud provider.</description></item>
+        /// <item><description>Call the AddDataSource operation to create a data source instance and obtain the DataSourceInstanceId.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddDataSourceLogRequest
@@ -367,7 +450,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a log collection task to import log data into Threat Analysis for alerting and event analysis.</para>
+        /// <para>Adds a log ingestion task to ingest the corresponding log data into Threat Analysis for subsequent alerting and event analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -433,7 +516,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a log collection task to import log data into Threat Analysis for alerting and event analysis.</para>
+        /// <para>Adds a log ingestion task to ingest the corresponding log data into Threat Analysis for subsequent alerting and event analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -499,7 +582,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a log collection task to import log data into Threat Analysis for alerting and event analysis.</para>
+        /// <para>Adds a log ingestion task to ingest the corresponding log data into Threat Analysis for subsequent alerting and event analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -517,7 +600,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a log collection task to import log data into Threat Analysis for alerting and event analysis.</para>
+        /// <para>Adds a log ingestion task to ingest the corresponding log data into Threat Analysis for subsequent alerting and event analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -535,7 +618,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a multicloud account from Multicloud Assets of Security Center to Threat Analysis.</para>
+        /// <para>Binds a multi-cloud account configured in the multi-cloud assets of Security Center to Threat Analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -601,7 +684,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a multicloud account from Multicloud Assets of Security Center to Threat Analysis.</para>
+        /// <para>Binds a multi-cloud account configured in the multi-cloud assets of Security Center to Threat Analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -667,7 +750,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a multicloud account from Multicloud Assets of Security Center to Threat Analysis.</para>
+        /// <para>Binds a multi-cloud account configured in the multi-cloud assets of Security Center to Threat Analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -685,7 +768,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a multicloud account from Multicloud Assets of Security Center to Threat Analysis.</para>
+        /// <para>Binds a multi-cloud account configured in the multi-cloud assets of Security Center to Threat Analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -703,7 +786,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops log delivery from a connected cloud service. Once stopped, no new logs are added to your Logstore.</para>
+        /// <para>Disables log delivery for an integrated cloud service. After the delivery is disabled, no new logs of the corresponding type are written to the user\&quot;s Logstore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -761,7 +844,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops log delivery from a connected cloud service. Once stopped, no new logs are added to your Logstore.</para>
+        /// <para>Disables log delivery for an integrated cloud service. After the delivery is disabled, no new logs of the corresponding type are written to the user\&quot;s Logstore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -819,7 +902,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops log delivery from a connected cloud service. Once stopped, no new logs are added to your Logstore.</para>
+        /// <para>Disables log delivery for an integrated cloud service. After the delivery is disabled, no new logs of the corresponding type are written to the user\&quot;s Logstore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -837,7 +920,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops log delivery from a connected cloud service. Once stopped, no new logs are added to your Logstore.</para>
+        /// <para>Disables log delivery for an integrated cloud service. After the delivery is disabled, no new logs of the corresponding type are written to the user\&quot;s Logstore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -855,7 +938,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an automated response rule by its ID.</para>
+        /// <para>Deletes the automated response rule with the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -909,7 +992,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an automated response rule by its ID.</para>
+        /// <para>Deletes the automated response rule with the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -963,7 +1046,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an automated response rule by its ID.</para>
+        /// <para>Deletes the automated response rule with the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -981,7 +1064,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an automated response rule by its ID.</para>
+        /// <para>Deletes the automated response rule with the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -999,7 +1082,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches the AccessKey of a multicloud account, such as a Tencent Cloud or Huawei Cloud account, from a threat analysis data source. You can then attach a new account.</para>
+        /// <para>Dissociates the AccessKey of a multi-cloud sub-account from the threat analysis data source module. After the dissociation, you can bind a different account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1065,7 +1148,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches the AccessKey of a multicloud account, such as a Tencent Cloud or Huawei Cloud account, from a threat analysis data source. You can then attach a new account.</para>
+        /// <para>Dissociates the AccessKey of a multi-cloud sub-account from the threat analysis data source module. After the dissociation, you can bind a different account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1131,7 +1214,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches the AccessKey of a multicloud account, such as a Tencent Cloud or Huawei Cloud account, from a threat analysis data source. You can then attach a new account.</para>
+        /// <para>Dissociates the AccessKey of a multi-cloud sub-account from the threat analysis data source module. After the dissociation, you can bind a different account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1149,7 +1232,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches the AccessKey of a multicloud account, such as a Tencent Cloud or Huawei Cloud account, from a threat analysis data source. You can then attach a new account.</para>
+        /// <para>Dissociates the AccessKey of a multi-cloud sub-account from the threat analysis data source module. After the dissociation, you can bind a different account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1167,7 +1250,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can customize rules for a specific ID.</para>
+        /// <para>Deletes a custom rule by the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1221,7 +1304,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can customize rules for a specific ID.</para>
+        /// <para>Deletes a custom rule by the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1275,7 +1358,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can customize rules for a specific ID.</para>
+        /// <para>Deletes a custom rule by the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1293,7 +1376,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can customize rules for a specific ID.</para>
+        /// <para>Deletes a custom rule by the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1311,7 +1394,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to delete a data source that is no longer required.</para>
+        /// <para>Deletes a data source that is no longer in use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1365,7 +1448,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to delete a data source that is no longer required.</para>
+        /// <para>Deletes a data source that is no longer in use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1419,7 +1502,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to delete a data source that is no longer required.</para>
+        /// <para>Deletes a data source that is no longer in use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1437,7 +1520,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this operation to delete a data source that is no longer required.</para>
+        /// <para>Deletes a data source that is no longer in use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1455,7 +1538,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a log.</para>
+        /// <para>Deletes a log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1513,7 +1596,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a log.</para>
+        /// <para>Deletes a log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1571,7 +1654,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a log.</para>
+        /// <para>Deletes a log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1589,7 +1672,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a log.</para>
+        /// <para>Deletes a log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1607,7 +1690,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert whitelist rule with the specified ID.</para>
+        /// <para>Deletes the alert whitelist rule with the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1661,7 +1744,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert whitelist rule with the specified ID.</para>
+        /// <para>Deletes the alert whitelist rule with the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1715,7 +1798,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert whitelist rule with the specified ID.</para>
+        /// <para>Deletes the alert whitelist rule with the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1733,7 +1816,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an alert whitelist rule with the specified ID.</para>
+        /// <para>Deletes the alert whitelist rule with the specified ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1751,7 +1834,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the aggregate functions that are supported by custom rules.</para>
+        /// <para>Retrieves the list of aggregate functions supported by custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1801,7 +1884,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the aggregate functions that are supported by custom rules.</para>
+        /// <para>Retrieves the list of aggregate functions supported by custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1851,7 +1934,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the aggregate functions that are supported by custom rules.</para>
+        /// <para>Retrieves the list of aggregate functions supported by custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1869,7 +1952,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the aggregate functions that are supported by custom rules.</para>
+        /// <para>Retrieves the list of aggregate functions supported by custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1887,7 +1970,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scenarios in which alerts can be whitelisted.</para>
+        /// <para>Retrieves alert allowlist scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1937,7 +2020,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scenarios in which alerts can be whitelisted.</para>
+        /// <para>Retrieves alert allowlist scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1987,7 +2070,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scenarios in which alerts can be whitelisted.</para>
+        /// <para>Retrieves alert allowlist scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2005,7 +2088,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scenarios in which alerts can be whitelisted.</para>
+        /// <para>Retrieves alert allowlist scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2023,7 +2106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert whitelisting scenarios and objects.</para>
+        /// <para>Retrieves the alert whitelist scenarios and whitelist targets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2077,7 +2160,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert whitelisting scenarios and objects.</para>
+        /// <para>Retrieves the alert whitelist scenarios and whitelist targets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2131,7 +2214,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert whitelisting scenarios and objects.</para>
+        /// <para>Retrieves the alert whitelist scenarios and whitelist targets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2149,7 +2232,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert whitelisting scenarios and objects.</para>
+        /// <para>Retrieves the alert whitelist scenarios and whitelist targets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2167,7 +2250,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert sources.</para>
+        /// <para>Retrieves a list of alert data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2229,7 +2312,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert sources.</para>
+        /// <para>Retrieves a list of alert data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2291,7 +2374,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert sources.</para>
+        /// <para>Retrieves a list of alert data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2309,7 +2392,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert sources.</para>
+        /// <para>Retrieves a list of alert data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2327,7 +2410,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the alert data sources associated with an event.</para>
+        /// <para>Retrieves the list of alert data sources associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2381,7 +2464,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the alert data sources associated with an event.</para>
+        /// <para>Retrieves the list of alert data sources associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2435,7 +2518,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the alert data sources associated with an event.</para>
+        /// <para>Retrieves the list of alert data sources associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2453,7 +2536,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the alert data sources associated with an event.</para>
+        /// <para>Retrieves the list of alert data sources associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2615,7 +2698,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of alerts for a user.</para>
+        /// <para>Retrieves the list of alerts for the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2737,7 +2820,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of alerts for a user.</para>
+        /// <para>Retrieves the list of alerts for the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2859,7 +2942,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of alerts for a user.</para>
+        /// <para>Retrieves the list of alerts for the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2877,7 +2960,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of alerts for a user.</para>
+        /// <para>Retrieves the list of alerts for the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2895,7 +2978,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of alerts for different severity levels.</para>
+        /// <para>Retrieves the counts of alerts by severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2957,7 +3040,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of alerts for different severity levels.</para>
+        /// <para>Retrieves the counts of alerts by severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3019,7 +3102,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of alerts for different severity levels.</para>
+        /// <para>Retrieves the counts of alerts by severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3037,7 +3120,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of alerts for different severity levels.</para>
+        /// <para>Retrieves the counts of alerts by severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3055,7 +3138,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for alerts that are associated with an entity.</para>
+        /// <para>Retrieves the list of alerts associated with an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3137,7 +3220,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for alerts that are associated with an entity.</para>
+        /// <para>Retrieves the list of alerts associated with an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3219,7 +3302,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for alerts that are associated with an entity.</para>
+        /// <para>Retrieves the list of alerts associated with an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3237,7 +3320,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for alerts that are associated with an entity.</para>
+        /// <para>Retrieves the list of alerts associated with an entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3255,7 +3338,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of alerts associated with an incident.</para>
+        /// <para>Queries the list of alerts associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3369,7 +3452,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of alerts associated with an incident.</para>
+        /// <para>Queries the list of alerts associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3483,7 +3566,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of alerts associated with an incident.</para>
+        /// <para>Queries the list of alerts associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3501,7 +3584,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of alerts associated with an incident.</para>
+        /// <para>Queries the list of alerts associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3519,7 +3602,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether an Alibaba Cloud account has granted permissions to Cloud SIEM and the AliyunServiceRoleForSasCloudSiem role has been created.</para>
+        /// <para>Checks whether the Alibaba Cloud account has authorized SIEM and created the AliyunServiceRoleForSasCloudSiem role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3561,7 +3644,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether an Alibaba Cloud account has granted permissions to Cloud SIEM and the AliyunServiceRoleForSasCloudSiem role has been created.</para>
+        /// <para>Checks whether the Alibaba Cloud account has authorized SIEM and created the AliyunServiceRoleForSasCloudSiem role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3603,7 +3686,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether an Alibaba Cloud account has granted permissions to Cloud SIEM and the AliyunServiceRoleForSasCloudSiem role has been created.</para>
+        /// <para>Checks whether the Alibaba Cloud account has authorized SIEM and created the AliyunServiceRoleForSasCloudSiem role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3621,7 +3704,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether an Alibaba Cloud account has granted permissions to Cloud SIEM and the AliyunServiceRoleForSasCloudSiem role has been created.</para>
+        /// <para>Checks whether the Alibaba Cloud account has authorized SIEM and created the AliyunServiceRoleForSasCloudSiem role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3639,7 +3722,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the number of automated response rules.</para>
+        /// <para>Queries the number of automated response rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3689,7 +3772,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the number of automated response rules.</para>
+        /// <para>Queries the number of automated response rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3739,7 +3822,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the number of automated response rules.</para>
+        /// <para>Queries the number of automated response rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3757,7 +3840,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the number of automated response rules.</para>
+        /// <para>Queries the number of automated response rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3775,7 +3858,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configurable fields and operators for automated response rules.</para>
+        /// <para>Retrieves the configurable fields and operators for automated rule policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3829,7 +3912,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configurable fields and operators for automated response rules.</para>
+        /// <para>Retrieves the configurable fields and operators for automated rule policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3883,7 +3966,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configurable fields and operators for automated response rules.</para>
+        /// <para>Retrieves the configurable fields and operators for automated rule policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3901,7 +3984,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configurable fields and operators for automated response rules.</para>
+        /// <para>Retrieves the configurable fields and operators for automated rule policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3919,7 +4002,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of assets that are associated with an event.</para>
+        /// <para>Retrieves the list of assets associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3993,7 +4076,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of assets that are associated with an event.</para>
+        /// <para>Retrieves the list of assets associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4067,7 +4150,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of assets that are associated with an event.</para>
+        /// <para>Retrieves the list of assets associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4085,7 +4168,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of assets that are associated with an event.</para>
+        /// <para>Retrieves the list of assets associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4391,7 +4474,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of threat analysis events.</para>
+        /// <para>Retrieves a list of Cloud Threat Detection and Response (CTDR) events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4489,7 +4572,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of threat analysis events.</para>
+        /// <para>Retrieves a list of Cloud Threat Detection and Response (CTDR) events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4587,7 +4670,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of threat analysis events.</para>
+        /// <para>Retrieves a list of Cloud Threat Detection and Response (CTDR) events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4605,7 +4688,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of threat analysis events.</para>
+        /// <para>Retrieves a list of Cloud Threat Detection and Response (CTDR) events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5191,7 +5274,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the parameters for a data source.</para>
+        /// <para>Retrieves the details of data source parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5241,7 +5324,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the parameters for a data source.</para>
+        /// <para>Retrieves the details of data source parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5291,7 +5374,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the parameters for a data source.</para>
+        /// <para>Retrieves the details of data source parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5309,7 +5392,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the parameters for a data source.</para>
+        /// <para>Retrieves the details of data source parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5327,7 +5410,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of entities that require disposition and the list of playbooks.</para>
+        /// <para>Retrieves the list of entities and playbooks to be handled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5407,7 +5490,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of entities that require disposition and the list of playbooks.</para>
+        /// <para>Retrieves the list of entities and playbooks to be handled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5487,7 +5570,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of entities that require disposition and the list of playbooks.</para>
+        /// <para>Retrieves the list of entities and playbooks to be handled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5505,7 +5588,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of entities that require disposition and the list of playbooks.</para>
+        /// <para>Retrieves the list of entities and playbooks to be handled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7523,7 +7606,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the purchase status of a user\&quot;s SIEM.</para>
+        /// <para>Queries the purchase status of the user\&quot;s SIEM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7573,7 +7656,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the purchase status of a user\&quot;s SIEM.</para>
+        /// <para>Queries the purchase status of the user\&quot;s SIEM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7623,7 +7706,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the purchase status of a user\&quot;s SIEM.</para>
+        /// <para>Queries the purchase status of the user\&quot;s SIEM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7641,7 +7724,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the purchase status of a user\&quot;s SIEM.</para>
+        /// <para>Queries the purchase status of the user\&quot;s SIEM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7803,7 +7886,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules in the alert whitelist.</para>
+        /// <para>Retrieves a list of alert allowlist rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7873,7 +7956,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules in the alert whitelist.</para>
+        /// <para>Retrieves a list of alert allowlist rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7943,7 +8026,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules in the alert whitelist.</para>
+        /// <para>Retrieves a list of alert allowlist rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7961,7 +8044,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules in the alert whitelist.</para>
+        /// <para>Retrieves a list of alert allowlist rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8543,12 +8626,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries entity counts.</para>
+        /// <para>Queries the entity count.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting utility class is provided with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8638,12 +8721,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries entity counts.</para>
+        /// <para>Queries the entity count.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting utility class is provided with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8733,12 +8816,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries entity counts.</para>
+        /// <para>Queries the entity count.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting utility class is provided with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8756,12 +8839,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries entity counts.</para>
+        /// <para>Queries the entity count.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting utility class is provided with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8915,8 +8998,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the AccessKey IDs for attached multicloud accounts.</para>
+        /// <para>Queries the list of multi-cloud AccessKeyIds that are already bound.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to view the list of bound multi-cloud AccessKeys, complete the following preparations:</para>
+        /// <ol>
+        /// <item><description>Activate the Cloud Threat Detection and Response (CTDR) service in Security Center.</description></item>
+        /// <item><description>Configure the SIEM AccessKey for threat detection and response.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAccountAccessIdRequest
@@ -8969,8 +9061,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the AccessKey IDs for attached multicloud accounts.</para>
+        /// <para>Queries the list of multi-cloud AccessKeyIds that are already bound.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to view the list of bound multi-cloud AccessKeys, complete the following preparations:</para>
+        /// <ol>
+        /// <item><description>Activate the Cloud Threat Detection and Response (CTDR) service in Security Center.</description></item>
+        /// <item><description>Configure the SIEM AccessKey for threat detection and response.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAccountAccessIdRequest
@@ -9023,8 +9124,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the AccessKey IDs for attached multicloud accounts.</para>
+        /// <para>Queries the list of multi-cloud AccessKeyIds that are already bound.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to view the list of bound multi-cloud AccessKeys, complete the following preparations:</para>
+        /// <ol>
+        /// <item><description>Activate the Cloud Threat Detection and Response (CTDR) service in Security Center.</description></item>
+        /// <item><description>Configure the SIEM AccessKey for threat detection and response.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAccountAccessIdRequest
@@ -9041,8 +9151,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the AccessKey IDs for attached multicloud accounts.</para>
+        /// <para>Queries the list of multi-cloud AccessKeyIds that are already bound.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to view the list of bound multi-cloud AccessKeys, complete the following preparations:</para>
+        /// <ol>
+        /// <item><description>Activate the Cloud Threat Detection and Response (CTDR) service in Security Center.</description></item>
+        /// <item><description>Configure the SIEM AccessKey for threat detection and response.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAccountAccessIdRequest
@@ -9059,8 +9178,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the accounts associated with a log.</para>
+        /// <para>Queries the list of accounts by log.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to query the list of accounts by log, you must activate the Cloud Threat Detection and Response (CTDR) service. You can activate the service by calling the EnableServiceForCloudSiem operation or through the threat analysis console in Security Center. This operation is unavailable if the service is not activated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAccountsByLogRequest
@@ -9121,8 +9245,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the accounts associated with a log.</para>
+        /// <para>Queries the list of accounts by log.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to query the list of accounts by log, you must activate the Cloud Threat Detection and Response (CTDR) service. You can activate the service by calling the EnableServiceForCloudSiem operation or through the threat analysis console in Security Center. This operation is unavailable if the service is not activated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAccountsByLogRequest
@@ -9183,8 +9312,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the accounts associated with a log.</para>
+        /// <para>Queries the list of accounts by log.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to query the list of accounts by log, you must activate the Cloud Threat Detection and Response (CTDR) service. You can activate the service by calling the EnableServiceForCloudSiem operation or through the threat analysis console in Security Center. This operation is unavailable if the service is not activated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAccountsByLogRequest
@@ -9201,8 +9335,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the accounts associated with a log.</para>
+        /// <para>Queries the list of accounts by log.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to query the list of accounts by log, you must activate the Cloud Threat Detection and Response (CTDR) service. You can activate the service by calling the EnableServiceForCloudSiem operation or through the threat analysis console in Security Center. This operation is unavailable if the service is not activated.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAccountsByLogRequest
@@ -9219,7 +9358,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the cloud products supported by Threat Analysis for data ingestion.</para>
+        /// <para>Queries the list of cloud services that are supported for data ingestion by threat detection and response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9269,7 +9408,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the cloud products supported by Threat Analysis for data ingestion.</para>
+        /// <para>Queries the list of cloud services that are supported for data ingestion by threat detection and response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9319,7 +9458,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the cloud products supported by Threat Analysis for data ingestion.</para>
+        /// <para>Queries the list of cloud services that are supported for data ingestion by threat detection and response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9337,7 +9476,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the cloud products supported by Threat Analysis for data ingestion.</para>
+        /// <para>Queries the list of cloud services that are supported for data ingestion by threat detection and response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9571,7 +9710,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists multicloud accounts bound to Threat Analysis.</para>
+        /// <para>Lists the multi-cloud accounts that are bound to threat detection and response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9625,7 +9764,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists multicloud accounts bound to Threat Analysis.</para>
+        /// <para>Lists the multi-cloud accounts that are bound to threat detection and response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9679,7 +9818,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists multicloud accounts bound to Threat Analysis.</para>
+        /// <para>Lists the multi-cloud accounts that are bound to threat detection and response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9697,7 +9836,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists multicloud accounts bound to Threat Analysis.</para>
+        /// <para>Lists the multi-cloud accounts that are bound to threat detection and response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9715,7 +9854,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all bound data sources.</para>
+        /// <para>Enumerates all data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9765,7 +9904,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all bound data sources.</para>
+        /// <para>Enumerates all data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9815,7 +9954,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all bound data sources.</para>
+        /// <para>Enumerates all data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9833,7 +9972,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all bound data sources.</para>
+        /// <para>Enumerates all data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10339,7 +10478,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of test results for a custom rule.</para>
+        /// <para>Queries the list of test results for custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10417,7 +10556,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of test results for a custom rule.</para>
+        /// <para>Queries the list of test results for custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10495,7 +10634,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of test results for a custom rule.</para>
+        /// <para>Queries the list of test results for custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10513,7 +10652,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of test results for a custom rule.</para>
+        /// <para>Queries the list of test results for custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10531,7 +10670,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the logs for a data source.</para>
+        /// <para>Queries the logs of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10585,7 +10724,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the logs for a data source.</para>
+        /// <para>Queries the logs of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10639,7 +10778,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the logs for a data source.</para>
+        /// <para>Queries the logs of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10657,7 +10796,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the logs for a data source.</para>
+        /// <para>Queries the logs of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10675,7 +10814,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the types of multicloud data sources that Threat Analysis supports.</para>
+        /// <para>Enumerates the multi-cloud data source types that are supported by threat analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10721,7 +10860,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the types of multicloud data sources that Threat Analysis supports.</para>
+        /// <para>Enumerates the multi-cloud data source types that are supported by threat analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10767,7 +10906,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the types of multicloud data sources that Threat Analysis supports.</para>
+        /// <para>Enumerates the multi-cloud data source types that are supported by threat analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10785,7 +10924,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the types of multicloud data sources that Threat Analysis supports.</para>
+        /// <para>Enumerates the multi-cloud data source types that are supported by threat analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10803,7 +10942,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the products and logs that are connected to threat analysis for an enterprise or a member, and the data shipping status of these logs.</para>
+        /// <para>Queries the products and logs integrated with Threat Analysis for the entire enterprise or regular members, along with the data delivery status of these logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10853,7 +10992,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the products and logs that are connected to threat analysis for an enterprise or a member, and the data shipping status of these logs.</para>
+        /// <para>Queries the products and logs integrated with Threat Analysis for the entire enterprise or regular members, along with the data delivery status of these logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10903,7 +11042,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the products and logs that are connected to threat analysis for an enterprise or a member, and the data shipping status of these logs.</para>
+        /// <para>Queries the products and logs integrated with Threat Analysis for the entire enterprise or regular members, along with the data delivery status of these logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10921,7 +11060,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the products and logs that are connected to threat analysis for an enterprise or a member, and the data shipping status of these logs.</para>
+        /// <para>Queries the products and logs integrated with Threat Analysis for the entire enterprise or regular members, along with the data delivery status of these logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10939,7 +11078,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of system-recommended response policies.</para>
+        /// <para>Queries the list of system-recommended response policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11093,7 +11232,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of system-recommended response policies.</para>
+        /// <para>Queries the list of system-recommended response policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11247,7 +11386,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of system-recommended response policies.</para>
+        /// <para>Queries the list of system-recommended response policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11265,7 +11404,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of system-recommended response policies.</para>
+        /// <para>Queries the list of system-recommended response policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11499,7 +11638,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log ingestion details for a specific product.</para>
+        /// <para>Queries the log onboarding details for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11557,7 +11696,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log ingestion details for a specific product.</para>
+        /// <para>Queries the log onboarding details for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11615,7 +11754,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log ingestion details for a specific product.</para>
+        /// <para>Queries the log onboarding details for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11633,7 +11772,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log ingestion details for a specific product.</para>
+        /// <para>Queries the log onboarding details for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11795,7 +11934,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Alibaba Cloud accounts that are managed by the multi-account control feature of Threat Analysis. An account must be managed to use features such as log collection and event handling.</para>
+        /// <para>Lists the Alibaba Cloud accounts that are managed by the multi-account management feature of Threat Analysis. Only managed accounts can use features such as log ingestion and event handling in Threat Analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11837,7 +11976,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Alibaba Cloud accounts that are managed by the multi-account control feature of Threat Analysis. An account must be managed to use features such as log collection and event handling.</para>
+        /// <para>Lists the Alibaba Cloud accounts that are managed by the multi-account management feature of Threat Analysis. Only managed accounts can use features such as log ingestion and event handling in Threat Analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11879,7 +12018,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Alibaba Cloud accounts that are managed by the multi-account control feature of Threat Analysis. An account must be managed to use features such as log collection and event handling.</para>
+        /// <para>Lists the Alibaba Cloud accounts that are managed by the multi-account management feature of Threat Analysis. Only managed accounts can use features such as log ingestion and event handling in Threat Analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11897,7 +12036,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Alibaba Cloud accounts that are managed by the multi-account control feature of Threat Analysis. An account must be managed to use features such as log collection and event handling.</para>
+        /// <para>Lists the Alibaba Cloud accounts that are managed by the multi-account management feature of Threat Analysis. Only managed accounts can use features such as log ingestion and event handling in Threat Analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11915,8 +12054,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a bound Alibaba Cloud account.</para>
+        /// <para>Modifies a bound cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to modify a bound cloud account, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Configure the AccessKey credentials of a third-party cloud provider (Tencent Cloud or Huawei Cloud) in Security Center (SAS).</description></item>
+        /// <item><description>Call the BindAccount operation to create a binding record and obtain the BindId.</description></item>
+        /// <item><description>Call this operation (ModifyBindAccount) with the BindId to modify the bound account.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBindAccountRequest
@@ -11985,8 +12134,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a bound Alibaba Cloud account.</para>
+        /// <para>Modifies a bound cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to modify a bound cloud account, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Configure the AccessKey credentials of a third-party cloud provider (Tencent Cloud or Huawei Cloud) in Security Center (SAS).</description></item>
+        /// <item><description>Call the BindAccount operation to create a binding record and obtain the BindId.</description></item>
+        /// <item><description>Call this operation (ModifyBindAccount) with the BindId to modify the bound account.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBindAccountRequest
@@ -12055,8 +12214,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a bound Alibaba Cloud account.</para>
+        /// <para>Modifies a bound cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to modify a bound cloud account, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Configure the AccessKey credentials of a third-party cloud provider (Tencent Cloud or Huawei Cloud) in Security Center (SAS).</description></item>
+        /// <item><description>Call the BindAccount operation to create a binding record and obtain the BindId.</description></item>
+        /// <item><description>Call this operation (ModifyBindAccount) with the BindId to modify the bound account.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBindAccountRequest
@@ -12073,8 +12242,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a bound Alibaba Cloud account.</para>
+        /// <para>Modifies a bound cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation to modify a bound cloud account, complete the following steps in order:</para>
+        /// <ol>
+        /// <item><description>Configure the AccessKey credentials of a third-party cloud provider (Tencent Cloud or Huawei Cloud) in Security Center (SAS).</description></item>
+        /// <item><description>Call the BindAccount operation to create a binding record and obtain the BindId.</description></item>
+        /// <item><description>Call this operation (ModifyBindAccount) with the BindId to modify the bound account.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBindAccountRequest
@@ -12093,6 +12272,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// <summary>
         /// <para>Modifies the description of an existing data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation to modify a data source, you must complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Purchase the Cloud SIEM service.</description></item>
+        /// <item><description>Call the BindAccount operation to bind a third-party cloud account.</description></item>
+        /// <item><description>Call the AddDataSource operation to create a data source instance and obtain the data source ID (DataSourceInstanceId).</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDataSourceRequest
@@ -12164,6 +12353,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// <para>Modifies the description of an existing data source.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation to modify a data source, you must complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Purchase the Cloud SIEM service.</description></item>
+        /// <item><description>Call the BindAccount operation to bind a third-party cloud account.</description></item>
+        /// <item><description>Call the AddDataSource operation to create a data source instance and obtain the data source ID (DataSourceInstanceId).</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDataSourceRequest
         /// </param>
@@ -12234,6 +12433,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// <para>Modifies the description of an existing data source.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation to modify a data source, you must complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Purchase the Cloud SIEM service.</description></item>
+        /// <item><description>Call the BindAccount operation to bind a third-party cloud account.</description></item>
+        /// <item><description>Call the AddDataSource operation to create a data source instance and obtain the data source ID (DataSourceInstanceId).</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDataSourceRequest
         /// </param>
@@ -12252,6 +12461,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// <para>Modifies the description of an existing data source.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation to modify a data source, you must complete the following prerequisites in sequence:</para>
+        /// <ol>
+        /// <item><description>Purchase the Cloud SIEM service.</description></item>
+        /// <item><description>Call the BindAccount operation to bind a third-party cloud account.</description></item>
+        /// <item><description>Call the AddDataSource operation to create a data source instance and obtain the data source ID (DataSourceInstanceId).</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDataSourceRequest
         /// </param>
@@ -12267,7 +12486,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a data source log.</para>
+        /// <para>Modifies the description of logs added to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12337,7 +12556,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a data source log.</para>
+        /// <para>Modifies the description of logs added to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12407,7 +12626,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a data source log.</para>
+        /// <para>Modifies the description of logs added to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12425,7 +12644,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a data source log.</para>
+        /// <para>Modifies the description of logs added to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12443,7 +12662,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables log delivery for integrated cloud services.</para>
+        /// <para>Enables log delivery for onboarded cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12501,7 +12720,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables log delivery for integrated cloud services.</para>
+        /// <para>Enables log delivery for onboarded cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12559,7 +12778,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables log delivery for integrated cloud services.</para>
+        /// <para>Enables log delivery for onboarded cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12577,7 +12796,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables log delivery for integrated cloud services.</para>
+        /// <para>Enables log delivery for onboarded cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13603,7 +13822,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Finishes the test for a custom rule.</para>
+        /// <para>Ends the custom rule test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13657,7 +13876,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Finishes the test for a custom rule.</para>
+        /// <para>Ends the custom rule test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13711,7 +13930,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Finishes the test for a custom rule.</para>
+        /// <para>Ends the custom rule test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13729,7 +13948,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Finishes the test for a custom rule.</para>
+        /// <para>Ends the custom rule test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13747,7 +13966,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the statuses of custom rules.</para>
+        /// <para>Updates the status of a custom rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13809,7 +14028,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the statuses of custom rules.</para>
+        /// <para>Updates the status of a custom rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13871,7 +14090,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the statuses of custom rules.</para>
+        /// <para>Updates the status of a custom rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13889,7 +14108,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the statuses of custom rules.</para>
+        /// <para>Updates the status of a custom rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14043,7 +14262,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets user settings, such as the storage duration and storage region.</para>
+        /// <para>Saves user-configured storage information such as the retention period and storage region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14101,7 +14320,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets user settings, such as the storage duration and storage region.</para>
+        /// <para>Saves user-configured storage information such as the retention period and storage region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14159,7 +14378,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets user settings, such as the storage duration and storage region.</para>
+        /// <para>Saves user-configured storage information such as the retention period and storage region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14177,7 +14396,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets user settings, such as the storage duration and storage region.</para>
+        /// <para>Saves user-configured storage information such as the retention period and storage region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14195,7 +14414,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a batch of log ingestion tasks.</para>
+        /// <para>Submits multiple onboarding tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14265,7 +14484,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a batch of log ingestion tasks.</para>
+        /// <para>Submits multiple onboarding tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14335,7 +14554,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a batch of log ingestion tasks.</para>
+        /// <para>Submits multiple onboarding tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14353,7 +14572,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a batch of log ingestion tasks.</para>
+        /// <para>Submits multiple onboarding tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14371,7 +14590,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of an automated response rule.</para>
+        /// <para>Updates the status of automated response rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14429,7 +14648,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of an automated response rule.</para>
+        /// <para>Updates the status of automated response rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14487,7 +14706,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of an automated response rule.</para>
+        /// <para>Updates the status of automated response rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14505,7 +14724,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of an automated response rule.</para>
+        /// <para>Updates the status of automated response rules.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListDisposeStrategyRequest : TeaModel {
+        /// <summary>
+        /// <para>The UUID of the alert.</para>
+        /// </summary>
         [NameInMap("AlertUuid")]
         [Validation(Required=false)]
         public string AlertUuid { get; set; }
 
         /// <summary>
-        /// <para>The current page number, which must be greater than or equal to 1.</para>
+        /// <para>The number of the current page. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The policy status. Valid values:</para>
+        /// <para>The status of the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: invalid</description></item>
+        /// <item><description>1: valid</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -35,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? EffectiveStatus { get; set; }
 
         /// <summary>
-        /// <para>The query end time, in milliseconds.</para>
+        /// <para>The end time of the query. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The entity characteristic value, which can be used for fuzzy match on response entities.</para>
+        /// <para>The identity value of the entity. You can use this parameter to perform a fuzzy search for response entities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test22.php</para>
@@ -56,7 +63,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EntityIdentity { get; set; }
 
         /// <summary>
-        /// <para>The entity type. Valid values:</para>
+        /// <para>The type of the entity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ip: IP address</description></item>
+        /// <item><description>process: process</description></item>
+        /// <item><description>file: file</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ip</para>
@@ -65,20 +77,35 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
+        /// <summary>
+        /// <para>The list of entity UUIDs.</para>
+        /// </summary>
         [NameInMap("EntityUuidList")]
         [Validation(Required=false)]
         public List<string> EntityUuidList { get; set; }
 
+        /// <summary>
+        /// <para>The grouping dimension.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Incident</para>
+        /// </summary>
         [NameInMap("GroupBy")]
         [Validation(Required=false)]
         public string GroupBy { get; set; }
 
+        /// <summary>
+        /// <para>The grouping key value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0123456789abcdef0123456789abcdef</para>
+        /// </summary>
         [NameInMap("GroupKey")]
         [Validation(Required=false)]
         public string GroupKey { get; set; }
 
         /// <summary>
-        /// <para>The event ID.</para>
+        /// <para>The ID of the incident.</para>
         /// 
         /// <b>Example:</b>
         /// <para>49670d3bbf7aa9556a2fff3dbaa9****</para>
@@ -87,16 +114,26 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string IncidentUuid { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of records to return in a single query.</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The token used to query the next page.</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort direction. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>desc: descending order</description></item>
+        /// <item><description>asc: ascending order</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -106,11 +143,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field used to sort results. Valid values:</para>
+        /// <para>The field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GmtModified: sorts results by update time.</description></item>
-        /// <item><description>GmtCreate: sorts results by creation time.</description></item>
-        /// <item><description>FinishTime: sorts results by policy end time.</description></item>
+        /// <item><description>GmtModified: sort by update time</description></item>
+        /// <item><description>GmtCreate: sort by creation time</description></item>
+        /// <item><description>FinishTime: sort by policy end time</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +158,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string OrderField { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page, with a maximum of 100.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier name of the playbook.</para>
+        /// <para>The unique name of the playbook.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WafBlockIP</para>
@@ -142,9 +179,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string PlaybookName { get; set; }
 
         /// <summary>
-        /// <para>The playbook type. Valid values:</para>
+        /// <para>The type of the playbook. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: manual handling</description></item>
+        /// <item><description>system: manual response</description></item>
         /// <item><description>custom: event-triggered playbook</description></item>
         /// <item><description>custom_alert: alert-triggered playbook</description></item>
         /// <item><description>soar-manual: manually run playbook</description></item>
@@ -159,7 +196,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string PlaybookTypes { get; set; }
 
         /// <summary>
-        /// <para>The playbook UUID.</para>
+        /// <para>The UUID of the playbook.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system_aliyun_clb_process_book</para>
@@ -168,12 +205,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string PlaybookUuid { get; set; }
 
+        /// <summary>
+        /// <para>The query mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Group</para>
+        /// </summary>
         [NameInMap("QueryMode")]
         [Validation(Required=false)]
         public string QueryMode { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. You must select the region of the management center based on the region where your assets reside. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-hangzhou: assets reside in the Chinese mainland and Hong Kong (China)</description></item>
+        /// <item><description>ap-southeast-1: assets reside in regions outside China</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -182,12 +229,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the response rule.</para>
+        /// </summary>
         [NameInMap("ResponseRuleId")]
         [Validation(Required=false)]
         public string ResponseRuleId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member to which the administrator switches the view.</para>
+        /// <para>The Alibaba Cloud account ID of the member whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -197,7 +247,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
+        /// <para>The type of the view. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: view of the current Alibaba Cloud account</description></item>
+        /// <item><description>1: view of all accounts in the enterprise</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -207,7 +261,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The SOAR response policy ID.</para>
+        /// <para>The ID of the Security Orchestration, Automation, and Response (SOAR) response policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a50a49b7-6044-4593-ab15-2b46567c****</para>
@@ -217,7 +271,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string SophonTaskId { get; set; }
 
         /// <summary>
-        /// <para>The query start time, in milliseconds.</para>
+        /// <para>The start time of the query. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -228,7 +282,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The response policy status.</para>
+        /// <para>The status of the response policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -237,6 +291,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the response policy.</para>
+        /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public string StrategyId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ModifyBindAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The AccessKey ID of the Alibaba Cloud account.</para>
+        /// <para>The AccessKey ID of the cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABCXXXXXXXXX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AccessId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The ID of the cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The name of the multicloud account.</para>
+        /// <para>The name of the multi-cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas_account_xxx</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the binding record. This is the BindId value returned by the ListBindAccount operation.</para>
+        /// <para>The ID of the binding record. This is the BindId returned by the ListBindAccount operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? BindId { get; set; }
 
         /// <summary>
-        /// <para>The code of the multicloud service.</para>
+        /// <para>The code of the multi-cloud provider. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>hcloud</b>: Huawei Cloud.</description></item>
+        /// <item><description><b>qcloud</b>: Tencent Cloud.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,12 +67,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string CloudCode { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center for threat analysis is located. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the threat detection and response (CTDR) data management center resides. Select the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets belong to the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: The assets belong to regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member. An administrator can specify this parameter to switch to the member\&quot;s view.</para>
+        /// <para>The ID of the member account to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -89,12 +91,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: The view of all accounts in the enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

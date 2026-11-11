@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AlertType { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the alert.</para>
+        /// <para>The ID of the alert associated with the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas_71e24437d2797ce8fc59692905a4****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string AssetName { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than or equal to 1.</para>
+        /// <para>The current page number of the list. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -118,12 +118,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EntityName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the threat is defended. Valid values:</para>
+        /// <para>Specifies whether the threat is blocked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: detected</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c>: blocked</para>
-        /// </description></item>
+        /// <item><description>0: Detected.</description></item>
+        /// <item><description>1: Blocked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,20 +132,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IsDefend { get; set; }
 
         /// <summary>
-        /// <para>The alert type. Valid values:</para>
+        /// <para>The alert query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>system</c>: An alert generated from aggregated analysis</para>
-        /// </description></item>
-        /// <item><description><para><c>custom</c>: An alert generated from custom analysis</para>
-        /// </description></item>
-        /// <item><description><para><c>cfw</c>: firewall</para>
-        /// </description></item>
-        /// <item><description><para><c>waf</c>: web application firewall</para>
-        /// </description></item>
-        /// <item><description><para><c>edr</c>: endpoint detection and response</para>
-        /// </description></item>
-        /// <item><description><para><c>other</c>: other</para>
-        /// </description></item>
+        /// <item><description>system: Aggregation analysis alert.</description></item>
+        /// <item><description>custom: Custom analysis alert.</description></item>
+        /// <item><description>cfw: Cloud Firewall.</description></item>
+        /// <item><description>waf: Web Application Firewall.</description></item>
+        /// <item><description>edr: Endpoint Detection and Response.</description></item>
+        /// <item><description>other: Other.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,14 +150,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string LabelType { get; set; }
 
         /// <summary>
-        /// <para>The threat levels. This parameter is a JSON array. Valid values:</para>
+        /// <para>The threat level. The value is a JSON array. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>serious</c>: high</para>
-        /// </description></item>
-        /// <item><description><para><c>suspicious</c>: medium</para>
-        /// </description></item>
-        /// <item><description><para><c>remind</c>: low</para>
-        /// </description></item>
+        /// <item><description>serious: High risk.</description></item>
+        /// <item><description>suspicious: Medium risk.</description></item>
+        /// <item><description>remind: Low risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -187,12 +176,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of the threat analysis feature resides. You are required to specify this parameter based on the region where your assets reside. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cn-hangzhou</c>: Your assets reside in the Chinese mainland or Hong Kong (China).</para>
-        /// </description></item>
-        /// <item><description><para><c>ap-southeast-1</c>: Your assets reside outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets in regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -203,7 +190,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who is used to switch the account to view the data of the member.</para>
+        /// <para>The ID of the user whose view the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -213,12 +200,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type of the alert. Valid values:</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: current account</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c>: all accounts</para>
-        /// </description></item>
+        /// <item><description>0: View of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: View of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -229,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The source of the alert.</para>
+        /// <para>The source product of the alert associated with the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -239,7 +224,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -249,7 +234,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is associated with the alert.</para>
+        /// <para>The ID of the Alibaba Cloud account actually associated with the alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>176555323***</para>

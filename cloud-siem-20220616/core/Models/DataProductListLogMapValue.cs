@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DataProductListLogMapValue : TeaModel {
         /// <summary>
-        /// <para>The code of the log.</para>
+        /// <para>The log code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_siem_config_log</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string LogCode { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audit log</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string LogName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audit log</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string LogNameEn { get; set; }
 
         /// <summary>
-        /// <para>The language code of the log that is used to indicate the language in which the log is displayed.</para>
+        /// <para>The language code of the log, which is used to display multilingual names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>${sas.cloudsiem.prod.cloud_siem_aegis_crack_from_beaver}</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string LogNameKey { get; set; }
 
         /// <summary>
-        /// <para>The status of the log delivery. Valid values:</para>
+        /// <para>The log delivery status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The logs are being delivered.</description></item>
-        /// <item><description>false: The log delivery feature is disabled.</description></item>
+        /// <item><description>true: Delivery is in progress.  </description></item>
+        /// <item><description>false: Delivery is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public bool? Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</para>
+        /// <para>Specifies whether the log delivery switch can be operated. Only the delegated administrator of Threat Analysis can operate the log delivery switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The switch can be operated.  </description></item>
+        /// <item><description>false: The switch cannot be operated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public bool? CanOperateOrNot { get; set; }
 
         /// <summary>
-        /// <para>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</para>
+        /// <para>The topic of the log in the Logstore. It is an index field of the Logstore and can be used to distinguish different logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas_login_event</para>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Topic { get; set; }
 
         /// <summary>
-        /// <para>The extended parameter.</para>
+        /// <para>The extended parameters.</para>
         /// </summary>
         [NameInMap("ExtraParameters")]
         [Validation(Required=false)]
         public List<DataProductListLogMapValueExtraParameters> ExtraParameters { get; set; }
         public class DataProductListLogMapValueExtraParameters : TeaModel {
             /// <summary>
-            /// <para>The ID of the extended parameter.</para>
+            /// <para>The identifier of the extended parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flag</para>

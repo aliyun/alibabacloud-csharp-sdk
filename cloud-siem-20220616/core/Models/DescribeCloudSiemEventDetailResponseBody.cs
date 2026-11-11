@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? AssetNum { get; set; }
 
             /// <summary>
-            /// <para>The collection of ATT&amp;CK attack technique labels.</para>
+            /// <para>The collection of ATT&amp;CK attack technique tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;T1595.002 Vulnerability Scanning&quot;]</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? AlertNum { get; set; }
 
                 /// <summary>
-                /// <para>The ATT&amp;CK attack stage ID.</para>
+                /// <para>The ID of the ATT&amp;CK attack stage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TA0008</para>
@@ -191,10 +191,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>net-attack: expert rule.</description></item>
-            /// <item><description>graph: graph computing.</description></item>
-            /// <item><description>singleToSingle: alert pass-through.</description></item>
-            /// <item><description>allToSingle: alert aggregation.</description></item>
+            /// <item><description>net-attack: expert rule</description></item>
+            /// <item><description>graph: graph computing</description></item>
+            /// <item><description>singleToSingle: alert pass-through</description></item>
+            /// <item><description>allToSingle: alert aggregation</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ReferAccount { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the event.</para>
+            /// <para>The remark for the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dealed</para>
@@ -242,12 +242,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The event status. Valid values:</para>
+            /// <para>The status of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unhandled.  </description></item>
-            /// <item><description>1: handling. </description></item>
-            /// <item><description>5: handling failed. </description></item>
-            /// <item><description>10: handled.</description></item>
+            /// <item><description>0: unhandled  </description></item>
+            /// <item><description>1: processing </description></item>
+            /// <item><description>5: processing failed </description></item>
+            /// <item><description>10: handled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -260,9 +260,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The threat level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>serious: high.</description></item>
-            /// <item><description>suspicious: medium.</description></item>
-            /// <item><description>remind: low.</description></item>
+            /// <item><description>serious: high</description></item>
+            /// <item><description>suspicious: medium</description></item>
+            /// <item><description>remind: low</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string ThreatLevel { get; set; }
 
             /// <summary>
-            /// <para>The threat score of the event, ranging from 0 to 100. A higher score indicates a higher risk level.</para>
+            /// <para>The threat score of the event. Valid values: 0 to 100. A higher score indicates a higher risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90.2</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
@@ -305,10 +305,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: successful.</description></item>
-        /// <item><description>false: failed.</description></item>
+        /// <item><description>true: successful</description></item>
+        /// <item><description>false: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

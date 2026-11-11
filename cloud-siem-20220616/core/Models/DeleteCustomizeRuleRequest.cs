@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DeleteCustomizeRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The region where the product is deployed.</para>
+        /// <para>The region where the product is located.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-shanghai</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member. This parameter is used when an administrator switches to the perspective of a member.</para>
+        /// <para>The user ID of the member whose view the administrator switches to. This parameter allows the administrator to switch to the view of a specified member, bypassing the order validity check but still requiring permission verification. The target account must have activated Cloud SIEM, and the caller must have the required RAM permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -30,12 +30,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: The view of all accounts in your enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: the view of the current Alibaba Cloud account</description></item>
+        /// <item><description>1: the view of all accounts in the enterprise</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

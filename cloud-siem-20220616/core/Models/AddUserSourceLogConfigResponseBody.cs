@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class AddUserSourceLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value of the request.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddUserSourceLogConfigResponseBodyData Data { get; set; }
         public class AddUserSourceLogConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The detailed information about the SLS log.</para>
+            /// <para>The detailed Simple Log Service (SLS) information for log ingestion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai.siem-project.siem-logstore</para>
@@ -27,27 +27,35 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DiplayLine { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the details of the log collection task are returned. Valid values:</para>
+            /// <para>Indicates whether the ingestion details are returned. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The ingestion details are returned.</description></item>
+            /// <item><description>false: The ingestion details are not returned.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Displayed")]
             [Validation(Required=false)]
             public bool? Displayed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the log is collected. Valid values:</para>
+            /// <para>Indicates whether the logs are ingested. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The logs are ingested.</description></item>
+            /// <item><description>false: The logs are not ingested.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Imported")]
             [Validation(Required=false)]
             public bool? Imported { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to purchase Threat Analysis.</para>
+            /// <para>The Alibaba Cloud account ID that purchased Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXXX</para>
@@ -57,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// <para>The code of the log.</para>
+            /// <para>The log code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_siem_aegis_proc</para>
@@ -67,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string SourceLogCode { get; set; }
 
             /// <summary>
-            /// <para>The code of the product.</para>
+            /// <para>The product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas</para>
@@ -77,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string SourceProdCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account for which the logs are collected.</para>
+            /// <para>The Alibaba Cloud account ID for Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXX</para>
@@ -87,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? SubUserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Alibaba Cloud account for which the logs are collected.</para>
+            /// <para>The name of the Alibaba Cloud account for Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_account_xxx</para>
@@ -99,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

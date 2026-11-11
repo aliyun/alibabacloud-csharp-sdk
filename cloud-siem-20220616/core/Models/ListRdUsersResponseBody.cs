@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListRdUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListRdUsersResponseBodyData> Data { get; set; }
         public class ListRdUsersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the account is delegated to view its own resources.</para>
+            /// <para>Specifies whether the account is delegated to view its own resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,12 +27,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? DelegatedOrNot { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account is managed by the multi-account control feature of Threat Analysis. Valid values:</para>
+            /// <para>Specifies whether the account is managed by the multi-account management feature of Threat Analysis. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The account is managed.</para>
-            /// </description></item>
-            /// <item><description><para>false: The account is not managed.</para>
-            /// </description></item>
+            /// <item><description>true: The account is managed.</description></item>
+            /// <item><description>false: The account is not managed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? Joined { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was added.</para>
+            /// <para>The time when the account was added to management.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2013-10-01 00:00:00</para>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string JoinedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that purchased Threat Analysis.</para>
+            /// <para>The Alibaba Cloud account ID that purchased Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXXX</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the member Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud account ID for Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXXXX</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? SubUserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the member Alibaba Cloud account.</para>
+            /// <para>The name of the Alibaba Cloud account managed by Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_account_xxx</para>

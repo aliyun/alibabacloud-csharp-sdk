@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public DescribeUserSiemOrderStatusResponseBodyData Data { get; set; }
         public class DescribeUserSiemOrderStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Agentic SOC Credits instance ID. If SiemOrderFrom is CREDITS_PRE_PAY, this field returns the Credits subscription instance ID for prepaid orders. If SiemOrderFrom is CREDITS_POST_PAY, this field returns the Credits pay-as-you-go instance ID. This field is empty if no Credits instance is found. For legacy orders, the Security Center instance ID is returned by SasInstanceId.</para>
+            /// <para>The ID of the Agentic SOC Credits instance. If SiemOrderFrom is CREDITS_PRE_PAY, the ID of the subscription Credits instance is returned. If SiemOrderFrom is CREDITS_POST_PAY, the ID of the pay-as-you-go Credits instance is returned. This field is empty if no Credits instance is found. The ID of the Security Center instance for legacy orders is returned by SasInstanceId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asoc-instance-xxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AsocInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The end time of the Agentic SOC Credits prepaid subscription, expressed as a 13-digit Unix timestamp in milliseconds. This field is returned only when SiemOrderFrom is CREDITS_PRE_PAY. In other cases, this field is empty.</para>
+            /// <para>The end time of the Agentic SOC Credits subscription. The value is a 13-digit UNIX timestamp in milliseconds. This field is returned only when SiemOrderFrom is CREDITS_PRE_PAY. Otherwise, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1785542400456</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? AsocSubscriptionInstanceEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the Agentic SOC Credits prepaid subscription, expressed as a 13-digit Unix timestamp in milliseconds. This field is returned only when SiemOrderFrom is CREDITS_PRE_PAY. In other cases, this field is empty.</para>
+            /// <para>The start time of the Agentic SOC Credits subscription. The value is a 13-digit UNIX timestamp in milliseconds. This field is returned only when SiemOrderFrom is CREDITS_PRE_PAY. Otherwise, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1754006400123</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? AsocSubscriptionInstanceStartTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current account can perform order operations for threat detection and response. Valid values:</para>
+            /// <para>Specifies whether the current account can manage Threat Analysis orders. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The account can purchase, upgrade, or change specifications.</description></item>
-            /// <item><description>false: The account cannot perform order operations for threat detection and response.</description></item>
+            /// <item><description>true: The account can purchase, upgrade, or modify Threat Analysis.</description></item>
+            /// <item><description>false: The account cannot manage Threat Analysis orders.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public bool? CanBuy { get; set; }
 
             /// <summary>
-            /// <para>The SLS log storage capacity purchased for threat detection and response, in GB.</para>
+            /// <para>The purchased Simple Log Service (SLS) capacity for Threat Analysis. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The source of the log storage capacity order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PRE_PAY_CAPACITY: a prepaid capacity order.</description></item>
-            /// <item><description>POST_PAY_CAPACITY: a pay-as-you-go capacity order.</description></item>
+            /// <item><description>PRE_PAY_CAPACITY: The subscription capacity order.</description></item>
+            /// <item><description>POST_PAY_CAPACITY: The pay-as-you-go capacity order.
+            /// The source of the capacity order is independent of the source of the traffic order represented by SiemOrderFrom.</description></item>
             /// </list>
-            /// <para>The capacity order source is independent of the traffic order source indicated by SiemOrderFrom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRE_PAY_CAPACITY</para>
@@ -86,7 +86,58 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string CapacityOrderFrom { get; set; }
 
             /// <summary>
-            /// <para>The SLS log storage capacity purchased for threat detection and response 1.0, in GB.</para>
+            /// <para>The information about the pay-as-you-go Credits instance. This field is returned when a pay-as-you-go Credits instance is found. It can be returned together with a valid legacy traffic order.</para>
+            /// </summary>
+            [NameInMap("CreditsPostpaidInfo")]
+            [Validation(Required=false)]
+            public DescribeUserSiemOrderStatusResponseBodyDataCreditsPostpaidInfo CreditsPostpaidInfo { get; set; }
+            public class DescribeUserSiemOrderStatusResponseBodyDataCreditsPostpaidInfo : TeaModel {
+                /// <summary>
+                /// <para>The billing status of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: Normal.</description></item>
+                /// <item><description>2: Suspended due to overdue payment.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("BillingStatus")]
+                [Validation(Required=false)]
+                public int? BillingStatus { get; set; }
+
+                /// <summary>
+                /// <para>The source of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>POSTPAID: The independent pay-as-you-go instance.</description></item>
+                /// <item><description>SUBSCRIPTION_DEFAULT_PAYG: The default pay-as-you-go instance for the subscription.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>POSTPAID</para>
+                /// </summary>
+                [NameInMap("InstanceSource")]
+                [Validation(Required=false)]
+                public string InstanceSource { get; set; }
+
+                /// <summary>
+                /// <para>The user switch status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: Enabled.</description></item>
+                /// <item><description>0: Disabled.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("UserSwitchStatus")]
+                [Validation(Required=false)]
+                public int? UserSwitchStatus { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The purchased SLS capacity for Threat Analysis 1.0. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -96,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? DeliveryCapacity { get; set; }
 
             /// <summary>
-            /// <para>The number of days until the threat detection and response service expires.</para>
+            /// <para>The number of days until Threat Analysis expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -106,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? DurationDays { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of threat detection and response, expressed as a millisecond-level timestamp.</para>
+            /// <para>The expiration time of Threat Analysis. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669823999000</para>
@@ -116,7 +167,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The traffic capacity purchased for threat detection and response, in GB.</para>
+            /// <para>The purchased traffic for Threat Analysis. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -126,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? FlowCapacity { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID that purchased threat detection and response.</para>
+            /// <para>The Alibaba Cloud account ID used to purchase Threat Analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXX</para>
@@ -136,7 +187,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MainUserId { get; set; }
 
             /// <summary>
-            /// <para>The master account ID of the resource directory.</para>
+            /// <para>The ID of the master account in the resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXX</para>
@@ -146,7 +197,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public long? MasterUserId { get; set; }
 
             /// <summary>
-            /// <para>The resource directory ID.</para>
+            /// <para>The ID of the resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rd-xxxxxx</para>
@@ -156,7 +207,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string RdId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the order is a SIEM public preview order.</para>
+            /// <para>Specifies whether the order is for the public preview version of SIEM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -178,12 +229,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             /// <summary>
             /// <para>The source of the traffic order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PRE_PAY_FLOW: a prepaid traffic order for threat detection and response.</description></item>
-            /// <item><description>POST_PAY_FLOW: a pay-as-you-go traffic order for threat detection and response.</description></item>
-            /// <item><description>CREDITS_PRE_PAY: an Agentic SOC Credits prepaid subscription.</description></item>
-            /// <item><description>CREDITS_POST_PAY: an Agentic SOC Credits pay-as-you-go instance.</description></item>
+            /// <item><description>PRE_PAY_FLOW: The subscription traffic order for Threat Analysis.</description></item>
+            /// <item><description>POST_PAY_FLOW: The pay-as-you-go traffic order for Threat Analysis.</description></item>
+            /// <item><description>CREDITS_PRE_PAY: The subscription of Agentic SOC Credits.</description></item>
+            /// <item><description>CREDITS_POST_PAY: The pay-as-you-go instance of Agentic SOC Credits.
+            /// This field describes the source of the traffic order. The source of the log storage capacity order is independently represented by CapacityOrderFrom.</description></item>
             /// </list>
-            /// <para>This field describes the traffic order source. The log storage capacity order source is independently indicated by CapacityOrderFrom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREDITS_PRE_PAY</para>
@@ -207,7 +258,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? SiemOrderStatus { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the current logon.</para>
+            /// <para>The current logon Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123XXXXXX</para>
@@ -229,7 +280,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
