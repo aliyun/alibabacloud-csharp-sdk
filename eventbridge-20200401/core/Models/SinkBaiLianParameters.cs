@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class SinkBaiLianParameters : TeaModel {
         /// <summary>
-        /// <para>The post-processing logic that runs after the main operation completes.</para>
+        /// <para>The post-processing logic executed after the main operation is completed.</para>
         /// </summary>
         [NameInMap("After")]
         [Validation(Required=false)]
         public SinkBaiLianParametersAfter After { get; set; }
         public class SinkBaiLianParametersAfter : TeaModel {
             /// <summary>
-            /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// <para>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from the event content), and TEMPLATE (template).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONSTANT</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Form { get; set; }
 
             /// <summary>
-            /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// <para>The template string used to format the parameter value. It is used only when Form is set to TEMPLATE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The value of ${key} is ${value}!</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Template { get; set; }
 
             /// <summary>
-            /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// <para>The source content of the parameter value specified by Form. When Form is set to JSONPATH, this value must be a JSONPath expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The type of the Model Studio application to invoke.</para>
+        /// <para>The type of the Model Studio application to be invoked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KnowledgeBase</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ApplicationType { get; set; }
 
         /// <summary>
-        /// <para>The pre-processing logic to apply to an event before it is sent to the target.</para>
+        /// <para>The pre-processing logic executed before the event is sent to the target.</para>
         /// </summary>
         [NameInMap("Before")]
         [Validation(Required=false)]
         public SinkBaiLianParametersBefore Before { get; set; }
         public class SinkBaiLianParametersBefore : TeaModel {
             /// <summary>
-            /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// <para>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from the event content), and TEMPLATE (template).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONSTANT</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Form { get; set; }
 
             /// <summary>
-            /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// <para>The template string used to format the parameter value. It is used only when Form is set to TEMPLATE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The value of ${key} is ${value}!</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Template { get; set; }
 
             /// <summary>
-            /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// <para>The source content of the parameter value specified by Form. When Form is set to JSONPATH, this value must be a JSONPath expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Context information for the application. The value must be a JSON object.</para>
+        /// <para>The context information of the application, which must be a JSON object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;k1&quot;:&quot;v1&quot;}</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public object Context { get; set; }
 
         /// <summary>
-        /// <para>Additional key-value pairs to pass to the target. The value must be a valid JSON object.</para>
+        /// <para>The additional key-value pairs passed to the event target, which must be a valid JSON object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;k1&quot;:&quot;v1&quot;}</para>
@@ -118,14 +118,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public object Extend { get; set; }
 
         /// <summary>
-        /// <para>The offset for reading events from a stream or queue, used for stateful processing.</para>
+        /// <para>The offset for reading the event from a stream or queue, which is used for stateful processing.</para>
         /// </summary>
         [NameInMap("Offset")]
         [Validation(Required=false)]
         public SinkBaiLianParametersOffset Offset { get; set; }
         public class SinkBaiLianParametersOffset : TeaModel {
             /// <summary>
-            /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// <para>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from the event content), and TEMPLATE (template).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONSTANT</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Form { get; set; }
 
             /// <summary>
-            /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// <para>The template string used to format the parameter value. It is used only when Form is set to TEMPLATE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The value of ${key} is ${value}!</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Template { get; set; }
 
             /// <summary>
-            /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// <para>The source content of the parameter value specified by Form. When Form is set to JSONPATH, this value must be a JSONPath expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -157,14 +157,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The operation that the Model Studio application will perform.</para>
+        /// <para>The operation to be performed by the Model Studio application.</para>
         /// </summary>
         [NameInMap("Op")]
         [Validation(Required=false)]
         public SinkBaiLianParametersOp Op { get; set; }
         public class SinkBaiLianParametersOp : TeaModel {
             /// <summary>
-            /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// <para>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from the event content), and TEMPLATE (template).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONSTANT</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Form { get; set; }
 
             /// <summary>
-            /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// <para>The template string used to format the parameter value. It is used only when Form is set to TEMPLATE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The value of ${key} is ${value}!</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Template { get; set; }
 
             /// <summary>
-            /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// <para>The source content of the parameter value specified by Form. When Form is set to JSONPATH, this value must be a JSONPath expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -196,14 +196,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The partition key for the event. This key routes events to a specific partition in the target service, ensuring ordered processing.</para>
+        /// <para>The partition key of the event, which is used to route the event to a specific partition of the target service to ensure ordered processing.</para>
         /// </summary>
         [NameInMap("Partition")]
         [Validation(Required=false)]
         public SinkBaiLianParametersPartition Partition { get; set; }
         public class SinkBaiLianParametersPartition : TeaModel {
             /// <summary>
-            /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// <para>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from the event content), and TEMPLATE (template).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONSTANT</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Form { get; set; }
 
             /// <summary>
-            /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// <para>The template string used to format the parameter value. It is used only when Form is set to TEMPLATE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>${partition}</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Template { get; set; }
 
             /// <summary>
-            /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// <para>The source content of the parameter value specified by Form. When Form is set to JSONPATH, this value must be a JSONPath expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>

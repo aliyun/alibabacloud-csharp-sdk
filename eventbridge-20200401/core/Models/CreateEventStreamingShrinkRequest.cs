@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventStreamingName { get; set; }
 
         /// <summary>
-        /// <para>The event filtering rule. If this parameter is not specified, all events are matched.</para>
+        /// <para>The event filtering rule. If you do not specify this parameter, all events are matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string FilterPattern { get; set; }
 
         /// <summary>
-        /// <para>The common JSON configurations for the event provider. This parameter is mutually exclusive with the Source parameter.</para>
+        /// <para>The common JSON configurations for the event provider. This parameter is mutually exclusive with Source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
@@ -67,6 +67,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Metadata { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID. If you do not specify this parameter, the created event stream belongs to the default resource group of the account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
         /// <para>The runtime environment parameters.</para>
         /// </summary>
         [NameInMap("RunOptions")]
@@ -74,14 +84,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RunOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event target. You must select one and only one sink.</para>
+        /// <para>The event target. You must select exactly one type of sink to configure.</para>
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
         public string SinkShrink { get; set; }
 
         /// <summary>
-        /// <para>The event provider. You must specify exactly one source.</para>
+        /// <para>The event provider. You must select exactly one source type and configure its parameters.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -117,7 +127,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The transform configurations.</para>
+        /// <para>The configuration for transforms.</para>
         /// </summary>
         [NameInMap("Transforms")]
         [Validation(Required=false)]

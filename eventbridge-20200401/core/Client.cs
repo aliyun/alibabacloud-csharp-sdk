@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "eventbridge";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -922,9 +925,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 query["EventBusName"] = request.EventBusName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -973,9 +986,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 query["EventBusName"] = request.EventBusName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1399,14 +1422,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.TransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Transforms, "Transforms", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStreamingName))
+            {
+                query["EventStreamingName"] = request.EventStreamingName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStreamingName))
-            {
-                body["EventStreamingName"] = request.EventStreamingName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterPattern))
             {
@@ -1438,6 +1466,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1496,14 +1525,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 request.TransformsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Transforms, "Transforms", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStreamingName))
+            {
+                query["EventStreamingName"] = request.EventStreamingName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStreamingName))
-            {
-                body["EventStreamingName"] = request.EventStreamingName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterPattern))
             {
@@ -1535,6 +1569,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6156,12 +6191,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an event bus.</para>
+        /// <para>Retrieves the details of an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the detailed information about an event bus.</para>
+        /// <para>Retrieves the details of an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6203,12 +6238,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an event bus.</para>
+        /// <para>Retrieves the details of an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the detailed information about an event bus.</para>
+        /// <para>Retrieves the details of an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6250,12 +6285,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an event bus.</para>
+        /// <para>Retrieves the details of an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the detailed information about an event bus.</para>
+        /// <para>Retrieves the details of an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6273,12 +6308,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about an event bus.</para>
+        /// <para>Retrieves the details of an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the detailed information about an event bus.</para>
+        /// <para>Retrieves the details of an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9469,7 +9504,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all event buses.</para>
+        /// <para>Queries all event buses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9498,6 +9533,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9524,7 +9563,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all event buses.</para>
+        /// <para>Queries all event buses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9553,6 +9592,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9579,7 +9622,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all event buses.</para>
+        /// <para>Queries all event buses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9602,7 +9645,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all event buses.</para>
+        /// <para>Queries all event buses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15492,12 +15535,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an event bus.</para>
+        /// <para>Updates an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies an event bus.</para>
+        /// <para>Updates an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15522,9 +15565,15 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 query["EventBusName"] = request.EventBusName;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -15543,12 +15592,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an event bus.</para>
+        /// <para>Updates an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies an event bus.</para>
+        /// <para>Updates an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15573,9 +15622,15 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 query["EventBusName"] = request.EventBusName;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -15594,12 +15649,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an event bus.</para>
+        /// <para>Updates an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies an event bus.</para>
+        /// <para>Updates an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15617,12 +15672,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an event bus.</para>
+        /// <para>Updates an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies an event bus.</para>
+        /// <para>Updates an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">

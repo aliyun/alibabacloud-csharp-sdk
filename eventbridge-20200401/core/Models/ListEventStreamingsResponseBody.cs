@@ -94,6 +94,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Metadata { get; set; }
 
                 /// <summary>
+                /// <para>该事件流所属的资源组ID。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-acfmxazb4ph6aiy****</para>
+                /// </summary>
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
+                /// <summary>
                 /// <para>The runtime environment parameters.</para>
                 /// </summary>
                 [NameInMap("RunOptions")]

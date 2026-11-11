@@ -30,6 +30,35 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string EventBusName { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<UpdateEventBusRequestTags> Tags { get; set; }
+        public class UpdateEventBusRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>department</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>R&amp;D</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

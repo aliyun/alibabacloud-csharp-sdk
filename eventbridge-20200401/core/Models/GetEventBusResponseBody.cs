@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetEventBusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</para>
+        /// <para>The response code. A value of Success indicates that the request is successful. Other values indicate error codes. For more information, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetEventBusResponseBodyData Data { get; set; }
         public class GetEventBusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The timestamp that indicates when the event bus was created.</para>
+            /// <para>The creation timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1641781825000</para>
@@ -66,10 +66,49 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public string EventBusName { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the resource group to which the event bus belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmxazb4ph6aiy****</para>
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
+            /// <para>The tag information.</para>
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetEventBusResponseBodyDataTags> Tags { get; set; }
+            public class GetEventBusResponseBodyDataTags : TeaModel {
+                /// <summary>
+                /// <para>The key of the first tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>department</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <para>The value of the first tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>R&amp;D</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>
-        /// <para>The error message that is returned if the request failed.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EventBusNotExist</para>
@@ -89,7 +128,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

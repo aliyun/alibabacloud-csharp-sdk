@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to include schema changes.</para>
+        /// <para>Specifies whether database structure schema evolution is included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The password for the user.</para>
+        /// <para>The password of the database user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The database server port.</para>
+        /// <para>The port of the database server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region that contains the data source.</para>
+        /// <para>The ID of the region where the data source is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SnapshotMode { get; set; }
 
         /// <summary>
-        /// <para>The names of tables to synchronize. Separate multiple table names with a comma.</para>
+        /// <para>The names of the tables to synchronize. Separate multiple table names with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>database1.table1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string User { get; set; }
 
         /// <summary>
-        /// <para>The VSwitch IDs. Separate multiple IDs with a comma.</para>
+        /// <para>The vSwitch IDs. Separate multiple IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[vsw-a1b2c3d4e5f6g7h8i9j0k]</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-a1b2c3d4e5f6g7h8i9j0k</para>

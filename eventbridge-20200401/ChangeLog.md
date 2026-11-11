@@ -1,3 +1,17 @@
+2026-11-11 Version: 7.7.2
+- Update API CreateEventBus: add request parameters ResourceGroupId.
+- Update API CreateEventBus: add request parameters Tags.
+- Update API CreateEventStreaming: add request parameters ResourceGroupId.
+- Update API GetEventBus: add response parameters Body.Data.ResourceGroupId.
+- Update API GetEventBus: add response parameters Body.Data.Tags.
+- Update API GetEventStreaming: add response parameters Body.Data.ResourceGroupId.
+- Update API ListEventBuses: add request parameters ResourceGroupId.
+- Update API ListEventBuses: add response parameters Body.Data.EventBuses.$.ResourceGroupId.
+- Update API ListEventBuses: add response parameters Body.Data.EventBuses.$.Tags.
+- Update API ListEventStreamings: add response parameters Body.Data.EventStreamings.$.ResourceGroupId.
+- Update API UpdateEventBus: add request parameters Tags.
+
+
 2026-10-29 Version: 7.7.1
 - Update API UpdateEventStreaming: add request parameters Sink.SinkRabbitMQParameters.NetworkType.
 - Update API UpdateEventStreaming: add request parameters Sink.SinkRabbitMQParameters.SecurityGroupId.

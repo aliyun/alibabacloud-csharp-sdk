@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListEventBusesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in a request. You can use this parameter and NextToken to implement paging.</para>
+        /// <para>The maximum number of entries to return per page. You can use this parameter together with NextToken to implement pagination.</para>
         /// <remarks>
-        /// <para> A maximum of 100 entries can be returned in a request.</para>
+        /// <para>Notice: The maximum number of entries returned per request is 100.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the names of the event buses that you want to query.</para>
+        /// <para>The name prefix of the event buses to retrieve.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NamePrefix { get; set; }
 
         /// <summary>
-        /// <para>If you configure Limit and excess return values exist, this parameter is returned. You can use this parameter and Limit to implement paging.</para>
+        /// <para>The pagination token. If the specified Limit is reached and more results are available, this token is returned. You can use this token together with Limit to implement pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -41,6 +41,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the resource group, used to filter event buses in the specified resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 
