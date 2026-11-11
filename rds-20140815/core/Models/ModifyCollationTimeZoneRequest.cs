@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyCollationTimeZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The system character set collation. By default, the value is not modified. Valid values:</para>
+        /// <para>The system character set collation. By default, this parameter is not modified. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Chinese_PRC_CI_AS</b></description></item>
         /// <item><description><b>Chinese_PRC_CS_AS</b></description></item>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>The default character set collation of the instance is <b>Chinese_PRC_CI_AS</b>.</description></item>
-        /// <item><description>You must specify at least one of <b>Collation</b> and <b>Timezone</b>.</description></item>
+        /// <item><description>You must specify at least one of the <b>Collation</b> and <b>Timezone</b> parameters.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The system time zone. By default, the value is not modified.</para>
+        /// <para>The system time zone. By default, this parameter is not modified.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>The default time zone of the instance is <b>China Standard Time</b>.</description></item>
-        /// <item><description>You must specify at least one of <b>Collation</b> and <b>Timezone</b>.</description></item>
+        /// <item><description>You must specify at least one of the <b>Collation</b> and <b>Timezone</b> parameters.</description></item>
         /// </list>
         /// </remarks>
         /// 

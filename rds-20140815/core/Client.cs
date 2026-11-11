@@ -61575,11 +61575,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS SQL Server</para>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for SQL Server</para>
         /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+        /// <para>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
         /// <a href="https://help.aliyun.com/document_detail/95700.html">Modify the character set collation and time zone</a></para>
         /// </remarks>
         /// </description>
@@ -61648,11 +61648,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS SQL Server</para>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for SQL Server</para>
         /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+        /// <para>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
         /// <a href="https://help.aliyun.com/document_detail/95700.html">Modify the character set collation and time zone</a></para>
         /// </remarks>
         /// </description>
@@ -61721,11 +61721,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS SQL Server</para>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for SQL Server</para>
         /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+        /// <para>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
         /// <a href="https://help.aliyun.com/document_detail/95700.html">Modify the character set collation and time zone</a></para>
         /// </remarks>
         /// </description>
@@ -61750,11 +61750,11 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
-        /// <para>RDS SQL Server</para>
+        /// <h3>Supported engines</h3>
+        /// <para>ApsaraDB RDS for SQL Server</para>
         /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+        /// <para>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
         /// <a href="https://help.aliyun.com/document_detail/95700.html">Modify the character set collation and time zone</a></para>
         /// </remarks>
         /// </description>
