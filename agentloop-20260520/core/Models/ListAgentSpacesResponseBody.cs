@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public ListAgentSpacesResponseBodyAgentSpacesMseNamespace MseNamespace { get; set; }
             public class ListAgentSpacesResponseBodyAgentSpacesMseNamespace : TeaModel {
                 /// <summary>
-                /// <para>The attach method of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</para>
+                /// <para>The method used to attach the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AutoCreated</para>
@@ -117,6 +117,38 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string SlsProject { get; set; }
 
             /// <summary>
+            /// <para>Returns only the tags of AgentSpaces that are active in the current region and match the local instance. An empty array is returned when it is confirmed that there are no tags. This field is omitted for entries in other regions, inactive entries, or entries that do not match the local instance. Omission of this field does not indicate the absence of tags.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{\&quot;key\&quot;: \&quot;env\&quot;, \&quot;value\&quot;: \&quot;test\&quot;}]</para>
+            /// </summary>
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<ListAgentSpacesResponseBodyAgentSpacesTags> Tags { get; set; }
+            public class ListAgentSpacesResponseBodyAgentSpacesTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>env</para>
+                /// </summary>
+                [NameInMap("key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <para>The tag value, which can be an empty string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The update time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
@@ -140,7 +172,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. This parameter is empty if no next page is available.</para>
+        /// <para>The pagination token. This parameter is empty if there are no more pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b5754ef15c784abc8696d82790d2985c</para>
@@ -160,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>

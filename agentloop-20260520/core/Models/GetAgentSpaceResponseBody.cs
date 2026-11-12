@@ -130,6 +130,32 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string SlsProject { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{\&quot;key\&quot;: \&quot;env\&quot;, \&quot;value\&quot;: \&quot;test\&quot;}]</para>
+        /// </summary>
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<GetAgentSpaceResponseBodyTags> Tags { get; set; }
+        public class GetAgentSpaceResponseBodyTags : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>env</para>
+            /// </summary>
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The update time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 

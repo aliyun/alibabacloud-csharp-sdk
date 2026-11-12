@@ -950,6 +950,156 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. If a version is no longer needed, you can call DeleteDatasetVersion to delete the version.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionResponse
+        /// </returns>
+        public CreateDatasetVersionResponse CreateDatasetVersionWithOptions(string agentSpace, string datasetName, CreateDatasetVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDatasetVersion",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/dataset/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(datasetName) + "/version",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDatasetVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. If a version is no longer needed, you can call DeleteDatasetVersion to delete the version.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionResponse
+        /// </returns>
+        public async Task<CreateDatasetVersionResponse> CreateDatasetVersionWithOptionsAsync(string agentSpace, string datasetName, CreateDatasetVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDatasetVersion",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/dataset/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(datasetName) + "/version",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDatasetVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. If a version is no longer needed, you can call DeleteDatasetVersion to delete the version.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionResponse
+        /// </returns>
+        public CreateDatasetVersionResponse CreateDatasetVersion(string agentSpace, string datasetName, CreateDatasetVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDatasetVersionWithOptions(agentSpace, datasetName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a named historical version for a dataset in a specified agent workspace to preserve the historical state of the dataset. You can call ListDatasetVersions to query version information. If a version is no longer needed, you can call DeleteDatasetVersion to delete the version.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatasetVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatasetVersionResponse
+        /// </returns>
+        public async Task<CreateDatasetVersionResponse> CreateDatasetVersionAsync(string agentSpace, string datasetName, CreateDatasetVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDatasetVersionWithOptionsAsync(agentSpace, datasetName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an evaluation task.</para>
         /// </summary>
         /// 
@@ -3038,6 +3188,124 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteDatasetWithOptionsAsync(agentSpace, datasetName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a historical version of a dataset in a specified agent workspace. After deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, the current data, or other historical versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionResponse
+        /// </returns>
+        public DeleteDatasetVersionResponse DeleteDatasetVersionWithOptions(string agentSpace, string datasetName, string version, DeleteDatasetVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDatasetVersion",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/dataset/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(datasetName) + "/version/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDatasetVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a historical version of a dataset in a specified agent workspace. After deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, the current data, or other historical versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionResponse
+        /// </returns>
+        public async Task<DeleteDatasetVersionResponse> DeleteDatasetVersionWithOptionsAsync(string agentSpace, string datasetName, string version, DeleteDatasetVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDatasetVersion",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/dataset/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(datasetName) + "/version/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(version),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDatasetVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a historical version of a dataset in a specified agent workspace. After deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, the current data, or other historical versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionResponse
+        /// </returns>
+        public DeleteDatasetVersionResponse DeleteDatasetVersion(string agentSpace, string datasetName, string version, DeleteDatasetVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDatasetVersionWithOptions(agentSpace, datasetName, version, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a historical version of a dataset in a specified agent workspace. After deletion, the version no longer appears in the list returned by ListDatasetVersions. This operation does not delete the dataset itself, the current data, or other historical versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatasetVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatasetVersionResponse
+        /// </returns>
+        public async Task<DeleteDatasetVersionResponse> DeleteDatasetVersionAsync(string agentSpace, string datasetName, string version, DeleteDatasetVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDatasetVersionWithOptionsAsync(agentSpace, datasetName, version, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6316,7 +6584,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <para>Supports filtering by region.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListAgentSpacesRequest
         /// </param>
         /// <param name="headers">
@@ -6329,9 +6597,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <returns>
         /// ListAgentSpacesResponse
         /// </returns>
-        public ListAgentSpacesResponse ListAgentSpacesWithOptions(ListAgentSpacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListAgentSpacesResponse ListAgentSpacesWithOptions(ListAgentSpacesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAgentSpacesShrinkRequest request = new ListAgentSpacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpace))
             {
@@ -6348,6 +6622,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6379,7 +6657,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <para>Supports filtering by region.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListAgentSpacesRequest
         /// </param>
         /// <param name="headers">
@@ -6392,9 +6670,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <returns>
         /// ListAgentSpacesResponse
         /// </returns>
-        public async Task<ListAgentSpacesResponse> ListAgentSpacesWithOptionsAsync(ListAgentSpacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListAgentSpacesResponse> ListAgentSpacesWithOptionsAsync(ListAgentSpacesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAgentSpacesShrinkRequest request = new ListAgentSpacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpace))
             {
@@ -6411,6 +6695,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6778,6 +7066,144 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListContextStoresWithOptionsAsync(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent workspace and returns the version names, descriptions, and creation time. Deleted versions are not included in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken value from the previous response for paging to retrieve the next page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetVersionsResponse
+        /// </returns>
+        public ListDatasetVersionsResponse ListDatasetVersionsWithOptions(string agentSpace, string datasetName, ListDatasetVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatasetVersions",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/dataset/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(datasetName) + "/version",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatasetVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent workspace and returns the version names, descriptions, and creation time. Deleted versions are not included in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken value from the previous response for paging to retrieve the next page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetVersionsResponse
+        /// </returns>
+        public async Task<ListDatasetVersionsResponse> ListDatasetVersionsWithOptionsAsync(string agentSpace, string datasetName, ListDatasetVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatasetVersions",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/dataset/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(datasetName) + "/version",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatasetVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent workspace and returns the version names, descriptions, and creation time. Deleted versions are not included in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken value from the previous response for paging to retrieve the next page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetVersionsResponse
+        /// </returns>
+        public ListDatasetVersionsResponse ListDatasetVersions(string agentSpace, string datasetName, ListDatasetVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDatasetVersionsWithOptions(agentSpace, datasetName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query to retrieve the historical versions of a dataset in a specified agent workspace and returns the version names, descriptions, and creation time. Deleted versions are not included in the list. Do not specify nextToken in the first request. For subsequent requests, use the nextToken value from the previous response for paging to retrieve the next page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatasetVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatasetVersionsResponse
+        /// </returns>
+        public async Task<ListDatasetVersionsResponse> ListDatasetVersionsAsync(string agentSpace, string datasetName, ListDatasetVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDatasetVersionsWithOptionsAsync(agentSpace, datasetName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -1,3 +1,12 @@
+2026-11-12 Version: 2.5.0
+- Support API CreateDatasetVersion.
+- Support API DeleteDatasetVersion.
+- Support API ListDatasetVersions.
+- Update API GetAgentSpace: add response parameters Body.tags.
+- Update API ListAgentSpaces: add request parameters tag.
+- Update API ListAgentSpaces: add response parameters Body.agentSpaces.$.tags.
+
+
 2026-11-10 Version: 2.4.5
 - Update API CreateAgentSpace: add request parameters body.trajectoryEmbeddingEnabled.
 - Update API CreateContextStore: add request parameters body.config.source.trajectory.scopeMappingVersion.
