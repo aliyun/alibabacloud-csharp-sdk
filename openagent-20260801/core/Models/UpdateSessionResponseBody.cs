@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public UpdateSessionResponseBodyData Data { get; set; }
         public class UpdateSessionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the session was created, in RFC 3339 format.</para>
+            /// <para>The time when the session was created. The time is in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:00:00Z</para>
@@ -39,13 +39,13 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             /// <summary>
             /// <para>The status of the last run. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PENDING</c>: Pending.</description></item>
-            /// <item><description><c>RUNNING</c>: Running.</description></item>
-            /// <item><description><c>WAITING_USER</c>: Waiting for interrupt handling.</description></item>
-            /// <item><description><c>COMPLETED</c>: Completed.</description></item>
-            /// <item><description><c>FAILED</c>: Failed.</description></item>
-            /// <item><description><c>CANCELLED</c>: Cancelled.</description></item>
-            /// <item><description><c>REJECTED</c>: Rejected.</description></item>
+            /// <item><description><c>PENDING</c>: pending</description></item>
+            /// <item><description><c>RUNNING</c>: running</description></item>
+            /// <item><description><c>WAITING_USER</c>: waiting for interrupt handling</description></item>
+            /// <item><description><c>COMPLETED</c>: completed</description></item>
+            /// <item><description><c>FAILED</c>: failed</description></item>
+            /// <item><description><c>CANCELLED</c>: cancelled</description></item>
+            /// <item><description><c>REJECTED</c>: rejected</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public bool? Pinned { get; set; }
 
             /// <summary>
-            /// <para>The session ID.</para>
+            /// <para>The ID of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>session_example_001</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The session status. Valid values:</para>
+            /// <para>The status of the session. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>IDLE</c>: Idle.</description></item>
-            /// <item><description><c>ACTIVE</c>: Active.</description></item>
-            /// <item><description><c>WAITING_USER_INPUT</c>: Waiting for user input.</description></item>
-            /// <item><description><c>WAITING_APPROVAL</c>: Waiting for user confirmation.</description></item>
-            /// <item><description><c>WAITING_OUT_OF_BAND_APPROVAL</c>: Waiting for out-of-band approval.</description></item>
-            /// <item><description><c>CLOSED</c>: Closed.</description></item>
+            /// <item><description><c>IDLE</c>: idle</description></item>
+            /// <item><description><c>ACTIVE</c>: running</description></item>
+            /// <item><description><c>WAITING_USER_INPUT</c>: waiting for user input</description></item>
+            /// <item><description><c>WAITING_APPROVAL</c>: waiting for user confirmation</description></item>
+            /// <item><description><c>WAITING_OUT_OF_BAND_APPROVAL</c>: waiting for out-of-band approval</description></item>
+            /// <item><description><c>CLOSED</c>: closed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The session title.</para>
+            /// <para>The title of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Cloud resource inspection example</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The time when the session was last updated, in RFC 3339 format.</para>
+            /// <para>The time when the session was last updated. The time is in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:01:00Z</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000001</para>

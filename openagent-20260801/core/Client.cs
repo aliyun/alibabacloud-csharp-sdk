@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "OpenAgent";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("openagent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -536,7 +539,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if it is not configured.</para>
+        /// <para>Queries the read-only mode switch of the current account. It is enabled by default if not configured.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -581,7 +584,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if it is not configured.</para>
+        /// <para>Queries the read-only mode switch of the current account. It is enabled by default if not configured.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -626,7 +629,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if it is not configured.</para>
+        /// <para>Queries the read-only mode switch of the current account. It is enabled by default if not configured.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -650,7 +653,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the read-only mode switch for the current account. The read-only mode is enabled by default if it is not configured.</para>
+        /// <para>Queries the read-only mode switch of the current account. It is enabled by default if not configured.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -812,7 +815,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the title, status, pinning information, and the ID and status of the most recent run of a specified session.</para>
+        /// <para>Queries the title, status, and pinned state of a specified session, along with the ID and status of its last run.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -857,7 +860,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the title, status, pinning information, and the ID and status of the most recent run of a specified session.</para>
+        /// <para>Queries the title, status, and pinned state of a specified session, along with the ID and status of its last run.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -902,7 +905,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the title, status, pinning information, and the ID and status of the most recent run of a specified session.</para>
+        /// <para>Queries the title, status, and pinned state of a specified session, along with the ID and status of its last run.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -926,7 +929,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the title, status, pinning information, and the ID and status of the most recent run of a specified session.</para>
+        /// <para>Queries the title, status, and pinned state of a specified session, along with the ID and status of its last run.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -950,7 +953,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the message timeline of a specified session. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Queries the message timeline of a specified session in pages. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1009,7 +1012,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the message timeline of a specified session. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Queries the message timeline of a specified session in pages. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1068,7 +1071,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the message timeline of a specified session. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Queries the message timeline of a specified session in pages. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1092,7 +1095,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the message timeline of a specified session. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Queries the message timeline of a specified session in pages. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1116,7 +1119,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses paging to query the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1171,7 +1174,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses paging to query the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1226,7 +1229,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses paging to query the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1250,7 +1253,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses paging to query the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1294,6 +1297,10 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attachments))
+            {
+                body["attachments"] = request.Attachments;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["content"] = request.Content;
@@ -1366,6 +1373,10 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attachments))
+            {
+                body["attachments"] = request.Attachments;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["content"] = request.Content;
@@ -1616,7 +1627,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</para>
+        /// <para>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1680,7 +1691,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</para>
+        /// <para>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1744,7 +1755,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</para>
+        /// <para>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1768,7 +1779,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</para>
+        /// <para>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">

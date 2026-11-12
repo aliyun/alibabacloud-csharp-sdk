@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
 {
     public class UpdateReadonlyModeRequest : TeaModel {
         /// <summary>
-        /// <para>Required. Pass the string true to enable read-only mode, or false to disable it. The value is case-insensitive.</para>
+        /// <para>Required. Pass the string true to enable read-only mode or false to disable it. The value is case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

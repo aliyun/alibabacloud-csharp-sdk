@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         /// <para>The reason for the cancellation. The value must be 1 to 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The user manually canceled this task</para>
+        /// <para>The user manually canceled the task</para>
         /// </summary>
         [NameInMap("reason")]
         [Validation(Required=false)]

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The idempotency key for the request. Use the same value when you retry the same update request.</para>
+        /// <para>The idempotency key for the request. Use the same value when retrying the same update request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>update-session-example-001</para>

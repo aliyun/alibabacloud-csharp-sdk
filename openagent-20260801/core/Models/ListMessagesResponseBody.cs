@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The message records returned in a timeline.</para>
+            /// <para>The message records returned in chronological order.</para>
             /// </summary>
             [NameInMap("timeline")]
             [Validation(Required=false)]
             public List<ListMessagesResponseBodyDataTimeline> Timeline { get; set; }
             public class ListMessagesResponseBodyDataTimeline : TeaModel {
                 /// <summary>
-                /// <para>The message object. Different message types are distinguished by role, and each type uses the corresponding fields.</para>
+                /// <para>The message object. Message types are distinguished by role, and each type uses its corresponding fields.</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                     /// <para>The message content. The structure is determined by the message type.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Query the status of the sample resource</para>
+                    /// <para>Check the status of the sample resource</para>
                     /// </summary>
                     [NameInMap("content")]
                     [Validation(Required=false)]
                     public object Content { get; set; }
 
                     /// <summary>
-                    /// <para>The encrypted content. The example is an invalid placeholder value and does not contain real ciphertext.</para>
+                    /// <para>The encrypted content. The example is an invalid placeholder value and does not contain actual ciphertext.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>EXAMPLE_ENCRYPTED_VALUE</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                     public string EncryptedValue { get; set; }
 
                     /// <summary>
-                    /// <para>The error description when tool execution fails.</para>
+                    /// <para>The error description when the tool execution fails.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Sample tool execution failure</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The result information of historical interrupts.</para>
+                    /// <para>The result information of the historical interrupt.</para>
                     /// </summary>
                     [NameInMap("interruptOutcome")]
                     [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                                     /// <para>The description of the operation pending approval.</para>
                                     /// 
                                     /// <b>Example:</b>
-                                    /// <para>Execute changes on the sample resource</para>
+                                    /// <para>Modify the sample resource</para>
                                     /// </summary>
                                     [NameInMap("description")]
                                     [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                                 }
 
                                 /// <summary>
-                                /// <para>The associated approval ID.</para>
+                                /// <para>The ID of the associated approval request.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>approval_example_001</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                                 public string ApprovalId { get; set; }
 
                                 /// <summary>
-                                /// <para>The URL of the approval page. The example URL cannot be used for actual approval.</para>
+                                /// <para>The URL of the approval page. The example URL cannot be used for actual approvals.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para><a href="https://example.com/approvals/approval_example_001">https://example.com/approvals/approval_example_001</a></para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                                 public bool? Cancellable { get; set; }
 
                                 /// <summary>
-                                /// <para>The digest identifier of the change pending approval.</para>
+                                /// <para>The summary identifier of the change pending approval.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>example-change-digest</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                                 public string ChangeDigest { get; set; }
 
                                 /// <summary>
-                                /// <para>The title of the approval item.</para>
+                                /// <para>The title of the approval request.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>Sample change approval</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                             public Dictionary<string, object> ResponseSchema { get; set; }
 
                             /// <summary>
-                            /// <para>The ID of the tool invocation associated with the interrupt.</para>
+                            /// <para>The tool invocation ID associated with the interrupt.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>tool_call_example_001</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                         }
 
                         /// <summary>
-                        /// <para>The type of the interrupt result. The value is fixed to <c>interrupt</c>.</para>
+                        /// <para>The interrupt result type. The value is fixed to <c>interrupt</c>.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>interrupt</para>
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                             public string InterruptId { get; set; }
 
                             /// <summary>
-                            /// <para>The processing result for the corresponding interrupt, which must comply with the responseSchema of the interrupt.</para>
+                            /// <para>The processing result for the corresponding interrupt. The result must comply with the responseSchema of the interrupt.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</para>
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                             public object Payload { get; set; }
 
                             /// <summary>
-                            /// <para>The response method for the current interrupt. Valid values: <c>resolved</c> (the answer, confirmation, or tool result required by the interrupt has been submitted, including the <c>payload</c>) and <c>cancelled</c> (the interrupt has been canceled, excluding the <c>payload</c>).</para>
+                            /// <para>The response method for this interrupt. Valid values: <c>resolved</c> (the answer, confirmation, or tool result required by the interrupt has been submitted, which includes the <c>payload</c>) and <c>cancelled</c> (the interrupt has been canceled, which does not include the <c>payload</c>).</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>resolved</para>
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                         }
 
                         /// <summary>
-                        /// <para>The ID of the original run that was resumed.</para>
+                        /// <para>The ID of the original run that is resumed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>run_example_001</para>
@@ -395,7 +395,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the tool invocation associated with the tool result.</para>
+                    /// <para>The tool invocation ID associated with the tool result.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tool_call_example_001</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                     public List<ListMessagesResponseBodyDataTimelineMessageToolCalls> ToolCalls { get; set; }
                     public class ListMessagesResponseBodyDataTimelineMessageToolCalls : TeaModel {
                         /// <summary>
-                        /// <para>The encrypted content of the tool invocation. The example is only a placeholder value.</para>
+                        /// <para>The encrypted content of the tool invocation. The example is a placeholder value only.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>EXAMPLE_ENCRYPTED_VALUE</para>
@@ -422,14 +422,14 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                         public string EncryptedValue { get; set; }
 
                         /// <summary>
-                        /// <para>The information about the function to be executed.</para>
+                        /// <para>The information about the function to execute.</para>
                         /// </summary>
                         [NameInMap("function")]
                         [Validation(Required=false)]
                         public ListMessagesResponseBodyDataTimelineMessageToolCallsFunction Function { get; set; }
                         public class ListMessagesResponseBodyDataTimelineMessageToolCallsFunction : TeaModel {
                             /// <summary>
-                            /// <para>The tool parameters in the form of a JSON string.</para>
+                            /// <para>The tool parameters as a JSON string.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{&quot;keyword&quot;:&quot;example&quot;}</para>
@@ -471,7 +471,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                         public Dictionary<string, object> Metadata { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the tool invocation. The value is fixed to <c>function</c>.</para>
+                        /// <para>The tool invocation type. The value is fixed to <c>function</c>.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>function</para>
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             }
 
             /// <summary>
-            /// <para>The number of timeline records on the current page, which is equal to the length of the timeline array.</para>
+            /// <para>The number of timeline records on the current page. The value is equal to the length of the timeline array.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the request was successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

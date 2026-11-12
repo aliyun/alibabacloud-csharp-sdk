@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The idempotency key of the request. Use the same value and the same business parameters when retrying the same cancellation request.</para>
+        /// <para>The idempotency key for the request. Use the same value and the same business parameters when you retry the same cancellation request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cancel-example-001</para>

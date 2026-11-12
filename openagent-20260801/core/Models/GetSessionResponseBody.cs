@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the most recent run.</para>
+            /// <para>The ID of the last run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run_example_001</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string LastRunId { get; set; }
 
             /// <summary>
-            /// <para>The status of the most recent run. Valid values: <c>PENDING</c> (pending execution), <c>RUNNING</c> (running), <c>WAITING_USER</c> (waiting for interrupt handling), <c>COMPLETED</c> (completed), <c>FAILED</c> (failed), <c>CANCELLED</c> (cancelled), and <c>REJECTED</c> (rejected).</para>
+            /// <para>The status of the last run. Valid values: <c>PENDING</c> (pending), <c>RUNNING</c> (running), <c>WAITING_USER</c> (waiting for interrupt handling), <c>COMPLETED</c> (completed), <c>FAILED</c> (failed), <c>CANCELLED</c> (cancelled), <c>REJECTED</c> (rejected).</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The session status. Valid values: <c>IDLE</c> (idle), <c>ACTIVE</c> (active), <c>WAITING_USER_INPUT</c> (waiting for user input), <c>WAITING_APPROVAL</c> (waiting for user confirmation), <c>WAITING_OUT_OF_BAND_APPROVAL</c> (waiting for out-of-band approval), and <c>CLOSED</c> (closed).</para>
+            /// <para>The session status. Valid values: <c>IDLE</c> (idle), <c>ACTIVE</c> (running), <c>WAITING_USER_INPUT</c> (waiting for user input), <c>WAITING_APPROVAL</c> (waiting for user confirmation), <c>WAITING_OUT_OF_BAND_APPROVAL</c> (waiting for out-of-band approval), <c>CLOSED</c> (closed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>IDLE</para>

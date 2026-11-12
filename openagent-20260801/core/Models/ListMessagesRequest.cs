@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the value returned from the previous page.</para>
+        /// <para>The pagination token. Do not specify this parameter in the first request. For subsequent requests, use the value returned from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-next-token</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Filters messages by the specified run ID.</para>
+        /// <para>Filters messages by a specified run ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>run_example_001</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
 {
     public class UpdateReadonlyModeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The currently active configuration information.</para>
+        /// <para>The current effective configuration information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateReadonlyModeResponseBodyData Data { get; set; }
         public class UpdateReadonlyModeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the configuration. The value is fixed to readonly.</para>
+            /// <para>The configuration name. The value is fixed to readonly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>readonly</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string GmtUpdate { get; set; }
 
             /// <summary>
-            /// <para>The currently active configuration value, returned as the string true or false.</para>
+            /// <para>The current effective configuration value. The value is returned as a string, either true or false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Value { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration value. The value is BOOL for this API operation.</para>
+            /// <para>The type of the configuration value. The value is BOOL for this operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BOOL</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000001</para>
