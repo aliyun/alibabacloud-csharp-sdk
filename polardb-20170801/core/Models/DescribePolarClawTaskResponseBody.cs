@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The task object.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]
@@ -67,7 +70,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? CreatedAtMs { get; set; }
 
             /// <summary>
-            /// <para>The error object. This parameter is returned only if the task fails.</para>
+            /// <para>The error object. This object is returned when the task fails.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("Error")]
             [Validation(Required=false)]
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The error message.</para>
+                /// <para>The error details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>channelId format invalid</para>
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The operation name.</para>
+            /// <para>The name of the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LoginPolarClawChannel</para>
@@ -106,7 +112,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The task result object. This parameter is returned only if the task succeeds. The content of this object varies by operation.</para>
+            /// <para>The task result object. This object is returned when the task succeeds. The content varies based on the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -116,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public Dictionary<string, object> Result { get; set; }
 
             /// <summary>
-            /// <para>The task state. Valid values: pending, running, succeeded, and failed.</para>
+            /// <para>The task status. Valid values: pending, running, succeeded, and failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -126,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The task ID, which is a universally unique identifier (UUID).</para>
+            /// <para>The task ID (UUID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>5956e600-ce6e-4d11-9648-939ef3286e94</para>
@@ -136,7 +142,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the task was last updated, in milliseconds.</para>
+            /// <para>The timestamp when the task was updated, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1778564750541</para>

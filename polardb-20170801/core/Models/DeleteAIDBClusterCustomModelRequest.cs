@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAIDBClusterCustomModelRequest : TeaModel {
         /// <summary>
-        /// <para>The custom model registration key to delete.</para>
+        /// <para>The key of the custom model registration to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

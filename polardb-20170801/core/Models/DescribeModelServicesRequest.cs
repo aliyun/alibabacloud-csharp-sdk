@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeModelServicesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the gateway instance.</para>
+        /// <para>The gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the model services. Separate multiple IDs with a comma (,).</para>
+        /// <para>The IDs of the model services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ms-xxx,ms-xxxx</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelServiceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the model service.</para>
+        /// <para>The model service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -73,14 +73,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>openai</b></para>
-        /// </description></item>
-        /// <item><description><para><b>anthropic</b></para>
-        /// </description></item>
-        /// <item><description><para><b>bailian</b>: Models from Model Studio.</para>
-        /// </description></item>
-        /// <item><description><para><b>vllm</b></para>
-        /// </description></item>
+        /// <item><description><b>openai</b></description></item>
+        /// <item><description><b>anthropic</b></description></item>
+        /// <item><description><b>bailian</b></description></item>
+        /// <item><description><b>vllm</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The status of the model service.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>

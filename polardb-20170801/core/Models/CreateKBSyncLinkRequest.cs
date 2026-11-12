@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateKBSyncLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client ID.</para>
+        /// <para>The client identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example-client-secret</para>
         /// </summary>
         [NameInMap("ClientSecret")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the Lark group member snapshot for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is omitted, -1 takes effect.</para>
+        /// <para>The validity period of the successful snapshot of Lark chat members for fallback reuse, in seconds. This parameter can be explicitly set only for Lark synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is not specified, the default value -1 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>The name of the link.</para>
+        /// <para>The name of the synchronization link.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SheetMcpEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The source directory address for synchronization.</para>
+        /// <para>The address of the source directory for synchronization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceDir { get; set; }
 
         /// <summary>
-        /// <para>The data source type. Valid values: FEISHU and SHAREPOINT.</para>
+        /// <para>The data source type. Valid values: OSS, DINGTALK, FEISHU, and SHAREPOINT.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? SyncIntervalMinutes { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This parameter is required when SourceType is set to SHAREPOINT.</para>
+        /// <para>The ID of the source tenant. This parameter is required and must be set to the Entra tenant ID when SourceType is set to SHAREPOINT, the tenant_key when SourceType is set to FEISHU, or the corpId when SourceType is set to DINGTALK. This parameter is not required when SourceType is set to OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>63eexxxx-xxxx-xxxx-xxxx-xxxxxx090f82</para>
@@ -147,17 +147,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The Lark user access token. This token is used only when the application identity cannot retrieve group members because the bot is not in the group chat.</para>
+        /// <para>The Lark user access token. This token is used only when the application identity cannot expand chat members because the bot is not in the chat.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example-user-access-token</para>
         /// </summary>
         [NameInMap("UserAccessToken")]
         [Validation(Required=false)]
         public string UserAccessToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DingTalk operator.</para>
+        /// <para>The ID of the DingTalk user that performs the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123***56</para>
@@ -167,10 +167,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The Lark user refresh token. This token must be provided together with UserAccessToken to automatically rotate the fallback identity for retrieving group members.</para>
+        /// <para>The Lark user refresh token. This token must be provided together with UserAccessToken and is used to automatically rotate the fallback identity for expanding chat members.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example-user-refresh-token</para>
         /// </summary>
         [NameInMap("UserRefreshToken")]
         [Validation(Required=false)]

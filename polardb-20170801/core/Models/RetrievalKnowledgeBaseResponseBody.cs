@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<RetrievalKnowledgeBaseResponseBodyResults> Results { get; set; }
         public class RetrievalKnowledgeBaseResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The list of captions for the figures or tables associated with the chunk.</para>
+            /// <para>The list of figure or table captions associated with the chunk.</para>
             /// </summary>
             [NameInMap("Captions")]
             [Validation(Required=false)]
             public List<string> Captions { get; set; }
 
             /// <summary>
-            /// <para>The list of structured element references in the source document associated with the chunk. You can use these references to precisely locate the original elements.</para>
+            /// <para>The list of structured element references from the source document associated with the chunk. This can be used to precisely locate the original elements.</para>
             /// </summary>
             [NameInMap("DocItems")]
             [Validation(Required=false)]
@@ -145,6 +145,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Uri { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>The ID of the knowledge base to which the retrieved chunk belongs. This is used to distinguish the source of results when searching multiple knowledge bases.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pkb-xxxxxxxx</para>
+            /// </summary>
+            [NameInMap("KnowledgeBaseId")]
+            [Validation(Required=false)]
+            public string KnowledgeBaseId { get; set; }
 
             /// <summary>
             /// <para>The metadata.</para>

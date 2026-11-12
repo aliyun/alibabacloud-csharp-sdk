@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The Skill identifier.</para>
+        /// <para>The skill identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

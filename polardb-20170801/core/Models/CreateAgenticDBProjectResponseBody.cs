@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BranchComputeClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time when the project was created. The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time when the project was created.</para>
+        /// <para>The time follows the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-10T11:00:00Z</para>
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DefaultBranchName { get; set; }
 
         /// <summary>
-        /// <para>The retention period for recent records of the project. This parameter may be empty for older projects. To query the current effective value, call DescribeAgenticDBProjectHistoryRetention.</para>
+        /// <para>The retention period of historical data, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>604800</para>

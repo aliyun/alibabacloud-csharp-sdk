@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the plugin to disable.</para>
+        /// <para>The ID of the plug-in to disable.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the gateway. Default value: true.</para>
+        /// <para>Specifies whether to restart the gateway after the plug-in is disabled. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

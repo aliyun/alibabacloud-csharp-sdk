@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateGlobalDataNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The description or remarks for the GDN.</para>
+        /// <para>The description or remark of the GDN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mygdn</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Destination path</para>
+        /// <para>The destination path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DestinationFileSystemPath { get; set; }
 
         /// <summary>
-        /// <para>Target PolarFileSystem (PolarFS) instance</para>
+        /// <para>The destination Polarlakebase instance. Note: This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-xxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DestinationId { get; set; }
 
         /// <summary>
-        /// <para>The region of the destination PolarFS instance.</para>
+        /// <para>The region of the destination Polarlakebase instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DestinationRegion { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination instance. Valid values:</para>
+        /// <para>The destination type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>pfs</b>: PolarFS High-Performance Edition.</para>
-        /// </description></item>
-        /// <item><description><para><b>pcs</b>: PolarFS Cold Storage Edition.</para>
-        /// </description></item>
+        /// <item><description><b>pfs</b>: Polarlakebase High-performance Edition.</description></item>
+        /// <item><description><b>pcs</b>: Polarlakebase Cold Storage Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,15 +64,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DestinationType { get; set; }
 
         /// <summary>
-        /// <para>Whether to freeze the source path during transmission. Valid values:</para>
+        /// <para>Specifies whether to freeze the source path during data transmission. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Freeze.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Do not freeze.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Freezes the source path.</description></item>
+        /// <item><description><b>false</b>: Does not freeze the source path.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Currently only supports oss source.</para>
+        /// <para>Currently, only OSS sources are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceFileSystemPath { get; set; }
 
         /// <summary>
-        /// <para>Source PolarFileSystem (PolarFS) instance.</para>
+        /// <para>The source Polarlakebase instance. Note: This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcs-xxx</para>
@@ -105,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the source PolarFS instance.</para>
+        /// <para>The region of the source Polarlakebase instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-wulanchabu</para>
@@ -115,12 +111,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceRegion { get; set; }
 
         /// <summary>
-        /// <para>The type of the source instance. Valid values:</para>
+        /// <para>The source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>pfs</b>: PolarFS High-Performance Edition.</para>
-        /// </description></item>
-        /// <item><description><para><b>pcs</b>: PolarFS Cold Storage Edition.</para>
-        /// </description></item>
+        /// <item><description><b>pfs</b>: Polarlakebase High-performance Edition.</description></item>
+        /// <item><description><b>pcs</b>: Polarlakebase Cold Storage Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

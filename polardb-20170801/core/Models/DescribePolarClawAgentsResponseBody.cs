@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribePolarClawAgentsResponseBodyAgents> Agents { get; set; }
         public class DescribePolarClawAgentsResponseBodyAgents : TeaModel {
             /// <summary>
-            /// <para>Indicates whether this is the default agent.</para>
+            /// <para>Indicates whether the agent is the default agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? Default { get; set; }
 
             /// <summary>
-            /// <para>The agent file list.</para>
+            /// <para>The list of agent files.</para>
             /// </summary>
             [NameInMap("Files")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The file size, in bytes.</para>
+                /// <para>The file size in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// <para>The last updated timestamp, in milliseconds.</para>
+                /// <para>The timestamp of the last update in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1716000000000</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>Agent ID</para>
+            /// <para>The PolarClaw agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>main</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string AvatarUrl { get; set; }
 
                 /// <summary>
-                /// <para>The emoji identifier in Unicode format such as U+1F99E, or a direct emoji character.</para>
+                /// <para>The emoji identifier, in Unicode format such as U+1F99E or as a direct emoji character.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>U+1F99E</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public DescribePolarClawAgentsResponseBodyAgentsModel Model { get; set; }
             public class DescribePolarClawAgentsResponseBodyAgentsModel : TeaModel {
                 /// <summary>
-                /// <para>The fallback model list.</para>
+                /// <para>The list of fallback models.</para>
                 /// </summary>
                 [NameInMap("Fallbacks")]
                 [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DefaultId { get; set; }
 
         /// <summary>
-        /// <para>The primary agent key name.</para>
+        /// <para>The main agent key name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarFsMappingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The default AccessKey ID at the instance level.</para>
+        /// <para>The default AccessKey ID for the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>LTAI5tExample1234</para>
         /// </summary>
         [NameInMap("DefaultAccessKeyId")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -75,17 +75,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey ID of the storage bucket.</para>
+            /// <para>The AccessKey ID for the storage bucket.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>LTAI5tExample1234</para>
             /// </summary>
             [NameInMap("BucketAccessKeyId")]
             [Validation(Required=false)]
             public string BucketAccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The mapping path.</para>
+            /// <para>The mapped path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the PolarClaw channel to log into.</para>
+        /// <para>The ID of the channel to log on to.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

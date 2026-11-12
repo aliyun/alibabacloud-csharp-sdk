@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateKnowledgeSpaceRequest : TeaModel {
         /// <summary>
-        /// <para>The database engine type.</para>
+        /// <para>The type of the database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EmbeddingModel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable ACL-based authentication for the knowledge space.</para>
+        /// <para>Specifies whether to enforce access control list (ACL) authentication for the knowledge space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>OSS AK</para>
+        /// <para>The AccessKey ID used to access OSS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>LTAI5tExample1234</para>
         /// </summary>
         [NameInMap("OSSAccessKey")]
         [Validation(Required=false)]
@@ -105,11 +105,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OSSBucket { get; set; }
 
         /// <summary>
-        /// <para>OSS SK</para>
+        /// <para>The AccessKey secret used to access OSS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example-oss-secret</para>
         /// </summary>
         [NameInMap("OSSSecretKey")]
         [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the reranking model.</para>
+        /// <para>The name of the rerank model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-rerank</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RerankModel { get; set; }
 
         /// <summary>
-        /// <para>The security group ID.</para>
+        /// <para>The ID of the security group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -161,8 +161,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The sharding strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>hierarchical (default)</description></item>
-        /// <item><description>hybrid</description></item>
+        /// <item><description>hierarchical: hierarchical sharding. This is the default value.</description></item>
+        /// <item><description>hybrid: hybrid sharding.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

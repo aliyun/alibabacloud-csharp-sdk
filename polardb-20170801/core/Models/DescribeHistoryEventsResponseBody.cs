@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DescribeHistoryEventsResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of events.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -18,18 +21,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public class DescribeHistoryEventsResponseBodyItems : TeaModel {
             /// <summary>
             /// <para>The data overview.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public DescribeHistoryEventsResponseBodyItemsData Data { get; set; }
             public class DescribeHistoryEventsResponseBodyItemsData : TeaModel {
                 /// <summary>
-                /// <para>The type of the Alibaba Cloud service for the application group. Valid values:</para>
+                /// <para>The cloud service type of the application group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>web</b>: web application.</para>
-                /// </description></item>
-                /// <item><description><para><b>native</b>: native application.</para>
-                /// </description></item>
+                /// <item><description><b>web</b>: Web applications.</description></item>
+                /// <item><description><b>native</b>: Native applications.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string CmsProduct { get; set; }
 
                 /// <summary>
-                /// <para>The database type.</para>
+                /// <para>The type of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is used for pagination.</para>
+                /// <para>The pagination parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -63,14 +67,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The details of the instance operation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx</para>
+                /// <para>The instance needs to be restarted due to system maintenance</para>
                 /// </summary>
                 [NameInMap("DetailReason")]
                 [Validation(Required=false)]
                 public string DetailReason { get; set; }
 
                 /// <summary>
-                /// <para>The end of the query time range. The end time must be later than the start time. The interval between the start time and the end time must be within 24 hours. The time is in the <c>YYYY-MM-DDThh:mmZ</c> format and is displayed in UTC.</para>
+                /// <para>The end time of the query. The end time must be later than the start time, and the interval between the start time and the end time must be within 24 hours. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC time).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-12-24T02:24:00Z</para>
@@ -82,14 +86,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>The category of the system event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Exception</b>: anomalous activity</para>
-                /// </description></item>
-                /// <item><description><para><b>Optimize</b>: optimization events</para>
-                /// </description></item>
-                /// <item><description><para><b>Notification</b>: notification events</para>
-                /// </description></item>
-                /// <item><description><para><b>Maintenance</b>: scheduled O\&amp;M events</para>
-                /// </description></item>
+                /// <item><description><b>Exception</b>: Exception events.</description></item>
+                /// <item><description><b>Optimize</b>: Optimization events.</description></item>
+                /// <item><description><b>Notification</b>: Notification events.</description></item>
+                /// <item><description><b>Maintenance</b>: Scheduled O&amp;M events.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The event details.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx</para>
+                /// <para>The instance will be restarted within the maintenance window</para>
                 /// </summary>
                 [NameInMap("EventDetail")]
                 [Validation(Required=false)]
                 public string EventDetail { get; set; }
 
                 /// <summary>
-                /// <para>The event ID.</para>
+                /// <para>The ID of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>600324</para>
@@ -130,10 +130,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string EventId { get; set; }
 
                 /// <summary>
-                /// <para>An overview of the event\&quot;s impact.</para>
+                /// <para>The impact overview of the event.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx</para>
+                /// <para>The instance connection may be briefly interrupted</para>
                 /// </summary>
                 [NameInMap("EventImpact")]
                 [Validation(Required=false)]
@@ -142,12 +142,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>The event level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>INFO</b>: notification</para>
-                /// </description></item>
-                /// <item><description><para><b>WARN</b>: warning</para>
-                /// </description></item>
-                /// <item><description><para><b>CRITICAL</b>: urgent</para>
-                /// </description></item>
+                /// <item><description><b>INFO</b>: Notification.</description></item>
+                /// <item><description><b>WARN</b>: Warning.</description></item>
+                /// <item><description><b>CRITICAL</b>: Critical.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -161,27 +158,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The source of the event operation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxxx</para>
+                /// <para>System maintenance</para>
                 /// </summary>
                 [NameInMap("EventReason")]
                 [Validation(Required=false)]
                 public string EventReason { get; set; }
 
                 /// <summary>
-                /// <para>The event status. Valid values:</para>
+                /// <para>The status of the event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Inquiring</b>: The event is being inquired.</para>
-                /// </description></item>
-                /// <item><description><para><b>Scheduled</b>: The event is scheduled.</para>
-                /// </description></item>
-                /// <item><description><para><b>Running</b>: The event is in progress.</para>
-                /// </description></item>
-                /// <item><description><para><b>Succeed</b>: The event is successful.</para>
-                /// </description></item>
-                /// <item><description><para><b>Failed</b>: The event failed.</para>
-                /// </description></item>
-                /// <item><description><para><b>Canceled</b>: The event is canceled.</para>
-                /// </description></item>
+                /// <item><description><b>Inquiring</b>: Inquiring.</description></item>
+                /// <item><description><b>Scheduled</b>: Scheduled.</description></item>
+                /// <item><description><b>Running</b>: Running.</description></item>
+                /// <item><description><b>Succeed</b>: Succeeded.</description></item>
+                /// <item><description><b>Failed</b>: Failed.</description></item>
+                /// <item><description><b>Canceled</b>: Canceled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -192,28 +183,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string EventStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of the system event. Valid values:</para>
+                /// <para>The system event type. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description><para><b>SystemMaintenance.Reboot</b>: The instance is restarted due to system maintenance.</para>
-                /// </description></item>
-                /// <item><description><para><b>SystemMaintenance.Redeploy</b>: The instance is redeployed due to system maintenance.</para>
-                /// </description></item>
-                /// <item><description><para><b>SystemFailure.Reboot</b>: The instance is restarted due to a system fault.</para>
-                /// </description></item>
-                /// <item><description><para><b>SystemFailure.Redeploy</b>: The instance is redeployed due to a system fault.</para>
-                /// </description></item>
-                /// <item><description><para><b>SystemFailure.Delete</b>: The instance is released because it failed to be created.</para>
-                /// </description></item>
-                /// <item><description><para><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance fault.</para>
-                /// </description></item>
-                /// <item><description><para><b>InstanceExpiration.Stop</b>: The subscription instance is stopped because its subscription expires.</para>
-                /// </description></item>
-                /// <item><description><para><b>InstanceExpiration.Delete</b>: The subscription instance is released because its subscription expires.</para>
-                /// </description></item>
-                /// <item><description><para><b>AccountUnbalanced.Stop</b>: The pay-as-you-go instance is stopped due to an overdue payment.</para>
-                /// </description></item>
-                /// <item><description><para><b>AccountUnbalanced.Delete</b>: The pay-as-you-go instance is released due to an overdue payment.</para>
-                /// </description></item>
+                /// <item><description><b>SystemMaintenance.Reboot</b>: The instance is restarted due to system maintenance.</description></item>
+                /// <item><description><b>SystemMaintenance.Redeploy</b>: Redeployment of the instance due to system maintenance.</description></item>
+                /// <item><description><b>SystemFailure.Reboot</b>: The instance is restarted due to a system fault.</description></item>
+                /// <item><description><b>SystemFailure.Redeploy</b>: Redeployment of the instance due to a system fault.</description></item>
+                /// <item><description><b>SystemFailure.Delete</b>: The instance is released because instance creation failed.</description></item>
+                /// <item><description><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance fault.</description></item>
+                /// <item><description><b>InstanceExpiration.Stop</b>: The subscription instance is stopped due to expiration.</description></item>
+                /// <item><description><b>InstanceExpiration.Delete</b>: The subscription instance is released due to expiration.</description></item>
+                /// <item><description><b>AccountUnbalanced.Stop</b>: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
+                /// <item><description><b>AccountUnbalanced.Delete</b>: The pay-as-you-go instance is released due to an overdue payment.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -244,7 +225,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The processing status.</para>
+                /// <para>The handling status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>done</para>
@@ -254,10 +235,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string HandleStatus { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a lifecycle exists.</para>
+                /// <para>Indicates whether the event has a lifecycle.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>false</para>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("HasLifeCycle")]
                 [Validation(Required=false)]
@@ -274,7 +255,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dhimgsearch</para>
@@ -284,12 +265,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the event is successfully closed. Valid values:</para>
+                /// <para>Indicates whether the item is closed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>0</b>: closed</para>
-                /// </description></item>
-                /// <item><description><para><b>1</b>: open</para>
-                /// </description></item>
+                /// <item><description><b>0</b>: Closed.</description></item>
+                /// <item><description><b>1</b>: Open.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -300,7 +279,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public int? IsClosed { get; set; }
 
                 /// <summary>
-                /// <para>The product name.</para>
+                /// <para>The name of the product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polardb</para>
@@ -320,14 +299,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type. Valid values:</para>
+                /// <para>The type of the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Instance</b>: instance resource</para>
-                /// </description></item>
-                /// <item><description><para><b>Host</b>: host resource</para>
-                /// </description></item>
-                /// <item><description><para><b>User</b>: user resource</para>
-                /// </description></item>
+                /// <item><description><b>Instance</b>: Instance resources.</description></item>
+                /// <item><description><b>Host</b>: Host resources.</description></item>
+                /// <item><description><b>User</b>: User resources.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -348,7 +324,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The start of the query time range. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is displayed in UTC.</para>
+                /// <para>The start time of the query. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-02-27T02:00:00Z</para>
@@ -358,7 +334,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user to whom the resource belongs.</para>
+                /// <para>The ID of the user to which the resource belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1540497309282125</para>
@@ -370,7 +346,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -380,7 +356,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the task is located.</para>
+            /// <para>The region ID of the region where the task is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -390,7 +366,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The event source.</para>
+            /// <para>The source of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>loanBill</para>
@@ -410,7 +386,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Specversion { get; set; }
 
             /// <summary>
-            /// <para>The name of the pending event.</para>
+            /// <para>The name of the event to be processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>QiTian</para>
@@ -420,7 +396,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Subject { get; set; }
 
             /// <summary>
-            /// <para>The runtime of the query task. Unit: seconds (s).</para>
+            /// <para>The running time of the queried task. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758680209206</para>
@@ -442,7 +418,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -452,7 +428,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>30</b></para>
         /// </description></item>
@@ -470,7 +446,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</para>
@@ -480,7 +456,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

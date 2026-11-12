@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdateKBSyncLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client ID.</para>
+        /// <para>The client identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cli_xxxxxxbe8</para>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The client secret.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example-client-secret</para>
         /// </summary>
         [NameInMap("ClientSecret")]
         [Validation(Required=false)]
         public string ClientSecret { get; set; }
 
         /// <summary>
-        /// <para>The validity period of a successful Lark group member snapshot used for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of a snapshot allowed for reuse. If this parameter is omitted, the original value is retained. Explicitly passing -1 restores the default behavior.</para>
+        /// <para>The validity period of the successful snapshot of Lark group members for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. If this parameter is omitted, the original value is retained. Explicitly passing -1 restores the default behavior.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SheetMcpEndpoint { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic synchronization. This parameter must be modified individually and cannot be changed along with other configurations.</para>
+        /// <para>Specifies whether to enable automatic synchronization. This parameter can only be modified individually and cannot be changed along with other configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? SyncEnabled { get; set; }
 
         /// <summary>
-        /// <para>20</para>
+        /// <para>The automatic synchronization interval, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The new Lark user access token.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example-user-access-token</para>
         /// </summary>
         [NameInMap("UserAccessToken")]
         [Validation(Required=false)]
         public string UserAccessToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DingTalk user that performs the operation.</para>
+        /// <para>The ID of the DingTalk user who performs the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123***56</para>
@@ -133,10 +133,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The new Lark user refresh token. Pass this parameter together with UserAccessToken. Passing empty strings for both parameters indicates deletion.</para>
+        /// <para>The new Lark user refresh token. Pass this parameter together with UserAccessToken. Passing empty strings for both parameters deletes the tokens.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example-user-refresh-token</para>
         /// </summary>
         [NameInMap("UserRefreshToken")]
         [Validation(Required=false)]

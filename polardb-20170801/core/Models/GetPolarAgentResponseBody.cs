@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class GetPolarAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The content returned by the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>QZ-13661677-80</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether FunctionCall is supported.</para>
+        /// <para>Specifies whether function calling is supported.</para>
         /// </summary>
         [NameInMap("FunctionCall")]
         [Validation(Required=false)]
         public List<GetPolarAgentResponseBodyFunctionCall> FunctionCall { get; set; }
         public class GetPolarAgentResponseBodyFunctionCall : TeaModel {
             /// <summary>
-            /// <para>The operation-related output result.</para>
+            /// <para>The output results related to the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>---narguments:n  parameters: []n</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Arguments { get; set; }
 
             /// <summary>
-            /// <para>The quota ID.</para>
+            /// <para>The ID of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>393</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Success</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string QueryId { get; set; }
 
         /// <summary>
-        /// <para>The model\&quot;s reasoning content.</para>
+        /// <para>The reasoning content of the model.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>Extract the key information based on the input content</para>
         /// </summary>
         [NameInMap("ReasoningContent")]
         [Validation(Required=false)]
@@ -119,27 +119,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether UiFunctionCall is supported.</para>
+        /// <para>Specifies whether UI function calling is supported.</para>
         /// </summary>
         [NameInMap("UiFunctionCall")]
         [Validation(Required=false)]
         public List<GetPolarAgentResponseBodyUiFunctionCall> UiFunctionCall { get; set; }
         public class GetPolarAgentResponseBodyUiFunctionCall : TeaModel {
             /// <summary>
-            /// <para>xxx</para>
+            /// <para>The JSON text of the tool calling parameters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>{&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}</para>
             /// </summary>
             [NameInMap("ArgsText")]
             [Validation(Required=false)]
             public string ArgsText { get; set; }
 
             /// <summary>
-            /// <para>The tool command that is invoked.</para>
+            /// <para>The command of the called tool.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>DescribeDBClusters</para>
             /// </summary>
             [NameInMap("ToolName")]
             [Validation(Required=false)]

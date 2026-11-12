@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTaskAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access information of the model in test deployment scenarios.</para>
+        /// <para>The access information of the model in the test deployment scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;networkInterfaceId\&quot;:\&quot;eni-2zea***\&quot;,\&quot;port\&quot;:\&quot;8000\&quot;,\&quot;host\&quot;:\&quot;192.<b>.</b>.**\&quot;}</para>
@@ -30,8 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClusterNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
-        /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-12T03:45:13Z</para>
@@ -82,9 +81,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The training status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ACTIVATION</b>: training in progress</description></item>
-        /// <item><description><b>COMPLETED</b>: training succeeded</description></item>
-        /// <item><description><b>FAILED</b>: training failed</description></item>
+        /// <item><description><b>ACTIVATION</b>: Training.</description></item>
+        /// <item><description><b>COMPLETED</b>: Training succeeded.</description></item>
+        /// <item><description><b>FAILED</b>: Training failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,9 +96,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The training status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ACTIVATION</b>: training in progress</description></item>
-        /// <item><description><b>COMPLETED</b>: training succeeded</description></item>
-        /// <item><description><b>FAILED</b>: training failed</description></item>
+        /// <item><description><b>ACTIVATION</b>: Training.</description></item>
+        /// <item><description><b>COMPLETED</b>: Training succeeded.</description></item>
+        /// <item><description><b>FAILED</b>: Training failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,7 +121,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3.1</b>: model operator tuning</description></item>
+        /// <item><description><b>3.1</b>: Model operator tuning.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,8 +171,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>train</b>: training set</description></item>
-            /// <item><description><b>eval</b>: validation set</description></item>
+            /// <item><description><b>train</b>: Training set.</description></item>
+            /// <item><description><b>eval</b>: Validation set.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -195,7 +194,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>18</b></description></item>
+        /// <item><description><b>18</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -208,8 +207,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The lock mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: locked</description></item>
-        /// <item><description><b>1</b>: unlocked</description></item>
+        /// <item><description><b>0</b>: Locked.</description></item>
+        /// <item><description><b>1</b>: Unlocked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,8 +219,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LockMode { get; set; }
 
         /// <summary>
-        /// <para>The end time of the maintenance window.</para>
-        /// <para>The time is displayed in UTC in the HH:mmZ format.</para>
+        /// <para>The end time of the maintenance window. The time is displayed in UTC in the HH:mmZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12:00Z</para>
@@ -231,8 +229,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the maintenance window.</para>
-        /// <para>The time is displayed in UTC. Example: 8:00Z.</para>
+        /// <para>The start time of the maintenance window. The time is displayed in UTC, for example, 08:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8:00Z</para>
@@ -242,7 +239,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MaintainStartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of output model paths in model fine-tuning scenarios.</para>
+        /// <para>The list of output model paths in the model fine-tuning scenario.</para>
         /// </summary>
         [NameInMap("ModelPath")]
         [Validation(Required=false)]
@@ -266,8 +263,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAIDBClusterTaskAttributeResponseBodyTaskInfo> TaskInfo { get; set; }
         public class DescribeAIDBClusterTaskAttributeResponseBodyTaskInfo : TeaModel {
             /// <summary>
-            /// <para>The completion time of the task.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The completion time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-10T01:56:00Z</para>
@@ -299,8 +295,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The model source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>public</b>: preset model</description></item>
-            /// <item><description><b>custom</b>: custom model</description></item>
+            /// <item><description><b>public</b>: Preset model.</description></item>
+            /// <item><description><b>custom</b>: Custom model.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -321,8 +317,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RunningTimes { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-10T01:56:00Z</para>
@@ -334,8 +329,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>sft</b>: SFT - efficient training</description></item>
-            /// <item><description><b>grpo</b>: GRPO - reinforcement learning</description></item>
+            /// <item><description><b>sft</b>: SFT-efficient training.</description></item>
+            /// <item><description><b>grpo</b>: GRPO-reinforcement learning.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -348,8 +343,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The training method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>lora</b></description></item>
-            /// <item><description><b>full</b>: full-parameter training</description></item>
+            /// <item><description><b>lora</b>: LoRA.</description></item>
+            /// <item><description><b>full</b>: Full training.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

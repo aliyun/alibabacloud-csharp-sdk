@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The invocation endpoint.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para><a href="https://model-api.example.com/v1/chat/completions">https://model-api.example.com/v1/chat/completions</a></para>
         /// </summary>
         [NameInMap("InvokeEndpoint")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApiId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>

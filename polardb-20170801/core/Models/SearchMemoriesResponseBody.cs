@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public class SearchMemoriesResponseBodyResults : TeaModel {
             /// <summary>
             /// <para>The creation time.</para>
-            /// <para>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-26T08:25:44Z</para>
@@ -56,6 +56,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            /// <summary>
+            /// <para>The event information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc</para>
+            /// </summary>
+            [NameInMap("Event")]
+            [Validation(Required=false)]
+            public string Event { get; set; }
 
             /// <summary>
             /// <para>The memory ID.</para>
@@ -68,10 +78,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The first input item in the result list.</para>
+            /// </summary>
+            [NameInMap("Input")]
+            [Validation(Required=false)]
+            public List<object> Input { get; set; }
+
+            /// <summary>
             /// <para>The memory content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>The user prefers PostgreSQL</para>
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
@@ -88,6 +105,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MemoryAgentId { get; set; }
 
             /// <summary>
+            /// <para>The first memory ID in the result set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc</para>
+            /// </summary>
+            [NameInMap("MemoryId")]
+            [Validation(Required=false)]
+            public string MemoryId { get; set; }
+
+            /// <summary>
             /// <para>The user to whom the memory belongs.</para>
             /// 
             /// <b>Example:</b>
@@ -101,11 +128,31 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The metadata.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;tags&quot;:&quot;Issue_date_2023-11-30,VD_Valid&quot;}</para>
+            /// <para>{&quot;tags&quot;:&quot;Issue_date_2023-11-30,VD_Active&quot;}</para>
             /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]
             public string Metadata { get; set; }
+
+            /// <summary>
+            /// <para>The first new memory information in the result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc</para>
+            /// </summary>
+            [NameInMap("NewMemory")]
+            [Validation(Required=false)]
+            public string NewMemory { get; set; }
+
+            /// <summary>
+            /// <para>The first old memory value in the result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc</para>
+            /// </summary>
+            [NameInMap("OldMemory")]
+            [Validation(Required=false)]
+            public string OldMemory { get; set; }
 
             /// <summary>
             /// <para>The score.</para>
@@ -118,8 +165,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Score { get; set; }
 
             /// <summary>
+            /// <para>The number of update records.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("UpdateCount")]
+            [Validation(Required=false)]
+            public int? UpdateCount { get; set; }
+
+            /// <summary>
             /// <para>The update time.</para>
-            /// <para>The time follows the ISO 8601 standard in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time is in ISO 8601 format and follows the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16T02:27:33Z</para>
@@ -131,7 +188,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The total number of matching records.</para>
+        /// <para>The total number of records that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

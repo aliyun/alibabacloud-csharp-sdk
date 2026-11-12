@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterMigrationRequest : TeaModel {
         /// <summary>
-        /// <para>The specific endpoints to be switched. The value is a JSON string that specifies the endpoints to be swapped.</para>
+        /// <para>The specific endpoints to be switched. The value is a JSON string that contains the endpoints to be swapped in pairs.</para>
         /// <remarks>
-        /// <para>This parameter is valid only when SwapConnectionString is set to true.</para>
+        /// <para>This parameter takes effect only when SwapConnectionString is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The ID of the new instance or cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Before the switch, enter the PolarDB cluster ID to perform a switch.</para>
-        /// </description></item>
-        /// <item><description><para>After the switch, enter the RDS instance ID to perform a rollback.</para>
-        /// </description></item>
+        /// <item><description>Before the switchover, enter the PolarDB cluster ID to perform the switchover.</description></item>
+        /// <item><description>After the switchover, enter the ApsaraDB RDS instance ID to perform a rollback.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source RDS instance.</para>
+        /// <para>The instance ID of the source ApsaraDB RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,12 +80,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceRDSDBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to switch the endpoint. Valid values:</para>
+        /// <para>Specifies whether to switch the endpoints. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Switches the endpoint. The application can connect to the database without changing its connection configuration.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Does not switch the endpoint. The application must be changed to use the new PolarDB endpoint.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Switches the endpoints. You do not need to modify the connection configurations of your application.</description></item>
+        /// <item><description><b>false</b>: Does not switch the endpoints. You must modify the connection configurations of your application to use the new PolarDB endpoints.</description></item>
         /// </list>
         /// <para>Default value: <b>false</b>.</para>
         /// 

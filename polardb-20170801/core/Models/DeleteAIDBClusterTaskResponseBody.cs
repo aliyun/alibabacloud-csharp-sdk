@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the PolarDB database instance for the AI model service.</para>
+        /// <para>The ID of the PolarDB instance for AI model services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2zejpr***</para>

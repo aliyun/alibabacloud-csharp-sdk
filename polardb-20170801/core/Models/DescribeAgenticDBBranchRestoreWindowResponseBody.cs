@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBBranchRestoreWindowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the source branch.</para>
+        /// <para>The source branch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-1a2b3c4d5e6f</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The time when the query was completed, in UTC RFC3339 format. This does not represent the latest restorable time.</para>
+        /// <para>The time when this query was completed, in UTC RFC3339 format. This does not represent the latest restorable time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-16T07:32:00Z</para>

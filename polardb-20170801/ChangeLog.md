@@ -1,3 +1,17 @@
+2026-11-12 Version: 9.4.0
+- Support API ModifyApplicationSSL.
+- Update API CreateAgenticDBProject: add request parameters ZoneId.
+- Update API DescribeDBClusterAccessWhitelist: add response parameters Body.ProjectItems.
+- Update API ModifyDBClusterAccessWhitelist: add request parameters ProjectId.
+- Update API SearchMemories: add request parameters MemoryId.
+- Update API SearchMemories: add response parameters Body.Results.$.Event.
+- Update API SearchMemories: add response parameters Body.Results.$.Input.
+- Update API SearchMemories: add response parameters Body.Results.$.MemoryId.
+- Update API SearchMemories: add response parameters Body.Results.$.NewMemory.
+- Update API SearchMemories: add response parameters Body.Results.$.OldMemory.
+- Update API SearchMemories: add response parameters Body.Results.$.UpdateCount.
+
+
 2026-10-26 Version: 9.2.1
 - Update API CreateApplication: add request parameters KnowledgeApplicationSpec.PolarAIEmbedderInstanceId.
 - Update API CreateApplication: add request parameters KnowledgeApplicationSpec.PolarAILlmInstanceId.

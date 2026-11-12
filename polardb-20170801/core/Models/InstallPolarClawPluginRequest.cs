@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NpmPackage { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID.</para>
+        /// <para>The plugin identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

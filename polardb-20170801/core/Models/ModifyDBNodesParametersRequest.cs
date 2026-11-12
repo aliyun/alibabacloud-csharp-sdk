@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the nodes. To specify multiple node IDs, separate the IDs with a comma (,).</para>
+        /// <para>The node IDs. You can specify multiple node IDs separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to apply the parameter modifications and restart the node. Valid values: \<c>false\\</c> (default): Schedules the task. \<c>true\\</c>: Executes the task immediately.</para>
+        /// <para>Specifies whether to execute the parameter modification and restart immediately or at a scheduled time. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: executes the task at a scheduled time. This is the default value.</description></item>
+        /// <item><description>true: executes the task immediately.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parameter template.</para>
+        /// <para>The parameter template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcpg-**************</para>
@@ -60,17 +64,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that contains the parameters and their values.</para>
+        /// <para>The JSON string of parameters and their values. Only node-level parameters can be modified. You can call the DescribeDBClusterParameters operation and select parameters where IsNodeAvailable is set to 1 and IsModifiable is set to true. To modify cluster-level parameters, call the ModifyDBClusterParameters operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</para>
+        /// <para>{&quot;loose_imci_optimize_const_join_memory&quot;:&quot;ON&quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The latest time to start the scheduled task. The time must be in the \<c>YYYY-MM-DDThh:mm:ssZ\\</c> format and in UTC.</para>
+        /// <para>The latest time to start the scheduled task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:30:00Z</para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest time to start the scheduled task. The time must be in the \<c>YYYY-MM-DDThh:mm:ssZ\\</c> format and in UTC.</para>
+        /// <para>The earliest time to execute the scheduled kernel version upgrade task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:00:00Z</para>

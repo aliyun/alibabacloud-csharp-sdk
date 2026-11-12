@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
         /// </list>
-        /// <para>To specify multiple types, separate them with a comma.</para>
+        /// <para>Separate multiple types with commas (,).</para>
+        /// <remarks>
+        /// <para>This parameter is required for the API call. Omitting it will result in an InvalidDBType.Malformed (HTTP 400) error.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL,PostgreSQL,Oracle</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. Valid values: positive integers up to the maximum value of the Integer type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,7 +89,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions for the target account, including region IDs.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>This parameter is required for the API call. Omitting it may result in an InternalFailure (HTTP 500) error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,10 +113,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The share type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ShareIncoming</b>: backups shared with you.</para>
-        /// </description></item>
-        /// <item><description><para><b>ShareOutgoing</b>: backups you shared.</para>
-        /// </description></item>
+        /// <item><description><b>ShareIncoming</b>: Shared with me.</description></item>
+        /// <item><description><b>ShareOutgoing</b>: Shared by me.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

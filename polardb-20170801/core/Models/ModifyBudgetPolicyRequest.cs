@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyBudgetPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The budget usage percentage that triggers an alert. Valid values: 0 to 100.</para>
+        /// <para>The alert threshold percentage. Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AlertThresholdPct { get; set; }
 
         /// <summary>
-        /// <para>The budget amount in points.</para>
+        /// <para>The budget points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BudgetPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway instance.</para>
+        /// <para>The instance ID of the gateway instance. Usage note: In the full API reference, the description of the GwClusterId parameter must specify the resource type (gateway instance), how to obtain the instance ID (which Describe or List API to invoke), and the difference between GwClusterId and DBClusterId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The day of the month when the budget is reset. Valid values: 1 to 28.</para>
+        /// <para>The day of the month when the reset occurs. Valid values: 1 to 28.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

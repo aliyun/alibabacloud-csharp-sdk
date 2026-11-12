@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>An array of diagnostic objects.</para>
+        /// <para>The list of diagnostic information.</para>
         /// </summary>
         [NameInMap("Diagnostics")]
         [Validation(Required=false)]
         public List<DescribePolarClawPluginsResponseBodyDiagnostics> Diagnostics { get; set; }
         public class DescribePolarClawPluginsResponseBodyDiagnostics : TeaModel {
             /// <summary>
-            /// <para>The severity level. Valid values: <c>error</c> and <c>warn</c>.</para>
+            /// <para>The diagnostic level. Valid values: <c>error</c> and <c>warn</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>warn</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The detailed diagnostic message.</para>
+            /// <para>The details of the diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>loaded without install/load-path provenance; treat as untracked local code</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PluginId { get; set; }
 
             /// <summary>
-            /// <para>The source file path associated with the diagnostic.</para>
+            /// <para>The path to the source file of the associated plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home/node/.openclaw/extensions/openclaw-lark/index.js</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>An array of plugin objects.</para>
+        /// <para>The list of plugins.</para>
         /// </summary>
         [NameInMap("Plugins")]
         [Validation(Required=false)]
         public List<DescribePolarClawPluginsResponseBodyPlugins> Plugins { get; set; }
         public class DescribePolarClawPluginsResponseBodyPlugins : TeaModel {
             /// <summary>
-            /// <para>A list of channel IDs, which can be empty.</para>
+            /// <para>The list of provided channel IDs. An empty array indicates that no channel IDs are available.</para>
             /// </summary>
             [NameInMap("ChannelIds")]
             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The error message, or <c>null</c> if no error occurred.</para>
+            /// <para>The error message. If this field is missing, no error occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Error { get; set; }
 
             /// <summary>
-            /// <para>The format of the plugin, which can be an empty string.</para>
+            /// <para>The format of the plugin. This field can be an empty string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>openclaw</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The origin of the plugin. Valid values: <c>bundled</c>, <c>global</c>, and <c>user-install</c>.</para>
+            /// <para>The origin of the plugin. Valid values: <c>bundled</c> (built-in), <c>global</c> (global), and <c>user-install</c> (user-installed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>global</para>
@@ -163,14 +163,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Origin { get; set; }
 
             /// <summary>
-            /// <para>A list of provider IDs, which can be empty.</para>
+            /// <para>The list of provided provider IDs. An empty array indicates that no provider IDs are available.</para>
             /// </summary>
             [NameInMap("ProviderIds")]
             [Validation(Required=false)]
             public List<string> ProviderIds { get; set; }
 
             /// <summary>
-            /// <para>The file path to the plugin\&quot;s entry point.</para>
+            /// <para>The path to the plugin entry file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home/node/.openclaw/extensions/openclaw-lark/index.js</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The status of the plugin. Valid values: <c>loaded</c>, <c>disabled</c>, and <c>error</c>.</para>
+            /// <para>The status of the plugin. Valid values: <c>loaded</c> (loaded), <c>disabled</c> (disabled), and <c>error</c> (failed to load).</para>
             /// 
             /// <b>Example:</b>
             /// <para>loaded</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The version number of the plugin.</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026.4.7</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RegisterAIDBClusterCustomModelRequest : TeaModel {
         /// <summary>
-        /// <para>The container startup environment variables. Variable names cannot be empty or contain whitespace. Variable values can be empty strings.</para>
+        /// <para>The startup environment variables of the container. Variable names cannot be empty or contain whitespace. Variable values can be empty strings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;HF_HOME&quot;:&quot;/cache/hf&quot;,&quot;EMPTY_VALUE&quot;:&quot;&quot;}</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CustomOssBucketName { get; set; }
 
         /// <summary>
-        /// <para>The model path in the OSS bucket.</para>
+        /// <para>The path of the model in the OSS bucket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CustomOssBucketPath { get; set; }
 
         /// <summary>
-        /// <para>The GPU instance type used for model deployment. Required when configuring deployment parameters.</para>
+        /// <para>The GPU instance type used for model deployment. This parameter is required when configuring deployment parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb.gpu.gn8is.4xlarge</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DirectCommand { get; set; }
 
         /// <summary>
-        /// <para>The display name in the candidate list and the initial invocation name for clients.</para>
+        /// <para>The display name in the candidate list and the initial client invocation name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-qwen3</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DisplayModelName { get; set; }
 
         /// <summary>
-        /// <para>The full reference of the customer-owned inference image, in the format of registry/repository:tag.</para>
+        /// <para>The full reference of the custom inference image, in the format of registry/repository:tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.example.com/customer/model:v1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The inference engine. Required when configuring deployment parameters. Valid values: vllm and sglang.</para>
+        /// <para>The inference engine. This parameter is required when configuring deployment parameters. Valid values: vllm and sglang.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vllm</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InferenceEngine { get; set; }
 
         /// <summary>
-        /// <para>The custom model registration key and model directory name.</para>
+        /// <para>The registration key and directory name of the custom model.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model startup parameters. Parameter keys must start with --.</para>
+        /// <para>The startup parameters of the model. Parameter keys must start with --.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;--max-model-len&quot;:&quot;32768&quot;}</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The password or temporary token for the customer image repository. Required when ImageName is specified.</para>
+        /// <para>The password or temporary token for the image repository. This parameter is required when ImageName is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>temporary-token</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegistryPassword { get; set; }
 
         /// <summary>
-        /// <para>The username for the customer image repository. Required when ImageName is specified.</para>
+        /// <para>The username for the image repository. This parameter is required when ImageName is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>temporary-user</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful. This parameter is returned when Async is set to false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Ok { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The name of the operation. This parameter is returned when Async is set to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InstallPolarClawSkill</para>
+        /// </summary>
+        [NameInMap("Operation")]
+        [Validation(Required=false)]
+        public string Operation { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F45FFACC-xxx</para>
@@ -60,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the installed Skill.</para>
+        /// <para>The identifier of the installed skill. This parameter is returned during synchronous execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibacloud-rds-copilot</para>
@@ -70,7 +80,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Slug { get; set; }
 
         /// <summary>
-        /// <para>The installation directory.</para>
+        /// <para>The initial state of the task. This parameter is returned when Async is set to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pending</para>
+        /// </summary>
+        [NameInMap("State")]
+        [Validation(Required=false)]
+        public string State { get; set; }
+
+        /// <summary>
+        /// <para>The installation directory. This parameter is returned during synchronous execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home/node/.openclaw/skills/alibacloud-rds-copilot</para>
@@ -80,7 +100,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetDir { get; set; }
 
         /// <summary>
-        /// <para>The version number of the installed Skill.</para>
+        /// <para>The ID of the asynchronous task. This parameter is returned when Async is set to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9f1c2e3d-xxxx</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
+        /// <summary>
+        /// <para>The installed version number. This parameter is returned during synchronous execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.0</para>

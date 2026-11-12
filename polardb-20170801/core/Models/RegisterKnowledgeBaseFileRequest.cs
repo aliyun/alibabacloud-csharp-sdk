@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class RegisterKnowledgeBaseFileRequest : TeaModel {
         /// <summary>
         /// <para>The OSS object key of the uploaded file, excluding the oss://BucketName/ prefix.</para>
+        /// <remarks>
+        /// <para>Before calling this operation, upload the target file to OSS.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base ID.</para>
+        /// <para>The ID of the knowledge base. Create a knowledge space first, then create a knowledge base, and obtain this ID from the creation result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

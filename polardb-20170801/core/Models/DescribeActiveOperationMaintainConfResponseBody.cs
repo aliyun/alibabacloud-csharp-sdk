@@ -17,8 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public DescribeActiveOperationMaintainConfResponseBodyConfig Config { get; set; }
         public class DescribeActiveOperationMaintainConfResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
-            /// <para>The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
+            /// <para>The time when the configuration was created. Format: YYYY-MM-DDTHH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-04T19:28:46</para>
@@ -30,8 +29,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The cycle time.</para>
             /// <list type="bullet">
-            /// <item><description>If CycleType is set to Month, a number from 1 to 28 is returned, indicating the day of the month. Multiple values are separated by commas (,).</description></item>
-            /// <item><description>If CycleType is set to Week, a number from 1 to 7 is returned, indicating the day of the week. Multiple values are separated by commas (,).</description></item>
+            /// <item><description>If CycleType is set to Month, the return value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,).</description></item>
+            /// <item><description>If CycleType is set to Week, the return value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,20 +43,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The cycle type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Month: monthly</description></item>
-            /// <item><description>Week: weekly</description></item>
+            /// <item><description>Month: Monthly.</description></item>
+            /// <item><description>Week: Weekly.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Week</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("CycleType")]
             [Validation(Required=false)]
             public int? CycleType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the maintenance window.</para>
-            /// <para>The time is in UTC in the HH:mmZ format.</para>
+            /// <para>The end time of the maintenance window. The time is in UTC and in the HH:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>09:00Z</para>
@@ -67,8 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the maintenance window.</para>
-            /// <para>The time is in UTC. Example: 8:00Z.</para>
+            /// <para>The start time of the maintenance window. The time is in UTC, for example, 8:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8:00Z</para>
@@ -78,8 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
-            /// <para>The time is in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the configuration was modified. The time follows the ISO 8601 standard and is in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-02T02:10:08Z</para>
@@ -89,7 +85,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configuration is effective. Valid values: 1 (yes) and 2 (no).</para>
+            /// <para>Indicates whether the configuration is effective. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Yes.</description></item>
+            /// <item><description>2: No.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -101,7 +101,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the configuration has been set. Valid values: 1 (yes) and 0 (no). On the first visit, HasConfig is 0.</para>
+        /// <para>Indicates whether the configuration has been created. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Yes.</description></item>
+        /// <item><description>0: No. If this is your first access, the value is 0.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

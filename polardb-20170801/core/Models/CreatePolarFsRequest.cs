@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarFsRequest : TeaModel {
         /// <summary>
-        /// <para>The acceleration storage space for the Basic Edition with acceleration enabled. Unit: GB.</para>
+        /// <para>The acceleration space size. Unit: GB. The value must be no less than 5000 and must be a multiple of 1000. This parameter is required when acceleration is enabled for the basic edition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>500</para>
+        /// <para>5000</para>
         /// </summary>
         [NameInMap("AccelerateStorageSize")]
         [Validation(Required=false)]
         public long? AccelerateStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The acceleration mode. Valid values:</para>
+        /// <para>The acceleration startup mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ONLY</b>: enables acceleration only.</description></item>
-        /// <item><description><b>ON</b>: enables cold data storage and acceleration.</description></item>
+        /// <item><description><b>ON</b>: enables cold data and acceleration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccelerateType { get; set; }
 
         /// <summary>
-        /// <para>The list of authorized account IDs for the Cold Storage Edition instance, separated by commas (,).</para>
+        /// <para>The list of authorized accounts for the cold storage edition instance. Separate multiple accounts with commas (<c>,</c>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>128***********，198***********</para>
@@ -60,12 +60,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Auto-renewal is enabled.</description></item>
-        /// <item><description><b>false</b>: Auto-renewal is disabled.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
         /// </list>
         /// <para>Default value: <b>false</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter takes effect only when the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to automatically use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Coupons are automatically used (default).</description></item>
-        /// <item><description><b>false</b>: Coupons are not used.</description></item>
+        /// <item><description><b>true</b>: uses coupons (default).</description></item>
+        /// <item><description><b>false</b>: does not use coupons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,12 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The edition. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>basic</b>: Basic Edition (default).</description></item>
-        /// <item><description><b>cold</b>: Cold Storage Edition.</description></item>
-        /// <item><description><b>high_performance</b>: High-performance Edition.</description></item>
-        /// </list>
+        /// <para>The edition. Valid values: basic (Basic Edition, default), high_performance (High-performance Edition), and cold (Cold Storage Edition). For the basic edition, you must specify the AccelerateSwitch and AccelerateStorageSize parameters. For the high_performance edition, you must specify the StorageType parameter (essdpl0 or essdpl1). For the cold edition, the StorageType parameter (local_redundancy or city_redundancy) is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>basic</para>
@@ -131,9 +126,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CustomBucketPath { get; set; }
 
         /// <summary>
-        /// <para>The bucket and path information.</para>
+        /// <para>The bucket and corresponding path information.</para>
         /// <remarks>
-        /// <para>This parameter is required for the transparent acceleration scenario.</para>
+        /// <para>This parameter is required for transparent acceleration scenarios.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CustomBucketPathList")]
@@ -166,7 +161,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The custom AccessKey ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>LTAIExampleCustomOssKeyId</para>
         /// </summary>
         [NameInMap("CustomOssAk")]
         [Validation(Required=false)]
@@ -176,14 +171,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The custom AccessKey secret.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>ExampleCustomOssSecret123</para>
         /// </summary>
         [NameInMap("CustomOssSk")]
         [Validation(Required=false)]
         public string CustomOssSk { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The PolarDB cluster ID. This parameter is required when you call this operation. If this parameter is not specified, the InvalidDBClusterId.Malformed error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
@@ -193,14 +188,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// </list>
+        /// <para>The database ecosystem. Valid values: polardb_mysql (PolarDB for MySQL), polardb_pg (PolarDB for PostgreSQL), and polar_agentic_db (AgenticDB). The gateway maps these values to the mysql, postgresql, and agentic_db backends respectively. Pass the request value instead of the display name such as MySQL or PostgreSQL. If an ActionUnauthorized (HTTP 403) error is returned, check the call permissions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MySQL</para>
+        /// <para>polardb_mysql</para>
         /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
@@ -221,10 +212,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter is required if PayType is set to <b>Prepaid</b>. Specifies whether the subscription cluster uses a yearly or monthly billing cycle. Valid values: </para>
+        /// <para>If the billing method is <b>Prepaid</b>, this is a required pass parameter. Specifies whether the subscription cluster is billed by year or by month. </para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: The subscription duration is measured in years.</description></item>
-        /// <item><description><b>Month</b>: The subscription duration is measured in months.</description></item>
+        /// <item><description><b>Year</b>: year. If you select subscription, the unit is year.</description></item>
+        /// <item><description><b>Month</b>: month. If you select subscription, the unit is month.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -247,7 +238,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -257,6 +248,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-xxx</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         /// <summary>
         /// <para>The storage space. Unit: GB.</para>
@@ -269,20 +270,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>Valid values for the high-performance storage type:</para>
-        /// <list type="bullet">
-        /// <item><description><b>ESSDPL0</b></description></item>
-        /// <item><description><b>ESSDPL1</b></description></item>
-        /// </list>
-        /// <para>Valid values for the Basic Edition storage type:</para>
-        /// <list type="bullet">
-        /// <item><description><b>city_redundancy (zone-redundant)</b></description></item>
-        /// </list>
-        /// <para>Valid values for the Cold Storage Edition storage type:</para>
-        /// <list type="bullet">
-        /// <item><description><b>city_redundancy (zone-redundant)</b></description></item>
-        /// <item><description><b>local_redundancy (locally redundant)</b></description></item>
-        /// </list>
+        /// <para>The storage type. For the high_performance edition, use lowercase essdpl0 or essdpl1. For the cold edition, use local_redundancy or city_redundancy. Select the value based on the edition. The value is case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>local_redundancy</para>
@@ -292,10 +280,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter is required when PayType is set to <b>Prepaid</b>.</para>
+        /// <para>The subscription duration. This parameter is required when the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Period</b> is set to <b>Month</b>, valid values of <b>UsedTime</b> are integers in the range of <c>[1-9]</c>.</description></item>
-        /// <item><description>If <b>Period</b> is set to <b>Year</b>, valid values of <b>UsedTime</b> are integers in the range of <c>[1-3]</c>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of <b>UsedTime</b> must be an integer in the range of <c>[1-9]</c>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the value of <b>UsedTime</b> must be an integer in the range of <c>[1-3]</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -306,7 +294,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The access key of the S3 account to delete.</para>
+        /// <para>The AccessKey of the S3 account that you want to delete.</para>
         /// <remarks>
-        /// <para>The default account cannot be deleted.</para>
+        /// <para>You cannot delete the default account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

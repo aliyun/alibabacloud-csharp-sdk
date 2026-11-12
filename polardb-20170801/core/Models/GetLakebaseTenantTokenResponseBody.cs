@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD35F3-F3-44CA-AFFF-BAF869******</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The tenant token.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example-tenant-token-123456</para>
         /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]

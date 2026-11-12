@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTaskMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The cluster ID. Usage note: This parameter accepts only the ID of a training AIDB cluster created by calling CreateAIDBClusterTask. MaaS clusters with RunType set to maas are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format in UTC.</para>
+        /// <para>The end time of the query. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,15 +34,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>all</c></para>
-        /// </description></item>
-        /// <item><description><para><c>train</c></para>
-        /// </description></item>
-        /// <item><description><para><c>eval</c></para>
-        /// </description></item>
+        /// <item><description><c>all</c></description></item>
+        /// <item><description><c>train</c></description></item>
+        /// <item><description><c>eval</c></description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <em>all</em>.</para>
+        /// <para>Default value: <em>all</em>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MetricType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query result.</para>
+        /// <para>The page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,16 +60,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
-        /// <para>The default value is 100.</para>
+        /// <para>Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -82,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated PolarDB instance.</para>
+        /// <para>The instance ID of the associated PolarDB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2zejpr***</para>
@@ -92,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RelativeDBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to sort the results in reverse order. The default value is <em>false</em>.</para>
+        /// <para>Specifies whether to sort the results in descending order. Default value: <em>false</em>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -102,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format in UTC.</para>
+        /// <para>The start time of the query. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

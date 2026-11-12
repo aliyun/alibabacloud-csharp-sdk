@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the model APIs.</para>
+            /// <para>The model API IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mi-xxxx</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The number of input points.</para>
+            /// <para>The number of input tokens.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RecordInput { get; set; }
 
             /// <summary>
-            /// <para>The number of output points.</para>
+            /// <para>The number of output tokens.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RecordOutput { get; set; }
 
             /// <summary>
-            /// <para>The list of routing rules, formatted as a JSON array string.</para>
+            /// <para>The list of routing rules, which is a JSON array string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[

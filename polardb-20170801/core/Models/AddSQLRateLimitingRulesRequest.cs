@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AddSQLRateLimitingRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The cluster ID. Usage notes: SQL throttling is supported only for PostgreSQL and Oracle engines, and is not supported for MySQL engines.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,14 +37,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the SQL throttling rule to add or modify, specified as a JSON string. The values of the parameters must be strings. Example: <c>{&quot;id&quot;:&quot;test&quot;,&quot;enabled&quot;:&quot;true&quot;,&quot;match_mode&quot;:&quot;0&quot;,&quot;template&quot;:&quot;dXBkYXRlIHQgc2V0IGEgPSAxIHdoZXJlIGlkID0gMQ==&quot;,&quot;user&quot;:&quot;&quot;,&quot;database&quot;:&quot;&quot;,&quot;waiting&quot;:1024,&quot;endpoint&quot;:&quot;[{&quot;EndpointName&quot;:&quot;pe-***********&quot;,&quot;EndpointType&quot;:&quot;Cluster&quot;,&quot;DBEndpointDescription&quot;:&quot;Cluster Address&quot;}]&quot;,&quot;throttle_mode&quot;:0,&quot;concurrency&quot;:1}</c>. The JSON string contains the following parameters:</para>
+        /// <para>The JSON string of the configuration parameters and their values for the SQL throttling rule to be modified. All parameter values are of the string type. Example: <c>{&quot;id&quot;:&quot;test&quot;,&quot;enabled&quot;:&quot;true&quot;,&quot;match_mode&quot;:&quot;0&quot;,&quot;template&quot;:&quot;dXBkYXRlIHQgc2V0IGEgPSAxIHdoZXJlIGlkID0gMQ==&quot;,&quot;user&quot;:&quot;&quot;,&quot;database&quot;:&quot;&quot;,&quot;waiting&quot;:1024,&quot;endpoint&quot;:&quot;[{&quot;EndpointName&quot;:&quot;pe-***********&quot;,&quot;EndpointType&quot;:&quot;Cluster&quot;,&quot;DBEndpointDescription&quot;:&quot;Cluster Address&quot;}]&quot;,&quot;throttle_mode&quot;:0,&quot;concurrency&quot;:1}</c>. Parameters:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>&quot;id&quot;</c>: Required. The name of the throttling rule. The name must meet the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description><para>It cannot exceed 30 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>It must consist of uppercase letters, lowercase letters, and digits.</para>
-        /// </description></item>
+        /// <item><description><c>&quot;id&quot;</c>: Required. The name of the throttling rule. The name must meet the following requirements:<list type="bullet">
+        /// <item><description>The name cannot exceed 30 characters in length.</description></item>
+        /// <item><description>The name must consist of uppercase and lowercase letters and digits.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -61,10 +58,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The name of the SQL throttling rule. You can specify only one rule name at a time.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to view the details of all SQL throttling rules for the target cluster, including the rule names.</para>
-        /// </description></item>
-        /// <item><description><para>If the specified rule name does not exist in the current cluster, the system automatically creates a new SQL throttling rule based on the rule name and the value of the <c>RuleConfig</c> parameter.</para>
-        /// </description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to query the details of all SQL throttling rules in the specified cluster, including the rule names.</description></item>
+        /// <item><description>If the specified rule name does not exist in the current cluster, the system automatically creates an SQL throttling rule based on the name and the <c>RuleConfig</c> value.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>

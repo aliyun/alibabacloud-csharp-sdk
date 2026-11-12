@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DisplayModelName { get; set; }
 
             /// <summary>
-            /// <para>The time when the registration was last modified.</para>
+            /// <para>The last modification time of the registration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-07 20:57:20</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The minimum number of GPUs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("GpuMinCount")]
                 [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The GPU model.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>NVIDIA A10</para>
                 /// </summary>
                 [NameInMap("GpuModel")]
                 [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3AA69096-757C-4647-B36C-29EBC2******</para>

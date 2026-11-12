@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteSQLRateLimitingRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request is successful, <c>Successful</c> is returned. If the request fails, an error message is returned. The error message can include an error code.</para>
+        /// <para>If the request is successful, <c>Successful</c> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// <item><description><para><b>true</b>: The request is successful.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// <item><description><para><b>false</b>: The request fails.</para>
         /// </description></item>
         /// </list>
         /// 

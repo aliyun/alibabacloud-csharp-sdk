@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RateLimitTpm { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the consumer group or consumer.</para>
+        /// <para>The ID of the throttling dimension (ConsumerGroup ID or Consumer ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScopeRefId { get; set; }
 
         /// <summary>
-        /// <para>The rate limiting dimension. Valid values:</para>
+        /// <para>The throttling dimension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ConsumerGroup</b>: Consumer group</para>
+        /// <item><description><para><b>ConsumerGroup</b>: user group</para>
         /// </description></item>
-        /// <item><description><para><b>Consumer</b>: Consumer</para>
+        /// <item><description><para><b>Consumer</b>: user</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -20,7 +20,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The list of objects to delete.</para>
+        /// <para>The list of files to delete. Parameter value examples:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Cold Storage Edition</b> Example directory path to delete: test001/</description></item>
+        /// <item><description><b>Cold Storage Edition</b> Example file path to delete: test001/file.txt</description></item>
+        /// <item><description><b>Basic Edition</b> Example directory path to delete: /dir</description></item>
+        /// <item><description><b>Basic Edition</b> Example file path to delete: /dir/file.txt</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ObjectsToDelete")]

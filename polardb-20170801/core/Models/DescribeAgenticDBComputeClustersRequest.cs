@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBComputeClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The compute instance ID for fuzzy matching (pc-xxxx), such as pc-2ze8k.</para>
+        /// <para>The compute instance ID used for fuzzy matching. Example: pc-2ze8k.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze8k</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ComputeClusterId { get; set; }
 
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
+        /// <para>The ID of the AgenticDB cluster. The ID must start with pagc-. You can create the cluster by calling CreateDBCluster and setting AgenticDbType to dedicated and ServerlessType to AgileServerless. Standard PolarDB cluster IDs with the pc- prefix are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>An API key for the model service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>6c4b1f0317cd4fd7a5b446d3503d**</para>
         /// </summary>
         [NameInMap("ApiKey")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version number of the database AI DPI engine.</para>
+        /// <para>The version number of the database AI engine.</para>
         /// <para>  -3.0</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. The format is YYYY-MM-DDThh:mmZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-11-16T16:00Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The data granularity of performance. Valid values:</para>
+        /// <para>The data granularity of the performance data. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>60</description></item>
         /// <item><description>3600</description></item>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeId { get; set; }
 
             /// <summary>
-            /// <para>The performance metrics.</para>
+            /// <para>The performance metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PolarDBAIModelCall</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Measurement { get; set; }
 
             /// <summary>
-            /// <para>The specific measurement name of the performance metrics.</para>
+            /// <para>The name of the specific performance metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model_input_amount</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeAIDBClusterPerformanceResponseBodyPerformanceKeysPoints> Points { get; set; }
             public class DescribeAIDBClusterPerformanceResponseBodyPerformanceKeysPoints : TeaModel {
                 /// <summary>
-                /// <para>The specific time point of the monitoring metric. The format is a UNIX timestamp, and the unit is milliseconds.</para>
+                /// <para>The specific time point of the monitoring metric. The format is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724206183</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? Timestamp { get; set; }
 
                 /// <summary>
-                /// <para>The value of the monitoring metric.</para>
+                /// <para>The data value of the monitoring metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>42.38</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The start time of the query. The format is yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-11-15T16:00Z</para>

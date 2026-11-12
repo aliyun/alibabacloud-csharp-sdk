@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The API key.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>6c4b1f0317cd4fd7a5b446d3503d**</para>
                 /// </summary>
                 [NameInMap("ApiKey")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ConsumerTag { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</para>
+                /// <para>The creation time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-07-18T07:32:30Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string GwClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</para>
+                /// <para>The last modification time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-04-10T01:48:25Z</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DimensionRefId { get; set; }
 
                 /// <summary>
-                /// <para>The statistical dimension. The value is typically Consumer.</para>
+                /// <para>The statistical dimension. Typically, the value is Consumer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Consumer</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F3322AFE-083E-4D77-A074-421301******</para>

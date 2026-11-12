@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the created DB nodes.</para>
+        /// <para>The list of created DBNode IDs.</para>
         /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
         public List<string> DBNodeIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The ID of the generated order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2148126708*****</para>

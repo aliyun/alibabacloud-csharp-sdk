@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the DescribeDBClusters operation to query all clusters in the specified region, including cluster IDs.</para>
+        /// <para>You can call the DescribeDBClusters operation to query all clusters in the specified region, including their cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The list of drill node instance names.</para>
+        /// <para>The list of instance names of the nodes to be drilled.</para>
         /// <remarks>
-        /// <para>Node dimension drills support only a single node. For zone dimension drills, you can omit this parameter or pass all nodes.</para>
+        /// <para>A node-level drill supports only a single node. For a zone-level drill, you can leave this parameter empty or pass all nodes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cross-zone data replication mode of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AsyncSync</b>: Asynchronous.</description></item>
-        /// <item><description><b>SemiSync</b>: Semi-synchronous.</description></item>
+        /// <item><description><b>AsyncSync</b>: Asynchronous replication.</description></item>
+        /// <item><description><b>SemiSync</b>: Semi-synchronous replication.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,24 +73,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The fault injection method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Instance fault injection based on <c>Crash SQL</c>.</description></item>
+        /// <item><description>0: instance fault injection based on <c>Crash SQL</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>CrashSQLInjection</para>
         /// </summary>
         [NameInMap("FaultInjectionType")]
         [Validation(Required=false)]
         public string FaultInjectionType { get; set; }
 
         /// <summary>
-        /// <para>The fault drill dimension for the cluster. Valid values:</para>
+        /// <para>The fault drill dimension of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>0</c> or <c>FaultInjection</c>: Primary zone dimension fault drill.</description></item>
-        /// <item><description><c>1</c>: Node dimension fault drill.<remarks>
+        /// <item><description><c>0</c> or <c>FaultInjection</c>: fault drill at the primary zone level.</description></item>
+        /// <item><description><c>1</c>: fault drill at the node level.<remarks>
         /// <list type="bullet">
-        /// <item><description>In the <b>primary zone dimension fault drill</b> scenario, all compute nodes in the primary zone become unavailable, and the disaster recovery switchover in this scenario is lossy.</description></item>
-        /// <item><description>In the <b>node dimension fault drill</b> scenario, only a single compute node can be drilled. Pass the desired compute node name through <c>DBNodeCrashList</c>.</description></item>
+        /// <item><description>In the <b>fault drill at the primary zone level</b> scenario, all compute nodes in the primary zone become unavailable, and the disaster recovery switchover in this scenario is lossy.</description></item>
+        /// <item><description>In the <b>fault drill at the node level</b> scenario, only a single compute node can be drilled. You can pass the desired compute node name through <c>DBNodeCrashList</c>.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -106,13 +106,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The automatic IMCI-based query acceleration feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ON</c>: Enabled.</description></item>
-        /// <item><description><c>OFF</c>: Disabled.</description></item>
+        /// <item><description><c>ON</c>: Enables the feature.</description></item>
+        /// <item><description><c>OFF</c>: Disables the feature.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Only PolarDB for MySQL clusters are supported.</description></item>
-        /// <item><description>For cluster version limits, refer to <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic IMCI-based query acceleration (AutoIndex)</a>.</description></item>
+        /// <item><description>This feature is supported only by PolarDB for MySQL clusters.</description></item>
+        /// <item><description>For cluster version limits, refer to <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic seamless acceleration (AutoIndex)</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The upper limit for automatic storage scaling of a Standard Edition cluster. Unit: GB.</para>
         /// <remarks>
-        /// <para>The maximum value is 32000.</para>
+        /// <para>The maximum value is 32,000.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The JSON string of the target database and table information to be restored. The values of the database and table information are all of the string type.
         /// Example: <c>[    {        &quot;tables&quot;:[            {                &quot;name&quot;:&quot;testtb&quot;,                &quot;type&quot;:&quot;table&quot;,                &quot;newname&quot;:&quot;testtb_restore&quot;            }        ],        &quot;name&quot;:&quot;testdb&quot;,        &quot;type&quot;:&quot;db&quot;,        &quot;newname&quot;:&quot;testdb_restore&quot;    } ]</c>.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to view the details of the database and table names that support restoration, and fill the supported database and table information into the corresponding positions in the preceding example.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query the details of the database and table names that support restoration, and fill the supported database and table information into the corresponding positions in the preceding example.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

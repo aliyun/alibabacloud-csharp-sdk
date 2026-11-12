@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The resource pool ID.</para>
+        /// <para>The ID of the cross-cloud resource pool. First, call DescribeCrossCloudRegion to query the cross-cloud region information based on the target cloud provider, database type, and region. Obtain a valid value (which usually starts with pj-) from CrossCloudRegionList[].ProjectId in the response, and then pass it to this operation. If CrossCloudRegionList is empty or does not contain a ProjectId, no resource pool is available under the current query conditions. Verify the cloud provider, database type, and region, and apply for a resource pool through the cross-cloud product activation process or contact product support. Do not guess the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

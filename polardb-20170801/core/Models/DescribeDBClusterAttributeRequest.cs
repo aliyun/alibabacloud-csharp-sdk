@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retrieve AI-related node information.</para>
+        /// <para>Specifies whether to retrieve information about AI-related nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>

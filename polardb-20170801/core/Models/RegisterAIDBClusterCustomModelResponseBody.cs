@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Created { get; set; }
 
         /// <summary>
-        /// <para>The display name and the initial invocation name for clients.</para>
+        /// <para>The display name and the initial client invocation name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-qwen3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DisplayModelName { get; set; }
 
         /// <summary>
-        /// <para>The image import status. The initial value is Importing after an image is registered.</para>
+        /// <para>The import status of the image. The initial value is Importing after the image is registered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Importing</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ImageImportStatus { get; set; }
 
         /// <summary>
-        /// <para>The model registration ID.</para>
+        /// <para>The ID of the model registration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ModelId { get; set; }
 
         /// <summary>
-        /// <para>The custom model registration key.</para>
+        /// <para>The registration key of the custom model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qwen3-32B</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model type.</para>
+        /// <para>The type of the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OssPath { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3AA6E0E4-1234-5678-90AB-1234567890AB</para>

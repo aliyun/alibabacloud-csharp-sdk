@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class GetPolarClawConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The application ID. Usage note: In the Prerequisites section, specify that the ApplicationId can be obtained by calling DescribeApplications (filtered by ApplicationType=polardb_polarclaw), and indicate the retrieval path in the description of the ApplicationId parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The path to the configuration section to retrieve, specified in JSONPath dot notation. If this parameter is empty, the entire configuration is returned.</para>
+        /// <para>Filters configuration sections by a JSONPath dot-notation path. If this parameter is left empty, all configurations are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>models</para>

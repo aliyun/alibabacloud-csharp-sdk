@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActivationCodeDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The effective time.</para>
+        /// <para>The effective period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ActivateAt { get; set; }
 
         /// <summary>
-        /// <para>The content of the activation code. Decode the Base64 content and save it to the license.lic file for PolarDB to read during startup.</para>
+        /// <para>The content of the activation code. Decode this content from Base64 and save it to the license.lic file for PolarDB to read during startup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAEAA******AAA=</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireAt { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>The ID of the activation code.</para>
+        /// <para>The activation code ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F2A9EFA7-915F-4572-8299-85A307******</para>

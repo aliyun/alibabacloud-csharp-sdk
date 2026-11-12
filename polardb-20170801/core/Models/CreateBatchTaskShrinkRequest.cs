@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationType { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>The machine instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -28,7 +28,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The archive parameters.</para>
+        /// <para>The per-instance task parameters in JSON object format (instanceId -&gt; param). This parameter is used in scenarios where multiple instances have different targets, such as different agent workspaces.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;pa-xxx1&quot;:{&quot;agentId&quot;:&quot;test1&quot;},&quot;pa-xxx2&quot;:{&quot;scope&quot;:&quot;global&quot;}}</para>
+        /// </summary>
+        [NameInMap("InstanceParams")]
+        [Validation(Required=false)]
+        public string InstanceParams { get; set; }
+
+        /// <summary>
+        /// <para>The task parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;skillName&quot;:&quot;github&quot;,&quot;version&quot;:&quot;1.0.0&quot;},{&quot;skillName&quot;:&quot;skill-vetter&quot;,&quot;version&quot;:&quot;1.0.1&quot;}]</para>
@@ -38,10 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the target account.</para>
-        /// </remarks>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

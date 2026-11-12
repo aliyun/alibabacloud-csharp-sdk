@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ApiKeyId { get; set; }
 
             /// <summary>
-            /// <para>The masked API key value.</para>
+            /// <para>The masked API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pagc_key_cGFnYy1icDFhMmIz****</para>
@@ -37,8 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ApiKeyMasked { get; set; }
 
             /// <summary>
-            /// <para>The time when the API key was created.</para>
-            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T10:30:00Z</para>
@@ -48,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the API key.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MCP server token</para>
@@ -58,8 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the API key expires.</para>
-            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The expiration time. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2027-01-01T00:00:00Z</para>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the API key.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -111,7 +109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -131,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

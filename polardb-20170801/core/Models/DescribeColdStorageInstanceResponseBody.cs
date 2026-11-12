@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeColdStorageInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of data entries to read in this request. Default value: 10.</para>
+        /// <para>The maximum number of data entries to read in the current request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether OSS storage space is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled</description></item>
-        /// <item><description><b>false</b>: disabled</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeColdStorageInstanceResponseBodyOssClusterInfoList> OssClusterInfoList { get; set; }
         public class DescribeColdStorageInstanceResponseBodyOssClusterInfoList : TeaModel {
             /// <summary>
-            /// <para>The creation time of the cluster. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the cluster was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-10T17:01:16Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The size of the cold storage table. Unit: GB.</para>
+            /// <para>The size of the cold storage table, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the current cluster supports enabling cold storage. For clusters that do not support this feature, the switch is not displayed on the page.</para>
+        /// <para>Indicates whether the current cluster supports enabling cold storage. For clusters that do not support this feature, the switch is not displayed on the page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeColdStorageInstanceResponseBodyTablesChildObjects> ChildObjects { get; set; }
             public class DescribeColdStorageInstanceResponseBodyTablesChildObjects : TeaModel {
                 /// <summary>
-                /// <para>The object name.</para>
+                /// <para>The name of the object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>img/1728554006462.png</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ObjectType { get; set; }
 
                 /// <summary>
-                /// <para>The disk size. Unit: GiB.</para>
+                /// <para>The disk size, in GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -199,14 +199,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>The task status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Scheduled</b>: waiting for execution</description></item>
-                /// <item><description><b>Running</b>: running</description></item>
-                /// <item><description><b>Succeed</b>: succeeded</description></item>
-                /// <item><description><b>Cancelling</b>: cancelling</description></item>
-                /// <item><description><b>Canceled</b>: canceled</description></item>
-                /// <item><description><b>Waiting</b>: waiting for the preset time</description></item>
+                /// <item><description><b>Scheduled</b>: Pending execution.</description></item>
+                /// <item><description><b>Running</b>: Executing.</description></item>
+                /// <item><description><b>Succeed</b>: Executed successfully.</description></item>
+                /// <item><description><b>Cancelling</b>: Terminating.</description></item>
+                /// <item><description><b>Canceled</b>: Terminated.</description></item>
+                /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
                 /// </list>
-                /// <para>To query multiple statuses, separate them with commas (,). The default value is empty, which indicates that all statuses are selected.</para>
+                /// <para>To query multiple statuses, separate them with commas (,). By default, this parameter is left empty, which indicates all statuses.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Partion { get; set; }
 
             /// <summary>
-            /// <para>The disk size of the cold storage instance. Unit: GiB.</para>
+            /// <para>The disk size of the cold storage instance, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>

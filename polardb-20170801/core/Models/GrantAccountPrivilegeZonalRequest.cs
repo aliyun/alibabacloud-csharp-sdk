@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class GrantAccountPrivilegeZonalRequest : TeaModel {
         /// <summary>
-        /// <para>The account name.</para>
+        /// <para>The name of the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The account permissions. Valid values:</para>
+        /// <para>The privileges of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ReadWrite: Read and write permissions.</para>
-        /// </description></item>
-        /// <item><description><para>ReadOnly: Read-only permissions.</para>
-        /// </description></item>
-        /// <item><description><para>DMLOnly: DML-only permissions.</para>
-        /// </description></item>
-        /// <item><description><para>DDLOnly: DDL-only permissions.</para>
-        /// </description></item>
-        /// <item><description><para>ReadIndex: Read-only and index permissions.</para>
-        /// </description></item>
+        /// <item><description>ReadWrite: read and write</description></item>
+        /// <item><description>ReadOnly: read-only</description></item>
+        /// <item><description>DMLOnly: DML only</description></item>
+        /// <item><description>DDLOnly: DDL only</description></item>
+        /// <item><description>ReadIndex: read-only and index</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token that ensures the idempotence of the request. Make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token is case-sensitive and up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
@@ -54,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the PolarDB on ENS cluster. This operation applies only to edge clusters. For standard PolarDB clusters, use GrantAccountPrivilege. You can create an edge cluster by calling CreateDBCluster and setting CloudProvider to ENS and specifying EnsRegionId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database for which to grant permissions. To grant permissions for multiple databases, separate the database names with a comma (,).</para>
+        /// <para>The name of the database to which privileges are granted. You can grant privileges to one or more databases at a time. Separate multiple database names with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

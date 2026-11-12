@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public CreatePolarClawCronJobResponseBodyJobDelivery Delivery { get; set; }
             public class CreatePolarClawCronJobResponseBodyJobDelivery : TeaModel {
                 /// <summary>
-                /// <para>The channel account ID.</para>
+                /// <para>The ID of the channel account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Channel { get; set; }
 
                 /// <summary>
-                /// <para>The delivery mode. Valid values: none, announce, webhook.</para>
+                /// <para>The delivery mode. Valid values: none, announce, and webhook.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>announce</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public bool? Deliver { get; set; }
 
                 /// <summary>
-                /// <para>The payload type. Valid values: agentTurn, systemEvent.</para>
+                /// <para>The payload type. Valid values: agentTurn and systemEvent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agentTurn</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the run was delivered.</para>
+                /// <para>Indicates whether the job run has been delivered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>The model used.</para>
+                /// <para>The model used for the execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bailian/qwen3.5-plus</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? NextRunAtMs { get; set; }
 
                 /// <summary>
-                /// <para>The model provider.</para>
+                /// <para>The provider of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bailian</para>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The ID of the associated session.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>session-123</para>
                 /// </summary>
                 [NameInMap("SessionId")]
                 [Validation(Required=false)]
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The execution summary text.</para>
+                /// <para>The text of the execution summary.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Generate the daily report.</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? Ts { get; set; }
 
                 /// <summary>
-                /// <para>The token usage details.</para>
+                /// <para>The details of token usage.</para>
                 /// </summary>
                 [NameInMap("Usage")]
                 [Validation(Required=false)]
@@ -510,7 +510,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Expr { get; set; }
 
                 /// <summary>
-                /// <para>The schedule type: cron, every, or at.</para>
+                /// <para>The schedule type. Valid values: cron, every, and at.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cron</para>
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SessionKey { get; set; }
 
             /// <summary>
-            /// <para>The session target. Valid values: main, isolated, current.</para>
+            /// <para>The session target. Valid values: main, isolated, and current.</para>
             /// 
             /// <b>Example:</b>
             /// <para>main</para>
@@ -552,7 +552,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SessionTarget { get; set; }
 
             /// <summary>
-            /// <para>The execution status.</para>
+            /// <para>The execution state.</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -611,7 +611,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? UpdatedAtMs { get; set; }
 
             /// <summary>
-            /// <para>The wake mode. Valid values: now, next-heartbeat.</para>
+            /// <para>The wake mode. Valid values: now and next-heartbeat.</para>
             /// 
             /// <b>Example:</b>
             /// <para>now</para>
@@ -643,7 +643,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Ok { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the job was executed immediately and successfully.</para>
+        /// <para>Indicates whether the job was executed immediately and succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -653,7 +653,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? RanImmediately { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>

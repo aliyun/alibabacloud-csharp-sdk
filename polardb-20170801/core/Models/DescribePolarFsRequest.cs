@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarFsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the PolarDB instance on which the application depends.</para>
+        /// <para>The PolarDB instance ID on which the application depends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze8u21s03******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer greater than 0 and not exceeding the maximum value of Integer.</para>
+        /// <para>The page number. The value must be an integer greater than 0 and no greater than the maximum value of the Integer data type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The list of PolarFS instance IDs, separated by commas (,).</para>
+        /// <para>The PolarFS instance IDs. Separate multiple instance IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-ins1*******</para>
@@ -97,6 +97,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RelativeDbClusterId")]
         [Validation(Required=false)]
         public string RelativeDbClusterId { get; set; }
+
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-xxx</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         /// <summary>
         /// <para>The tags.</para>

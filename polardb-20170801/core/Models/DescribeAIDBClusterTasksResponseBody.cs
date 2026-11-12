@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version.</para>
+        /// <para>The DPI engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public class DescribeAIDBClusterTasksResponseBodyItems : TeaModel {
             /// <summary>
             /// <para>The task completion time.</para>
-            /// <para>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-09T18:00:00Z</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The creation time.</para>
-            /// <para>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-25T09:37:10Z</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The database engine version.</para>
+            /// <para>The DPI engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.1</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The model name.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>Sample model</para>
             /// </summary>
             [NameInMap("ModelName")]
             [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The path.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>/models/example-model</para>
             /// </summary>
             [NameInMap("ModelPath")]
             [Validation(Required=false)]
@@ -159,10 +159,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelSource { get; set; }
 
             /// <summary>
-            /// <para>The runtime parameters.</para>
+            /// <para>The number of task executions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RunningTimes")]
             [Validation(Required=false)]
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The task start time.</para>
-            /// <para>The time follows the ISO 8601 standard and is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-09T18:00:00Z</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries on the current page.</para>
+        /// <para>The total number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records to display on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated PolarDB cluster.</para>
+        /// <para>The ID of the PolarDB cluster to which the resource belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze***</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RelativeDBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>925B84D9-CA72-432C-95CF-738C22******</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

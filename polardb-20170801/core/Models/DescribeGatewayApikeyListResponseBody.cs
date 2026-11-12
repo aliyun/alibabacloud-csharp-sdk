@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeGatewayApikeyListResponseBodyItems> Items { get; set; }
         public class DescribeGatewayApikeyListResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The API key in use.</para>
+            /// <para>The API key used.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxxxxx</para>
+            /// <para>6c4b1f0317cd4fd7a5b446d3503d**</para>
             /// </summary>
             [NameInMap("ApiKey")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerTag { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-14T05:58:42Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last modification time. The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T09:31:37Z</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A0450B18-BBD4-5DF9-8E71-610F1A921CDE</para>

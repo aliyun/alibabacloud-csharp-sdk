@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationPromptsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of Application Prompts.</para>
+        /// <para>The list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeApplicationPromptsResponseBodyItems> Items { get; set; }
         public class DescribeApplicationPromptsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the Prompt is enabled. A value of 1 indicates enabled, and 0 indicates disabled.</para>
+            /// <para>Indicates whether the prompt is enabled.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>prompt if enabled</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PromptEnabled")]
             [Validation(Required=false)]
             public int? PromptEnabled { get; set; }
 
             /// <summary>
-            /// <para>The Prompt ID.</para>
+            /// <para>The prompt ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>papt-58z96zl691otf356o4</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PromptId { get; set; }
 
             /// <summary>
-            /// <para>The Prompt Name.</para>
+            /// <para>The prompt name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prompt name</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PromptName { get; set; }
 
             /// <summary>
-            /// <para>The Prompt Type.</para>
+            /// <para>The prompt type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DELETE_RELATIONS_SYSTEM_PROMPT</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PromptType { get; set; }
 
             /// <summary>
-            /// <para>The Prompt Value.</para>
+            /// <para>The prompt content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prompt value</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

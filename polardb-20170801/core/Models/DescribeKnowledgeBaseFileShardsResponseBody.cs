@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3E5CD764-xxxx-xxxx-xxxx-20E0DE84B2AF</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<string> Captions { get; set; }
 
             /// <summary>
-            /// <para>The list of structured element references of the source document associated with the shard, which can be used to precisely locate the original elements.</para>
+            /// <para>The list of structured element references in the source document associated with the shard, which can be used to precisely locate the original elements.</para>
             /// </summary>
             [NameInMap("DocItems")]
             [Validation(Required=false)]
             public List<string> DocItems { get; set; }
 
             /// <summary>
-            /// <para>The section heading chain to which the shard belongs.</para>
+            /// <para>The chain of section headings to which the shard belongs.</para>
             /// </summary>
             [NameInMap("Headings")]
             [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The text content of the shard.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>This is sample content for a knowledge base shard</para>
             /// </summary>
             [NameInMap("ShardContent")]
             [Validation(Required=false)]

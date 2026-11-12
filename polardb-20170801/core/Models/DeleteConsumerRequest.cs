@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteConsumerRequest : TeaModel {
         /// <summary>
-        /// <para>The consumer ID.</para>
+        /// <para>The ID of the consumer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

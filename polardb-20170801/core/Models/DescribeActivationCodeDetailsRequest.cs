@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActivationCodeDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the activation code.</para>
+        /// <para>The activation code ID. This parameter is required. If it is not provided, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

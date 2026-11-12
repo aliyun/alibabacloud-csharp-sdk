@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeVSwitchListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,12 +22,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
@@ -59,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of vSwitches.</para>
+        /// <para>The list of vSwitches.</para>
         /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
@@ -98,10 +95,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The vSwitch is the default vSwitch.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The vSwitch is not the default vSwitch.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: The vSwitch is the default vSwitch.</description></item>
+            /// <item><description><b>false</b>: The vSwitch is not the default vSwitch.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone where the vSwitch resides.</para>
+            /// <para>The zone ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-b</para>
@@ -122,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string IzNo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the resource.</para>
+            /// <para>The ID of the owner account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>177563751276****</para>
@@ -154,10 +149,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The status of the vSwitch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Pending</b>: The vSwitch is being configured.</para>
-            /// </description></item>
-            /// <item><description><para><b>Available</b>: The vSwitch is available.</para>
-            /// </description></item>
+            /// <item><description><b>Pending</b>: The vSwitch is being configured.</description></item>
+            /// <item><description><b>Available</b>: The vSwitch is available.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -188,7 +181,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string VSwitchName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1vbkkyt7apvy4j*****</para>

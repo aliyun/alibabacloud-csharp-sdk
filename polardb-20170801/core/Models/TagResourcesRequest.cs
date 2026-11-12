@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-*****************</para>
+        /// <para>[&quot;pc-***************&quot;]</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. To add multiple tags to the cluster at once, click <b>Add</b> to specify multiple tag keys.</para>
+            /// <para>The tag key. To add multiple tags to the target cluster at a time, click <b>Add</b> to add tag keys.</para>
             /// <remarks>
-            /// <para>You can add a maximum of 20 tag pairs at a time. <c>Tag.n.Key</c> corresponds to <c>Tag.n.Value</c>.</para>
+            /// <para>You can add up to 20 tags at a time. The value of <c>Tag.n.Key</c> corresponds to <c>Tag.n.Value</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. To add multiple tags to the cluster at once, click <b>Add</b> to specify multiple tag values.</para>
+            /// <para>The tag value. To add multiple tags to the target cluster at a time, click <b>Add</b> to add tag values.</para>
             /// <remarks>
-            /// <para>You can add a maximum of 20 tag pairs at a time. <c>Tag.n.Value</c> corresponds to <c>Tag.n.Key</c>.</para>
+            /// <para>You can add up to 20 tags at a time. The value of <c>Tag.n.Value</c> corresponds to <c>Tag.n.Key</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

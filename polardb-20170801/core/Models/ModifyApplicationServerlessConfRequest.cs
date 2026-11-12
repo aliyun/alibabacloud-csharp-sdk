@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The list of Serverless configurations.</para>
+        /// <para>The serverless configuration list.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("ServerlessConfList")]
         [Validation(Required=false)]
         public List<ModifyApplicationServerlessConfRequestServerlessConfList> ServerlessConfList { get; set; }
         public class ModifyApplicationServerlessConfRequestServerlessConfList : TeaModel {
             /// <summary>
-            /// <para>The type of the application sub-component.</para>
-            /// <para>For Supabase, valid values are:</para>
+            /// <para>The type of the application subcomponent. For supabase, valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>gateway</para>
-            /// </description></item>
-            /// <item><description><para>backend</para>
-            /// </description></item>
+            /// <item><description>gateway</description></item>
+            /// <item><description>backend</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ComponentType { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of PCUs for a single node. Valid values: 0 to 16.</para>
+            /// <para>The upper limit of scaling per node. Valid values: 0 to 16 PCUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of PolarDB Capacity Units (PCUs) for a single node. Valid values: 0 to 16.</para>
+            /// <para>The lower limit of scaling per node. Valid values: 0 to 16 PCUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

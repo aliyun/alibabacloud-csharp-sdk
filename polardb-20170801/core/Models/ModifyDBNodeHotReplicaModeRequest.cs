@@ -10,35 +10,36 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBNodeHotReplicaModeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-2vc327c2a14a3u858</para>
+        /// <para>pc-*****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node in the cluster.</para>
+        /// <para>The ID of the database cluster node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pi-2ze28275h9x5r4wt1</para>
+        /// <para>pi-*****************</para>
         /// </summary>
         [NameInMap("DBNodeId")]
         [Validation(Required=false)]
         public string DBNodeId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the hot standby feature. Valid values:</para>
+        /// <para>Specifies whether to enable hot standby. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b></description></item>
-        /// <item><description><b>OFF</b></description></item>
+        /// <item><description><b>ON</b>: Enabled.</description></item>
+        /// <item><description><b>OFF</b>: Disabled.
+        /// Limits: This operation is supported only for non-serverless MySQL clusters. The target node must be a read-only node. Each cluster allows only one node to have HotReplicaMode (ON). Usage notes: Append the following limits to the end of the HotReplicaMode parameter description: this operation is supported only for non-serverless MySQL clusters. The target node must be a read-only node. Each cluster allows only one node to have HotReplicaMode (ON).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

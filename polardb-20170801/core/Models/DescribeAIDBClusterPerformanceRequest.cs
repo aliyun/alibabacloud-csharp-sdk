@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">describedbclusters</a> operation to query the details of all clusters under your account, such as the cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">describedbclusters</a> operation to view the details of all clusters under your account, such as the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. The format is YYYY-MM-DDThh:mmZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies the time granularity of the data to be retrieved. Valid values: <b>60</b> (minutes) and <b>3600</b> (hours).</para>
+        /// <para>Specifies the time granularity of the monitoring data to retrieve. Valid values: <b>60</b> (minutes) and <b>3600</b> (hours).</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>Interval</b> to <b>60</b>, you can query data generated within the last month. The maximum time range for a single query is 7 days.</description></item>
-        /// <item><description>If you set <b>Interval</b> to <b>3600</b>, you can query data generated within the last month. The maximum time range for a single query is 7 days.</description></item>
+        /// <item><description><b>Interval</b>=<b>60</b>: You can query data for the last month at most. The maximum time span for a single query is 7 days.</description></item>
+        /// <item><description><b>Interval</b>=<b>3600</b>: You can query data for the last month at most. The maximum time span for a single query is 7 days.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The start time of the query. The format is YYYY-MM-DDThh:mmZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ResetConsumerApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The user ID.</para>
+        /// <para>The ID of the consumer. You can obtain the ID by calling the DescribeConsumers operation. Call sequence: CreateGateway, CreateConsumer, and then ResetConsumerApiKey.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>Instance ID of the gateway instance. You can obtain instance ID by calling the DescribeGatewayAttribute operation. Before calling this operation, create a gateway and confirm its VPC, vSwitch, and zone configurations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

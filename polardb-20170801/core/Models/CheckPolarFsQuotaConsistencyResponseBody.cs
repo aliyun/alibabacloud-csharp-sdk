@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CheckPolarFsQuotaConsistencyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the PolarFS instance.</para>
+        /// <para>The PolarFS instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-2ze0i74ka607*****</para>
@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>An object that contains details about the quota.</para>
+        /// <para>The quota consistency check.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("QuotaItem")]
         [Validation(Required=false)]
         public CheckPolarFsQuotaConsistencyResponseBodyQuotaItem QuotaItem { get; set; }
         public class CheckPolarFsQuotaConsistencyResponseBodyQuotaItem : TeaModel {
             /// <summary>
-            /// <para>The storage capacity quota.</para>
+            /// <para>The quota capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104857600</para>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The inode quota.</para>
+            /// <para>The number of inodes in the file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Inodes { get; set; }
 
             /// <summary>
-            /// <para>The directory path.</para>
+            /// <para>The path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/zookeepertest718</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The used capacity, in bytes.</para>
+            /// <para>The used capacity. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104857600</para>

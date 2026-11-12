@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyApplicationPromptRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID. Usage note: Only applications of the mem0 type support prompt operations. You can verify this by checking the ApplicationType field by calling DescribeApplicationAttribute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the prompt.</para>
+        /// <para>The prompt ID. The value is an identifier that starts with papt-.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptId { get; set; }
 
         /// <summary>
-        /// <para>The name of the prompt.</para>
+        /// <para>The prompt name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prompt name</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptName { get; set; }
 
         /// <summary>
-        /// <para>The content of the prompt.</para>
+        /// <para>The prompt content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prompt value</para>

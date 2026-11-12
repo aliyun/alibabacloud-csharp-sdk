@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The supported engine types. The return value is the sum of the following engine type values:</para>
         /// <list type="bullet">
-        /// <item><description>1: search engine</description></item>
-        /// <item><description>2: time series engine</description></item>
-        /// <item><description>4: wide table engine</description></item>
-        /// <item><description>8: file engine</description></item>
+        /// <item><description>1: Search engine</description></item>
+        /// <item><description>2: Time series engine</description></item>
+        /// <item><description>4: Wide table engine</description></item>
+        /// <item><description>8: File engine</description></item>
         /// </list>
         /// <remarks>
         /// <para>For example, if the EngineType value is 15, 15 = 8 + 4 + 2 + 1, which indicates that the instance supports the search engine, time series engine, wide table engine, and file engine. If the EngineType value is 6, 6 = 4 + 2, which indicates that the instance supports the time series engine and wide table engine.</para>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the cluster. Note: A specific value is returned only for clusters whose billing method is Prepaid (subscription). For Postpaid (pay-as-you-go) clusters, a null value is returned.</para>
+        /// <para>The validity period of the download URL, in seconds. If you query the download URL of a specified data table and do not specify this parameter, the default value is 3600.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-11-14T16:00:00Z</para>
+        /// <para>3600</para>
         /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
@@ -60,8 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If you do not specify the <b>MaxResults</b> parameter, batch query is not required. The value of the <b>MaxResults</b> parameter returned after the API call indicates the total number of list entries.</description></item>
-        /// <item><description>If you specify the <b>MaxResults</b> parameter, batch query is required. The value of <b>MaxResults</b> indicates the number of entries displayed per batch. Valid values: <b>1</b> to <b>100</b>. The value of the <b>MaxResults</b> parameter returned after the API call indicates the number of list entries in the current query batch. Set the <b>MaxResults</b> parameter to <b>20</b>.</description></item>
+        /// <item><description>If you do not specify the <b>MaxResults</b> parameter, it indicates that you do not need to query in batches. The value of the <b>MaxResults</b> parameter returned in the response indicates the total number of entries.</description></item>
+        /// <item><description>If you specify the <b>MaxResults</b> parameter, it indicates that you need to query in batches. The value of <b>MaxResults</b> indicates the number of entries to return per batch. Valid values: <b>1</b> to <b>100</b>. The value of the <b>MaxResults</b> parameter returned in the response indicates the number of entries in the current batch. We recommend that you set the <b>MaxResults</b> parameter to <b>20</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,11 +123,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The region ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the target account.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the region information of all clusters under the target account.</description></item>
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</description></item>
+        /// <item><description>If you leave this parameter empty, scheduled tasks in all regions of the current account are queried by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

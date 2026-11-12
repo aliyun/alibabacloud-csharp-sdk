@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The environment variables as a key-value map. An empty value indicates that the variable is deleted.</para>
+        /// <para>The environment variables. This is a key-value pair map. An empty value indicates that the variable is deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NETA_TOKEN&quot;:&quot;my-token&quot;}</para>

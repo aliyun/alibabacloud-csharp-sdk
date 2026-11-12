@@ -27,20 +27,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Capacity { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in seconds, and the time zone is UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-03-25T09:37:10Z</para>
+            /// <para>1793809871</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The last modified time.</para>
+            /// <para>The last modified time. The value is a UNIX timestamp in seconds, and the time zone is UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-03-25T09:37:10Z</para>
+            /// <para>1793809534</para>
             /// </summary>
             [NameInMap("LastModified")]
             [Validation(Required=false)]
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The number of links.</para>
+            /// <para>The number of hard links. The value is an integer. This field may not be returned for some entries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Nlink")]
             [Validation(Required=false)]
             public int? Nlink { get; set; }
 
             /// <summary>
-            /// <para>Owner</para>
+            /// <para>The owner of the file or directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The PolarFs instance ID.</para>
+        /// <para>The PolarFS instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-2ze0i7*****</para>

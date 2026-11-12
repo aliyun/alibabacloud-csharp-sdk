@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class SearchMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. Example value: pa-**************.</para>
+        /// <para>The application ID. Example: pa-**************. The application must be of the mem0 type. When you create the application by calling CreateApplication, set ApplicationType to mem0. If you call this operation on a non-mem0 application, the IncorrectDBInstanceEngine (403) error is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,8 +51,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MemoryAgentId { get; set; }
 
         /// <summary>
+        /// <para>The memory ID. If you specify this parameter, the complete change history of the memory is queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4d83591f-******-4efaf8c3</para>
+        /// </summary>
+        [NameInMap("MemoryId")]
+        [Validation(Required=false)]
+        public string MemoryId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the memory user.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1</para>
@@ -92,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Specifies the number of top results to return.</para>
+        /// <para>The number of top results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

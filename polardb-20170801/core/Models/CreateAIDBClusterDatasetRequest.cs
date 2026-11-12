@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAIDBClusterDatasetRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the PolarDB database cluster.</para>
+        /// <para>The ID of the AI database cluster. The cluster must have DBType set to polardb_ai. This parameter is required. If it is not provided, the service returns InvalidDBClusterId.Malformed (404).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze88***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The dataset name.</para>
+        /// <para>The name of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataset01</para>
@@ -30,12 +30,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The type of the dataset. Valid values:</para>
+        /// <para>The dataset type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>train</b>: training set</para>
-        /// </description></item>
-        /// <item><description><para><b>eval</b>: evaluation set</para>
-        /// </description></item>
+        /// <item><description><b>train</b>: training dataset</description></item>
+        /// <item><description><b>eval</b>: evaluation dataset</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,14 +83,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The training mode for the dataset. The dataset format depends on the mode. Valid values:</para>
+        /// <para>The training mode for the dataset. Dataset formats vary by mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sft</b>: supervised fine-tuning. For training sets only.</para>
-        /// </description></item>
-        /// <item><description><para><b>grpo</b>: reinforcement learning optimization. For training sets only.</para>
-        /// </description></item>
-        /// <item><description><para><b>text</b>: text generation. For validation sets only.</para>
-        /// </description></item>
+        /// <item><description><b>sft</b>: supervised fine-tuning, dedicated to training datasets</description></item>
+        /// <item><description><b>grpo</b>: reinforcement learning optimization, dedicated to training datasets</description></item>
+        /// <item><description><b>text</b>: text generation, dedicated to validation datasets</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterPriceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster edition. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Normal: Cluster Edition.</description></item>
-        /// <item><description>Basic: Single Node Edition.</description></item>
-        /// <item><description>ArchiveNormal: Archive Database.</description></item>
-        /// <item><description>SENormal: Standard Edition.</description></item>
-        /// <item><description>NormalMultimaster: Multi-master Cluster.</description></item>
-        /// </list>
+        /// <para>The cluster edition. Valid values: Normal (Cluster Edition), Basic (Single Node Edition), ArchiveNormal (Archive Database Cluster Edition), SENormal (Standard Edition), and NormalMultimaster (Multi-master Cluster).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -50,14 +43,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The list of node IDs to delete. Used when ModifyType is set to DELETE.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pi-**************</para>
+        /// <para>[&quot;pi-***************&quot;]</para>
         /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
         public List<string> DBNodeIds { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes. Valid for the BUY scenario. This value includes the read/write node. Minimum value: 1. Default value: 1.</para>
+        /// <para>The number of nodes. Valid for the BUY scenario. This number includes read/write nodes. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -67,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? DBNodeNum { get; set; }
 
         /// <summary>
-        /// <para>The list of heterogeneous specification change nodes. Used for specification change scenarios to specify the target specifications for each node.</para>
+        /// <para>The list of nodes for heterogeneous specification changes. Used in specification change scenarios to specify the target specifications for each node.</para>
         /// </summary>
         [NameInMap("DBNodes")]
         [Validation(Required=false)]
@@ -94,12 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the hot standby cluster. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ON: Enable.</description></item>
-        /// <item><description>OFF: Disable.</description></item>
-        /// </list>
-        /// <para>Valid for the BUY and specification change scenarios.</para>
+        /// <para>Specifies whether to enable the hot standby cluster. Valid values: ON and OFF. Valid for the BUY and specification change scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -109,16 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string HotStandbyCluster { get; set; }
 
         /// <summary>
-        /// <para>The specification change direction. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ADD: add nodes.</description></item>
-        /// <item><description>DELETE: remove nodes.</description></item>
-        /// <item><description>UPGRADE: upgrade specifications.</description></item>
-        /// <item><description>DOWNGRADE: downgrade specifications.</description></item>
-        /// <item><description>HOT_STANDBY: hot standby change.</description></item>
-        /// <item><description>STORAGE: storage space change.</description></item>
-        /// <item><description>STORAGE_TYPE: storage type change.</description></item>
-        /// </list>
+        /// <para>The modification type. Valid values: ADD (add nodes), DELETE (remove nodes), UPGRADE (upgrade), DOWNGRADE (downgrade), HOT_STANDBY (hot standby change), STORAGE (storage space change), and STORAGE_TYPE (storage type change).</para>
         /// 
         /// <b>Example:</b>
         /// <para>UPGRADE</para>
@@ -128,14 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModifyType { get; set; }
 
         /// <summary>
-        /// <para>The order type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>BUY: new purchase.</description></item>
-        /// <item><description>CONVERT: billing method conversion.</description></item>
-        /// <item><description>RENEW: renewal.</description></item>
-        /// <item><description>UPGRADE: upgrade specifications or add nodes.</description></item>
-        /// <item><description>DOWNGRADE: downgrade specifications or remove nodes.</description></item>
-        /// </list>
+        /// <para>The order type. Valid values: BUY (new purchase), CONVERT (billing method change), RENEW (renewal), UPGRADE (upgrade or add nodes), and DOWNGRADE (downgrade or remove nodes).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -146,11 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Required for the BUY and CONVERT scenarios. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Prepaid: subscription.</description></item>
-        /// <item><description>Postpaid: pay-as-you-go.</description></item>
-        /// </list>
+        /// <para>The billing method. Required for the BUY and CONVERT scenarios. Valid values: Prepaid (subscription) and Postpaid (pay-as-you-go).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Prepaid</para>
@@ -160,11 +128,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The subscription cycle. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Month: monthly.</description></item>
-        /// <item><description>Year: yearly.</description></item>
-        /// </list>
+        /// <para>The subscription period. Valid values: Month and Year.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -195,7 +159,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The serverless type. Valid values: AgileServerless.</para>
+        /// <para>The Serverless type. Valid value: AgileServerless.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AgileServerless</para>
@@ -205,11 +169,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessType { get; set; }
 
         /// <summary>
-        /// <para>The storage billing type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Prepaid: subscription.</description></item>
-        /// <item><description>Postpaid: pay-as-you-go.</description></item>
-        /// </list>
+        /// <para>The storage billing method. Valid values: Prepaid (subscription) and Postpaid (pay-as-you-go).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Prepaid</para>
@@ -219,7 +179,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageChargeType { get; set; }
 
         /// <summary>
-        /// <para>The storage space, in GB. Used for prepaid storage or storage specification change scenarios.</para>
+        /// <para>The storage space. Unit: GB. Used for prepaid storage or storage specification change scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -229,16 +189,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>The storage type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PSL5: high performance.</description></item>
-        /// <item><description>PSL4: standard.</description></item>
-        /// <item><description>ESSDPL0</description></item>
-        /// <item><description>ESSDPL1</description></item>
-        /// <item><description>ESSDPL2</description></item>
-        /// <item><description>ESSDPL3</description></item>
-        /// <item><description>ESSDAUTOPL</description></item>
-        /// </list>
+        /// <para>The storage type. Valid values: PSL5 (premium performance), PSL4 (standard performance), ESSDPL0, ESSDPL1, ESSDPL2, ESSDPL3, and ESSDAUTOPL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PSL5</para>
@@ -248,7 +199,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Used together with Period. Valid for the BUY, CONVERT, and RENEW scenarios when the billing method is Prepaid.</para>
+        /// <para>The purchase duration. Used in combination with Period. Valid for the BUY, CONVERT, and RENEW scenarios when the billing method is Prepaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -258,7 +209,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. We recommend that you specify this parameter for the BUY scenario.</para>
+        /// <para>The zone ID. Recommended for the BUY scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

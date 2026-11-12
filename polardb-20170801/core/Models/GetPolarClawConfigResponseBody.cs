@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The configuration object.</para>
+        /// <para>The configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
-        /// <para>The configuration hash.</para>
+        /// <para>The configuration hash, which is used as an optimistic lock for subsequent patch operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>005b55a8e870aaf866598e48a6af0bdbfa3fef704770c5e1cbad99648beaa661</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The version of OpenClaw.</para>
+        /// <para>The OpenClaw version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026.3.28</para>

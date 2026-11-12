@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Changelog { get; set; }
 
             /// <summary>
-            /// <para>The version publish timestamp in Unix milliseconds.</para>
+            /// <para>The version release timestamp in Unix milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1767545394459</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The Skill author information.</para>
+        /// <para>The skill author information.</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Handle { get; set; }
 
             /// <summary>
-            /// <para>The profile picture URL.</para>
+            /// <para>The avatar URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://avatars.githubusercontent.com/u/58493?v=4">https://avatars.githubusercontent.com/u/58493?v=4</a></para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F45FFACC-xxx</para>
@@ -138,14 +138,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The core information of the Skill.</para>
+        /// <para>The core skill information.</para>
         /// </summary>
         [NameInMap("Skill")]
         [Validation(Required=false)]
         public DescribePolarClawSkillDetailResponseBodySkill Skill { get; set; }
         public class DescribePolarClawSkillDetailResponseBodySkill : TeaModel {
             /// <summary>
-            /// <para>The first publish timestamp in Unix milliseconds.</para>
+            /// <para>The initial release timestamp in Unix milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1767545394459</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The Skill identifier.</para>
+            /// <para>The skill identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>weather</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? Downloads { get; set; }
 
                 /// <summary>
-                /// <para>The total number of installations of all time.</para>
+                /// <para>The total number of historical installations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3787</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? InstallsAllTime { get; set; }
 
                 /// <summary>
-                /// <para>The current number of installations.</para>
+                /// <para>The number of current installations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3664</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The brief description.</para>
+            /// <para>The short description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Get current weather and forecasts (no API key required).</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// <para>The last update timestamp in Unix milliseconds.</para>
+            /// <para>The last updated timestamp in Unix milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1778485729679</para>

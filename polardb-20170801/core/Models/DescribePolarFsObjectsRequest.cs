@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The PolarFs instance ID.</para>
+        /// <para>The PolarFS instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

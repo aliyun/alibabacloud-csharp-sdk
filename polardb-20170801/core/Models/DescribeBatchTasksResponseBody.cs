@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task information.</para>
+        /// <para>The task details.</para>
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
         public List<DescribeBatchTasksResponseBodyTaskList> TaskList { get; set; }
         public class DescribeBatchTasksResponseBodyTaskList : TeaModel {
             /// <summary>
-            /// <para>The batch task ID.</para>
+            /// <para>The ID of the batch task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pcb-xxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of successful batch tasks.</para>
+            /// <para>The number of successful tasks in the batch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The task start time.</para>
+            /// <para>The start time of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-06 20:51:44</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TaskBegin { get; set; }
 
             /// <summary>
-            /// <para>The task end time.</para>
+            /// <para>The end time of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-06 22:43:26</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The total number of tasks that meet the filter conditions, regardless of pagination.</para>
+            /// <para>The total number of tasks that meet the specified conditions, regardless of pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The total number of tasks that meet the filter conditions, regardless of pagination.</para>
+        /// <para>The total number of tasks that meet the specified conditions, regardless of pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

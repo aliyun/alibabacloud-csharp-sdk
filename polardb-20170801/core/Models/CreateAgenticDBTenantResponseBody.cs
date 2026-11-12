@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAgenticDBTenantResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time is displayed in the ISO 8601 standard in the UTC time zone. The format is YYYY-MM-DDTHH:mm:ssZ, such as 2026-10-15T08:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-15T08:00:00Z</para>

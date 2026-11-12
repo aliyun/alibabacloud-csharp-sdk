@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteGlobalDatabaseNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GDN.</para>
+        /// <para>The ID of the global database network (GDN).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

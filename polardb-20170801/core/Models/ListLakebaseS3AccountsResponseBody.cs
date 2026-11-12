@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of S3 accounts.</para>
+        /// <para>The S3 accounts.</para>
         /// </summary>
         [NameInMap("S3Accounts")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The access key of the S3 account.</para>
+            /// <para>The AccessKey ID of the S3 account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accname</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string UserAccAk { get; set; }
 
             /// <summary>
-            /// <para>The secret key of the S3 account (displayed in masked format).</para>
+            /// <para>The AccessKey secret of the S3 account (masked).</para>
             /// 
             /// <b>Example:</b>
             /// <para>password***</para>

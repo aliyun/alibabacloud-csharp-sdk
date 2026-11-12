@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAgenticDBTenantApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
+        /// <para>The AgenticDB cluster ID, which starts with pagc-. You must first call CreateDBCluster and set AgenticDbType to dedicated and ServerlessType to AgileServerless to create an AgenticDB cluster, and then pass the returned DBClusterId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,8 +52,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the tenant. The name must be unique within the same cluster and be 2 to 64 characters in length.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The ID of the existing tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>t-4b83e0da66674951</para>
+        /// </summary>
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
+
+        /// <summary>
+        /// <para>The tenant name. It must be unique within the cluster and be 2 to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-tenant</para>

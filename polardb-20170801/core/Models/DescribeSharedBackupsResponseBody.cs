@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSharedBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of shared backup sets.</para>
+        /// <para>The list of shared backup sets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSharedBackupsResponseBodyItems> Items { get; set; }
         public class DescribeSharedBackupsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The end time of the backup, in UTC.</para>
+            /// <para>The end time of the backup. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-12T03:25:55Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BackupId { get; set; }
 
             /// <summary>
-            /// <para>The backup method. Only snapshot backup is supported. The value is fixed to <b>Snapshot</b>.</para>
+            /// <para>The data backup method. Only snapshot backups are supported. The value is fixed as <b>Snapshot</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Snapshot</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BackupMethod { get; set; }
 
             /// <summary>
-            /// <para>The backup mode. Valid values:</para>
+            /// <para>The backup mode. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><para><b>Automated</b>: automated backup</para>
-            /// </description></item>
-            /// <item><description><para><b>Manual</b>: manual backup</para>
-            /// </description></item>
+            /// <item><description><b>Automated</b>: automatic backup</description></item>
+            /// <item><description><b>Manual</b>: manual backup</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BackupMode { get; set; }
 
             /// <summary>
-            /// <para>The size of the backup set, in bytes.</para>
+            /// <para>The size of the backup file. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4639948800</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BackupSetSize { get; set; }
 
             /// <summary>
-            /// <para>The start time of the backup, in UTC.</para>
+            /// <para>The start time of the backup. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-15T07:30:05Z</para>
@@ -85,10 +83,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The backup status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Success</b>: The backup is complete.</para>
-            /// </description></item>
-            /// <item><description><para><b>Failed</b>: The backup failed.</para>
-            /// </description></item>
+            /// <item><description><b>Success</b>: The backup is completed.</description></item>
+            /// <item><description><b>Failed</b>: The backup failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BackupStatus { get; set; }
 
             /// <summary>
-            /// <para>The backup type. Only full backups are supported. The value is fixed to <b>FullBackup</b>.</para>
+            /// <para>The backup type. Only full backups are supported. The value is fixed as <b>FullBackup</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FullBackup</para>
@@ -109,12 +105,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BackupType { get; set; }
 
             /// <summary>
-            /// <para>The backup level. Valid values:</para>
+            /// <para>The backup set level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Level-1</b>: Level-1 backup.</para>
-            /// </description></item>
-            /// <item><description><para><b>Level-2</b>: Level-2 backup.</para>
-            /// </description></item>
+            /// <item><description><b>Level-1</b>: level-1 backup</description></item>
+            /// <item><description><b>Level-2</b>: level-2 backup</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BackupsLevel { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp of the consistent snapshot, in seconds.</para>
+            /// <para>The point in time of the consistent snapshot. The value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1589253947</para>
@@ -167,10 +161,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
-            /// </description></item>
-            /// <item><description><para><b>Prepaid</b>: prepaid (subscription)</para>
-            /// </description></item>
+            /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+            /// <item><description><b>Prepaid</b>: subscription</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -191,7 +183,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The Serverless type. A value of <b>AgileServerless</b> indicates a Serverless cluster, while an empty value indicates a standard cluster.</para>
+            /// <para>The Serverless type. A value of <b>AgileServerless</b> indicates that the current cluster is a Serverless cluster. An empty value indicates that the current cluster is one of the common clusters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AgileServerless</para>
@@ -211,7 +203,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ShareType { get; set; }
 
             /// <summary>
-            /// <para>The UID of the account that shared the backup set.</para>
+            /// <para>The UID of the sharer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>170*************</para>
@@ -253,7 +245,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total record count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>

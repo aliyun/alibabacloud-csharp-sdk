@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the resources are sufficient. This parameter is returned only when DryRun is set to true.</para>
+        /// <para>Indicates whether the resources are sufficient. This parameter is returned only when <c>DryRun</c> is set to <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

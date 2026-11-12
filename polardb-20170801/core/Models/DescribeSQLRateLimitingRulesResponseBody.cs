@@ -11,13 +11,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DescribeSQLRateLimitingRulesResponseBody : TeaModel {
         /// <summary>
         /// <para>The result set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSQLRateLimitingRulesResponseBodyData Data { get; set; }
         public class DescribeSQLRateLimitingRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of rules.</para>
+            /// <para>The rule list.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[]</para>
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
@@ -26,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned for the current request. Default value: 10.</para>
+        /// <para>The maximum number of entries returned in this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -36,9 +42,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request is successful, \<c>Successful\\</c> is returned. If the request fails, an error message is returned.</para>
+        /// <para>If the request is successful, Successful is returned. If the request fails, an exception message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh0vHYf39hc0J5qELgsazkBk</para>

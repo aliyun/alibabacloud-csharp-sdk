@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format in UTC.</para>
+        /// <para>The end time of the query. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-15T15:00:00Z</para>
@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -38,6 +41,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public class DescribeAIDBClusterTaskMetricsResponseBodyItems : TeaModel {
             /// <summary>
             /// <para>The list of metrics.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[]</para>
             /// </summary>
             [NameInMap("SlsMetricsItems")]
             [Validation(Required=false)]
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public double? Epoch { get; set; }
 
                 /// <summary>
-                /// <para>The total number of steps.</para>
+                /// <para>The global step.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -75,6 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
                 /// <summary>
                 /// <para>The log time.</para>
+                /// <para>The time is in the ISO 8601 format and the UTC time zone. The seconds part can include a fractional component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-15T14:16:49.52140317Z</para>
@@ -104,7 +111,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string MetricType { get; set; }
 
                 /// <summary>
-                /// <para>The specific point in time when the monitoring metric was collected. The value is a UNIX timestamp. Unit: seconds.</para>
+                /// <para>The specific time point of the monitoring metrics. The format is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1742090703</para>
@@ -128,7 +135,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MetricType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. The default value is 1.</para>
+        /// <para>The page number of the returned page. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -138,7 +145,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the query conditions. This parameter is optional and is not returned by default.</para>
+        /// <para>The total number of entries that meet the query conditions. This parameter is optional and is not returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -168,7 +175,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RelativeDbClusterId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E71541A-6007-4DCC-A38A-F872C31FEB45</para>
@@ -178,7 +185,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format in UTC.</para>
+        /// <para>The start time of the query. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-15T14:00:00Z</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The application cluster ID.</para>
+        /// <para>The ID of the application cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The user.</para>
+        /// <para>The consumer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-xxxxxxx</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Consumer { get; set; }
 
         /// <summary>
-        /// <para>The user group.</para>
+        /// <para>The consumer group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-xxxxxx</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerGroup { get; set; }
 
         /// <summary>
-        /// <para>The downsampling policy.</para>
+        /// <para>The downsampling strategy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>raw_sample</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Downsample { get; set; }
 
         /// <summary>
-        /// <para>The end step number.</para>
+        /// <para>The end step.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? EndStep { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</para>
+        /// <para>The end time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,12 +71,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The optional filter conditions for performance data, represented as a JSON object. If this parameter is not specified, no filtering is applied based on this condition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public Dictionary<string, object> Filter { get; set; }
 
         /// <summary>
-        /// <para>The data granularity of performance data. Valid values:</para>
+        /// <para>The performance data granularity. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>5</description></item>
         /// <item><description>30</description></item>
@@ -95,10 +101,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The performance metrics to query. Separate multiple values with commas (,).</para>
-        /// <remarks>
-        /// <para> You can specify up to 5 performance metrics.</para>
-        /// </remarks>
+        /// <para>The performance metrics to query. Separate multiple values with commas (,).
+        /// Note
+        /// You can specify up to 5 performance metrics.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data points to return.</para>
+        /// <para>The maximum number of points to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -129,7 +134,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelService { get; set; }
 
         /// <summary>
-        /// <para>The start step number.</para>
+        /// <para>The start step.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -139,7 +144,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StartStep { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

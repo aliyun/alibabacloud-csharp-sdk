@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<ListPolarClawBindingsResponseBodyBindings> Bindings { get; set; }
         public class ListPolarClawBindingsResponseBodyBindings : TeaModel {
             /// <summary>
-            /// <para>The agent ID.</para>
+            /// <para>The PolarClaw agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>work</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The account ID.</para>
+            /// <para>The channel account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F2007D3-7E74-4ECB-89A8-BF130D******</para>

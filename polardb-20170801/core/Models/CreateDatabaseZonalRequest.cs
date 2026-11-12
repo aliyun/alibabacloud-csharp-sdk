@@ -22,18 +22,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The permissions of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ReadWrite: read and write permissions.</para>
-        /// </description></item>
-        /// <item><description><para>ReadOnly: read-only permissions.</para>
-        /// </description></item>
-        /// <item><description><para>DMLOnly: DML permissions only.</para>
-        /// </description></item>
-        /// <item><description><para>DDLOnly: DDL permissions only.</para>
-        /// </description></item>
-        /// <item><description><para>ReadIndex: read-only and index permissions.</para>
-        /// </description></item>
+        /// <item><description>ReadWrite: read and write permissions.</description></item>
+        /// <item><description>ReadOnly: read-only permissions.</description></item>
+        /// <item><description>DMLOnly: DML-only permissions.</description></item>
+        /// <item><description>DDLOnly: DDL-only permissions.</description></item>
+        /// <item><description>ReadIndex: read and index permissions.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the default value is ReadWrite.</para>
+        /// <para>Default value: ReadWrite.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ReadWrite</para>
@@ -54,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CharacterSetName { get; set; }
 
         /// <summary>
-        /// <para>A client token to ensure request idempotence. The client generates this token. The token must be unique across requests. It is case-sensitive and can be up to 64 ASCII characters long.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and is case-sensitive. It can contain up to 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
@@ -64,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The locale setting. This specifies the collation for the new database.</para>
+        /// <para>The locale setting used to specify the collation of the new database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C</para>
@@ -74,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Collate { get; set; }
 
         /// <summary>
-        /// <para>The locale setting. This specifies the character classification for the database.</para>
+        /// <para>The locale setting used to specify the character classification of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C</para>
@@ -84,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Ctype { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the PolarDB on ENS edge cluster. Regular PolarDB cluster IDs are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,10 +92,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The description of the database. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// </description></item>
-        /// <item><description><para>It must be 2 to 256 characters in length.</para>
-        /// </description></item>
+        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>It must be 2 to 256 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,10 +106,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the database. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It must consist of lowercase letters, digits, hyphens (-), and underscores (_).</para>
-        /// </description></item>
-        /// <item><description><para>It must start with a letter and end with a letter or a digit. The name can be up to 64 characters long.</para>
-        /// </description></item>
+        /// <item><description>It can contain lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>It must start with a letter and end with a letter or digit. It can be up to 64 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

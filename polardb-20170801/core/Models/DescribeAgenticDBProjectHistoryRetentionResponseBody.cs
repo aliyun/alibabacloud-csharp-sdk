@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The effective history data retention period for the project. For the actual recoverable range, query the branch recovery window.</para>
+        /// <para>The effective history data retention period of the project. To check the actual recoverable range, query the branch recovery window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>604800</para>

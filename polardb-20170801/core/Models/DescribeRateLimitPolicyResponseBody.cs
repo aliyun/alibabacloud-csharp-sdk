@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeRateLimitPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of rate limit policy objects.</para>
+        /// <para>The list of throttling policies.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-19T16:47:25+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the gateway instance.</para>
+            /// <para>The gateway instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-xxxxxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rate limit policy.</para>
+            /// <para>The ID of the throttling policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>02eccf7c61cf4d05a543075ee907f3**</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The maximum requests per minute (RPM).</para>
+            /// <para>The limit on the number of requests per minute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RateLimitRpm { get; set; }
 
             /// <summary>
-            /// <para>The maximum tokens per minute (TPM).</para>
+            /// <para>The limit on the number of tokens per minute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RateLimitTpm { get; set; }
 
             /// <summary>
-            /// <para>The ID of the object within the policy\&quot;s scope, such as a consumer group or a consumer.</para>
+            /// <para>The ID of the throttling dimension, which is the consumer group ID or consumer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-xxxxxxx</para>
@@ -97,11 +97,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ScopeRefId { get; set; }
 
             /// <summary>
-            /// <para>The scope of the policy. Valid values:</para>
+            /// <para>The throttling dimension. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ConsumerGroup</b>: The policy applies to a consumer group.</para>
+            /// <item><description><para><b>ConsumerGroup</b>: consumer group</para>
             /// </description></item>
-            /// <item><description><para><b>Consumer</b>: The policy applies to a specific consumer.</para>
+            /// <item><description><para><b>Consumer</b>: consumer</para>
             /// </description></item>
             /// </list>
             /// 
@@ -113,12 +113,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ScopeType { get; set; }
 
             /// <summary>
-            /// <para>The status of the policy. Valid values:</para>
+            /// <para>The status of the throttling policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Enabled</b>: The policy is enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>Disabled</b>: The policy is disabled.</para>
-            /// </description></item>
+            /// <item><description><b>Enabled</b>: enabled</description></item>
+            /// <item><description><b>Disabled</b>: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The returned page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -141,7 +139,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -151,7 +149,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -171,7 +169,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

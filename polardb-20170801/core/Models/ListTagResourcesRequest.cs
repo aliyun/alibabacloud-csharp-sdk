@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>A token to retrieve the next page of results. You do not need to specify this parameter for the first request. If the first request does not return all results, the response returns a token. You can use this token in the next request to continue the query.</para>
+        /// <para>The token used to return more results. You do not need to specify this parameter for the first query. If the first query does not return all results, you can pass the token returned in the previous response to the next query to obtain more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707*******</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the available region IDs.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,18 +39,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a cluster. You can specify multiple cluster IDs to query the tags of multiple clusters.</para>
+        /// <para>The ID of the target cluster. To query the tags of multiple clusters, click <b>Add</b> to add more cluster IDs.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>You must specify either the <c>ResourceId.N</c> parameter or the <c>Tag.N.Key</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify the <c>ResourceId.N</c> parameter, you can add up to 50 cluster IDs.</para>
-        /// </description></item>
+        /// <item><description>You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</description></item>
+        /// <item><description>If you specify the ResourceId.N parameter, you can add up to 50 cluster IDs at a time.</description></item>
         /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-****************</para>
+        /// <para>[&quot;pc-***************&quot;]</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -83,13 +81,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of a tag. You can specify multiple tags to query for resources that have all of the specified tags.</para>
+            /// <para>The tag key. To query the details of all target clusters under multiple tags, click <b>Add</b> to add more tags.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>You must specify either the <c>ResourceId.N</c> parameter or the <c>Tag.N.Key</c> parameter.</para>
-            /// </description></item>
-            /// <item><description><para>If you specify the <c>Tag.N.Key</c> parameter, you can add up to 20 tag pairs.</para>
-            /// </description></item>
+            /// <item><description>You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</description></item>
+            /// <item><description>If you specify the Tag.N.Key parameter, you can add up to 20 tag key-value pairs at a time.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value that corresponds to the tag key. An empty string is allowed.</para>
+            /// <para>The tag value corresponding to the tag key. An empty string is allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

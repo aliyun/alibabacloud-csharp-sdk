@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTaskLogFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the query. The time is displayed in the ISO 8601 standard in the <c>YYYY-MM-DDTHH:mm:ssZ</c> format. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-15T15:00:00Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeAIDBClusterTaskLogFilesResponseBodyItemsSlsLogItems> SlsLogItems { get; set; }
             public class DescribeAIDBClusterTaskLogFilesResponseBodyItemsSlsLogItems : TeaModel {
                 /// <summary>
-                /// <para>The time when the log was recorded.</para>
+                /// <para>The log time. The time is displayed in the ISO 8601 standard in UTC. The seconds can contain a fractional part.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-15T14:13:50.830295892Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The specific point in time when the metric was recorded. The value is a UNIX timestamp. Unit: seconds.</para>
+                /// <para>The specific time point of the monitoring metrics. The format is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765677660</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the query conditions. This parameter is optional and may not be returned.</para>
+        /// <para>The total number of entries that meet the query conditions. This parameter is optional and may not be returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records returned for the current request.</para>
+        /// <para>The maximum number of entries returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E2FE3BB-C677-5FF9-9FC5-9CF364BD6BE5</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is displayed in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-15T14:00:00Z</para>

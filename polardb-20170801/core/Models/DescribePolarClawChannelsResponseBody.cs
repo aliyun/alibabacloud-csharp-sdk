@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>A list of PolarClaw channel objects.</para>
+        /// <para>The list of channels.</para>
         /// </summary>
         [NameInMap("Channels")]
         [Validation(Required=false)]
         public List<DescribePolarClawChannelsResponseBodyChannels> Channels { get; set; }
         public class DescribePolarClawChannelsResponseBodyChannels : TeaModel {
             /// <summary>
-            /// <para>A list of account objects for the channel.</para>
+            /// <para>The list of channel accounts.</para>
             /// </summary>
             [NameInMap("Accounts")]
             [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>A list of issues related to the account.</para>
+                /// <para>The list of account issues.</para>
                 /// </summary>
                 [NameInMap("Issues")]
                 [Validation(Required=false)]
                 public List<string> Issues { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp (in milliseconds) of the last inbound message.</para>
+                /// <para>The timestamp of the last inbound message in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public long? LastInboundAt { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp (in milliseconds) of the last outbound message.</para>
+                /// <para>The timestamp of the last outbound message in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? Configured { get; set; }
 
             /// <summary>
-            /// <para>The default account ID for the channel.</para>
+            /// <para>The default account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response message. A value of <c>successful</c> indicates that the request succeeded.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The lock status of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>UnLock</b>: The account is not locked.</para>
-        /// </description></item>
-        /// <item><description><para><b>Lock</b>: The account is locked.</para>
-        /// </description></item>
+        /// <item><description><b>UnLock</b>: Unlocked.</description></item>
+        /// <item><description><b>Lock</b>: Locked.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountLockState { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +36,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the account. The time must be in the \<c>YYYY-MM-DDThh:mm:ssZ\\</c> format.</para>
+        /// <para>The expiration time of the account, in the YYYY-MM-DDThh:mm:ssZ format. The account expires at the specified time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-09-17T10:00:00Z</para>
@@ -48,9 +46,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountPasswordValidTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the details of all clusters in a region, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view all clusters in the target region, including their cluster IDs.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>This operation is supported only for PostgreSQL clusters (DBType=PostgreSQL). Before calling this operation, you can query the DBType and DBClusterStatus by using DescribeDBClusters to confirm that the cluster is in the Running state.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

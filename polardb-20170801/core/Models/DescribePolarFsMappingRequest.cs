@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarFsMappingRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</para>
-        /// </remarks>
+        /// <para>The cluster ID. This parameter is required. If you do not specify this parameter, the API returns InvalidDBClusterId.Malformed (HTTP 400). You can call the DescribeDBClusters operation to query the cluster IDs within your account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>

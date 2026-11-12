@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActivationCodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of activation codes</para>
+        /// <para>The list of activation codes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeActivationCodesResponseBodyItems> Items { get; set; }
         public class DescribeActivationCodesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Effective period</para>
+            /// <para>The effective period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16 16:46:20</para>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ActivateAt { get; set; }
 
             /// <summary>
-            /// <para>Activation code description</para>
+            /// <para>The description of the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testCode</para>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Expiration time</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2054-10-16 16:46:20</para>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ExpireAt { get; set; }
 
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16 16:46:20</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>Update time</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16 16:46:20</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Activation code ID</para>
+            /// <para>The ID of the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>MAC address</para>
+            /// <para>The MAC address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12:34:56:78:98:00</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MacAddress { get; set; }
 
             /// <summary>
-            /// <para>Activation code name</para>
+            /// <para>The name of the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Unique identifier in the database</para>
+            /// <para>The unique identifier of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890123456</para>
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of records on the current page</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The unique ID generated for this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65D7ACE6-4A61-4B6E-B357-8CB24A******</para>
@@ -139,7 +142,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

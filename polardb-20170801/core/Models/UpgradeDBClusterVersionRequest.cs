@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpgradeDBClusterVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, such as the cluster ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +24,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately run the kernel upgrade task. Valid values:</para>
+        /// <para>Specifies whether to execute the kernel version upgrade immediately or on a schedule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b> (default): The upgrade is executed on a schedule.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: The upgrade is executed immediately.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is not required when you call the operation.</para>
+        /// <para>You do not need to specify this parameter when you invoke this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,11 +51,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The latest start time to run the task that updates the kernel version of the cluster. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The latest time to start the scheduled task. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format and displayed in UTC.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</description></item>
-        /// <item><description>If you specify <c>PlannedStartTime</c> but do not specify PlannedEndTime, the latest start time of the task is <c>PlannedEndTime + 30 minutes</c>. For example, if you set <c>PlannedStartTime</c> to <c>2021-01-14T09:00:00Z</c> and do not specify PlannedEndTime, the latest start time of the task is set to <c>2021-01-14T09:30:00Z</c>.</description></item>
+        /// <item><description>The latest time must be at least 30 minutes later than the start time.</description></item>
+        /// <item><description>If you specify PlannedStartTime but do not specify this parameter, the latest time to start the task defaults to the start time plus 30 minutes. For example, if PlannedStartTime is set to <c>2021-01-14T09:00:00Z</c> and this parameter is left empty, the task starts at <c>2021-01-14T09:30:00Z</c> at the latest.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -62,15 +67,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest start time to run the task that updates the kernel version of the cluster. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The earliest time to start the scheduled Milvus version upgrade task. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format and displayed in UTC.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The earliest start time of the task can be a point in time within the next 72 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in time from <c>2021-01-14T09:00:00Z</c> to <c>2021-01-17T09:00:00Z</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, the kernel update task runs immediately after you submit the request.</para>
-        /// </description></item>
+        /// <item><description>The start time must be within the next 72 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, the allowed start time ranges from <c>2021-01-14T09:00:00Z</c> to <c>2021-01-17T09:00:00Z</c>.</description></item>
+        /// <item><description>If you leave this parameter empty, the Milvus version upgrade task is executed immediately by default.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-14T09:00:00Z</para>
@@ -88,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the db version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</para>
+        /// <para>The VersionCode of the target database version. You can obtain the value from the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20230707</para>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetDBRevisionVersionCode { get; set; }
 
         /// <summary>
-        /// <para>The code of the proxy version to which you want to upgrade the cluster. You can call the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation to query the version code.</para>
+        /// <para>The VersionCode of the target PolarProxy version. You can obtain the value from the <a href="https://help.aliyun.com/document_detail/2319145.html">DescribeDBClusterVersion</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20240702</para>
@@ -108,11 +111,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetProxyRevisionVersionCode { get; set; }
 
         /// <summary>
-        /// <para>The upgrade tag. The value is fixed as <b>INNOVATE</b>.</para>
+        /// <para>The kernel version upgrade label. Set the value to <b>INNOVATE</b>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is applicable only when you upgrade PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.</description></item>
-        /// <item><description>If you specify this parameter, you must set <c>UpgradePolicy</c> to <b>COLD</b>.</description></item>
+        /// <item><description>This parameter applies only to upgrades from PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.</description></item>
+        /// <item><description>When you specify this parameter, you must set UpgradePolicy to <b>COLD</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -124,10 +127,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UpgradeLabel { get; set; }
 
         /// <summary>
-        /// <para>The engine version upgrade policy. Valid values:</para>
+        /// <para>The kernel version upgrade policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HOT</b>: hot upgrade.</description></item>
-        /// <item><description><b>COLD</b>: cold upgrade. Only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.</description></item>
+        /// <item><description><para><b>HOT</b>: Hot upgrade.</para>
+        /// </description></item>
+        /// <item><description><para><b>COLD</b>: Cold upgrade. Currently, only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,11 +143,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UpgradePolicy { get; set; }
 
         /// <summary>
-        /// <para>The update type. Valid values:</para>
+        /// <para>The upgrade type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PROXY</b>: specifies to upgrade PloarProxy.</description></item>
-        /// <item><description><b>DB</b>: specifies to upgrade the kernel version.</description></item>
-        /// <item><description><b>ALL</b>: specifies to upgrade both PloarProxy and kernel version.</description></item>
+        /// <item><description><para><b>PROXY</b>: Upgrades only PolarProxy.</para>
+        /// </description></item>
+        /// <item><description><para><b>DB</b>: Upgrades only the database engine.</para>
+        /// </description></item>
+        /// <item><description><para><b>ALL</b> (default): Upgrades both PolarProxy and the database engine.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,21 +20,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of zones.</para>
+        /// <para>The list of zones.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<DescribeZonesResponseBodyZones> Zones { get; set; }
         public class DescribeZonesResponseBodyZones : TeaModel {
             /// <summary>
-            /// <para>The enumeration of statuses. Valid values:</para>
+            /// <para>The enumeration values for various availability states. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>UnSet</b>: The zone is not open for use.</para>
-            /// </description></item>
-            /// <item><description><para><b>SoldOut</b>: The resources in the zone are sold out.</para>
-            /// </description></item>
-            /// <item><description><para><b>WithStock</b>: The zone has available resources.</para>
-            /// </description></item>
+            /// <item><description><b>UnSet</b>: not available</description></item>
+            /// <item><description><b>SoldOut</b>: sold out</description></item>
+            /// <item><description><b>WithStock</b>: in stock</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,12 +52,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The status of the zone. Valid values:</para>
+            /// <para>The zone status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ON</b>: The zone is available.</para>
-            /// </description></item>
-            /// <item><description><para><b>OFF</b>: The zone is unavailable.</para>
-            /// </description></item>
+            /// <item><description><b>ON</b>: available</description></item>
+            /// <item><description><b>OFF</b>: unavailable</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +66,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-h</para>

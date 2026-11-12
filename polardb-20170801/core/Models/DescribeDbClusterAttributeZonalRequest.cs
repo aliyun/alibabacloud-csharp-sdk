@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDbClusterAttributeZonalRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the edge cluster. You can first call the DescribeDBClustersZonal operation to list available edge clusters, and then use the returned DBClusterId to query the properties. The IDs of common clusters are not applicable. If you do not have an edge cluster, you can call the CreateDBCluster operation and specify CloudProvider=ENS and EnsRegionId to create one. If you do not have an edge cluster, you can call the CreateDBCluster operation and specify the CloudProvider=ENS and EnsRegionId parameters to create one.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

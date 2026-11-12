@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAIDBClusterModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request is a dry run.</para>
+        /// <para>Indicates whether the request is a preview request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The model type of the instance.</para>
+        /// <para>The instance model type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3AA6E0E4-1234-5678-90AB-1234567890AB</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The parsed target model name.</para>
+        /// <para>The resolved target model name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qwen3-32B</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetModelName { get; set; }
 
         /// <summary>
-        /// <para>The parsed target OSS path.</para>
+        /// <para>The resolved target OSS path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/my-model-bucket/models/qwen3</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetOssPath { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous task. This parameter is empty when DryRun is set to true.</para>
+        /// <para>The asynchronous task ID. This parameter is empty when DryRun is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The total number of modification batches.</para>
+        /// <para>The total number of change batches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? TotalMsds { get; set; }
 
         /// <summary>
-        /// <para>The modification warnings returned by the upstream service. The caller must display these warnings.</para>
+        /// <para>The change warnings returned by the upstream service. Callers must display these warnings.</para>
         /// </summary>
         [NameInMap("Warnings")]
         [Validation(Required=false)]

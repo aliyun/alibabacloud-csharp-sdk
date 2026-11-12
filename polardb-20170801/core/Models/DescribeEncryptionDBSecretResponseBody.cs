@@ -31,7 +31,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>Indicates whether encryption is enabled. Valid values:</para>
-        /// <para>Enabled: Encryption is enabled. Disabled: Encryption is disabled.</para>
+        /// <list type="bullet">
+        /// <item><description>Enabled: Encryption is enabled.</description></item>
+        /// <item><description>Disabled: Encryption is disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EncryptionDBStatus { get; set; }
 
         /// <summary>
-        /// <para>The custom key ID.</para>
+        /// <para>The ID of the custom key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2a4f4ac2-<b><b>-</b></b>-<b><b>-</b></b>********</para>
@@ -53,10 +56,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The status of the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enabled</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Disabled</b></para>
-        /// </description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the model service.</para>
+        /// <para>The model status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>

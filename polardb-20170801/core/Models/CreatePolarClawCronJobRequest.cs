@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarClawCronJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the specified execution agent.</para>
+        /// <para>The specified execution agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public CreatePolarClawCronJobRequestDelivery Delivery { get; set; }
         public class CreatePolarClawCronJobRequestDelivery : TeaModel {
             /// <summary>
-            /// <para>The channel account ID.</para>
+            /// <para>The ID of the channel account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The delivery mode. Valid values: none, announce, webhook.</para>
+            /// <para>The delivery mode. Valid values: none, announce, and webhook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>announce</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public CreatePolarClawCronJobRequestFailureAlert FailureAlert { get; set; }
         public class CreatePolarClawCronJobRequestFailureAlert : TeaModel {
             /// <summary>
-            /// <para>The channel account ID.</para>
+            /// <para>The ID of the channel account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The number of consecutive failures before an alert is triggered.</para>
+            /// <para>The number of consecutive failures after which an alert is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Kind&quot;:&quot;agentTurn&quot;,&quot;Message&quot;:&quot;Generate the daily report.&quot;}</para>
+        /// <para>{&quot;Kind&quot;:&quot;systemEvent&quot;,&quot;Text&quot;:&quot;Generate the daily report.&quot;}</para>
         /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<string> Fallbacks { get; set; }
 
             /// <summary>
-            /// <para>The payload type. Valid values: agentTurn, systemEvent.</para>
+            /// <para>The payload type. Valid values: agentTurn and systemEvent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>systemEvent</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Text { get; set; }
 
             /// <summary>
-            /// <para>The thinking level. Valid values: off, minimal, low, medium, high, xhigh.</para>
+            /// <para>The thinking level. Valid values: off, minimal, low, medium, high, and xhigh.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xhigh</para>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to run it once immediately after creation. Default value: false.</para>
+        /// <para>Specifies whether to run the task immediately after creation. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Expr { get; set; }
 
             /// <summary>
-            /// <para>The schedule type. Valid values: cron, every, at.</para>
+            /// <para>The schedule type. Valid values: cron, every, and at.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cron</para>
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? StaggerMs { get; set; }
 
             /// <summary>
-            /// <para>The IANA time zone.</para>
+            /// <para>The time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionKey { get; set; }
 
         /// <summary>
-        /// <para>The session target. Valid values: main, isolated, current.</para>
+        /// <para>The execution session target. If set to main, it indicates the main session, and Payload.Kind must be systemEvent. If set to isolated or current, it supports agentTurn or systemEvent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionTarget { get; set; }
 
         /// <summary>
-        /// <para>The wake mode. Valid values: now, next-heartbeat.</para>
+        /// <para>The wake mode. Valid values: now and next-heartbeat.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

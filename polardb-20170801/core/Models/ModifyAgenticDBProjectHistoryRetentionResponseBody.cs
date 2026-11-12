@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAgenticDBProjectHistoryRetentionResponseBody : TeaModel {
         /// <summary>
-        /// <para>DBClusterId</para>
+        /// <para>The database cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pagc-bp1abcdef1234567</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The current effective history retention period of the project. To check the actual recoverable range, query the branch recovery window.</para>
+        /// <para>The effective retention period for historical data, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>604800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? HistoryRetentionSeconds { get; set; }
 
         /// <summary>
-        /// <para>ProjectId</para>
+        /// <para>The project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proj-a1b2c3d4e5f6</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>TenantId</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-4b83e0da66674951</para>

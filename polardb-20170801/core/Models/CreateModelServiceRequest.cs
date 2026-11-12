@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateModelServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The API key for the model service.</para>
+        /// <para>The API key of the model service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>6c4b1f0317cd4fd7a5b446d3503d**</para>
         /// </summary>
         [NameInMap("ApiKey")]
         [Validation(Required=false)]
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The URL of the upstream service.</para>
+        /// <para>The address of the upstream service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para><a href="https://example.com/v1">https://example.com/v1</a></para>
         /// </summary>
         [NameInMap("BaseUrl")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The billing cost for input, measured in points per one million tokens.</para>
+        /// <para>The number of input points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The billing cost for output, measured in points per one million tokens.</para>
+        /// <para>The number of output points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing cost per request, measured in points.</para>
+        /// <para>The number of requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestCostPoints { get; set; }
 
         /// <summary>
-        /// <para>The model service provider. The example value <c>bailian</c> is a pinyin-based identifier that corresponds to the product name Model Studio.</para>
+        /// <para>The model service provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

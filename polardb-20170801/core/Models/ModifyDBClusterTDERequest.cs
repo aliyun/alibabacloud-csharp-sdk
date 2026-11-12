@@ -21,15 +21,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically rotate the TDE key of the instance during the next O\&amp;M window after a new version of the KMS key is available. This parameter is valid only for custom keys.</para>
+        /// <para>Specifies whether to allow the TDE key of the instance to automatically rotate at the nearest maintenance window after the rotation period when a KMS key version change is detected. This parameter is supported only for custom keys. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Allows automatic rotation.</description></item>
+        /// <item><description><b>false</b>: Does not allow automatic rotation.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is supported only when the database engine is compatible with PostgreSQL or Oracle.</para>
+        /// <para>This parameter is supported only when the database engine is PostgreSQL-compatible or Oracle-compatible.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,15 +38,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EnableAutomaticRotation { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically encrypt all new tables. Valid values:</para>
+        /// <para>Specifies whether to automatically encrypt all newly created tables. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ON</b></para>
+        /// <item><description><para><b>ON</b>: Enables automatic encryption.</para>
         /// </description></item>
-        /// <item><description><para><b>OFF</b></para>
+        /// <item><description><para><b>OFF</b>: Disables automatic encryption.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is valid only when the database engine is compatible with MySQL.</para>
+        /// <para>This parameter takes effect only when the database engine is MySQL-compatible.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Global Resource Descriptor of the role. You can use this parameter to specify a role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</para>
+        /// <para>The global resource descriptor of the role, used to specify a specific role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</para>

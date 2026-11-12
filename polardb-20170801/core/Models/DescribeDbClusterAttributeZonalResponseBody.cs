@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDbClusterAttributeZonalResponseBody : TeaModel {
         /// <summary>
-        /// <para>The start time of the free AI feature. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The start time of the free AI feature. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-13T01:20:28Z</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The AI node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SearchNode</b>: Search node.</description></item>
-        /// <item><description><b>DLNode</b>: AI node.</description></item>
+        /// <item><description><b>SearchNode</b>: search node</description></item>
+        /// <item><description><b>DLNode</b>: AI node</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para>The minor version update policy. Valid values:</para>
+        /// <para>The minor version update method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Auto: Automatic update.</description></item>
-        /// <item><description>Manual: Manual update.</description></item>
+        /// <item><description>Auto: automatic update</description></item>
+        /// <item><description>Manual: manual update</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,27 +65,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The maximum number of blktags in the file system.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7,864,320</para>
+        /// <para>7864320</para>
         /// </summary>
         [NameInMap("BlktagTotal")]
         [Validation(Required=false)]
         public long? BlktagTotal { get; set; }
 
         /// <summary>
-        /// <para>The number of used blktags.</para>
+        /// <para>The current blktag usage.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5,242,880</para>
+        /// <para>5242880</para>
         /// </summary>
         [NameInMap("BlktagUsed")]
         [Validation(Required=false)]
         public long? BlktagUsed { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether I/O performance burst is enabled for ESSD AutoPL cloud disks. Valid values:</para>
+        /// <para>Indicates whether I/O performance burst is enabled for the ESSD AutoPL cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: enabled</description></item>
+        /// <item><description><b>false</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The size of the compressed storage data.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the storage compression feature is enabled for the cluster.</para>
+        /// <para>This parameter is returned only when storage compression is enabled for the cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? CompressStorageUsed { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the cluster was created. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-08-14T05:58:42Z</para>
@@ -199,20 +199,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b>: The cluster is being created.</description></item>
-        /// <item><description><b>Running</b>: The cluster is running.</description></item>
-        /// <item><description><b>Deleting</b>: The cluster is being released.</description></item>
-        /// <item><description><b>Rebooting</b>: The cluster is restarting.</description></item>
-        /// <item><description><b>DBNodeCreating</b>: Nodes are being increased.</description></item>
-        /// <item><description><b>DBNodeDeleting</b>: A node is being deleted.</description></item>
-        /// <item><description><b>ClassChanging</b>: The node specifications are being changed.</description></item>
-        /// <item><description><b>NetAddressCreating</b>: Network connectivity is being created.</description></item>
-        /// <item><description><b>NetAddressDeleting</b>: Network connectivity is being deleted.</description></item>
-        /// <item><description><b>NetAddressModifying</b>: Network connectivity is being modified. </description></item>
-        /// <item><description><b>Deleted</b>: The cluster is released.</description></item>
+        /// <item><description><b>Creating</b>: Creating.</description></item>
+        /// <item><description><b>Running</b>: Running.</description></item>
+        /// <item><description><b>Deleting</b>: Releasing.</description></item>
+        /// <item><description><b>Rebooting</b>: Restarting.</description></item>
+        /// <item><description><b>DBNodeCreating</b>: In progress to increase nodes.</description></item>
+        /// <item><description><b>DBNodeDeleting</b>: In progress to delete nodes.</description></item>
+        /// <item><description><b>ClassChanging</b>: Changing node specifications.</description></item>
+        /// <item><description><b>NetAddressCreating</b>: Creating network connectivity.</description></item>
+        /// <item><description><b>NetAddressDeleting</b>: In progress to delete network connectivity.</description></item>
+        /// <item><description><b>NetAddressModifying</b>: Modifying network connectivity. </description></item>
+        /// <item><description><b>Deleted</b>: Released.</description></item>
         /// </list>
         /// <list type="bullet">
-        /// <item><description><b>ClassChanged</b>: The upgrade or decrease the quota is completed and resources are being revoked.</description></item>
+        /// <item><description><b>ClassChanged</b>: Resources are being reclaimed after an upgrade or downgrade.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -224,13 +224,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The details of the nodes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("DBNodes")]
         [Validation(Required=false)]
         public List<DescribeDbClusterAttributeZonalResponseBodyDBNodes> DBNodes { get; set; }
         public class DescribeDbClusterAttributeZonalResponseBodyDBNodes : TeaModel {
             /// <summary>
-            /// <para>The number of CPU cores added by the automatic scaling of local resources.</para>
+            /// <para>The number of CPU cores added by second-level elastic scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -240,7 +243,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AddedCpuCores { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of the node.</para>
+            /// <para>The number of CPU cores for the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -250,7 +253,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CpuCores { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the cluster was created. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-14T05:58:42Z</para>
@@ -306,19 +309,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The node status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The node is being created. </description></item>
-            /// <item><description><b>Running</b>: The node is running. </description></item>
-            /// <item><description><b>Deleting</b>: The node is being deleted.  </description></item>
-            /// <item><description><b>Rebooting</b>: The node is restarting.  </description></item>
-            /// <item><description><b>DBNodeCreating</b>: Nodes are being increased.  </description></item>
-            /// <item><description><b>DBNodeDeleting</b>: A node is being deleted. </description></item>
-            /// <item><description><b>ClassChanging</b>: The node specifications are being changed.  </description></item>
-            /// <item><description><b>NetAddressCreating</b>: Network connectivity is being created.  </description></item>
-            /// <item><description><b>NetAddressDeleting</b>: Network connectivity is being deleted.  </description></item>
-            /// <item><description><b>NetAddressModifying</b>: Network connectivity is being modified.</description></item>
-            /// <item><description><b>MinorVersionUpgrading</b>: The minor version is being upgraded.</description></item>
-            /// <item><description><b>Maintaining</b>: The instance is under maintenance.  </description></item>
-            /// <item><description><b>Switching</b>: A switchover is in progress.</description></item>
+            /// <item><description><b>Creating</b>: Creating. </description></item>
+            /// <item><description><b>Running</b>: Running. </description></item>
+            /// <item><description><b>Deleting</b>: In progress to delete.  </description></item>
+            /// <item><description><b>Rebooting</b>: Restarting.  </description></item>
+            /// <item><description><b>DBNodeCreating</b>: In progress to increase nodes.  </description></item>
+            /// <item><description><b>DBNodeDeleting</b>: In progress to delete nodes. </description></item>
+            /// <item><description><b>ClassChanging</b>: Changing node specifications.  </description></item>
+            /// <item><description><b>NetAddressCreating</b>: Creating network connectivity.  </description></item>
+            /// <item><description><b>NetAddressDeleting</b>: In progress to delete network connectivity.  </description></item>
+            /// <item><description><b>NetAddressModifying</b>: Modifying network connectivity.</description></item>
+            /// <item><description><b>MinorVersionUpgrading</b>: Minor version upgrade in progress.</description></item>
+            /// <item><description><b>Maintaining</b>: Instance maintenance in progress.  </description></item>
+            /// <item><description><b>Switching</b>: Switching.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -329,7 +332,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeStatus { get; set; }
 
             /// <summary>
-            /// <para>The failover priority. Each node has a failover priority, which determines the probability of the node being elected as the primary node during a failover. A higher value indicates a higher priority.
+            /// <para>The failover priority. Each node has a failover priority, which determines the probability of the node being elected as the primary node during a failover. A larger value indicates a higher priority.
             /// Valid values: 1 to 15.</para>
             /// 
             /// <b>Example:</b>
@@ -340,7 +343,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? FailoverPriority { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the hot standby feature is enabled. Valid values:</para>
+            /// <para>Indicates whether hot standby is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>ON</b>: Enabled.</para>
             /// </description></item>
@@ -356,7 +359,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string HotReplicaMode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the In-Memory Column Index (IMCI) feature is enabled. Valid values:</para>
+            /// <para>Specifies whether the In-Memory Column Index is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>ON</b>: Enabled.</para>
             /// </description></item>
@@ -372,7 +375,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ImciSwitch { get; set; }
 
             /// <summary>
-            /// <para>The primary node ID of the Multi-master Cluster Edition.</para>
+            /// <para>The ID of the primary node in the Multi-master Cluster Edition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pi-bp18z52akld3*****</para>
@@ -412,7 +415,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MemorySize { get; set; }
 
             /// <summary>
-            /// <para>The name of the hot replica corresponding to the node in the hot standby storage and compute architecture.</para>
+            /// <para>The name of the compute hot replica corresponding to the node in the hot standby storage and compute architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pi-bp18z52mirror*****</para>
@@ -422,7 +425,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MirrorInsName { get; set; }
 
             /// <summary>
-            /// <para>MultiMasterLocalStandby</para>
+            /// <para>The identifier of the local read-only node in the multi-master architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MultiMasterLocalStandby</para>
@@ -432,7 +435,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MultiMasterLocalStandby { get; set; }
 
             /// <summary>
-            /// <para>MultiMasterPrimaryNode</para>
+            /// <para>The identifier of the primary node in the multi-master architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MultiMasterPrimaryNode</para>
@@ -468,7 +471,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RemoteMemorySize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</para>
+            /// <para>Specifies whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>ON</b>: Enabled.</para>
             /// </description></item>
@@ -510,7 +513,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ServerlessType { get; set; }
 
             /// <summary>
-            /// <para>The zone where the node is deployed. This parameter is mainly used for resource symmetry.
+            /// <para>Indicates whether the node is in the primary zone or secondary zone. This is mainly used for resource symmetry.
             /// Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Primary: The primary zone.</description></item>
@@ -525,7 +528,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SubCluster { get; set; }
 
             /// <summary>
-            /// <para>SubGroupDescription</para>
+            /// <para>The description of the node subgroup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SubGroupDescription</para>
@@ -576,7 +579,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about how to upgrade the minor engine version, see <a href="https://help.aliyun.com/document_detail/158572.html">Upgrade minor engine versions</a>.</description></item>
+        /// <item><description>For more information about how to upgrade the minor engine version, see <a href="https://help.aliyun.com/document_detail/158572.html">Version upgrade</a>.</description></item>
         /// <item><description>This parameter is returned only when the database engine type (<b>DBType</b>) is <b>MySQL</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -599,10 +602,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? DataLevel1BackupChainSize { get; set; }
 
         /// <summary>
-        /// <para>The data replication relationship pattern. Valid values:</para>
+        /// <para>The data synchronization mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AsyncSync</b>: Asynchronous synchronization.</description></item>
-        /// <item><description><b>SemiSync</b>: Semi-synchronous synchronization.</description></item>
+        /// <item><description><b>AsyncSync</b>: Asynchronous.</description></item>
+        /// <item><description><b>SemiSync</b>: Semi-synchronous.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -639,7 +642,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The expiration time of the cluster.</para>
         /// <remarks>
-        /// <para>A specific value is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). An empty value is returned for clusters whose billing method is <b>Postpaid</b> (pay-as-you-go). The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>A specific value is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). For <b>Postpaid</b> (pay-as-you-go) clusters, an empty value is returned. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format (UTC).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -663,7 +666,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Expired { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to replenish the resources of the new primary database after a cross-zone switch. Valid values:</para>
+        /// <para>Specifies whether resources are supplemented for the new primary database after a cross-zone switchover. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Yes.</description></item>
         /// <item><description><b>false</b>: No.</description></item>
@@ -677,10 +680,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? HasCompleteStandbyRes { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Hot Standby Cluster (and standby compute nodes) is enabled. Valid values:</para>
+        /// <para>Specifies whether the Hot Standby Cluster (and standby compute nodes) is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>StandbyClusterON</b>: Enables the Hot Standby Cluster, or enables both the Hot Standby Cluster and standby compute nodes. </description></item>
-        /// <item><description><b>StandbyClusterOFF</b>: shutdown the Hot Standby Cluster, or shutdown both the Hot Standby Cluster and standby compute nodes.</description></item>
+        /// <item><description><b>StandbyClusterON</b>: The Hot Standby Cluster is enabled, or both the Hot Standby Cluster and standby compute nodes are enabled. </description></item>
+        /// <item><description><b>StandbyClusterOFF</b>: The Hot Standby Cluster is disabled, or both the Hot Standby Cluster and standby compute nodes are disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -693,8 +696,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The automatic IMCI-based query acceleration feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ON</c>: Enabled.</description></item>
-        /// <item><description><c>OFF</c>: Disabled.</description></item>
+        /// <item><description><c>ON</c>: enabled.</description></item>
+        /// <item><description><c>OFF</c>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -707,8 +710,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The seamless switchover feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Enabled.</description></item>
-        /// <item><description><c>false</c>: Disabled.</description></item>
+        /// <item><description><c>true</c>: enabled</description></item>
+        /// <item><description><c>false</c>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -722,24 +725,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The maximum number of inodes in the file system.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6,291,456</para>
+        /// <para>6291456</para>
         /// </summary>
         [NameInMap("InodeTotal")]
         [Validation(Required=false)]
         public long? InodeTotal { get; set; }
 
         /// <summary>
-        /// <para>The number of used inodes.</para>
+        /// <para>The current inode usage.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4,194,304</para>
+        /// <para>4194304</para>
         /// </summary>
         [NameInMap("InodeUsed")]
         [Validation(Required=false)]
         public long? InodeUsed { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the kernel version is the latest. Valid values:</para>
+        /// <para>Specifies whether the latest kernel version is used. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: Yes.</para>
         /// </description></item>
@@ -755,7 +758,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? IsLatestVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the database proxy is of the latest version. Valid values:</para>
+        /// <para>Specifies whether the database proxy is of the latest version. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Yes.</description></item>
         /// <item><description><b>false</b>: No.</description></item>
@@ -771,9 +774,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The lock mode. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Unlock</b>: The cluster is not locked.</description></item>
-        /// <item><description><b>ManualLock</b>: The cluster is manually locked. </description></item>
-        /// <item><description><b>LockByExpiration</b>: The cluster is automatically locked due to expiration.</description></item>
+        /// <item><description><b>Unlock</b>: Unlocked.</description></item>
+        /// <item><description><b>ManualLock</b>: Manually locked. </description></item>
+        /// <item><description><b>LockByExpiration</b>: Automatically locked due to expiration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -784,7 +787,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LockMode { get; set; }
 
         /// <summary>
-        /// <para>The maintenance window of the cluster. The time follows the ISO 8601 standard in the <c>HH:mmZ-HH:mmZ</c> format. The time is displayed in UTC. For example, <c>16:00Z-17:00Z</c> indicates that routine maintenance can be performed from 00:00 to 01:00 (UTC+8).</para>
+        /// <para>The maintenance window of the cluster. The time is displayed in the <c>HH:mmZ-HH:mmZ</c> format (UTC). For example, <c>16:00Z-17:00Z</c> indicates that routine maintenance can be performed from 00:00 to 01:00 (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>18:00Z-19:00Z</para>
@@ -796,9 +799,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The Orca feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enabled.</para>
+        /// <item><description><para>on: enabled</para>
         /// </description></item>
-        /// <item><description><para>off: Disabled.</para>
+        /// <item><description><para>off: disabled</para>
         /// </description></item>
         /// </list>
         /// 
@@ -824,8 +827,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read and write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</para>
-        /// <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</para>
+        /// <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read and write IOPS for the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1,000 × capacity - baseline performance}.</para>
+        /// <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × capacity, 50,000}.</para>
         /// <note id="note_7kj_j0o_rgs" props="china" icmsditafragmentmagic=1>This parameter is supported only when StorageType is set to ESSDAUTOPL.</note>
         /// 
         /// <b>Example:</b>
@@ -836,7 +839,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProvisionedIops { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores of the database proxy.</para>
+        /// <para>The number of CPU cores for the database proxy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -846,10 +849,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProxyCpuCores { get; set; }
 
         /// <summary>
-        /// <para>The serverless type of the database proxy. Valid values:</para>
+        /// <para>The database proxy serverless type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AgileServerless: Agile mode, which indicates a serverless cluster.</description></item>
-        /// <item><description>SteadyServerless: Steady mode, which indicates a cluster with defined specifications (a cluster whose billing is subscription or pay-as-you-go).</description></item>
+        /// <item><description>AgileServerless: Agile, which refers to serverless clusters.</description></item>
+        /// <item><description>SteadyServerless: Steady, which refers to a cluster with defined specifications (clusters whose billing method is subscription or pay-as-you-go).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -860,7 +863,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProxyServerlessType { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores in the standard configuration of the database proxy.</para>
+        /// <para>The number of CPU cores for the standard configuration of the database proxy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -872,17 +875,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The status of the database proxy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b>: The database proxy is being created.</description></item>
-        /// <item><description><b>Running</b>: The database proxy is running.</description></item>
-        /// <item><description><b>Deleting</b>: The database proxy is being released.</description></item>
-        /// <item><description><b>Rebooting</b>: The database proxy is restarting.</description></item>
-        /// <item><description><b>DBNodeCreating</b>: Nodes are being increased.</description></item>
-        /// <item><description><b>DBNodeDeleting</b>: A node is being deleted.</description></item>
-        /// <item><description><b>ClassChanging</b>: The node specifications are being changed.</description></item>
-        /// <item><description><b>NetAddressCreating</b>: Network connectivity is being created.</description></item>
-        /// <item><description><b>NetAddressDeleting</b>: Network connectivity is being deleted.</description></item>
-        /// <item><description><b>NetAddressModifying</b>: Network connectivity is being modified.</description></item>
-        /// <item><description><b>Deleted</b>: The database proxy is released.</description></item>
+        /// <item><description><b>Creating</b>: Creating.</description></item>
+        /// <item><description><b>Running</b>: Running.</description></item>
+        /// <item><description><b>Deleting</b>: Releasing.</description></item>
+        /// <item><description><b>Rebooting</b>: Restarting.</description></item>
+        /// <item><description><b>DBNodeCreating</b>: In progress to increase nodes.</description></item>
+        /// <item><description><b>DBNodeDeleting</b>: In progress to delete nodes.</description></item>
+        /// <item><description><b>ClassChanging</b>: Changing node specifications.</description></item>
+        /// <item><description><b>NetAddressCreating</b>: Creating network connectivity.</description></item>
+        /// <item><description><b>NetAddressDeleting</b>: In progress to delete network connectivity.</description></item>
+        /// <item><description><b>NetAddressModifying</b>: Modifying network connectivity.</description></item>
+        /// <item><description><b>Deleted</b>: Released.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -895,8 +898,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The database proxy type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Exclusive</b>: Dedicated Enterprise Edition.</description></item>
-        /// <item><description><b>General</b>: Standard Enterprise Edition.</description></item>
+        /// <item><description><b>Exclusive</b>: Dedicated Enterprise Edition</description></item>
+        /// <item><description><b>General</b>: Standard Enterprise Edition</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -941,7 +944,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description>If RestoreType is set to <b>RestoreByTime</b> or <b>RestoreByTimeOss</b>, this value indicates the point in time to which the cluster is restored.</description></item>
         /// <item><description>If RestoreType is set to <b>RestoreByBackupSet</b> or <b>RestoreByBackupSetOss</b>, this value indicates the ID of the backup set from which the cluster is restored.</description></item>
         /// </list>
-        /// <para><note>This parameter is supported only for clusters restored from a backup set or a point in time after June 1, 2024.</note></para>
+        /// <para><note>This parameter is supported only for clusters that are restored from backup sets or points in time after June 1, 2024.</note></para>
         /// 
         /// <b>Example:</b>
         /// <para>2179639137</para>
@@ -953,13 +956,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster restoration method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RestoreByTime</b>: Restores the cluster from a level-1 backup to a specific point in time.</description></item>
-        /// <item><description><b>RestoreByBackupSet</b>: Restores the cluster from a level-1 backup set.</description></item>
-        /// <item><description><b>RestoreByTimeOss</b>: Restores the cluster from a level-2 backup to a specific point in time.</description></item>
-        /// <item><description><b>RestoreByBackupSetOss</b>: Restores the cluster from a level-2 backup set.</description></item>
+        /// <item><description><b>RestoreByTime</b>: Restores the cluster from a point in time based on level-1 backups.</description></item>
+        /// <item><description><b>RestoreByBackupSet</b>: Restores the cluster from a backup set based on level-1 backups.</description></item>
+        /// <item><description><b>RestoreByTimeOss</b>: Restores the cluster from a point in time based on level-2 backups.</description></item>
+        /// <item><description><b>RestoreByBackupSetOss</b>: Restores the cluster from a backup set based on level-2 backups.</description></item>
         /// <item><description><b>CloneFromSourceCluster</b>: Clones the cluster from the source cluster.</description></item>
         /// </list>
-        /// <para><note>This parameter is supported only for clusters restored from a backup set or a point in time after June 1, 2024.</note></para>
+        /// <para><note>This parameter is supported only for clusters that are restored from backup sets or points in time after June 1, 2024.</note></para>
         /// 
         /// <b>Example:</b>
         /// <para>RestoreByTime</para>
@@ -969,7 +972,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// <para>RowCompression</para>
+        /// <para>The row compression status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OFF</para>
@@ -1004,7 +1007,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The ID of the source cluster.
-        /// <note>This parameter is supported only for clusters restored from a backup set or a point in time after June 1, 2024.</note></para>
+        /// <note>This parameter is supported only for clusters that are restored from backup sets or points in time after June 1, 2024.</note></para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-pz51ziv48317b2880</para>
@@ -1029,7 +1032,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <list type="bullet">
         /// <item><description><b>ON</b>: Cross-zone disaster recovery is enabled.</description></item>
         /// <item><description><b>OFF</b>: Cross-zone disaster recovery is disabled.</description></item>
-        /// <item><description><b>0</b>: Customer drill mode.</description></item>
+        /// <item><description><b>0</b>: Drill mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1074,12 +1077,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the Enterprise Edition. Valid values:</para>
+        /// <para>The storage type. For Enterprise Edition, valid values are:</para>
         /// <list type="bullet">
         /// <item><description><b>PSL5</b></description></item>
         /// <item><description><b>PSL4</b></description></item>
         /// </list>
-        /// <para>The storage type of the Standard Edition. Valid values:</para>
+        /// <para>For Standard Edition, valid values are:</para>
         /// <list type="bullet">
         /// <item><description><b>ESSDPL0</b></description></item>
         /// <item><description><b>ESSDPL1</b></description></item>
@@ -1108,7 +1111,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Indicates whether strict data consistency across multiple zones is enabled for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ON</b>: Strict data consistency across multiple zones is enabled. This applies to the three-zone deployment scenario of the Standard Edition.</para>
+        /// <item><description><para><b>ON</b>: Strict data consistency across multiple zones is enabled. This applies to the three-zone deployment scenario of Standard Edition.</para>
         /// </description></item>
         /// <item><description><para><b>OFF</b>: Strict data consistency across multiple zones is disabled.</para>
         /// </description></item>
@@ -1139,7 +1142,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SubCategory { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the failover with hot replica feature compatible with IMCI is supported.</para>
+        /// <para>Indicates whether the failover with hot replica feature that is compatible with IMCI is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -1150,6 +1153,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The details of the tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

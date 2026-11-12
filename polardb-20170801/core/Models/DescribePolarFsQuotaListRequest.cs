@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarFsQuotaListRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the PolarDB instance on which the application depends.</para>
+        /// <para>The PolarDB instance ID on which the application depends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-************</para>
@@ -30,8 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 30, 50, and 100.</para>
-        /// <para>Default value: 30.</para>
+        /// <para>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The PolarFs instance ID.</para>
+        /// <para>The PolarFS instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,14 +51,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The query mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>quotaPolicy</b>: quota rule</description></item>
-        /// <item><description><b>quota</b>: quota</description></item>
-        /// </list>
+        /// <para>The quota mode. Currently, only quota is supported, which indicates that quota policies are queried.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>quotaPolicy</para>
+        /// <para>quota</para>
         /// </summary>
         [NameInMap("QuotaMode")]
         [Validation(Required=false)]

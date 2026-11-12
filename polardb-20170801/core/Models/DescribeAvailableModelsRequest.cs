@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAvailableModelsRequest : TeaModel {
         /// <summary>
-        /// <para>aideploy</para>
+        /// <para>The Kubernetes cluster type, such as aideploy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aideploy</para>

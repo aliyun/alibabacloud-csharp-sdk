@@ -17,18 +17,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public CreateAIDBClusterApiKeyResponseBodyApiKey ApiKey { get; set; }
         public class CreateAIDBClusterApiKeyResponseBodyApiKey : TeaModel {
             /// <summary>
-            /// <para>The API key for model serving.</para>
+            /// <para>The API key for the model service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>6c4b1f0317cd4fd7a5b446d3503d**</para>
             /// </summary>
             [NameInMap("ApiKey")]
             [Validation(Required=false)]
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The time when the API key was created.</para>
-            /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The creation time.</para>
+            /// <para>The time is displayed in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-12T03:41:53Z</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>id</para>
+            /// <para>The API key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>393</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The API key status.</para>
+            /// <para>The status of the API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</para>

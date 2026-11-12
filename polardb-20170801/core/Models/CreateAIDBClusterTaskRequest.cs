@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The data service mode. A value of custom indicates that custom OSS is used, and a value of cold_storage indicates that cold storage is used.</para>
+        /// <para>The data service mode. A value of custom indicates that custom OSS is used. A value of cold_storage indicates that cold storage is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cold_storage</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The type of the model service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>aitrain</b>: model operator fine-tuning.</description></item>
+        /// <item><description><b>aitrain</b>: model operator tuning</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the model.</para>
         /// <list type="bullet">
-        /// <item><description><b>For a preset model, specify the name of the selected model.</b></description></item>
-        /// <item><description><b>For a custom model, specify the path of the model (the model trained in a cold storage instance).</b></description></item>
+        /// <item><description><b>For a preset model, specify the selected model name.</b></description></item>
+        /// <item><description><b>For a custom model, specify the path of the model (the trained model in a cold storage instance).</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -102,8 +102,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The source of the model. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b>: preset model.</description></item>
-        /// <item><description><b>custom</b>: custom model.</description></item>
+        /// <item><description><b>public</b>: preset model</description></item>
+        /// <item><description><b>custom</b>: custom model</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The runtime parameters. The value is a JSON string.</para>
+        /// <para>The runtime parameters in JSON string format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RunningParameter { get; set; }
 
         /// <summary>
-        /// <para>The security group ID.</para>
+        /// <para>The ID of the security group. This parameter is actually required. If it is not provided, the service returns InvalidEcsSecurityGroupId.Malformed (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp**************</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The description of the model service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>Model operator instance</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TuneArch { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The ID of the virtual private cloud (VPC). This parameter is actually required. If it is not provided, the service returns InvalidVpcId.Malformed (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The ID of the vSwitch. This parameter is actually required and must belong to the VPC specified by VPCId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-*********************</para>

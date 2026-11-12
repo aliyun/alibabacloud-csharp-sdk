@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeConsumerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of consumer groups.</para>
+        /// <para>The list of consumer groups.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -69,10 +72,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>Indicates whether the consumer group is the default group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: No</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Yes</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: No.</description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -115,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of records returned per page. Valid values: 30, 50, and 100. Default value: 30.</para>
+        /// <para>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -135,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

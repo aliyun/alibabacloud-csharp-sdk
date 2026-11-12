@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The model API ID.</para>
+        /// <para>The ID of the model API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>LTAI5tExampleAccessKeyId</para>
         /// </summary>
         [NameInMap("BucketAccessKeyId")]
         [Validation(Required=false)]
@@ -36,17 +36,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>exampleAccessKeySecret1234567890</para>
         /// </summary>
         [NameInMap("BucketAccessKeySecret")]
         [Validation(Required=false)]
         public string BucketAccessKeySecret { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in a specified region, including the cluster ID.</para>
-        /// </remarks>
+        /// <para>The cluster ID. This parameter is required. If you do not provide this parameter, the service returns InvalidDBClusterId.Malformed. You can call DescribeDBClusters to query the cluster ID in the destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-******************</para>

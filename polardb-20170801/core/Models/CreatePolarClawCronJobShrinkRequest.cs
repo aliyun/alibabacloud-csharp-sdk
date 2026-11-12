@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarClawCronJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the specified execution agent.</para>
+        /// <para>The specified execution agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Kind&quot;:&quot;agentTurn&quot;,&quot;Message&quot;:&quot;Generate the daily report.&quot;}</para>
+        /// <para>{&quot;Kind&quot;:&quot;systemEvent&quot;,&quot;Text&quot;:&quot;Generate the daily report.&quot;}</para>
         /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to run it once immediately after creation. Default value: false.</para>
+        /// <para>Specifies whether to run the task immediately after creation. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionKey { get; set; }
 
         /// <summary>
-        /// <para>The session target. Valid values: main, isolated, current.</para>
+        /// <para>The execution session target. If set to main, it indicates the main session, and Payload.Kind must be systemEvent. If set to isolated or current, it supports agentTurn or systemEvent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionTarget { get; set; }
 
         /// <summary>
-        /// <para>The wake mode. Valid values: now, next-heartbeat.</para>
+        /// <para>The wake mode. Valid values: now and next-heartbeat.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

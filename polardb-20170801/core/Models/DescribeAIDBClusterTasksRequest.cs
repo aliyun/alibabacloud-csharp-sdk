@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the model operator.</para>
+        /// <para>The model operator type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aitrain</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items to display on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the associated PolarDB instance.</para>
+        /// <para>The ID of the associated PolarDB cluster. This parameter is required. If you do not specify this parameter, the service returns the InvalidDBClusterId.NotFound (404) error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze88***</para>

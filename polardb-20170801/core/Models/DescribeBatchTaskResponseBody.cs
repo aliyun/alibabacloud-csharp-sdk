@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BatchId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the task.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
+        /// <para>The task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polarclaw_install_skills</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries in the list.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

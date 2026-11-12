@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The node type. You can specify multiple types separated by commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>vnode: managed by Kubernetes.</description></item>
-        /// <item><description>container: logon-enabled container.</description></item>
-        /// <item><description>maas: model service.</description></item>
+        /// <item><description>vnode: managed by Kubernetes</description></item>
+        /// <item><description>container: container with logon access</description></item>
+        /// <item><description>maas: model service</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AiNodeType { get; set; }
 
         /// <summary>
-        /// <para>The cluster description. Fuzzy match is supported.</para>
+        /// <para>The description of the cluster. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -58,7 +58,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>NetAddressDeleting</b>: The network connectivity is being deleted.</description></item>
         /// <item><description><b>NetAddressModifying</b>: The network connectivity is being modified. </description></item>
         /// <item><description><b>Deleted</b>: The cluster is released.</description></item>
-        /// <item><description><b>ClassChanged</b>: Resources are being revoked after an upgrade or decrease the quota.</description></item>
+        /// </list>
+        /// <list type="bullet">
+        /// <item><description><b>ClassChanged</b>: Resources are being revoked after you increase or decrease the quota.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAIDBClustersRequestTag> Tag { get; set; }
         public class DescribeAIDBClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag key-value pairs. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</para>
+            /// <para>The tag key. You can filter the cluster list by tags. A maximum of 20 tag key-value pairs are supported. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testKey</para>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value that corresponds to the tag key.</para>
+            /// <para>The tag value corresponding to the tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testValueData</para>

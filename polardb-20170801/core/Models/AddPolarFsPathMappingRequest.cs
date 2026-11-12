@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<AddPolarFsPathMappingRequestCustomBucketPathList> CustomBucketPathList { get; set; }
         public class AddPolarFsPathMappingRequestCustomBucketPathList : TeaModel {
             /// <summary>
-            /// <para>The bucket name.</para>
+            /// <para>The name of the bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bucket1</para>
@@ -27,20 +27,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey ID of the storage bucket.</para>
+            /// <para>The AccessKey ID for the bucket.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>LTAIExampleBucketAccessKeyId</para>
             /// </summary>
             [NameInMap("BucketAccessKeyId")]
             [Validation(Required=false)]
             public string BucketAccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret of the storage bucket.</para>
+            /// <para>The AccessKey secret for the bucket.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>ExampleBucketAccessKeySecret123</para>
             /// </summary>
             [NameInMap("BucketAccessKeySecret")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

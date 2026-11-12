@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The synchronization configuration whitelist returned based on the source type. For DINGTALK, UserId can be returned. For FEISHU, FeishuChatMemberStaleTtlSeconds can be returned.</para>
+        /// <para>The synchronization configuration whitelist returned based on the source type. For DingTalk, UserId is returned. For Lark, FeishuChatMemberStaleTtlSeconds is returned.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public DescribeKBSyncLinkAttributeResponseBodyConfig Config { get; set; }
         public class DescribeKBSyncLinkAttributeResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The validity period of the successful snapshot of Lark group members for fallback reuse, in seconds. This parameter is returned only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. The valid value configured for the link is returned. If no value is configured, the default value -1 is returned.</para>
+            /// <para>The validity period of the successful snapshot of Lark group members for fallback reuse, in seconds. This parameter is returned only for Lark synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. The valid value configured for the link is returned. If no value is configured, the default value -1 is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? FeishuChatMemberStaleTtlSeconds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the DingTalk user who performs the operation. This parameter is returned only for DINGTALK synchronization links.</para>
+            /// <para>The ID of the DingTalk user who performs the operation. This parameter is returned only for DingTalk synchronization links.</para>
             /// 
             /// <b>Example:</b>
             /// <para>manager123</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The creation time of the synchronization link.</para>
+        /// <para>The time when the synchronization link was created. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-09-22T12:00:00Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The source directory.</para>
+        /// <para>The source directory. For OSS sources, the bucket and object prefix in the oss://<bucket>/<prefix> format are returned. For other sources, the directory identifier or path of the corresponding channel is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/documents</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>A list of plugin IDs. If omitted, all plugins are returned.</para>
+        /// <para>The list of plugin IDs to query. If this parameter is empty, all plugins are returned.</para>
         /// </summary>
         [NameInMap("PluginList")]
         [Validation(Required=false)]

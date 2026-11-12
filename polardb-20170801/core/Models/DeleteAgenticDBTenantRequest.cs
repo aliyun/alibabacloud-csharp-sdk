@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAgenticDBTenantRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AgenticDB cluster.</para>
+        /// <para>The AgenticDB cluster ID, which must start with pagc-. You must first call CreateDBCluster and set AgenticDbType to dedicated to create a cluster, and then use the returned DBClusterId. Regular PolarDB cluster IDs are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeDatabasesZonalResponseBodyDatabasesAccounts> Accounts { get; set; }
             public class DescribeDatabasesZonalResponseBodyDatabasesAccounts : TeaModel {
                 /// <summary>
-                /// <para>The account name.</para>
+                /// <para>The name of the account.</para>
                 /// <remarks>
                 /// <para>If the cluster is a PolarDB for MySQL cluster, privileged accounts are not included.</para>
                 /// </remarks>
@@ -42,16 +42,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>The permissions of the account. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>ReadWrite</b></para>
-                /// </description></item>
-                /// <item><description><para><b>ReadOnly</b></para>
-                /// </description></item>
-                /// <item><description><para><b>DMLOnly</b></para>
-                /// </description></item>
-                /// <item><description><para><b>DDLOnly</b></para>
-                /// </description></item>
-                /// <item><description><para><b>ReadIndex</b></para>
-                /// </description></item>
+                /// <item><description><b>ReadWrite</b>: read and write</description></item>
+                /// <item><description><b>ReadOnly</b>: read-only </description></item>
+                /// <item><description><b>DMLOnly</b>: DML only</description></item>
+                /// <item><description><b>DDLOnly</b>: DDL only</description></item>
+                /// <item><description><b>ReadIndex</b>: read and index</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -62,14 +57,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string AccountPrivilege { get; set; }
 
                 /// <summary>
-                /// <para>The status of the account. Valid values:</para>
+                /// <para>The status of the account. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Creating</b></para>
-                /// </description></item>
-                /// <item><description><para><b>Available</b></para>
-                /// </description></item>
-                /// <item><description><para><b>Deleting</b></para>
-                /// </description></item>
+                /// <item><description><b>Creating</b>: The account is being created.</description></item>
+                /// <item><description><b>Available</b>: The account is available.</description></item>
+                /// <item><description><b>Deleting</b>: The account is being deleted.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,14 +72,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string AccountStatus { get; set; }
 
                 /// <summary>
-                /// <para>The authorization status. Valid values:</para>
+                /// <para>The authorization status. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Empowering</b>: Permissions are being granted.</para>
-                /// </description></item>
-                /// <item><description><para><b>Empowered</b>: Permissions are granted.</para>
-                /// </description></item>
-                /// <item><description><para><b>Removing</b>: Permissions are being revoked.</para>
-                /// </description></item>
+                /// <item><description><b>Empowering</b>: The account is being authorized.</description></item>
+                /// <item><description><b>Empowered</b>: The account is authorized.</description></item>
+                /// <item><description><b>Removing</b>: The permissions are being revoked.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The character set.</para>
+            /// <para>The name of the character set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>utf8mb4</para>
@@ -130,14 +119,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The status of the database. Valid values:</para>
+            /// <para>The status of the database. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><para><b>Creating</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Running</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Deleting</b></para>
-            /// </description></item>
+            /// <item><description><b>Creating</b>: The database is being created.</description></item>
+            /// <item><description><b>Running</b>: The database is running.</description></item>
+            /// <item><description><b>Deleting</b>: The database is being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,14 +134,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBStatus { get; set; }
 
             /// <summary>
-            /// <para>The database engine type. Valid values:</para>
+            /// <para>The type of the database engine. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>MySQL</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Oracle</b></para>
-            /// </description></item>
-            /// <item><description><para><b>PostgreSQL</b></para>
-            /// </description></item>
+            /// <item><description><b>MySQL</b></description></item>
+            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><b>PostgreSQL</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +149,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The ID of the primary node that corresponds to the database in a Multi-master Cluster (Database/Table) edition cluster.</para>
+            /// <para>The ID of the primary node that corresponds to the database in a Multi-master Cluster (Database/Table) Edition cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -178,7 +161,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned for the current request.</para>
+        /// <para>The maximum number of entries to return in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -188,7 +171,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. This is the NextToken value from the previous API call. If there are no more results, do not specify this parameter.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous API call. If no subsequent query is required, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
@@ -218,7 +201,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FED790E-FB61-4721-8C1C-07C627******</para>

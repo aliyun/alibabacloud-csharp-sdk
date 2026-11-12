@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarClawCronJobsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Application ID</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Include disabled tasks. Default is true.</para>
+        /// <para>Specifies whether to include disabled jobs. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? IncludeDisabled { get; set; }
 
         /// <summary>
-        /// <para>Include run history. Default is false.</para>
+        /// <para>Specifies whether to include the run history. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? IncludeRuns { get; set; }
 
         /// <summary>
-        /// <para>Filter by Job ID list</para>
+        /// <para>Filters the results by a list of job IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ee00f56-f467-4d41-858c-ca4ede2c770e,1ee00f56-f467-4d41-858c-ca4ede2c770f</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string JobIdListShrink { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of run history entries per task. Default is 10.</para>
+        /// <para>The maximum number of run history records per job. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

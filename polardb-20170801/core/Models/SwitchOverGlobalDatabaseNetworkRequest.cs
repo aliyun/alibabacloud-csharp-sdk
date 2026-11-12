@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class SwitchOverGlobalDatabaseNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster that will become the primary cluster in the GDN.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to query the ID of the cluster in the GDN.</para>
+        /// <para>The ID of the cluster to be switched to the primary cluster in the GDN.
+        /// You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to view the cluster IDs in the GDN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-wz9fb5nn44u1d****</para>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly switch over the primary and secondary clusters in the GDN. Valid values:</para>
+        /// <para>Specifies whether to forcibly switch the primary and secondary clusters in the GDN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Forcibly switches the primary and secondary clusters in the GDN.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Does not forcibly switch the primary and secondary clusters in the GDN.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Forced { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GDN.</para>
+        /// <para>The ID of the global database network (GDN).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>

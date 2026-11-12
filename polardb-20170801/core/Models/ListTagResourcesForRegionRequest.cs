@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ListTagResourcesForRegionRequest : TeaModel {
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. Optional for the first request. If the query does not return all results, the response contains a token. You can use this token in the next request to continue the query.</para>
+        /// <para>The token used to retrieve more results. You do not need to specify this parameter for the first query. If the first query does not return all results, you can pass the token returned in the previous response to retrieve the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
@@ -49,10 +49,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cluster: cluster instance</para>
-        /// </description></item>
-        /// <item><description><para>aicluster: AI cluster instance</para>
-        /// </description></item>
+        /// <item><description>cluster: cluster instance</description></item>
+        /// <item><description>aicluster: AI cluster instance</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

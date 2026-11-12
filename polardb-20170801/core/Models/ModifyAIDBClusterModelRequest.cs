@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAIDBClusterModelRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the PolarDB AI 3.0 logical instance.</para>
+        /// <para>The PolarDB AI 3.0 logical instance ID. Note: This operation is only supported for clusters with RayCluster-pod-based workers. MaaS clusters in the Bailian resource pool do not support this operation. Use DescribeAIDBClusterAttribute to verify cluster compatibility before calling this API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DisplayModelName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only preview the modification.</para>
+        /// <para>Specifies whether to only preview the change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The target model name. Select a value from the ModelName values returned by DescribeAvailableModels.</para>
+        /// <para>The target model name. Select a value from the ModelName parameter returned by DescribeAvailableModels.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the gateway is restarted.</para>
+        /// <para>Indicates whether the gateway has been restarted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

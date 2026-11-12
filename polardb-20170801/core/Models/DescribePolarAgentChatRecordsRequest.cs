@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarAgentChatRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The session ID. To obtain the SessionId, use Signature Version 3.0 to call GetPolarAgent to initiate a conversation and extract the SessionId from the returned stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1e28530a0da2c4755f165b1b8b9a73c9</para>
+        /// <para>44dcdf31-04cd-4a44-9bae-834dd6657e29</para>
         /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The product source. Valid value: polardb-console.</para>
+        /// <para>The product type source. Valid value: polardb-console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb-console</para>

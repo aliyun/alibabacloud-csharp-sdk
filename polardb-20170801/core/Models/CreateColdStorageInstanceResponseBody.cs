@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateColdStorageInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cold storage instance.</para>
+        /// <para>The cold storage instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcs_2zeth2gf4i83e578t</para>

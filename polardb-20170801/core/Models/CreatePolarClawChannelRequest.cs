@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NpmPackage { get; set; }
 
         /// <summary>
-        /// <para>The channel plugin name.</para>
+        /// <para>The name of the channel plugin.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the gateway after creation. Default value: true.</para>
+        /// <para>Specifies whether to restart the gateway after creation. Default value: true. Note: &#39;The value must be the string true or false. JSON boolean values are not accepted.&#39; Coordinate to confirm whether the type field should be updated to string accordingly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

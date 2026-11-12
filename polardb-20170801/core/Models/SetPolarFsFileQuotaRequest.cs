@@ -20,8 +20,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The details of the quota rules to apply to directories.</para>
+        /// <para>The details of the quota rules applied to directories.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("FilePathQuotas")]
         [Validation(Required=false)]
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The directory path.</para>
+            /// <para>The directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/a/project</para>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FilePathId { get; set; }
 
             /// <summary>
-            /// <para>The quota inodes.</para>
+            /// <para>The inode quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -58,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Inodes { get; set; }
 
             /// <summary>
-            /// <para>The number of subdirectory levels to traverse under <c>FilePathId</c>. A value of 1 indicates that only the first-level subdirectories are traversed. A value of 0 indicates that all levels are traversed to the deepest level.</para>
+            /// <para>The number of directory levels to traverse under <c>FilePathId</c>. A value of 1 indicates that only the first-level subdirectories are traversed. A value of 0 indicates that the traversal goes to the deepest level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -68,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? MaxDepth { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the rules to apply, separated by commas (,).</para>
+            /// <para>The list of rule IDs to be applied, separated by commas (<c>,</c>).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,2</para>
@@ -78,10 +81,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string QuotaIds { get; set; }
 
             /// <summary>
-            /// <para>The mode in which rules take effect on existing files. Valid values:</para>
+            /// <para>The mode in which the rules take effect on existing files. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>missing</b>: Rules take effect only when they are missing. This is the default value.</description></item>
-            /// <item><description><b>all</b>: Rules take effect on all files.</description></item>
+            /// <item><description><b>missing</b>: The rules take effect only when they are missing. This is the default value.</description></item>
+            /// <item><description><b>all</b>: The rules take effect on all files.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

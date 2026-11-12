@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationPerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The application cluster ID.</para>
+        /// <para>The ID of the application cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationType { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
+        /// <para>The end time of the query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-23T02:21:00Z</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDB3258F-B5DE-43C4-8935-CBA0CA******</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
+        /// <para>The start time of the query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-11-15T16:00Z</para>

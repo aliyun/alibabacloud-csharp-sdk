@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupLogDownloadLinksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the redo log backups.</para>
+        /// <para>The redo log backup details.</para>
         /// </summary>
         [NameInMap("BackupLogDownloadLinkItem")]
         [Validation(Required=false)]
         public List<DescribeBackupLogDownloadLinksResponseBodyBackupLogDownloadLinkItem> BackupLogDownloadLinkItem { get; set; }
         public class DescribeBackupLogDownloadLinksResponseBodyBackupLogDownloadLinkItem : TeaModel {
             /// <summary>
-            /// <para>The ID of the redo log backup.</para>
+            /// <para>The redo log backup ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>78167430</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BackupLogId { get; set; }
 
             /// <summary>
-            /// <para>The public download link for the redo log backup.</para>
+            /// <para>The public download link of the redo log backup.</para>
             /// </summary>
             [NameInMap("DownloadLink")]
             [Validation(Required=false)]
             public string DownloadLink { get; set; }
 
             /// <summary>
-            /// <para>The error code for the individual record. Empty if the request is successful.</para>
+            /// <para>The error code for the single entry. Empty if the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BackupLogNotFound</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The internal network download link for the redo log backup.</para>
+            /// <para>The internal network download link of the redo log backup.</para>
             /// </summary>
             [NameInMap("IntranetDownloadLink")]
             [Validation(Required=false)]
             public string IntranetDownloadLink { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the download link in UTC.</para>
+            /// <para>The expiration time of the download links, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-23T03:00:00Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string LinkExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The error message for the individual record. Empty if the request is successful.</para>
+            /// <para>The error message for the single entry. Empty if the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The specified archived log file does not exist or has been cleaned up.</para>

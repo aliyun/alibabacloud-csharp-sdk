@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class OpenAITaskRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The node type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>DLNode</b>: AI node.</para>
-        /// </description></item>
-        /// <item><description><para><b>SearchNode</b>: search AI node.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The node type. DLNode indicates an AI node. SearchNode is available only if search AI nodes are already created in the target cluster. Otherwise, the InvalidParameter.NodeType error (HTTP 400) may be returned. You can call DescribeAIDBClusters to check the node types of the cluster before the call. SearchNode is available only if search AI nodes are already created in the cluster. Otherwise, the InvalidParameter.NodeType error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DLNode</para>
@@ -45,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account.</para>
+        /// <para>The password of the database account for which you want to enable the PolarDB for AI feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testPassword</para>
@@ -66,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
@@ -84,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The database account on which to enable the PolarDB for AI feature.</para>
+        /// <para>The database account for which you want to enable the PolarDB for AI feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testAccountName</para>

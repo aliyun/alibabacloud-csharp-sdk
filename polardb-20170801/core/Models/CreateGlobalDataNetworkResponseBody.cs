@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateGlobalDataNetworkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the newly created synchronization channel.</para>
+        /// <para>The ID of the synchronization link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdc-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the newly created GDN.</para>
+        /// <para>The ID of the global database network (GDN).</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>

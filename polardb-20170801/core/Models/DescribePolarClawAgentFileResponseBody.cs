@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarClawAgentFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>Agent ID</para>
+        /// <para>The PolarClaw agent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The file size, in bytes.</para>
+            /// <para>The file size in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The last updated UNIX timestamp, in milliseconds.</para>
+            /// <para>The last updated timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1716000000000</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F45FFACC-xxx</para>

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description>BUY: new purchase.</description></item>
         /// <item><description>UPGRADE: specification change.</description></item>
         /// <item><description>RENEW: renewal.</description></item>
-        /// <item><description>CONVERT: billing method conversion.</description></item>
+        /// <item><description>CONVERT: billing method change.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The price details.</para>
+        /// <para>The pricing details.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarClawChannelsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The PolarClaw application ID. First call DescribeApplications to filter applications where ApplicationType is polardb_polarclaw and Status is Activated, and then use the returned ApplicationId to query channels.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The channel IDs to query. Leave this parameter empty to return all channels.</para>
+        /// <para>The list of channel IDs to query. If this parameter is left empty, all channels are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>feishu,telegram</para>

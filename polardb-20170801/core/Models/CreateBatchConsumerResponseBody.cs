@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? Active { get; set; }
 
             /// <summary>
-            /// <para>The complete API key. This value is returned only in the current response.</para>
+            /// <para>The complete API key. This value is returned only in this response.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxxxxx</para>
+            /// <para>6c4b1f0317cd4fd7a5b446d3503d**</para>
             /// </summary>
             [NameInMap("ApiKey")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BudgetPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The used quota.</para>
+            /// <para>The used budget.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The expiration time.</para>
-            /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time is in ISO 8601 format and UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-25T09:37:10Z</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</para>

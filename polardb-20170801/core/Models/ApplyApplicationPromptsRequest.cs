@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ApplyApplicationPromptsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,20 +21,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>An array of prompt IDs to disable.</para>
+        /// <para>The list of prompt IDs to disable. You must provide a non-empty list for at least one of EnabledPromptIds and DisabledPromptIds. Otherwise, the InvalidApplicationPromptId.Malformed error is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>papt-************</para>
+        /// <para>[&quot;papt-************&quot;]</para>
         /// </summary>
         [NameInMap("DisabledPromptIds")]
         [Validation(Required=false)]
         public List<string> DisabledPromptIds { get; set; }
 
         /// <summary>
-        /// <para>An array of prompt IDs to enable.</para>
+        /// <para>The list of prompt IDs to enable. You must provide a non-empty list for at least one of EnabledPromptIds and DisabledPromptIds. Otherwise, the InvalidApplicationPromptId.Malformed error is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>papt-************</para>
+        /// <para>[&quot;papt-************&quot;]</para>
         /// </summary>
         [NameInMap("EnabledPromptIds")]
         [Validation(Required=false)]

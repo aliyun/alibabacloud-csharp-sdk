@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class InstallPolarClawSkillRequest : TeaModel {
         /// <summary>
+        /// <para>The target agent in the workspace. If this parameter is not specified, the default agent is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test1</para>
+        /// </summary>
+        [NameInMap("AgentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
+        /// <summary>
         /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -21,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to force a reinstallation.</para>
+        /// <para>Specifies whether to force reinstallation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -29,6 +39,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
+
+        /// <summary>
+        /// <para>The scope. Valid values: workspace (default) and global (shared directory). This parameter is mutually exclusive with AgentId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>global</para>
+        /// </summary>
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
 
         /// <summary>
         /// <para>The version number.</para>
@@ -41,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SkillVersion { get; set; }
 
         /// <summary>
-        /// <para>The Skill identifier.</para>
+        /// <para>The skill identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibacloud-rds-copilot</para>
@@ -61,7 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>URL</para>
+        /// <para>The URL for installing the skill. This parameter is not supported. If a value is provided, a 400 InvalidParameters error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/skill.tar.gz">https://example.com/skill.tar.gz</a></para>

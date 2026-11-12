@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeConsumersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the consumer group.</para>
+        /// <para>The consumer group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-xxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the consumer.</para>
+        /// <para>The consumer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-mqveroemc***</para>
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The list of names used to filter consumers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;consumer-a&quot;,&quot;consumer-b&quot;]</para>
         /// </summary>
         [NameInMap("ConsumerNameList")]
         [Validation(Required=false)]

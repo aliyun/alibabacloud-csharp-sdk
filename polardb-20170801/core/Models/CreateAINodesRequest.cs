@@ -12,7 +12,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://api.aliyun.com/api/polardb/2017-08-01/DescribeAIDBClusters">DescribeAIDBClusters</a> operation to query information about all clusters in your account, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://api.aliyun.com/api/polardb/2017-08-01/DescribeAIDBClusters">DescribeAIDBClusters</a> operation to query the information about all clusters under your account, including the cluster ID.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>The AiNodeType of the target cluster must be vnode or container. The maas type is not supported. You can query the AiNodeType by calling DescribeAIDBClusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +26,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The information about the nodes to add.</para>
+        /// <para>The list of node information to add.</para>
+        /// <remarks>
+        /// <para>You must specify at least 1 and at most 100 DBNode elements when you call this operation. If you omit this parameter or pass an empty array, the InvalidNewNodeNum.Malformed error is returned.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("DBNodes")]
         [Validation(Required=false)]

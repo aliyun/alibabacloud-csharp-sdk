@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CheckDBNameZonalRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
-        /// <remarks>
-        /// <para>Note: This parameter accepts only edge cluster IDs obtained by calling DescribeDBClustersZonal. Regular PolarDB cluster IDs obtained by calling DescribeDBClusters are not supported.</para>
-        /// </remarks>
+        /// <para>The ID of the edge cluster. You must first create an edge cluster in the MyBase console, call DescribeDBClustersZonal to obtain the cluster ID, and then call CheckDBNameZonal. Standard PolarDB cluster IDs are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

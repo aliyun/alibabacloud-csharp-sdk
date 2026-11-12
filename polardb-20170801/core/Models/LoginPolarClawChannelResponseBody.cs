@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The name of the operation.</para>
+        /// <para>The operation name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LoginPolarClawChannel</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the asynchronous task.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous task.</para>
+        /// <para>The asynchronous task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc6762fb-20ad-4796-84fe-5c5d0dc413ce</para>

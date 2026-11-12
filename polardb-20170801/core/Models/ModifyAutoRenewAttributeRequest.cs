@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud provider of the cluster.</para>
+        /// <para>The cloud service provider to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CloudProvider { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database cluster.</para>
+        /// <para>The IDs of the database clusters. The billing method of the clusters must be subscription. If you call this operation for a pay-as-you-go cluster, the OperationDenied.DBClusterPayType error may be returned. You can first call the TransformDBClusterPayType operation to change the billing method. Usage notes: The billing method of the cluster must be subscription. Calling this operation for a pay-as-you-go cluster returns the OperationDenied.DBClusterPayType error.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,12 +31,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. Valid values:</para>
+        /// <para>The auto-renewal duration for the instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>When <b>PeriodUnit</b> is <b>Month</b>, the valid values are <c>[1,2,3,6,12]</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When <b>PeriodUnit</b> is <b>Year</b>, the valid values are <c>[1-3]</c>.</para>
-        /// </description></item>
+        /// <item><description>If <b>PeriodUnit</b> is set to <b>Month</b>, valid values are <c>1</c>, <c>2</c>, <c>3</c>, <c>6</c>, and <c>12</c>.</description></item>
+        /// <item><description>If <b>PeriodUnit</b> is set to <b>Year</b>, valid values are <c>1</c>, <c>2</c>, and <c>3</c>.</description></item>
         /// </list>
         /// <para>Default value: <b>1</b>.</para>
         /// 
@@ -56,12 +54,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the auto-renewal period. Valid values:</para>
+        /// <para>The unit of the renewal duration. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Year</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Month</b></para>
-        /// </description></item>
+        /// <item><description><b>Year</b>: Year.</description></item>
+        /// <item><description><b>Month</b>: Month.</description></item>
         /// </list>
         /// <para>Default value: <b>Month</b>.</para>
         /// 
@@ -73,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID. The ID can be up to 50 characters in length.</para>
+        /// <para>The region ID. The value can be up to 50 characters in length.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2319134.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>
@@ -87,18 +83,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal status. Valid values:</para>
+        /// <para>The auto-renewal status. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>AutoRenewal</b>: Enables auto-renewal.</para>
-        /// </description></item>
-        /// <item><description><para><b>Normal</b>: Enables manual renewal.</para>
-        /// </description></item>
-        /// <item><description><para><b>NotRenewal</b>: Disables renewal.</para>
-        /// </description></item>
+        /// <item><description><b>AutoRenewal</b>: Auto-renewal.</description></item>
+        /// <item><description><b>Normal</b>: Manual renewal. </description></item>
+        /// <item><description><b>NotRenewal</b>: No renewal.</description></item>
         /// </list>
-        /// <para>Default value: <b>AutoRenewal</b>.</para>
+        /// <para>Default value: <b>AutoRenewal</b>. </para>
         /// <remarks>
-        /// <para>When you set this parameter to <b>NotRenewal</b>, the system stops sending expiration reminders and sends only a non-renewal notification three days before the expiration date.</para>
+        /// <para>If you set this parameter to <b>NotRenewal</b>, the system no longer sends expiration reminders and only sends a non-renewal reminder three days before expiration.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

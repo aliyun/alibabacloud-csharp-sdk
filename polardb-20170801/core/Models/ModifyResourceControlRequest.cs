@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyResourceControlRequest : TeaModel {
         /// <summary>
-        /// <para>The updated maximum number of CPU cores. The minimum value is 1, and the maximum value is determined by the resource_control_cpu_count_limit kernel parameter of the cluster. You must specify exactly one of the MaxCpu and CpuCount parameters.</para>
+        /// <para>The updated maximum number of CPU cores. The minimum value is 1, and the maximum value is determined by the resource_control_cpu_count_limit kernel parameter of the cluster. You must specify either MaxCpu or CpuCount, but not both.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The updated maximum CPU quota percentage. Valid values: 1 to 100. You must specify exactly one of the MaxCpu and CpuCount parameters.</para>
+        /// <para>The updated maximum CPU quota percentage. Valid values: 1 to 100. You must specify either MaxCpu or CpuCount, but not both.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxCpu { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the PolarDB cluster is deployed.</para>
+        /// <para>The region ID of the PolarDB cluster.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>

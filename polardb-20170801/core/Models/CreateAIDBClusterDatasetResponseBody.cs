@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAIDBClusterDatasetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the PolarDB database cluster.</para>
+        /// <para>The instance ID of the PolarDB database for the AI model service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The dataset management service ID.</para>
+        /// <para>The instance ID of the dataset management service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcs-2zeei***</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>The dataset name.</para>
+        /// <para>The name of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataset01</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The path to the dataset.</para>
+        /// <para>The path of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb_ai/datasets/train/sft/dataset01</para>

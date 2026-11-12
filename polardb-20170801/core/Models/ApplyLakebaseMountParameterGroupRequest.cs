@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ApplyLakebaseMountParameterGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The parameter template ID. The ID starts with pagp-.</para>
+        /// <para>The parameter template ID, which starts with pagp-.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

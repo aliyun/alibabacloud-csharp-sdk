@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribePolarAgentChatRecordsResponseBodyData> Data { get; set; }
         public class DescribePolarAgentChatRecordsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The answer.</para>
+            /// <para>The reply.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Call DescribeDBClusters and check DBClusterStatus</para>
             /// </summary>
             [NameInMap("Answer")]
             [Validation(Required=false)]
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FeedbackType { get; set; }
 
             /// <summary>
-            /// <para>The session query. Obtain this value from the response of the API call to start a digital human.</para>
+            /// <para>The session query. You can obtain this value from the response of the API operation that starts a digital human.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>How do I query the cluster status?</para>
             /// </summary>
             [NameInMap("Query")]
             [Validation(Required=false)]

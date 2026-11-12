@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAgenticDBBranchRequest : TeaModel {
         /// <summary>
-        /// <para>The branch ID.</para>
+        /// <para>The branch ID. You can obtain this ID by calling CreateAgenticDBBranch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
+        /// <para>The AgenticDB cluster ID. You can obtain this ID by calling CreateDBCluster and setting AgenticDbType to dedicated. The ID starts with pagc-.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The project ID.</para>
+        /// <para>The project ID. You can obtain this ID by calling CreateAgenticDBProject.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The tenant ID. You can obtain this ID by calling CreateAgenticDBTenant or CreateAgenticDBProject.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

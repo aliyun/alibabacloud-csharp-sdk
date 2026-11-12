@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateConsumerRequest : TeaModel {
         /// <summary>
-        /// <para>The consumer group ID. You can obtain the ID from the ConsumerGroupId parameter returned by the CreateConsumerGroup operation.</para>
+        /// <para>The ID of the user group. You can obtain the ID from the ConsumerGroupId parameter returned by CreateConsumerGroup. This parameter is actually required. If it is not provided, the API returns an InvalidParameters.Format (400) error. Although the parameter is named ConsumerGroupName, you must pass the ConsumerGroupId in the cg-xxxx format. You can obtain the ID from the ConsumerGroupId field returned by CreateConsumerGroup or DescribeConsumerGroups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-p3gk2oh55c**</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID. You can obtain the ID from the GwClusterId parameter returned by the CreateGateway operation.</para>
+        /// <para>The ID of the gateway instance. You can obtain the ID from the GwClusterId parameter returned by CreateGateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The key type. Default value: ApiKey. Valid values: ApiKey.</para>
+        /// <para>The key type. Default value: ApiKey. Currently, only ApiKey is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ApiKey</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The nickname.</para>
+        /// <para>The nickname of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

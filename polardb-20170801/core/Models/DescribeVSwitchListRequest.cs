@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer that is greater than 0. It cannot exceed the maximum value of the Integer data type.</para>
+        /// <para>The page number. The value must be an integer greater than 0 and no greater than the maximum value of the Integer type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,12 +30,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
@@ -47,9 +44,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the vSwitch resides.</para>
+        /// <para>The region ID of the vSwitch.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query the IDs of all regions that support vSwitches.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all region IDs supported by vSwitches.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,16 +70,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>A list of vSwitches in the VPC.</para>
+        /// <para>The list of vSwitches in the VPC.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The VPC ID.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> to view the details of the VPC.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to view VPC details.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone where the vSwitch resides.</para>
+        /// <para>The zone ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>

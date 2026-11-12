@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway instance.</para>
+        /// <para>The gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the consumer group is the default group. Valid values: <c>0</c> (false) and <c>1</c> (true).</para>
+        /// <para>Specifies whether the group is the default group. Valid values: 0: No. 1: Yes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The end date of the query.</para>
-        /// <para>The date is in UTC. Format: YYYY-MM-DDZ.</para>
+        /// <para>The date is in UTC and formatted as YYYY-MM-DDZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-30Z</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The start date of the query.</para>
-        /// <para>The date is in UTC. Format: YYYY-MM-DDZ.</para>
+        /// <para>The date is in UTC and formatted as YYYY-MM-DDZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-01Z</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The budget type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>GlobalTotal</b>: Global total budget.</description></item>
-        /// <item><description><b>ConsumerGroupTotal</b>: Total budget for a consumer group.</description></item>
-        /// <item><description><b>ConsumerGroupMemberDefault</b>: Default budget for a consumer group member.</description></item>
-        /// <item><description><b>Consumer</b>: Budget for a single consumer.</description></item>
+        /// <item><description><b>GlobalTotal</b>: global total budget</description></item>
+        /// <item><description><b>ConsumerGroupTotal</b>: total budget of a consumer group</description></item>
+        /// <item><description><b>ConsumerGroupMemberDefault</b>: default budget for consumer group members</description></item>
+        /// <item><description><b>Consumer</b>: budget for a single consumer</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

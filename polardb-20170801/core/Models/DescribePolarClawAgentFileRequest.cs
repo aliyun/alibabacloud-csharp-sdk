@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarClawAgentFileRequest : TeaModel {
         /// <summary>
-        /// <para>Agent ID</para>
+        /// <para>The PolarClaw agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

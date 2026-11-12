@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeConsumersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of consumers.</para>
+        /// <para>The consumer list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The complete API key. This value is returned only in the current response.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxxxxx</para>
+            /// <para>ak_example_7f3d9c2a</para>
             /// </summary>
             [NameInMap("ApiKey")]
             [Validation(Required=false)]
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The ID of the consumer group.</para>
+            /// <para>The consumer group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-xxxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the consumer group.</para>
+            /// <para>The consumer group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerGroupName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the consumer.</para>
+            /// <para>The consumer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-mqveroemc***</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? MtdCostCount { get; set; }
 
             /// <summary>
-            /// <para>The cumulative total cost.</para>
+            /// <para>The cumulative cost.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? MtdTokenCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the consumer.</para>
+            /// <para>The consumer name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>

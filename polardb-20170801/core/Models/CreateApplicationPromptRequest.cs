@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationPromptRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Application.</para>
+        /// <para>The application ID. You must specify an application with <c>ApplicationType</c> set to <c>mem0</c>. You can first call the CreateApplication operation with <c>ApplicationType</c> set to <c>mem0</c> to create an application, and then pass the returned ApplicationId to this operation. This parameter does not apply to other application types such as standard PolarClaw or Supabase.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Prompt.</para>
+        /// <para>The prompt name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptName { get; set; }
 
         /// <summary>
-        /// <para>The type of the Prompt.</para>
+        /// <para>The prompt type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptType { get; set; }
 
         /// <summary>
-        /// <para>The content of the Prompt.</para>
+        /// <para>The prompt content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of regions where the backup sets are stored.</para>
+        /// <para>The list of regions where backup sets are located.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]

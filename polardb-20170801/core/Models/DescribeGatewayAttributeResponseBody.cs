@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance type code.</para>
+        /// <para>The specification code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polar.app.g2.medium</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The creation time.</para>
-        /// <para>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-02-24T11:57:54Z</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The endpoint ID.</para>
+            /// <para>The ID of the endpoint node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The network type of the endpoint. Valid values:</para>
+            /// <para>The type of the endpoint address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Private: VPC</description></item>
-            /// <item><description>Public: Internet</description></item>
+            /// <item><description>Private: VPC address</description></item>
+            /// <item><description>Public: Internet address</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The expiration time.</para>
         /// <para>This parameter is empty when the billing method is Postpaid.</para>
-        /// <para>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-04-22T16:00:00Z</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The last modification time.</para>
-        /// <para>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-07T02:19:55Z</para>
@@ -205,8 +205,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -247,14 +247,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RunningVersion { get; set; }
 
         /// <summary>
-        /// <para>The application-level IP whitelist.</para>
+        /// <para>The application-level whitelist.</para>
         /// </summary>
         [NameInMap("SecurityIPArrays")]
         [Validation(Required=false)]
         public List<DescribeGatewayAttributeResponseBodySecurityIPArrays> SecurityIPArrays { get; set; }
         public class DescribeGatewayAttributeResponseBodySecurityIPArrays : TeaModel {
             /// <summary>
-            /// <para>The name of the IP whitelist. Default value: <c>default</c>.</para>
+            /// <para>The name of the IP address group. Default value: <c>default</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SecurityIPArrayName { get; set; }
 
             /// <summary>
-            /// <para>The tag of the IP whitelist.</para>
+            /// <para>The tag of the IP address group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mytag</para>
@@ -284,6 +284,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SecurityIPList { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>Indicates whether the semantic cache is enabled. If the semantic cache is disabled or has never been enabled, the value is false.</para>
+        /// </summary>
+        [NameInMap("SemanticCacheEnabled")]
+        [Validation(Required=false)]
+        public bool? SemanticCacheEnabled { get; set; }
 
         /// <summary>
         /// <para>The application status. Valid values:</para>

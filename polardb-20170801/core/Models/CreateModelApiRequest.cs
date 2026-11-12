@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The forced model.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>Qwen3-32B</para>
         /// </summary>
         [NameInMap("ForceModel")]
         [Validation(Required=false)]
         public string ForceModel { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID. You can obtain the ID from the GwClusterId returned by CreateGateway.</para>
+        /// <para>The gateway instance ID. You can obtain this ID from the GwClusterId parameter returned by the CreateGateway operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The number of input tokens.</para>
+        /// <para>The number of input points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RecordInput { get; set; }
 
         /// <summary>
-        /// <para>The number of output tokens.</para>
+        /// <para>The number of output points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of routing rules, which is a JSON array string.</para>
+        /// <para>The list of routing rules, specified as a JSON array string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

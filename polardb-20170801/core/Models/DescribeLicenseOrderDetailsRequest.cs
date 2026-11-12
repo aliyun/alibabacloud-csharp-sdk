@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeLicenseOrderDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud order or virtual order.</para>
+        /// <para>The Alibaba Cloud order ID or virtual order ID. You can create a virtual order by calling CreateOrGetVirtualLicenseOrder or query existing orders by calling DescribeLicenseOrders to obtain a valid AliyunOrderId. Usage note: To obtain a valid AliyunOrderId, create a virtual order by calling CreateOrGetVirtualLicenseOrder or query existing orders by calling DescribeLicenseOrders.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
