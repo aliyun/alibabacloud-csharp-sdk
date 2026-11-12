@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayIntranetLinkedVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the VPC belongs.</para>
+        /// <para>The Alibaba Cloud account ID to which the VPC belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19*****10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable authoritative DNS parsing. The default value is false.</para>
+        /// <para>Specifies whether to enable authoritative DNS resolution. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? EnableAuthoritativeDns { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual switch. For more information, see <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</para>
+        /// <para>The ID of the vSwitch. To obtain the vSwitch ID, refer to <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-8vbqn2at0kljjxxxx****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC). For more information, see <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</para>
+        /// <para>The ID of the VPC. To obtain the VPC ID, refer to <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf66uio7md****</para>

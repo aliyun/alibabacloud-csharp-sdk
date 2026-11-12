@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceMirrorRequest : TeaModel {
         /// <summary>
-        /// <para>The percentage of traffic that you want to mirror. Valid values: 0 to 100.</para>
+        /// <para>The traffic ratio. Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Ratio { get; set; }
 
         /// <summary>
-        /// <para>The service instances.</para>
+        /// <para>The list of service instances.</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]

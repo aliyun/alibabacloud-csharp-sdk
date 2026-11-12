@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ReinstallTenantAddonResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The operation result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Addon prometheus_discovery is successfully reinstalled</para>

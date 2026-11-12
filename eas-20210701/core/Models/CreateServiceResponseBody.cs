@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The public endpoint of the created service.</para>
+        /// <para>The public endpoint of the newly created service.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://pai-eas.vpc.cn-shanghai">http://pai-eas.vpc.cn-shanghai</a>.****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InternetEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint of the created service.</para>
+        /// <para>The internal endpoint of the newly created service.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://pai-eas.cn-shanghai">http://pai-eas.cn-shanghai</a>.****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string IntranetEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the created service.</para>
+        /// <para>The region ID of the newly created service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the created service.</para>
+        /// <para>The ID of the newly created service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-m-aaxxxddf</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the created service.</para>
+        /// <para>The name of the newly created service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourname</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The service state.</para>
+        /// <para>The current status of the new service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>

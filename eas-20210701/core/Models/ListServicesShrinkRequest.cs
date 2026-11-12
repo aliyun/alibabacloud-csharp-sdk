@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServicesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Filters services by visibility. PUBLIC indicates a public service, and PRIVATE indicates a private service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Auto Scaling for the service.</para>
+        /// <para>Specifies whether elastic scaling is enabled for the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CallerUid { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable scheduled auto scaling for the service.</para>
+        /// <para>Specifies whether scheduled scaling is enabled for the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? CronscalerEnabled { get; set; }
 
         /// <summary>
-        /// <para>The keyword for a fuzzy search. This parameter supports fuzzy searches by service name only.</para>
+        /// <para>The fuzzy match field. Only fuzzy matching by service name is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The private gateway ID.</para>
+        /// <para>The ID of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Gateway { get; set; }
 
         /// <summary>
-        /// <para>The name of the service group. To learn how to obtain this name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</para>
+        /// <para>The name of the service group. For information about how to obtain the service group name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include services that do not belong to any workspace. The default value is true.</para>
+        /// <para>Specifies whether to include services that do not belong to any workspace. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -88,7 +90,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? IncludeNoWorkspace { get; set; }
 
         /// <summary>
-        /// <para>Filters services by label.</para>
+        /// <para>The label used to filter services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
@@ -97,10 +102,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>desc</c> (default): descending.</para>
-        /// </description></item>
-        /// <item><description><para><c>asc</c>: ascending.</para>
-        /// </description></item>
+        /// <item><description>desc: Descending order. This is the default value.</description></item>
+        /// <item><description>asc: Ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results to return. The default value is 1.</para>
+        /// <para>The page number of the service list to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of services to return per page. The default value is 100.</para>
+        /// <para>The number of services to return on each page during a paged query. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The UID of the primary service. This parameter applies to member services in a service group.</para>
+        /// <para>The ID of the primary service that corresponds to the band member service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-m-ijafy3c8cxxxx</para>
@@ -161,7 +164,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceAliasName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable a burstable resource pool for the service.</para>
+        /// <para>Specifies whether the burstable resource pool is enabled for the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -171,7 +174,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? ResourceBurstable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. To learn how to query for this ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</para>
+        /// <para>The ID of the resource group. For information about how to query the resource group ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-asdas****</para>
@@ -183,7 +186,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The name or ID of the service\&quot;s resource group.</para>
+        /// <para>The name or ID of the resource group to which the service belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-hd0qwy8cxxxx</para>
@@ -194,16 +197,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The type of resource the service uses. Valid values:</para>
+        /// <para>The type of resource used by the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PublicResource</para>
-        /// </description></item>
-        /// <item><description><para>DedicatedResource</para>
-        /// </description></item>
-        /// <item><description><para>Lingjun</para>
-        /// </description></item>
-        /// <item><description><para>SelfManagedLingjun</para>
-        /// </description></item>
+        /// <item><description>PublicResource</description></item>
+        /// <item><description>DedicatedResource</description></item>
+        /// <item><description>Lingjun</description></item>
+        /// <item><description>SelfManagedLingjun</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -224,7 +223,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The service name.</para>
+        /// <para>The name of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>echo_test</para>
@@ -234,7 +233,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The status of the service.</para>
+        /// <para>The running status of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -246,30 +245,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Async</para>
-        /// </description></item>
-        /// <item><description><para>Standard</para>
-        /// </description></item>
-        /// <item><description><para>Queue</para>
-        /// </description></item>
-        /// <item><description><para>LLM</para>
-        /// </description></item>
-        /// <item><description><para>RAG</para>
-        /// </description></item>
-        /// <item><description><para>Serverless</para>
-        /// </description></item>
-        /// <item><description><para>LLMGatewayService</para>
-        /// </description></item>
-        /// <item><description><para>OfflineTask</para>
-        /// </description></item>
-        /// <item><description><para>SDCluster</para>
-        /// </description></item>
-        /// <item><description><para>ScalableJob</para>
-        /// </description></item>
-        /// <item><description><para>ScalableJobService</para>
-        /// </description></item>
-        /// <item><description><para>AssistantJob</para>
-        /// </description></item>
+        /// <item><description>Async</description></item>
+        /// <item><description>Standard</description></item>
+        /// <item><description>Queue</description></item>
+        /// <item><description>LLM</description></item>
+        /// <item><description>RAG</description></item>
+        /// <item><description>Serverless</description></item>
+        /// <item><description>LLMGatewayService</description></item>
+        /// <item><description>Offline Task</description></item>
+        /// <item><description>SDCluster</description></item>
+        /// <item><description>ScalableJob</description></item>
+        /// <item><description>ScalableJobService</description></item>
+        /// <item><description>AssistantJob</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -280,7 +267,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The service UID.</para>
+        /// <para>The UID of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-m-c9iw3yitxxxx</para>
@@ -290,7 +277,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceUid { get; set; }
 
         /// <summary>
-        /// <para>The sort field. By default, results are sorted by timestamp in descending order.</para>
+        /// <para>The sort field. By default, timestamp fields are sorted in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -300,7 +287,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the service accepts group traffic. This parameter applies only to services within a service group.</para>
+        /// <para>Specifies whether to receive group traffic. This parameter is valid only for group services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>grouping</para>

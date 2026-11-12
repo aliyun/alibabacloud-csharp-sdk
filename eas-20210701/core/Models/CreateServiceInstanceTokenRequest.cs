@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateServiceInstanceTokenRequest : TeaModel {
         /// <summary>
-        /// <para>Type of URL to return. Valid values:</para>
+        /// <para>The type of URL to retrieve. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WorkBench</b>: Log on to the container using Workbench.</description></item>
+        /// <item><description><b>WorkBench</b>: Logs on to the container through the Workbench page.</description></item>
+        /// <item><description><b>WebShell</b>: Logs on to the container through a WebSocket URL. This value is not supported for processor-type services or services created before June 2026.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ActionType { get; set; }
 
         /// <summary>
-        /// <para>Name of the service worker. Call the ListServiceContainers operation to get the worker name.</para>
+        /// <para>The name of the service worker. You can call the ListServiceContainers operation to obtain the worker name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>worker0</para>

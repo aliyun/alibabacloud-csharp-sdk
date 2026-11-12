@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private gateway. You can obtain the ID from the private_gateway_id field in the response of the ListResources operation.</para>
+        /// <para>The ID of the private gateway. For information about how to obtain the ID of a private gateway, see the private_gateway_id field in the response of the ListResources operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable access over the public network.</para>
+        /// <para>Specifies whether Internet access is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? InternetEnabled { get; set; }
 
         /// <summary>
-        /// <para>Filter by tag.</para>
+        /// <para>The label used to filter gateways.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number of the gateway list to return. The default value is 1.</para>
+        /// <para>The page number of the gateway list. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of gateways to return on each page. The default value is 100.</para>
+        /// <para>The paging Settings for the number of entries to return per page in a paged query. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can obtain the ID from the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
+        /// <para>The ID of the resource group. For information about how to obtain the ID of a resource group, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-4gt8twzwllfo******</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by.</para>
+        /// <para>The field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>

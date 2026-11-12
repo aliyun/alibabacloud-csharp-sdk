@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListVirtualResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned list of virtual resource groups.</para>
+        /// <para>The page number of the returned virtual resource group list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of virtual resource groups returned on each page.</para>
+        /// <para>The number of virtual resource groups displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<ListVirtualResourceResponseBodyVirtualResources> VirtualResources { get; set; }
         public class ListVirtualResourceResponseBodyVirtualResources : TeaModel {
             /// <summary>
-            /// <para>The time when the virtual resource group was created.</para>
+            /// <para>The time when the virtual resource group was created, in UTC in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16T17:52:49Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? ServiceCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the virtual resource group was last updated.</para>
+            /// <para>The time when the virtual resource group was last updated, in UTC in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16T19:52:49Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual resource group.</para>
+            /// <para>The virtual resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eas-vr-npovr28onap1xxxxxx</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string VirtualResourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the virtual resource group.</para>
+            /// <para>The virtual resource group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyVirtualResource</para>

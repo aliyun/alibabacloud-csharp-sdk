@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 /// <para>The IP CIDR block in the VPC that can access the private gateway over the Internet.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0.0.0.0/0</para>
+                /// <para>10.23.XX.XX/32</para>
                 /// </summary>
                 [NameInMap("Entry")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 /// <para>The comment on the IP CIDR block in the VPC that can access the private gateway over the internal network.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>default</para>
+                /// <para>Test Entry</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 /// <para>The IP CIDR block in the VPC that can access the private gateway over the internal network.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0.0.0.0/0</para>
+                /// <para>192.168.XX.XX/24</para>
                 /// </summary>
                 [NameInMap("Entry")]
                 [Validation(Required=false)]

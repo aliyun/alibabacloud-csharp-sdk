@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateBenchmarkTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Benchmark  task [foo] is Creating</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the stress testing task is performed.</para>
+        /// <para>The region where the stress testing task resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

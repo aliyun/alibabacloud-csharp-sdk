@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceCronScalerRequest : TeaModel {
         /// <summary>
-        /// <para>The cron expressions for the dates to exclude from the schedule.</para>
+        /// <para>The cron expressions for the dates to be excluded.</para>
         /// </summary>
         [NameInMap("ExcludeDates")]
         [Validation(Required=false)]
         public List<string> ExcludeDates { get; set; }
 
         /// <summary>
-        /// <para>The scheduled scaling tasks.</para>
+        /// <para>The scheduled scaling jobs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ScaleJobs")]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<UpdateServiceCronScalerRequestScaleJobs> ScaleJobs { get; set; }
         public class UpdateServiceCronScalerRequestScaleJobs : TeaModel {
             /// <summary>
-            /// <para>The name of the scheduled auto scaling task.</para>
+            /// <para>The name of the scheduled scaling job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scale-job-1</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The cron expression that specifies when to run the scaling task. For more information about cron expressions, see the <b>Cron expressions</b> section in this topic.</para>
+            /// <para>The cron expression for the scaling job. For more information about how to configure a cron expression, see <b>Supplementary description of request parameters</b>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Schedule { get; set; }
 
             /// <summary>
-            /// <para>The target number of instances for the scaling task.</para>
+            /// <para>The target number of instances for the scaling job.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? TargetSize { get; set; }
 
             /// <summary>
-            /// <para>The time zone for the cron expression.</para>
+            /// <para>The time zone configuration used to parse the execution time of the scheduled scaling job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>

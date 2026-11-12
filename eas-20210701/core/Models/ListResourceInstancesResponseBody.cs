@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<ResourceInstance> Instances { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned list of instances.</para>
+        /// <para>The page number of the returned machine instance list in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of instances returned on each page.</para>
+        /// <para>The number of machines returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

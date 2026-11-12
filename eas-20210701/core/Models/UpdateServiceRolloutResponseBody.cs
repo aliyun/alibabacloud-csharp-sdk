@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceRolloutResponseBody : TeaModel {
         /// <summary>
-        /// <para>A message that indicates the result of the request. Possible values include:</para>
+        /// <para>The returned message. Describes the request processing result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>&quot;Rollout updated successfully&quot;</para>
-        /// </description></item>
-        /// <item><description><para>&quot;Rollout paused successfully&quot;</para>
-        /// </description></item>
-        /// <item><description><para>&quot;Rollout resumed successfully&quot;</para>
-        /// </description></item>
+        /// <item><description>&quot;Rollout updated successfully&quot;: The rollout policy is updated.</description></item>
+        /// <item><description>&quot;Rollout paused successfully&quot;: The rollout is paused.</description></item>
+        /// <item><description>&quot;Rollout resumed successfully&quot;: The rollout is resumed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A unique identifier for the request. You can use this request ID for troubleshooting and tracking.</para>
+        /// <para>The request ID. The unique identifier returned for each request, used for troubleshooting and tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateServiceRolloutRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration for the Batch strategy.</para>
+        /// <para>The configuration for automatic batching.</para>
         /// </summary>
         [NameInMap("Batch")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string BatchSize { get; set; }
 
             /// <summary>
-            /// <para>The wait interval after each batch completes.</para>
+            /// <para>The wait interval after each batch update is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5m</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The configuration for the Partition strategy.</para>
+        /// <para>The configuration for manual batching.</para>
         /// </summary>
         [NameInMap("Partition")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to pause the rollout.</para>
+        /// <para>Specifies whether to pause the update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>

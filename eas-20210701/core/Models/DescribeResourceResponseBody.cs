@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster that contains the resource group.</para>
+        /// <para>The ID of the cluster where the resource group resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? CpuUsed { get; set; }
 
         /// <summary>
-        /// <para>The time the resource group was created.</para>
+        /// <para>The time when the resource group was created, in UTC and RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-05-19T14:19:42Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Additional information, such as the VPC connection status and the SLS log status.</para>
+        /// <para>The additional information, such as the VPC connectivity status and Simple Log Service status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;vswitch_id&quot;:&quot;vsw-bp17uo6xebcusy****&quot;,&quot;gpu_share&quot;:true,&quot;aux_vswitch_id_list&quot;:[&quot;vsw-bp13b3pvjap3vxn****&quot;,&quot;vsw-bp1nls8o5hk8mt8*****&quot;],&quot;security_group_id&quot;:&quot;sg-bp1j1z7297hcink*****&quot;,&quot;vpc_id&quot;:&quot;vpc-bp1kjr3rfyhx01*****&quot;,&quot;destination_cidr&quot;:&quot;172.16.0.12/28&quot;,&quot;role_arn&quot;:&quot;acs:ram::1157703270*****:role/AliyunServiceRoleForPaiEas&quot;,&quot;sls_project&quot;:&quot;&quot;,&quot;sls_logstore&quot;:&quot;&quot;,&quot;sls_status&quot;:&quot;ResourceReady&quot;,&quot;sls_message&quot;:&quot;&quot;,&quot;update_time&quot;:&quot;&quot;}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ExtraData { get; set; }
 
         /// <summary>
-        /// <para>The features that the resource group supports.</para>
+        /// <para>The set of features supported by the resource group.</para>
         /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public float? GpuUsed { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances in the resource group.</para>
+        /// <para>The total number of machine instances in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of CPU cores that can be allocated to a single instance in the resource group.</para>
+        /// <para>The maximum number of allocatable CPU cores per node in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? InstanceMaxAllocatableCPU { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of GPUs that can be allocated to a single instance in the resource group.</para>
+        /// <para>The maximum number of allocatable GPUs per node in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public float? InstanceMaxAllocatableGPU { get; set; }
 
         /// <summary>
-        /// <para>The maximum amount of memory that can be allocated to a single instance in the resource group, in MB.</para>
+        /// <para>The maximum allocatable memory size per node in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2048</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? InstanceMaxAllocatableMemory { get; set; }
 
         /// <summary>
-        /// <para>The total memory size, in MB.</para>
+        /// <para>The total memory, in MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8192</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? MemoryUsed { get; set; }
 
         /// <summary>
-        /// <para>A message that provides details about the status of the resource group.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource is ready</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string OwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The total number of pay-as-you-go instances in the resource group.</para>
+        /// <para>The total number of pay-as-you-go machine instances in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PostPaidInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of subscription instances in the resource group.</para>
+        /// <para>The total number of subscription machine instances in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The Elastic Algorithm Service resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-glkfpsxuw57x1h*****</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource group.</para>
+        /// <para>The Elastic Algorithm Service resource name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-resouce****</para>
@@ -217,12 +217,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource group. Valid values:</para>
+        /// <para>The resource group type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Dedicated</c>: a dedicated resource group.</para>
-        /// </description></item>
-        /// <item><description><para><c>SelfManaged</c>: a self-managed resource group.</para>
-        /// </description></item>
+        /// <item><description>Dedicated: dedicated resource group</description></item>
+        /// <item><description>SelfManaged: self-managed resource group</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -253,7 +251,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time the resource group was last updated.</para>
+        /// <para>The time when the resource group was last updated, in UTC and RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-02-24T11:52:17Z</para>

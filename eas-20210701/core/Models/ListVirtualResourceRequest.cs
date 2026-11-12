@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListVirtualResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Desc: Descending order.</para>
-        /// </description></item>
-        /// <item><description><para>Asc: Ascending order.</para>
-        /// </description></item>
+        /// <item><description>Desc: descending order.</description></item>
+        /// <item><description>Asc: ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number for the list of virtual resource groups. The value starts from 1. The default value is 1.</para>
+        /// <para>The page number of the virtual resource group list. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of virtual resource groups to display on each page. The default value is 100.</para>
+        /// <para>The number of virtual resource groups to display per page in a paged query. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field that is used to sort the results. By default, the results are sorted by timestamp in descending order.</para>
+        /// <para>The sort field. Results are sorted by timestamp in descending order by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual resource group.</para>
+        /// <para>The virtual resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-vr-npovr28onap1xxxxxx</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string VirtualResourceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the virtual resource group.</para>
+        /// <para>The virtual resource group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyVirtualResource</para>

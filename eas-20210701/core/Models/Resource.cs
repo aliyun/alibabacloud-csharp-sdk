@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The status of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ResourceReady</para>
+        /// <para>ResouceReady</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

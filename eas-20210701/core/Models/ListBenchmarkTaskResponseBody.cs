@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListBenchmarkTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned list of tasks.</para>
+        /// <para>The page number of the returned stress testing task list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of tasks to return on each page.</para>
+        /// <para>The number of stress testing tasks returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public long? AvailableAgent { get; set; }
 
             /// <summary>
-            /// <para>The time when the stress testing task was created.</para>
+            /// <para>The time when the stress testing task was created. The time is in UTC and follows the RFC3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-02-04T02:43:15Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>A summary of the task.</para>
+            /// <para>The summary information of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Benchmark task [benchmark-larec-test-1076] is Running</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The time when the stress testing task was last updated.</para>
+            /// <para>The time when the stress testing task was updated. The time is in UTC and follows the RFC3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-24T03:11:30Z</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The total number of tasks.</para>
+        /// <para>The total number of tasks queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

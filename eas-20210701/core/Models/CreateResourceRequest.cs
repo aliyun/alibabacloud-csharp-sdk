@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>false</c> (default): Auto-renewal is disabled.</para>
-        /// </description></item>
-        /// <item><description><para><c>true</c>: Auto-renewal is enabled.</para>
-        /// </description></item>
+        /// <item><description>false (default): disables auto-renewal.</description></item>
+        /// <item><description>true: enables auto-renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,14 +26,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PrePaid</c>: subscription.</para>
-        /// </description></item>
-        /// <item><description><para><c>PostPaid</c>: pay-as-you-go.</para>
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.<remarks>
+        /// <para>This parameter is required when ResourceType is set to Dedicated.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is required when <c>ResourceType</c> is set to <c>Dedicated</c>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The number of instances.</para>
         /// <remarks>
-        /// <para>This parameter is required when <c>ResourceType</c> is set to <c>Dedicated</c>.</para>
+        /// <para>This parameter is required when ResourceType is set to Dedicated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The ECS instance type.</para>
         /// <remarks>
-        /// <para>This parameter is required when <c>ResourceType</c> is set to <c>Dedicated</c>.</para>
+        /// <para>This parameter is required when ResourceType is set to Dedicated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,6 +68,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// <para>The user-defined labels.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -90,14 +89,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The type of the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Dedicated</c>: a dedicated resource group.</para>
-        /// </description></item>
-        /// <item><description><para><c>SelfManaged</c>: a self-managed resource group.</para>
+        /// <item><description>Dedicated: dedicated resource group.</description></item>
+        /// <item><description>SelfManaged: self-managed resource group.<remarks>
+        /// <para>To use a self-managed resource group, you must apply to be added to the whitelist.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>You must be whitelisted to use self-managed resource groups.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Dedicated</para>
@@ -124,21 +121,24 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ExternalClusterId { get; set; }
 
             /// <summary>
-            /// <para>The node labels to match, specified as key-value pairs.</para>
+            /// <para>The label key-value pairs for nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;key1&quot;: &quot;value1&quot;</para>
             /// </summary>
             [NameInMap("NodeMatchLabels")]
             [Validation(Required=false)]
             public Dictionary<string, string> NodeMatchLabels { get; set; }
 
             /// <summary>
-            /// <para>A list of tolerations for node taints.</para>
+            /// <para>The list of tolerations for node taints.</para>
             /// </summary>
             [NameInMap("NodeTolerations")]
             [Validation(Required=false)]
             public List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> NodeTolerations { get; set; }
             public class CreateResourceRequestSelfManagedResourceOptionsNodeTolerations : TeaModel {
                 /// <summary>
-                /// <para>The effect of the toleration.</para>
+                /// <para>The effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NoSchedule</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 public string Effect { get; set; }
 
                 /// <summary>
-                /// <para>The key of the toleration.</para>
+                /// <para>The key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key1</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The toleration operator, which defines the relationship between the key and value.</para>
+                /// <para>The operator that defines the relationship between the key and the value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Equal</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>The toleration value.</para>
+                /// <para>The value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             }
 
             /// <summary>
-            /// <para>The name of the RAM role that grants PAI-EAS the required permissions.</para>
+            /// <para>The name of the RAM role to which PAI-EAS-related permissions are granted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>clusterrole</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The size of the system disk, in GiB. The value must be between 200 and 2,000. If unspecified, the default is 200 GiB.</para>
+        /// <para>The size of the system cloud disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -201,12 +201,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? SystemDiskSize { get; set; }
 
+        /// <summary>
+        /// <para>The usage mode of the resource group. Valid values: inference (inference service resource group) and sandbox (sandbox resource group).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inference</para>
+        /// </summary>
         [NameInMap("UsageMode")]
         [Validation(Required=false)]
         public string UsageMode { get; set; }
 
         /// <summary>
-        /// <para>The zone in which to create the instance.</para>
+        /// <para>The zone to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-f</para>

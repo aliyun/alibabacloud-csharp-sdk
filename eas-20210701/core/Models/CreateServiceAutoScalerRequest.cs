@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateServiceAutoScalerRequest : TeaModel {
         /// <summary>
-        /// <para>The Autoscaler operation.</para>
+        /// <para>The behavior during auto-scaling.</para>
         /// </summary>
         [NameInMap("behavior")]
         [Validation(Required=false)]
         public CreateServiceAutoScalerRequestBehavior Behavior { get; set; }
         public class CreateServiceAutoScalerRequestBehavior : TeaModel {
             /// <summary>
-            /// <para>The operation that reduces the number of instances to 0.</para>
+            /// <para>The behavior when scaling in to zero.</para>
             /// </summary>
             [NameInMap("onZero")]
             [Validation(Required=false)]
             public CreateServiceAutoScalerRequestBehaviorOnZero OnZero { get; set; }
             public class CreateServiceAutoScalerRequestBehaviorOnZero : TeaModel {
                 /// <summary>
-                /// <para>The time window that is required before the number of instances is reduced to 0. The number of instances can be reduced to 0 only if no request is available or no traffic exists in the specified time window. Default value: 600.</para>
+                /// <para>The grace period before scaling in to zero. When the metrics meet the conditions for scaling in to zero, the scale-in to zero is executed after the grace period elapses. Default value: 600.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>600</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 public int? ScaleDownGracePeriodSeconds { get; set; }
 
                 /// <summary>
-                /// <para>The number of instances that you want to create at a time if the number of instances is 0. Default value: 1.</para>
+                /// <para>The number of instances created at a time when scaling out from zero. Default value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             }
 
             /// <summary>
-            /// <para>The scale-in operation.</para>
+            /// <para>The behavior during scale-in.</para>
             /// </summary>
             [NameInMap("scaleDown")]
             [Validation(Required=false)]
             public CreateServiceAutoScalerRequestBehaviorScaleDown ScaleDown { get; set; }
             public class CreateServiceAutoScalerRequestBehaviorScaleDown : TeaModel {
                 /// <summary>
-                /// <para>The time window that is required before the scale-in operation is performed. The scale-in operation can be performed only if the specified metric drops below the specified threshold in the specified time window. Default value: 300.</para>
+                /// <para>The stabilization window period for scale-in. Default value: 300. Scale-in is executed only when the metrics do not meet the specified conditions over the past period of time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             }
 
             /// <summary>
-            /// <para>The scale-out operation.</para>
+            /// <para>The behavior during scale-out.</para>
             /// </summary>
             [NameInMap("scaleUp")]
             [Validation(Required=false)]
             public CreateServiceAutoScalerRequestBehaviorScaleUp ScaleUp { get; set; }
             public class CreateServiceAutoScalerRequestBehaviorScaleUp : TeaModel {
                 /// <summary>
-                /// <para>The time window that is required before the scale-out operation is performed. The scale-out operation can be performed only if the specified metric exceeds the specified threshold in the specified time window. Default value: 0.</para>
+                /// <para>The stabilization window period for scale-out. Default value: 0. Scale-out is executed only when the metrics meet the specified conditions over the past period of time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of instances in the service. The value of max must be greater than the value of min.</para>
+        /// <para>The maximum number of instances. The value must be greater than the minimum number of instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Max { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of instances in the service.</para>
+        /// <para>The minimum number of instances. The value must be greater than 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Min { get; set; }
 
         /// <summary>
-        /// <para>The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.</para>
+        /// <para>The list of scaling policies.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("scaleStrategies")]
@@ -116,14 +116,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<CreateServiceAutoScalerRequestScaleStrategies> ScaleStrategies { get; set; }
         public class CreateServiceAutoScalerRequestScaleStrategies : TeaModel {
             /// <summary>
-            /// <para>The name of the metric for triggering auto scaling. Valid values:</para>
+            /// <para>The name of the metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>qps: the queries per second (qps) for an individual instance.</para>
-            /// </description></item>
-            /// <item><description><para>cpu: the cpu utilization.</para>
-            /// </description></item>
-            /// <item><description><para>gpu[util]: gpu utilization.</para>
-            /// </description></item>
+            /// <item><description>qps: the queries per second (QPS) threshold per instance</description></item>
+            /// <item><description>cpu: the CPU utilization threshold</description></item>
+            /// <item><description>gpu[util]: the GPU utilization threshold</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -135,7 +132,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.</para>
+            /// <para>The service to which the metric belongs. If this parameter is not specified, the current service is used by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo_svc</para>
@@ -145,14 +142,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Service { get; set; }
 
             /// <summary>
-            /// <para>The threshold of the metric that triggers auto scaling.</para>
+            /// <para>The threshold that triggers auto-scaling.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.</para>
-            /// </description></item>
-            /// <item><description><para>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</para>
-            /// </description></item>
-            /// <item><description><para>If you set metricName to gpu, scale-out is triggered when the average gpu utilization for a single instance is greater than this threshold.</para>
-            /// </description></item>
+            /// <item><description>If the metric name is set to qps, scale-out is triggered when the average QPS per instance exceeds this value.</description></item>
+            /// <item><description>If the metric name is set to cpu, scale-out is triggered when the average CPU utilization per instance exceeds this value.</description></item>
+            /// <item><description>If the metric name is set to gpu[util], scale-out is triggered when the average GPU utilization per instance exceeds this value.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

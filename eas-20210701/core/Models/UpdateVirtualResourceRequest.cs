@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateVirtualResourceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to disable the retention period of preemptible instances.</para>
+        /// <para>Specifies whether to disable the protection period for spot instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? DisableSpotProtectionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The resources in the virtual resource group.</para>
+        /// <para>The list of resources contained in the virtual resource group.</para>
         /// <remarks>
-        /// <para> If you specify this parameter, previous data is overwritten.</para>
+        /// <para>Notice: If specified, the previous data is overwritten.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Resources")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The instance type of the public resource group.</para>
             /// <remarks>
-            /// <para> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</para>
+            /// <para>Notice: You must specify exactly one of the following fields: InstanceType, ResourceId, and QuotaId.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The priority of resource scheduling. A greater number indicates a higher priority.</para>
+            /// <para>The scheduling priority of the resource. A larger value indicates a higher scheduling priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Lingjun resource quota.</para>
+            /// <para>The Lingjun resource quota ID.</para>
             /// <remarks>
-            /// <para> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</para>
+            /// <para>Notice: You must specify exactly one of the following fields: InstanceType, ResourceId, and QuotaId.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string QuotaId { get; set; }
 
             /// <summary>
-            /// <para>The region in which the resource resides.</para>
+            /// <para>The region where the resource resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dedicated resource group. For information about how to obtain the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</para>
+            /// <para>The ID of the dedicated resource group. For more information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</para>
             /// <remarks>
-            /// <para> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</para>
+            /// <para>Notice: You must specify exactly one of the following fields: InstanceType, ResourceId, and QuotaId.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -89,10 +89,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The maximum price of preemptible instances in a public resource group.</para>
-            /// <remarks>
-            /// <para> If you leave this parameter empty, preemptible instances are not used.</para>
-            /// </remarks>
+            /// <para>The maximum price for spot instances in the public resource group.
+            /// <notice>If not specified, spot instances are not used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.05</para>

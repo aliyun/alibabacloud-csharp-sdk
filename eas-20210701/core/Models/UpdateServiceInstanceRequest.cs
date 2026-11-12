@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the instance is a replica.</para>
+        /// <para>Specifies whether the current instance is an instance unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? IsReplica { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to fence the service instance. After an instance is fenced, it is no longer managed by the VPC controller and a new instance is created. The fenced instance is reserved for troubleshooting or debugging. Note: You cannot unfence an instance. Valid values:</para>
+        /// <para>Specifies whether to isolate the service instance. After an instance is isolated, it is no longer managed by the controller, and a new instance is created. The isolated instance is used to preserve the state or for debugging. Note: An isolated instance cannot be unisolated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Fences the instance.</description></item>
+        /// <item><description>true: The instance is isolated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is for an invitational preview. It is not generally available.</para>
+        /// <para>This parameter is in invitational preview and is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,12 +45,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? Hibernate { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to isolate the instance. Valid values:</para>
+        /// <para>Specifies whether the instance receives traffic. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The instance is isolated and does not receive traffic.</para>
-        /// </description></item>
-        /// <item><description><para>false: The instance is not isolated and receives traffic.</para>
-        /// </description></item>
+        /// <item><description>true: The instance receives traffic.</description></item>
+        /// <item><description>false: The instance does not receive traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

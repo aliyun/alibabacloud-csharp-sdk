@@ -9,15 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceRequest : TeaModel {
+        /// <summary>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5db780a0-9d3e-4f35-a84a-xxxxx</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to only precheck the request.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: sends a precheck request without performing the actual operation. If the precheck fails, the corresponding error is returned. If the precheck succeeds, the error code DryRunOperation is returned.</para>
+        /// </description></item>
+        /// <item><description><para>false: sends a normal request. This is the default value.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The type of the child service to update. Note: This parameter takes effect only for aggregated services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LLMPrefill</para>
+        /// </summary>
         [NameInMap("MemberToUpdate")]
         [Validation(Required=false)]
         public string MemberToUpdate { get; set; }
 
         /// <summary>
-        /// <para>The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.</para>
+        /// <para>The update type of the service. Both merge and replace modes are supported. If this parameter is not specified, the merge mode is used by default.</para>
         /// <list type="bullet">
-        /// <item><description>merge: If the JSON string configured for the existing service is <c>{&quot;a&quot;:&quot;b&quot;}</c> and the JSON string specified in the body parameter is <c>{&quot;c&quot;:&quot;d&quot;}</c>, the JSON string is <c>{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;}</c> after the service update.</description></item>
-        /// <item><description>replace: If the JSON string configured for the existing service is <c>{&quot;a&quot;:&quot;b&quot;}</c> and the JSON string specified in the body parameter is <c>{&quot;c&quot;:&quot;d&quot;}</c>, the JSON string is <c>{&quot;c&quot;:&quot;d&quot;}</c> after the service update.</description></item>
+        /// <item><description>merge: the merge mode. If the original service configuration JSON is
+        /// <c>{&quot;a&quot;:&quot;b&quot;}</c> and the updated configuration is <c>{&quot;c&quot;:&quot;d&quot;}</c>, the final configuration in merge mode is <c>{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;}</c>.</description></item>
+        /// <item><description>replace: the replace mode. If the original service configuration JSON is
+        /// <c>{&quot;a&quot;:&quot;b&quot;}</c> and the updated configuration is <c>{&quot;c&quot;:&quot;d&quot;}</c>, the final configuration in replace mode is <c>{&quot;c&quot;:&quot;d&quot;}</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +62,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string UpdateType { get; set; }
 
         /// <summary>
-        /// <para>The request body. The body includes the request parameters that you want to update. For more information about the request parameters, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</para>
+        /// <para>The updated configuration. For more information about parameter settings, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

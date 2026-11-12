@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class Service : TeaModel {
         /// <summary>
-        /// <para>The access token for the service.</para>
+        /// <para>The request token of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MzJiMDI5MDliODc0MTlkYmI0ZDhlYmExYjczYTIyZTE3Zm********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// <para>The application configuration for the service.</para>
+        /// <para>The configuration information of the application service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ModelStorage&quot;:&quot;oss&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AppConfig { get; set; }
 
         /// <summary>
-        /// <para>The application specification name for the service.</para>
+        /// <para>The specification name of the application service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llama_7b_fp16</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AppSpecName { get; set; }
 
         /// <summary>
-        /// <para>The application type of the service.</para>
+        /// <para>The type of the application service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LLM</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// <para>The application version of the service.</para>
+        /// <para>The version of the application service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether auto scaling is enabled for the service.</para>
+        /// <para>Specifies whether elastic scaling is enabled for the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CallerUid { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores requested for each instance.</para>
+        /// <para>The number of CPUs requested for each instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was created, in RFC 3339 format (UTC).</para>
+        /// <para>The time when the service was created. The time is displayed in UTC and follows the RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-29T11:13:20Z</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether scheduled scaling is enabled for the service.</para>
+        /// <para>Specifies whether scheduled scaling is enabled for the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? CronscalerEnabled { get; set; }
 
         /// <summary>
-        /// <para>The current version of the running model.</para>
+        /// <para>The version of the model that is currently running.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? CurrentVersion { get; set; }
 
         /// <summary>
-        /// <para>Additional information about the service.</para>
+        /// <para>The extra information of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;blue_green_services&quot;:[&quot;test&quot;,&quot;testxxxx&quot;]}</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ExtraData { get; set; }
 
         /// <summary>
-        /// <para>The percentage of GPU computing power requested for each instance when GPU sharing is enabled.</para>
+        /// <para>The GPU compute capacity requested by each instance after GPU sharing is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? GPUCorePercentage { get; set; }
 
         /// <summary>
-        /// <para>The amount of GPU memory requested for each instance when GPU sharing is enabled.</para>
+        /// <para>The GPU memory size requested by each instance after GPU sharing is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? GPUMemory { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated gateway for the service. This field is returned only for services that are bound to a dedicated gateway.</para>
+        /// <para>The dedicated gateway ID of the service. This information is available only for services bound to a dedicated gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxxxxx</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Gpu { get; set; }
 
         /// <summary>
-        /// <para>The image used by the service.</para>
+        /// <para>The data image of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-shanghai.aliyuncs.com/eas/echo_cn-shanghai:v0.0.1-20210129111320</para>
@@ -180,14 +180,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>A breakdown of the instance count by resource type.</para>
+        /// <para>The distribution of instances across different resource types.</para>
         /// </summary>
         [NameInMap("InstanceCountInResource")]
         [Validation(Required=false)]
         public ServiceInstanceCountInResource InstanceCountInResource { get; set; }
         public class ServiceInstanceCountInResource : TeaModel {
             /// <summary>
-            /// <para>The number of instances that use dedicated or self-managed resource groups.</para>
+            /// <para>The number of instances that use dedicated resource groups or self-managed resource groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? Public { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that use a Lingjun quota.</para>
+            /// <para>The number of instances that use Lingjun quotas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The internet endpoint of the service. This field is returned only by the <c>DescribeService</c> operation.</para>
+        /// <para>The public endpoint of the service. This field is returned only in the DescribeService operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InternetEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The intranet endpoint of the service. This field is returned only by the <c>DescribeService</c> operation.</para>
+        /// <para>The internal endpoint of the service. This field is returned only in the DescribeService operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string IntranetEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The labels of the service.</para>
+        /// <para>The list of service labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? LatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The amount of memory requested for each instance, in MB.</para>
+        /// <para>The memory requested for each instance, in MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>A message that provides information about the service status.</para>
+        /// <para>The summary information of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Service start successfully</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The namespace where the service is located.</para>
+        /// <para>The namespace of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>echo</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The UID of the primary account used to create the service.</para>
+        /// <para>The UID of the primary account to which the account that created the service belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11234*******</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ParentUid { get; set; }
 
         /// <summary>
-        /// <para>The number of pending instances for the service.</para>
+        /// <para>The number of pending instances of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PendingInstance { get; set; }
 
         /// <summary>
-        /// <para>The quota ID of the service. This field is returned only for services that are deployed on a Lingjun resource quota.</para>
+        /// <para>The quota ID of the service. This information is available only for services deployed on Lingjun resource quotas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotaxxxxx</para>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group to which the service belongs.</para>
+        /// <para>The resource group of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-xxxxxxx</para>
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceAlias { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a burstable resource pool is enabled for the service.</para>
+        /// <para>Specifies whether the elastic resource pool is enabled for the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? ResourceBurstable { get; set; }
 
         /// <summary>
-        /// <para>The role of the service.</para>
+        /// <para>The service role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Queue</para>
@@ -408,7 +408,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>Additional attributes of the service role. This field is returned only by the <c>DescribeService</c> operation.</para>
+        /// <para>The additional attributes of the service role. This field is returned only in the DescribeService operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ApproxMaxLength&quot;:null,&quot;Length&quot;:null,&quot;MaxPayloadBytes&quot;:null}</para>
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? RunningInstance { get; set; }
 
         /// <summary>
-        /// <para>The safety lock status of the service.</para>
+        /// <para>The service safety lock.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dangerous</para>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string SafetyLock { get; set; }
 
         /// <summary>
-        /// <para>The internet endpoint for synchronous requests to an asynchronous service. This field is returned only by the <c>DescribeService</c> operation.</para>
+        /// <para>The public endpoint for synchronous requests of asynchronous services. This field is returned only in the DescribeService operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/async_path.echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/async_path.echo</a></para>
@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string SecondaryInternetEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The intranet endpoint for synchronous requests to an asynchronous service. This field is returned only by the <c>DescribeService</c> operation.</para>
+        /// <para>The internal endpoint for synchronous requests of asynchronous services. This field is returned only in the DescribeService operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/async_path.echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/async_path.echo</a></para>
@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The service ID. This value is the same as <c>ServiceId</c>.</para>
+        /// <para>The ID of the service. This value is the same as ServiceId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-m-xxasdat</para>
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances for the service.</para>
+        /// <para>The total number of instances of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? TotalInstance { get; set; }
 
         /// <summary>
-        /// <para>The traffic state of the service.</para>
+        /// <para>The traffic status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>standalone</para>
@@ -548,7 +548,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string TrafficState { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was last updated, in RFC 3339 format (UTC).</para>
+        /// <para>The time when the service was updated. The time is displayed in UTC and follows the RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-29T11:13:20Z</para>
@@ -558,7 +558,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The traffic weight for the canary release of the service.</para>
+        /// <para>The weight for the canary release of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -567,12 +567,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? Weight { get; set; }
 
+        /// <summary>
+        /// <para>The workload type of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>stateless</para>
+        /// </summary>
         [NameInMap("WorkloadType")]
         [Validation(Required=false)]
         public string WorkloadType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the service belongs.</para>
+        /// <para>The workspace ID of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123445</para>

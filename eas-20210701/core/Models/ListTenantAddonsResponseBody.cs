@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListTenantAddonsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the plug-in.</para>
+        /// <para>The plugin information.</para>
         /// </summary>
         [NameInMap("Addons")]
         [Validation(Required=false)]
         public List<ListTenantAddonsResponseBodyAddons> Addons { get; set; }
         public class ListTenantAddonsResponseBodyAddons : TeaModel {
             /// <summary>
-            /// <para>The attributes of the plug-in.</para>
+            /// <para>The plugin attributes.</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public Dictionary<string, string> Attributes { get; set; }
 
             /// <summary>
-            /// <para>The name of the plug-in.</para>
+            /// <para>The plugin name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prometheus_discovery</para>

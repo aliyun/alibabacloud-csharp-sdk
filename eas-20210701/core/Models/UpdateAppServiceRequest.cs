@@ -31,15 +31,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// <para>The application type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>LLM: the large language model (LLM) application</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>LLM</para>
@@ -59,14 +50,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// <para>The additional configurations that are required for service deployment.</para>
+        /// <para>The additional configuration information required for deployment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{ &quot;ModelStorage&quot;: &quot;oss&quot;, &quot;OssPath&quot;: &quot;oss://examplebucket/xxxx/&quot; }</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
-        /// <para>The number of instances. This value must be greater than 0.</para>
+        /// <para>The number of instances. The value must be greater than 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +70,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The service specifications. Valid values:</para>
+        /// <para>The service specification. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>llama_7b_fp16</description></item>
         /// <item><description>llama_7b_int8</description></item>

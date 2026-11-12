@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
     public class CreateGroupRequest : TeaModel {
         /// <summary>
         /// <para>The user-defined labels.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// <para>The name of the group.</para>
+        /// <para>The name of the service group. Only lowercase letters, digits, and underscores are allowed. The format is [a-z0-9_]+.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>
@@ -27,14 +30,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) configuration.</para>
+        /// <para>The VPC configuration.</para>
         /// </summary>
         [NameInMap("Network")]
         [Validation(Required=false)]
         public CreateGroupRequestNetwork Network { get; set; }
         public class CreateGroupRequestNetwork : TeaModel {
             /// <summary>
-            /// <para>The dedicated gateway ID.</para>
+            /// <para>The dedicated gateway ID. This parameter is required. If this parameter is not specified, the request fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-248xxxxxxvlkhtbrda</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>The VPC ID. This parameter is required when GatewayId is set to an ALB gateway, and you must specify the VPC ID associated with the gateway. You can call the ListGatewayIntranetLinkedVpc operation to query the association.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1xxxxxx0qrykjr9b</para>

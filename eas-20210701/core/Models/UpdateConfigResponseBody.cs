@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time the configuration was created.</para>
+        /// <para>The time when the dynamic parameter was created, in UTC in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-15T10:30:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The time the configuration was last updated.</para>
+        /// <para>The time when the dynamic parameter was last updated, in UTC in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-15T11:00:00Z</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListConfigsRequest : TeaModel {
         /// <summary>
-        /// <para><b>The page number.</b> Default: 1.</para>
+        /// <para><b>Page number</b>. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para><b>The number of entries per page.</b> Default: 100. Maximum: 200.</para>
+        /// <para><b>Number of entries per page</b>. Default value: 100. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

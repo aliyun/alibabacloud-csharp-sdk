@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
     public class UpdateGroupRequest : TeaModel {
         /// <summary>
         /// <para>The user-defined labels.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -66,11 +69,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The traffic mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>auto: automatically assigns weights based on the proportion of instances.</description></item>
-        /// <item><description>customized: distributes traffic based on custom fixed weights.</description></item>
-        /// </list>
+        /// <para>The traffic mode. Valid values: auto and customized. In auto mode, weights are automatically allocated based on the proportion of instances. In customized mode, traffic is distributed based on custom fixed weights.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>

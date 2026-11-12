@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateResourceInstanceLabelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

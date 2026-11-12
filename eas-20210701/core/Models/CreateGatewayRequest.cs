@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the resource group. For more information, see the ResourceName field that is returned by the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation when ResourceType is SelfManaged.</para>
+        /// <para>The name of the resource group. For more information, see the ResourceName field where ResourceType is SelfManaged in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-4gt8twzwllfo******</para>
@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false (default): Auto-renewal is disabled.</para>
-        /// </description></item>
-        /// <item><description><para>true: Auto-renewal is enabled.</para>
-        /// </description></item>
+        /// <item><description>false: disables auto-renewal. This is the default value.</description></item>
+        /// <item><description>true: enables auto-renewal.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("AutoRenewal")]
@@ -35,10 +33,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid: subscription.</para>
-        /// </description></item>
-        /// <item><description><para>PostPaid: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +45,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable public network access. The default value is false.</para>
+        /// <para>Specifies whether to enable public network access. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? EnableInternet { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable internal network access. The default value is true.</para>
+        /// <para>Specifies whether to enable internal network access. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -68,21 +64,23 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? EnableIntranet { get; set; }
 
+        /// <summary>
+        /// <para>The type of the private gateway. ALB indicates an application-layer dedicated gateway, and FullyManaged indicates a fully managed dedicated gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALB</para>
+        /// </summary>
         [NameInMap("GatewayType")]
         [Validation(Required=false)]
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the private gateway. Valid values:</para>
+        /// <para>The instance type used by the private gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>2c4g</para>
-        /// </description></item>
-        /// <item><description><para>4c8g</para>
-        /// </description></item>
-        /// <item><description><para>8c16g</para>
-        /// </description></item>
-        /// <item><description><para>16c32g</para>
-        /// </description></item>
+        /// <item><description>2c4g</description></item>
+        /// <item><description>4c8g</description></item>
+        /// <item><description>8c16g</description></item>
+        /// <item><description>16c32g</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes for the private gateway.</para>
+        /// <para>The number of nodes in the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<ListGatewayDomainsResponseBodyCustomDomains> CustomDomains { get; set; }
         public class ListGatewayDomainsResponseBodyCustomDomains : TeaModel {
             /// <summary>
-            /// <para>The expiration date of the certificate.</para>
+            /// <para>The certificate expiration date in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-25</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string CertificateEndDate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SSL certificate attached to the domain name. To obtain the certificate ID, upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc%5C&p=cas">Digital Certificate Management Service</a> console.</para>
+            /// <para>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after uploading or purchasing a certificate in <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1473**25</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string CertificateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the SSL certificate.</para>
+            /// <para>The SSL certificate name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cert-9955038</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string CertificateName { get; set; }
 
             /// <summary>
-            /// <para>The issuance date of the certificate.</para>
+            /// <para>The certificate issuance date in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-07-13</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string CertificateStartDate { get; set; }
 
             /// <summary>
-            /// <para>The status of the domain name.</para>
+            /// <para>The domain name status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Succeeded</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string CertificateStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was created.</para>
+            /// <para>The time when the domain name was created, in UTC and RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-19T14:19:42Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The type of the domain name.</para>
+            /// <para>The domain name type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>intranet</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was last updated.</para>
+            /// <para>The time when the domain name was last updated, in UTC and RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-19T14:19:42Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successfully get custom domains</para>

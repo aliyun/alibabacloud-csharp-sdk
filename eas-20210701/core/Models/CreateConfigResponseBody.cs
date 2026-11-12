@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time in UTC, in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The update time in UTC, in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>

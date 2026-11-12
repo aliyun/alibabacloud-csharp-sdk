@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGatewayIntranetLinkedVpcPeerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The private gateway ID.</para>
+        /// <para>The ID of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>A list of peer VPCs.</para>
+        /// <para>The list of peered VPCs.</para>
         /// </summary>
         [NameInMap("PeerVpcList")]
         [Validation(Required=false)]
         public List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList> PeerVpcList { get; set; }
         public class ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList : TeaModel {
             /// <summary>
-            /// <para>A list of peer VPC IDs.</para>
+            /// <para>The list of peered VPC IDs.</para>
             /// </summary>
             [NameInMap("PeerVpcs")]
             [Validation(Required=false)]
             public List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs> PeerVpcs { get; set; }
             public class ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs : TeaModel {
                 /// <summary>
-                /// <para>The region where the peer VPC is located.</para>
+                /// <para>The region where the peered VPC is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -43,12 +43,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                /// <summary>
+                /// <para>The network connectivity status of the peered VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Running</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the peer VPC.</para>
+                /// <para>The ID of the peered VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf66uio7md****</para>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>The ID of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2zetuli9ws0qgjd******</para>
@@ -72,7 +78,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateAclPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</para>
+        /// <para>The whitelist of IP address segments that are allowed to access the VPC.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AclPolicyList")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<CreateAclPolicyRequestAclPolicyList> AclPolicyList { get; set; }
         public class CreateAclPolicyRequestAclPolicyList : TeaModel {
             /// <summary>
-            /// <para>The comment on the IP CIDR block in the VPC that can access the private gateway.</para>
+            /// <para>The description of the IP address segment that is allowed to access the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The IP CIDR block in the VPC that can access the private gateway.</para>
+            /// <para>The IP address segment that is allowed to access the VPC.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<DescribeServiceEventResponseBodyEvents> Events { get; set; }
         public class DescribeServiceEventResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The event message, which is a JSON-formatted string.</para>
+            /// <para>The event information (a formatted JSON string).</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;versionId\&quot;:1,\&quot;message\&quot;:\&quot;Stage scale complete\&quot;,\&quot;availableInstance\&quot;:1,\&quot;unavailableInstance\&quot;:0}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The reason for the event, which indicates a change in the service status.</para>
+            /// <para>The reason for the event (information about service status changes).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Updating</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Service: a service.</para>
+            /// <item><description><para>Service: service.</para>
             /// </description></item>
-            /// <item><description><para>Pod: a service instance.</para>
+            /// <item><description><para>Pod: service instance.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred, in UTC.</para>
+            /// <para>The UTC time when the event occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-09 06:30:00</para>
@@ -65,10 +65,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Normal: a normal event.</para>
-            /// </description></item>
-            /// <item><description><para>Warning: a warning event.</para>
-            /// </description></item>
+            /// <item><description>Normal: normal events.</description></item>
+            /// <item><description>Warning: abnormal events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +99,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of events.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29</para>

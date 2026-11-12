@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateResourceInstanceLabelShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the modification takes effect on all instances in the resource group. If you set this parameter to true, the InstanceIds parameter does not take effect.</para>
+        /// <para>Specifies whether the operation applies to all instances in the resource group. If this parameter is set to true, the InstanceIds parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -27,7 +27,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom tag.</para>
+        /// <para>The user-defined tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]

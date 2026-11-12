@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServiceVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number of the returned historical versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of historical versions returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>166</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The historical versions of the service.</para>
+        /// <para>The list of versions.</para>
         /// </summary>
         [NameInMap("Versions")]
         [Validation(Required=false)]
         public List<ListServiceVersionsResponseBodyVersions> Versions { get; set; }
         public class ListServiceVersionsResponseBodyVersions : TeaModel {
             /// <summary>
-            /// <para>The time when the service version was created. The time is displayed in UTC.</para>
+            /// <para>The UTC time when the version was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-29T22:02:14Z</para>
@@ -67,14 +67,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string BuildTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image is available. Valid values:</para>
+            /// <para>The availability of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The image is available.</para>
-            /// </description></item>
-            /// <item><description><para>false: The image is unavailable.</para>
-            /// </description></item>
-            /// <item><description><para>unknown: The availability of the image is unknown.</para>
-            /// </description></item>
+            /// <item><description>true: Available.</description></item>
+            /// <item><description>false: Unavailable.</description></item>
+            /// <item><description>unknown: Unknown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +92,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? ImageId { get; set; }
 
             /// <summary>
-            /// <para>The returned message.</para>
+            /// <para>The summary of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Service is Running</para>
@@ -105,7 +102,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The service deployment configurations. This parameter is returned only if the service is deployed by using a custom image.</para>
+            /// <para>The remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>new version.</para>
+            /// </summary>
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
+            /// <summary>
+            /// <para>The deployment configuration of the service. This field is returned only for custom image deployments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -122,14 +129,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ServiceConfig { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Elastic Algorithm service (EAS) is activated. Valid values:</para>
+            /// <para>Indicates whether the EAS service is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: EAS is activated.</para>
-            /// </description></item>
-            /// <item><description><para>false: EAS is not activated.</para>
-            /// </description></item>
-            /// <item><description><para>unknown: The activation of EAS is unknown.</para>
-            /// </description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
+            /// <item><description>unknown: Unknown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

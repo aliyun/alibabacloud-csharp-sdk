@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<ListConfigsResponseBodyConfigs> Configs { get; set; }
         public class ListConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>The time when the dynamic parameter was created, in UTC and ISO 8601 format.</para>
+            /// <para>The time when the dynamic parameter was created, in UTC in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T10:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The time when the dynamic parameter was last updated, in UTC and ISO 8601 format.</para>
+            /// <para>The time when the dynamic parameter was last updated, in UTC in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T10:00:00Z</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>Indicates if more entries are available. <c>true</c> if more entries exist; otherwise, <c>false</c>.</para>
+        /// <para>Indicates whether more data exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries found.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>150</para>

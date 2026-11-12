@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The filter name. Fuzzy match is supported.</para>
+        /// <para>The name filter. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>
@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The user-defined labels.</para>
+        /// <para>The custom labels.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:null}</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// <para>The sort order of the results.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of service groups to display on each page in a paged query. Settings for paging default to 100.</para>
+        /// <para>The Settings for the number of service groups to return on each page during paging in a paged query. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The traffic allocation method used to filter service groups.</para>
+        /// <para>The traffic distribution mode filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>

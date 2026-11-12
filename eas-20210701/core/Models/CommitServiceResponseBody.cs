@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CommitServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The returned result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

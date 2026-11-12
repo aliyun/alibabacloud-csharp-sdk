@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateBenchmarkTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The request body. The body includes the parameters that are set to create a stress testing task.</para>
+        /// <para>The configuration parameters of the stress testing task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

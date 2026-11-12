@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The zones that are supported by the region.</para>
+        /// <para>The list of zones supported in the current region.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]

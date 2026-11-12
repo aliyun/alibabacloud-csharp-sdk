@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeVirtualResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the virtual resource group was created.</para>
+        /// <para>The time when the virtual resource group was created, in UTC in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16T17:52:49Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? DisableSpotProtectionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The collection of features for the virtual resource group. This identifies the attributes that the resource group supports.</para>
+        /// <para>The set of features of the virtual resource group, which identifies the capabilities supported by the resource group.</para>
         /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of resources in the virtual resource group.</para>
+        /// <para>The list of resources contained in the virtual resource group.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The scheduling priority of the resource. A larger value indicates a higher priority.</para>
+            /// <para>The scheduling priority of the resource. A larger value indicates a higher scheduling priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Lingjun resource quota.</para>
+            /// <para>The Lingjun resource quota ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>quota185lqxxxxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string QuotaId { get; set; }
 
             /// <summary>
-            /// <para>The region where the resource is located.</para>
+            /// <para>The region where the resource resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dedicated resource group.</para>
+            /// <para>The dedicated resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eas-r-g55ieatgg3buxxxxxx</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The maximum price for a spot instance in the public resource group.</para>
+            /// <para>The maximum price for spot instances in the public resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.05</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? ServiceCount { get; set; }
 
         /// <summary>
-        /// <para>The time when the virtual resource group was last updated.</para>
+        /// <para>The time when the virtual resource group was last updated, in UTC in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16T19:52:49Z</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual resource group.</para>
+        /// <para>The virtual resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-vr-npovr28onap1xxxxxx</para>

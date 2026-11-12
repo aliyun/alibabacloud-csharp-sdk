@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>A message that indicates a successful operation.</para>
+        /// <para>The success message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance xxxx isolation updated to true。</para>

@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The IP address of the instance in a dedicated network.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.XX.XX</para>
+        /// <para>192.168.xx.xx</para>
         /// </summary>
         [NameInMap("InstanceTenantIp")]
         [Validation(Required=false)]

@@ -19,10 +19,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>PrePaid: Subscription.</para>
-            /// </description></item>
-            /// <item><description><para>PostPaid: Pay-as-you-go.</para>
-            /// </description></item>
+            /// <item><description>PrePaid: subscription.</description></item>
+            /// <item><description>PostPaid: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the private gateway was created. The time is in UTC.</para>
+            /// <para>The time when the private gateway was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-19T14:19:42Z</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The public network endpoint.</para>
+            /// <para>The domain name for public network access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public bool? InternetEnabled { get; set; }
 
             /// <summary>
-            /// <para>The internal network endpoint.</para>
+            /// <para>The domain name for internal network access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</para>
@@ -110,7 +108,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public bool? IntranetEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether it is the default private gateway.</para>
+            /// <para>Indicates whether the private gateway is the default private gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -120,14 +118,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The list of gateway tags.</para>
+            /// <para>The list of gateway labels.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<ListGatewayResponseBodyGatewaysLabels> Labels { get; set; }
             public class ListGatewayResponseBodyGatewaysLabels : TeaModel {
                 /// <summary>
-                /// <para>The key of the gateway tag.</para>
+                /// <para>The key of the gateway label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key1</para>
@@ -137,7 +135,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
                 public string LabelKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the gateway tag.</para>
+                /// <para>The value of the gateway label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
@@ -149,7 +147,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             }
 
             /// <summary>
-            /// <para>The number of nodes for the private gateway.</para>
+            /// <para>The number of nodes in the private gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -179,7 +177,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the private gateway was last updated. The time is in UTC.</para>
+            /// <para>The time when the private gateway was updated. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-24T11:52:17Z</para>
@@ -191,7 +189,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the returned gateway list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -201,7 +199,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of gateways returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -211,7 +209,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>

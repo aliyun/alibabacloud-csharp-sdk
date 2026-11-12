@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billing method. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? InternetEnabled { get; set; }
 
         /// <summary>
-        /// <para>The status of public network access enablement or disablement.</para>
+        /// <para>The status of public network access. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -109,12 +109,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string IntranetDomain { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is not enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IntranetEnabled")]
         [Validation(Required=false)]
         public bool? IntranetEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the dedicated gateway is the default one.</para>
+        /// <para>Indicates whether the dedicated gateway is the default gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -123,11 +129,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
 
+        /// <summary>
+        /// <para>The list of gateway labels.</para>
+        /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<DescribeGatewayResponseBodyLabels> Labels { get; set; }
         public class DescribeGatewayResponseBodyLabels : TeaModel {
             /// <summary>
+            /// <para>The gateway label key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>key1</para>
             /// </summary>
@@ -136,6 +147,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string LabelKey { get; set; }
 
             /// <summary>
+            /// <para>The gateway label value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value1</para>
             /// </summary>
@@ -176,7 +189,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? SSLRedirectionEnabled { get; set; }
 
         /// <summary>
-        /// <para>The status of the dedicated gateway.</para>
+        /// <para>The status of the dedicated gateway. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>

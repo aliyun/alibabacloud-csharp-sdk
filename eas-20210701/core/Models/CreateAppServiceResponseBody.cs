@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string IntranetEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the service.</para>
+        /// <para>The region where the service is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The service name.</para>
+        /// <para>The name of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The service state.</para>
+        /// <para>The status of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>

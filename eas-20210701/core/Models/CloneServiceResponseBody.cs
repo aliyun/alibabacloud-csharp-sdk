@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CloneServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The public endpoint of the service.</para>
+        /// <para>The public network access endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InternetEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The private endpoint of the service.</para>
+        /// <para>The internal endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service ID.</para>
+        /// <para>The ID of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-m-r9knx7n9guf2p*****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The service name.</para>
+        /// <para>The name of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The service status.</para>
+        /// <para>The status of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>

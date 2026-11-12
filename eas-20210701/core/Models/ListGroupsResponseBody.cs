@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<Group> Groups { get; set; }
 
         /// <summary>
-        /// <para>The current page number of the returned group list.</para>
+        /// <para>The current page number of the group list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of groups displayed per page.</para>
+        /// <para>The number of groups returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of service groups.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
