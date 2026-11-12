@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListModelOperatorServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,6 +55,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
+
+            /// <summary>
+            /// <para>The status of the model operator service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>active: Normal.</description></item>
+            /// <item><description>locking: Locking.</description></item>
+            /// <item><description>locked: Locked.</description></item>
+            /// <item><description>unlocking: Unlocking.</description></item>
+            /// <item><description>deleting: Releasing.</description></item>
+            /// </list>
+            /// <para>This status indicates the processing status of the control plane and does not mean that data plane propagation of the MO gateway is complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>active</para>
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
         }
 

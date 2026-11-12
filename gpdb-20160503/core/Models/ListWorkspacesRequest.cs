@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in this request. Default value: 10.</para>
+        /// <para>The maximum number of entries to return for this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListModelOperatorApiKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of Integer. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of an integer. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>20</b></description></item>
         /// <item><description><b>50</b></description></item>

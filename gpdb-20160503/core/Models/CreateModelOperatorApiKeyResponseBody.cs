@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Returns Creating after the creation request is accepted. The plaintext and endpoint are not returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Creating</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
     }
 
 }

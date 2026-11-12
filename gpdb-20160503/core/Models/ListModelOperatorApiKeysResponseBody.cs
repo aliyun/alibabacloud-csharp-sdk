@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<ListModelOperatorApiKeysResponseBodyApiKeys> ApiKeys { get; set; }
         public class ListModelOperatorApiKeysResponseBodyApiKeys : TeaModel {
             /// <summary>
-            /// <para>API KEY ID。</para>
+            /// <para>The API key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -56,6 +56,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            /// <summary>
+            /// <para>The status of the key. Valid values: Creating, Running, Locked, and Deleting.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Running</para>
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
         }
 
         /// <summary>
@@ -69,7 +79,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,7 +99,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

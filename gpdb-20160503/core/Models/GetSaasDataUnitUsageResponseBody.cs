@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSaasDataUnitUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>按DataUnit降序，未知金额排末尾，同值按场景码、项目ID和名称升序。按场景和项目ID分组；无ID但有名称按名称分组；两者均缺失的记录为未关联项目。完整结果各项之和等于汇总；缺失或空白的日志场景归other（其他）；有值但未配置映射的场景保留原值作为编码和展示名，正常计入总量；无记录的other不创建空行。</para>
+        /// <para>The business distribution. The items are sorted in descending order of DataUnit. Items with unknown amounts are placed at the end. Items with the same value are sorted in ascending order of scenario code, project ID, and name. The items are grouped by scenario and project ID. Items without an ID but with a name are grouped by name. Records missing both are grouped as unassociated projects. The sum of all items in the complete result equals the summary. Missing or blank log scenarios are classified as other. Scenarios with values but no configured mapping retain the original values as codes and display names, and are normally included in the total. No empty rows are created for other if there are no records.</para>
         /// </summary>
         [NameInMap("Distribution")]
         [Validation(Required=false)]
         public List<GetSaasDataUnitUsageResponseBodyDistribution> Distribution { get; set; }
         public class GetSaasDataUnitUsageResponseBodyDistribution : TeaModel {
             /// <summary>
-            /// <para>精确非负十进制字符串，不使用浮点或指数格式；金额不完整时为null。</para>
+            /// <para>The exact non-negative decimal string. Floating-point or exponential formats are not used. The value is null when the amount is incomplete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.82</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DataUnit { get; set; }
 
             /// <summary>
-            /// <para>调用时的项目归因；缺失时为null，不影响总量。</para>
+            /// <para>The project attribution at the time of the call. The value is null when missing, which does not affect the total amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project-1</para>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>同一场景和项目ID取查询范围内最新非空名称快照，同秒取字典序最大值；缺失为null。</para>
+            /// <para>The project name. For the same scenario and project ID, the latest non-empty name snapshot within the query range is used. If multiple snapshots exist in the same second, the maximum value in lexicographical order is used. The value is null when missing.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>场景重制</para>
+            /// <para>Scenario remake</para>
             /// 
             /// <b>if can be null:</b>
             /// <c>true</c>
@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ProjectName { get; set; }
 
             /// <summary>
+            /// <para>The business scenario code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>drama_game_oneshot</para>
             /// </summary>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string UsageScene { get; set; }
 
             /// <summary>
-            /// <para>由Meta原值到中文名的字典补充，不是SLS字段。UsageScene始终保留日志原值；无中文名则名称也用原值；空白归其他。同中文名不同编码不合并。</para>
+            /// <para>The display name of the business scenario. This name is supplemented by a dictionary that maps the original Meta values to Chinese names, and is not an SLS field. UsageScene always retains the original log value. If no Chinese name is available, the original value is used as the name. Blank values are classified as other. Different codes with the same Chinese name are not merged.</para>
             /// 
             /// <b>Example:</b>
             /// <para>游戏生成</para>
@@ -76,6 +78,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
+        /// <para>The actual end time of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-10-20T02:00:00Z</para>
         /// </summary>
@@ -84,6 +88,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mock_req_success</para>
         /// </summary>
@@ -92,6 +98,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The SaaS service ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agdb-example</para>
         /// </summary>
@@ -100,6 +108,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceId { get; set; }
 
         /// <summary>
+        /// <para>The actual start time of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-10-20T00:00:00Z</para>
         /// </summary>
@@ -107,12 +117,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The usage summary.</para>
+        /// </summary>
         [NameInMap("Summary")]
         [Validation(Required=false)]
         public GetSaasDataUnitUsageResponseBodySummary Summary { get; set; }
         public class GetSaasDataUnitUsageResponseBodySummary : TeaModel {
             /// <summary>
-            /// <para>精确非负十进制字符串，不使用浮点或指数格式；金额不完整时为null。</para>
+            /// <para>The exact non-negative decimal string. Floating-point or exponential formats are not used. The value is null when the amount is incomplete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.82</para>
@@ -127,14 +140,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>按UTC桶起点升序。完整查询补齐零桶；未知金额为null，不以零替代。</para>
+        /// <para>The time trend. The items are sorted in ascending order of the UTC bucket start time. Zero buckets are padded for complete queries. The value is null for unknown amounts and is not replaced with zero.</para>
         /// </summary>
         [NameInMap("TimeSeries")]
         [Validation(Required=false)]
         public List<GetSaasDataUnitUsageResponseBodyTimeSeries> TimeSeries { get; set; }
         public class GetSaasDataUnitUsageResponseBodyTimeSeries : TeaModel {
             /// <summary>
-            /// <para>精确非负十进制字符串，不使用浮点或指数格式；金额不完整时为null。</para>
+            /// <para>The exact non-negative decimal string. Floating-point or exponential formats are not used. The value is null when the amount is incomplete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.82</para>
@@ -146,12 +159,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string DataUnit { get; set; }
 
+            /// <summary>
+            /// <para>The scenario usage within the bucket.</para>
+            /// </summary>
             [NameInMap("Scenes")]
             [Validation(Required=false)]
             public List<GetSaasDataUnitUsageResponseBodyTimeSeriesScenes> Scenes { get; set; }
             public class GetSaasDataUnitUsageResponseBodyTimeSeriesScenes : TeaModel {
                 /// <summary>
-                /// <para>精确非负十进制字符串，不使用浮点或指数格式；金额不完整时为null。</para>
+                /// <para>The exact non-negative decimal string. Floating-point or exponential formats are not used. The value is null when the amount is incomplete.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.82</para>
@@ -164,7 +180,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string DataUnit { get; set; }
 
                 /// <summary>
-                /// <para>调用时的项目归因；缺失时为null，不影响总量。</para>
+                /// <para>The project attribution at the time of the call. The value is null when missing, which does not affect the total amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>project-1</para>
@@ -177,10 +193,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>同一场景和项目ID取查询范围内最新非空名称快照，同秒取字典序最大值；缺失为null。</para>
+                /// <para>The project name. For the same scenario and project ID, the latest non-empty name snapshot within the query range is used. If multiple snapshots exist in the same second, the maximum value in lexicographical order is used. The value is null when missing.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>场景重制</para>
+                /// <para>Scenario remake</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -190,6 +206,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
+                /// <para>The business scenario code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>game_translation</para>
                 /// </summary>
@@ -200,6 +218,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
+            /// <para>The start time of the UTC bucket.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-10-20T00:00:00Z</para>
             /// </summary>
@@ -209,12 +229,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
+        /// <summary>
+        /// <para>The product notifications.</para>
+        /// </summary>
         [NameInMap("Warnings")]
         [Validation(Required=false)]
         public List<GetSaasDataUnitUsageResponseBodyWarnings> Warnings { get; set; }
         public class GetSaasDataUnitUsageResponseBodyWarnings : TeaModel {
             /// <summary>
-            /// <para>包括DATA_INCOMPLETE和DATA_UNIT_PENDING。</para>
+            /// <para>The notification code. Valid values include DATA_INCOMPLETE and DATA_UNIT_PENDING.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DATA_INCOMPLETE</para>
@@ -224,8 +247,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The notification message.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>部分用量尚未就绪</para>
+            /// <para>Partial usage is not ready yet</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

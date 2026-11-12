@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AINodePoolId { get; set; }
 
         /// <summary>
-        /// <para>The node specifications of the AI node.</para>
+        /// <para>The node specifications of the AI nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AINodeSpecInfos")]

@@ -105,6 +105,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string DeployMode { get; set; }
 
+                /// <summary>
+                /// <para>实例磁盘告警阈值，百分比字符串；未配置时为空。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>80%</para>
+                /// </summary>
+                [NameInMap("DiskNotifyThreshold")]
+                [Validation(Required=false)]
+                public string DiskNotifyThreshold { get; set; }
+
                 [NameInMap("EncryptionKey")]
                 [Validation(Required=false)]
                 public string EncryptionKey { get; set; }
@@ -145,6 +155,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string InstanceSpec { get; set; }
 
+                /// <summary>
+                /// <para>实例类型：main表示主实例，readonly表示只读实例</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>readonly</para>
+                /// </summary>
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
                 [NameInMap("LockMode")]
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
@@ -168,6 +188,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [NameInMap("MasterCU")]
                 [Validation(Required=false)]
                 public int? MasterCU { get; set; }
+
+                /// <summary>
+                /// <para>master磁盘锁定阈值，百分比字符串；未配置时为空。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>95%</para>
+                /// </summary>
+                [NameInMap("MasterDiskLockThreshold")]
+                [Validation(Required=false)]
+                public string MasterDiskLockThreshold { get; set; }
 
                 [NameInMap("MasterNodeNum")]
                 [Validation(Required=false)]
@@ -200,6 +230,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public string Port { get; set; }
+
+                /// <summary>
+                /// <para>主实例ID；当前实例为主实例时为空</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gp-2ze3iph733ou550t7</para>
+                /// </summary>
+                [NameInMap("PrimaryDBInstanceId")]
+                [Validation(Required=false)]
+                public string PrimaryDBInstanceId { get; set; }
 
                 [NameInMap("ProdType")]
                 [Validation(Required=false)]
@@ -240,6 +280,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [NameInMap("SegmentCounts")]
                 [Validation(Required=false)]
                 public int? SegmentCounts { get; set; }
+
+                /// <summary>
+                /// <para>segment磁盘锁定阈值，百分比字符串；未配置时为空。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>95%</para>
+                /// </summary>
+                [NameInMap("SegmentDiskLockThreshold")]
+                [Validation(Required=false)]
+                public string SegmentDiskLockThreshold { get; set; }
 
                 [NameInMap("ServerlessMode")]
                 [Validation(Required=false)]

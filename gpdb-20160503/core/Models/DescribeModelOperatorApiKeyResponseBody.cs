@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModelOperatorApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API key content.</para>
+        /// <para>The content of the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>QEDGOTAJOG</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>API KEY ID。</para>
+        /// <para>The API key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,6 +68,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The status of the API key. Valid values: Creating, Running, Locked, and Deleting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Running</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 
