@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message. The value is success for a successful request.</para>
+        /// <para>The response message. A value of success indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Team 当前配额用量。用量不可用时省略；成功查询且无占用时返回三项零值。</para>
+        /// <para>The current quota usage of the team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;cpuCores&quot;:1,&quot;memoryGB&quot;:1.5,&quot;instanceCount&quot;:1}</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message. The value is success if the request is successful.</para>
+        /// <para>The response message. A value of success indicates a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

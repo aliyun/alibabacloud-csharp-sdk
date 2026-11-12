@@ -2794,10 +2794,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the template list with paging.</para>
+        /// <para>Performs a paging query on the template list.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListTemplatesRequest
         /// </param>
         /// <param name="headers">
@@ -2810,9 +2810,15 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <returns>
         /// ListTemplatesResponse
         /// </returns>
-        public ListTemplatesResponse ListTemplatesWithOptions(ListTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListTemplatesResponse ListTemplatesWithOptions(ListTemplatesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTemplatesShrinkRequest request = new ListTemplatesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceTags))
+            {
+                request.ResourceTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTags, "resourceTags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2821,6 +2827,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTagsShrink))
+            {
+                query["resourceTags"] = request.ResourceTagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
             {
@@ -2848,10 +2858,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the template list with paging.</para>
+        /// <para>Performs a paging query on the template list.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListTemplatesRequest
         /// </param>
         /// <param name="headers">
@@ -2864,9 +2874,15 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <returns>
         /// ListTemplatesResponse
         /// </returns>
-        public async Task<ListTemplatesResponse> ListTemplatesWithOptionsAsync(ListTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListTemplatesResponse> ListTemplatesWithOptionsAsync(ListTemplatesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListTemplatesShrinkRequest request = new ListTemplatesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceTags))
+            {
+                request.ResourceTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceTags, "resourceTags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2875,6 +2891,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTagsShrink))
+            {
+                query["resourceTags"] = request.ResourceTagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
             {
@@ -2902,7 +2922,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the template list with paging.</para>
+        /// <para>Performs a paging query on the template list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2921,7 +2941,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the template list with paging.</para>
+        /// <para>Performs a paging query on the template list.</para>
         /// </summary>
         /// 
         /// <param name="request">

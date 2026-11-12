@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the nextToken value returned in the response of the previous request.</para>
+        /// <para>The pagination token. Set this parameter to the value of nextToken returned in the response of the previous page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</para>
@@ -28,6 +28,35 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// <para>The resource tags.</para>
+        /// </summary>
+        [NameInMap("resourceTags")]
+        [Validation(Required=false)]
+        public List<ListTemplatesRequestResourceTags> ResourceTags { get; set; }
+        public class ListTemplatesRequestResourceTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The team ID.</para>

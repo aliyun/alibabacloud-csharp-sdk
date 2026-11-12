@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class ListTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. The value 200 indicates success.</para>
+        /// <para>The error code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page in the current response.</para>
+        /// <para>The maximum number of entries per page used in this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

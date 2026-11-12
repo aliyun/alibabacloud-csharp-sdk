@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string AccessEndpoint { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the sandbox is allowed to access the external network.</para>
+        /// <para>Specifies whether the sandbox is allowed to access the Internet.</para>
         /// </summary>
         [NameInMap("allowInternetAccess")]
         [Validation(Required=false)]
@@ -68,13 +68,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 
         /// <summary>
         /// <para>The environment variables.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;APP_MODE&quot;:&quot;demo&quot;}</para>
         /// </summary>
         [NameInMap("envVars")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvVars { get; set; }
 
         /// <summary>
-        /// <para>The authentication token for accessing the envd daemon process in the sandbox, in UUID format. This token is automatically generated only when secure is set to true.</para>
+        /// <para>The authentication credential for accessing the envd daemon process in the sandbox in UUID format. This credential is automatically generated only when secure is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4b1e9d07-****</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string FcInstanceID { get; set; }
 
         /// <summary>
-        /// <para>The Function Compute session ID of the sandbox, in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</para>
+        /// <para>The Function Compute session ID of the sandbox in UUID format. This ID is used to locate the underlying session when pausing, resuming, or deleting the sandbox.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3a7ecd09-****</para>
@@ -226,15 +229,15 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         /// <summary>
         /// <para>The sandbox state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>running: Running.</description></item>
-        /// <item><description>pausing: Pausing.</description></item>
-        /// <item><description>paused: Paused.</description></item>
-        /// <item><description>resuming: Resuming.</description></item>
-        /// <item><description>pause_fail: Pause failed.</description></item>
-        /// <item><description>resume_fail: Resume failed.</description></item>
-        /// <item><description>snapshotting: Snapshotting.</description></item>
-        /// <item><description>snapshot_failed: Snapshot failed.</description></item>
-        /// <item><description>terminated: Terminated.</description></item>
+        /// <item><description>running: The sandbox is running.</description></item>
+        /// <item><description>pausing: The sandbox is being paused.</description></item>
+        /// <item><description>paused: The sandbox is paused.</description></item>
+        /// <item><description>resuming: The sandbox is being resumed.</description></item>
+        /// <item><description>pause_fail: The pause operation failed.</description></item>
+        /// <item><description>resume_fail: The resume operation failed.</description></item>
+        /// <item><description>snapshotting: A snapshot is being created.</description></item>
+        /// <item><description>snapshot_failed: Snapshot creation failed.</description></item>
+        /// <item><description>terminated: The sandbox is terminated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

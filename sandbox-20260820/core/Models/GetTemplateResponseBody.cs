@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<GetTemplateResponseBodyResourceTags> ResourceTags { get; set; }
         public class GetTemplateResponseBodyResourceTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo</para>

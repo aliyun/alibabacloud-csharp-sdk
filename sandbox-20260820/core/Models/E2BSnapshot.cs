@@ -70,6 +70,35 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
+        /// <para>The resource tags.</para>
+        /// </summary>
+        [NameInMap("resourceTags")]
+        [Validation(Required=false)]
+        public List<E2BSnapshotResourceTags> ResourceTags { get; set; }
+        public class E2BSnapshotResourceTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo</para>
+            /// </summary>
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The snapshot ID.</para>
         /// 
         /// <b>Example:</b>

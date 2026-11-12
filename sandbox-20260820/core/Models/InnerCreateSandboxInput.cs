@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 
         /// <summary>
         /// <para>The environment variable configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;APP_MODE&quot;:&quot;demo&quot;}</para>
         /// </summary>
         [NameInMap("envVars")]
         [Validation(Required=false)]
@@ -59,6 +62,35 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("network")]
         [Validation(Required=false)]
         public E2BNetwork Network { get; set; }
+
+        /// <summary>
+        /// <para>The resource tags.</para>
+        /// </summary>
+        [NameInMap("resourceTags")]
+        [Validation(Required=false)]
+        public List<InnerCreateSandboxInputResourceTags> ResourceTags { get; set; }
+        public class InnerCreateSandboxInputResourceTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The runtime configuration.</para>
@@ -118,7 +150,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TemplateID { get; set; }
 
         /// <summary>
-        /// <para>The timeout period, in seconds.</para>
+        /// <para>The timeout period in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180</para>

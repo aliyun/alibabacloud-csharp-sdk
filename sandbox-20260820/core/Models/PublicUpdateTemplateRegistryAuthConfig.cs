@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         /// <para>The repository password.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Demo****Pass</para>
         /// </summary>
         [NameInMap("password")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class CreateTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. The value is 200 if the request is successful.</para>
+        /// <para>The error code. The value is 200 if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

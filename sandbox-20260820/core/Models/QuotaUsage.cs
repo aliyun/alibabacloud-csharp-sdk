@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class QuotaUsage : TeaModel {
         /// <summary>
-        /// <para>已占用的 CPU 配额，单位为 vCPU，不是 CPU 使用率。</para>
+        /// <para>The consumed CPU quota in vCPUs, not the CPU utilization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public double? CpuCores { get; set; }
 
         /// <summary>
-        /// <para>尚未释放的实例授权数量。</para>
+        /// <para>The number of unreleased instance authorizations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public long? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>已占用的内存配额，单位为 GB，不是进程实际内存。</para>
+        /// <para>The consumed memory quota in GB, not the actual memory used by processes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5</para>

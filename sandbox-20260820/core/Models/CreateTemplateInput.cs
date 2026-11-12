@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class CreateTemplateInput : TeaModel {
         /// <summary>
-        /// <para>The build configuration of the template. The build process is specified in blocks by action. If this parameter is not specified, the service automatically infers the configuration based on the source image: public runtime images are used directly without building, and other images automatically execute copy and envdInject.</para>
+        /// <para>The build configuration of the template. This configuration specifies the build process in action-based blocks. If this parameter is not specified, the service automatically derives the configuration based on the source image. Public runtime images are used directly without building. For other images, the copy and envdInject actions are automatically executed.</para>
         /// </summary>
         [NameInMap("buildConfig")]
         [Validation(Required=false)]
         public CreateTemplateBuildConfig BuildConfig { get; set; }
 
         /// <summary>
-        /// <para>The template name, which must be unique within the same team.</para>
+        /// <para>The name of the template. The name must be unique within the same team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python-data-analysis</para>
@@ -27,14 +27,43 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The runtime configuration of the template. This configuration determines the specifications and environment of sandbox instances created from this template.</para>
+        /// <para>The resource tags.</para>
+        /// </summary>
+        [NameInMap("resourceTags")]
+        [Validation(Required=false)]
+        public List<CreateTemplateInputResourceTags> ResourceTags { get; set; }
+        public class CreateTemplateInputResourceTags : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The runtime configuration of the template. This configuration determines the specifications and environment of the sandbox instances created from the template.</para>
         /// </summary>
         [NameInMap("runtimeConfig")]
         [Validation(Required=false)]
         public CreateTemplateRuntimeConfig RuntimeConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team to which the template belongs, in UUID format. If this parameter is not specified, the default team of the current account is used.</para>
+        /// <para>The ID of the team to which the template belongs. The ID is in UUID format. If this parameter is not specified, the default team of the current account is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5f4a2c18-****</para>
