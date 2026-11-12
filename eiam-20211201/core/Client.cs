@@ -3999,6 +3999,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ProjectId"] = request.ProjectId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubjectType))
+            {
+                query["SubjectType"] = request.SubjectType;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -4066,6 +4070,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubjectType))
+            {
+                query["SubjectType"] = request.SubjectType;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
@@ -23110,7 +23118,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an authorization rule.</para>
+        /// <para>Queries the details of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23156,7 +23164,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an authorization rule.</para>
+        /// <para>Queries the details of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23202,7 +23210,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an authorization rule.</para>
+        /// <para>Queries the details of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23220,7 +23228,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an authorization rule.</para>
+        /// <para>Queries the details of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27094,7 +27102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource synchronization tasks.</para>
+        /// <para>Queries a resource synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27140,7 +27148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource synchronization tasks.</para>
+        /// <para>Queries a resource synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27186,7 +27194,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource synchronization tasks.</para>
+        /// <para>Queries a resource synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27204,7 +27212,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource synchronization tasks.</para>
+        /// <para>Queries a resource synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32638,7 +32646,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources by using paging.</para>
+        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources through paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32704,7 +32712,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources by using paging.</para>
+        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources through paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32770,7 +32778,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources by using paging.</para>
+        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources through paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32788,7 +32796,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources by using paging.</para>
+        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources through paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32806,7 +32814,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls ListCloudAccountResourcesForCloudPermissionTemplate to perform a paging query for the list of cloud account resources associated with a specified cloud permission template.</para>
+        /// <para>Queries the list of cloud account resources associated with a specified cloud permission template by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32868,7 +32876,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls ListCloudAccountResourcesForCloudPermissionTemplate to perform a paging query for the list of cloud account resources associated with a specified cloud permission template.</para>
+        /// <para>Queries the list of cloud account resources associated with a specified cloud permission template by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32930,7 +32938,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls ListCloudAccountResourcesForCloudPermissionTemplate to perform a paging query for the list of cloud account resources associated with a specified cloud permission template.</para>
+        /// <para>Queries the list of cloud account resources associated with a specified cloud permission template by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32948,7 +32956,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls ListCloudAccountResourcesForCloudPermissionTemplate to perform a paging query for the list of cloud account resources associated with a specified cloud permission template.</para>
+        /// <para>Queries the list of cloud account resources associated with a specified cloud permission template by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36677,7 +36685,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <description>
         /// <para>You can use one of the following two methods to view the returned data:</para>
         /// <list type="bullet">
-        /// <item><description>Method 1: When paged query the first page, you only need to set MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 1: When paged query the first page, set only MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value returned in the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
         /// <item><description>Method 2: Set PageSize to specify the number of entries to return per page, and set PageNumber to specify the page number.
         /// You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If you set the MaxResults or NextToken parameter, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
@@ -36753,7 +36761,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <description>
         /// <para>You can use one of the following two methods to view the returned data:</para>
         /// <list type="bullet">
-        /// <item><description>Method 1: When paged query the first page, you only need to set MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 1: When paged query the first page, set only MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value returned in the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
         /// <item><description>Method 2: Set PageSize to specify the number of entries to return per page, and set PageNumber to specify the page number.
         /// You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If you set the MaxResults or NextToken parameter, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
@@ -36829,7 +36837,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <description>
         /// <para>You can use one of the following two methods to view the returned data:</para>
         /// <list type="bullet">
-        /// <item><description>Method 1: When paged query the first page, you only need to set MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 1: When paged query the first page, set only MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value returned in the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
         /// <item><description>Method 2: Set PageSize to specify the number of entries to return per page, and set PageNumber to specify the page number.
         /// You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If you set the MaxResults or NextToken parameter, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
@@ -36857,7 +36865,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <description>
         /// <para>You can use one of the following two methods to view the returned data:</para>
         /// <list type="bullet">
-        /// <item><description>Method 1: When paged query the first page, you only need to set MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 1: When paged query the first page, set only MaxResults to limit the number of returned entries. The NextToken value in the response is used as the token to query the next page. When paged query subsequent pages, set the NextToken parameter to the NextToken value returned in the previous response, and set MaxResults to limit the number of returned entries. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
         /// <item><description>Method 2: Set PageSize to specify the number of entries to return per page, and set PageNumber to specify the page number.
         /// You can use only one of the two methods. Method 1 is recommended when a large number of entries are returned. If you set the MaxResults or NextToken parameter, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>

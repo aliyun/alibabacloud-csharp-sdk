@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>The resource entity identifier, which is a unique identifier on the remote end.</para>
+            /// <para>The resource entity identifier, which is a unique remote identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>System:AliyunIntelligentcockpitReadOnlyAccessexample</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The resource entity type. Valid value: ram_role.</para>
+            /// <para>The resource entity type. Valid values: ram_role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ram_role</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceId { get; set; }
 
             /// <summary>
-            /// <para>The metadata of the resource.</para>
+            /// <para>The resource metadata.</para>
             /// </summary>
             [NameInMap("CloudAccountResourceMeta")]
             [Validation(Required=false)]
             public ListCloudAccountResourcesForCloudPermissionTemplateResponseBodyCloudAccountResourcesCloudAccountResourceMeta CloudAccountResourceMeta { get; set; }
             public class ListCloudAccountResourcesForCloudPermissionTemplateResponseBodyCloudAccountResourcesCloudAccountResourceMeta : TeaModel {
                 /// <summary>
-                /// <para>The JSON document of the Tencent Cloud CAM policy. This field is returned only for Tencent Cloud accounts.</para>
+                /// <para>The JSON string of the Tencent Cloud CAM policy document. This parameter is returned only for Tencent Cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[]}</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CamPolicyDocument { get; set; }
 
                 /// <summary>
-                /// <para>The type of the Tencent Cloud CAM policy. Valid values: qcs, local. This field is returned only for Tencent Cloud accounts.</para>
+                /// <para>The Tencent Cloud CAM policy type. Valid values: qcs and local. This parameter is returned only for Tencent Cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qcs</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CamPolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The JSON document of the AWS IAM policy. This field is returned only for AWS cloud accounts.</para>
+                /// <para>The JSON string of the AWS IAM policy document. This parameter is returned only for AWS cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;2012-10-17&quot;,&quot;Statement&quot;:[]}</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IamPolicyDocument { get; set; }
 
                 /// <summary>
-                /// <para>The type of the AWS IAM policy. Valid values: aws, local. This field is returned only for AWS cloud accounts.</para>
+                /// <para>The AWS IAM policy type. Valid values: aws and local. This parameter is returned only for AWS cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aws</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IamPolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The JSON document of the RAM policy. This field is returned only by the get operation.</para>
+                /// <para>The JSON string of the RAM policy document. This parameter is returned only by the get operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[]}</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string RamPolicyDocument { get; set; }
 
                 /// <summary>
-                /// <para>The type of the RAM policy. Valid values: system, custom.</para>
+                /// <para>The RAM policy type. Valid values: system and custom.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceName { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was last updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649916625000</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on each page in a paging query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token returned by the current call, which is used for the next paginated query.</para>
+        /// <para>The query token returned by the current call. Use this token for the next paginated query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

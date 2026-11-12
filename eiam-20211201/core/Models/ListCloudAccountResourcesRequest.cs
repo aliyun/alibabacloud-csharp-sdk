@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountResourceEntityType { get; set; }
 
         /// <summary>
-        /// <para>Performs a fuzzy match on the resource name, which is equivalent to LIKE \&quot;%value%\&quot;.</para>
+        /// <para>The keyword used for fuzzy matching of the resource name. This is equivalent to LIKE \&quot;%value%\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sso</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountResourceNameContains { get; set; }
 
         /// <summary>
-        /// <para>Matches resources by resource name prefix.</para>
+        /// <para>The prefix of the resource name used for matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eiam-</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page for paging in a paged query. Default value: 20. Maximum value: 100.</para>
+        /// <para>The maximum number of entries to return per page during paging in a paged query. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. The value is the NextToken parameter value returned by the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

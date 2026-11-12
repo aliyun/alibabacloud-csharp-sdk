@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of group IDs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>group_d6sbsusdfa4h66ec3il7yxxxx</para>
+            /// <para>[&quot;group_d6sbsusdfa4h66ec3il7yxxxx&quot;]</para>
             /// </summary>
             [NameInMap("GroupIds")]
             [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of organizational unit IDs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ou_d6sbsuudfgf4h66ec3il7yxxxx</para>
+            /// <para>[&quot;ou_d6sbsuudfgf4h66ec3il7yxxxx&quot;]</para>
             /// </summary>
             [NameInMap("OrganizationalUnitIds")]
             [Validation(Required=false)]
             public List<string> OrganizationalUnitIds { get; set; }
 
             /// <summary>
-            /// <para>The application scope type. Valid values: global and custom.</para>
+            /// <para>The application scope type. Valid values: global, custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>global</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of account IDs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
+            /// <para>[&quot;user_d6sbsuumeta4h66ec3il7yxxxx&quot;]</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]

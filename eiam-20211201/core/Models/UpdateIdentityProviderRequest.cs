@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AppSecret { get; set; }
 
             /// <summary>
-            /// <para>The EncryptKey of the custom Lark application.</para>
+            /// <para>The encryptKey of the custom Lark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VkdWw91mdkrjVFr3ObNwefap21dfbZbKxxxx</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string EncryptKey { get; set; }
 
             /// <summary>
-            /// <para>The VerificationToken of the custom Lark application.</para>
+            /// <para>The verificationToken of the custom Lark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>feishuVerifyTokenxxxxx</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The OIDC-related configuration.</para>
+        /// <para>The OIDC configuration.</para>
         /// </summary>
         [NameInMap("OidcConfig")]
         [Validation(Required=false)]
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The list of OIDC grant scopes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>openid</para>
+            /// <para>[&quot;openid&quot;]</para>
             /// </summary>
             [NameInMap("GrantScopes")]
             [Validation(Required=false)]
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? MaxClockSkew { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to require the request to be signed.</para>
+            /// <para>Specifies whether to require requests to be signed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public UpdateIdentityProviderRequestWeComConfig WeComConfig { get; set; }
         public class UpdateIdentityProviderRequestWeComConfig : TeaModel {
             /// <summary>
-            /// <para>The AgentId of the WeCom custom application.</para>
+            /// <para>The AgentId of the WeCom self-built application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1237403</para>
@@ -562,7 +562,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ContactSecret { get; set; }
 
             /// <summary>
-            /// <para>The CorpSecret of the WeCom custom application.</para>
+            /// <para>The CorpSecret of the WeCom self-built application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</para>

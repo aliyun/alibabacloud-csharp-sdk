@@ -1,3 +1,7 @@
+2026-11-12 Version: 2.1.2
+- Update API CreateAuthorizationRule: add request parameters SubjectType.
+
+
 2026-11-11 Version: 2.1.1
 - Generated csharp 2021-12-01 for Eiam.
 

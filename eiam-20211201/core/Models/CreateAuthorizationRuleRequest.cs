@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The authorization resource scope. Valid values:</para>
+        /// <para>The scope of authorized resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: all resources under the project.</description></item>
-        /// <item><description>custom: specified resources under the project.</description></item>
+        /// <item><description>global: global resources under the project</description></item>
+        /// <item><description>custom: resources under a specified project scope</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleScenarioLabel { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the value from your client and make sure that the value is unique across different requests. The ClientToken parameter only supports ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project associated with the authorization rule. If you are unsure which project to associate, you can associate the default project. The default project ID is iprj_system_default.</para>
+        /// <para>The ID of the project associated with the authorization rule. If you are unsure about the project to associate, you can use the default project. The ID of the default project is iprj_system_default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,6 +86,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
+
+        /// <summary>
+        /// <para>The type of subject to which the authorization rule applies, such as user (for human users) or application (for machine users). When explicitly specified, only privileged cloud account rules with a custom resource scope are supported. If this field is omitted for custom scope rules in this scenario, the default value is user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>application</para>
+        /// </summary>
+        [NameInMap("SubjectType")]
+        [Validation(Required=false)]
+        public string SubjectType { get; set; }
 
     }
 

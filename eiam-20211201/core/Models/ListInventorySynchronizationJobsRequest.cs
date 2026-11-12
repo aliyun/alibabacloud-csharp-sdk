@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> InventorySourceIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page in a paging query. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries to return per page in paging. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. The value is the NextToken parameter value returned from the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

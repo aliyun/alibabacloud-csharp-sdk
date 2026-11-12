@@ -64,21 +64,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResult Result { get; set; }
             public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResult : TeaModel {
                 /// <summary>
-                /// <para>The statistics of the agent synchronization results.</para>
+                /// <para>The statistics of the agent synchronization result.</para>
                 /// </summary>
                 [NameInMap("AgentStatistics")]
                 [Validation(Required=false)]
                 public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatistics AgentStatistics { get; set; }
                 public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatistics : TeaModel {
                     /// <summary>
-                    /// <para>The statistics of the creation results.</para>
+                    /// <para>The statistics of the creation result.</para>
                     /// </summary>
                     [NameInMap("Created")]
                     [Validation(Required=false)]
                     public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatisticsCreated Created { get; set; }
                     public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatisticsCreated : TeaModel {
                         /// <summary>
-                        /// <para>The number of failed creations.</para>
+                        /// <para>The number of failed items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>The number of skipped creations.</para>
+                        /// <para>The number of skipped items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>The number of successful creations.</para>
+                        /// <para>The number of successful items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>The total number.</para>
+                        /// <para>The total number of items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the deletion results.</para>
+                    /// <para>The statistics of the deletion result.</para>
                     /// </summary>
                     [NameInMap("Deleted")]
                     [Validation(Required=false)]
                     public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatisticsDeleted Deleted { get; set; }
                     public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatisticsDeleted : TeaModel {
                         /// <summary>
-                        /// <para>The number of failed creations.</para>
+                        /// <para>The number of failed items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>The number of skipped creations.</para>
+                        /// <para>The number of skipped items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>The number of successful creations.</para>
+                        /// <para>The number of successful items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>The total number.</para>
+                        /// <para>The total number of items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -169,14 +169,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the unchanged results.</para>
+                    /// <para>The statistics of unchanged items.</para>
                     /// </summary>
                     [NameInMap("Same")]
                     [Validation(Required=false)]
                     public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatisticsSame Same { get; set; }
                     public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatisticsSame : TeaModel {
                         /// <summary>
-                        /// <para>The number of failed creations.</para>
+                        /// <para>The number of failed items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>The number of skipped creations.</para>
+                        /// <para>The number of skipped items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>The number of successful creations.</para>
+                        /// <para>The number of successful items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>The total number.</para>
+                        /// <para>The total number of items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -218,14 +218,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the update results.</para>
+                    /// <para>The statistics of the update result.</para>
                     /// </summary>
                     [NameInMap("Updated")]
                     [Validation(Required=false)]
                     public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatisticsUpdated Updated { get; set; }
                     public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAgentStatisticsUpdated : TeaModel {
                         /// <summary>
-                        /// <para>The number of failed creations.</para>
+                        /// <para>The number of failed items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>The number of skipped creations.</para>
+                        /// <para>The number of skipped items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>The number of successful creations.</para>
+                        /// <para>The number of successful items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>The total number.</para>
+                        /// <para>The total number of items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -269,21 +269,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The statistics of the asset synchronization results.</para>
+                /// <para>The statistics of the asset synchronization result.</para>
                 /// </summary>
                 [NameInMap("AssetStatistics")]
                 [Validation(Required=false)]
                 public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatistics AssetStatistics { get; set; }
                 public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatistics : TeaModel {
                     /// <summary>
-                    /// <para>The statistics of the creation results.</para>
+                    /// <para>The statistics of the creation result.</para>
                     /// </summary>
                     [NameInMap("Created")]
                     [Validation(Required=false)]
                     public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatisticsCreated Created { get; set; }
                     public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatisticsCreated : TeaModel {
                         /// <summary>
-                        /// <para>The number of failed creations.</para>
+                        /// <para>The number of failed items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>The number of skipped creations.</para>
+                        /// <para>The number of skipped items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>The number of successful creations.</para>
+                        /// <para>The number of successful items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>The total number.</para>
+                        /// <para>The total number of items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -325,14 +325,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the deletion results.</para>
+                    /// <para>The statistics of the deletion result.</para>
                     /// </summary>
                     [NameInMap("Deleted")]
                     [Validation(Required=false)]
                     public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatisticsDeleted Deleted { get; set; }
                     public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatisticsDeleted : TeaModel {
                         /// <summary>
-                        /// <para>The number of failed creations.</para>
+                        /// <para>The number of failed items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>The number of skipped creations.</para>
+                        /// <para>The number of skipped items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>The number of successful creations.</para>
+                        /// <para>The number of successful items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>The total number.</para>
+                        /// <para>The total number of items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -374,14 +374,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the unchanged results.</para>
+                    /// <para>The statistics of unchanged items.</para>
                     /// </summary>
                     [NameInMap("Same")]
                     [Validation(Required=false)]
                     public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatisticsSame Same { get; set; }
                     public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatisticsSame : TeaModel {
                         /// <summary>
-                        /// <para>The number of failed creations.</para>
+                        /// <para>The number of failed items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>The number of skipped creations.</para>
+                        /// <para>The number of skipped items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>The number of successful creations.</para>
+                        /// <para>The number of successful items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>The total number.</para>
+                        /// <para>The total number of items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -423,14 +423,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The statistics of the update results.</para>
+                    /// <para>The statistics of the update result.</para>
                     /// </summary>
                     [NameInMap("Updated")]
                     [Validation(Required=false)]
                     public ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatisticsUpdated Updated { get; set; }
                     public class ListInventorySynchronizationJobsResponseBodyInventorySynchronizationJobsResultAssetStatisticsUpdated : TeaModel {
                         /// <summary>
-                        /// <para>The number of failed creations.</para>
+                        /// <para>The number of failed items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Failed { get; set; }
 
                         /// <summary>
-                        /// <para>The number of skipped creations.</para>
+                        /// <para>The number of skipped items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Skipped { get; set; }
 
                         /// <summary>
-                        /// <para>The number of successful creations.</para>
+                        /// <para>The number of successful items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? Success { get; set; }
 
                         /// <summary>
-                        /// <para>The total number.</para>
+                        /// <para>The total number of items.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by the current call, which is used to retrieve the next page.</para>
+        /// <para>The pagination token returned by the current call for subsequent paged queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the resource entity, which is a unique identifier on the remote end.</para>
+            /// <para>The unique remote identifier of the resource entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>System:AliyunIntelligentcockpitReadOnlyAccessexample</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The resource entity type. Valid values: ram_role.</para>
+            /// <para>The type of the resource entity. Valid values: ram_role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ram_role</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListCloudAccountResourcesResponseBodyCloudAccountResourcesCloudAccountResourceMeta CloudAccountResourceMeta { get; set; }
             public class ListCloudAccountResourcesResponseBodyCloudAccountResourcesCloudAccountResourceMeta : TeaModel {
                 /// <summary>
-                /// <para>The JSON document of the Tencent Cloud CAM policy. This parameter is returned only for Tencent Cloud accounts.</para>
+                /// <para>The JSON string of the Tencent Cloud CAM policy document. This parameter is returned only for Tencent Cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[]}</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CamPolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The JSON document of the AWS IAM policy. This parameter is returned only for AWS cloud accounts.</para>
+                /// <para>The JSON string of the AWS IAM policy document. This parameter is returned only for AWS cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;2012-10-17&quot;,&quot;Statement&quot;:[]}</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IamPolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The JSON document of the RAM policy. This parameter is returned only by the Get operation.</para>
+                /// <para>The JSON string of the RAM policy document. This parameter is returned only by the Get operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[]}</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page for paging in a paged query.</para>
+        /// <para>The maximum number of entries returned per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token returned by the current call, which is used for the next paginated query.</para>
+        /// <para>The query token returned by the current call for the next pagination query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

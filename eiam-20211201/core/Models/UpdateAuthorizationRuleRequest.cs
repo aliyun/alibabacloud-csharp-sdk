@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The authorization resource scope. Valid values:</para>
+        /// <para>The scope of authorized resources. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>global: global resources under the project</description></item>
-        /// <item><description>custom: resources under a specified project scope</description></item>
+        /// <item><description>custom: resources within a specified project scope</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleName { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate a client token on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

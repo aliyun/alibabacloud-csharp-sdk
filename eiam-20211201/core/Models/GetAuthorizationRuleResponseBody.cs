@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The authorization resource scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: All resources under the project.</description></item>
-            /// <item><description>custom: Specified resources within the project scope.</description></item>
+            /// <item><description>global: Global resources under the project.</description></item>
+            /// <item><description>custom: Resources under a specified project scope.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The creation type of the authorization rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>system_init: Created by the system.</description></item>
-            /// <item><description>user_custom: Created by the user.</description></item>
+            /// <item><description>user_custom: Created by a user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleScenarioLabel { get; set; }
 
             /// <summary>
-            /// <para>The subject ID associated with the authorization rule.</para>
+            /// <para>The ID of the subject associated with the authorization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleSubjectScope { get; set; }
 
             /// <summary>
-            /// <para>The subject type associated with the authorization rule. This parameter is valid only when the authorization rule subject scope is exclusive. Valid values:</para>
+            /// <para>The subject type associated with the authorization rule. This parameter is valid only when the subject scope of the authorization rule is exclusive. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>application: Application.</description></item>
             /// <item><description>user: Account.</description></item>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleSubjectType { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The project ID associated with the authorization rule.</para>
+            /// <para>The ID of the project associated with the authorization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iprj_system_default</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The authorization rule status. Valid values:</para>
+            /// <para>The status of the authorization rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled.</description></item>
             /// <item><description>disabled: Disabled.</description></item>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
