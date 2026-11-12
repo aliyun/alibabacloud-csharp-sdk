@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of simple application servers that you want to create. Valid values: 1 to 20.</para>
+        /// <para>The number of Simple Application Server instances to create. Valid values: 1 to 20.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal upon expiration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Auto-renewal is enabled.</description></item>
+        /// <item><description>false: Auto-renewal is disabled.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -36,17 +36,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. This parameter is required only when you set <c>AutoRenew</c> to true. Unit: month. Valid values: 1, 3, 6, 12, 24, and 36.</para>
+        /// <para>The auto-renewal period. This parameter is required only when AutoRenew is set to true. Unit: months. Valid values: 1, 3, 6, 12, 24, and 36.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the simple application servers. Set the value to PrePaid, which indicates the subscription billing method.</para>
+        /// <para>The billing method. Set the value to PrePaid. Currently, only the subscription billing method is supported.</para>
         /// <para>Default value: PrePaid.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -67,10 +67,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The size of the data disk that is attached to the server. Unit: GB. Valid values: 0 to 16380. The value must be an integral multiple of 20.</para>
+        /// <para>The size of the data cloud disk to be mounted. Unit: GB. Valid values: 0 to 16380. The value must be a multiple of 20.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>A value of 0 indicates that no data disk is attached.</description></item>
-        /// <item><description>If the disk included in the specified plan is a standard SSD, the data disk must be 20 GB or larger in size.</description></item>
+        /// <item><description><para>A value of 0 indicates that no data cloud disk is mounted.</para>
+        /// </description></item>
+        /// <item><description><para>If the selected plan uses a PL0 ESSD, the minimum size of the data cloud disk is 40 GB.</para>
+        /// </description></item>
+        /// <item><description><para>If the selected plan uses a standard SSD, the minimum size of the data cloud disk is 20 GB.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para>A value of 0 indicates that no data cloud disk is mounted.</para>
+        /// </description></item>
+        /// <item><description><para>If the selected plan uses a standard SSD, the minimum size of the data cloud disk is 20 GB.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 0.</para>
         /// 
@@ -82,7 +94,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public long? DataDiskSize { get; set; }
 
         /// <summary>
-        /// <para>The image ID. You can call the <a href="https://help.aliyun.com/document_detail/189313.html">ListImages</a> operation to query the available images in the specified region.</para>
+        /// <para>The image ID. You can call the <a href="https://help.aliyun.com/document_detail/189313.html">ListImages</a> operation to query available image IDs in a specified region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +105,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The subscription period of the servers. Unit: months. Valid values: 1, 3, 6, 12, 24, and 36.</para>
+        /// <para>The subscription period of the resource. Unit: months. Valid values: 1, 3, 6, 12, 24, and 36.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +116,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The plan ID. You can call the <a href="https://help.aliyun.com/document_detail/189314.html">ListPlans</a> operation to query all plans provided by Simple Application Server in the specified region.</para>
+        /// <para>The plan ID. You can call the <a href="https://help.aliyun.com/document_detail/189314.html">ListPlans</a> operation to query all plans in a specified region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +127,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string PlanId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application servers. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

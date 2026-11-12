@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair. The name must be globally unique. The name must be 2 to 64 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with http:// or https://.</para>
+        /// <para>The name of the key pair. The name must be globally unique. The name must be 2 to 64 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with http\:// or https\://.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

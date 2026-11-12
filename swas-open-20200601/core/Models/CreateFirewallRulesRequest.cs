@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Details about the firewall rules.</para>
+        /// <para>The array of firewall rules.</para>
         /// </summary>
         [NameInMap("FirewallRules")]
         [Validation(Required=false)]
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The port number.</para>
             /// <list type="bullet">
-            /// <item><description>When the transport layer protocol is TCP and/or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
-            /// <item><description>When the transport layer protocol is ICMP, the port number range is -1/-1, which indicates all ports.</description></item>
+            /// <item><description>TCP or UDP: Valid values are 1 to 65535. Use a forward slash (/) to separate the start port and the end port. Example: 1/200.</description></item>
+            /// <item><description>ICMP: -1/-1.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The description of the firewall rule.</para>
+            /// <para>The remark.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TEST</para>
+            /// <para>Custom firewall rule</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The transport layer protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP</description></item>
-            /// <item><description>UDP</description></item>
-            /// <item><description>TCP+UDP</description></item>
-            /// <item><description>ICMP</description></item>
+            /// <item><description>TCP: TCP.</description></item>
+            /// <item><description>UDP: UDP.</description></item>
+            /// <item><description>TCP+UDP: TCP and UDP.</description></item>
+            /// <item><description>ICMP: ICMP.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string RuleProtocol { get; set; }
 
             /// <summary>
-            /// <para>The IP address or CIDR block that is allowed in the firewall rule.</para>
+            /// <para>The source IP address or CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.101.XX.XX</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The ID of the simple application server.</para>
+        /// <para>The instance ID of the specified simple application server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the regions where simple application servers are available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,15 +101,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add to the firewall. You can specify up to 20 tags.</para>
+        /// <para>The list of tags. The list can contain up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateFirewallRulesRequestTag> Tag { get; set; }
         public class CreateFirewallRulesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Valid values of N: 1 to 20.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The tag key that is specified for the firewall rule. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -119,8 +119,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Valid values of N: 1 to 20.</para>
-            /// <para>The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The tag value that is specified for the firewall rule. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

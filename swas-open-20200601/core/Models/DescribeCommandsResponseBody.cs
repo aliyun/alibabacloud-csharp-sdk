@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeCommandsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried commands.</para>
+        /// <para>The commands.</para>
         /// </summary>
         [NameInMap("Commands")]
         [Validation(Required=false)]
         public List<DescribeCommandsResponseBodyCommands> Commands { get; set; }
         public class DescribeCommandsResponseBodyCommands : TeaModel {
             /// <summary>
-            /// <para>The content of the command.</para>
+            /// <para>The command content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cat /etc/ssh/sshd_config</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CommandId { get; set; }
 
             /// <summary>
-            /// <para>The time when the command was created.</para>
+            /// <para>The time when the command was created. The time is displayed in UTC (Z) in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-05T06:38:53Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the command.</para>
+            /// <para>The command description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the custom parameter feature is enabled for the command.</para>
+            /// <para>Indicates whether custom parameters are enabled for the command.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public bool? EnableParameter { get; set; }
 
             /// <summary>
-            /// <para>The name of the command.</para>
+            /// <para>The command name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Details of the custom parameter.</para>
+            /// <para>The list of custom parameter details.</para>
             /// </summary>
             [NameInMap("ParameterDefinitions")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 /// <para>The description of the custom parameter.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Command Assistant Agent Installation Package Path</para>
+                /// <para>Cloud Assistant Agent installation package path</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// <para>The valid values of the custom parameter.</para>
+                /// <para>The possible values of the enumeration-type custom parameter.</para>
                 /// </summary>
                 [NameInMap("PossibleValues")]
                 [Validation(Required=false)]
@@ -123,8 +123,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 /// <summary>
                 /// <para>Indicates whether the custom parameter is required. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Required.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not required.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>Default value: false.</para>
                 /// 
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The custom parameter names that are parsed from the command content specified when the command was created. The custom parameter names are returned in the list format. If the custom parameter feature is disabled, an empty list is returned.</para>
+            /// <para>The list of custom parameter names parsed from CommandContent when the command was created. The list is returned in the List format. If the custom parameter feature is not enabled, an empty list is returned.</para>
             /// </summary>
             [NameInMap("ParameterNames")]
             [Validation(Required=false)]
@@ -165,7 +167,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags that are bound to the command.</para>
+            /// <para>The tags of the command.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -194,7 +196,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The timeout period of the command.</para>
+            /// <para>The timeout period. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -204,7 +206,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public long? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The type of the command.</para>
+            /// <para>The command type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RunShellScript</para>
@@ -214,7 +216,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The execution path of the command.</para>
+            /// <para>The execution path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home</para>
@@ -226,7 +228,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the command list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

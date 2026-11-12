@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate the value from your client to ensure that the value is unique across different requests. <b>ClientToken</b> only supports ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The disk ID.</para>
+        /// <para>The ID of the disk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server to which the disk is attached.</para>
+        /// <para>The region ID of the Simple Application Server instance to which the specified disk belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot name. The name must be 2 to 50 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the snapshot. The name must be 2 to 50 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. It can contain Chinese characters, English letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,15 +63,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string SnapshotName { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add to the snapshot. You can specify up to 20 tags.</para>
+        /// <para>The list of tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateSnapshotRequestTag> Tag { get; set; }
         public class CreateSnapshotRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag to add to the snapshot. Valid values of N: 1 to 20.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The tag key specified for the snapshot. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key cannot be an empty string once specified. It can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag to add to the snapshot. Valid values of N: 1 to 20.</para>
-            /// <para>The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The tag value specified for the snapshot. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value can be an empty string. It can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

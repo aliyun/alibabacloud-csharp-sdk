@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,12 +45,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The running status of the Cloud Monitoring plug-in. Possible values are:</para>
             /// <list type="bullet">
-            /// <item><description>running: Cloud Monitoring plug-in running.</description></item>
-            /// <item><description>stopped: Cloud Monitoring plug-in stopped.</description></item>
-            /// <item><description>installing: Cloud Monitoring plug-in installing.</description></item>
-            /// <item><description>install_faild: Cloud Monitoring plug-in installation failed.</description></item>
-            /// <item><description>abnormal: Cloud Monitoring plug-in installation abnormal.</description></item>
-            /// <item><description>not_installed: Cloud Monitoring plug-in not installed.</description></item>
+            /// <item><description><para>running: Cloud Monitoring plug-in running.</para>
+            /// </description></item>
+            /// <item><description><para>stopped: Cloud Monitoring plug-in stopped.</para>
+            /// </description></item>
+            /// <item><description><para>installing: Cloud Monitoring plug-in installing.</para>
+            /// </description></item>
+            /// <item><description><para>install_faild: Cloud Monitoring plug-in installation failed.</para>
+            /// </description></item>
+            /// <item><description><para>abnormal: Cloud Monitoring plug-in installation abnormal.</para>
+            /// </description></item>
+            /// <item><description><para>not_installed: Cloud Monitoring plug-in not installed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

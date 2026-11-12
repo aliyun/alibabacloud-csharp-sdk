@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Details about the firewall rules.</para>
+        /// <para>The array of firewall rules.</para>
         /// </summary>
         [NameInMap("FirewallRules")]
         [Validation(Required=false)]
         public string FirewallRulesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the simple application server.</para>
+        /// <para>The instance ID of the specified simple application server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the regions where simple application servers are available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,15 +49,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add to the firewall. You can specify up to 20 tags.</para>
+        /// <para>The list of tags. The list can contain up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateFirewallRulesShrinkRequestTag> Tag { get; set; }
         public class CreateFirewallRulesShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Valid values of N: 1 to 20.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The tag key that is specified for the firewall rule. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Valid values of N: 1 to 20.</para>
-            /// <para>The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The tag value that is specified for the firewall rule. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

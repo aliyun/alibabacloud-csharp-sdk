@@ -29,14 +29,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The status of the simple application server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending</description></item>
-            /// <item><description>Starting</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Stopping</description></item>
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Resetting</description></item>
-            /// <item><description>Upgrading</description></item>
-            /// <item><description>Disabled</description></item>
+            /// <item><description><para>Pending</para>
+            /// </description></item>
+            /// <item><description><para>Starting</para>
+            /// </description></item>
+            /// <item><description><para>Running</para>
+            /// </description></item>
+            /// <item><description><para>Stopping</para>
+            /// </description></item>
+            /// <item><description><para>Stopped</para>
+            /// </description></item>
+            /// <item><description><para>Resetting</para>
+            /// </description></item>
+            /// <item><description><para>Upgrading</para>
+            /// </description></item>
+            /// <item><description><para>Disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

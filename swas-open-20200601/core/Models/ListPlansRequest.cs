@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListPlansRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the plans. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> to query the available regions for simple application servers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the snapshot list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details about the snapshots.</para>
+        /// <para>The snapshot information.</para>
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the simple application server.</para>
-            /// <para>Note: This parameter has a value returned for only system disk snapshots.</para>
+            /// <para>The instance ID of the simple application server.</para>
+            /// <para>Note: This field has a value for system cloud disk snapshots and is empty for data cloud disk snapshots.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2ad1ae67295445f598017499dc****</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The time when the last disk rollback was performed.</para>
+            /// <para>The time of the most recent rollback. The time is in the UTC (Z) time zone in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-09T07:12:49Z</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// <para>The name of the snapshot.</para>
+            /// <para>The snapshot name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-SnapshotName</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source disk. This parameter has a value even after the source disk is released.</para>
+            /// <para>The ID of the source disk. This value is retained even if the source disk of the snapshot has been released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-bp14wq0149cpp2xy****</para>
@@ -148,10 +148,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SourceDiskId { get; set; }
 
             /// <summary>
-            /// <para>The type of the source disk. Valid values:</para>
+            /// <para>The type of the source disk for the snapshot. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: system disk.</description></item>
-            /// <item><description>data: data disk.</description></item>
+            /// <item><description>System: system cloud disk.</description></item>
+            /// <item><description>Data: data cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -162,11 +162,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SourceDiskType { get; set; }
 
             /// <summary>
-            /// <para>The status of the snapshot. Valid values:</para>
+            /// <para>The snapshot status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Progressing: The snapshot is being created.</description></item>
-            /// <item><description>Accomplished: The snapshot is created.</description></item>
-            /// <item><description>Failed: The snapshot failed to be created.</description></item>
+            /// <item><description>progressing: The snapshot is being created.</description></item>
+            /// <item><description>accomplished: The snapshot is created.</description></item>
+            /// <item><description>failed: The snapshot failed to be created.</description></item>
+            /// <item><description>disabled: Rollback is not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,7 +209,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of snapshots.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

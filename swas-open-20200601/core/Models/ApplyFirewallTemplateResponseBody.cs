@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the execution to apply the template.</para>
+        /// <para>The ID of the template application task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aft-ikgt0bynitvs3****</para>

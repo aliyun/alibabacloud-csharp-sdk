@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateFirewallTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the firewall template.</para>
+        /// <para>The firewall template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ft-bcf1a7hrdq717****</para>

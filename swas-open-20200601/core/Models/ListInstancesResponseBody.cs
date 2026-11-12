@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the queried simple application servers.</para>
+        /// <para>The array of simple application server information.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The status of the server. Valid values:</para>
+            /// <para>The server status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: The server is normal.</description></item>
-            /// <item><description>Expired: The server expires.</description></item>
-            /// <item><description>Overdue: The payment of the server is overdue.</description></item>
+            /// <item><description>Normal: Normal.</description></item>
+            /// <item><description>Expired: Expired.</description></item>
+            /// <item><description>Overdue: Overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string BusinessStatus { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the simple application server.</para>
+            /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the simple application server uses a bundle plan.</para>
+            /// <para>Specifies whether the plan is a combination plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public bool? Combination { get; set; }
 
             /// <summary>
-            /// <para>The ID of the simple application server that uses a bundle plan.</para>
+            /// <para>The combination plan instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com-f6c9a22****45b5b8de68ad608af1ba</para>
@@ -62,7 +62,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CombinationInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the simple application server was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The commodity code of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>swas_intl</para>
+            /// </summary>
+            [NameInMap("CommodityCode")]
+            [Validation(Required=false)]
+            public string CommodityCode { get; set; }
+
+            /// <summary>
+            /// <para>The creation time. The time is displayed in UTC in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-08T05:31:06Z</para>
@@ -72,11 +82,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The DDoS protection status of the server. Valid values:</para>
+            /// <para>The DDoS status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: The DDoS protection status of the server is normal.</description></item>
-            /// <item><description>BlackHole: The server is in blackhole filtering.</description></item>
-            /// <item><description>Defense: The server is being scrubbed.</description></item>
+            /// <item><description>Normal: Normal.</description></item>
+            /// <item><description>BlackHole: Blackhole filtering is activated.</description></item>
+            /// <item><description>Defense: Traffic is being scrubbed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,11 +97,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string DdosStatus { get; set; }
 
             /// <summary>
-            /// <para>The reason why the server is disabled. Valid values:</para>
+            /// <para>The reason why the resource is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FINANCIAL: The server is locked due to overdue payments.</description></item>
-            /// <item><description>SECURITY: The server is locked for security reasons.</description></item>
-            /// <item><description>EXPIRED: The server is expired.</description></item>
+            /// <item><description>FINANCIAL: The resource is locked due to an overdue payment.</description></item>
+            /// <item><description>SECURITY: The resource is locked due to security reasons.</description></item>
+            /// <item><description>EXPIRED: The instance has expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,18 +112,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string DisableReason { get; set; }
 
             /// <summary>
-            /// <para>The information about the disks on the simple application server.</para>
+            /// <para>The array of cloud disk information for the simple application server.</para>
             /// </summary>
             [NameInMap("Disks")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyInstancesDisks> Disks { get; set; }
             public class ListInstancesResponseBodyInstancesDisks : TeaModel {
                 /// <summary>
-                /// <para>The category of the disk. Valid values:</para>
+                /// <para>The cloud disk category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ESSD: ESSD of PL0</description></item>
-                /// <item><description>SSD: standard SSD</description></item>
-                /// <item><description>CLOUD_EFFICIENCY: an ultra disk.</description></item>
+                /// <item><description>ESSD: ESSD at performance level (PL) 0.</description></item>
+                /// <item><description>SSD: Standard SSD.</description></item>
+                /// <item><description>CLOUD_EFFICIENCY: Ultra disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -124,7 +134,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The time when the simple application server was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The creation time of the instance. The time is displayed in UTC in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-24T02:20:10Z</para>
@@ -134,7 +144,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The device name of the disk after the disk is attached to the simple application server.</para>
+                /// <para>The device name of the cloud disk on the server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/dev/xvda</para>
@@ -144,7 +154,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string Device { get; set; }
 
                 /// <summary>
-                /// <para>The billing method of the disk.</para>
+                /// <para>The billing method of the cloud disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PrePaid</para>
@@ -154,7 +164,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string DiskChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The disk ID.</para>
+                /// <para>The cloud disk ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d-bp14wq0149cpp2x****</para>
@@ -164,7 +174,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string DiskId { get; set; }
 
                 /// <summary>
-                /// <para>The disk name.</para>
+                /// <para>The cloud disk name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SystemDisk</para>
@@ -174,7 +184,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string DiskName { get; set; }
 
                 /// <summary>
-                /// <para>The tags that are added to the disk.</para>
+                /// <para>The tag information of the cloud disk.</para>
                 /// </summary>
                 [NameInMap("DiskTags")]
                 [Validation(Required=false)]
@@ -203,10 +213,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the disk. Valid values:</para>
+                /// <para>The cloud disk type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>system: system disk.</description></item>
-                /// <item><description>data: data disk.</description></item>
+                /// <item><description>system: system cloud disk.</description></item>
+                /// <item><description>data: data cloud disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -227,7 +237,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The remarks of the disk.</para>
+                /// <para>The remarks of the cloud disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>remark</para>
@@ -237,7 +247,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group to which the disk belongs.</para>
+                /// <para>The ID of the resource group to which the cloud disk belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-aek2bti7cf7****</para>
@@ -247,7 +257,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The size of the disk. Unit: GiB.</para>
+                /// <para>The cloud disk size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -257,14 +267,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public int? Size { get; set; }
 
                 /// <summary>
-                /// <para>The status of the disk. Valid values:</para>
+                /// <para>The cloud disk status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ReIniting: The disk is being initialized.</description></item>
-                /// <item><description>Creating: The disk is being created.</description></item>
-                /// <item><description>In_use: The disk is in use.</description></item>
-                /// <item><description>Available: The disk can be attached.</description></item>
-                /// <item><description>Attaching: The disk is being attached.</description></item>
-                /// <item><description>Detaching: The disk is being detached.</description></item>
+                /// <item><description>ReIniting: The cloud disk is being initialized.</description></item>
+                /// <item><description>Creating: The cloud disk is being created.</description></item>
+                /// <item><description>In_use: The cloud disk is in use.</description></item>
+                /// <item><description>Available: The cloud disk is unattached.</description></item>
+                /// <item><description>Attaching: The cloud disk is being mounted.</description></item>
+                /// <item><description>Detaching: The cloud disk is being unmounted.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -277,7 +287,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The time when the simple application server expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The expiration time. The time is displayed in UTC in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-08T16:00:00Z</para>
@@ -287,7 +297,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the image.</para>
+            /// <para>The image information.</para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
@@ -314,7 +324,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ImageIconUrl { get; set; }
 
                 /// <summary>
-                /// <para>The name of the image.</para>
+                /// <para>The image name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-custom-1686536882356</para>
@@ -324,11 +334,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the image. Valid values:</para>
+                /// <para>The image type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>system</description></item>
-                /// <item><description>app</description></item>
-                /// <item><description>custom</description></item>
+                /// <item><description>system: system image.</description></item>
+                /// <item><description>app: application image.</description></item>
+                /// <item><description>custom: custom image.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -339,7 +349,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// <para>The image tag.</para>
+                /// <para>The image version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>V3.5</para>
@@ -349,7 +359,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ImageVersion { get; set; }
 
                 /// <summary>
-                /// <para>The OS.</para>
+                /// <para>The operating system type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>windows</para>
@@ -361,7 +371,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fe9c66133a9d4688872869726b52****</para>
@@ -371,7 +381,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the simple application server.</para>
+            /// <para>The internal IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.26.XX.XX</para>
@@ -381,7 +391,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InnerIpAddress { get; set; }
 
             /// <summary>
-            /// <para>The ID of the simple application server.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2ad1ae67295445f598017499dc****</para>
@@ -391,7 +401,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the simple application server.</para>
+            /// <para>The server name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-InstanceName</para>
@@ -400,22 +410,49 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            /// <summary>
+            /// <para>The network attributes.</para>
+            /// </summary>
             [NameInMap("NetworkAttributes")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyInstancesNetworkAttributes> NetworkAttributes { get; set; }
             public class ListInstancesResponseBodyInstancesNetworkAttributes : TeaModel {
+                /// <summary>
+                /// <para>The peak public bandwidth. Unit: Mbit/s.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
+                /// </summary>
                 [NameInMap("PeakBandwidth")]
                 [Validation(Required=false)]
                 public int? PeakBandwidth { get; set; }
 
+                /// <summary>
+                /// <para>The private IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>72.25.XX.XX</para>
+                /// </summary>
                 [NameInMap("PrivateIpAddress")]
                 [Validation(Required=false)]
                 public string PrivateIpAddress { get; set; }
 
+                /// <summary>
+                /// <para>The public IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>116.62.XX.XX</para>
+                /// </summary>
                 [NameInMap("PublicIpAddress")]
                 [Validation(Required=false)]
                 public string PublicIpAddress { get; set; }
 
+                /// <summary>
+                /// <para>The DDoS status of the public IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>normal</para>
+                /// </summary>
                 [NameInMap("PublicIpDdosStatus")]
                 [Validation(Required=false)]
                 public string PublicIpDdosStatus { get; set; }
@@ -423,7 +460,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The ID of the instance plan.</para>
+            /// <para>The plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swas.s2.c2m2s50b4t08</para>
@@ -432,6 +469,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string PlanId { get; set; }
 
+            /// <summary>
+            /// <para>The plan type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NORMAL: general-purpose.</description></item>
+            /// <item><description>CAPACITY: storage-optimized.</description></item>
+            /// <item><description>PREVIOUS: previous generation.</description></item>
+            /// <item><description>MULTI_IP: multi-public-IP.</description></item>
+            /// <item><description>INTERNATIONAL: international.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2861773.html">Instance families</a>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NORMAL</para>
+            /// </summary>
             [NameInMap("PlanType")]
             [Validation(Required=false)]
             public string PlanType { get; set; }
@@ -457,7 +510,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the server belongs.</para>
+            /// <para>The ID of the resource group to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekz7jmhg5s****</para>
@@ -467,7 +520,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the resources on the simple application server.</para>
+            /// <para>The resource specifications.</para>
             /// </summary>
             [NameInMap("ResourceSpec")]
             [Validation(Required=false)]
@@ -477,14 +530,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 /// <para>The bandwidth. Unit: Mbit/s.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>5</para>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("Bandwidth")]
                 [Validation(Required=false)]
                 public int? Bandwidth { get; set; }
 
                 /// <summary>
-                /// <para>The number of vCPUs of the simple application server.</para>
+                /// <para>The number of vCPUs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -494,22 +547,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The category of the disk. Valid values:</para>
+                /// <para>The cloud disk category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ESSD: enhanced SSD (ESSD) of PL0</description></item>
-                /// <item><description>SSD: standard SSD</description></item>
-                /// <item><description>CLOUD_EFFICIENCY: ultra disk</description></item>
+                /// <item><description>ESSD: ESSD at performance level (PL) 0.</description></item>
+                /// <item><description>SSD: Standard SSD.</description></item>
+                /// <item><description>CLOUD_EFFICIENCY: Ultra disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cloud_efficiency</para>
+                /// <para>ESSD</para>
                 /// </summary>
                 [NameInMap("DiskCategory")]
                 [Validation(Required=false)]
                 public string DiskCategory { get; set; }
 
                 /// <summary>
-                /// <para>The size of the disk. Unit: GiB.</para>
+                /// <para>The cloud disk size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -519,10 +572,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// <para>The amount of the traffic.</para>
+                /// <para>The data transfer quota.</para>
                 /// <list type="bullet">
-                /// <item><description>A value of 0 indicates the traffic amount of a bandwidth-based simple application server.</description></item>
-                /// <item><description>A non-zero value indicates the traffic amount of a data transfer plan-based simple application server.</description></item>
+                /// <item><description>A value of 0 indicates a bandwidth-based instance.</description></item>
+                /// <item><description>A non-zero value indicates a data transfer plan-based instance.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -533,7 +586,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public double? Flow { get; set; }
 
                 /// <summary>
-                /// <para>The size of the memory. Unit: GiB.</para>
+                /// <para>The memory size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -545,16 +598,16 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The status of the simple application server. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The server is being prepared.</description></item>
-            /// <item><description>Starting: The server is being started.</description></item>
-            /// <item><description>Running: The server is running.</description></item>
-            /// <item><description>Stopping: The server is being stopped.</description></item>
-            /// <item><description>Stopped: The server is stopped.</description></item>
-            /// <item><description>Resetting: The server is being reset.</description></item>
-            /// <item><description>Upgrading: The server is being upgraded.</description></item>
-            /// <item><description>Disabled: The server is not available.</description></item>
+            /// <item><description>Pending: The instance is being prepared.</description></item>
+            /// <item><description>Starting: The instance is starting.</description></item>
+            /// <item><description>Running: The instance is running.</description></item>
+            /// <item><description>Stopping: The instance is stopping.</description></item>
+            /// <item><description>Stopped: The instance is stopped.</description></item>
+            /// <item><description>Resetting: The instance is being reset.</description></item>
+            /// <item><description>Upgrading: The instance is being upgraded.</description></item>
+            /// <item><description>Disabled: The instance is unavailable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -565,14 +618,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags that are added to the simple application server.</para>
+            /// <para>The tags of the instance.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyInstancesTags> Tags { get; set; }
             public class ListInstancesResponseBodyInstancesTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the simple application server.</para>
+                /// <para>The tag key of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -582,7 +635,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the simple application server.</para>
+                /// <para>The tag value of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -594,7 +647,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The universally unique identifier (UUID) of the simple application server.</para>
+            /// <para>The UUID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>41f30524-5df7-49c9-9c6e-32****489001</para>
@@ -606,7 +659,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the simple application server list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -616,7 +669,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The settings for the number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -636,7 +689,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of instances returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

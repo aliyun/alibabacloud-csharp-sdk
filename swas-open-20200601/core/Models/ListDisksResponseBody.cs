@@ -19,9 +19,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The category of the disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ESSD: enhanced SSD (ESSD) of PL0</description></item>
-            /// <item><description>SSD: standard SSD</description></item>
-            /// <item><description>CLOUD_EFFICIENCY: ultra disk</description></item>
+            /// <item><description><para>ESSD: enhanced SSD (ESSD) of PL0</para>
+            /// </description></item>
+            /// <item><description><para>SSD: standard SSD</para>
+            /// </description></item>
+            /// <item><description><para>CLOUD_EFFICIENCY: ultra disk</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,8 +87,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: system disk</description></item>
-            /// <item><description>data: data disk</description></item>
+            /// <item><description><para>system: system disk</para>
+            /// </description></item>
+            /// <item><description><para>data: data disk</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,12 +163,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The status of the disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ReIniting: The disk is being initialized.</description></item>
-            /// <item><description>Creating: The disk is being created.</description></item>
-            /// <item><description>In_use: The disk is in use.</description></item>
-            /// <item><description>Available: The disk can be attached.</description></item>
-            /// <item><description>Attaching: The disk is being attached.</description></item>
-            /// <item><description>Detaching: The disk is being detached.</description></item>
+            /// <item><description><para>ReIniting: The disk is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para>Creating: The disk is being created.</para>
+            /// </description></item>
+            /// <item><description><para>In_use: The disk is in use.</para>
+            /// </description></item>
+            /// <item><description><para>Available: The disk can be attached.</para>
+            /// </description></item>
+            /// <item><description><para>Attaching: The disk is being attached.</para>
+            /// </description></item>
+            /// <item><description><para>Detaching: The disk is being detached.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The database engine that the instance runs.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number of the returned page.</para>
+        /// <para>Starts from 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 30 to 100.</para>
+        /// <para>The number of entries to return on each page. Valid values: 30 to 100.</para>
         /// <para>Default value: 30.</para>
         /// 
         /// <b>Example:</b>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The slow query logs returned.</para>
+        /// <para>The slow query logs.</para>
         /// </summary>
         [NameInMap("SlowLogs")]
         [Validation(Required=false)]
         public List<DescribeDatabaseSlowLogRecordsResponseBodySlowLogs> SlowLogs { get; set; }
         public class DescribeDatabaseSlowLogRecordsResponseBodySlowLogs : TeaModel {
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDB</para>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The time when the execution of the SQL statement started. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The start time of the execution. The time is displayed in UTC and is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
             /// <remarks>
-            /// <para> The time displayed in the Simple Application Server console is in the format of UTC+8.</para>
+            /// <para>The time displayed in the console is in the UTC+8 time zone, which is 8 hours later than the time in UTC.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ExecutionStartTime { get; set; }
 
             /// <summary>
-            /// <para>The name and IP address of the client that is connected to the database.</para>
+            /// <para>The IP address of the client that is used to connect to the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx[xxx] @ [1xx.xxx.xxx.xx]</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string HostAddress { get; set; }
 
             /// <summary>
-            /// <para>The lock duration of the SQL statement. Unit: seconds.</para>
+            /// <para>The lock duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public long? LockTimes { get; set; }
 
             /// <summary>
-            /// <para>The number of rows parsed by the SQL statement.</para>
+            /// <para>The number of parsed rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public long? ParseRowCounts { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the slow query. Unit: millisecond.</para>
+            /// <para>The execution duration. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2001</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public long? QueryTimeMS { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the slow query. Unit: seconds.</para>
+            /// <para>The execution duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public long? QueryTimes { get; set; }
 
             /// <summary>
-            /// <para>The number of rows returned by the SQL statement.</para>
+            /// <para>The number of returned rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of slow query logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

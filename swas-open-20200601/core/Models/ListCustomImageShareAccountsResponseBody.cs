@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<ListCustomImageShareAccountsResponseBodyImageShareUsers> ImageShareUsers { get; set; }
         public class ListCustomImageShareAccountsResponseBodyImageShareUsers : TeaModel {
             /// <summary>
-            /// <para>The time when the custom image is shared.</para>
+            /// <para>The time when the custom image was shared, in the format of YYYY-MM-DD HH:mm:ss.S.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-15 13:59:21.0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SharedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account whose custom image is shared.</para>
+            /// <para>The Alibaba Cloud account ID with which the custom image is shared.</para>
             /// 
             /// <b>Example:</b>
             /// <para>125111425233****</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeFirewallTemplateApplyResultsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The number of entries per page for a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of firewall rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public List<DescribeFirewallTemplateApplyResultsResponseBodyData> Data { get; set; }
         public class DescribeFirewallTemplateApplyResultsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the firewall template was applied to the simple application servers.</para>
+            /// <para>The time when the firewall template application task was executed, in the format of EEE MMM dd HH:mm:ss zzz yyyy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tue May 14 11:53:07 CST 2024</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of simple application servers to which the firewall template fails to apply.</para>
+            /// <para>The total number of instances to which the firewall template failed to be applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string FailedCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the firewall template.</para>
+            /// <para>The firewall template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ft-bcf1a7hrdq717****</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string FirewallTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The result of applying the firewall template to the simple application servers.</para>
+            /// <para>The results of applying the firewall template to instances.</para>
             /// </summary>
             [NameInMap("InstanceApplyResults")]
             [Validation(Required=false)]
             public List<DescribeFirewallTemplateApplyResultsResponseBodyDataInstanceApplyResults> InstanceApplyResults { get; set; }
             public class DescribeFirewallTemplateApplyResultsResponseBodyDataInstanceApplyResults : TeaModel {
                 /// <summary>
-                /// <para>The ID of the simple application server.</para>
+                /// <para>The simple application server instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>33774babccc84003a2b1ad47e8001233</para>
@@ -104,12 +104,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The status of applying the firewall template to the simple application servers. Valid values:</para>
+                /// <para>The status of applying the firewall template to a specific instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Running: The firewall template is being applied to the simple application servers.</description></item>
-                /// <item><description>Failed: The firewall template is applied to none of the simple application servers.</description></item>
-                /// <item><description>Success: The firewall template is applied to all the simple application servers.</description></item>
-                /// <item><description>PartFailed: The firewall template fails to be applied to some simple application servers.</description></item>
+                /// <item><description>Running: The firewall template is being applied.</description></item>
+                /// <item><description>Failed: The firewall template failed to be applied.</description></item>
+                /// <item><description>Success: The firewall template was applied.</description></item>
+                /// <item><description>PartFailed: The firewall template was partially applied. Some rules failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -122,12 +122,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             }
 
             /// <summary>
-            /// <para>The status of applying the template to all simple application servers. Valid values:</para>
+            /// <para>The status of applying the firewall template to all instances. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running: The firewall template is being applied to simple application servers.</description></item>
-            /// <item><description>Failed: The firewall template is applied to none of simple application servers.</description></item>
-            /// <item><description>Success: The firewall template is applied to all simple application servers.</description></item>
-            /// <item><description>PartFailed: The firewall template fails to be applied to some simple application servers.</description></item>
+            /// <item><description>Running: The firewall template is being applied.</description></item>
+            /// <item><description>Failed: The firewall template failed to be applied to all instances.</description></item>
+            /// <item><description>Success: The firewall template was applied.</description></item>
+            /// <item><description>PartFailed: The firewall template was partially applied. Some instances failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the execution to apply the template.</para>
+            /// <para>The ID of the template application task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aft-ikgt0bynitvs3****</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of instances to which the firewall template is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

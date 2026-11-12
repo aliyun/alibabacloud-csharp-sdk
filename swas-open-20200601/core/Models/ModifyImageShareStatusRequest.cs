@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Share</description></item>
-        /// <item><description>UnShare</description></item>
+        /// <item><description><para>Share</para>
+        /// </description></item>
+        /// <item><description><para>UnShare</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

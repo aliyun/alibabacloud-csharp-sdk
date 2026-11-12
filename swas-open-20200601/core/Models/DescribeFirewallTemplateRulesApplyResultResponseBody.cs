@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The port range. Valid values: 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: <c>1024/1055</c>, which indicates that the port range of 1024 to 1055.</para>
             /// <remarks>
-            /// <para> If you set RuleProtocol to ICMP, you must set Port to -1/-1.</para>
+            /// <para>If you set RuleProtocol to ICMP, you must set Port to -1/-1.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,10 +72,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The transport layer protocol that the rule supports. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP</description></item>
-            /// <item><description>UDP</description></item>
-            /// <item><description>TCP+UDP</description></item>
-            /// <item><description>ICMP</description></item>
+            /// <item><description><para>TCP</para>
+            /// </description></item>
+            /// <item><description><para>UDP</para>
+            /// </description></item>
+            /// <item><description><para>TCP+UDP</para>
+            /// </description></item>
+            /// <item><description><para>ICMP</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,10 +102,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The status of applying the firewall template rule to the simple application servers.</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The template rule does not start to be applied to the simple application servers.</description></item>
-            /// <item><description>Applying: The template rule is being applied to the simple application servers.</description></item>
-            /// <item><description>Success: The template rule is successfully applied to the simple application servers.</description></item>
-            /// <item><description>PartFailed: The template rule fails to be applied to some simple application servers.</description></item>
+            /// <item><description><para>Pending: The template rule does not start to be applied to the simple application servers.</para>
+            /// </description></item>
+            /// <item><description><para>Applying: The template rule is being applied to the simple application servers.</para>
+            /// </description></item>
+            /// <item><description><para>Success: The template rule is successfully applied to the simple application servers.</para>
+            /// </description></item>
+            /// <item><description><para>PartFailed: The template rule fails to be applied to some simple application servers.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

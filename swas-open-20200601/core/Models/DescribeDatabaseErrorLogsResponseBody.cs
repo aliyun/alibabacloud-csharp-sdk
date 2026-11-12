@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseErrorLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the error log entry was generated. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
-        /// <remarks>
-        /// <para>The time displayed in the Simple Application Server console is in the format of UTC+8.</para>
-        /// </remarks>
+        /// <para>An array of error logs.</para>
         /// </summary>
         [NameInMap("ErrorLogs")]
         [Validation(Required=false)]
         public List<DescribeDatabaseErrorLogsResponseBodyErrorLogs> ErrorLogs { get; set; }
         public class DescribeDatabaseErrorLogsResponseBodyErrorLogs : TeaModel {
             /// <summary>
-            /// <para>The time when the resource was created. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when the error log was generated. The time is in UTC and formatted as <c>yyyy-MM-ddTHH:mm:ssZ</c> according to the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</para>
+            /// <remarks>
+            /// <para>The time displayed in the console is 8 hours ahead of the specified UTC time.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-08T12:11:04Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message returned.</para>
+            /// <para>The error information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spid52 DBCC TRACEON 3499, server process ID (SPID) 52. This is an informational message only; no user action is required</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of matching error logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

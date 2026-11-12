@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the available regions for Simple Application Server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

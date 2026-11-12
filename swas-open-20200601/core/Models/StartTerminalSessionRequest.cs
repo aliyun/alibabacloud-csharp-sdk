@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class StartTerminalSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the simple application server.</para>
+        /// <para>The command to run after the session is started. The command can be up to 512 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ssh <a href="mailto:root@192.168.0">root@192.168.0</a>.***</para>
+        /// </summary>
+        [NameInMap("CommandLine")]
+        [Validation(Required=false)]
+        public string CommandLine { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the Simple Application Server instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +31,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Simple Application Server instance. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

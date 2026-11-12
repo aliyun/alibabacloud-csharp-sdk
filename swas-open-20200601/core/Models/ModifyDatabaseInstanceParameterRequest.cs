@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ModifyDatabaseInstanceParameterRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>A client-generated token to ensure request idempotence. You must ensure that the token is unique for each request. It can contain only ASCII characters and cannot be longer than 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Simple Database Service instance.</para>
+        /// <para>The ID of the database instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string DatabaseInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly restart the instance after parameters are modified. Valid values:</para>
+        /// <para>Specifies whether to restart the database for the parameter changes to take effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</description></item>
-        /// <item><description>false: does not forcibly restart the instance.</description></item>
+        /// <item><description><para>true: Forces a restart. Set this to true if any modified parameter requires a restart to take effect. Otherwise, the change will not take effect.</para>
+        /// </description></item>
+        /// <item><description><para>false: Do not force a restart.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public bool? ForceRestart { get; set; }
 
         /// <summary>
-        /// <para>The JSON strings that consist of instance parameters and the values of the instance parameters. The parameter values are of the string type. Format: {&quot;Parameter name 1&quot;:&quot;Parameter value 1&quot;,&quot;Parameter name 2&quot;:&quot;Parameter value 2&quot;...}.</para>
+        /// <para>A JSON string that specifies the database parameters and their values. The value for each parameter must be a string. Format: <c>{&quot;ParameterName1&quot;:&quot;Value1&quot;,&quot;ParameterName2&quot;:&quot;Value2&quot;,...}</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Simple Database Service instance. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the database instance. Call <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> to view the supported Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

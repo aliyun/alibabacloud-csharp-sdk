@@ -22,13 +22,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The disk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: system disk</description></item>
-        /// <item><description>data: data disk</description></item>
+        /// <item><description><para>system: system disk</para>
+        /// </description></item>
+        /// <item><description><para>data: data disk</para>
+        /// </description></item>
         /// </list>
         /// <para>By default, system disks and data disks are both queried.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System</para>
+        /// <para>system</para>
         /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]

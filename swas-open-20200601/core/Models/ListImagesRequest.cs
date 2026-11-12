@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The type of the images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: OS images</description></item>
-        /// <item><description>app: application images</description></item>
-        /// <item><description>custom: custom images</description></item>
+        /// <item><description><para>system: OS images</para>
+        /// </description></item>
+        /// <item><description><para>app: application images</para>
+        /// </description></item>
+        /// <item><description><para>custom: custom images</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

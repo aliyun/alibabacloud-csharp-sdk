@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class LoginInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the simple application server.</para>
+        /// <para>The instance ID of the simple application server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The password that corresponds to the username.</para>
+        /// <para>The password associated with the username of the simple application server.</para>
         /// <list type="bullet">
-        /// <item><description>For a Linux server, you do not need to enter a password.</description></item>
-        /// <item><description>For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see <a href="https://help.aliyun.com/document_detail/60055.html">Reset the password</a>.</description></item>
+        /// <item><description>Linux server: No password is required.</description></item>
+        /// <item><description>Windows server: Enter the configured password. If you have not set a password after purchasing the simple application server, see <a href="https://help.aliyun.com/document_detail/60055.html">Reset the password</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,13 +35,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The port number that is used to log on to the simple application server by using Workbench.</para>
+        /// <para>The port number for remote logon to the instance.</para>
         /// <list type="bullet">
-        /// <item><description>Linux servers: The default value is 22.</description></item>
-        /// <item><description>Windows servers: The default value is 3389.</description></item>
+        /// <item><description><para>Linux server: The default port is 22.</para>
+        /// </description></item>
+        /// <item><description><para>Windows server: The default port is 3389.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you want to connect to a server by using a custom port, you must modify the default remote connection port. For more information, see <a href="https://help.aliyun.com/document_detail/2807402.html">Configure a custom remote connection port</a>.</para>
+        /// <para>If you want to connect to the server by using a custom port, you must first change the default remote port of the server. For more information, see <a href="https://help.aliyun.com/document_detail/2807402.html">Settings for custom remote connection ports</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the specified Simple Application Server instance. You can call <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> to query the list of supported Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,10 +65,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The username of the simple application server.</para>
+        /// <para>The username for the simple application server.</para>
         /// <list type="bullet">
-        /// <item><description>For a Linux server, you do not need to enter a username.</description></item>
-        /// <item><description>For a Windows server, the default username <c>administrator</c> is used.</description></item>
+        /// <item><description>You do not need to enter a username for a Linux server.</description></item>
+        /// <item><description>The default username for a Windows server is <c>administrator</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

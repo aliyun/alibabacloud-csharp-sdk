@@ -69,12 +69,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>Indicates whether the key pair is unbound from the simple application server successfully. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>True</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <para>The total number of simple application servers from which the SSH key pair is unbound.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

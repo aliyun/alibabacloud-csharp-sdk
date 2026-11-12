@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateSnapshotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20758A-585D-4A41-A9B2-28DA8F4F534F</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot ID.</para>
+        /// <para>The ID of the snapshot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bp16oazlsold4dks****</para>

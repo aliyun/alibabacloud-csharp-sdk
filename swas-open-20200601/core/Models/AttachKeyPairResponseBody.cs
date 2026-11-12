@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class AttachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of simple application servers to which the key pair failed to be bound.</para>
+        /// <para>The total number of instances to which the key pair failed to be attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request results.</para>
+        /// <para>The result list.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<AttachKeyPairResponseBodyResults> Results { get; set; }
         public class AttachKeyPairResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The HTTP status code.</para>
+            /// <para>The result code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The simple application server ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aa6e71ddb35c46679bc4753d6219d604</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The response message.</para>
+            /// <para>The result message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -67,10 +67,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the key pair is bound to the simple application server successfully. Valid values:</para>
+            /// <para>Indicates whether the key pair is successfully attached. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The key pair is successfully attached.</para>
+            /// </description></item>
+            /// <item><description><para>false: The key pair failed to be attached.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The total number of simple application servers to which the key pair is bound.</para>
+        /// <para>The total number of instances to which the key pair is attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

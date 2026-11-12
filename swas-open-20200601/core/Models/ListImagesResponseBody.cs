@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <para>The description of the image.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Apps ImageOS ImageCustom Images
-            /// WordPress is a popular and powerful platform that allows you to build blogs and content management websites and implement custom features by using third-party templates and plug-ins. This WordPress image is built based on CentOS 7.9, PHP 7.4, MySQL 5.7, and Apache 2.4.</para>
+            /// <para>WordPress is a popular and powerful platform that allows you to build blogs and content management websites and implement custom features by using third-party templates and plug-ins. This WordPress image is built based on CentOS 7.9, PHP 7.4, MySQL 5.7, and Apache 2.4.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -50,9 +49,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The type of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system</description></item>
-            /// <item><description>app</description></item>
-            /// <item><description>custom</description></item>
+            /// <item><description><para>system</para>
+            /// </description></item>
+            /// <item><description><para>app</para>
+            /// </description></item>
+            /// <item><description><para>custom</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,8 +67,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The operating system type of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Linux</description></item>
-            /// <item><description>Windows</description></item>
+            /// <item><description><para>Linux</para>
+            /// </description></item>
+            /// <item><description><para>Windows</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

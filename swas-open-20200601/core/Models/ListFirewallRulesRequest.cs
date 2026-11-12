@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string FirewallRuleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the simple application server.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The instance ID of the specified simple application server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ace0706b2ac4454d984295a94213****</para>
@@ -31,8 +30,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number of the firewall rule list.</para>
+        /// <para>Starting value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +42,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -66,14 +65,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the firewall rule.</para>
+        /// <para>The tags of the firewall rules.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListFirewallRulesRequestTag> Tag { get; set; }
         public class ListFirewallRulesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. A tag key must be 1 to 64 characters in length. You can add up to 20 tags.</para>
+            /// <para>The tag key of the firewall rule. The tag key must be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -83,7 +82,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. A tag value must be 1 to 64 characters in length. You can add up to 20 tags.</para>
+            /// <para>The tag value of the firewall rule. The tag value must be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

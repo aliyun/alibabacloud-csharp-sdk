@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseInstanceParametersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The range of ParameterValue.</para>
-        /// <remarks>
-        /// <para>The value of CheckingCode varies based on the value of ParameterName.</para>
-        /// </remarks>
+        /// <para>A list of configuration parameters being synchronized. After you modify and submit parameters, the instance starts to synchronize them. Once synchronization is complete, these parameters are removed from this list.</para>
         /// </summary>
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]
         public List<DescribeDatabaseInstanceParametersResponseBodyConfigParameters> ConfigParameters { get; set; }
         public class DescribeDatabaseInstanceParametersResponseBodyConfigParameters : TeaModel {
             /// <summary>
-            /// <para>The check code that indicates the valid values of the parameter.</para>
+            /// <para>The value range of the parameter.</para>
+            /// <remarks>
+            /// <para>The value range varies by parameter.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>[1-65535]</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CheckingCode { get; set; }
 
             /// <summary>
-            /// <para>Does it support modifying parameter values. Possible values:</para>
+            /// <para>Indicates whether you can modify the parameter value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true:Support modifying parameter values.</para>
+            /// <item><description><para><c>true</c>: You can modify the parameter value.</para>
             /// </description></item>
-            /// <item><description><para>false:Modifying parameter values is not supported.</para>
+            /// <item><description><para><c>false</c>: You cannot modify the parameter value.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -46,12 +46,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ForceModify { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to forcibly restart the instance after parameters are modified. Valid values:</para>
+            /// <para>Indicates if the database must be restarted for a parameter modification to take effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</description></item>
-            /// <item><description>false: does not forcibly restart the instance.</description></item>
+            /// <item><description><para><c>true</c>: A restart is required. To apply changes for a parameter that requires a restart, you must set the <c>ForceRestart</c> parameter to <c>true</c>.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: A restart is not required.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: false.</para>
+            /// <para>Default value: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -82,6 +84,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
             /// <summary>
             /// <para>The value of the parameter.</para>
+            /// <remarks>
+            /// <para>The value varies by parameter.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -93,7 +98,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The database engine that the instance runs. The value must be MySQL.</para>
+        /// <para>The database engine. Currently, only <c>MySQL</c> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -103,10 +108,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine. Valid values:</para>
+        /// <para>The engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>5.7: MySQL 5.7.</description></item>
-        /// <item><description>8.0: MySQL 8.0.</description></item>
+        /// <item><description><para><c>5.7</c>: MySQL 5.7.</para>
+        /// </description></item>
+        /// <item><description><para><c>8.0</c>: MySQL 8.0.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,17 +134,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The range of ParameterValue.</para>
-        /// <remarks>
-        /// <para>The value of CheckingCode varies based on the value of ParameterName.</para>
-        /// </remarks>
+        /// <para>A list of running parameters.</para>
         /// </summary>
         [NameInMap("RunningParameters")]
         [Validation(Required=false)]
         public List<DescribeDatabaseInstanceParametersResponseBodyRunningParameters> RunningParameters { get; set; }
         public class DescribeDatabaseInstanceParametersResponseBodyRunningParameters : TeaModel {
             /// <summary>
-            /// <para>The check code that indicates the valid values of the parameter.</para>
+            /// <para>The value range of the parameter.</para>
+            /// <remarks>
+            /// <para>The value range varies by parameter.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>[ON|OFF]</para>
@@ -147,11 +154,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CheckingCode { get; set; }
 
             /// <summary>
-            /// <para>Does it support modifying parameter values. Possible values:</para>
+            /// <para>Indicates whether you can modify the parameter value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true:Support modifying parameter values.</para>
+            /// <item><description><para><c>true</c>: You can modify the parameter value.</para>
             /// </description></item>
-            /// <item><description><para>false:Modifying parameter values is not supported.</para>
+            /// <item><description><para><c>false</c>: You cannot modify the parameter value.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -163,12 +170,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ForceModify { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to forcibly restart the instance after parameters are modified. Valid values:</para>
+            /// <para>Indicates if the database must be restarted for a parameter modification to take effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</description></item>
-            /// <item><description>false: does not forcibly restart the instance.</description></item>
+            /// <item><description><para><c>true</c>: A restart is required. To apply changes for a parameter that requires a restart, you must set the <c>ForceRestart</c> parameter to <c>true</c>.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: A restart is not required.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: false.</para>
+            /// <para>Default value: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -178,7 +187,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ForceRestart { get; set; }
 
             /// <summary>
-            /// <para>The description of the parameter.</para>
+            /// <para>The description of the running parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>When this variable has a value of 1 (the default), the server automatically grants the EXECUTE and ALTER ROUTINE privileges to the creator of a stored routine, if the user cannot already execute and alter or drop the routine. (The ALTER ROUTINE privilege is required to drop the routine.) The server also automatically drops those privileges from the creator when the routine is dropped. If automatic_sp_privileges is 0, the server does not automatically add or drop these privileges.</para>
@@ -198,7 +207,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ParameterName { get; set; }
 
             /// <summary>
-            /// <para>The value of the parameter.</para>
+            /// <para>The value of the running parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the simple application servers.</para>
+        /// <para>The instance IDs of the Simple Application Server instances.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

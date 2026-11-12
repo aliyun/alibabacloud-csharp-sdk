@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method of the simple application servers. Set the value to PrePaid, which indicates the subscription billing method.</para>
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription. Currently, only the subscription billing method is supported.</description></item>
+        /// </list>
         /// <para>Default value: PrePaid.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +24,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).</para>
+        /// <para>The instance IDs of the simple application servers. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para>If you specify both <c>InstanceIds</c> and <c>PublicIpAddresses</c>, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.</para>
+        /// <para>If you specify both the InstanceIds and PublicIpAddresses parameters, ensure that the specified instance IDs and public IP addresses belong to the same simple application server. Otherwise, an empty response is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the simple application server. Fuzzy search with the asterisk (\*) wildcard is supported.</para>
+        /// <para>The name of the simple application server. You can use the asterisk (*) wildcard for fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the simple application server list.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -65,14 +68,30 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The plan type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NORMAL: general-purpose.</description></item>
+        /// <item><description>CAPACITY: storage-optimized.</description></item>
+        /// <item><description>PREVIOUS: previous generation.</description></item>
+        /// <item><description>MULTI_IP: multi-public-IP.</description></item>
+        /// <item><description>INTERNATIONAL: international.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2861773.html">Instance families</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
+        /// </summary>
         [NameInMap("PlanType")]
         [Validation(Required=false)]
         public string PlanType { get; set; }
 
         /// <summary>
-        /// <para>The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</para>
+        /// <para>The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 public IP addresses. Separate multiple IP addresses with commas (,).</para>
         /// <remarks>
-        /// <para>If you specify both <c>InstanceIds</c> and <c>PublicIpAddresses</c>, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.</para>
+        /// <para>If you specify both the InstanceIds and PublicIpAddresses parameters, ensure that the specified instance IDs and public IP addresses belong to the same simple application server. Otherwise, an empty response is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +102,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string PublicIpAddresses { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application servers.</para>
+        /// <para>The region ID of the simple application server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +113,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the simple application servers belong.</para>
+        /// <para>The ID of the resource group to which the simple application server belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2bti7cf7****</para>
@@ -104,16 +123,16 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the simple application servers. Valid values:</para>
+        /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pending</description></item>
-        /// <item><description>Starting</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Stopping</description></item>
-        /// <item><description>Stopped</description></item>
-        /// <item><description>Resetting</description></item>
-        /// <item><description>Upgrading</description></item>
-        /// <item><description>Disabled</description></item>
+        /// <item><description>Pending: The instance is being prepared.</description></item>
+        /// <item><description>Starting: The instance is starting.</description></item>
+        /// <item><description>Running: The instance is running.</description></item>
+        /// <item><description>Stopping: The instance is stopping.</description></item>
+        /// <item><description>Stopped: The instance is stopped.</description></item>
+        /// <item><description>Resetting: The instance is being reset.</description></item>
+        /// <item><description>Upgrading: The instance is being upgraded.</description></item>
+        /// <item><description>Disabled: The instance is unavailable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,27 +143,27 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the simple application servers.</para>
+        /// <para>The tags of the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListInstancesRequestTag> Tag { get; set; }
         public class ListInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the simple application servers. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key of the instance. The tag key must be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the simple application servers. A tag value can be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value of the instance. The tag value must be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>01</para>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

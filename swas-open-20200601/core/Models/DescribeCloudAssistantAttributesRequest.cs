@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeCloudAssistantAttributesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the simple application servers.</para>
+        /// <para>The instance IDs of the simple application server instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the specified simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the simple application servers.
+        /// You can call <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> to query the list of supported Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

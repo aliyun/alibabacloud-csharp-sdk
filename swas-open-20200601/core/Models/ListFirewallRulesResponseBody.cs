@@ -10,17 +10,29 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListFirewallRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the firewall rules.</para>
+        /// <para>The list of firewall rules.</para>
         /// </summary>
         [NameInMap("FirewallRules")]
         [Validation(Required=false)]
         public List<ListFirewallRulesResponseBodyFirewallRules> FirewallRules { get; set; }
         public class ListFirewallRulesResponseBodyFirewallRules : TeaModel {
             /// <summary>
+            /// <para>The ID of the simple application server to which the firewall rule belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ace0706b2ac4454d984295a94213****</para>
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            /// <summary>
             /// <para>The firewall policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>accept: Access is allowed.</description></item>
-            /// <item><description>drop: Access is refused.</description></item>
+            /// <item><description><para>accept: Allow.</para>
+            /// </description></item>
+            /// <item><description><para>drop: Deny.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +53,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the firewall rule.</para>
+            /// <para>The remark of the firewall rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TEST</para>
+            /// <para>test-default port for MySQL server</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -63,9 +75,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The transport layer protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP</description></item>
-            /// <item><description>UDP</description></item>
-            /// <item><description>TCP+UDP</description></item>
+            /// <item><description>TCP: TCP.</description></item>
+            /// <item><description>UDP: UDP.</description></item>
+            /// <item><description>TCP+UDP: TCP and UDP.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,14 +98,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The tags of the firewall rule.</para>
+            /// <para>The tags of the firewall rules.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListFirewallRulesResponseBodyFirewallRulesTags> Tags { get; set; }
             public class ListFirewallRulesResponseBodyFirewallRulesTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The tag key of the firewall rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -103,7 +115,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The tag value of the firewall rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -117,7 +129,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the firewall rule list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -127,7 +139,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -147,7 +159,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of firewall rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

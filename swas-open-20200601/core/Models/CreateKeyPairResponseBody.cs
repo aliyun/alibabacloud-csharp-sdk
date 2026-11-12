@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the key pair. The name must be 2 to 64 characters in length and can contain letters, digits, colons (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.</para>
+        /// <para>The name of the key pair. The name must be 2 to 64 characters in length, and can contain English letters and Chinese characters. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>KeyPairName</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The private key of the key pair. The PEM-encoded private key is in PKCS#8 format.</para>
+        /// <para>The private key of the key pair. The private key is in the PEM-encoded PKCS#8 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</para>

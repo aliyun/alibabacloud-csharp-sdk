@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The end of the time range to query. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</description></item>
-        /// <item><description>Time format: YYYY-MM-DDThh:mm:ssZ.</description></item>
+        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</para>
+        /// </description></item>
+        /// <item><description><para>Time format: YYYY-MM-DDThh:mm:ssZ.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>The interval between the start time and the end time is less than or equal to 31 days.</para>
@@ -61,14 +63,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The name of the metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MEMORY_ACTUALUSEDSPACE: the memory usage. Unit: bytes.</description></item>
-        /// <item><description>DISKUSAGE_USED: the disk usage. Unit: bytes.</description></item>
-        /// <item><description>CPU_UTILIZATION: the CPU usage, in percentage.</description></item>
-        /// <item><description>VPC_PUBLICIP_INTERNETOUT_RATE: the outbound bandwidth. Unit: bits/s.</description></item>
-        /// <item><description>VPC_PUBLICIP_INTERNETIN_RATE: the inbound bandwidth. Unit: bits/s.</description></item>
-        /// <item><description>DISK_READ_IOPS: the read IOPS of the disk. Unit: count/s.</description></item>
-        /// <item><description>DISK_WRITE_IOPS: the write IOPS of the disk. Unit: count/s.</description></item>
-        /// <item><description>FLOW_USED: the traffic usage. Unit: bytes.</description></item>
+        /// <item><description><para>MEMORY_ACTUALUSEDSPACE: the memory usage. Unit: bytes.</para>
+        /// </description></item>
+        /// <item><description><para>DISKUSAGE_USED: the disk usage. Unit: bytes.</para>
+        /// </description></item>
+        /// <item><description><para>CPU_UTILIZATION: the CPU usage, in percentage.</para>
+        /// </description></item>
+        /// <item><description><para>VPC_PUBLICIP_INTERNETOUT_RATE: the outbound bandwidth. Unit: bits/s.</para>
+        /// </description></item>
+        /// <item><description><para>VPC_PUBLICIP_INTERNETIN_RATE: the inbound bandwidth. Unit: bits/s.</para>
+        /// </description></item>
+        /// <item><description><para>DISK_READ_IOPS: the read IOPS of the disk. Unit: count/s.</para>
+        /// </description></item>
+        /// <item><description><para>DISK_WRITE_IOPS: the write IOPS of the disk. Unit: count/s.</para>
+        /// </description></item>
+        /// <item><description><para>FLOW_USED: the traffic usage. Unit: bytes.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,7 +102,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.</para>
         /// <remarks>
-        /// <para> If MetricName is set to FLOW_USED, set Period to 3600 (one hour). In other cases, set Period based on your business requirements.</para>
+        /// <para>If MetricName is set to FLOW_USED, set Period to 3600 (one hour). In other cases, set Period based on your business requirements.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -117,15 +127,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The beginning of the time range to query. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</description></item>
-        /// <item><description>Time format: YYYY-MM-DDThh:mm:ssZ.<remarks>
-        /// <list type="bullet">
-        /// <item><description>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.</description></item>
-        /// <item><description>The interval between the start time and the end time is less than or equal to 31 days.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</para>
+        /// </description></item>
+        /// <item><description><para>Time format: YYYY-MM-DDThh:mm:ssZ.</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.</para>
+        /// </description></item>
+        /// <item><description><para>The interval between the start time and the end time is less than or equal to 31 days.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseErrorLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Simple Database Service instance.</para>
+        /// <para>The ID of the lightweight database instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string DatabaseInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end of the time range to query. The time must be in UTC and formatted as <c>yyyy-MM-ddTHH:mmZ</c> according to the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard. This value must be later than the start time.</para>
         /// <remarks>
-        /// <para>The time displayed in the Simple Application Server console is in the format of UTC+8.</para>
+        /// <para>The time displayed in the console is 8 hours ahead of the specified UTC time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of error logs to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Simple Database Service instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the lightweight database instance resides.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. The time must be in UTC and formatted as <c>yyyy-MM-ddTHH:mmZ</c> according to the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</para>
         /// <remarks>
-        /// <para>The time displayed in the Simple Application Server console is in the format of UTC+8.</para>
+        /// <para>The time displayed in the console is 8 hours ahead of the specified UTC time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

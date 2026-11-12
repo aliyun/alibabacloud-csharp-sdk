@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseInstanceMetricDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Simple Database Service instance.</para>
+        /// <para>The ID of the lightweight database instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string DatabaseInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>The time displayed in the Simple Application Server console is in the format of UTC+8.</para>
+        /// <para>The time in the console is displayed in UTC+8.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,10 +37,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The name of the metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.</description></item>
-        /// <item><description>MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.</description></item>
-        /// <item><description>MySQL_Sessions : The total number of active connections.</description></item>
-        /// <item><description>MySQL_IOPS: The IOPS of the instance.</description></item>
+        /// <item><description><para><c>MySQL_MemCpuUsage</c>: The CPU utilization and memory usage of the instance, as a percentage of the total resources of the operating system.</para>
+        /// </description></item>
+        /// <item><description><para><c>MySQL_DetailedSpaceUsage</c>: The total, data, log, temporary, and system disk space usage of the instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>MySQL_Sessions</c>: The number of active and total connections.</para>
+        /// </description></item>
+        /// <item><description><para><c>MySQL_IOPS</c>: The IOPS of the instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Simple Database Service instance. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the lightweight database instance. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to get the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,9 +67,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>The time displayed in the Simple Application Server console is in the format of UTC+8.</para>
+        /// <para>The time in the console is displayed in UTC+8.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

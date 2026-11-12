@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeInvocationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The command name.</para>
+        /// <para>The command execution records.</para>
         /// </summary>
         [NameInMap("Invocations")]
         [Validation(Required=false)]
         public List<DescribeInvocationsResponseBodyInvocations> Invocations { get; set; }
         public class DescribeInvocationsResponseBodyInvocations : TeaModel {
             /// <summary>
-            /// <para>The content of the command, which is Base64-encoded.</para>
+            /// <para>The command content, which is transmitted in Base64 encoding.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bHM=</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CommandContent { get; set; }
 
             /// <summary>
-            /// <para>The name of the command.</para>
+            /// <para>The command name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testname</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The type of the command. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RunBatScript: batch command (applicable to Windows instances).</description></item>
-            /// <item><description>RunPowerShellScript: PowerShell command (applicable to Windows instances).</description></item>
-            /// <item><description>RunShellScript: shell command (applicable to Linux instances).</description></item>
+            /// <item><description>RunBatScript: a Bat command for Windows instances.</description></item>
+            /// <item><description>RunPowerShellScript: a PowerShell command for Windows instances.</description></item>
+            /// <item><description>RunShellScript: a shell command for Linux instances.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CommandType { get; set; }
 
             /// <summary>
-            /// <para>The time when the command was created.</para>
+            /// <para>The time when the command was created. The time is displayed in UTC (Z) in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-11T06:37:16Z</para>
@@ -62,19 +62,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the command. Valid values:</para>
+            /// <para>The execution status of the command. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The command is being verified or sent.</description></item>
+            /// <item><description>Pending: The system is verifying or sending the command.</description></item>
             /// <item><description>Invalid: The specified command type or parameter is invalid.</description></item>
-            /// <item><description>Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.</description></item>
+            /// <item><description>Aborted: The command failed to be sent to the instance. The instance must be in the Running state, and the command must be delivered within one minute.</description></item>
             /// <item><description>Running: The command is being run on the instance.</description></item>
-            /// <item><description>Success: The command finishes running, and the exit code is 0.</description></item>
-            /// <item><description>Failed: The command finishes running, but the exit code is not 0.</description></item>
-            /// <item><description>Error: The running of the command cannot proceed due to an exception.</description></item>
-            /// <item><description>Timeout: The running of the command times out.</description></item>
-            /// <item><description>Cancelled: The running is canceled, and the command is not run.</description></item>
-            /// <item><description>Stopping: The command that is running is being stopped.</description></item>
-            /// <item><description>Terminated: The command is terminated while it is being run.</description></item>
+            /// <item><description>Success: The command execution is complete, and the exit code is 0.</description></item>
+            /// <item><description>Failed: The command execution is complete, and the exit code is non-zero.</description></item>
+            /// <item><description>Error: An exception occurred during command execution, and the command could not continue.</description></item>
+            /// <item><description>Timeout: The command execution timed out.</description></item>
+            /// <item><description>Cancelled: The command execution has been canceled, and the command was never started.</description></item>
+            /// <item><description>Stopping: The running command is being stopped.</description></item>
+            /// <item><description>Terminated: The command was terminated during execution.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InvocationStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the command task.</para>
+            /// <para>The command execution ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-hz02p9545t6****</para>
@@ -98,9 +98,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <para>The status of the command. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Running: The command is running.</description></item>
-            /// <item><description>Finished: The command finishes running.</description></item>
-            /// <item><description>Failed: The running of the command failed.</description></item>
-            /// <item><description>Stopped: The running is stopped.</description></item>
+            /// <item><description>Finished: The command execution is complete.</description></item>
+            /// <item><description>Failed: The command execution failed.</description></item>
+            /// <item><description>Stopped: The command has been stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string InvokeStatus { get; set; }
 
             /// <summary>
-            /// <para>The custom parameters in the command. If no custom parameter exists in the command, the default value is {}.</para>
+            /// <para>The custom parameters included in the command. If no parameters exist, the default value is {}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page. Settings for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of commands.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

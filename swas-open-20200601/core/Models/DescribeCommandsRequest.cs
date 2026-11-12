@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The command name. Fuzzy match is not supported.</para>
+        /// <para>The name of the command. Fuzzy match is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Pages start from 1.</para>
+        /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The provider of the common command. Take note of the following items:</para>
+        /// <para>The provider of the public command. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to <c>AlibabaCloud</c>, all the common commands provided by Alibaba Cloud are queried.</description></item>
-        /// <item><description>If you set this parameter to <c>User</c>, all the custom commands created by you are queried.</description></item>
+        /// <item><description>AlibabaCloud: queries all public commands provided by Alibaba Cloud.</description></item>
+        /// <item><description>User: queries all custom commands that you created.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags that are bound to the command.</para>
+        /// <para>The tags of the command.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCommandsRequestTag> Tag { get; set; }
         public class DescribeCommandsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the command. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key of the command. The tag key must be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the command. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value of the command. The tag value must be 1 to 64 characters in length. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The language type of the command. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RunBatScript: batch command, applicable to Windows instances</description></item>
-        /// <item><description>RunPowerShellScript: PowerShell command, applicable to Windows instances</description></item>
-        /// <item><description>RunShellScript: shell command, applicable to Linux instances</description></item>
+        /// <item><description>RunBatScript: Bat command for Windows instances.</description></item>
+        /// <item><description>RunPowerShellScript: PowerShell command for Windows instances.</description></item>
+        /// <item><description>RunShellScript: Shell command for Linux instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

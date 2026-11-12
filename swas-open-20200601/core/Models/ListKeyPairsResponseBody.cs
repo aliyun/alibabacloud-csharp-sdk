@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListKeyPairsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the queried AccessKey pairs.</para>
+        /// <para>The collection of key pair information.</para>
         /// </summary>
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
         public List<ListKeyPairsResponseBodyKeyPairs> KeyPairs { get; set; }
         public class ListKeyPairsResponseBodyKeyPairs : TeaModel {
             /// <summary>
-            /// <para>The time when the AccessKey pair was created.</para>
+            /// <para>The time when the key pair was created. The time follows the UTC (Z) time zone and is in the YYYY-MM-DDThh:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-06T02:28Z</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The IDs of simple application servers. A maximum of 50 IDs of simple application servers can be returned.</para>
+            /// <para>The IDs of the simple application server instances. A maximum of 50 instance IDs are supported.</para>
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The name of the AccessKey pair. The name must be 2 to 64 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter and cannot start with http:// or https://.</para>
+            /// <para>The name of the key pair. The name must be 2 to 64 characters in length and can contain letters and Chinese characters. It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), or hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>testKeyPairName</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of key pairs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

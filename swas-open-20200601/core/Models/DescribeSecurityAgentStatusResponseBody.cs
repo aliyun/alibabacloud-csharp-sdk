@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The status of the Security Center agent. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>pause: The Security Center agent suspends protection for your server.</description></item>
-        /// <item><description>online: The Security Center agent is protecting your server.</description></item>
-        /// <item><description>offline: The Security Center agent does not protect your server.</description></item>
+        /// <item><description><para>pause: The Security Center agent suspends protection for your server.</para>
+        /// </description></item>
+        /// <item><description><para>online: The Security Center agent is protecting your server.</para>
+        /// </description></item>
+        /// <item><description><para>offline: The Security Center agent does not protect your server.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>Specifies whether to forcibly install the CloudMonitor agent. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default value): forcibly installs the CloudMonitor agent.</description></item>
-        /// <item><description>false: does not forcibly install the CloudMonitor agent.</description></item>
+        /// <item><description><para>true (default value): forcibly installs the CloudMonitor agent.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not forcibly install the CloudMonitor agent.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class RunCommandResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution ID.</para>
+        /// <para>The command execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-hz02p9545t6****</para>

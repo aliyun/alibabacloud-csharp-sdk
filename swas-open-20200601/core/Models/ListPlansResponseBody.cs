@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListPlansResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the plans.</para>
+        /// <para>The plan information.</para>
         /// </summary>
         [NameInMap("Plans")]
         [Validation(Required=false)]
         public List<ListPlansResponseBodyPlans> Plans { get; set; }
         public class ListPlansResponseBodyPlans : TeaModel {
             /// <summary>
-            /// <para>The peak bandwidth. Unit: Mbit/s.</para>
+            /// <para>The peak bandwidth. Unit: Mbps.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3</para>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
@@ -37,13 +37,25 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public int? Core { get; set; }
 
             /// <summary>
-            /// <para>The unit of the plan price. Valid values:</para>
+            /// <para>The number of credits.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12500</para>
+            /// </summary>
+            [NameInMap("Credits")]
+            [Validation(Required=false)]
+            public int? Credits { get; set; }
+
+            /// <summary>
+            /// <para>The currency unit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CNY</description></item>
-            /// <item><description>USD</description></item>
+            /// <item><description><para>CNY: Chinese Yuan.</para>
+            /// </description></item>
+            /// <item><description><para>USD: US Dollar.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> CNY is for the China site (aliyun.com). USD is for the international site (alibabacloud.com).</para>
+            /// <para>The currency unit is CNY on the China site and USD on the international site.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -54,7 +66,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The size of the disk. Unit: GB.</para>
+            /// <para>The disk capacity. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -64,10 +76,11 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public int? DiskSize { get; set; }
 
             /// <summary>
-            /// <para>The category of the disk. Valid values:</para>
+            /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SSD: standard SSDs</description></item>
-            /// <item><description>ESSD: enhanced SSDs</description></item>
+            /// <item><description>ESSD: Enterprise SSD (ESSD) at performance level (PL) 0.</description></item>
+            /// <item><description>SSD: standard SSD.</description></item>
+            /// <item><description>CLOUD_EFFICIENCY: ultra cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,12 +100,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public int? Flow { get; set; }
 
+            /// <summary>
+            /// <para>The public network line type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>BGP</b> (default): BGP line.</description></item>
+            /// <item><description><b>BGP_NCO</b>: BGP (outside the Chinese mainland optimized) line.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BGP</para>
+            /// </summary>
             [NameInMap("IspType")]
             [Validation(Required=false)]
             public string IspType { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: GB.</para>
+            /// <para>The memory size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -102,7 +125,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public float? Memory { get; set; }
 
             /// <summary>
-            /// <para>The monthly price of the plan.</para>
+            /// <para>The monthly price of the simple application server plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -112,7 +135,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string OriginPrice { get; set; }
 
             /// <summary>
-            /// <para>The ID of the plan.</para>
+            /// <para>The plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swas.s2.c2m1s40b3t04</para>
@@ -121,16 +144,38 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string PlanId { get; set; }
 
+            /// <summary>
+            /// <para>The plan type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NORMAL: general-purpose.</description></item>
+            /// <item><description>CAPACITY: storage-optimized.</description></item>
+            /// <item><description>PREVIOUS: previous generation.</description></item>
+            /// <item><description>MULTI_IP: multiple public IP addresses.</description></item>
+            /// <item><description>INTERNATIONAL: international.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2861773.html">Instance families</a>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NORMAL</para>
+            /// </summary>
             [NameInMap("PlanType")]
             [Validation(Required=false)]
             public string PlanType { get; set; }
 
+            /// <summary>
+            /// <para>The number of public IP addresses.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("PublicIpNum")]
             [Validation(Required=false)]
             public string PublicIpNum { get; set; }
 
             /// <summary>
-            /// <para>The operating system types supported by the plan.</para>
+            /// <para>The operating system type supported by the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;Linux&quot;,&quot;Windows&quot;]</para>
@@ -139,23 +184,54 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string SupportPlatform { get; set; }
 
+            /// <summary>
+            /// <para>The tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListPlansResponseBodyPlansTags> Tags { get; set; }
             public class ListPlansResponseBodyPlansTags : TeaModel {
+                /// <summary>
+                /// <para>The Chinese title.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>BGP</para>
+                /// </summary>
                 [NameInMap("CnTitle")]
                 [Validation(Required=false)]
                 public string CnTitle { get; set; }
 
+                /// <summary>
+                /// <para>The color.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>grey</para>
+                /// </summary>
                 [NameInMap("Color")]
                 [Validation(Required=false)]
                 public string Color { get; set; }
 
+                /// <summary>
+                /// <para>The English title.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>BGP</para>
+                /// </summary>
                 [NameInMap("EnTitle")]
                 [Validation(Required=false)]
                 public string EnTitle { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>The number of tokens.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>300</para>
+            /// </summary>
+            [NameInMap("Tokens")]
+            [Validation(Required=false)]
+            public int? Tokens { get; set; }
 
         }
 

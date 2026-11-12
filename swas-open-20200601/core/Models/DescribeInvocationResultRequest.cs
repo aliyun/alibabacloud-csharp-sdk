@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeInvocationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the simple application server.</para>
+        /// <para>The instance ID of the simple application server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The execution ID. You can call the <a href="https://help.aliyun.com/document_detail/439368.html">DescribeInvocations</a> operation to query execution IDs.</para>
+        /// <para>The command execution ID. You can call the <a href="https://help.aliyun.com/document_detail/439368.html">DescribeInvocations</a> operation to query the InvokeId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

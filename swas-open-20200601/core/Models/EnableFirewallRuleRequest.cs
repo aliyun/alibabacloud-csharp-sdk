@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class EnableFirewallRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. A client token is generated from your client and must be unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the simple application server.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The instance ID of the specified simple application server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ad1ae67295445f598017499dc****</para>
@@ -31,7 +30,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the specified simple application server.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> to query the list of supported Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <para>The remarks of the firewall rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>custom</para>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the firewall rule.</para>
+        /// <para>The firewall rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The IP address or CIDR block that is allowed in the firewall policy.</para>
+        /// <para>The IP address or CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.147.33.**</para>

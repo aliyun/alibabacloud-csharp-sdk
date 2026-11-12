@@ -40,14 +40,35 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The information about the logon credentials.</para>
+        /// </summary>
         [NameInMap("LoginCredentials")]
         [Validation(Required=false)]
         public ResetSystemRequestLoginCredentials LoginCredentials { get; set; }
         public class ResetSystemRequestLoginCredentials : TeaModel {
+            /// <summary>
+            /// <para>The name of the key pair that you want to bind to the simple application server. Only Linux simple application servers support key pairs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aliyunkey</para>
+            /// </summary>
             [NameInMap("KeyPairName")]
             [Validation(Required=false)]
             public string KeyPairName { get; set; }
 
+            /// <summary>
+            /// <para>The password that corresponds to the administrator.</para>
+            /// <list type="bullet">
+            /// <item><description><para>For Windows servers, the default administrator account is Administrator.</para>
+            /// </description></item>
+            /// <item><description><para>Linux servers, the default administrator account is root.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <hr>
+            /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }

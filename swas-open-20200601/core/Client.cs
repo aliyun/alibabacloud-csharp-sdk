@@ -18,7 +18,40 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._productId = "SWAS-OPEN";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-northeast-1", "swas.ap-northeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "swas.ap-northeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "swas.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "swas.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "swas.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "swas.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "swas.ap-southeast-7.aliyuncs.com"},
+                {"cn-beijing", "swas.cn-beijing.aliyuncs.com"},
+                {"cn-chengdu", "swas.cn-chengdu.aliyuncs.com"},
+                {"cn-fuzhou", "swas.cn-fuzhou.aliyuncs.com"},
+                {"cn-guangzhou", "swas.cn-guangzhou.aliyuncs.com"},
+                {"cn-hangzhou", "swas.cn-hangzhou.aliyuncs.com"},
+                {"cn-heyuan", "swas.cn-heyuan.aliyuncs.com"},
+                {"cn-hongkong", "swas.cn-hongkong.aliyuncs.com"},
+                {"cn-huhehaote", "swas.cn-huhehaote.aliyuncs.com"},
+                {"cn-nanjing", "swas.cn-nanjing.aliyuncs.com"},
+                {"cn-qingdao", "swas.cn-qingdao.aliyuncs.com"},
+                {"cn-shanghai", "swas.cn-shanghai.aliyuncs.com"},
+                {"cn-shenzhen", "swas.cn-shenzhen.aliyuncs.com"},
+                {"cn-wuhan-lr", "swas.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-wulanchabu", "swas.cn-wulanchabu.aliyuncs.com"},
+                {"cn-zhangjiakou", "swas.cn-zhangjiakou.aliyuncs.com"},
+                {"us-west-1", "swas.us-west-1.aliyuncs.com"},
+                {"us-east-1", "swas.us-east-1.aliyuncs.com"},
+                {"eu-west-1", "swas.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "swas.eu-central-1.aliyuncs.com"},
+                {"me-central-1", "swas.me-central-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("swas-open", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,14 +72,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.</para>
+        /// <para>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy identical environment configurations for multiple simple application servers and improve deployment efficiency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you share a custom image, make sure that all sensitive data and files are removed from the image.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.</description></item>
+        /// <item><description>Before sharing a shared image, purge sensitive data and files.</description></item>
+        /// <item><description>Obtain the Alibaba Cloud account ID. Move the mouse over the user profile picture in the upper-right corner of the console. In the pop-up user information box, if the account identity is an Alibaba Cloud account, the displayed account ID is the Alibaba Cloud account ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -96,26 +129,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCustomImageShareAccountResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCustomImageShareAccountResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCustomImageShareAccountResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.</para>
+        /// <para>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy identical environment configurations for multiple simple application servers and improve deployment efficiency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you share a custom image, make sure that all sensitive data and files are removed from the image.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.</description></item>
+        /// <item><description>Before sharing a shared image, purge sensitive data and files.</description></item>
+        /// <item><description>Obtain the Alibaba Cloud account ID. Move the mouse over the user profile picture in the upper-right corner of the console. In the pop-up user information box, if the account identity is an Alibaba Cloud account, the displayed account ID is the Alibaba Cloud account ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -165,26 +191,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCustomImageShareAccountResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCustomImageShareAccountResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCustomImageShareAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.</para>
+        /// <para>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy identical environment configurations for multiple simple application servers and improve deployment efficiency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you share a custom image, make sure that all sensitive data and files are removed from the image.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.</description></item>
+        /// <item><description>Before sharing a shared image, purge sensitive data and files.</description></item>
+        /// <item><description>Obtain the Alibaba Cloud account ID. Move the mouse over the user profile picture in the upper-right corner of the console. In the pop-up user information box, if the account identity is an Alibaba Cloud account, the displayed account ID is the Alibaba Cloud account ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -203,14 +222,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy the same environment configurations for multiple simple application servers at a time. This improves deployment efficiency.</para>
+        /// <para>Shares a custom image with other Alibaba Cloud accounts in the same region to quickly deploy identical environment configurations for multiple simple application servers and improve deployment efficiency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you share a custom image, make sure that all sensitive data and files are removed from the image.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of the Alibaba Cloud accounts with which you want to share the image is obtained. Move the pointer over the profile in the upper-right corner of the Simple Application Server console. In the card that appears, if Main Account is displayed, the showed account ID is the Alibaba Cloud account ID.</description></item>
+        /// <item><description>Before sharing a shared image, purge sensitive data and files.</description></item>
+        /// <item><description>Obtain the Alibaba Cloud account ID. Move the mouse over the user profile picture in the upper-right corner of the console. In the pop-up user information box, if the account identity is an Alibaba Cloud account, the displayed account ID is the Alibaba Cloud account ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -229,12 +248,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint for a Simple Database Service instance.</para>
+        /// <para>Applies for a public network access endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</para>
+        /// <para>Lightweight database instances do not provide public endpoints by default. If you need public network access to the database through the lightweight container service or Data Management (DMS), you must apply for a public endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -279,24 +298,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AllocatePublicConnectionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AllocatePublicConnectionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AllocatePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint for a Simple Database Service instance.</para>
+        /// <para>Applies for a public network access endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</para>
+        /// <para>Lightweight database instances do not provide public endpoints by default. If you need public network access to the database through the lightweight container service or Data Management (DMS), you must apply for a public endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -341,24 +353,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AllocatePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AllocatePublicConnectionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AllocatePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint for a Simple Database Service instance.</para>
+        /// <para>Applies for a public network access endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</para>
+        /// <para>Lightweight database instances do not provide public endpoints by default. If you need public network access to the database through the lightweight container service or Data Management (DMS), you must apply for a public endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -376,12 +381,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint for a Simple Database Service instance.</para>
+        /// <para>Applies for a public network access endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</para>
+        /// <para>Lightweight database instances do not provide public endpoints by default. If you need public network access to the database through the lightweight container service or Data Management (DMS), you must apply for a public endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -399,12 +404,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses a firewall template to apply firewall rules to multiple simple application servers at a time. This improves your efficiency of setting firewall rules.</para>
+        /// <para>Applies a firewall template to configure firewall rules for multiple Simple Application Server instances at a time to improve configuration efficiency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the port range, protocol, and source IP address of a firewall rule in a firewall template are the same as the port range, protocol, and source IP address of an existing rule, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</para>
+        /// <para>If the port, protocol, or IP address of a firewall rule in the firewall template duplicates an existing rule of the instance, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -453,24 +458,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ApplyFirewallTemplateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ApplyFirewallTemplateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ApplyFirewallTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses a firewall template to apply firewall rules to multiple simple application servers at a time. This improves your efficiency of setting firewall rules.</para>
+        /// <para>Applies a firewall template to configure firewall rules for multiple Simple Application Server instances at a time to improve configuration efficiency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the port range, protocol, and source IP address of a firewall rule in a firewall template are the same as the port range, protocol, and source IP address of an existing rule, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</para>
+        /// <para>If the port, protocol, or IP address of a firewall rule in the firewall template duplicates an existing rule of the instance, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -519,24 +517,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ApplyFirewallTemplateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ApplyFirewallTemplateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ApplyFirewallTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses a firewall template to apply firewall rules to multiple simple application servers at a time. This improves your efficiency of setting firewall rules.</para>
+        /// <para>Applies a firewall template to configure firewall rules for multiple Simple Application Server instances at a time to improve configuration efficiency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the port range, protocol, and source IP address of a firewall rule in a firewall template are the same as the port range, protocol, and source IP address of an existing rule, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</para>
+        /// <para>If the port, protocol, or IP address of a firewall rule in the firewall template duplicates an existing rule of the instance, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -554,12 +545,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uses a firewall template to apply firewall rules to multiple simple application servers at a time. This improves your efficiency of setting firewall rules.</para>
+        /// <para>Applies a firewall template to configure firewall rules for multiple Simple Application Server instances at a time to improve configuration efficiency.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the port range, protocol, and source IP address of a firewall rule in a firewall template are the same as the port range, protocol, and source IP address of an existing rule, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</para>
+        /// <para>If the port, protocol, or IP address of a firewall rule in the firewall template duplicates an existing rule of the instance, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -577,12 +568,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a key pair to simple application servers.</para>
+        /// <para>Attaches a key pair to a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can bind only one key pair to a simple application server in the Simple Application Server console. If a simple application server has a key pair bound, the new key pair overwrites the original key pair.</para>
+        /// <para>You can attach only one key pair to a simple application server in the console. If the selected simple application server is already attached to another key pair, the new key pair overwrites the existing one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -631,24 +622,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AttachKeyPairResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AttachKeyPairResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AttachKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a key pair to simple application servers.</para>
+        /// <para>Attaches a key pair to a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can bind only one key pair to a simple application server in the Simple Application Server console. If a simple application server has a key pair bound, the new key pair overwrites the original key pair.</para>
+        /// <para>You can attach only one key pair to a simple application server in the console. If the selected simple application server is already attached to another key pair, the new key pair overwrites the existing one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -697,24 +681,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AttachKeyPairResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AttachKeyPairResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AttachKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a key pair to simple application servers.</para>
+        /// <para>Attaches a key pair to a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can bind only one key pair to a simple application server in the Simple Application Server console. If a simple application server has a key pair bound, the new key pair overwrites the original key pair.</para>
+        /// <para>You can attach only one key pair to a simple application server in the console. If the selected simple application server is already attached to another key pair, the new key pair overwrites the existing one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -732,12 +709,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a key pair to simple application servers.</para>
+        /// <para>Attaches a key pair to a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can bind only one key pair to a simple application server in the Simple Application Server console. If a simple application server has a key pair bound, the new key pair overwrites the original key pair.</para>
+        /// <para>You can attach only one key pair to a simple application server in the console. If the selected simple application server is already attached to another key pair, the new key pair overwrites the existing one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -828,14 +805,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCommandResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCommandResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCommandResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -913,14 +883,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCommandResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCommandResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -961,23 +924,23 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image based on a snapshot of a simple application server.</para>
+        /// <para>Creates a custom image from a snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A custom image is created from a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Overview of custom images</a>.
-        /// You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</para>
+        /// <para>A custom image is an image that you create from a snapshot of a Simple Application Server. You can use a configured custom image to create more Simple Application Servers with the same configurations. You can also share the custom image to Elastic Computing Service to create ECS instances or replace operating systems by using the shared image. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Custom image overview</a>.
+        /// Before you create a custom image, you must create a system disk snapshot for the Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</para>
         /// <remarks>
-        /// <para> If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
+        /// <para>If you want to include data disk data in the custom image, create a data disk snapshot for the server first.
         /// Before you create a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The custom image and the corresponding simple application server must reside in the same region.</description></item>
-        /// <item><description>The maximum number of custom images that you can create is 3 times the number of simple application servers that you have, but cannot exceed 15.</description></item>
-        /// <item><description>You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot in addition to a system disk snapshot when you create the custom image.</description></item>
-        /// <item><description>If a simple application server is released due to expiration or refunds, the custom images that are created based on the server are also released.</description></item>
-        /// <item><description>Resetting the system or changing the image of a simple application server clears the disk data on the server. Back up the data as needed.</description></item>
+        /// <item><description>The custom image is created in the same region as the Simple Application Server.</description></item>
+        /// <item><description>The maximum number of custom images that you can create is three times the number of Simple Application Servers that you have created, up to a maximum of 15.</description></item>
+        /// <item><description>Only system disk snapshots can be directly used to create custom images. If you want to include data disk data in the custom image, you must manually select the corresponding data disk snapshot during the creation process.</description></item>
+        /// <item><description>If a Simple Application Server is released due to expiration or refund, the custom images created from the server are also released.</description></item>
+        /// <item><description>Resetting the system or replacing the image clears the disk data on the server. Back up your data as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1047,35 +1010,28 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCustomImageResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCustomImageResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCustomImageResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image based on a snapshot of a simple application server.</para>
+        /// <para>Creates a custom image from a snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A custom image is created from a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Overview of custom images</a>.
-        /// You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</para>
+        /// <para>A custom image is an image that you create from a snapshot of a Simple Application Server. You can use a configured custom image to create more Simple Application Servers with the same configurations. You can also share the custom image to Elastic Computing Service to create ECS instances or replace operating systems by using the shared image. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Custom image overview</a>.
+        /// Before you create a custom image, you must create a system disk snapshot for the Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</para>
         /// <remarks>
-        /// <para> If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
+        /// <para>If you want to include data disk data in the custom image, create a data disk snapshot for the server first.
         /// Before you create a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The custom image and the corresponding simple application server must reside in the same region.</description></item>
-        /// <item><description>The maximum number of custom images that you can create is 3 times the number of simple application servers that you have, but cannot exceed 15.</description></item>
-        /// <item><description>You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot in addition to a system disk snapshot when you create the custom image.</description></item>
-        /// <item><description>If a simple application server is released due to expiration or refunds, the custom images that are created based on the server are also released.</description></item>
-        /// <item><description>Resetting the system or changing the image of a simple application server clears the disk data on the server. Back up the data as needed.</description></item>
+        /// <item><description>The custom image is created in the same region as the Simple Application Server.</description></item>
+        /// <item><description>The maximum number of custom images that you can create is three times the number of Simple Application Servers that you have created, up to a maximum of 15.</description></item>
+        /// <item><description>Only system disk snapshots can be directly used to create custom images. If you want to include data disk data in the custom image, you must manually select the corresponding data disk snapshot during the creation process.</description></item>
+        /// <item><description>If a Simple Application Server is released due to expiration or refund, the custom images created from the server are also released.</description></item>
+        /// <item><description>Resetting the system or replacing the image clears the disk data on the server. Back up your data as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1145,35 +1101,28 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateCustomImageResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateCustomImageResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateCustomImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image based on a snapshot of a simple application server.</para>
+        /// <para>Creates a custom image from a snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A custom image is created from a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Overview of custom images</a>.
-        /// You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</para>
+        /// <para>A custom image is an image that you create from a snapshot of a Simple Application Server. You can use a configured custom image to create more Simple Application Servers with the same configurations. You can also share the custom image to Elastic Computing Service to create ECS instances or replace operating systems by using the shared image. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Custom image overview</a>.
+        /// Before you create a custom image, you must create a system disk snapshot for the Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</para>
         /// <remarks>
-        /// <para> If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
+        /// <para>If you want to include data disk data in the custom image, create a data disk snapshot for the server first.
         /// Before you create a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The custom image and the corresponding simple application server must reside in the same region.</description></item>
-        /// <item><description>The maximum number of custom images that you can create is 3 times the number of simple application servers that you have, but cannot exceed 15.</description></item>
-        /// <item><description>You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot in addition to a system disk snapshot when you create the custom image.</description></item>
-        /// <item><description>If a simple application server is released due to expiration or refunds, the custom images that are created based on the server are also released.</description></item>
-        /// <item><description>Resetting the system or changing the image of a simple application server clears the disk data on the server. Back up the data as needed.</description></item>
+        /// <item><description>The custom image is created in the same region as the Simple Application Server.</description></item>
+        /// <item><description>The maximum number of custom images that you can create is three times the number of Simple Application Servers that you have created, up to a maximum of 15.</description></item>
+        /// <item><description>Only system disk snapshots can be directly used to create custom images. If you want to include data disk data in the custom image, you must manually select the corresponding data disk snapshot during the creation process.</description></item>
+        /// <item><description>If a Simple Application Server is released due to expiration or refund, the custom images created from the server are also released.</description></item>
+        /// <item><description>Resetting the system or replacing the image clears the disk data on the server. Back up your data as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1192,23 +1141,23 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image based on a snapshot of a simple application server.</para>
+        /// <para>Creates a custom image from a snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A custom image is created from a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Overview of custom images</a>.
-        /// You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</para>
+        /// <para>A custom image is an image that you create from a snapshot of a Simple Application Server. You can use a configured custom image to create more Simple Application Servers with the same configurations. You can also share the custom image to Elastic Computing Service to create ECS instances or replace operating systems by using the shared image. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Custom image overview</a>.
+        /// Before you create a custom image, you must create a system disk snapshot for the Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</para>
         /// <remarks>
-        /// <para> If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
+        /// <para>If you want to include data disk data in the custom image, create a data disk snapshot for the server first.
         /// Before you create a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The custom image and the corresponding simple application server must reside in the same region.</description></item>
-        /// <item><description>The maximum number of custom images that you can create is 3 times the number of simple application servers that you have, but cannot exceed 15.</description></item>
-        /// <item><description>You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot in addition to a system disk snapshot when you create the custom image.</description></item>
-        /// <item><description>If a simple application server is released due to expiration or refunds, the custom images that are created based on the server are also released.</description></item>
-        /// <item><description>Resetting the system or changing the image of a simple application server clears the disk data on the server. Back up the data as needed.</description></item>
+        /// <item><description>The custom image is created in the same region as the Simple Application Server.</description></item>
+        /// <item><description>The maximum number of custom images that you can create is three times the number of Simple Application Servers that you have created, up to a maximum of 15.</description></item>
+        /// <item><description>Only system disk snapshots can be directly used to create custom images. If you want to include data disk data in the custom image, you must manually select the corresponding data disk snapshot during the creation process.</description></item>
+        /// <item><description>If a Simple Application Server is released due to expiration or refund, the custom images created from the server are also released.</description></item>
+        /// <item><description>Resetting the system or replacing the image clears the disk data on the server. Back up your data as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1227,12 +1176,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a firewall rule for a simple application server.</para>
+        /// <para>Creates a firewall rule for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
+        /// <para>Firewalls control network access to simple application servers and are used to divide security domains in the cloud. By default, the firewall of each simple application server allows traffic on port 22 (SSH), port 80 (HTTP), and port 443 (HTTPS). All other ports are disabled by default. You can add firewall rules to allow traffic on more ports.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1289,24 +1238,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFirewallRuleResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFirewallRuleResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFirewallRuleResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a firewall rule for a simple application server.</para>
+        /// <para>Creates a firewall rule for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
+        /// <para>Firewalls control network access to simple application servers and are used to divide security domains in the cloud. By default, the firewall of each simple application server allows traffic on port 22 (SSH), port 80 (HTTP), and port 443 (HTTPS). All other ports are disabled by default. You can add firewall rules to allow traffic on more ports.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1363,24 +1305,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFirewallRuleResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a firewall rule for a simple application server.</para>
+        /// <para>Creates a firewall rule for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
+        /// <para>Firewalls control network access to simple application servers and are used to divide security domains in the cloud. By default, the firewall of each simple application server allows traffic on port 22 (SSH), port 80 (HTTP), and port 443 (HTTPS). All other ports are disabled by default. You can add firewall rules to allow traffic on more ports.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1398,12 +1333,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a firewall rule for a simple application server.</para>
+        /// <para>Creates a firewall rule for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
+        /// <para>Firewalls control network access to simple application servers and are used to divide security domains in the cloud. By default, the firewall of each simple application server allows traffic on port 22 (SSH), port 80 (HTTP), and port 443 (HTTPS). All other ports are disabled by default. You can add firewall rules to allow traffic on more ports.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1421,12 +1356,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple firewall rules for a simple application server at a time.</para>
+        /// <para>Creates multiple firewall rules for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
+        /// <para>Firewalls control network access to simple application servers and are used to divide security domains in the cloud. By default, the firewall of each simple application server allows traffic on port 22 (SSH), port 80 (HTTP), and port 443 (HTTPS). All other ports are disabled by default. You can add firewall rules to allow traffic on more ports.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1485,24 +1420,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFirewallRulesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFirewallRulesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFirewallRulesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple firewall rules for a simple application server at a time.</para>
+        /// <para>Creates multiple firewall rules for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
+        /// <para>Firewalls control network access to simple application servers and are used to divide security domains in the cloud. By default, the firewall of each simple application server allows traffic on port 22 (SSH), port 80 (HTTP), and port 443 (HTTPS). All other ports are disabled by default. You can add firewall rules to allow traffic on more ports.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1561,24 +1489,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFirewallRulesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFirewallRulesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFirewallRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple firewall rules for a simple application server at a time.</para>
+        /// <para>Creates multiple firewall rules for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
+        /// <para>Firewalls control network access to simple application servers and are used to divide security domains in the cloud. By default, the firewall of each simple application server allows traffic on port 22 (SSH), port 80 (HTTP), and port 443 (HTTPS). All other ports are disabled by default. You can add firewall rules to allow traffic on more ports.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1596,12 +1517,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple firewall rules for a simple application server at a time.</para>
+        /// <para>Creates multiple firewall rules for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</para>
+        /// <para>Firewalls control network access to simple application servers and are used to divide security domains in the cloud. By default, the firewall of each simple application server allows traffic on port 22 (SSH), port 80 (HTTP), and port 443 (HTTPS). All other ports are disabled by default. You can add firewall rules to allow traffic on more ports.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1624,7 +1545,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Simple Application Server supports the firewall template feature that provides multiple firewall rules. You can use a template to add a group of firewall rules to one or more simple application servers at a time. This improves the efficiency of setting firewall rules.</para>
+        /// <para>A firewall template allows you to group multiple firewall rules. You can use a template to add a set of firewall rules to one or more instances simultaneously, improving the efficiency of configuring firewall rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1673,14 +1594,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFirewallTemplateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFirewallTemplateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFirewallTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1690,7 +1604,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Simple Application Server supports the firewall template feature that provides multiple firewall rules. You can use a template to add a group of firewall rules to one or more simple application servers at a time. This improves the efficiency of setting firewall rules.</para>
+        /// <para>A firewall template allows you to group multiple firewall rules. You can use a template to add a set of firewall rules to one or more instances simultaneously, improving the efficiency of configuring firewall rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1739,14 +1653,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFirewallTemplateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFirewallTemplateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFirewallTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1756,7 +1663,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Simple Application Server supports the firewall template feature that provides multiple firewall rules. You can use a template to add a group of firewall rules to one or more simple application servers at a time. This improves the efficiency of setting firewall rules.</para>
+        /// <para>A firewall template allows you to group multiple firewall rules. You can use a template to add a set of firewall rules to one or more instances simultaneously, improving the efficiency of configuring firewall rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1779,7 +1686,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Simple Application Server supports the firewall template feature that provides multiple firewall rules. You can use a template to add a group of firewall rules to one or more simple application servers at a time. This improves the efficiency of setting firewall rules.</para>
+        /// <para>A firewall template allows you to group multiple firewall rules. You can use a template to add a set of firewall rules to one or more instances simultaneously, improving the efficiency of configuring firewall rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1797,12 +1704,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds firewall rules to a firewall template based on your business requirements.</para>
+        /// <para>Adds firewall rules to a firewall template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adding firewall rules to a firewall template does not affect the firewall rules that have been applied to simple application servers..</para>
+        /// <para>Adding rules to a firewall template does not affect the rules of instances to which the template is applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1847,24 +1754,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFirewallTemplateRulesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFirewallTemplateRulesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFirewallTemplateRulesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds firewall rules to a firewall template based on your business requirements.</para>
+        /// <para>Adds firewall rules to a firewall template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adding firewall rules to a firewall template does not affect the firewall rules that have been applied to simple application servers..</para>
+        /// <para>Adding rules to a firewall template does not affect the rules of instances to which the template is applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1909,24 +1809,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateFirewallTemplateRulesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateFirewallTemplateRulesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateFirewallTemplateRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds firewall rules to a firewall template based on your business requirements.</para>
+        /// <para>Adds firewall rules to a firewall template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adding firewall rules to a firewall template does not affect the firewall rules that have been applied to simple application servers..</para>
+        /// <para>Adding rules to a firewall template does not affect the rules of instances to which the template is applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1944,12 +1837,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds firewall rules to a firewall template based on your business requirements.</para>
+        /// <para>Adds firewall rules to a firewall template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adding firewall rules to a firewall template does not affect the firewall rules that have been applied to simple application servers..</para>
+        /// <para>Adding rules to a firewall template does not affect the rules of instances to which the template is applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2016,14 +1909,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateInstanceKeyPairResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateInstanceKeyPairResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateInstanceKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2077,14 +1963,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateInstanceKeyPairResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateInstanceKeyPairResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateInstanceKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2125,18 +2004,26 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates subscription simple application servers.</para>
+        /// <para>Creates one or more subscription Simple Application Server instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, we recommend that you understand the billing rules of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
-        /// <remarks>
-        /// <para> If you have coupons in your Alibaba Cloud account, the coupons are preferentially used to pay for the simple application servers.</para>
-        /// </remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 50 simple application servers in a region for an Alibaba Cloud account.</description></item>
-        /// <item><description>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</description></item>
+        /// <item><description>Before you call this operation, understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.<remarks>
+        /// <para>If your Alibaba Cloud account has coupons, the coupons are used by default to pay for the Simple Application Server instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>For each Alibaba Cloud account, the total number of Simple Application Server, Simple Application Server load balancing, Simple Container Service, and Simple Database Service instances that you can purchase in a single region is limited to 50.</description></item>
+        /// <item><description>When you call this operation to create instances, make sure that your Alibaba Cloud account balance is sufficient. Otherwise, the creation fails.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Before you call this operation, understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.<remarks>
+        /// <para>If your Alibaba Cloud account has coupons, the coupons are used by default to pay for the Simple Application Server instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>For each Alibaba Cloud account, the maximum number of Simple Application Server instances that you can purchase in a single region is 50.</description></item>
+        /// <item><description>When you call this operation to create instances, make sure that the default payment method of your account can cover the required fees. Otherwise, the creation fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2210,30 +2097,31 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates subscription simple application servers.</para>
+        /// <para>Creates one or more subscription Simple Application Server instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, we recommend that you understand the billing rules of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
-        /// <remarks>
-        /// <para> If you have coupons in your Alibaba Cloud account, the coupons are preferentially used to pay for the simple application servers.</para>
-        /// </remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 50 simple application servers in a region for an Alibaba Cloud account.</description></item>
-        /// <item><description>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</description></item>
+        /// <item><description>Before you call this operation, understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.<remarks>
+        /// <para>If your Alibaba Cloud account has coupons, the coupons are used by default to pay for the Simple Application Server instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>For each Alibaba Cloud account, the total number of Simple Application Server, Simple Application Server load balancing, Simple Container Service, and Simple Database Service instances that you can purchase in a single region is limited to 50.</description></item>
+        /// <item><description>When you call this operation to create instances, make sure that your Alibaba Cloud account balance is sufficient. Otherwise, the creation fails.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Before you call this operation, understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.<remarks>
+        /// <para>If your Alibaba Cloud account has coupons, the coupons are used by default to pay for the Simple Application Server instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>For each Alibaba Cloud account, the maximum number of Simple Application Server instances that you can purchase in a single region is 50.</description></item>
+        /// <item><description>When you call this operation to create instances, make sure that the default payment method of your account can cover the required fees. Otherwise, the creation fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2307,30 +2195,31 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates subscription simple application servers.</para>
+        /// <para>Creates one or more subscription Simple Application Server instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, we recommend that you understand the billing rules of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
-        /// <remarks>
-        /// <para> If you have coupons in your Alibaba Cloud account, the coupons are preferentially used to pay for the simple application servers.</para>
-        /// </remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 50 simple application servers in a region for an Alibaba Cloud account.</description></item>
-        /// <item><description>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</description></item>
+        /// <item><description>Before you call this operation, understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.<remarks>
+        /// <para>If your Alibaba Cloud account has coupons, the coupons are used by default to pay for the Simple Application Server instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>For each Alibaba Cloud account, the total number of Simple Application Server, Simple Application Server load balancing, Simple Container Service, and Simple Database Service instances that you can purchase in a single region is limited to 50.</description></item>
+        /// <item><description>When you call this operation to create instances, make sure that your Alibaba Cloud account balance is sufficient. Otherwise, the creation fails.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Before you call this operation, understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.<remarks>
+        /// <para>If your Alibaba Cloud account has coupons, the coupons are used by default to pay for the Simple Application Server instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>For each Alibaba Cloud account, the maximum number of Simple Application Server instances that you can purchase in a single region is 50.</description></item>
+        /// <item><description>When you call this operation to create instances, make sure that the default payment method of your account can cover the required fees. Otherwise, the creation fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2349,18 +2238,26 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates subscription simple application servers.</para>
+        /// <para>Creates one or more subscription Simple Application Server instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, we recommend that you understand the billing rules of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
-        /// <remarks>
-        /// <para> If you have coupons in your Alibaba Cloud account, the coupons are preferentially used to pay for the simple application servers.</para>
-        /// </remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 50 simple application servers in a region for an Alibaba Cloud account.</description></item>
-        /// <item><description>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</description></item>
+        /// <item><description>Before you call this operation, understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.<remarks>
+        /// <para>If your Alibaba Cloud account has coupons, the coupons are used by default to pay for the Simple Application Server instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>For each Alibaba Cloud account, the total number of Simple Application Server, Simple Application Server load balancing, Simple Container Service, and Simple Database Service instances that you can purchase in a single region is limited to 50.</description></item>
+        /// <item><description>When you call this operation to create instances, make sure that your Alibaba Cloud account balance is sufficient. Otherwise, the creation fails.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Before you call this operation, understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.<remarks>
+        /// <para>If your Alibaba Cloud account has coupons, the coupons are used by default to pay for the Simple Application Server instances.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>For each Alibaba Cloud account, the maximum number of Simple Application Server instances that you can purchase in a single region is 50.</description></item>
+        /// <item><description>When you call this operation to create instances, make sure that the default payment method of your account can cover the required fees. Otherwise, the creation fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2379,16 +2276,16 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a key pair.</para>
+        /// <para>Creates a key pair for a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Alibaba Cloud SSH key pairs offer a secure and efficient logon authentication mechanism, facilitating both verification and encrypted communication within the SSH protocol framework. An SSH key pair is essentially constituted by a public key and a private key. Tailored for Linux-based simple application servers, this security measure enhances security and convenience, effectively addressing your heightened security requirements.</para>
+        /// <para>Alibaba Cloud SSH key pairs provide a secure and convenient logon authentication method for identity verification and encrypted communication over the SSH protocol. An SSH key pair consists of a public key and a private key. SSH key pairs are supported only on Linux instances and help you meet business requirements for higher security and convenience.</para>
         /// <list type="bullet">
-        /// <item><description>The key pair logon method is only valid for Linux-based simple application servers.</description></item>
-        /// <item><description>A maximum of 10 key pairs can be created in a region for an Alibaba Cloud account.</description></item>
-        /// <item><description>Only RSA 2048-bit key pairs can be created in the Simple Application Server console.</description></item>
+        /// <item><description>You can configure key pair-based logon only for simple application servers that run Linux.</description></item>
+        /// <item><description>You can create up to 10 key pairs in a region within an Alibaba Cloud account.</description></item>
+        /// <item><description>The console supports only the creation of RSA 2048-bit key pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2434,28 +2331,21 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateKeyPairResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateKeyPairResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a key pair.</para>
+        /// <para>Creates a key pair for a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Alibaba Cloud SSH key pairs offer a secure and efficient logon authentication mechanism, facilitating both verification and encrypted communication within the SSH protocol framework. An SSH key pair is essentially constituted by a public key and a private key. Tailored for Linux-based simple application servers, this security measure enhances security and convenience, effectively addressing your heightened security requirements.</para>
+        /// <para>Alibaba Cloud SSH key pairs provide a secure and convenient logon authentication method for identity verification and encrypted communication over the SSH protocol. An SSH key pair consists of a public key and a private key. SSH key pairs are supported only on Linux instances and help you meet business requirements for higher security and convenience.</para>
         /// <list type="bullet">
-        /// <item><description>The key pair logon method is only valid for Linux-based simple application servers.</description></item>
-        /// <item><description>A maximum of 10 key pairs can be created in a region for an Alibaba Cloud account.</description></item>
-        /// <item><description>Only RSA 2048-bit key pairs can be created in the Simple Application Server console.</description></item>
+        /// <item><description>You can configure key pair-based logon only for simple application servers that run Linux.</description></item>
+        /// <item><description>You can create up to 10 key pairs in a region within an Alibaba Cloud account.</description></item>
+        /// <item><description>The console supports only the creation of RSA 2048-bit key pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2501,28 +2391,21 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateKeyPairResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateKeyPairResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a key pair.</para>
+        /// <para>Creates a key pair for a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Alibaba Cloud SSH key pairs offer a secure and efficient logon authentication mechanism, facilitating both verification and encrypted communication within the SSH protocol framework. An SSH key pair is essentially constituted by a public key and a private key. Tailored for Linux-based simple application servers, this security measure enhances security and convenience, effectively addressing your heightened security requirements.</para>
+        /// <para>Alibaba Cloud SSH key pairs provide a secure and convenient logon authentication method for identity verification and encrypted communication over the SSH protocol. An SSH key pair consists of a public key and a private key. SSH key pairs are supported only on Linux instances and help you meet business requirements for higher security and convenience.</para>
         /// <list type="bullet">
-        /// <item><description>The key pair logon method is only valid for Linux-based simple application servers.</description></item>
-        /// <item><description>A maximum of 10 key pairs can be created in a region for an Alibaba Cloud account.</description></item>
-        /// <item><description>Only RSA 2048-bit key pairs can be created in the Simple Application Server console.</description></item>
+        /// <item><description>You can configure key pair-based logon only for simple application servers that run Linux.</description></item>
+        /// <item><description>You can create up to 10 key pairs in a region within an Alibaba Cloud account.</description></item>
+        /// <item><description>The console supports only the creation of RSA 2048-bit key pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2541,16 +2424,16 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a key pair.</para>
+        /// <para>Creates a key pair for a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Alibaba Cloud SSH key pairs offer a secure and efficient logon authentication mechanism, facilitating both verification and encrypted communication within the SSH protocol framework. An SSH key pair is essentially constituted by a public key and a private key. Tailored for Linux-based simple application servers, this security measure enhances security and convenience, effectively addressing your heightened security requirements.</para>
+        /// <para>Alibaba Cloud SSH key pairs provide a secure and convenient logon authentication method for identity verification and encrypted communication over the SSH protocol. An SSH key pair consists of a public key and a private key. SSH key pairs are supported only on Linux instances and help you meet business requirements for higher security and convenience.</para>
         /// <list type="bullet">
-        /// <item><description>The key pair logon method is only valid for Linux-based simple application servers.</description></item>
-        /// <item><description>A maximum of 10 key pairs can be created in a region for an Alibaba Cloud account.</description></item>
-        /// <item><description>Only RSA 2048-bit key pairs can be created in the Simple Application Server console.</description></item>
+        /// <item><description>You can configure key pair-based logon only for simple application servers that run Linux.</description></item>
+        /// <item><description>You can create up to 10 key pairs in a region within an Alibaba Cloud account.</description></item>
+        /// <item><description>The console supports only the creation of RSA 2048-bit key pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2569,21 +2452,221 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot for a disk.</para>
+        /// <para>Queries the pricing information of Simple Application Server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after misoperations on servers, recover data after network attacks, and create custom images.</para>
-        /// <remarks>
-        /// <para> You are not charged for creating snapshots in Simple Application Server.</para>
-        /// </remarks>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <para>Alibaba Cloud SSH key pairs provide a secure and convenient logon authentication method for identity verification and encrypted communication over the SSH protocol. An SSH key pair consists of a public key and a private key. SSH key pairs are supported only on Linux instances and meet your business requirements for higher security and convenience.</para>
         /// <list type="bullet">
-        /// <item><description>You can create up to three snapshots for each simple application server.</description></item>
-        /// <item><description>The maximum number of snapshots that you create per Alibaba Cloud account is triple of the number of simple application servers that are created. The value cannot be greater than 15.</description></item>
-        /// <item><description>If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.</description></item>
-        /// <item><description>If you reset a simple application server after you create a snapshot for the server, the snapshot is retained but cannot be used to restore the disks of the server.</description></item>
+        /// <item><description>Only Simple Application Server instances that run Linux support SSH key pair logon.</description></item>
+        /// <item><description>You can create up to 10 SSH key pairs in a region within an Alibaba Cloud account.</description></item>
+        /// <item><description>The console supports only the creation of RSA 2048-bit key pairs.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrderResponse
+        /// </returns>
+        public CreateOrderResponse CreateOrderWithOptions(CreateOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
+            {
+                query["BusinessInfo"] = request.BusinessInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Commodity))
+            {
+                query["Commodity"] = request.Commodity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
+            {
+                query["CouponNo"] = request.CouponNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromApp))
+            {
+                query["FromApp"] = request.FromApp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOrder",
+                Version = "2020-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pricing information of Simple Application Server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Alibaba Cloud SSH key pairs provide a secure and convenient logon authentication method for identity verification and encrypted communication over the SSH protocol. An SSH key pair consists of a public key and a private key. SSH key pairs are supported only on Linux instances and meet your business requirements for higher security and convenience.</para>
+        /// <list type="bullet">
+        /// <item><description>Only Simple Application Server instances that run Linux support SSH key pair logon.</description></item>
+        /// <item><description>You can create up to 10 SSH key pairs in a region within an Alibaba Cloud account.</description></item>
+        /// <item><description>The console supports only the creation of RSA 2048-bit key pairs.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrderResponse
+        /// </returns>
+        public async Task<CreateOrderResponse> CreateOrderWithOptionsAsync(CreateOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
+            {
+                query["BusinessInfo"] = request.BusinessInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Commodity))
+            {
+                query["Commodity"] = request.Commodity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponNo))
+            {
+                query["CouponNo"] = request.CouponNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromApp))
+            {
+                query["FromApp"] = request.FromApp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOrder",
+                Version = "2020-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pricing information of Simple Application Server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Alibaba Cloud SSH key pairs provide a secure and convenient logon authentication method for identity verification and encrypted communication over the SSH protocol. An SSH key pair consists of a public key and a private key. SSH key pairs are supported only on Linux instances and meet your business requirements for higher security and convenience.</para>
+        /// <list type="bullet">
+        /// <item><description>Only Simple Application Server instances that run Linux support SSH key pair logon.</description></item>
+        /// <item><description>You can create up to 10 SSH key pairs in a region within an Alibaba Cloud account.</description></item>
+        /// <item><description>The console supports only the creation of RSA 2048-bit key pairs.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrderResponse
+        /// </returns>
+        public CreateOrderResponse CreateOrder(CreateOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateOrderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pricing information of Simple Application Server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Alibaba Cloud SSH key pairs provide a secure and convenient logon authentication method for identity verification and encrypted communication over the SSH protocol. An SSH key pair consists of a public key and a private key. SSH key pairs are supported only on Linux instances and meet your business requirements for higher security and convenience.</para>
+        /// <list type="bullet">
+        /// <item><description>Only Simple Application Server instances that run Linux support SSH key pair logon.</description></item>
+        /// <item><description>You can create up to 10 SSH key pairs in a region within an Alibaba Cloud account.</description></item>
+        /// <item><description>The console supports only the creation of RSA 2048-bit key pairs.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOrderResponse
+        /// </returns>
+        public async Task<CreateOrderResponse> CreateOrderAsync(CreateOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateOrderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a snapshot for a specified disk.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A snapshot is a backup file of the disk data state at a specific point in time. Snapshots are commonly used for daily data backup, recovery from accidental data operations on servers, recovery from network attacks, and creation of custom images.</para>
+        /// <remarks>
+        /// <para>Creating snapshots for Simple Application Server is free of charge.</para>
+        /// </remarks>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>You can create up to three snapshots for a single Simple Application Server instance.</description></item>
+        /// <item><description>The maximum number of snapshots that an Alibaba Cloud account can create is three times the number of Simple Application Server instances created, up to a maximum of 15.</description></item>
+        /// <item><description>If a server is released upon expiration, the snapshots associated with the server are deleted.</description></item>
+        /// <item><description>Snapshots created before a system reset or image replacement are retained after the operation, but they cannot be used for rollback.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2641,33 +2724,26 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateSnapshotResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateSnapshotResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateSnapshotResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot for a disk.</para>
+        /// <para>Creates a snapshot for a specified disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after misoperations on servers, recover data after network attacks, and create custom images.</para>
+        /// <para>A snapshot is a backup file of the disk data state at a specific point in time. Snapshots are commonly used for daily data backup, recovery from accidental data operations on servers, recovery from network attacks, and creation of custom images.</para>
         /// <remarks>
-        /// <para> You are not charged for creating snapshots in Simple Application Server.</para>
+        /// <para>Creating snapshots for Simple Application Server is free of charge.</para>
         /// </remarks>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>You can create up to three snapshots for each simple application server.</description></item>
-        /// <item><description>The maximum number of snapshots that you create per Alibaba Cloud account is triple of the number of simple application servers that are created. The value cannot be greater than 15.</description></item>
-        /// <item><description>If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.</description></item>
-        /// <item><description>If you reset a simple application server after you create a snapshot for the server, the snapshot is retained but cannot be used to restore the disks of the server.</description></item>
+        /// <item><description>You can create up to three snapshots for a single Simple Application Server instance.</description></item>
+        /// <item><description>The maximum number of snapshots that an Alibaba Cloud account can create is three times the number of Simple Application Server instances created, up to a maximum of 15.</description></item>
+        /// <item><description>If a server is released upon expiration, the snapshots associated with the server are deleted.</description></item>
+        /// <item><description>Snapshots created before a system reset or image replacement are retained after the operation, but they cannot be used for rollback.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2725,33 +2801,26 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateSnapshotResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateSnapshotResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateSnapshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot for a disk.</para>
+        /// <para>Creates a snapshot for a specified disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after misoperations on servers, recover data after network attacks, and create custom images.</para>
+        /// <para>A snapshot is a backup file of the disk data state at a specific point in time. Snapshots are commonly used for daily data backup, recovery from accidental data operations on servers, recovery from network attacks, and creation of custom images.</para>
         /// <remarks>
-        /// <para> You are not charged for creating snapshots in Simple Application Server.</para>
+        /// <para>Creating snapshots for Simple Application Server is free of charge.</para>
         /// </remarks>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>You can create up to three snapshots for each simple application server.</description></item>
-        /// <item><description>The maximum number of snapshots that you create per Alibaba Cloud account is triple of the number of simple application servers that are created. The value cannot be greater than 15.</description></item>
-        /// <item><description>If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.</description></item>
-        /// <item><description>If you reset a simple application server after you create a snapshot for the server, the snapshot is retained but cannot be used to restore the disks of the server.</description></item>
+        /// <item><description>You can create up to three snapshots for a single Simple Application Server instance.</description></item>
+        /// <item><description>The maximum number of snapshots that an Alibaba Cloud account can create is three times the number of Simple Application Server instances created, up to a maximum of 15.</description></item>
+        /// <item><description>If a server is released upon expiration, the snapshots associated with the server are deleted.</description></item>
+        /// <item><description>Snapshots created before a system reset or image replacement are retained after the operation, but they cannot be used for rollback.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2770,21 +2839,21 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot for a disk.</para>
+        /// <para>Creates a snapshot for a specified disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after misoperations on servers, recover data after network attacks, and create custom images.</para>
+        /// <para>A snapshot is a backup file of the disk data state at a specific point in time. Snapshots are commonly used for daily data backup, recovery from accidental data operations on servers, recovery from network attacks, and creation of custom images.</para>
         /// <remarks>
-        /// <para> You are not charged for creating snapshots in Simple Application Server.</para>
+        /// <para>Creating snapshots for Simple Application Server is free of charge.</para>
         /// </remarks>
-        /// <h3><a href="#"></a>Precautions</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>You can create up to three snapshots for each simple application server.</description></item>
-        /// <item><description>The maximum number of snapshots that you create per Alibaba Cloud account is triple of the number of simple application servers that are created. The value cannot be greater than 15.</description></item>
-        /// <item><description>If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.</description></item>
-        /// <item><description>If you reset a simple application server after you create a snapshot for the server, the snapshot is retained but cannot be used to restore the disks of the server.</description></item>
+        /// <item><description>You can create up to three snapshots for a single Simple Application Server instance.</description></item>
+        /// <item><description>The maximum number of snapshots that an Alibaba Cloud account can create is three times the number of Simple Application Server instances created, up to a maximum of 15.</description></item>
+        /// <item><description>If a server is released upon expiration, the snapshots associated with the server are deleted.</description></item>
+        /// <item><description>Snapshots created before a system reset or image replacement are retained after the operation, but they cannot be used for rollback.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2803,12 +2872,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Command Assistant command.</para>
+        /// <para>Deletes a command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot delete commands that are being run.</para>
+        /// <para>You cannot delete a command that is being executed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2849,24 +2918,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCommandResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCommandResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCommandResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Command Assistant command.</para>
+        /// <para>Deletes a command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot delete commands that are being run.</para>
+        /// <para>You cannot delete a command that is being executed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2907,24 +2969,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCommandResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCommandResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Command Assistant command.</para>
+        /// <para>Deletes a command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot delete commands that are being run.</para>
+        /// <para>You cannot delete a command that is being executed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2942,12 +2997,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Command Assistant command.</para>
+        /// <para>Deletes a command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot delete commands that are being run.</para>
+        /// <para>You cannot delete a command that is being executed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2965,14 +3020,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom image.</para>
+        /// <para>Deletes a specified custom image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
+        /// <para>If you no longer need a custom image, you can delete it. After a custom image is deleted, simple application servers created from the image cannot use it to reset their systems.</para>
         /// <remarks>
-        /// <para> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
+        /// <para>If the custom image is a shared image, you must unshare the shared image before you delete it. After you unshare the shared image, you can no longer query the custom image in the Elastic Compute Service (ECS) console or by calling ECS API operations. If you still need to use the image in ECS, copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy an image</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3018,26 +3073,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomImageResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomImageResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomImageResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom image.</para>
+        /// <para>Deletes a specified custom image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
+        /// <para>If you no longer need a custom image, you can delete it. After a custom image is deleted, simple application servers created from the image cannot use it to reset their systems.</para>
         /// <remarks>
-        /// <para> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
+        /// <para>If the custom image is a shared image, you must unshare the shared image before you delete it. After you unshare the shared image, you can no longer query the custom image in the Elastic Compute Service (ECS) console or by calling ECS API operations. If you still need to use the image in ECS, copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy an image</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3083,26 +3131,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomImageResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomImageResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom image.</para>
+        /// <para>Deletes a specified custom image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
+        /// <para>If you no longer need a custom image, you can delete it. After a custom image is deleted, simple application servers created from the image cannot use it to reset their systems.</para>
         /// <remarks>
-        /// <para> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
+        /// <para>If the custom image is a shared image, you must unshare the shared image before you delete it. After you unshare the shared image, you can no longer query the custom image in the Elastic Compute Service (ECS) console or by calling ECS API operations. If you still need to use the image in ECS, copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy an image</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3121,14 +3162,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom image.</para>
+        /// <para>Deletes a specified custom image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
+        /// <para>If you no longer need a custom image, you can delete it. After a custom image is deleted, simple application servers created from the image cannot use it to reset their systems.</para>
         /// <remarks>
-        /// <para> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</para>
+        /// <para>If the custom image is a shared image, you must unshare the shared image before you delete it. After you unshare the shared image, you can no longer query the custom image in the Elastic Compute Service (ECS) console or by calling ECS API operations. If you still need to use the image in ECS, copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy an image</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3147,12 +3188,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes custom images. If you no longer require a custom image, you can call this operation to delete the custom image. You can also call this operation to delete multiple custom images at the same time. After a custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
+        /// <para>Deletes custom images in batches. After a custom image is deleted, simple application servers created from the image cannot use it to reset the system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a custom image</a>.</para>
+        /// <para>If a custom image is being shared, you must unshare the shared image before you delete the custom image. After the shared image is unshared, you cannot query the custom image in the Elastic Computing Service console or by calling Elastic Computing Service API operations. If you still need to use the image on an Elastic Computing Service server, we recommend that you perform image replication before you delete the custom image. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Image replication</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3197,24 +3238,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomImagesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomImagesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomImagesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes custom images. If you no longer require a custom image, you can call this operation to delete the custom image. You can also call this operation to delete multiple custom images at the same time. After a custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
+        /// <para>Deletes custom images in batches. After a custom image is deleted, simple application servers created from the image cannot use it to reset the system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a custom image</a>.</para>
+        /// <para>If a custom image is being shared, you must unshare the shared image before you delete the custom image. After the shared image is unshared, you cannot query the custom image in the Elastic Computing Service console or by calling Elastic Computing Service API operations. If you still need to use the image on an Elastic Computing Service server, we recommend that you perform image replication before you delete the custom image. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Image replication</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3259,24 +3293,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomImagesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomImagesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomImagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes custom images. If you no longer require a custom image, you can call this operation to delete the custom image. You can also call this operation to delete multiple custom images at the same time. After a custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
+        /// <para>Deletes custom images in batches. After a custom image is deleted, simple application servers created from the image cannot use it to reset the system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a custom image</a>.</para>
+        /// <para>If a custom image is being shared, you must unshare the shared image before you delete the custom image. After the shared image is unshared, you cannot query the custom image in the Elastic Computing Service console or by calling Elastic Computing Service API operations. If you still need to use the image on an Elastic Computing Service server, we recommend that you perform image replication before you delete the custom image. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Image replication</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3294,12 +3321,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes custom images. If you no longer require a custom image, you can call this operation to delete the custom image. You can also call this operation to delete multiple custom images at the same time. After a custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</para>
+        /// <para>Deletes custom images in batches. After a custom image is deleted, simple application servers created from the image cannot use it to reset the system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a custom image</a>.</para>
+        /// <para>If a custom image is being shared, you must unshare the shared image before you delete the custom image. After the shared image is unshared, you cannot query the custom image in the Elastic Computing Service console or by calling Elastic Computing Service API operations. If you still need to use the image on an Elastic Computing Service server, we recommend that you perform image replication before you delete the custom image. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Image replication</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3317,12 +3344,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a firewall rule of a simple application server.</para>
+        /// <para>Deletes a firewall rule of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</para>
+        /// <para>After you delete a firewall rule of a specified simple application server, services may become inaccessible. Make sure that the simple application server instance no longer requires the firewall rule before you delete it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3371,24 +3398,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFirewallRuleResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFirewallRuleResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFirewallRuleResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a firewall rule of a simple application server.</para>
+        /// <para>Deletes a firewall rule of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</para>
+        /// <para>After you delete a firewall rule of a specified simple application server, services may become inaccessible. Make sure that the simple application server instance no longer requires the firewall rule before you delete it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3437,24 +3457,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFirewallRuleResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a firewall rule of a simple application server.</para>
+        /// <para>Deletes a firewall rule of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</para>
+        /// <para>After you delete a firewall rule of a specified simple application server, services may become inaccessible. Make sure that the simple application server instance no longer requires the firewall rule before you delete it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3472,12 +3485,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a firewall rule of a simple application server.</para>
+        /// <para>Deletes a firewall rule of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</para>
+        /// <para>After you delete a firewall rule of a specified simple application server, services may become inaccessible. Make sure that the simple application server instance no longer requires the firewall rule before you delete it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3555,14 +3568,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFirewallRulesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFirewallRulesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFirewallRulesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3627,14 +3633,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFirewallRulesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFirewallRulesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFirewallRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3739,14 +3738,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFirewallTemplateRulesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFirewallTemplateRulesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFirewallTemplateRulesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3805,14 +3797,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFirewallTemplateRulesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFirewallTemplateRulesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFirewallTemplateRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3913,14 +3898,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFirewallTemplatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFirewallTemplatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFirewallTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3975,14 +3953,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteFirewallTemplatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteFirewallTemplatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteFirewallTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4078,14 +4049,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteInstanceKeyPairResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteInstanceKeyPairResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteInstanceKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4135,14 +4099,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteInstanceKeyPairResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteInstanceKeyPairResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteInstanceKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4233,14 +4190,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteKeyPairsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteKeyPairsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteKeyPairsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4295,14 +4245,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteKeyPairsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteKeyPairsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteKeyPairsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4360,7 +4303,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a snapshot if you no longer need it.</para>
         /// <remarks>
-        /// <para> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
+        /// <para>If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4406,14 +4349,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSnapshotResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSnapshotResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSnapshotResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4425,7 +4361,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a snapshot if you no longer need it.</para>
         /// <remarks>
-        /// <para> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
+        /// <para>If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4471,14 +4407,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSnapshotResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSnapshotResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSnapshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4490,7 +4419,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a snapshot if you no longer need it.</para>
         /// <remarks>
-        /// <para> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
+        /// <para>If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4516,7 +4445,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>You can delete a snapshot if you no longer need it.</para>
         /// <remarks>
-        /// <para> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
+        /// <para>If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4580,14 +4509,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSnapshotsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSnapshotsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSnapshotsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4637,14 +4559,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteSnapshotsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4685,7 +4600,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Command Assistant information of simple application servers.</para>
+        /// <para>Queries the Cloud Assistant information of one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4740,19 +4655,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCloudAssistantAttributesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCloudAssistantAttributesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCloudAssistantAttributesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Command Assistant information of simple application servers.</para>
+        /// <para>Queries the Cloud Assistant information of one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4807,19 +4715,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCloudAssistantAttributesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCloudAssistantAttributesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCloudAssistantAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Command Assistant information of simple application servers.</para>
+        /// <para>Queries the Cloud Assistant information of one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4837,7 +4738,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Command Assistant information of simple application servers.</para>
+        /// <para>Queries the Cloud Assistant information of one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4915,14 +4816,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCloudAssistantStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCloudAssistantStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCloudAssistantStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4987,14 +4881,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCloudAssistantStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCloudAssistantStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCloudAssistantStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5090,14 +4977,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCloudMonitorAgentStatusesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCloudMonitorAgentStatusesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCloudMonitorAgentStatusesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5147,14 +5027,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCloudMonitorAgentStatusesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCloudMonitorAgentStatusesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCloudMonitorAgentStatusesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5195,7 +5068,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the executions and execution status of a Cloud Assistant command.</para>
+        /// <para>Queries the list and status of commands run by Cloud Assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5264,19 +5137,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCommandInvocationsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCommandInvocationsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCommandInvocationsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the executions and execution status of a Cloud Assistant command.</para>
+        /// <para>Queries the list and status of commands run by Cloud Assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5345,19 +5211,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCommandInvocationsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCommandInvocationsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCommandInvocationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the executions and execution status of a Cloud Assistant command.</para>
+        /// <para>Queries the list and status of commands run by Cloud Assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5375,7 +5234,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the executions and execution status of a Cloud Assistant command.</para>
+        /// <para>Queries the list and status of commands run by Cloud Assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5393,7 +5252,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the commands that you created or the common commands that Alibaba Cloud provides.</para>
+        /// <para>Queries commands that you manually created or public commands provided by Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5462,19 +5321,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCommandsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCommandsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCommandsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the commands that you created or the common commands that Alibaba Cloud provides.</para>
+        /// <para>Queries commands that you manually created or public commands provided by Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5543,19 +5395,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeCommandsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeCommandsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeCommandsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the commands that you created or the common commands that Alibaba Cloud provides.</para>
+        /// <para>Queries commands that you manually created or public commands provided by Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5573,7 +5418,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the commands that you created or the common commands that Alibaba Cloud provides.</para>
+        /// <para>Queries commands that you manually created or public commands provided by Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5591,12 +5436,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries error logs of databases in a Simple Database Service instance.</para>
+        /// <para>Queries the error logs of a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</para>
+        /// <para>Use this operation to query the error logs of a lightweight database instance to identify and troubleshoot issues.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5653,24 +5498,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseErrorLogsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseErrorLogsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseErrorLogsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries error logs of databases in a Simple Database Service instance.</para>
+        /// <para>Queries the error logs of a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</para>
+        /// <para>Use this operation to query the error logs of a lightweight database instance to identify and troubleshoot issues.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5727,24 +5565,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseErrorLogsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseErrorLogsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseErrorLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries error logs of databases in a Simple Database Service instance.</para>
+        /// <para>Queries the error logs of a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</para>
+        /// <para>Use this operation to query the error logs of a lightweight database instance to identify and troubleshoot issues.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5762,12 +5593,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries error logs of databases in a Simple Database Service instance.</para>
+        /// <para>Queries the error logs of a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</para>
+        /// <para>Use this operation to query the error logs of a lightweight database instance to identify and troubleshoot issues.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5785,12 +5616,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information about a Simple Database Service instance.</para>
+        /// <para>Retrieves monitoring metrics for a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</para>
+        /// <para>After you create a lightweight database instance, you can retrieve its detailed monitoring metrics. These metrics include CPU and memory usage, disk space, IOPS (Input/Output Operations Per Second), and the number of connections.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5843,24 +5674,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstanceMetricDataResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstanceMetricDataResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseInstanceMetricDataResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information about a Simple Database Service instance.</para>
+        /// <para>Retrieves monitoring metrics for a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</para>
+        /// <para>After you create a lightweight database instance, you can retrieve its detailed monitoring metrics. These metrics include CPU and memory usage, disk space, IOPS (Input/Output Operations Per Second), and the number of connections.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5913,24 +5737,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstanceMetricDataResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstanceMetricDataResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseInstanceMetricDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information about a Simple Database Service instance.</para>
+        /// <para>Retrieves monitoring metrics for a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</para>
+        /// <para>After you create a lightweight database instance, you can retrieve its detailed monitoring metrics. These metrics include CPU and memory usage, disk space, IOPS (Input/Output Operations Per Second), and the number of connections.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5948,12 +5765,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring information about a Simple Database Service instance.</para>
+        /// <para>Retrieves monitoring metrics for a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</para>
+        /// <para>After you create a lightweight database instance, you can retrieve its detailed monitoring metrics. These metrics include CPU and memory usage, disk space, IOPS (Input/Output Operations Per Second), and the number of connections.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5971,12 +5788,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters of a Simple Database Service instance.</para>
+        /// <para>View parameters for a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the information about parameters of a Simple Database Service instance.</para>
+        /// <para>This operation retrieves the parameter details of a lightweight database instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6017,24 +5834,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstanceParametersResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstanceParametersResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseInstanceParametersResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters of a Simple Database Service instance.</para>
+        /// <para>View parameters for a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the information about parameters of a Simple Database Service instance.</para>
+        /// <para>This operation retrieves the parameter details of a lightweight database instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6075,24 +5885,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstanceParametersResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstanceParametersResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseInstanceParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters of a Simple Database Service instance.</para>
+        /// <para>View parameters for a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the information about parameters of a Simple Database Service instance.</para>
+        /// <para>This operation retrieves the parameter details of a lightweight database instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6110,12 +5913,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters of a Simple Database Service instance.</para>
+        /// <para>View parameters for a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the information about parameters of a Simple Database Service instance.</para>
+        /// <para>This operation retrieves the parameter details of a lightweight database instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6133,12 +5936,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Simple Database Service instances.</para>
+        /// <para>Queries the details of lightweight database instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</para>
+        /// <para>Queries the details of one or more lightweight database instances in a specified region, including the instance ID, name, plan, database version, public endpoint, internal endpoint, creation time, and expiration time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6187,24 +5990,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Simple Database Service instances.</para>
+        /// <para>Queries the details of lightweight database instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</para>
+        /// <para>Queries the details of one or more lightweight database instances in a specified region, including the instance ID, name, plan, database version, public endpoint, internal endpoint, creation time, and expiration time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6253,24 +6049,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Simple Database Service instances.</para>
+        /// <para>Queries the details of lightweight database instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</para>
+        /// <para>Queries the details of one or more lightweight database instances in a specified region, including the instance ID, name, plan, database version, public endpoint, internal endpoint, creation time, and expiration time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6288,12 +6077,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Simple Database Service instances.</para>
+        /// <para>Queries the details of lightweight database instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</para>
+        /// <para>Queries the details of one or more lightweight database instances in a specified region, including the instance ID, name, plan, database version, public endpoint, internal endpoint, creation time, and expiration time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6311,14 +6100,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow query log details of a Simple Database Service instance.</para>
+        /// <para>Retrieves slow log details for Simple Database Service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</para>
+        /// <para>You can query the slow logs of a Simple Database Service instance to diagnose issues.</para>
         /// <remarks>
-        /// <para> Slow query log details are retained for 7 days.</para>
+        /// <para>Simple Database Service retains slow logs for 7 days.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6376,26 +6165,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseSlowLogRecordsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseSlowLogRecordsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseSlowLogRecordsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow query log details of a Simple Database Service instance.</para>
+        /// <para>Retrieves slow log details for Simple Database Service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</para>
+        /// <para>You can query the slow logs of a Simple Database Service instance to diagnose issues.</para>
         /// <remarks>
-        /// <para> Slow query log details are retained for 7 days.</para>
+        /// <para>Simple Database Service retains slow logs for 7 days.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6453,26 +6235,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeDatabaseSlowLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeDatabaseSlowLogRecordsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeDatabaseSlowLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow query log details of a Simple Database Service instance.</para>
+        /// <para>Retrieves slow log details for Simple Database Service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</para>
+        /// <para>You can query the slow logs of a Simple Database Service instance to diagnose issues.</para>
         /// <remarks>
-        /// <para> Slow query log details are retained for 7 days.</para>
+        /// <para>Simple Database Service retains slow logs for 7 days.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6491,14 +6266,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow query log details of a Simple Database Service instance.</para>
+        /// <para>Retrieves slow log details for Simple Database Service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</para>
+        /// <para>You can query the slow logs of a Simple Database Service instance to diagnose issues.</para>
         /// <remarks>
-        /// <para> Slow query log details are retained for 7 days.</para>
+        /// <para>Simple Database Service retains slow logs for 7 days.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6517,7 +6292,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of applying a firewall template to simple application servers.</para>
+        /// <para>Queries the results of applying a firewall template to instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6574,19 +6349,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplateApplyResultsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplateApplyResultsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeFirewallTemplateApplyResultsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of applying a firewall template to simple application servers.</para>
+        /// <para>Queries the results of applying a firewall template to instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6643,19 +6411,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplateApplyResultsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplateApplyResultsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeFirewallTemplateApplyResultsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of applying a firewall template to simple application servers.</para>
+        /// <para>Queries the results of applying a firewall template to instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6673,7 +6434,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of applying a firewall template to simple application servers.</para>
+        /// <para>Queries the results of applying a firewall template to instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6744,14 +6505,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplateRulesApplyResultResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplateRulesApplyResultResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeFirewallTemplateRulesApplyResultResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6809,14 +6563,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplateRulesApplyResultResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplateRulesApplyResultResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeFirewallTemplateRulesApplyResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6910,14 +6657,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplatesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplatesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeFirewallTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6975,14 +6715,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplatesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeFirewallTemplatesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeFirewallTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7068,14 +6801,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInstanceKeyPairResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInstanceKeyPairResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInstanceKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7125,14 +6851,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInstanceKeyPairResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInstanceKeyPairResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInstanceKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7218,14 +6937,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInstancePasswordsSettingResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInstancePasswordsSettingResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInstancePasswordsSettingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7275,14 +6987,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInstancePasswordsSettingResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInstancePasswordsSettingResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInstancePasswordsSettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7368,14 +7073,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInstanceVncUrlResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInstanceVncUrlResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInstanceVncUrlResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7425,14 +7123,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInstanceVncUrlResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInstanceVncUrlResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInstanceVncUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7473,14 +7164,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution result of a command.</para>
+        /// <para>Queries the execution result of a single command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the execution result of a command.</para>
         /// <list type="bullet">
-        /// <item><description>You can query the execution results that were generated within the last two weeks. A maximum of 100,000 entries of execution results can be retained.</description></item>
+        /// <item><description>After you run a command, the command is not necessarily run successfully or achieves the expected results. Call this operation to view the actual execution result based on the actual output.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 entries of execution information can be retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7526,26 +7217,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInvocationResultResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInvocationResultResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInvocationResultResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution result of a command.</para>
+        /// <para>Queries the execution result of a single command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the execution result of a command.</para>
         /// <list type="bullet">
-        /// <item><description>You can query the execution results that were generated within the last two weeks. A maximum of 100,000 entries of execution results can be retained.</description></item>
+        /// <item><description>After you run a command, the command is not necessarily run successfully or achieves the expected results. Call this operation to view the actual execution result based on the actual output.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 entries of execution information can be retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7591,26 +7275,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInvocationResultResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInvocationResultResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInvocationResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution result of a command.</para>
+        /// <para>Queries the execution result of a single command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the execution result of a command.</para>
         /// <list type="bullet">
-        /// <item><description>You can query the execution results that were generated within the last two weeks. A maximum of 100,000 entries of execution results can be retained.</description></item>
+        /// <item><description>After you run a command, the command is not necessarily run successfully or achieves the expected results. Call this operation to view the actual execution result based on the actual output.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 entries of execution information can be retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7629,14 +7306,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution result of a command.</para>
+        /// <para>Queries the execution result of a single command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the execution result of a command.</para>
         /// <list type="bullet">
-        /// <item><description>You can query the execution results that were generated within the last two weeks. A maximum of 100,000 entries of execution results can be retained.</description></item>
+        /// <item><description>After you run a command, the command is not necessarily run successfully or achieves the expected results. Call this operation to view the actual execution result based on the actual output.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 entries of execution information can be retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7655,14 +7332,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about command execution.</para>
+        /// <para>Queries the details of a command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.</para>
         /// <list type="bullet">
-        /// <item><description>You can query the execution results that were generated within the last two weeks. Up to 100,000 entries of execution results can be retained.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the return values of this operation.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records can be retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7716,26 +7393,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInvocationsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInvocationsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInvocationsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about command execution.</para>
+        /// <para>Queries the details of a command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.</para>
         /// <list type="bullet">
-        /// <item><description>You can query the execution results that were generated within the last two weeks. Up to 100,000 entries of execution results can be retained.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the return values of this operation.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records can be retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7789,26 +7459,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInvocationsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInvocationsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInvocationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about command execution.</para>
+        /// <para>Queries the details of a command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.</para>
         /// <list type="bullet">
-        /// <item><description>You can query the execution results that were generated within the last two weeks. Up to 100,000 entries of execution results can be retained.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the return values of this operation.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records can be retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7827,14 +7490,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about command execution.</para>
+        /// <para>Queries the details of a command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.</para>
         /// <list type="bullet">
-        /// <item><description>You can query the execution results that were generated within the last two weeks. Up to 100,000 entries of execution results can be retained.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the return values of this operation.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records can be retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7922,14 +7585,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeMonitorDataResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeMonitorDataResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeMonitorDataResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8003,14 +7659,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeMonitorDataResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeMonitorDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8047,6 +7696,246 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMonitorDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the pricing information of Simple Application Server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you run a command, it does not mean that the command is successfully run or produces the expected results. You must check the actual execution results based on the API response. The actual output prevails.</description></item>
+        /// <item><description>You can query the execution information of the last two weeks. The maximum number of retained execution records is 100,000.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePriceResponse
+        /// </returns>
+        public DescribePriceResponse DescribePriceWithOptions(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityType))
+            {
+                query["CommodityType"] = request.CommodityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
+            {
+                query["DataDiskSize"] = request.DataDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanId))
+            {
+                query["PlanId"] = request.PlanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PriceUnit))
+            {
+                query["PriceUnit"] = request.PriceUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionOptions))
+            {
+                query["PromotionOptions"] = request.PromotionOptions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrice",
+                Version = "2020-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the pricing information of Simple Application Server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you run a command, it does not mean that the command is successfully run or produces the expected results. You must check the actual execution results based on the API response. The actual output prevails.</description></item>
+        /// <item><description>You can query the execution information of the last two weeks. The maximum number of retained execution records is 100,000.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePriceResponse
+        /// </returns>
+        public async Task<DescribePriceResponse> DescribePriceWithOptionsAsync(DescribePriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityType))
+            {
+                query["CommodityType"] = request.CommodityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
+            {
+                query["DataDiskSize"] = request.DataDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanId))
+            {
+                query["PlanId"] = request.PlanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PriceUnit))
+            {
+                query["PriceUnit"] = request.PriceUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionOptions))
+            {
+                query["PromotionOptions"] = request.PromotionOptions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrice",
+                Version = "2020-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the pricing information of Simple Application Server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you run a command, it does not mean that the command is successfully run or produces the expected results. You must check the actual execution results based on the API response. The actual output prevails.</description></item>
+        /// <item><description>You can query the execution information of the last two weeks. The maximum number of retained execution records is 100,000.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePriceResponse
+        /// </returns>
+        public DescribePriceResponse DescribePrice(DescribePriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePriceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the pricing information of Simple Application Server.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you run a command, it does not mean that the command is successfully run or produces the expected results. You must check the actual execution results based on the API response. The actual output prevails.</description></item>
+        /// <item><description>You can query the execution information of the last two weeks. The maximum number of retained execution records is 100,000.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePriceResponse
+        /// </returns>
+        public async Task<DescribePriceResponse> DescribePriceAsync(DescribePriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePriceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8096,14 +7985,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeSecurityAgentStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeSecurityAgentStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeSecurityAgentStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8153,14 +8035,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeSecurityAgentStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeSecurityAgentStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeSecurityAgentStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8255,14 +8130,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DetachKeyPairResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DetachKeyPairResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DetachKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8321,14 +8189,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DetachKeyPairResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DetachKeyPairResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DetachKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8379,7 +8240,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a firewall rule of a simple application server.</para>
+        /// <para>Disables a firewall policy for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8432,19 +8293,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableFirewallRuleResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableFirewallRuleResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableFirewallRuleResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a firewall rule of a simple application server.</para>
+        /// <para>Disables a firewall policy for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8497,19 +8351,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisableFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisableFirewallRuleResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisableFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a firewall rule of a simple application server.</para>
+        /// <para>Disables a firewall policy for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8527,7 +8374,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a firewall rule of a simple application server.</para>
+        /// <para>Disables a firewall policy for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8545,7 +8392,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a firewall rule for a simple application server.</para>
+        /// <para>Enables a firewall policy for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8602,19 +8449,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableFirewallRuleResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableFirewallRuleResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableFirewallRuleResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a firewall rule for a simple application server.</para>
+        /// <para>Enables a firewall policy for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8671,19 +8511,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<EnableFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<EnableFirewallRuleResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<EnableFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a firewall rule for a simple application server.</para>
+        /// <para>Enables a firewall policy for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8701,7 +8534,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a firewall rule for a simple application server.</para>
+        /// <para>Enables a firewall policy for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8719,12 +8552,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an existing key pair to the Simple Application Server console.</para>
+        /// <para>Imports an existing key pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to import an existing key pair to the Simple Application Server console. This way, you can use the key pair to log on to simple application servers. The existing key pair that you want to import must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: Which encryption methods must be used by key pairs when I import existing key pairs to the Simple Application Server console?</a></para>
+        /// <para>You can import an existing key pair to the console to log on to your Simple Application Server instances. The key pair must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: What encryption methods are supported for importing an existing key pair?</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8773,24 +8606,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportKeyPairResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportKeyPairResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an existing key pair to the Simple Application Server console.</para>
+        /// <para>Imports an existing key pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to import an existing key pair to the Simple Application Server console. This way, you can use the key pair to log on to simple application servers. The existing key pair that you want to import must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: Which encryption methods must be used by key pairs when I import existing key pairs to the Simple Application Server console?</a></para>
+        /// <para>You can import an existing key pair to the console to log on to your Simple Application Server instances. The key pair must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: What encryption methods are supported for importing an existing key pair?</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8839,24 +8665,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ImportKeyPairResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ImportKeyPairResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ImportKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an existing key pair to the Simple Application Server console.</para>
+        /// <para>Imports an existing key pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to import an existing key pair to the Simple Application Server console. This way, you can use the key pair to log on to simple application servers. The existing key pair that you want to import must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: Which encryption methods must be used by key pairs when I import existing key pairs to the Simple Application Server console?</a></para>
+        /// <para>You can import an existing key pair to the console to log on to your Simple Application Server instances. The key pair must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: What encryption methods are supported for importing an existing key pair?</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8874,12 +8693,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an existing key pair to the Simple Application Server console.</para>
+        /// <para>Imports an existing key pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to import an existing key pair to the Simple Application Server console. This way, you can use the key pair to log on to simple application servers. The existing key pair that you want to import must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: Which encryption methods must be used by key pairs when I import existing key pairs to the Simple Application Server console?</a></para>
+        /// <para>You can import an existing key pair to the console to log on to your Simple Application Server instances. The key pair must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: What encryption methods are supported for importing an existing key pair?</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8949,14 +8768,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InstallCloudAssistantResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InstallCloudAssistantResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InstallCloudAssistantResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9013,14 +8825,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InstallCloudAssistantResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InstallCloudAssistantResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InstallCloudAssistantResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9120,14 +8925,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InstallCloudMonitorAgentResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InstallCloudMonitorAgentResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InstallCloudMonitorAgentResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9181,14 +8979,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InstallCloudMonitorAgentResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InstallCloudMonitorAgentResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InstallCloudMonitorAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9301,14 +9092,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InvokeCommandResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InvokeCommandResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InvokeCommandResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9385,14 +9169,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InvokeCommandResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InvokeCommandResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InvokeCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9459,7 +9236,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about custom images that are shared across Alibaba Cloud accounts in a region.</para>
+        /// <para>Calls the ListCustomImageShareAccounts operation to query information about cross-account shared images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9512,19 +9289,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCustomImageShareAccountsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCustomImageShareAccountsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCustomImageShareAccountsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about custom images that are shared across Alibaba Cloud accounts in a region.</para>
+        /// <para>Calls the ListCustomImageShareAccounts operation to query information about cross-account shared images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9577,19 +9347,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCustomImageShareAccountsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCustomImageShareAccountsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCustomImageShareAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about custom images that are shared across Alibaba Cloud accounts in a region.</para>
+        /// <para>Calls the ListCustomImageShareAccounts operation to query information about cross-account shared images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9607,7 +9370,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about custom images that are shared across Alibaba Cloud accounts in a region.</para>
+        /// <para>Calls the ListCustomImageShareAccounts operation to query information about cross-account shared images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9625,7 +9388,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about custom images in a region.</para>
+        /// <para>Queries information about one or more custom images that have been created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9706,19 +9469,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCustomImagesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCustomImagesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCustomImagesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about custom images in a region.</para>
+        /// <para>Queries information about one or more custom images that have been created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9799,19 +9555,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCustomImagesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCustomImagesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCustomImagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about custom images in a region.</para>
+        /// <para>Queries information about one or more custom images that have been created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9829,7 +9578,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about custom images in a region.</para>
+        /// <para>Queries information about one or more custom images that have been created in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9917,14 +9666,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDisksResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDisksResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDisksResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9999,14 +9741,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDisksResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDisksResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDisksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10057,12 +9792,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the firewall rules of a simple application server.</para>
+        /// <para>Queries the firewall rules of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</para>
+        /// <para>You can call this API operation to query the firewall rules of a specified simple application server, including information such as the port range, firewall rule ID, and transport layer protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10119,24 +9854,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListFirewallRulesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListFirewallRulesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListFirewallRulesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the firewall rules of a simple application server.</para>
+        /// <para>Queries the firewall rules of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</para>
+        /// <para>You can call this API operation to query the firewall rules of a specified simple application server, including information such as the port range, firewall rule ID, and transport layer protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10193,24 +9921,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListFirewallRulesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListFirewallRulesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListFirewallRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the firewall rules of a simple application server.</para>
+        /// <para>Queries the firewall rules of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</para>
+        /// <para>You can call this API operation to query the firewall rules of a specified simple application server, including information such as the port range, firewall rule ID, and transport layer protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10228,12 +9949,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the firewall rules of a simple application server.</para>
+        /// <para>Queries the firewall rules of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</para>
+        /// <para>You can call this API operation to query the firewall rules of a specified simple application server, including information such as the port range, firewall rule ID, and transport layer protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10301,14 +10022,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListImagesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListImagesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListImagesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10363,14 +10077,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListImagesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListImagesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListImagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10421,15 +10128,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the plans to which you can upgrade your simple application server.</para>
+        /// <para>This topic describes the list of plans to which a specified simple application server can be upgraded.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</para>
+        /// <para>As your business grows, the resources of a purchased server may no longer meet your requirements. Retrieve the list of plans to which the current server can be upgraded, then call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> to upgrade.</para>
         /// <remarks>
-        /// <para> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
-        /// For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</para>
+        /// <para>We recommend that you create a snapshot of the disk of the server to back up data before you upgrade the instance. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+        /// For more information about the limits on instance configuration upgrades, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade instance configurations</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10471,27 +10178,20 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancePlansModificationResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancePlansModificationResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancePlansModificationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the plans to which you can upgrade your simple application server.</para>
+        /// <para>This topic describes the list of plans to which a specified simple application server can be upgraded.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</para>
+        /// <para>As your business grows, the resources of a purchased server may no longer meet your requirements. Retrieve the list of plans to which the current server can be upgraded, then call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> to upgrade.</para>
         /// <remarks>
-        /// <para> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
-        /// For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</para>
+        /// <para>We recommend that you create a snapshot of the disk of the server to back up data before you upgrade the instance. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+        /// For more information about the limits on instance configuration upgrades, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade instance configurations</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10533,27 +10233,20 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancePlansModificationResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancePlansModificationResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancePlansModificationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the plans to which you can upgrade your simple application server.</para>
+        /// <para>This topic describes the list of plans to which a specified simple application server can be upgraded.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</para>
+        /// <para>As your business grows, the resources of a purchased server may no longer meet your requirements. Retrieve the list of plans to which the current server can be upgraded, then call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> to upgrade.</para>
         /// <remarks>
-        /// <para> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
-        /// For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</para>
+        /// <para>We recommend that you create a snapshot of the disk of the server to back up data before you upgrade the instance. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+        /// For more information about the limits on instance configuration upgrades, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade instance configurations</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10572,15 +10265,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the plans to which you can upgrade your simple application server.</para>
+        /// <para>This topic describes the list of plans to which a specified simple application server can be upgraded.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</para>
+        /// <para>As your business grows, the resources of a purchased server may no longer meet your requirements. Retrieve the list of plans to which the current server can be upgraded, then call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> to upgrade.</para>
         /// <remarks>
-        /// <para> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
-        /// For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</para>
+        /// <para>We recommend that you create a snapshot of the disk of the server to back up data before you upgrade the instance. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+        /// For more information about the limits on instance configuration upgrades, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade instance configurations</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10648,14 +10341,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstanceStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstanceStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstanceStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10709,14 +10395,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstanceStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10757,12 +10436,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about simple application servers in a region.</para>
+        /// <para>Queries the details of one or more instances in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</para>
+        /// <para>Queries the details of one or more instances in a specified region, including the server name, public IP address, internal IP address, creation time, and expiration time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10839,24 +10518,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about simple application servers in a region.</para>
+        /// <para>Queries the details of one or more instances in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</para>
+        /// <para>Queries the details of one or more instances in a specified region, including the server name, public IP address, internal IP address, creation time, and expiration time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10933,24 +10605,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about simple application servers in a region.</para>
+        /// <para>Queries the details of one or more instances in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</para>
+        /// <para>Queries the details of one or more instances in a specified region, including the server name, public IP address, internal IP address, creation time, and expiration time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10968,12 +10633,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about simple application servers in a region.</para>
+        /// <para>Queries the details of one or more instances in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</para>
+        /// <para>Queries the details of one or more instances in a specified region, including the server name, public IP address, internal IP address, creation time, and expiration time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11044,14 +10709,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesTrafficPackagesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesTrafficPackagesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesTrafficPackagesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11109,14 +10767,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesTrafficPackagesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesTrafficPackagesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesTrafficPackagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11181,7 +10832,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the AccessKey pairs that are bound to simple application servers in a specific region.</para>
+        /// <para>The list of key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11214,19 +10865,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListKeyPairsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListKeyPairsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListKeyPairsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the AccessKey pairs that are bound to simple application servers in a specific region.</para>
+        /// <para>The list of key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11259,19 +10903,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListKeyPairsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListKeyPairsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListKeyPairsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the AccessKey pairs that are bound to simple application servers in a specific region.</para>
+        /// <para>The list of key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11289,7 +10926,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the AccessKey pairs that are bound to simple application servers in a specific region.</para>
+        /// <para>The list of key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11307,12 +10944,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all plans provided by Simple Application Server in a region.</para>
+        /// <para>Queries all plan information for simple application servers in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</para>
+        /// <para>You can query all plan information for simple application servers in a specified region, including the plan ID, disk capacity, disk type, and plan price.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11349,24 +10986,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPlansResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPlansResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPlansResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all plans provided by Simple Application Server in a region.</para>
+        /// <para>Queries all plan information for simple application servers in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</para>
+        /// <para>You can query all plan information for simple application servers in a specified region, including the plan ID, disk capacity, disk type, and plan price.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11403,24 +11033,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListPlansResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListPlansResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListPlansResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all plans provided by Simple Application Server in a region.</para>
+        /// <para>Queries all plan information for simple application servers in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</para>
+        /// <para>You can query all plan information for simple application servers in a specified region, including the plan ID, disk capacity, disk type, and plan price.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11438,12 +11061,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all plans provided by Simple Application Server in a region.</para>
+        /// <para>Queries all plan information for simple application servers in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</para>
+        /// <para>You can query all plan information for simple application servers in a specified region, including the plan ID, disk capacity, disk type, and plan price.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11503,14 +11126,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRegionsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRegionsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRegionsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11557,14 +11173,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListRegionsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListRegionsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11615,12 +11224,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about snapshots that are created for a simple application server.</para>
+        /// <para>Queries information about one or more snapshots that have been created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</para>
+        /// <para>InstanceId, DiskId, SnapshotIds, and ResourceGroupId are not required request parameters, but you can use them to build filter logic. These parameters have a logical AND relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11689,24 +11298,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSnapshotsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSnapshotsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSnapshotsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about snapshots that are created for a simple application server.</para>
+        /// <para>Queries information about one or more snapshots that have been created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</para>
+        /// <para>InstanceId, DiskId, SnapshotIds, and ResourceGroupId are not required request parameters, but you can use them to build filter logic. These parameters have a logical AND relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11775,24 +11377,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListSnapshotsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about snapshots that are created for a simple application server.</para>
+        /// <para>Queries information about one or more snapshots that have been created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</para>
+        /// <para>InstanceId, DiskId, SnapshotIds, and ResourceGroupId are not required request parameters, but you can use them to build filter logic. These parameters have a logical AND relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11810,12 +11405,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about snapshots that are created for a simple application server.</para>
+        /// <para>Queries information about one or more snapshots that have been created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <c>InstanceId</c>, <c>DiskId</c>, <c>SnapshotIds</c>, and <c>ResourceGroupId</c> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</para>
+        /// <para>InstanceId, DiskId, SnapshotIds, and ResourceGroupId are not required request parameters, but you can use them to build filter logic. These parameters have a logical AND relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11890,14 +11485,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11959,14 +11547,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12007,12 +11588,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs on to a simple application server on Workbench.</para>
+        /// <para>Performs a remote logon to a simple application server by using Workbench.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.</para>
+        /// <para>After you create a simple application server, you can perform a remote logon to the server to set up environments and deploy applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12065,24 +11646,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<LoginInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<LoginInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<LoginInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs on to a simple application server on Workbench.</para>
+        /// <para>Performs a remote logon to a simple application server by using Workbench.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.</para>
+        /// <para>After you create a simple application server, you can perform a remote logon to the server to set up environments and deploy applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12135,24 +11709,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<LoginInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<LoginInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<LoginInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs on to a simple application server on Workbench.</para>
+        /// <para>Performs a remote logon to a simple application server by using Workbench.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.</para>
+        /// <para>After you create a simple application server, you can perform a remote logon to the server to set up environments and deploy applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12170,12 +11737,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Logs on to a simple application server on Workbench.</para>
+        /// <para>Performs a remote logon to a simple application server by using Workbench.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.</para>
+        /// <para>After you create a simple application server, you can perform a remote logon to the server to set up environments and deploy applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12193,15 +11760,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Simple Database Service instance.</para>
+        /// <para>Modifies the description of a lightweight database instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to modify the description of a Simple Database Service instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDatabaseInstanceDescriptionRequest
@@ -12249,27 +11809,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyDatabaseInstanceDescriptionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyDatabaseInstanceDescriptionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyDatabaseInstanceDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Simple Database Service instance.</para>
+        /// <para>Modifies the description of a lightweight database instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to modify the description of a Simple Database Service instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDatabaseInstanceDescriptionRequest
@@ -12317,27 +11863,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyDatabaseInstanceDescriptionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyDatabaseInstanceDescriptionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyDatabaseInstanceDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Simple Database Service instance.</para>
+        /// <para>Modifies the description of a lightweight database instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to modify the description of a Simple Database Service instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDatabaseInstanceDescriptionRequest
@@ -12354,15 +11886,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Simple Database Service instance.</para>
+        /// <para>Modifies the description of a lightweight database instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to modify the description of a Simple Database Service instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDatabaseInstanceDescriptionRequest
@@ -12379,15 +11904,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
+        /// <para>After you create a Simple Application Server database service instance, you can view and modify its parameters.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDatabaseInstanceParameterRequest
@@ -12439,27 +11957,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyDatabaseInstanceParameterResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyDatabaseInstanceParameterResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyDatabaseInstanceParameterResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
+        /// <para>After you create a Simple Application Server database service instance, you can view and modify its parameters.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDatabaseInstanceParameterRequest
@@ -12511,27 +12015,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyDatabaseInstanceParameterResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyDatabaseInstanceParameterResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyDatabaseInstanceParameterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
+        /// <para>After you create a Simple Application Server database service instance, you can view and modify its parameters.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDatabaseInstanceParameterRequest
@@ -12548,15 +12038,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
+        /// <para>After you create a Simple Application Server database service instance, you can view and modify its parameters.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDatabaseInstanceParameterRequest
@@ -12573,7 +12056,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the firewall rule of a simple application server.</para>
+        /// <para>Modifies a firewall rule of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12638,19 +12121,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyFirewallRuleResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyFirewallRuleResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyFirewallRuleResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the firewall rule of a simple application server.</para>
+        /// <para>Modifies a firewall rule of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12715,19 +12191,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyFirewallRuleResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyFirewallRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the firewall rule of a simple application server.</para>
+        /// <para>Modifies a firewall rule of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12745,7 +12214,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the firewall rule of a simple application server.</para>
+        /// <para>Modifies a firewall rule of a specified simple application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12763,12 +12232,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the firewall rule in a firewall template. You can apply the new firewall rule to simple application servers.</para>
+        /// <para>Updates the firewall rules in an existing firewall template based on your business requirements and applies the rules to Simple Application Server instances through the firewall template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifying a firewall template does not affect the firewall rules that have been applied to simple application servers.</para>
+        /// <para>Updating a firewall template does not affect the rules of instances to which the template is already applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12825,24 +12294,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyFirewallTemplateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyFirewallTemplateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyFirewallTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the firewall rule in a firewall template. You can apply the new firewall rule to simple application servers.</para>
+        /// <para>Updates the firewall rules in an existing firewall template based on your business requirements and applies the rules to Simple Application Server instances through the firewall template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifying a firewall template does not affect the firewall rules that have been applied to simple application servers.</para>
+        /// <para>Updating a firewall template does not affect the rules of instances to which the template is already applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12899,24 +12361,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyFirewallTemplateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyFirewallTemplateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyFirewallTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the firewall rule in a firewall template. You can apply the new firewall rule to simple application servers.</para>
+        /// <para>Updates the firewall rules in an existing firewall template based on your business requirements and applies the rules to Simple Application Server instances through the firewall template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifying a firewall template does not affect the firewall rules that have been applied to simple application servers.</para>
+        /// <para>Updating a firewall template does not affect the rules of instances to which the template is already applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12934,12 +12389,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the firewall rule in a firewall template. You can apply the new firewall rule to simple application servers.</para>
+        /// <para>Updates the firewall rules in an existing firewall template based on your business requirements and applies the rules to Simple Application Server instances through the firewall template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifying a firewall template does not affect the firewall rules that have been applied to simple application servers.</para>
+        /// <para>Updating a firewall template does not affect the rules of instances to which the template is already applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12964,7 +12419,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</para>
         /// <remarks>
-        /// <para> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+        /// <para>The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
         /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -13019,14 +12474,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyImageShareStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyImageShareStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyImageShareStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13038,7 +12486,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</para>
         /// <remarks>
-        /// <para> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+        /// <para>The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
         /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -13093,14 +12541,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyImageShareStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyImageShareStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyImageShareStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13112,7 +12553,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</para>
         /// <remarks>
-        /// <para> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+        /// <para>The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
         /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -13143,7 +12584,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// <description>
         /// <para>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</para>
         /// <remarks>
-        /// <para> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+        /// <para>The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
         /// You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -13216,14 +12657,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyInstanceVncPasswordResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyInstanceVncPasswordResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyInstanceVncPasswordResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13277,14 +12711,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyInstanceVncPasswordResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyInstanceVncPasswordResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyInstanceVncPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13330,9 +12757,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only simple application servers that are in the Running state can be restarted.</para>
         /// <list type="bullet">
-        /// <item><description>After you restart a simple application server, it enters the Starting state.</description></item>
+        /// <item><description>You can restart only simple application server instances that are in the Running state.</description></item>
+        /// <item><description>After a simple application server instance is restarted, it enters the Starting state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13378,14 +12805,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RebootInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RebootInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RebootInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13395,9 +12815,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only simple application servers that are in the Running state can be restarted.</para>
         /// <list type="bullet">
-        /// <item><description>After you restart a simple application server, it enters the Starting state.</description></item>
+        /// <item><description>You can restart only simple application server instances that are in the Running state.</description></item>
+        /// <item><description>After a simple application server instance is restarted, it enters the Starting state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13443,14 +12863,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RebootInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RebootInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RebootInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13460,9 +12873,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only simple application servers that are in the Running state can be restarted.</para>
         /// <list type="bullet">
-        /// <item><description>After you restart a simple application server, it enters the Starting state.</description></item>
+        /// <item><description>You can restart only simple application server instances that are in the Running state.</description></item>
+        /// <item><description>After a simple application server instance is restarted, it enters the Starting state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13486,9 +12899,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only simple application servers that are in the Running state can be restarted.</para>
         /// <list type="bullet">
-        /// <item><description>After you restart a simple application server, it enters the Starting state.</description></item>
+        /// <item><description>You can restart only simple application server instances that are in the Running state.</description></item>
+        /// <item><description>After a simple application server instance is restarted, it enters the Starting state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13556,14 +12969,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RebootInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RebootInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RebootInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13617,14 +13023,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RebootInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RebootInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RebootInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13665,15 +13064,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
+        /// <para>Releases the public endpoint of a lightweight database instance if you no longer need to access it from the internet.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ReleasePublicConnectionRequest
@@ -13717,27 +13109,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ReleasePublicConnectionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ReleasePublicConnectionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ReleasePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
+        /// <para>Releases the public endpoint of a lightweight database instance if you no longer need to access it from the internet.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ReleasePublicConnectionRequest
@@ -13781,27 +13159,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ReleasePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ReleasePublicConnectionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ReleasePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
+        /// <para>Releases the public endpoint of a lightweight database instance if you no longer need to access it from the internet.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ReleasePublicConnectionRequest
@@ -13818,15 +13182,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
+        /// <para>Releases the public endpoint of a lightweight database instance if you no longer need to access it from the internet.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ReleasePublicConnectionRequest
@@ -13892,14 +13249,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveCustomImageShareAccountResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveCustomImageShareAccountResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveCustomImageShareAccountResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13953,14 +13303,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RemoveCustomImageShareAccountResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RemoveCustomImageShareAccountResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RemoveCustomImageShareAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14006,8 +13349,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
+        /// <item><description>Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</description></item>
         /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</description></item>
         /// </list>
         /// </description>
@@ -14058,14 +13401,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RenewInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14075,8 +13411,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
+        /// <item><description>Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</description></item>
         /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</description></item>
         /// </list>
         /// </description>
@@ -14127,14 +13463,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RenewInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14144,8 +13473,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
+        /// <item><description>Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</description></item>
         /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</description></item>
         /// </list>
         /// </description>
@@ -14170,8 +13499,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
+        /// <item><description>Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</description></item>
         /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</description></item>
         /// </list>
         /// </description>
@@ -14191,15 +13520,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
+        /// <para>Resets the password of the administrator account for a database. You can call this operation to change the password if the current password has low security. For database security, change the database password on a regular basis.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ResetDatabaseAccountPasswordRequest
@@ -14247,27 +13569,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetDatabaseAccountPasswordResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetDatabaseAccountPasswordResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetDatabaseAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
+        /// <para>Resets the password of the administrator account for a database. You can call this operation to change the password if the current password has low security. For database security, change the database password on a regular basis.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ResetDatabaseAccountPasswordRequest
@@ -14315,27 +13623,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetDatabaseAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetDatabaseAccountPasswordResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetDatabaseAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
+        /// <para>Resets the password of the administrator account for a database. You can call this operation to change the password if the current password has low security. For database security, change the database password on a regular basis.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ResetDatabaseAccountPasswordRequest
@@ -14352,15 +13646,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
+        /// <para>Resets the password of the administrator account for a database. You can call this operation to change the password if the current password has low security. For database security, change the database password on a regular basis.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ResetDatabaseAccountPasswordRequest
@@ -14377,17 +13664,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a disk based on a snapshot.</para>
+        /// <para>Rolls back a disk to a snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only if the associated simple application server is in the Stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</description></item>
+        /// <item><description>When you roll back a disk by using a snapshot, the corresponding simple application server must be in the Stopped state.</description></item>
+        /// <item><description>Rolling back a disk to a snapshot causes the incremental data generated after the snapshot was created to be lost. Back up your data before the rollback if necessary.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</para>
+        /// <h3>Precautions</h3>
+        /// <para>Resetting the system or replacing the image clears the disk data on the server. Snapshots created before the system reset or image replacement are retained but cannot be used for rollback operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14436,29 +13723,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetDiskResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetDiskResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetDiskResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a disk based on a snapshot.</para>
+        /// <para>Rolls back a disk to a snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only if the associated simple application server is in the Stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</description></item>
+        /// <item><description>When you roll back a disk by using a snapshot, the corresponding simple application server must be in the Stopped state.</description></item>
+        /// <item><description>Rolling back a disk to a snapshot causes the incremental data generated after the snapshot was created to be lost. Back up your data before the rollback if necessary.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</para>
+        /// <h3>Precautions</h3>
+        /// <para>Resetting the system or replacing the image clears the disk data on the server. Snapshots created before the system reset or image replacement are retained but cannot be used for rollback operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14507,29 +13787,22 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetDiskResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetDiskResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetDiskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a disk based on a snapshot.</para>
+        /// <para>Rolls back a disk to a snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only if the associated simple application server is in the Stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</description></item>
+        /// <item><description>When you roll back a disk by using a snapshot, the corresponding simple application server must be in the Stopped state.</description></item>
+        /// <item><description>Rolling back a disk to a snapshot causes the incremental data generated after the snapshot was created to be lost. Back up your data before the rollback if necessary.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</para>
+        /// <h3>Precautions</h3>
+        /// <para>Resetting the system or replacing the image clears the disk data on the server. Snapshots created before the system reset or image replacement are retained but cannot be used for rollback operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14547,17 +13820,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a disk based on a snapshot.</para>
+        /// <para>Rolls back a disk to a snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only if the associated simple application server is in the Stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</description></item>
+        /// <item><description>When you roll back a disk by using a snapshot, the corresponding simple application server must be in the Stopped state.</description></item>
+        /// <item><description>Rolling back a disk to a snapshot causes the incremental data generated after the snapshot was created to be lost. Back up your data before the rollback if necessary.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</para>
+        /// <h3>Precautions</h3>
+        /// <para>Resetting the system or replacing the image clears the disk data on the server. Snapshots created before the system reset or image replacement are retained but cannot be used for rollback operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14664,14 +13937,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetSystemResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetSystemResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetSystemResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14765,14 +14031,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetSystemResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetSystemResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ResetSystemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14885,15 +14144,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
+        /// <para>Call this operation to restart a lightweight database instance in the Running state.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RestartDatabaseInstanceRequest
@@ -14937,27 +14189,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RestartDatabaseInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RestartDatabaseInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RestartDatabaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
+        /// <para>Call this operation to restart a lightweight database instance in the Running state.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RestartDatabaseInstanceRequest
@@ -15001,27 +14239,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RestartDatabaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RestartDatabaseInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RestartDatabaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
+        /// <para>Call this operation to restart a lightweight database instance in the Running state.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RestartDatabaseInstanceRequest
@@ -15038,15 +14262,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
+        /// <para>Call this operation to restart a lightweight database instance in the Running state.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to restart a Simple Database Service instance that is in the Running state.</para>
-        /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RestartDatabaseInstanceRequest
@@ -15063,16 +14280,16 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs commands on a simple application server.</para>
+        /// <para>Runs a command on a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Command Assistant is an automated O\&amp;M tool for Simple Application Server. You can maintain simple application servers by running shell, PowerShell, and batch commands in the Simple Application Server console without remotely logging on to the servers.
-        /// Before you use Command Assistant, take note of the following items:</para>
+        /// <para>Command Assistant is an automated O&amp;M tool designed for simple application servers. You can run commands (Shell, PowerShell, and Bat) on simple application server instances from the console for operations management without having to log on to the instances.
+        /// To use Command Assistant, the following conditions must be met:</para>
         /// <list type="bullet">
-        /// <item><description>The simple application server must be in the Running state.</description></item>
-        /// <item><description>The Cloud Assistant client is installed on the server. By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install the Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>The simple application server instance must be in the Running state.</description></item>
+        /// <item><description>Cloud Assistant Agent must be installed. Cloud Assistant Agent is installed on simple application server instances by default. If you manually uninstalled it, reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15156,28 +14373,21 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RunCommandResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RunCommandResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RunCommandResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs commands on a simple application server.</para>
+        /// <para>Runs a command on a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Command Assistant is an automated O\&amp;M tool for Simple Application Server. You can maintain simple application servers by running shell, PowerShell, and batch commands in the Simple Application Server console without remotely logging on to the servers.
-        /// Before you use Command Assistant, take note of the following items:</para>
+        /// <para>Command Assistant is an automated O&amp;M tool designed for simple application servers. You can run commands (Shell, PowerShell, and Bat) on simple application server instances from the console for operations management without having to log on to the instances.
+        /// To use Command Assistant, the following conditions must be met:</para>
         /// <list type="bullet">
-        /// <item><description>The simple application server must be in the Running state.</description></item>
-        /// <item><description>The Cloud Assistant client is installed on the server. By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install the Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>The simple application server instance must be in the Running state.</description></item>
+        /// <item><description>Cloud Assistant Agent must be installed. Cloud Assistant Agent is installed on simple application server instances by default. If you manually uninstalled it, reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15261,28 +14471,21 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RunCommandResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RunCommandResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RunCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs commands on a simple application server.</para>
+        /// <para>Runs a command on a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Command Assistant is an automated O\&amp;M tool for Simple Application Server. You can maintain simple application servers by running shell, PowerShell, and batch commands in the Simple Application Server console without remotely logging on to the servers.
-        /// Before you use Command Assistant, take note of the following items:</para>
+        /// <para>Command Assistant is an automated O&amp;M tool designed for simple application servers. You can run commands (Shell, PowerShell, and Bat) on simple application server instances from the console for operations management without having to log on to the instances.
+        /// To use Command Assistant, the following conditions must be met:</para>
         /// <list type="bullet">
-        /// <item><description>The simple application server must be in the Running state.</description></item>
-        /// <item><description>The Cloud Assistant client is installed on the server. By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install the Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>The simple application server instance must be in the Running state.</description></item>
+        /// <item><description>Cloud Assistant Agent must be installed. Cloud Assistant Agent is installed on simple application server instances by default. If you manually uninstalled it, reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15301,16 +14504,16 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs commands on a simple application server.</para>
+        /// <para>Runs a command on a simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Command Assistant is an automated O\&amp;M tool for Simple Application Server. You can maintain simple application servers by running shell, PowerShell, and batch commands in the Simple Application Server console without remotely logging on to the servers.
-        /// Before you use Command Assistant, take note of the following items:</para>
+        /// <para>Command Assistant is an automated O&amp;M tool designed for simple application servers. You can run commands (Shell, PowerShell, and Bat) on simple application server instances from the console for operations management without having to log on to the instances.
+        /// To use Command Assistant, the following conditions must be met:</para>
         /// <list type="bullet">
-        /// <item><description>The simple application server must be in the Running state.</description></item>
-        /// <item><description>The Cloud Assistant client is installed on the server. By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install the Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>The simple application server instance must be in the Running state.</description></item>
+        /// <item><description>Cloud Assistant Agent must be installed. Cloud Assistant Agent is installed on simple application server instances by default. If you manually uninstalled it, reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15329,12 +14532,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Simple Database Service instance.</para>
+        /// <para>Starts a database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</para>
+        /// <para>This operation starts a database instance that is in the stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15379,24 +14582,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartDatabaseInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartDatabaseInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartDatabaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Simple Database Service instance.</para>
+        /// <para>Starts a database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</para>
+        /// <para>This operation starts a database instance that is in the stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15441,24 +14637,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartDatabaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartDatabaseInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartDatabaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Simple Database Service instance.</para>
+        /// <para>Starts a database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</para>
+        /// <para>This operation starts a database instance that is in the stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15476,12 +14665,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a Simple Database Service instance.</para>
+        /// <para>Starts a database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</para>
+        /// <para>This operation starts a database instance that is in the stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15549,14 +14738,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -15611,14 +14793,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -15669,7 +14844,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts simple application servers.</para>
+        /// <para>Starts one or more simple application servers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15714,19 +14889,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts simple application servers.</para>
+        /// <para>Starts one or more simple application servers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15771,19 +14939,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts simple application servers.</para>
+        /// <para>Starts one or more simple application servers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15801,7 +14962,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts simple application servers.</para>
+        /// <para>Starts one or more simple application servers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15819,7 +14980,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a session for a simple application server.</para>
+        /// <para>Starts a session to log on to a Simple Application Server instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15836,6 +14997,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandLine))
+            {
+                query["CommandLine"] = request.CommandLine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -15860,19 +15025,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartTerminalSessionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartTerminalSessionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartTerminalSessionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a session for a simple application server.</para>
+        /// <para>Starts a session to log on to a Simple Application Server instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15889,6 +15047,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandLine))
+            {
+                query["CommandLine"] = request.CommandLine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -15913,19 +15075,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StartTerminalSessionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StartTerminalSessionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StartTerminalSessionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a session for a simple application server.</para>
+        /// <para>Starts a session to log on to a Simple Application Server instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15943,7 +15098,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a session for a simple application server.</para>
+        /// <para>Starts a session to log on to a Simple Application Server instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15961,12 +15116,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Simple Database Service instance.</para>
+        /// <para>Stops a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</para>
+        /// <para>This operation stops a lightweight database instance that is in the running state. After the instance is stopped, you cannot log on to or access it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16011,24 +15166,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StopDatabaseInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StopDatabaseInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StopDatabaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Simple Database Service instance.</para>
+        /// <para>Stops a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</para>
+        /// <para>This operation stops a lightweight database instance that is in the running state. After the instance is stopped, you cannot log on to or access it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16073,24 +15221,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StopDatabaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StopDatabaseInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StopDatabaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Simple Database Service instance.</para>
+        /// <para>Stops a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</para>
+        /// <para>This operation stops a lightweight database instance that is in the running state. After the instance is stopped, you cannot log on to or access it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16108,12 +15249,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a Simple Database Service instance.</para>
+        /// <para>Stops a lightweight database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</para>
+        /// <para>This operation stops a lightweight database instance that is in the running state. After the instance is stopped, you cannot log on to or access it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16136,9 +15277,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can stop a simple application server that you do not use for the time being.</para>
+        /// <para>If a simple application server is temporarily not needed, you can stop it.</para>
         /// <remarks>
-        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</para>
+        /// <para>Stopping a simple application server instance may cause service interruptions. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16184,14 +15325,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StopInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StopInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StopInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16201,9 +15335,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can stop a simple application server that you do not use for the time being.</para>
+        /// <para>If a simple application server is temporarily not needed, you can stop it.</para>
         /// <remarks>
-        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</para>
+        /// <para>Stopping a simple application server instance may cause service interruptions. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16249,14 +15383,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StopInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StopInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StopInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16266,9 +15393,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can stop a simple application server that you do not use for the time being.</para>
+        /// <para>If a simple application server is temporarily not needed, you can stop it.</para>
         /// <remarks>
-        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</para>
+        /// <para>Stopping a simple application server instance may cause service interruptions. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16292,9 +15419,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can stop a simple application server that you do not use for the time being.</para>
+        /// <para>If a simple application server is temporarily not needed, you can stop it.</para>
         /// <remarks>
-        /// <para> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</para>
+        /// <para>Stopping a simple application server instance may cause service interruptions. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16313,7 +15440,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops simple application servers.</para>
+        /// <para>Stops one or more simple application servers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16362,19 +15489,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StopInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StopInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StopInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops simple application servers.</para>
+        /// <para>Stops one or more simple application servers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16423,19 +15543,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<StopInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<StopInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<StopInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops simple application servers.</para>
+        /// <para>Stops one or more simple application servers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16453,7 +15566,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops simple application servers.</para>
+        /// <para>Stops one or more simple application servers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16524,14 +15637,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16589,14 +15695,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16694,14 +15793,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16763,14 +15855,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16868,14 +15953,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCommandAttributeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCommandAttributeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCommandAttributeResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16937,14 +16015,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCommandAttributeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCommandAttributeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCommandAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17034,14 +16105,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateDiskAttributeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateDiskAttributeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateDiskAttributeResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17095,14 +16159,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateDiskAttributeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateDiskAttributeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateDiskAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17143,13 +16200,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a simple application server, including the server name and the password that you use to log on to the server.</para>
+        /// <para>Modifies the information of an instance, including the instance name and password.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
+        /// <h2>Operation description</h2>
+        /// <para>After you change the password, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17202,25 +16259,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateInstanceAttributeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateInstanceAttributeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a simple application server, including the server name and the password that you use to log on to the server.</para>
+        /// <para>Modifies the information of an instance, including the instance name and password.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
+        /// <h2>Operation description</h2>
+        /// <para>After you change the password, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17273,25 +16323,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateInstanceAttributeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a simple application server, including the server name and the password that you use to log on to the server.</para>
+        /// <para>Modifies the information of an instance, including the instance name and password.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
+        /// <h2>Operation description</h2>
+        /// <para>After you change the password, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17309,13 +16352,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a simple application server, including the server name and the password that you use to log on to the server.</para>
+        /// <para>Modifies the information of an instance, including the instance name and password.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
+        /// <h2>Operation description</h2>
+        /// <para>After you change the password, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17382,14 +16425,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateSnapshotAttributeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateSnapshotAttributeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateSnapshotAttributeResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17443,14 +16479,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateSnapshotAttributeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateSnapshotAttributeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateSnapshotAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17491,14 +16520,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the plan for a simple application server.</para>
+        /// <para>Upgrades the plan configuration for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</description></item>
+        /// <item><description>Only upgrades to a higher-tier plan are supported. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billing items</a>.</description></item>
+        /// <item><description>When you call this operation to upgrade a server, ensure that your Alibaba Cloud account balance is sufficient. Otherwise, the upgrade fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17548,26 +16577,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpgradeInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpgradeInstanceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpgradeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the plan for a simple application server.</para>
+        /// <para>Upgrades the plan configuration for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</description></item>
+        /// <item><description>Only upgrades to a higher-tier plan are supported. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billing items</a>.</description></item>
+        /// <item><description>When you call this operation to upgrade a server, ensure that your Alibaba Cloud account balance is sufficient. Otherwise, the upgrade fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17617,26 +16639,19 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpgradeInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpgradeInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpgradeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the plan for a simple application server.</para>
+        /// <para>Upgrades the plan configuration for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</description></item>
+        /// <item><description>Only upgrades to a higher-tier plan are supported. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billing items</a>.</description></item>
+        /// <item><description>When you call this operation to upgrade a server, ensure that your Alibaba Cloud account balance is sufficient. Otherwise, the upgrade fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17655,14 +16670,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the plan for a simple application server.</para>
+        /// <para>Upgrades the plan configuration for a specified simple application server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</description></item>
+        /// <item><description>Only upgrades to a higher-tier plan are supported. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billing items</a>.</description></item>
+        /// <item><description>When you call this operation to upgrade a server, ensure that your Alibaba Cloud account balance is sufficient. Otherwise, the upgrade fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17734,14 +16749,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UploadInstanceKeyPairResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UploadInstanceKeyPairResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UploadInstanceKeyPairResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17799,14 +16807,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UploadInstanceKeyPairResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UploadInstanceKeyPairResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UploadInstanceKeyPairResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>

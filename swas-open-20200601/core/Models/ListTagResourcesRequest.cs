@@ -50,12 +50,18 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance</description></item>
-        /// <item><description>snapshot</description></item>
-        /// <item><description>customimage</description></item>
-        /// <item><description>command</description></item>
-        /// <item><description>firewallrule</description></item>
-        /// <item><description>disk</description></item>
+        /// <item><description><para>instance</para>
+        /// </description></item>
+        /// <item><description><para>snapshot</para>
+        /// </description></item>
+        /// <item><description><para>customimage</para>
+        /// </description></item>
+        /// <item><description><para>command</para>
+        /// </description></item>
+        /// <item><description><para>firewallrule</para>
+        /// </description></item>
+        /// <item><description><para>disk</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

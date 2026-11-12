@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class CreateFirewallRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the simple application server.</para>
+        /// <para>The instance ID of the specified simple application server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,20 +33,20 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The port range.</para>
         /// <list type="bullet">
-        /// <item><description>When the transport layer protocol is TCP and/or UDP, the port range is 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: 1024/1055, which specifies the port range from 1024 to 1055.</description></item>
-        /// <item><description>When the transport layer protocol is ICMP, the port range is -1/-1, which indicates all ports.</description></item>
+        /// <item><description>TCP/UDP: Valid values: 1 to 65535. Use a forward slash (/) to separate the start port and the end port. For example, 1024/1055 indicates the port range from 1024 to 1055.</description></item>
+        /// <item><description>ICMP: -1/-1. This value indicates all ports.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3306</para>
+        /// <para>3306/3306</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server.</para>
+        /// <para>The region ID of the specified simple application server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The remarks of the firewall rule.</para>
+        /// <para>The remark for the firewall rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TEST</para>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The transport layer protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>TCP</description></item>
-        /// <item><description>UDP</description></item>
-        /// <item><description>TCP+UDP</description></item>
-        /// <item><description>ICMP</description></item>
+        /// <item><description>TCP: TCP</description></item>
+        /// <item><description>UDP: UDP</description></item>
+        /// <item><description>TCP+UDP: TCP and UDP</description></item>
+        /// <item><description>ICMP: ICMP</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

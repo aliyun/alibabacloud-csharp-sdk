@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class DescribeDatabaseInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the Simple Database Service instances. The value can be a JSON array that consists of up to 100 Simple Database Service instance IDs. Separate multiple instance IDs with commas (,).</para>
+        /// <para>The IDs of the lightweight database instances. The value can be a JSON array that consists of multiple instance IDs. You can specify up to 100 instance IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;swasdb-xxx******&quot;,&quot;swasdb-yyy******&quot;]</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string DatabaseInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number of the lightweight database instance list.</para>
+        /// <para>Starting value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Simple Database Service instances.</para>
+        /// <para>The region ID of the lightweight database instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

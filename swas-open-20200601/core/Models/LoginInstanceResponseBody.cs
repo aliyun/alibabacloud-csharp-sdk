@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class LoginInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL that you use to log on to the server.</para>
+        /// <para>The session protocol.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SSH</para>
+        /// </summary>
+        [NameInMap("Protocol")]
+        [Validation(Required=false)]
+        public string Protocol { get; set; }
+
+        /// <summary>
+        /// <para>The URL of the remote logon desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://ecs-workbench.aliyun.com/view/instance/single/gbktfz">https://ecs-workbench.aliyun.com/view/instance/single/gbktfz</a>****</para>
@@ -28,6 +38,26 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The security token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ik1mb2g69ksagyybrd13be7h3655yuhb</para>
+        /// </summary>
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
+        /// <summary>
+        /// <para>The session ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-0rwwbwxymfzobrcz8</para>
+        /// </summary>
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
     }
 

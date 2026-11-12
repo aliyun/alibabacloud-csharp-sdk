@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ModifyFirewallTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string FirewallTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The firewall rule in the template.</para>
+        /// <para>The firewall rules.</para>
         /// </summary>
         [NameInMap("FirewallTemplateRule")]
         [Validation(Required=false)]
         public List<ModifyFirewallTemplateRequestFirewallTemplateRule> FirewallTemplateRule { get; set; }
         public class ModifyFirewallTemplateRequestFirewallTemplateRule : TeaModel {
             /// <summary>
-            /// <para>The ID of the firewall rule.</para>
+            /// <para>The ID of the firewall template rule.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string FirewallTemplateRuleId { get; set; }
 
             /// <summary>
-            /// <para>The port range. Valid values: 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: <c>1024/1055</c>, which indicates that the port range of 1024 to 1055.</para>
+            /// <para>The port range. Valid values: 1 to 65535. Use a forward slash (/) to separate the start port and the end port. For example, <c>1024/1055</c> indicates a port range from 1024 to 1055.</para>
             /// <remarks>
-            /// <para> If you set RuleProtocol to ICMP, you must set Port to -1/-1.</para>
+            /// <para>If you set the protocol to ICMP, the port must be set to -1/-1.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the firewall template rule.</para>
+            /// <para>The remark of the firewall rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -82,12 +82,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The transport layer protocol that the rule supports. Valid values:</para>
+            /// <para>The transport layer protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP</description></item>
-            /// <item><description>UDP</description></item>
-            /// <item><description>TCP+UDP</description></item>
-            /// <item><description>ICMP</description></item>
+            /// <item><description>TCP: TCP</description></item>
+            /// <item><description>UDP: UDP</description></item>
+            /// <item><description>TCP+UDP: TCP and UDP</description></item>
+            /// <item><description>ICMP: ICMP</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string RuleProtocol { get; set; }
 
             /// <summary>
-            /// <para>The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.</para>
+            /// <para>The source IPv4 CIDR block for which you want to configure access permissions. You can specify an IP address range in CIDR format or IPv4 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.0.0/0</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Simple Application Server instance. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the list of supported Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// <summary>
             /// <para>The quota of the data transfer plan in the current month. Unit: Byte.</para>
             /// <remarks>
-            /// <para> TrafficPackageTotal = TrafficUsed + TrafficPackageRemaining</para>
+            /// <para>TrafficPackageTotal = TrafficUsed + TrafficPackageRemaining</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

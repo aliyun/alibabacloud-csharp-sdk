@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>Specifies whether to forcibly restart the servers. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcibly restarts the servers. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the server will be lost.</description></item>
-        /// <item><description>false: normally restarts the instance.</description></item>
+        /// <item><description><para>true: forcibly restarts the servers. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the server will be lost.</para>
+        /// </description></item>
+        /// <item><description><para>false: normally restarts the instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false</para>
         /// 

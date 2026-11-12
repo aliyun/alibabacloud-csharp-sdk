@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancePlansModificationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operating system types supported by the plan.</para>
+        /// <para>The array of plans.</para>
         /// </summary>
         [NameInMap("Plans")]
         [Validation(Required=false)]
         public List<ListInstancePlansModificationResponseBodyPlans> Plans { get; set; }
         public class ListInstancePlansModificationResponseBodyPlans : TeaModel {
             /// <summary>
-            /// <para>The peak bandwidth. Unit: Mbit/s.</para>
+            /// <para>The peak bandwidth. Unit: Mbps.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3</para>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs.</para>
+            /// <para>The number of vCPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,10 +37,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public int? Core { get; set; }
 
             /// <summary>
-            /// <para>The unit of the plan price. Valid values:</para>
+            /// <para>The unit of the price. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CNY</description></item>
-            /// <item><description>USD</description></item>
+            /// <item><description><para>CNY: Chinese Yuan</para>
+            /// </description></item>
+            /// <item><description><para>USD: US Dollar</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The disk size of the simple application server. Unit: GB.</para>
+            /// <para>The disk capacity. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -61,10 +63,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public int? DiskSize { get; set; }
 
             /// <summary>
-            /// <para>The category of the disk. Valid values:</para>
+            /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SSD: standard SSD</description></item>
-            /// <item><description>ESSD: enhanced SSD</description></item>
+            /// <item><description><para>SSD: a standard SSD.</para>
+            /// </description></item>
+            /// <item><description><para>ESSD: an Enhanced SSD (ESSD) at performance level (PL) 0.</para>
+            /// </description></item>
+            /// <item><description><para>CLOUD_EFFICIENCY: an ultra disk.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string DiskType { get; set; }
 
             /// <summary>
-            /// <para>The monthly data transfer quota. Unit: GB.</para>
+            /// <para>The monthly traffic. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>400</para>
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public int? Flow { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: GB.</para>
+            /// <para>The memory size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public double? OriginPrice { get; set; }
 
             /// <summary>
-            /// <para>The ID of the plan.</para>
+            /// <para>The plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swas.s2.c2m1s40b3t04</para>
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string PlanId { get; set; }
 
             /// <summary>
-            /// <para>The operating system types supported by the plan.</para>
+            /// <para>The operating systems supported by the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;Linux&quot;,&quot;Windows&quot;]</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class StopInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate the parameter value on your client and ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly stop the servers.</para>
+        /// <para>Specifies whether to forcibly stop the instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: forcibly stops the servers.</description></item>
-        /// <item><description><b>false</b>: normally stops the servers. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: forcibly stops the instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): normally stops the instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public bool? ForceStop { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).</para>
+        /// <para>The instance IDs of the simple application servers. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple instance IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the simple application servers. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the simple application server instance. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the supported Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
