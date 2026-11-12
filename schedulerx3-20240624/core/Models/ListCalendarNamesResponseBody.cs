@@ -20,9 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The list of calendar names.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -49,12 +47,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

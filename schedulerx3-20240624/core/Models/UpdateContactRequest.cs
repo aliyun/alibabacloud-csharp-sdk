@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateContactRequest : TeaModel {
         /// <summary>
-        /// <para>渠道参数配置 JSON 字符串（可选，传入则更新）</para>
+        /// <para>The JSON character string for channel parameter settings. This parameter is optional. If specified, the settings are updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;channels&quot;:[{&quot;channelType&quot;:&quot;dingtalk&quot;,&quot;clientId&quot;:&quot;xxx&quot;,&quot;clientSecret&quot;:&quot;xxx&quot;,&quot;targetType&quot;:&quot;group&quot;,&quot;targetId&quot;:&quot;xxx&quot;,&quot;robotCode&quot;:&quot;xxx&quot;}]}</para>
@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The name of the contact to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ContactName { get; set; }
 
         /// <summary>
-        /// <para>是否启用（true/false，可选）</para>
+        /// <para>Specifies whether to enable or disable the notification channel for the contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>渠道大类（可选，传入则更新）</para>
+        /// <para>The type of the contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IM</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class CreateContactRequest : TeaModel {
         /// <summary>
-        /// <para>渠道参数配置 JSON 字符串。IM 类型示例：{&quot;channels&quot;:[{&quot;channelType&quot;:&quot;dingtalk&quot;,&quot;clientId&quot;:&quot;xxx&quot;,&quot;clientSecret&quot;:&quot;xxx&quot;,&quot;targetType&quot;:&quot;group&quot;,&quot;targetId&quot;:&quot;xxx&quot;,&quot;robotCode&quot;:&quot;xxx&quot;}]}</para>
+        /// <para>The JSON character string for channel parameter settings. Example for the IM type: {&quot;channels&quot;:[{&quot;channelType&quot;:&quot;dingtalk&quot;,&quot;clientId&quot;:&quot;xxx&quot;,&quot;clientSecret&quot;:&quot;xxx&quot;,&quot;targetType&quot;:&quot;group&quot;,&quot;targetId&quot;:&quot;xxx&quot;,&quot;robotCode&quot;:&quot;xxx&quot;}]}</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,21 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>联系人名称（用户自定义，用于展示），同一用户下不可重名</para>
+        /// <para>The name of the alert contact.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>陈睿</para>
+        /// <para>Chen Rui</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
         public string ContactName { get; set; }
 
         /// <summary>
-        /// <para>渠道大类，当前支持 IM</para>
+        /// <para>The contact type.</para>
+        /// <list type="bullet">
+        /// <item><description>IM: Configures an IM channel notification contact.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

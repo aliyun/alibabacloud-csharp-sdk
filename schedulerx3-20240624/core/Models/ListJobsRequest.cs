@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>job01 standalone task</para>
+        /// <para>job01 standalone job</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The <c>jobhandler</c> name.</para>
+        /// <para>The jobhandler name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jobDemoHandler</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobHandler { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The task name.</para>
+        /// <para>The job name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job01</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The task label filter condition.</para>
+        /// <para>The job label condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{key:value}</para>
@@ -109,6 +109,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// <para>The list of time types.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("TimeType")]
+        [Validation(Required=false)]
+        public List<int?> TimeType { get; set; }
 
         /// <summary>
         /// <para>The workflow ID.</para>

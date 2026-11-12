@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetPageLogRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-app</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1777292662000</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The job execution ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1310630367761285120</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobExecutionId { get; set; }
 
         /// <summary>
+        /// <para>The job name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job01</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para>The search keyword.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hello word</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -76,6 +91,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to sort the results in descending order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Sorts the results in descending order.</description></item>
+        /// <item><description><b>false</b>: Sorts the results in ascending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -84,6 +105,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
+        /// <para>The start timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1777292662000</para>
         /// </summary>
@@ -92,6 +115,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The executor address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.1.100</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListWorkflowsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-app</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The description of the workflow.</para>
+        /// <para>The workflow description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my first workflow</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. The default value is 10.</para>
+        /// <para>The maximum number of entries to return for this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the workflow.</para>
+        /// <para>The workflow name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myWorkflow</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If the return value is empty, no more data is returned.</para>
+        /// <para>The token that specifies the position where the current call returns the read data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -91,12 +91,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the workflow. If this parameter is not specified, workflows in the <c>disabled</c> state are returned by default. Valid values:</para>
+        /// <para>The workflow status. Default value: 0. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: disabled</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c>: enabled</para>
-        /// </description></item>
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>1: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +105,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow.</para>
+        /// <para>The workflow ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

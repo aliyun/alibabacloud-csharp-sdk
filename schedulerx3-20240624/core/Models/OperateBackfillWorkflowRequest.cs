@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end date of the backfill, in YYYY-MM-DD format.</para>
+        /// <para>The end date for backfilling data. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The start date of the backfill, in YYYY-MM-DD format.</para>
+        /// <para>The start date for backfilling data. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

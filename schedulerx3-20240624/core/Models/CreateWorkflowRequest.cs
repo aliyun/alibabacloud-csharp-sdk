@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The custom calendar. This parameter applies only when <c>TimeType</c> is <c>cron</c>.</para>
+        /// <para>The custom calendar. This parameter is optional when the time type is cron.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workday</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Calendar { get; set; }
 
         /// <summary>
-        /// <para>A unique client token to ensure request idempotence. The token must contain only ASCII characters. If you omit this parameter, the system uses the RequestId as the ClientToken. The RequestId is unique to each request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the value from your client and ensure that the value is unique across different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId may be different for each API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum concurrency for the workflow.</para>
+        /// <para>The maximum concurrency of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -83,12 +83,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The status of the workflow. By default, the workflow is disabled. Valid values:</para>
+        /// <para>The workflow status. Default value: 0. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: Disabled</para>
-        /// </description></item>
-        /// <item><description><para>1: Enabled</para>
-        /// </description></item>
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>1: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,14 +97,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The time expression, which depends on the <c>TimeType</c> parameter.</para>
+        /// <para>The time expression. Set the time expression based on the selected time type.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>none</b>: This parameter is not required.</para>
-        /// </description></item>
-        /// <item><description><para><b>cron</b>: Enter a standard cron expression. Online validation is supported.</para>
-        /// </description></item>
-        /// <item><description><para><b>api</b>: This parameter is not required.</para>
-        /// </description></item>
+        /// <item><description><b>none</b>: Not required.</description></item>
+        /// <item><description><b>cron</b>: Enter a standard cron expression. Online validation is supported.</description></item>
+        /// <item><description><b>api</b>: Not required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,14 +112,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string TimeExpression { get; set; }
 
         /// <summary>
-        /// <para>The schedule type. Valid values:</para>
+        /// <para>The time type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>-1: none<br></para>
-        /// </description></item>
-        /// <item><description><para>1: cron<br></para>
-        /// </description></item>
-        /// <item><description><para>100: api</para>
-        /// </description></item>
+        /// <item><description>-1: none<br/></description></item>
+        /// <item><description>1: cron<br/></description></item>
+        /// <item><description>100: api</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,7 +127,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? TimeType { get; set; }
 
         /// <summary>
-        /// <para>The time zone for the schedule.</para>
+        /// <para>The time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GMT+8</para>

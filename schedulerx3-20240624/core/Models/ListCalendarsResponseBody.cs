@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>The returned data.</description></item>
-        /// </list>
+        /// <para>The calendar list and pagination information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCalendarsResponseBodyData Data { get; set; }
         public class ListCalendarsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The maximum number of entries returned per page.</para>
+            /// <para>The maximum number of entries to return for the current request. Default value: 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token for the next page of results. If this parameter is not returned, all results have been retrieved.</para>
+            /// <para>The token that is returned by the server when the data that meets the query conditions is not completely read. You can use this token to continue reading the remaining data. You do not need to specify this parameter for the first query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
@@ -49,14 +47,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>A list of calendars.</para>
+            /// <para>The list of records.</para>
             /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<ListCalendarsResponseBodyDataRecords> Records { get; set; }
             public class ListCalendarsResponseBodyDataRecords : TeaModel {
                 /// <summary>
-                /// <para>The name of the calendar.</para>
+                /// <para>The calendar name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>workday</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string CalendarName { get; set; }
 
                 /// <summary>
-                /// <para>A JSON string that represents an array of months and their corresponding days.</para>
+                /// <para>The calendar for each month in JSON array format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3835AA29-2298-5434-BC53-9CC377CDFD2C</para>
@@ -133,12 +131,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The name of a custom calendar to exclude specific dates from the schedule.</para>
+        /// <para>The custom calendar.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workday</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Calendar { get; set; }
 
         /// <summary>
-        /// <para>A unique token that you provide to ensure the request is idempotent. The token can be up to 64 ASCII characters long.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the value on the client side. Ensure that the value is unique across different requests and contains a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D0DE9C33-992A-580B-89C4-B609A292748D</para>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum concurrency for the workflow.</para>
+        /// <para>The maximum concurrency.</para>
         /// <remarks>
-        /// <para>The maximum number of concurrent instances that can run for the same workflow. A value of <c>1</c> prevents overlapping runs. If the number of running instances reaches this limit, subsequent scheduled runs are skipped.</para>
+        /// <para>The maximum number of instances that can run concurrently for the same workflow. A value of 1 indicates that concurrent execution is not allowed. If the concurrency limit is exceeded, the current scheduling task is skipped.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,14 +85,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The cron expression for the schedule. This parameter is required only when <c>TimeType</c> is set to <c>1</c> (cron).</para>
+        /// <para>The time expression. Configure the time expression based on the selected time type.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>TimeType</c> is <c>-1</c> (none), this parameter is not required.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>TimeType</c> is <c>1</c> (cron), specify a standard cron expression.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>TimeType</c> is <c>100</c> (api), this parameter is not required.</para>
-        /// </description></item>
+        /// <item><description>none: Leave this parameter empty.</description></item>
+        /// <item><description>cron: Enter a standard cron expression. Online verification is supported.</description></item>
+        /// <item><description>api: Leave this parameter empty.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,12 +102,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <summary>
         /// <para>The scheduling type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>-1</c> (none): The workflow is not scheduled and must be triggered on demand.</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c> (cron): The workflow runs based on the cron expression in the <c>TimeExpression</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para><c>100</c> (api): The workflow is triggered by an API call.</para>
-        /// </description></item>
+        /// <item><description>-1: none</description></item>
+        /// <item><description>1: cron</description></item>
+        /// <item><description>100: api</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,9 +115,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? TimeType { get; set; }
 
         /// <summary>
-        /// <para>The time zone for the schedule.</para>
+        /// <para>The time zone.</para>
         /// <remarks>
-        /// <para>Defaults to the time zone of the SchedulerX server.</para>
+        /// <para>By default, the time zone of the SchedulerX server is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ExportWorkflowsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-app</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster where the Workflow is located.</para>
+        /// <para>A short description of struct</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>An array of Workflow IDs to export.</para>
+        /// <para>The workflow ID.</para>
         /// </summary>
         [NameInMap("WorkflowId")]
         [Validation(Required=false)]

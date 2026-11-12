@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class CreateContactResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,12 +19,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateContactResponseBodyData Data { get; set; }
         public class CreateContactResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>新建联系人的 id，后续 Update/Delete 时使用</para>
+            /// <para>The contact ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5000</para>
@@ -34,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</para>
         /// </summary>
@@ -50,6 +59,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

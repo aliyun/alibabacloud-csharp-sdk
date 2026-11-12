@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxljob-c20f7ec9a78</para>
+        /// <para>xxljob-b6ec1xxxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -24,13 +24,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx-test-1107</para>
+        /// <para>qianxi-test-0812</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
+        /// <para>The instance-level IP whitelist.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.1.0/24</para>
         /// </summary>

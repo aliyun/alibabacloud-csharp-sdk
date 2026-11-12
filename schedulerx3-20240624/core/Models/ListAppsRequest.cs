@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
     public class ListAppsRequest : TeaModel {
         /// <summary>
         /// <para>The application name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-app</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -19,6 +22,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxljob-b6ec1xxxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -38,7 +44,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -46,6 +52,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <para>The title.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test application</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

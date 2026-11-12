@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The days of each month, in JSON format.</para>
+        /// <para>The month.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

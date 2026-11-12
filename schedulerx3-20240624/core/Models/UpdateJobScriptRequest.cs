@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <b>Example:</b>
         /// <para>#!/bin/bash
         /// echo &quot;xxl-job: hello shell&quot;</para>
-        /// <para>echo &quot;脚本位置: $0&quot;
-        /// echo &quot;任务参数: $1&quot;
-        /// echo &quot;分片序号 = $2&quot;
-        /// echo &quot;分片总数 = $3&quot;</para>
+        /// <para>echo &quot;Script path: $0&quot;
+        /// echo &quot;Task parameter: $1&quot;
+        /// echo &quot;Shard index = $2&quot;
+        /// echo &quot;Total shards = $3&quot;</para>
         /// <para>echo &quot;Good bye!&quot;
         /// exit 0</para>
         /// </summary>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ScriptContent { get; set; }
 
         /// <summary>
-        /// <para>The description of the script version.</para>
+        /// <para>The script version description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

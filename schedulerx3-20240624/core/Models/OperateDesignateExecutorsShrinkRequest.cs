@@ -17,6 +17,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string AddressListShrink { get; set; }
 
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1625</para>
+        /// </summary>
         [NameInMap("AppGroupId")]
         [Validation(Required=false)]
         public long? AppGroupId { get; set; }
@@ -44,10 +50,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the designated machine. Valid values:</para>
+        /// <para>The type of machine to designate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: designated worker.</description></item>
-        /// <item><description><b>2</b>: designated label.</description></item>
+        /// <item><description><b>1</b>: Designates a worker.</description></item>
+        /// <item><description><b>2</b>: Designates a label.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +65,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? DesignateType { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable failover.</para>
+        /// <para>Specifies whether failover is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

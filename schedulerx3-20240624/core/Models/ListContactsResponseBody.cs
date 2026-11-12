@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListContactsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,12 +19,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>The workflow version information.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListContactsResponseBodyData Data { get; set; }
         public class ListContactsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>当前页码</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>每页条数</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -42,14 +47,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>联系人列表</para>
+            /// <para>The list of records.</para>
             /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<ListContactsResponseBodyDataRecords> Records { get; set; }
             public class ListContactsResponseBodyDataRecords : TeaModel {
                 /// <summary>
-                /// <para>渠道配置 JSON（clientSecret 已脱敏为 ***）</para>
+                /// <para>The JSON character string for the channel parameter settings. Example for the IM type: {&quot;channels&quot;:[{&quot;channelType&quot;:&quot;dingtalk&quot;,&quot;clientId&quot;:&quot;xxx&quot;,&quot;clientSecret&quot;:&quot;xxx&quot;,&quot;targetType&quot;:&quot;group&quot;,&quot;targetId&quot;:&quot;xxx&quot;,&quot;robotCode&quot;:&quot;xxx&quot;}]}</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;channels&quot;:[{&quot;channelType&quot;:&quot;dingtalk&quot;,&quot;clientId&quot;:&quot;xxx&quot;,&quot;clientSecret&quot;:&quot;xxx&quot;,&quot;targetType&quot;:&quot;group&quot;,&quot;targetId&quot;:&quot;xxx&quot;,&quot;robotCode&quot;:&quot;xxx&quot;}]}</para>
@@ -59,17 +64,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Config { get; set; }
 
                 /// <summary>
-                /// <para>联系人 ID</para>
+                /// <para>The ID of the contact.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>job-85d64bff-50b5-4d02-aa3f-19956b17449d</para>
+                /// <para>5000</para>
                 /// </summary>
                 [NameInMap("ContactId")]
                 [Validation(Required=false)]
                 public long? ContactId { get; set; }
 
                 /// <summary>
-                /// <para>联系人名称</para>
+                /// <para>The name of the contact.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Tom</para>
@@ -79,7 +84,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string ContactName { get; set; }
 
                 /// <summary>
-                /// <para>是否启用</para>
+                /// <para>Indicates whether the selected custom contact notification channel is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -89,7 +94,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>创建时间</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1783065190000</para>
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>最后修改时间</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1783065190000</para>
@@ -109,7 +114,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>渠道大类（IM/WEBHOOK/SMS/MAIL）</para>
+                /// <para>The type of the created contact. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>IM</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IM</para>
@@ -121,7 +129,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>总记录数</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -133,6 +141,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter check error</para>
         /// </summary>
@@ -141,6 +151,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</para>
         /// </summary>
@@ -149,6 +161,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

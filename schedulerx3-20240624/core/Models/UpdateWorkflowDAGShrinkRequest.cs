@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The directed acyclic graph (DAG) of the workflow.</para>
+        /// <para>The workflow DAG information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Dag")]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string DagShrink { get; set; }
 
         /// <summary>
-        /// <para>The version of the DAG. To obtain this value, call the <a href="https://help.aliyun.com/document_detail/465989.html">ListDAGVersions</a> operation.</para>
+        /// <para>The workflow version number. You can call the <a href="https://help.aliyun.com/document_detail/465989.html">ListDAGVersions</a> operation to obtain the value of this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1137005</para>

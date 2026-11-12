@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetJobExecutionProgressRequest : TeaModel {
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1625</para>
+        /// </summary>
         [NameInMap("AppGroupId")]
         [Validation(Required=false)]
         public long? AppGroupId { get; set; }
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The task execution ID.</para>
+        /// <para>The job execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

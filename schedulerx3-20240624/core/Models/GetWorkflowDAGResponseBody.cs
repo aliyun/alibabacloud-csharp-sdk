@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetWorkflowDAGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Response Code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWorkflowDAGResponseBodyData Data { get; set; }
         public class GetWorkflowDAGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of Edges in the Workflow DAG.</para>
+            /// <para>The list of workflow edges.</para>
             /// </summary>
             [NameInMap("Edges")]
             [Validation(Required=false)]
             public List<GetWorkflowDAGResponseBodyDataEdges> Edges { get; set; }
             public class GetWorkflowDAGResponseBodyDataEdges : TeaModel {
                 /// <summary>
-                /// <para>The Job ID of the source Node.</para>
+                /// <para>The task ID of the source node of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public long? Source { get; set; }
 
                 /// <summary>
-                /// <para>The Job ID of the target Node.</para>
+                /// <para>The task ID of the target node of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>A list of Nodes in the Workflow DAG.</para>
+            /// <para>The returned data type.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<GetWorkflowDAGResponseBodyDataNodes> Nodes { get; set; }
             public class GetWorkflowDAGResponseBodyDataNodes : TeaModel {
                 /// <summary>
-                /// <para>The Application Name.</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oak-payment-async-job</para>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The coordinates of the Node.</para>
+                /// <para>The coordinate information of the node.</para>
                 /// </summary>
                 [NameInMap("Coordinate")]
                 [Validation(Required=false)]
                 public GetWorkflowDAGResponseBodyDataNodesCoordinate Coordinate { get; set; }
                 public class GetWorkflowDAGResponseBodyDataNodesCoordinate : TeaModel {
                     /// <summary>
-                    /// <para>Optional. The height of the Node.</para>
+                    /// <para>The height of the node. This field is optional.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? Height { get; set; }
 
                     /// <summary>
-                    /// <para>Optional. The width of the Node.</para>
+                    /// <para>The width of the node. This field is optional.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? Width { get; set; }
 
                     /// <summary>
-                    /// <para>The x-coordinate of the Node.</para>
+                    /// <para>The X-axis coordinate of the node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? X { get; set; }
 
                     /// <summary>
-                    /// <para>The y-coordinate of the Node.</para>
+                    /// <para>The Y-axis coordinate of the node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -122,17 +122,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 }
 
                 /// <summary>
-                /// <para>The Dependency Strategy.</para>
+                /// <para>The dependency policy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>all_success</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("DependentStrategy")]
                 [Validation(Required=false)]
                 public int? DependentStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The Job ID.</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The Job type.</para>
+                /// <para>The task type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>script_shell</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string JobType { get; set; }
 
                 /// <summary>
-                /// <para>The Job name.</para>
+                /// <para>The task name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>job1</para>
@@ -162,12 +162,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The Job Status.</para>
+                /// <para>The task status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: Disabled</para>
-                /// </description></item>
-                /// <item><description><para>1: Enabled</para>
-                /// </description></item>
+                /// <item><description>0: Disabled.</description></item>
+                /// <item><description>1: Enabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -182,7 +180,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
-        /// <para>The Error Message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
@@ -192,7 +190,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The Request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</para>
@@ -202,7 +200,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

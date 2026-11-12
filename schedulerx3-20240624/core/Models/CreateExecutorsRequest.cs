@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class CreateExecutorsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The worker type. The only valid value is <c>k8s_service</c>.</para>
+        /// <para>The executor type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string WorkerType { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that contains an array of workers.</para>
+        /// <para>The list of specified machines in JSON format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

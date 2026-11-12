@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateBackfillWorkflowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. A value of <c>200</c> indicates that the request was successful.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID generated for the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

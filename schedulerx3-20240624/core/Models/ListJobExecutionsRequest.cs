@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-12 20:50:56</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-12 20:50:55</para>

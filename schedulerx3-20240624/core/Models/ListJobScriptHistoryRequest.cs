@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListJobScriptHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the job.</para>
+        /// <para>The job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Default value: 10.</para>
+        /// <para>The maximum number of entries to return for this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. You do not need to set this parameter for the first request.</para>
+        /// <para>The token that indicates the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateStopJobExecutionShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// </summary>
         [NameInMap("AppGroupId")]
         [Validation(Required=false)]
         public long? AppGroupId { get; set; }
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobExecutionId { get; set; }
 
         /// <summary>
-        /// <para>The subtask IDs.</para>
+        /// <para>The subtask ID.</para>
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]

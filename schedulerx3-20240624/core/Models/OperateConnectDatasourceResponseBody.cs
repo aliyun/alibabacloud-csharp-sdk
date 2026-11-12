@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateConnectDatasourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the invocation succeeded.  </para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The invocation succeeded.  </description></item>
-        /// <item><description>false: The invocation failed.</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

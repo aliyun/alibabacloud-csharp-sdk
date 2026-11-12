@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>A list of workflow IDs.</para>
+        /// <para>The list of workflow IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WorkflowIds")]

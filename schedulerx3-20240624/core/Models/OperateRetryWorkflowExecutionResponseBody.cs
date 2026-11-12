@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3835AA29-2298-5434-BC53-9CC377CDFD2C</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The call succeeded.</para>
-        /// </description></item>
-        /// <item><description><para>false: The call failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

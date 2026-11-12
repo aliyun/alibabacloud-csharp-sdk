@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time. This value is a UNIX timestamp.</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1721636220</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobExecutionId { get; set; }
 
         /// <summary>
-        /// <para>The keyword to search for.</para>
+        /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello word</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The number of log entries to return.</para>
+        /// <para>The LineNum.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -101,12 +101,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to sort the results in descending order.</para>
+        /// <para>Specifies whether to sort the results in descending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: sorts the results in descending order.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: sorts the results in ascending order.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Sorts the results in descending order.</description></item>
+        /// <item><description><b>false</b>: Sorts the results in ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,17 +115,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// <para>The time when the job was scheduled. This value is a UNIX timestamp.</para>
+        /// <para>The scheduling time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-10-01 12:00:00</para>
+        /// <para>1696132800000</para>
         /// </summary>
         [NameInMap("ScheduleTime")]
         [Validation(Required=false)]
         public long? ScheduleTime { get; set; }
 
         /// <summary>
-        /// <para>The start time. This value is a UNIX timestamp.</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1721636220</para>

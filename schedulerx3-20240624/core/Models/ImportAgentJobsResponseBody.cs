@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ImportAgentJobsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The detailed information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</para>
         /// </summary>
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

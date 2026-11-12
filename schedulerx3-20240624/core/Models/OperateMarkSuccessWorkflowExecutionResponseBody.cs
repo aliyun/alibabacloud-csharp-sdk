@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateMarkSuccessWorkflowExecutionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of <c>200</c> indicates a successful request.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Additional details about the result.</para>
+        /// <para>The detailed information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request, used for troubleshooting.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1DF6732E-15D8-5E1F-95E3-C10077F556B5</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the operation succeeded.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The operation succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The operation failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call succeeded.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

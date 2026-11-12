@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateDisableJobsRequest : TeaModel {
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1625</para>
+        /// </summary>
         [NameInMap("AppGroupId")]
         [Validation(Required=false)]
         public long? AppGroupId { get; set; }
@@ -35,6 +41,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The list of task IDs.</para>
+        /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]
         public List<long?> JobIds { get; set; }

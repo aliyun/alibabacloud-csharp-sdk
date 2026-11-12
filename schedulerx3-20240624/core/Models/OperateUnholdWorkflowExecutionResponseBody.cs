@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The detailed information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3835AA29-2298-5434-BC53-9CC377CDFD2C</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

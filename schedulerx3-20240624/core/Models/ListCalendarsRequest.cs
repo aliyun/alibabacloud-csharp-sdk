@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListCalendarsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the calendar.</para>
+        /// <para>The calendar name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workday</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string CalendarName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,12 +31,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return calendar details. The default value is <c>false</c>.</para>
+        /// <para>Specifies whether to retrieve calendar details. Default value: false.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>false</c>: Does not return the detailed list of days for each month. Only basic information is returned.</para>
-        /// </description></item>
-        /// <item><description><para><c>true</c>: Returns the detailed list of days for each month.</para>
-        /// </description></item>
+        /// <item><description>false: The detailed list of days for each month is not returned. Only basic information is returned.</description></item>
+        /// <item><description>true: The detailed list of days for each month is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? FetchCalendarDetail { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page. The default value is 10.</para>
+        /// <para>The maximum number of entries to return for the current request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. Set this parameter to the <c>NextToken</c> value from the previous response. Omit this parameter for the first request.</para>
+        /// <para>The token that specifies the position where the current call starts to read data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>

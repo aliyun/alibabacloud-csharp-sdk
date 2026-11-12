@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The query result.</para>
+        /// <para>The query results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -53,6 +53,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public List<ListJobExecutionsResponseBodyDataRecords> Records { get; set; }
             public class ListJobExecutionsResponseBodyDataRecords : TeaModel {
+                /// <summary>
+                /// <para>The application ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1625</para>
+                /// </summary>
                 [NameInMap("AppGroupId")]
                 [Validation(Required=false)]
                 public long? AppGroupId { get; set; }
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Attempt { get; set; }
 
                 /// <summary>
-                /// <para>The data timestamp of the job.</para>
+                /// <para>The node data timestamp. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-12 14:52:42</para>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the job.</para>
+                /// <para>The job end time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-12 14:52:42</para>
@@ -180,14 +186,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// <summary>
                 /// <para>The routing strategy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: round-robin.</description></item>
-                /// <item><description>2: random.</description></item>
-                /// <item><description>3: first.</description></item>
-                /// <item><description>4: last.</description></item>
-                /// <item><description>5: least frequently used.</description></item>
-                /// <item><description>6: least recently used.</description></item>
-                /// <item><description>7: consistent hashing.</description></item>
-                /// <item><description>8: shard broadcast.</description></item>
+                /// <item><description>1: Round-robin.</description></item>
+                /// <item><description>2: Random.</description></item>
+                /// <item><description>3: First.</description></item>
+                /// <item><description>4: Last.</description></item>
+                /// <item><description>5: Least frequently used.</description></item>
+                /// <item><description>6: Least recently used.</description></item>
+                /// <item><description>7: Consistent hashing.</description></item>
+                /// <item><description>8: Sharding broadcast.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -198,7 +204,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? RouteStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling time of the job.</para>
+                /// <para>The job scheduling time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-12 14:52:42</para>
@@ -260,7 +266,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? TimeType { get; set; }
 
                 /// <summary>
-                /// <para>The tokens consumed by the AI job.</para>
+                /// <para>The tokens consumed by AI jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -289,7 +295,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? TriggerType { get; set; }
 
                 /// <summary>
-                /// <para>The machine on which the job instance runs.</para>
+                /// <para>The machine where the job instance runs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://192.168.1.9:9999/">http://192.168.1.9:9999/</a></para>
@@ -329,6 +335,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string WorkflowName { get; set; }
 
                 /// <summary>
+                /// <para>The job execution extended attributes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;sessionId&quot;:&quot;ac21f9f6-5a88-4f97-abd1-b51989166035&quot;}</para>
                 /// </summary>
@@ -362,7 +370,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID generated by Alibaba Cloud for this request. You can use it to troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BCE89B3-E882-511D-9A75-D452A56EC4B1</para>

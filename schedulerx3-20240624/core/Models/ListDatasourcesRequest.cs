@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListDatasourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Maximum data volume to read in this request. Default value is 10.</para>
+        /// <para>The maximum number of entries to return for this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Job Name.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>修正券统计数据</para>
+        /// <para>Corrected voucher statistics</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates the current read position returned by the call. An empty value means all data has been read. This parameter is not required for the first query.</para>
+        /// <para>The token that indicates the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,10 +71,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Grafana dashboard type, including: dash-db: Dashboard; dash-folder: Folder (which can contain dashboards).</para>
+        /// <para>The Grafana dashboard type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>dash-db: Dashboard.</description></item>
+        /// <item><description>dash-folder: Folder, which can contain dashboards.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>REDIS</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

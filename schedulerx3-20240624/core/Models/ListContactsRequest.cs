@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListContactsRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the alert contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Tom</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ContactName { get; set; }
 
         /// <summary>
-        /// <para>页码，从 1 开始，默认 1</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>每页条数，默认 20，最大 100</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

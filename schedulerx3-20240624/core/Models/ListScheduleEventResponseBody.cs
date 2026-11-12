@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The paginated results of scheduling events.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The array of event records.</para>
+            /// <para>The result set.</para>
             /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The event content.</para>
+                /// <para>The content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hello word</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The event status.</para>
+                /// <para>The event ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Failed</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the event. The time is in the <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
+                /// <para>The log printing time, in the <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-31 16:43:51</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string WorkerAddr { get; set; }
 
                 /// <summary>
-                /// <para>The workflow execution ID.</para>
+                /// <para>The workflow execution record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1450568762586578000</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// <para>The workflow name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>工作流0001</para>
+                /// <para>Workflow0001</para>
                 /// </summary>
                 [NameInMap("WorkflowName")]
                 [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
-        /// <para>The returned error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter check error</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request, which is used to troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B880122A-B0E4-52E8-8F54-87DB7779EB74</para>
@@ -188,12 +188,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

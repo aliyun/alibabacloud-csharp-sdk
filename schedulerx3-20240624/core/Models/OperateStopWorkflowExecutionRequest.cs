@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The workflow execution ID.</para>
+        /// <para>The workflow instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

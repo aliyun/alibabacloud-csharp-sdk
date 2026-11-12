@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListJobScriptHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of <c>200</c> indicates that the request was successful.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>The response data.</description></item>
-        /// </list>
+        /// <para>The task script history version query results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListJobScriptHistoryResponseBodyData Data { get; set; }
         public class ListJobScriptHistoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The token to retrieve the next page of results. If this parameter is empty, no more data is available.</para>
+            /// <para>If the data that meets the query conditions is not completely read, the server returns a nextToken. You can use the nextToken to continue reading the subsequent data. You do not need to specify this parameter for the first query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
@@ -39,16 +37,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description>A list of script history records.</description></item>
-            /// </list>
+            /// <para>The list of task script history versions.</para>
             /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<ListJobScriptHistoryResponseBodyDataRecords> Records { get; set; }
             public class ListJobScriptHistoryResponseBodyDataRecords : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the script version was created.</para>
+                /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-29 15:56:36</para>
@@ -58,7 +54,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator of the script version.</para>
+                /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1963096506470832</para>
@@ -68,15 +64,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>The content of the script.</para>
+                /// <para>The script content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>#!/bin/bash
                 /// echo &quot;xxl-job: hello shell&quot;</para>
-                /// <para>echo &quot;脚本位置: $0&quot;
-                /// echo &quot;任务参数: $1&quot;
-                /// echo &quot;分片序号 = $2&quot;
-                /// echo &quot;分片总数 = $3&quot;</para>
+                /// <para>echo &quot;Script path: $0&quot;
+                /// echo &quot;Job parameters: $1&quot;
+                /// echo &quot;Shard index = $2&quot;
+                /// echo &quot;Total shards = $3&quot;</para>
                 /// <para>echo &quot;Good bye!&quot;
                 /// exit 0</para>
                 /// </summary>
@@ -85,7 +81,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string ScriptContent { get; set; }
 
                 /// <summary>
-                /// <para>The script version description.</para>
+                /// <para>The description of the script version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>init version</para>
@@ -97,7 +93,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>The total count of entries.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries to return for this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +115,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The error message.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +126,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A unique ID for the request. Use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</para>
@@ -140,12 +136,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

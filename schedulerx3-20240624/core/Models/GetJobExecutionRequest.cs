@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetJobExecutionRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the job execution.</para>
+        /// <para>The job execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +42,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string JobExecutionId { get; set; }
 
+        /// <summary>
+        /// <para>The MSE session ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567890123456_1794190484000</para>
+        /// </summary>
         [NameInMap("MseSessionId")]
         [Validation(Required=false)]
         public string MseSessionId { get; set; }

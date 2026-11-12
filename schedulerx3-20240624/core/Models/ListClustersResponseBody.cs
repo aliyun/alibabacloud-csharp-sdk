@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>The paginated results of clusters.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListClustersResponseBodyData Data { get; set; }
@@ -43,6 +46,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The list of cluster records on the current page.</para>
+            /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<ListClustersResponseBodyDataRecords> Records { get; set; }
@@ -50,8 +56,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// <summary>
                 /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PREPAY: subscription.</description></item>
-                /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+                /// <item><description>PREPAY: Subscription.</description></item>
+                /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -92,6 +98,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string ClusterSpec { get; set; }
 
                 /// <summary>
+                /// <para>The cluster type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -100,7 +108,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? ClusterType { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-29 15:56:36</para>
@@ -110,7 +118,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time.</para>
+                /// <para>The expiration time. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-29 15:56:36</para>
@@ -142,18 +150,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// <summary>
                 /// <para>The public domain name.</para>
                 /// <remarks>
-                /// <para>Not supported currently.</para>
+                /// <para>Not supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>暂无</para>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("InternetDomain")]
                 [Validation(Required=false)]
                 public string InternetDomain { get; set; }
 
                 /// <summary>
-                /// <para>The internal domain name.</para>
+                /// <para>The internal network domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://xxljob-b9e19e46c4e.schedulerx.mse.aliyuncs.com">http://xxljob-b9e19e46c4e.schedulerx.mse.aliyuncs.com</a></para>
@@ -163,7 +171,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string IntranetDomain { get; set; }
 
                 /// <summary>
-                /// <para>The product edition. Valid values:</para>
+                /// <para>The product edition.</para>
                 /// <list type="bullet">
                 /// <item><description>1: Developer Edition.</description></item>
                 /// <item><description>2: Professional Edition.</description></item>
@@ -177,12 +185,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public int? ProductType { get; set; }
 
+                /// <summary>
+                /// <para>The source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>schedulerx</para>
+                /// </summary>
                 [NameInMap("Source")]
                 [Validation(Required=false)]
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The order asset instance ID.</para>
+                /// <para>The instance ID of the order asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mse_schedulerxpost_public_cn-htq402sak02</para>
@@ -192,12 +206,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string SpInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The cluster status. Valid values:</para>
+                /// <para>The cluster status.</para>
                 /// <list type="bullet">
                 /// <item><description>1: Creating.</description></item>
                 /// <item><description>2: Running.</description></item>
                 /// <item><description>3: Restarting.</description></item>
-                /// <item><description>4: Deleting.</description></item>
+                /// <item><description>4: Destroying.</description></item>
                 /// <item><description>5: Creation failed.</description></item>
                 /// <item><description>6: Stopped.</description></item>
                 /// <item><description>99: Deleted.</description></item>
@@ -210,12 +224,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                /// <summary>
+                /// <para>The cluster tags.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;environment&quot;:&quot;test&quot;}</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Tags { get; set; }
 
                 /// <summary>
-                /// <para>The zone and vSwitch information.</para>
+                /// <para>The vSwitch information in the zone.</para>
                 /// </summary>
                 [NameInMap("VSwitches")]
                 [Validation(Required=false)]
@@ -243,12 +263,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 }
 
+                /// <summary>
+                /// <para>The DPI engine version life epoch. Valid values: STABLE (stable), EXPIRED (expired), and OFFLINE (offline).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>STABLE</para>
+                /// </summary>
                 [NameInMap("VersionLifecycle")]
                 [Validation(Required=false)]
                 public string VersionLifecycle { get; set; }
 
                 /// <summary>
-                /// <para>VPC ID。</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp1fxort6ag5h9752i305</para>
@@ -283,7 +309,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39938688-0BAB-5AD8-BF02-F4910FAC7589</para>

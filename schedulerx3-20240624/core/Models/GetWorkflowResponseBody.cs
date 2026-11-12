@@ -20,9 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The basic information of the workflow.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Calendar { get; set; }
 
             /// <summary>
-            /// <para>The user who created the workflow.</para>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18582193685027xx</para>
@@ -89,12 +87,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The workflow status.</para>
+            /// <para>The workflow status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: disabled</para>
-            /// </description></item>
-            /// <item><description><para>1: enabled</para>
-            /// </description></item>
+            /// <item><description>0: Disabled.</description></item>
+            /// <item><description>1: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,14 +101,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The time expression. The value of this parameter depends on the schedule type.</para>
+            /// <para>The time expression. Set the time expression based on the selected time type.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>None</b>: No expression is required.</para>
-            /// </description></item>
-            /// <item><description><para><b>cron</b>: A standard cron expression.</para>
-            /// </description></item>
-            /// <item><description><para><b>API</b>: No expression is required.</para>
-            /// </description></item>
+            /// <item><description><b>none</b>: Not required.</description></item>
+            /// <item><description><b>cron</b>: Enter a standard cron expression. Online verification is supported.</description></item>
+            /// <item><description><b>api</b>: Not required.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,14 +116,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string TimeExpression { get; set; }
 
             /// <summary>
-            /// <para>The schedule type.</para>
+            /// <para>The scheduling type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>-1: None</para>
-            /// </description></item>
-            /// <item><description><para>1: cron</para>
-            /// </description></item>
-            /// <item><description><para>100: API</para>
-            /// </description></item>
+            /// <item><description>-1: none</description></item>
+            /// <item><description>1: cron</description></item>
+            /// <item><description>100: api</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -143,7 +133,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             /// <summary>
             /// <para>The time zone.</para>
             /// <remarks>
-            /// <para>If this parameter is omitted, the time zone of the server in the current region is used.</para>
+            /// <para>By default, the time zone of the server in the current region is used.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -154,7 +144,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Timezone { get; set; }
 
             /// <summary>
-            /// <para>The user who last updated the workflow.</para>
+            /// <para>The updater.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18582193685027xx</para>
@@ -176,7 +166,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             /// <summary>
             /// <para>The extended attributes.</para>
             /// <remarks>
-            /// <para>This parameter is not supported.</para>
+            /// <para>Not supported.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -199,7 +189,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. This ID is unique to each request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. This ID is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27B1345D-5F71-5972-8E4C-AABA6C6232F0</para>
@@ -209,12 +199,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

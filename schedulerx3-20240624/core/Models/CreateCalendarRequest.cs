@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string CalendarName { get; set; }
 
         /// <summary>
-        /// <para>A client token to ensure request idempotence. Generate a unique value for this parameter on your client. The token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the Request ID as the client token. The Request ID may be different for each request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the value from your client and make sure that the value is unique across different requests. The client token supports only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The Cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/28147.html">ListClusters</a> operation to query Cluster IDs.</para>
+        /// <para>The ID of the cluster. You can call <a href="https://help.aliyun.com/document_detail/28147.html">ListClusters</a> to query the cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The days of each month, specified in a JSON array.</para>
+        /// <para>The calendar for each month in JSON array format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

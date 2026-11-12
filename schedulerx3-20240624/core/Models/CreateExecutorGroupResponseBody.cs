@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class CreateExecutorGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,21 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateExecutorGroupResponseBodyData Data { get; set; }
         public class CreateExecutorGroupResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The authentication method used by devices under the product to connect to the IoT platform. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>secret</b>: Uses the device secret for device identity authentication.</description></item>
+            /// <item><description><b>id2</b>: Uses IoT Internet Device ID (ID²).</description></item>
+            /// <item><description><b>x509</b>: Uses the device X.509 certificate for device identity authentication.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>md5_spell</para>
             /// </summary>
@@ -30,6 +42,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string AuthType { get; set; }
 
             /// <summary>
+            /// <para>The workflow description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my first workflow</para>
             /// </summary>
@@ -38,6 +52,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The Kubernetes services that failed to be imported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</para>
             /// </summary>
@@ -46,6 +62,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string FailedService { get; set; }
 
             /// <summary>
+            /// <para>The workflow name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>myWorkflow</para>
             /// </summary>
@@ -54,6 +72,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The domain name rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
             /// </summary>
@@ -62,6 +82,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Network { get; set; }
 
             /// <summary>
+            /// <para>The protocol types supported by the domain name. Valid values: HTTP (supports only the HTTP protocol), HTTPS (supports only the HTTPS protocol), and HTTP,HTTPS (supports both HTTP and HTTPS protocols).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>All</para>
             /// </summary>
@@ -70,14 +92,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>The worker ID of the deployment task. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2712224.html">ListWorkerResource</a> operation.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>ins-95mfvqrtg6fkijt1uko000</para>
+            /// <para>12</para>
             /// </summary>
             [NameInMap("WorkerId")]
             [Validation(Required=false)]
             public long? WorkerId { get; set; }
 
             /// <summary>
+            /// <para>The executor type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>k8s_service</para>
             /// </summary>
@@ -86,6 +112,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string WorkerType { get; set; }
 
             /// <summary>
+            /// <para>The list of specified machines in JSON format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</para>
             /// </summary>
@@ -96,6 +124,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter format error</para>
         /// </summary>
@@ -104,6 +134,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</para>
         /// </summary>
@@ -112,6 +144,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

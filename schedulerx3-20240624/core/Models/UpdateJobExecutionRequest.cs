@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateJobExecutionRequest : TeaModel {
         /// <summary>
-        /// <para>AppName</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Job execution ID.</para>
+        /// <para>The job execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobExecutionId { get; set; }
 
         /// <summary>
-        /// <para>Schedule time</para>
+        /// <para>The scheduling time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01 12:00:00</para>

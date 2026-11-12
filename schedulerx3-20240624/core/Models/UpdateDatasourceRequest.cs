@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateDatasourceRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Data source connection parameters</para>
+        /// <para>The datasource connection parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;host&quot;:&quot;rm-bp1f03mxxxxx.mysql.rds.aliyuncs.com&quot;,&quot;port&quot;:3306,&quot;userName&quot;:&quot;test01&quot;,&quot;database&quot;:&quot;test01&quot;,&quot;other&quot;:{&quot;useSSL&quot;:&quot;false&quot;}}</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ConnectionParams { get; set; }
 
         /// <summary>
-        /// <para>DataSource ID, which can be obtained by calling the ListDatasources API.</para>
+        /// <para>The datasource ID. You can obtain this ID by calling the ListDatasources operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
-        /// <para>Data source description</para>
+        /// <para>The datasource description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -52,17 +52,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Datasource Name</para>
+        /// <para>The datasource name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>账单拉取-支付宝团购</para>
+        /// <para>Bill pull - Alipay group buying</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Database password</para>
+        /// <para>The database password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F9e9@a69c!e18b569c8</para>

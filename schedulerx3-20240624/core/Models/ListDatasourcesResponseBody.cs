@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListDatasourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDatasourcesResponseBodyData Data { get; set; }
         public class ListDatasourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Maximum Data Volume to read in this request. Default Value is 10.</para>
+            /// <para>The maximum number of entries to return for this request. Default value: 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>When the data matching the query conditions has not been fully read, the server returns a nextToken. You can use this nextToken to continue reading subsequent data. This parameter is not required for the first query.</para>
+            /// <para>The token used to retrieve the next page of results. If the data that meets the query conditions is not completely read, the server returns this token. You can use this token to continue reading the subsequent data. You do not need to specify this parameter for the first query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>Page number.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,16 +67,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The list of data source records on the current page.</para>
             /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<ListDatasourcesResponseBodyDataRecords> Records { get; set; }
             public class ListDatasourcesResponseBodyDataRecords : TeaModel {
                 /// <summary>
-                /// <para>Data source connection parameters.</para>
+                /// <para>The connection parameters of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;host&quot;:&quot;rm-bp1f03mxxxxx.mysql.rds.aliyuncs.com&quot;,&quot;port&quot;:3306,&quot;userName&quot;:&quot;test01&quot;,&quot;database&quot;:&quot;test01&quot;,&quot;other&quot;:{&quot;useSSL&quot;:&quot;false&quot;}}</para>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string ConnectionParams { get; set; }
 
                 /// <summary>
-                /// <para>DataSource ID.</para>
+                /// <para>The data source ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>145</para>
@@ -96,7 +94,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public long? DatasourceId { get; set; }
 
                 /// <summary>
-                /// <para>Job description.</para>
+                /// <para>The task description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my first workflow</para>
@@ -106,7 +104,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Job name.</para>
+                /// <para>The task name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>job01</para>
@@ -116,20 +114,20 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Specific pronunciation rule Type. Options:</para>
+                /// <para>The specific pronunciation rule type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>replacement: A rule that directly replaces Word with Pronunciation.</description></item>
+                /// <item><description>replacement: A rule that directly replaces a word with its pronunciation.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>target</para>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public int? Type { get; set; }
 
                 /// <summary>
-                /// <para>Updater.</para>
+                /// <para>The updater.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1827811800555555</para>
@@ -141,7 +139,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -153,7 +151,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
@@ -163,7 +161,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</para>
@@ -173,10 +171,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the invocation succeeded.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The invocation succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed to invoke.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

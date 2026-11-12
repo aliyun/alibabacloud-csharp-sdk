@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The returned data.</description></item>
+        /// <item><description></description></item>
         /// </list>
         /// </summary>
         [NameInMap("Data")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public UpdateExecutorsResponseBodyData Data { get; set; }
         public class UpdateExecutorsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Application Group ID.</para>
+            /// <para>The application group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public long? AppGroupId { get; set; }
 
             /// <summary>
-            /// <para>The Application type.</para>
+            /// <para>The application type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? AppType { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes services that failed to import.</para>
+            /// <para>The Kubernetes services that failed to be imported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string FailedService { get; set; }
 
             /// <summary>
-            /// <para>The Worker ID.</para>
+            /// <para>The executor ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? WorkId { get; set; }
 
             /// <summary>
-            /// <para>The Worker type.</para>
+            /// <para>The executor type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s_service</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string WorkerType { get; set; }
 
             /// <summary>
-            /// <para>A JSON-formatted string that contains a list of Workers.</para>
+            /// <para>The list of specified machines in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
-        /// <para>The returned error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The Request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3835AA29-2298-5434-BC53-9CC377CDFD2C</para>
@@ -111,12 +111,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWorkflowDAGPreviewResponseBodyData Data { get; set; }
         public class GetWorkflowDAGPreviewResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The workflow edges.</para>
+            /// <para>The list of edges in the workflow.</para>
             /// </summary>
             [NameInMap("Edges")]
             [Validation(Required=false)]
             public List<GetWorkflowDAGPreviewResponseBodyDataEdges> Edges { get; set; }
             public class GetWorkflowDAGPreviewResponseBodyDataEdges : TeaModel {
                 /// <summary>
-                /// <para>The ID of the source node.</para>
+                /// <para>The ID of the source node of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public long? Source { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the target node.</para>
+                /// <para>The ID of the target node of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>The workflow nodes.</para>
+            /// <para>The list of workflow nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The node coordinates.</para>
+                /// <para>The coordinate information of the node.</para>
                 /// </summary>
                 [NameInMap("Coordinate")]
                 [Validation(Required=false)]
                 public GetWorkflowDAGPreviewResponseBodyDataNodesCoordinate Coordinate { get; set; }
                 public class GetWorkflowDAGPreviewResponseBodyDataNodesCoordinate : TeaModel {
                     /// <summary>
-                    /// <para>The node height. This parameter is optional.</para>
+                    /// <para>The height of the node. This field is optional.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? Height { get; set; }
 
                     /// <summary>
-                    /// <para>The node width. This parameter is optional.</para>
+                    /// <para>The width of the node. This field is optional.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? Width { get; set; }
 
                     /// <summary>
-                    /// <para>The x-coordinate.</para>
+                    /// <para>The X-axis coordinate of the node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? X { get; set; }
 
                     /// <summary>
-                    /// <para>The y-coordinate.</para>
+                    /// <para>The Y-axis coordinate of the node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -122,17 +122,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 }
 
                 /// <summary>
-                /// <para>The dependency strategy.</para>
+                /// <para>The dependency policy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>all_success</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("DependentStrategy")]
                 [Validation(Required=false)]
                 public int? DependentStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The job ID.</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The job type.</para>
+                /// <para>The node type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>script_shell</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string JobType { get; set; }
 
                 /// <summary>
-                /// <para>The job name.</para>
+                /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>job1</para>
@@ -162,12 +162,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The job status. Valid values:</para>
+                /// <para>The node status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>0</c>: Disabled</para>
-                /// </description></item>
-                /// <item><description><para><c>1</c>: Enabled</para>
-                /// </description></item>
+                /// <item><description>0: Disabled.</description></item>
+                /// <item><description>1: Enabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -192,7 +190,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>B8733786-C045-59F1-8D79-99A52863F62D</para>
@@ -202,12 +200,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

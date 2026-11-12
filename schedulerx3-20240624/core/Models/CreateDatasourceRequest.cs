@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class CreateDatasourceRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Connection parameters of the data source, in JSON format</para>
+        /// <para>The connection parameters of the data source in JSON format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ConnectionParams { get; set; }
 
         /// <summary>
-        /// <para>Datasource Name</para>
+        /// <para>The name of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my first datasource</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Datasource Name</para>
+        /// <para>The name of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,20 +53,20 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Database password</para>
+        /// <para>The database password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Demo****1234</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Data Source Type  </para>
+        /// <para>The type of the data source.</para>
         /// <list type="bullet">
-        /// <item><description>0: MySQL  </description></item>
+        /// <item><description>0: MySQL</description></item>
         /// <item><description>1: PostgreSQL</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateRetryJobExecutionShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1625</para>
+        /// </summary>
         [NameInMap("AppGroupId")]
         [Validation(Required=false)]
         public long? AppGroupId { get; set; }
@@ -47,9 +53,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobExecutionId { get; set; }
 
         /// <summary>
-        /// <para>The list of subtask execution IDs (for broadcast jobs).</para>
+        /// <para>The list of subtask execution IDs for sharded broadcast tasks.</para>
         /// <remarks>
-        /// <para>To rerun a subtask of a broadcast job, set this field to the execution ID of the corresponding subtask.</para>
+        /// <para>To rerun a subtask of a sharded broadcast task, set this field to the execution ID of the corresponding subtask.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TaskList")]

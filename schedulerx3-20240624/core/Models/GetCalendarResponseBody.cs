@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>The data returned.</description></item>
-        /// </list>
+        /// <para>The calendar information for the specified year.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCalendarResponseBodyData Data { get; set; }
         public class GetCalendarResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the calendar.</para>
+            /// <para>The calendar name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>workday</para>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string CalendarName { get; set; }
 
             /// <summary>
-            /// <para>A JSON string that represents an array of objects. Each object specifies the days for a particular month.</para>
+            /// <para>The months.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</para>
@@ -94,12 +92,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

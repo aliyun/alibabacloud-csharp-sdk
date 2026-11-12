@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateExecuteJobRequest : TeaModel {
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1625</para>
+        /// </summary>
         [NameInMap("AppGroupId")]
         [Validation(Required=false)]
         public long? AppGroupId { get; set; }
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string InstanceParameters { get; set; }
 
         /// <summary>
-        /// <para>The node ID.</para>
+        /// <para>The job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The workerAddr of the specified machine.</para>
+        /// <para>The worker address of the specified machine.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://192.168.***.5:9999/">http://192.168.***.5:9999/</a></para>

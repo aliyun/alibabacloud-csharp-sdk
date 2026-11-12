@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateConnectDatasourceRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Connection parameters of the data source</para>
+        /// <para>The connection parameters of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,18 +32,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ConnectionParams { get; set; }
 
         /// <summary>
-        /// <para>Password of the database user.</para>
+        /// <para>The password of the database user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Demo****1234</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Type of the data source.</para>
+        /// <para>The type of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

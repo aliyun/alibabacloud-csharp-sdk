@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateExecutorGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The client secret.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>K4KWGINZVY9JwcZT0/vpSg==</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The authentication type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>APP</para>
         /// </summary>
@@ -25,11 +29,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable auto scaling.</para>
+        /// </summary>
         [NameInMap("AutoScale")]
         [Validation(Required=false)]
         public bool? AutoScale { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +47,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The CMS workspace ID.</para>
+        /// </summary>
         [NameInMap("CmsWorkspaceId")]
         [Validation(Required=false)]
         public string CmsWorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>The description of the executor group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>group1</para>
         /// </summary>
@@ -54,6 +67,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>The ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,11 +78,19 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Obsolete]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <para>The name of the executor group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group1</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The network configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>public</para>
         /// </summary>
@@ -77,6 +99,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Network { get; set; }
 
         /// <summary>
+        /// <para>The protocol.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>openai</para>
         /// </summary>
@@ -85,6 +109,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Protocol { get; set; }
 
         /// <summary>
+        /// <para>The executor type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>openclaw</para>
         /// </summary>
@@ -93,6 +119,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string WorkerType { get; set; }
 
         /// <summary>
+        /// <para>The list of specified machines in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;address&quot;:&quot;<a href="http://47.111.188.191:18789%22%7D%5D">http://47.111.188.191:18789&quot;}]</a></para>
         /// </summary>
@@ -100,6 +128,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string Workers { get; set; }
 
+        /// <summary>
+        /// <para>The extended configuration of the executor group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Not publicly available</para>
+        /// </summary>
         [NameInMap("XAttrs")]
         [Validation(Required=false)]
         public string XAttrs { get; set; }

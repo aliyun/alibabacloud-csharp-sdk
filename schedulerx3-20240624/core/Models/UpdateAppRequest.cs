@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>The access token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>f312159702f4469585586ed5a6904163v3</para>
+        /// <para>demo-app-key-20261109</para>
         /// </summary>
         [NameInMap("AccessToken")]
         [Validation(Required=false)]
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <summary>
         /// <para>Specifies whether to enable logging.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Enables logging.</para>
+        /// <item><description><para>true: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: Disables logging.</para>
+        /// <item><description><para>false: Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -58,6 +58,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? EnableLog { get; set; }
 
         /// <summary>
+        /// <para>The label routing strategy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,9 +68,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? LabelRouteStrategy { get; set; }
 
         /// <summary>
-        /// <para>The task execution queue size.</para>
+        /// <para>The size of the task execution queue.</para>
         /// <remarks>
-        /// <para>Sets the maximum number of concurrent task instances in the application group. Additional task instances are queued for execution and not discarded.</para>
+        /// <para>The maximum number of task instances that can run concurrently for an application. Task instances that exceed the concurrency limit are not discarded, but are placed in a queue to wait for execution.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,13 +85,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试应用</para>
+        /// <para>Test application</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The primary key ID of the worker group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

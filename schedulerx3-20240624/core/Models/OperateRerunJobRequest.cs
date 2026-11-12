@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateRerunJobRequest : TeaModel {
+        /// <summary>
+        /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1625</para>
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public long? AppId { get; set; }
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The data timestamp.</para>
+        /// <para>The data timestamp, in the HH:mm:ss format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string DataTime { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time, specified as a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +64,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>The node ID.</para>
+        /// <para>The job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time, specified as a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

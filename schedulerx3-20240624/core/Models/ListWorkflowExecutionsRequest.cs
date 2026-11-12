@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for filtering executions. The time must be in <c>YYYY-MM-DD HH:mm:ss</c> format.</para>
+        /// <para>The end time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-13 16:00:00</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return. Defaults to 10.</para>
+        /// <para>The maximum number of entries to return for this request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. For the first request, do not specify this parameter. If the response does not include a <c>NextToken</c>, no more results are available.</para>
+        /// <para>The token that specifies the position from which the query starts. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range for filtering executions. The time must be in <c>YYYY-MM-DD HH:mm:ss</c> format.</para>
+        /// <para>The start time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-27 02:15:00</para>
@@ -91,28 +91,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The workflow execution status. Use this parameter to filter executions by status. Valid values:</para>
+        /// <para>The workflow execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: unknown</para>
-        /// </description></item>
-        /// <item><description><para>1: waiting</para>
-        /// </description></item>
-        /// <item><description><para>2: queued</para>
-        /// </description></item>
-        /// <item><description><para>3: running</para>
-        /// </description></item>
-        /// <item><description><para>4: success</para>
-        /// </description></item>
-        /// <item><description><para>5: failed</para>
-        /// </description></item>
-        /// <item><description><para>6: killed</para>
-        /// </description></item>
-        /// <item><description><para>7: held</para>
-        /// </description></item>
-        /// <item><description><para>8: mark_success</para>
-        /// </description></item>
-        /// <item><description><para>9: skipped</para>
-        /// </description></item>
+        /// <item><description>0: unknown</description></item>
+        /// <item><description>1: waiting</description></item>
+        /// <item><description>2: queued</description></item>
+        /// <item><description>3: running</description></item>
+        /// <item><description>4: success</description></item>
+        /// <item><description>5: failed</description></item>
+        /// <item><description>6: killed</description></item>
+        /// <item><description>7: held</description></item>
+        /// <item><description>8: mark_success</description></item>
+        /// <item><description>9: skipped</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,7 +113,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The workflow execution ID.</para>
+        /// <para>The workflow instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

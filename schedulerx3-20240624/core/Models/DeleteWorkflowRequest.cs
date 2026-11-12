@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class DeleteWorkflowRequest : TeaModel {
         /// <summary>
-        /// <para>The Application name.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete all Jobs in the Workflow.</para>
+        /// <para>Specifies whether to delete all jobs in the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? DeleteJobs { get; set; }
 
         /// <summary>
-        /// <para>The Workflow ID.</para>
+        /// <para>The workflow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

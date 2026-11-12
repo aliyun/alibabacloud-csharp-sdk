@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string CalendarName { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token that ensures request idempotence. This token must be unique for each request and be no more than 64 ASCII characters long.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D0DE9C33-992A-580B-89C4-B609A292748D</para>
@@ -42,12 +42,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform an incremental update. Default value: <c>false</c>.</para>
+        /// <para>Specifies whether the update is incremental. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>false</c>: Replaces all existing calendar data with the data in this request, deleting configurations for any unspecified months.</para>
-        /// </description></item>
-        /// <item><description><para><c>true</c>: Updates only the data for the specified months, preserving existing configurations for all other months.</para>
-        /// </description></item>
+        /// <item><description>false: Updates the data for the specified months and deletes the configurations for other months.</description></item>
+        /// <item><description>true: Updates only the data for the specified months and retains the existing configurations for other months.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? Incremental { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that defines the days for one or more months.</para>
+        /// <para>The months.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

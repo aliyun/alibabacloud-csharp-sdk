@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ExecutorAddr { get; set; }
 
         /// <summary>
-        /// <para>The job execution ID.</para>
+        /// <para>The task execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1310630367761285120</para>

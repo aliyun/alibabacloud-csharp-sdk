@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListExecutorGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return for this request. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The name of the executor group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>group1</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The token that specifies the position from which the current call returns data. An empty value indicates that all data has been read. You do not need to specify this parameter for the first query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -60,6 +71,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The list of time types.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("TimeType")]
+        [Validation(Required=false)]
+        public List<int?> TimeType { get; set; }
+
+        /// <summary>
+        /// <para>The executor type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>openclaw</para>
         /// </summary>

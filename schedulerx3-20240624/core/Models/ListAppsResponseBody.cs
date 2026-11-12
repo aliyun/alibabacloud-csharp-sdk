@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
     public class ListAppsResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -22,6 +25,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public class ListAppsResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
             /// <summary>
             /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -39,7 +48,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public List<ListAppsResponseBodyDataRecords> Records { get; set; }
             public class ListAppsResponseBodyDataRecords : TeaModel {
                 /// <summary>
-                /// <para>The AccessToken.</para>
+                /// <para>The access token.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2f4ddeab8e344ed68e0402cf9b8502ffv3</para>
                 /// </summary>
                 [NameInMap("AccessToken")]
                 [Validation(Required=false)]
@@ -47,6 +59,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The application name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test-app</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
@@ -64,6 +79,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The creator.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1827811800555555</para>
                 /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
@@ -72,11 +90,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// <summary>
                 /// <para>Indicates whether logging is enabled.</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: enabled.</para>
-                /// </description></item>
-                /// <item><description><para>false: disabled.</para>
-                /// </description></item>
+                /// <item><description>true: Enabled.</description></item>
+                /// <item><description>false: Disabled.</description></item>
                 /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("EnableLog")]
                 [Validation(Required=false)]
@@ -84,6 +103,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The number of executors.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ExecutorNum")]
                 [Validation(Required=false)]
@@ -91,6 +113,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The primary key ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>43885</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -98,13 +123,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The number of jobs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("JobNum")]
                 [Validation(Required=false)]
                 public int? JobNum { get; set; }
 
                 /// <summary>
-                /// <para>The label route strategy.</para>
+                /// <para>The label routing strategy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -115,6 +143,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The leader address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://28.***.***.3:80">http://28.***.***.3:80</a></para>
                 /// </summary>
                 [NameInMap("Leader")]
                 [Validation(Required=false)]
@@ -122,6 +153,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The maximum concurrency.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("MaxConcurrency")]
                 [Validation(Required=false)]
@@ -131,6 +165,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 /// 
                 /// <summary>
                 /// <para>The maximum number of jobs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000</para>
                 /// </summary>
                 [NameInMap("MaxJobs")]
                 [Validation(Required=false)]
@@ -139,6 +176,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The title.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test application</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -146,6 +186,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <para>The updater.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1827811800555555</para>
                 /// </summary>
                 [NameInMap("Updater")]
                 [Validation(Required=false)]
@@ -162,7 +205,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? WorkerId { get; set; }
 
                 /// <summary>
-                /// <para>The manual executor registration type.</para>
+                /// <para>The manually registered executor type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>k8s_service</para>
                 /// </summary>
                 [NameInMap("WorkerRegistry")]
                 [Validation(Required=false)]
@@ -191,7 +237,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -204,13 +250,19 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Parameter error: content is null.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use it to troubleshoot issues.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -219,9 +271,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <summary>
         /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: the call was successful.</description></item>
-        /// <item><description>false: the call failed.</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The Workflow DAG version.</para>
+        /// <para>The workflow DAG version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string DagVersion { get; set; }
 
         /// <summary>
-        /// <para>The Workflow ID.</para>
+        /// <para>The workflow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

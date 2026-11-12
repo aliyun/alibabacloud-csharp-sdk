@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The task execution progress information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetJobExecutionProgressResponseBodyData Data { get; set; }
         public class GetJobExecutionProgressResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time. The value is a UNIX timestamp string in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758594961000</para>
@@ -39,10 +37,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The task description.</para>
+            /// <para>The job description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试任务</para>
+            /// <para>Test task</para>
             /// </summary>
             [NameInMap("JobDescription")]
             [Validation(Required=false)]
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public GetJobExecutionProgressResponseBodyDataRootProgress RootProgress { get; set; }
             public class GetJobExecutionProgressResponseBodyDataRootProgress : TeaModel {
                 /// <summary>
-                /// <para>The number of finished items.</para>
+                /// <para>The number of completed tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public List<GetJobExecutionProgressResponseBodyDataShardingProgress> ShardingProgress { get; set; }
             public class GetJobExecutionProgressResponseBodyDataShardingProgress : TeaModel {
                 /// <summary>
-                /// <para>ID。</para>
+                /// <para>The ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The shard execution ID.</para>
+                /// <para>The sharding execution ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1306189481388277762</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string JobExecutionId { get; set; }
 
                 /// <summary>
-                /// <para>The shard execution result.</para>
+                /// <para>The sharding execution result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2,4,6,8,10</para>
@@ -160,7 +158,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The tip information.</para>
+                    /// <para>The prompt message.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;error&quot;:&quot;Task execution failed&quot;}</para>
                     /// </summary>
                     [NameInMap("Tips")]
                     [Validation(Required=false)]
@@ -181,7 +182,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The value is a UNIX timestamp string in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758506761000</para>
@@ -198,7 +199,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public List<GetJobExecutionProgressResponseBodyDataTaskProgress> TaskProgress { get; set; }
             public class GetJobExecutionProgressResponseBodyDataTaskProgress : TeaModel {
                 /// <summary>
-                /// <para>The number of failed items.</para>
+                /// <para>The number of failed tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -218,7 +219,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The number of pulled items.</para>
+                /// <para>The number of pulled tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -228,7 +229,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Pulled { get; set; }
 
                 /// <summary>
-                /// <para>The number of items in the queue.</para>
+                /// <para>The number of tasks in the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -238,7 +239,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Queue { get; set; }
 
                 /// <summary>
-                /// <para>The number of running items.</para>
+                /// <para>The number of running tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -248,7 +249,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Running { get; set; }
 
                 /// <summary>
-                /// <para>The number of successful items.</para>
+                /// <para>The number of successful tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -277,7 +278,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public GetJobExecutionProgressResponseBodyDataTotalProgress TotalProgress { get; set; }
             public class GetJobExecutionProgressResponseBodyDataTotalProgress : TeaModel {
                 /// <summary>
-                /// <para>The number of finished items.</para>
+                /// <para>The number of completed tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -299,14 +300,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
-            /// <para>The execution progress by worker.</para>
+            /// <para>The worker-level execution progress.</para>
             /// </summary>
             [NameInMap("WorkerProgress")]
             [Validation(Required=false)]
             public List<GetJobExecutionProgressResponseBodyDataWorkerProgress> WorkerProgress { get; set; }
             public class GetJobExecutionProgressResponseBodyDataWorkerProgress : TeaModel {
                 /// <summary>
-                /// <para>The number of failed items.</para>
+                /// <para>The number of failed tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -316,7 +317,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Failed { get; set; }
 
                 /// <summary>
-                /// <para>The number of pulled items.</para>
+                /// <para>The number of pulled tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -326,7 +327,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Pulled { get; set; }
 
                 /// <summary>
-                /// <para>The number of items in the queue.</para>
+                /// <para>The number of tasks in the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -336,7 +337,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Queue { get; set; }
 
                 /// <summary>
-                /// <para>The number of running items.</para>
+                /// <para>The number of running tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -346,7 +347,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Running { get; set; }
 
                 /// <summary>
-                /// <para>The number of successful items.</para>
+                /// <para>The number of successful tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -400,7 +401,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID generated by Alibaba Cloud for this request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. This ID is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B57FDD7-ABBE-5030-B348-86EB9943DB59</para>

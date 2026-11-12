@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ImportJobsRequest : TeaModel {
         /// <summary>
-        /// <para>Determines whether to automatically create the Application if it does not exist.</para>
+        /// <para>Specifies whether to enable automatic creation of applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The jobs to import, formatted as a JSON string.</para>
+        /// <para>The content to import.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -95,12 +95,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Determines whether to overwrite jobs if they already exist. The default is <b>true</b>.</para>
+        /// <para>Specifies whether to overwrite the task if it already exists. Default value: true.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Overwrites existing jobs.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Does not overwrite existing jobs.</para>
-        /// </description></item>
+        /// <item><description>true: Overwrite.</description></item>
+        /// <item><description>false: Do not overwrite.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

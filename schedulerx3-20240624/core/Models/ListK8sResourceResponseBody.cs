@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>An array of k8s resources.</description></item>
-        /// </list>
+        /// <para>The list of Kubernetes resources.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListK8sResourceResponseBodyData> Data { get; set; }
         public class ListK8sResourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the k8s resource.</para>
+            /// <para>The ID of the Kubernetes resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxljob-01632622cda2f</para>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the k8s resource.</para>
+            /// <para>The name of the Kubernetes resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>q_ecs_enterprise_spot_c</para>
@@ -61,7 +59,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The Request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</para>
@@ -71,12 +69,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

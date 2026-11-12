@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The name of the calendar to use for scheduling, such as a business day calendar.</para>
+        /// <para>The calendar.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workday</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time expression, such as a cron expression.</para>
+        /// <para>The time expression. For cron scheduling, use the Quartz cron format (second minute hour day-of-month month day-of-week).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string TimeExpression { get; set; }
 
         /// <summary>
-        /// <para>The time type. The only supported type is cron.</para>
+        /// <para>The time type. Currently, only cron is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: cron</description></item>
+        /// <item><description>1: cron.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? TimeType { get; set; }
 
         /// <summary>
-        /// <para>The time zone used to evaluate the time expression.</para>
+        /// <para>The time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asia/Beijing</para>

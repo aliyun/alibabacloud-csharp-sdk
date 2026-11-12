@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class DeleteContactRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the alert contact.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>黄永丰</para>
+        /// <para>Huang Yongfeng</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]

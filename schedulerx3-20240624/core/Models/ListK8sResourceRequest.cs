@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListK8sResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Kubernetes cluster used for synchronizing namespaces. The cluster is added to the service mesh specified by ServiceMeshId. This parameter is required when you query a k8s namespace or a k8s service.</para>
+        /// <para>The ID of the Kubernetes cluster for which namespaces are synchronized. The Kubernetes cluster is added to the service mesh specified by ServiceMeshId. This parameter is required when you query Kubernetes namespaces or services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cadb451ed7af04b0297f4be396a2196fc</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string K8sClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace in the k8s cluster. This parameter is required when you query a k8s service.</para>
+        /// <para>The namespace ID of the Kubernetes cluster. This parameter is required when you query Kubernetes services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID. This parameter is required if ResourceType is set to \&quot;cluster\&quot;.</para>
+        /// <para>The VPC ID. This parameter is required when ResourceType is set to cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-aa1a18236n90rqhuhhnhh</para>

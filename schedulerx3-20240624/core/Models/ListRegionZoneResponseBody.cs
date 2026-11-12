@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListRegionZoneResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListRegionZoneResponseBodyData> Data { get; set; }
         public class ListRegionZoneResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Local name.</para>
+            /// <para>The local name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>E</para>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>zone id</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-j</para>
@@ -51,7 +49,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IllegalRequest</para>
@@ -61,7 +59,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter check error</para>
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request UUID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>438737AC-760A-57D9-B646-B7EF79426243</para>
@@ -81,10 +79,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the invocation succeeded.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The invocation succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed to invoke.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

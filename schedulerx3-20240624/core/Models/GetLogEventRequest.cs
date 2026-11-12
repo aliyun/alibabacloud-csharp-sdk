@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetLogEventRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxl-job-executor-perf-test-241</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the query\&quot;s time range, specified as a Unix timestamp in milliseconds.</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1721636220</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The severity level for filtering events.</para>
+        /// <para>The event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INFO</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Event { get; set; }
 
         /// <summary>
-        /// <para>The type of event to retrieve.</para>
+        /// <para>The event type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JOB</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the job execution.</para>
+        /// <para>The job execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobExecutionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The job name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>A keyword to search for in log events.</para>
+        /// <para>The keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_partition_tbl</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number to retrieve.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -111,12 +111,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies the sort order of events.</para>
+        /// <para>Specifies whether to sort the results in descending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Sorts events in descending order.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Sorts events in ascending order.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Sorts the results in descending order.</description></item>
+        /// <item><description><b>false</b>: Sorts the results in ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,7 +125,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// <para>The start of the query\&quot;s time range, specified as a Unix timestamp in milliseconds.</para>
+        /// <para>The start time. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1721268302000</para>
@@ -137,7 +135,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the workflow execution.</para>
+        /// <para>The workflow execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1450568762586578000</para>
@@ -147,10 +145,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? WorkflowExecutionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the workflow.</para>
+        /// <para>The workflow name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>流程001</para>
+        /// <para>Workflow001</para>
         /// </summary>
         [NameInMap("WorkflowName")]
         [Validation(Required=false)]
