@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemovePublicIpsFromEpnInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EPN instance.</para>
+        /// <para>The edge-to-edge communication instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EPNInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The information about the public IP addresses that you want to delete.</para>
+        /// <para>The information about the public IP addresses to be removed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

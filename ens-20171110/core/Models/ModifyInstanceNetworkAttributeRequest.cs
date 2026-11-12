@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyInstanceNetworkAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ENS instance.</para>
+        /// <para>The ENS instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new private IP address of the ECS instance. By default, if this parameter is empty, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</para>
+        /// <para>The new private IP address.
+        /// Default value: If this parameter is not specified, an IP address is randomly assigned from the CIDR block of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -31,14 +32,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch IDs.</para>
+        /// <para>The vSwitch ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set this parameter to the ID of the current vSwitch, the vSwitch of the ECS instance remains unchanged.</para>
-        /// </description></item>
-        /// <item><description><para>The input ID is a new vSwitch, and the new and old vSwitches must belong to the same node.</para>
-        /// </description></item>
-        /// <item><description><para>By default, if this parameter is not specified, a private IP address is randomly assigned from within the CIDR block of the specified vSwitch.</para>
-        /// </description></item>
+        /// <item><description>If the specified ID is the current vSwitch of the instance, the vSwitch of the instance remains unchanged.</description></item>
+        /// <item><description>If the specified ID is a new vSwitch, the new and old vSwitches must belong to the same edge zone.</description></item>
+        /// <item><description>If this parameter is not specified, a value is randomly assigned from the CIDR block of the original vSwitch.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

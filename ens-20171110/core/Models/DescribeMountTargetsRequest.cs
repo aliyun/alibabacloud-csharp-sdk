@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The mount target name.</para>
+        /// <para>The name of the mount target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestMountPath</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MountTargetName { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page, with a maximum value of 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsNetDistrictRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the region.</para>
-        /// <para>If you do not specify this parameter, only nodes in the regions of the level that is specified by the NetLevelCode parameter are queried.</para>
-        /// <para>If you specify this parameter, only nodes in the regions of the level that is specified by this parameter are queried.</para>
+        /// <para>The region code.</para>
+        /// <para>If this parameter is empty, only the edge zones under the specified NetLevelCode are queried.</para>
+        /// <para>If this parameter is not empty, only the child edge zones under the specified NetDistrictCode are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100106</para>
@@ -22,21 +22,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetDistrictCode { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// </summary>
         [NameInMap("NetDistrictCodeNode")]
         [Validation(Required=false)]
         public bool? NetDistrictCodeNode { get; set; }
 
         /// <summary>
-        /// <para>The level of the region.</para>
+        /// <para>The region level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Big</b>: area</para>
-        /// </description></item>
-        /// <item><description><para><b>Middle</b>: province</para>
-        /// </description></item>
-        /// <item><description><para><b>Small</b>: city</para>
-        /// </description></item>
+        /// <item><description><b>Big</b>: Area.</description></item>
+        /// <item><description><b>Middle</b>: Province.</description></item>
+        /// <item><description><b>Small</b>: City.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

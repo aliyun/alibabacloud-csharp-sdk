@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query list. Valid values: &gt; 0. Default value: 1.</para>
+        /// <para>The page number. Valid values: greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
+        /// <para>The number of entries per page in a paging query. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

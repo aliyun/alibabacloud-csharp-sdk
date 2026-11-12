@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public MountInstanceSDGResponseBodyData Data { get; set; }
         public class MountInstanceSDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. The value success is returned if the request is successful.</para>
+            /// <para>The response message. The value is success if the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all requests are successful. Valid values:</para>
+            /// <para>Indicates whether all requests were successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: All successful.</description></item>
-            /// <item><description><b>false</b>: Some tasks failed.</description></item>
+            /// <item><description><b>true</b>: All requests were successful.</description></item>
+            /// <item><description><b>false</b>: One or more tasks failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

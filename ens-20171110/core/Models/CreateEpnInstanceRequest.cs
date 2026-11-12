@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEpnInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the EPN instance.</para>
+        /// <para>The name of the Edge-to-Edge network instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test EPNInstanceName</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EPNInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the EPN instance. Set the value to <b>EdgeToEdge</b>.</para>
+        /// <para>The type of the Edge-to-Edge communication instance. Valid value: <b>EdgeToEdge</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,18 +31,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EPNInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The billing method for network usage. Valid values:</para>
+        /// <para>The network billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>BandwidthByDay</b>: Pay by daily peak bandwidth.</para>
-        /// </description></item>
-        /// <item><description><para><b>95BandwidthByMonth</b>: Pay by monthly 95th percentile bandwidth.</para>
-        /// </description></item>
-        /// <item><description><para><b>PayByBandwidth4thMonth</b>: Pay by monthly fourth peak bandwidth.</para>
-        /// </description></item>
-        /// <item><description><para><b>PayByBandwidth</b>: Pay by fixed bandwidth.</para>
-        /// </description></item>
+        /// <item><description><b>BandwidthByDay</b>: Daily peak bandwidth.</description></item>
+        /// <item><description><b>95BandwidthByMonth</b>: Monthly 95th percentile peak bandwidth.</description></item>
+        /// <item><description><b>PayByBandwidth4thMonth</b>: Monthly fourth peak bandwidth.</description></item>
+        /// <item><description><b>PayByBandwidth</b>: Bandwidth with defined specifications.</description></item>
         /// </list>
-        /// <para>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</para>
+        /// <para>Only one of the Billable methods is supported. If a billing method already exists, the new value is invalid by default, and the existing one prevails.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +49,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 100.</para>
+        /// <para>The maximum outbound bandwidth to the Internet. Unit: Mbit/s. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,12 +62,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The networking mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>SpeedUp</b>: intelligent acceleration network (Internet)</para>
-        /// </description></item>
-        /// <item><description><para><b>Connection</b>: internal network</para>
-        /// </description></item>
-        /// <item><description><para><b>SpeedUpAndConnection</b>: intelligent acceleration network and internal network</para>
-        /// </description></item>
+        /// <item><description><b>SpeedUp</b>: Intelligent acceleration (Internet).</description></item>
+        /// <item><description><b>Connection</b>: Internal network connectivity (internal network mode).</description></item>
+        /// <item><description><b>SpeedUpAndConnection</b>: Intelligent acceleration and internal network connectivity (internal network mode).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

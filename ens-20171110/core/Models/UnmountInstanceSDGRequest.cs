@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnmountInstanceSDGRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SDG.</para>
+        /// <para>The SDG ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The IP version of the load balancing instance. Valid values: ipv4 or ipv6.</para>
+        /// <para>The IP version of the load balancing instance. Valid values: ipv4 and ipv6.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv4</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The peak bandwidth of the load balancing instance. The default value is -1, which indicates that bandwidth is not throttled.</para>
+        /// <para>The peak bandwidth of the load balancing instance. Default value: -1, which indicates that bandwidth is not throttled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the load balancing instance (UTC).</para>
+        /// <para>The time when the load balancing instance was created. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-05-21T12:22:00Z</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the load balancing instance in ISO 8601 UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The expiration time of the load balancing instance. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-05-21T12:22:00Z</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ENS node ID.</para>
+        /// <para>The ID of the ENS edge zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-chengdu-telecom</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? ForwardPort { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether listener forwarding is enabled.</para>
+            /// <para>Specifies whether listener forwarding is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The specification of the load balancing instance.</para>
+        /// <para>The specifications of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elb.s2.medium</para>
@@ -247,8 +247,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The listener status of the load balancing instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: The listeners of the instance can forward received traffic based on rules.</description></item>
-        /// <item><description><b>InActive</b>: The listeners of the instance no longer forward received traffic.</description></item>
+        /// <item><description><b>Active</b>: The listeners in the instance can forward accepted traffic based on rules.</description></item>
+        /// <item><description><b>InActive</b>: The listeners in the instance no longer forward accepted traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

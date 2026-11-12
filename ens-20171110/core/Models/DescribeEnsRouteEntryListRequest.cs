@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRouteEntryListRequest : TeaModel {
         /// <summary>
-        /// <para>The destination Classless Inter-Domain Routing (CIDR) block of the route entry.</para>
+        /// <para>The destination CIDR block of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11.0.0.0/16</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The ID of the next hop.</para>
+        /// <para>The instance ID of the next hop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-2zecshuv3axtr2gc4noa</para>
@@ -30,14 +30,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// <para>The type of next hop of the custom route entry. Valid values:</para>
+        /// <para>The type of the next hop for a custom route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Instance (default): an ENS instance.</para>
-        /// </description></item>
-        /// <item><description><para>HaVip: a high-availability virtual IP address (HAVIP).</para>
-        /// </description></item>
-        /// <item><description><para>NetworkPeer: VPC peering connection.</para>
-        /// </description></item>
+        /// <item><description>Instance (default): ENS instance.</description></item>
+        /// <item><description>HaVip: high-availability virtual IP address.</description></item>
+        /// <item><description>NetworkPeer: network peering connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NextHopType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.</para>
+        /// <para>The page number of the list to query. Valid values: greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,7 +55,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Valid values: 10 to 100.</para>
+        /// <para>The number of entries per page in a paging query. Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,7 +65,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route that you want to query.</para>
+        /// <para>The ID of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rte-8vbdw66evgv44u2u7v3hx</para>
@@ -78,7 +75,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteEntryId { get; set; }
 
         /// <summary>
-        /// <para>The name of the route.</para>
+        /// <para>The name of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test0</para>
@@ -88,12 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteEntryName { get; set; }
 
         /// <summary>
-        /// <para>The route type. Valid values:</para>
+        /// <para>The type of the routing entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Custom: custom route</para>
-        /// </description></item>
-        /// <item><description><para>System: system route</para>
-        /// </description></item>
+        /// <item><description>Custom: custom route.</description></item>
+        /// <item><description>System: system route.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +99,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteEntryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table that you want to query.</para>
+        /// <para>The ID of the route table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-hp3wdhynneo7fsclox8hs</para>

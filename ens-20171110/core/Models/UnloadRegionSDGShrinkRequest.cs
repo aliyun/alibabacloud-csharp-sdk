@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnloadRegionSDGShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of destination edge zones.</para>
+        /// <para>The list of destination nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DestinationRegionIds")]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NamespacesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SDG from which to delete preloaded data.</para>
+        /// <para>The ID of the SDG for which preloaded data is deleted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

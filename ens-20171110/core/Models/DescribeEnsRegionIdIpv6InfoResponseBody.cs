@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>IPv6 support information.</para>
+        /// <para>The IPv6 support information.</para>
         /// </summary>
         [NameInMap("SupportIpv6Info")]
         [Validation(Required=false)]
         public DescribeEnsRegionIdIpv6InfoResponseBodySupportIpv6Info SupportIpv6Info { get; set; }
         public class DescribeEnsRegionIdIpv6InfoResponseBodySupportIpv6Info : TeaModel {
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The ID of the edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chengdu-****-4</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether IPv6 is supported. Valid values:</para>
+            /// <para>Indicates whether IPv6 is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
+            /// <item><description>true: Supported.</description></item>
+            /// <item><description>false: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned Data object.</para>
+        /// <para>The Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteSDGResponseBodyData Data { get; set; }
         public class DeleteSDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. A value of success indicates a successful request.</para>
+            /// <para>The response message. The value is success if the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public DeleteSDGResponseBodyDataResult Result { get; set; }
             public class DeleteSDGResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The number of failures.</para>
+                /// <para>The number of failed tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>The details of failed tasks.</para>
+                /// <para>The details of the failed tasks.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string ErrMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The specific information.</para>
+                    /// <para>The detailed information.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
                     public DeleteSDGResponseBodyDataResultFailedItemsItem Item { get; set; }
                     public class DeleteSDGResponseBodyDataResultFailedItemsItem : TeaModel {
                         /// <summary>
-                        /// <para>The specific ID.</para>
+                        /// <para>The SDG ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>sdg-dfet5vvvgy</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// <para>The number of successes.</para>
+                /// <para>The number of successful tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all requests succeeded. Valid values:</para>
+            /// <para>Indicates whether all requests are successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: All succeeded.</description></item>
+            /// <item><description>true: All requests are successful.</description></item>
             /// <item><description>false: Some tasks failed.</description></item>
             /// </list>
             /// 

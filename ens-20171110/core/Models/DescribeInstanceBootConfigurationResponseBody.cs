@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public DescribeInstanceBootConfigurationResponseBodyInstances Instances { get; set; }
         public class DescribeInstanceBootConfigurationResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The startup method.</para>
+            /// <para>The boot method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>legacy</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string BootSet { get; set; }
 
             /// <summary>
-            /// <para>The startup type.</para>
+            /// <para>The boot type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disk</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string BootType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the startup depends on the disk.</para>
+            /// <para>Specifies whether the boot process depends on disks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DiskSet { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-****</para>

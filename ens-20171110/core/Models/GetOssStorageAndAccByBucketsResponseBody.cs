@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<GetOssStorageAndAccByBucketsResponseBodyBucketList> BucketList { get; set; }
         public class GetOssStorageAndAccByBucketsResponseBodyBucketList : TeaModel {
             /// <summary>
-            /// <para>The number of access requests.</para>
+            /// <para>The number of accesses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? Acc { get; set; }
 
             /// <summary>
-            /// <para>The OSS bucket name.</para>
+            /// <para>The name of the bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-bucket</para>

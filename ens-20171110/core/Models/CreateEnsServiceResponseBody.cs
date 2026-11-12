@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEnsServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</para>
+        /// <para>The business code. A value of 0 is returned for a successful call, and an error code is returned for a failed call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

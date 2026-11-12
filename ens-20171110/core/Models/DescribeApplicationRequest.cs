@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can call the ListApplications operation to obtain the application ID.</para>
+        /// <para>The ID of the application. You can obtain the ID by calling the ListApplications operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the application. Separate multiple version numbers with commas (,). If you want to query data of all versions of applications, specify All for this parameter. By default, only data of applications in the stable versions are queried.</para>
+        /// <para>The business service version numbers of the application. Multiple values are supported and separated by commas (,). If you enter All, data of all versions is returned. By default, only data associated with the stable version number is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1,v2</para>
@@ -31,18 +31,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppVersions { get; set; }
 
         /// <summary>
-        /// <para>The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:</para>
+        /// <para>The regional statistical level of the application edge resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>National: Chinese mainland</para>
-        /// </description></item>
-        /// <item><description><para>Big: area</para>
-        /// </description></item>
-        /// <item><description><para>Middle: province</para>
-        /// </description></item>
-        /// <item><description><para>Small: city</para>
-        /// </description></item>
-        /// <item><description><para>RegionId: edge node</para>
-        /// </description></item>
+        /// <item><description>National: nationwide</description></item>
+        /// <item><description>Big: region</description></item>
+        /// <item><description>Middle: province</description></item>
+        /// <item><description>Small: city</description></item>
+        /// <item><description>RegionId: edge node</description></item>
         /// </list>
         /// <para>Default value: National.</para>
         /// 
@@ -54,7 +49,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return other information about the application, such as statistics on resource instances and pods. The value must be a JSON string. By default, all information is returned.</para>
+        /// <para>Specifies whether to return information about statistical resource instances and container pods. The value is a JSON string. By default, all information is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;appInfo\&quot;:true,\&quot;detailStat\&quot;: true, \&quot;appVersionStat\&quot;: true, \&quot;districtStat\&quot;:true ,\&quot;instanceStat\&quot;: true, \&quot;podCountStat\&quot;: true}</para>
@@ -64,7 +59,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OutDetailStatParams { get; set; }
 
         /// <summary>
-        /// <para>The resource filtering condition.</para>
+        /// <para>The resource filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;regionCode\&quot;: \&quot;cn-wuxi-telecom_unicom_cmcc-3\&quot;,    \&quot;ispCode\&quot;: \&quot;telecom\&quot;,    \&quot;count\&quot;: 2	},{    \&quot;regionCode\&quot;: \&quot;cn-shanghai-cmcc\&quot;,    \&quot;count\&quot;: 4	}]</para>

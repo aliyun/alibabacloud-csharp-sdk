@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerSpecResponseBody : TeaModel {
         /// <summary>
-        /// <para>The specifications. Valid values:</para>
+        /// <para>The specifications.</para>
         /// </summary>
         [NameInMap("LoadBalancerSpecs")]
         [Validation(Required=false)]
         public List<DescribeLoadBalancerSpecResponseBodyLoadBalancerSpecs> LoadBalancerSpecs { get; set; }
         public class DescribeLoadBalancerSpecResponseBodyLoadBalancerSpecs : TeaModel {
             /// <summary>
-            /// <para>The display name of the instance type.</para>
+            /// <para>The display name of the instance specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>elb.s1.small</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the ELB instance.</para>
+            /// <para>The specification of the load balancing instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>elb.s1.small</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

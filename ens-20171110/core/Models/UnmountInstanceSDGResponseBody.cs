@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnmountInstanceSDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The returned Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UnmountInstanceSDGResponseBodyData Data { get; set; }
         public class UnmountInstanceSDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. Success is returned for a successful request.</para>
+            /// <para>The response message. The value is success if the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the synchronization request.</para>
+            /// <para>The execution result of the synchronous request.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>Details about failed tasks.</para>
+                /// <para>The list of failure details.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string ErrMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the instance.</para>
+                    /// <para>The instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>aic-xxxxx-0</para>
@@ -87,10 +87,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>Indicates whether all tasks are successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: All tasks are successful.</para>
-            /// </description></item>
-            /// <item><description><para>false: Failed tasks exist.</para>
-            /// </description></item>
+            /// <item><description>true: All tasks are successful.</description></item>
+            /// <item><description>false: One or more tasks failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

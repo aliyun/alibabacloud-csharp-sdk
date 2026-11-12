@@ -1,3 +1,10 @@
+2026-11-12 Version: 11.2.0
+- Support API DescribeSharedDiskRecords.
+- Update API CreateSDG: add request parameters ResetOptimize.
+- Update API SetLoadBalancerTCPListenerAttribute: add request parameters BackendServerPort.
+- Update API SetLoadBalancerUDPListenerAttribute: add request parameters BackendServerPort.
+
+
 2026-10-19 Version: 11.1.0
 - Support API AssociateNetworkCidrBlock.
 - Support API UnassociateNetworkCidrBlock.

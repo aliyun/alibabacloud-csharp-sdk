@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The data migration policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>abandon</c>: Does not migrate data. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><c>force_transfer</c>: Forces data migration.</para>
-        /// </description></item>
-        /// <item><description><para><c>try_transfer</c>: Attempts to migrate data.</para>
-        /// </description></item>
+        /// <item><description>abandon: Does not migrate data. This is the default value.</description></item>
+        /// <item><description>force_transfer: forcible migration of EPS resource.</description></item>
+        /// <item><description>try_transfer: Tries to migrate data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,12 +36,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The type of the O\&amp;M task. Valid values:</para>
+        /// <para>The type of the O&amp;M task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>immediate</c>: Executes the task immediately.</para>
-        /// </description></item>
-        /// <item><description><para><c>scheduled</c>: Executes the task at the specified time.</para>
-        /// </description></item>
+        /// <item><description>immediate: Immediate execution.</description></item>
+        /// <item><description>scheduled: Scheduled execution.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,9 +51,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OpsType { get; set; }
 
         /// <summary>
-        /// <para>The instance password. This parameter is optional. If you do not specify a password, the system generates a random one.</para>
-        /// <para>The password must be 8 to 30 characters long and contain uppercase letters, lowercase letters, and digits.</para>
-        /// <para>Note: This parameter is not supported for scheduled execution.</para>
+        /// <para>The instance password. This parameter is optional. If you do not specify this parameter, a random password is used.</para>
+        /// <para>The password must be 8 to 30 characters in length and must contain uppercase letters, lowercase letters, and digits.</para>
+        /// <para>Note: You cannot specify a password for scheduled execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAaa1234</para>
@@ -68,7 +63,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The scheduled execution time. This must be a Unix timestamp in milliseconds. This parameter is required when <c>OpsType</c> is set to <c>scheduled</c>.</para>
+        /// <para>The scheduled execution time. The value is a timestamp in milliseconds. This parameter is required when OpsType is set to scheduled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1742452232000</para>
@@ -77,6 +72,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public long? PlanTime { get; set; }
 
+        /// <summary>
+        /// <para>The scheduled UTC time.</para>
+        /// </summary>
         [NameInMap("PlanUtcTime")]
         [Validation(Required=false)]
         public string PlanUtcTime { get; set; }

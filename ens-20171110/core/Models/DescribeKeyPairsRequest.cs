@@ -20,18 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair that you want to bind to the simple application server. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain the following characters:</para>
+        /// <para>The name of the key pair. The name must be 2 to 128 characters in length and can contain letters and Chinese characters. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain the following characters:</para>
         /// <list type="bullet">
-        /// <item><description><para>Numbers.</para>
-        /// </description></item>
-        /// <item><description><para>:</para>
-        /// </description></item>
-        /// <item><description><para>_</para>
-        /// </description></item>
-        /// <item><description><para>.</para>
-        /// </description></item>
+        /// <item><description>Digits</description></item>
+        /// <item><description>:</description></item>
+        /// <item><description>_</description></item>
+        /// <item><description>.</description></item>
         /// </list>
-        /// <para>You can specify only one name. By default, all key pairs are queried.</para>
+        /// <para>Only a single name is supported. By default, information about all key pairs is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestKeyPairName</para>
@@ -41,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.</para>
+        /// <para>The page number. Valid values: integers greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: integers that are greater than 0. Default value: 10.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Valid values: integers greater than 0. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

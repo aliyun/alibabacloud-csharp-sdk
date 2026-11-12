@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribePriceRequestDataDisk> DataDisk { get; set; }
         public class DescribePriceRequestDataDisk : TeaModel {
             /// <summary>
-            /// <para>The size of the data disk. Unit: GB. If you specify this parameter, this parameter takes precedence over the Size property in DataDisks.</para>
+            /// <para>The size of the data cloud disk. Unit: GB. If this field is not empty, it takes precedence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public DescribePriceRequestSystemDisk SystemDisk { get; set; }
         public class DescribePriceRequestSystemDisk : TeaModel {
             /// <summary>
-            /// <para>The size of the system disk. Unit: GB.</para>
+            /// <para>The size of the system cloud disk. Unit: GB.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>If you leave DataDisk.1.Size empty, the value that you specified for this parameter is used.</para>
+        /// <para>The data cloud disks. If DataDisk.1.Size is empty and this field is not empty, this field takes precedence.</para>
         /// </summary>
         [NameInMap("DataDisks")]
         [Validation(Required=false)]
         public List<DescribePriceRequestDataDisks> DataDisks { get; set; }
         public class DescribePriceRequestDataDisks : TeaModel {
             /// <summary>
-            /// <para>The category of the disk.</para>
+            /// <para>The cloud disk category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The size of the data disk. Unit: GB.</para>
+            /// <para>The size of the data cloud disk. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the ENS node.</para>
+        /// <para>The edge zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The specifications of instances.</para>
+        /// <para>The instance type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,16 +94,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth metering method of the instance. Valid values:</para>
+        /// <para>The Billable methods for ENS bandwidth. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>BandwidthByDay: Pay by daily peak bandwidth</para>
-        /// </description></item>
-        /// <item><description><para>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</para>
-        /// </description></item>
-        /// <item><description><para>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</para>
-        /// </description></item>
-        /// <item><description><para>PayByBandwidth: Pay by fixed bandwidth</para>
-        /// </description></item>
+        /// <item><description>BandwidthByDay: daily peak bandwidth.</description></item>
+        /// <item><description>95BandwidthByMonth: monthly 95th percentile bandwidth.</description></item>
+        /// <item><description>PayByBandwidth4thMonth: monthly fourth peak bandwidth.</description></item>
+        /// <item><description>PayByBandwidth: bandwidth with defined specifications.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -115,14 +111,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance.</para>
+        /// <para>The subscription duration of the resource.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</para>
-        /// </description></item>
-        /// <item><description><para>If you set PeriodUnit to Day, you can set Period only to 3.</para>
-        /// </description></item>
-        /// <item><description><para>If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</para>
-        /// </description></item>
+        /// <item><description>If PeriodUnit is not specified, the default billing cycle is month. Only Day and Month are supported.</description></item>
+        /// <item><description>If PeriodUnit is set to Day, Period can only be set to 3.</description></item>
+        /// <item><description>If PeriodUnit is set to Month, Period can be set to 1 to 9 or 12.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -134,12 +127,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the ENS instance. Valid values:</para>
+        /// <para>The billing cycle for querying the prices of ENS resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month (default):</para>
-        /// </description></item>
-        /// <item><description><para>Day</para>
-        /// </description></item>
+        /// <item><description>Month (default): monthly billing cycle.</description></item>
+        /// <item><description>Day: daily billing cycle.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -150,7 +141,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The number of instances.</para>
+        /// <para>The quantity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

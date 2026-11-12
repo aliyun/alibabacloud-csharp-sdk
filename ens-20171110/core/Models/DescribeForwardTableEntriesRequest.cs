@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeForwardTableEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The EIP in the DNAT entry. The public IP address is used to access the Internet.</para>
+        /// <para>The elastic IP address that provides public network access in the DNAT entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36.XXX.XXX.72</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ForwardEntryName { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the instance that uses the DNAT entry for Internet communication.</para>
+        /// <para>The private IP address of the instance that communicates with the Internet through the DNAT entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.XXX.XXX.50</para>
@@ -50,13 +50,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InternalIp { get; set; }
 
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
+        /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>TCP</b>: forwards TCP packets.</para>
+        /// <item><description><para><b>TCP</b>: Forwards TCP packets.</para>
         /// </description></item>
-        /// <item><description><para><b>UDP</b>: forwards UDP packets.</para>
+        /// <item><description><para><b>UDP</b>: Forwards UDP packets.</para>
         /// </description></item>
-        /// <item><description><para><b>Any</b>: forwards all packets.</para>
+        /// <item><description><para><b>Any</b>: Forwards packets of all protocols.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>.</para>
+        /// <para>The page number of the list to query. Pages start from <b>1</b>.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>100</b>.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Maximum value: <b>100</b>.</para>
         /// <para>Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>

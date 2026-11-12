@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRouteEntryListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the routes.</para>
+        /// <para>The route entry information.</para>
         /// </summary>
         [NameInMap("RouteEntrys")]
         [Validation(Required=false)]
         public List<DescribeEnsRouteEntryListResponseBodyRouteEntrys> RouteEntrys { get; set; }
         public class DescribeEnsRouteEntryListResponseBodyRouteEntrys : TeaModel {
             /// <summary>
-            /// <para>The time when the IP address was created. The time is displayed in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-16T03:50:05Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Enter a description for the route.</para>
+            /// <para>The description of the route entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block of the route.</para>
+            /// <para>The destination CIDR block of the route entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101.0.45.0/24</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The information about the next hop.</para>
+            /// <para>The next hop information.</para>
             /// </summary>
             [NameInMap("NextHops")]
             [Validation(Required=false)]
             public List<DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops> NextHops { get; set; }
             public class DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops : TeaModel {
                 /// <summary>
-                /// <para>The ID of the next hop.</para>
+                /// <para>The instance ID of the next hop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-bp1111yup9991890woxq</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string NextHopId { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID of the next hop.</para>
+                /// <para>The name of the next hop instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testInstance</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string NextHopName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the next hop. Valid values:</para>
+                /// <para>The next hop type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Instance</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The ID of the route.</para>
+            /// <para>The ID of the route entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rte-2zeksx7h436f5unk349m1</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RouteEntryId { get; set; }
 
             /// <summary>
-            /// <para>The name of the route.</para>
+            /// <para>The name of the route entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test0</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RouteTableId { get; set; }
 
             /// <summary>
-            /// <para>The source CIDR block. This field is used when you configure a route entry in the gateway route table. This field is not supported in the vSwitch route table.</para>
+            /// <para>The source CIDR block. This parameter is used when you configure a routing entry in a gateway route table and is not supported in a vSwitch route table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.XXX.XXX.0/24</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SourceCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The status of the route entry. Valid values:</para>
+            /// <para>The status of the route entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the route entry.</para>
+            /// <para>The type of the routing entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

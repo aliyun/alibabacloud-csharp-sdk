@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal.</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false (default)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +35,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use coupons. Valid values:</para>
+        /// <para>Specifies whether to use vouchers. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Uses vouchers.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Does not use vouchers.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +51,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 CIDR block used by the instance, in CIDR notation.</para>
+        /// <para>The IPv4 CIDR block used by the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.0.0/24</para>
@@ -62,7 +72,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>One or more environment variables to set during EAIS instance initialization.</para>
+        /// <para>Sets one or more environment variables when the EAIS instance is initialized.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[object Object]</para>
@@ -72,7 +82,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnvironmentVar { get; set; }
 
         /// <summary>
-        /// <para>The refresh rate, in Hz. Valid values: 30 and 60.</para>
+        /// <para>The refresh rate. Unit: Hz. Valid values: 30 and 60.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -93,11 +103,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The instance billing cycle. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Hour</description></item>
-        /// <item><description>Day</description></item>
-        /// </list>
+        /// <para>The billing cycle of the instance. Valid values: Hour and Day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hour</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceBillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the AIC container instance. Valid values:</para>
+        /// <para>The AIC container instance specifications. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>aic.cf52r.c1.np</para>
         /// </description></item>
@@ -162,7 +168,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The key pair name.</para>
+        /// <para>The name of the key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestKeyPairName</para>
@@ -182,7 +188,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NameSpace { get; set; }
 
         /// <summary>
-        /// <para>The billing type. Valid values: <b>PrePaid</b> (subscription).</para>
+        /// <para>The billing method. Valid values: <b>PrePaid</b> (subscription).</para>
+        /// <remarks>
+        /// <para>Only subscription is currently supported.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -193,9 +202,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The duration for which you want to purchase the resource.</para>
+        /// <para>The subscription duration of the resource.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify PeriodUnit, the resource is purchased on a monthly basis by default. Currently, only Days and Month are supported.</description></item>
+        /// <item><description>If you do not specify PeriodUnit, the default billing cycle is month. Only Day and Month are supported.</description></item>
         /// <item><description>If PeriodUnit is set to Day, Period can only be set to 3.</description></item>
         /// <item><description>If PeriodUnit is set to Month, Period can be set to 1 to 9 or 12.</description></item>
         /// </list>
@@ -208,7 +217,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the purchase duration.</para>
+        /// <para>The unit of the subscription duration.</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify PeriodUnit, the default billing cycle is month. Only Day and Month are supported.</description></item>
+        /// <item><description>If PeriodUnit is set to Day, Period can only be set to 3.</description></item>
+        /// <item><description>If PeriodUnit is set to Month, Period can be set to 1 to 9 or 12.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -257,7 +271,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ServerName { get; set; }
 
         /// <summary>
-        /// <para>The ARM board specification. Valid values:</para>
+        /// <para>The ARM board specifications. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cas.cf53r</description></item>
         /// <item><description>cas.cf52r</description></item>

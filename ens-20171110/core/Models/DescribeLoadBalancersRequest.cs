@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The listener status of the load balancing instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: The listeners in the instance can forward accepted traffic based on rules.</description></item>
-        /// <item><description><b>InActive</b>: The listeners in the instance no longer forward accepted traffic.</description></item>
+        /// <item><description><b>Active</b>: The listeners in the instance can accept and forward traffic based on rules.</description></item>
+        /// <item><description><b>InActive</b>: The listeners in the instance no longer accept and forward traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries per page during paging in a paged query. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
+        /// <para>The Settings for the number of entries per page for paging in a paged query. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

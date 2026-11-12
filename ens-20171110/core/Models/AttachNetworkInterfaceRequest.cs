@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AttachNetworkInterfaceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The ID of the elastic network interfaces (ENIs).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

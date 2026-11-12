@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class SetLoadBalancerStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ELB instance.</para>
+        /// <para>The instance ID of the load balancing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The new instance status. Valid values:</para>
+        /// <para>The updated instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Active</b></para>
-        /// </description></item>
-        /// <item><description><para><b>InActive</b></para>
-        /// </description></item>
+        /// <item><description><b>Active</b>: Runs the load balancing instance. Listeners in the instance can forward accepted traffic based on rules.</description></item>
+        /// <item><description><b>InActive</b>: Stops the load balancing instance. Listeners in the instance no longer forward accepted traffic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

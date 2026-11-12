@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ExportImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL that points to the exported image.</para>
+        /// <para>The URL of the exported image.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://oss.url">http://oss.url</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ExportedImageURL { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>43A426AD-3F2E-5DD9-9C08-D4DBDCA48D85</para>

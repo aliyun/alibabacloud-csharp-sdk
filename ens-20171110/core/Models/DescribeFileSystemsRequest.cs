@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeFileSystemsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The edge zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-cmcc</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The NAS file system ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c50f8*****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The name of the file system.</para>
+        /// <para>The NAS file system name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FileSystem1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string FileSystemName { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. Starting value: <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

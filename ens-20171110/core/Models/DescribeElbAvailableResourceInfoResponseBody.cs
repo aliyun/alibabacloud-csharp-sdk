@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Area { get; set; }
 
             /// <summary>
-            /// <para>The quantity available for purchase.</para>
+            /// <para>The Quantity available for purchase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENS edge zone.</para>
+            /// <para>The edge zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-guangdong-10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The common parameter. The ID of the request. Each request has a unique ID, which is active for troubleshooting.</para>
+        /// <para>The common parameter. The ID of each request is unique and active for troubleshooting and locating issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25AAD194-4A37-51CF-B1CA-1E86FDAC23A6</para>

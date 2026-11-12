@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerListenMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The TCP/UDP monitoring data of the ELB instance.</para>
+        /// <para>The array of Layer 4 monitoring data for the load balancer.</para>
         /// </summary>
         [NameInMap("LoadBalancerMonitorListenData")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DropConns { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node to which the ELB instance belongs.</para>
+            /// <para>The ID of the edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-dongguan-9</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InPkts { get; set; }
 
             /// <summary>
-            /// <para>The number of unavailable servers that are attached to the monitored ELB instance.</para>
+            /// <para>The number of unavailable backend servers associated with the listener.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InValidRsNum { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ELB instance.</para>
+            /// <para>The load balancing instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-5q73cv04zeyh43lh74lp4****</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Proto { get; set; }
 
             /// <summary>
-            /// <para>The VIP port of the ELB instance.</para>
+            /// <para>The VIP port of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string VPort { get; set; }
 
             /// <summary>
-            /// <para>The number of available servers that are attached to the monitored ELB instance.</para>
+            /// <para>The number of available backend servers associated with the listener.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ValidRsNum { get; set; }
 
             /// <summary>
-            /// <para>The virtual IP address (VIP) of the instance.</para>
+            /// <para>The VIP of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.8.****</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Vip { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tunnel.</para>
+            /// <para>The tunnel ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>53284</para>

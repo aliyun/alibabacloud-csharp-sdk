@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RunServiceScheduleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClientIp { get; set; }
 
         /// <summary>
-        /// <para>The directory to which the data file is mounted. The value must be a full path and cannot be \&quot;/../\&quot;. Example: [&quot;/data/app01&quot;, &quot;/data/user&quot;]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.</para>
+        /// <para>The list of directories of user data files to be mounted. The directories must be absolute paths, and the \&quot;/../\&quot; format is not supported. Example: [&quot;/data/app01&quot;, &quot;/data/user&quot;]. Note: The input directory path is relative to the /data directory of the virtual device. The actual path on the virtual device is /data/{input path}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;/data/app01\&quot;, \&quot;/data/user\&quot;]</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Directorys { get; set; }
 
         /// <summary>
-        /// <para>The parameter does not take effect.</para>
+        /// <para>Invalid parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>android</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PodConfigName { get; set; }
 
         /// <summary>
-        /// <para>The maximum duration for locking an idle device. Unit: seconds. This parameter takes effect only if you set ServiceAction to PreSchedule. Default value: 300.</para>
+        /// <para>The maximum time to lock an idle device, in seconds. This parameter takes effect only when ServiceAction is set to PreSchedule. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PreLockedTimeout { get; set; }
 
         /// <summary>
-        /// <para>The scheduling policy of the device. The value must be a JSON string.</para>
+        /// <para>The device scheduling policy. The value is a string in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;selectLevel\&quot;: \&quot;RegionId\&quot;, \&quot;values\&quot;: [\&quot;cn-chengdu-telecom-2\&quot;]  }</para>
@@ -72,26 +72,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ScheduleStrategy { get; set; }
 
         /// <summary>
-        /// <para>The scheduling operation. The value must be of the enumeration type. Valid values:</para>
-        /// <para>Container scenario:</para>
+        /// <para>The scheduling service operation. Valid values:</para>
+        /// <para>Container scenarios:</para>
         /// <list type="bullet">
-        /// <item><description><para>Start: selects and activates an idle cloud device.</para>
-        /// </description></item>
-        /// <item><description><para>Stop: stops and releases the cloud device.</para>
-        /// </description></item>
-        /// <item><description><para>Console: performs the scheduling operation when the device is in the scheduling state.</para>
-        /// </description></item>
+        /// <item><description>Start: Selects and activates a schedulable cloud device and starts the service.</description></item>
+        /// <item><description>Stop: Stops and releases the cloud device.</description></item>
+        /// <item><description>Console: Interacts with the device by using commands when the UUID is in the scheduling state.</description></item>
         /// </list>
-        /// <para>Bare metal instance or virtual machine scenario:</para>
+        /// <para>Bare metal or virtual machine scenarios:</para>
         /// <list type="bullet">
-        /// <item><description><para>PreSchedule: locks a virtual machine instance for scheduling.</para>
-        /// </description></item>
-        /// <item><description><para>Confirm: confirms the scheduling operation.</para>
-        /// </description></item>
-        /// <item><description><para>Cancel: cancels the scheduling operation.</para>
-        /// </description></item>
-        /// <item><description><para>Console: performs the scheduling operation when the device is in the scheduling state.</para>
-        /// </description></item>
+        /// <item><description>PreSchedule: Pre-schedules and locks a virtual machine instance.</description></item>
+        /// <item><description>Confirm: Confirms the scheduling.</description></item>
+        /// <item><description>Cancel: Cancels the scheduling.</description></item>
+        /// <item><description>Console: Interacts with the device by using commands when the UUID is in the scheduling state.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -103,7 +96,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ServiceAction { get; set; }
 
         /// <summary>
-        /// <para>The service commands. The value must be a JSON string.</para>
+        /// <para>The list of container service commands. The value is a string in JSON array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;containerName\&quot;: \&quot;android\&quot;,       \&quot;commands\&quot;:[\&quot;cat /tmp/token.json\&quot;]    },    {      \&quot;commands\&quot;:[\&quot;ls -l /data/data\&quot;]    }]</para>

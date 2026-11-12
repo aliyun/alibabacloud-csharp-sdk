@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribeEnsResourceUsageResponseBodyEnsResourceUsage> EnsResourceUsage { get; set; }
         public class DescribeEnsResourceUsageResponseBodyEnsResourceUsage : TeaModel {
             /// <summary>
-            /// <para>The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.</para>
+            /// <para>The number of edge services. This field returns data only when ServiceType is set to 2.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? CpuSum { get; set; }
 
             /// <summary>
-            /// <para>The number of data disks.</para>
+            /// <para>The number of data cloud disks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? DiskCount { get; set; }
 
             /// <summary>
-            /// <para>The number of stopped VMs.</para>
+            /// <para>The number of stopped virtual machine instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? DownCount { get; set; }
 
             /// <summary>
-            /// <para>The number of expired VM instances.</para>
+            /// <para>The number of expired virtual machine instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? ExpiredCount { get; set; }
 
             /// <summary>
-            /// <para>The number of VM instances that are about to expire.</para>
+            /// <para>The number of virtual machine instances that are about to expire.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,14 +107,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? RunningCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the service. Valid values:</para>
+            /// <para>The service type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: subscription instance.</para>
-            /// </description></item>
-            /// <item><description><para>2: edge service instance.</para>
-            /// </description></item>
-            /// <item><description><para>3: pay-as-you-go instance.</para>
-            /// </description></item>
+            /// <item><description>1: Subscription instance.</description></item>
+            /// <item><description>2: Edge service instance.</description></item>
+            /// <item><description>3: Pay-as-you-go instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +122,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The total disk size.</para>
+            /// <para>The total disk storage capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5000</para>

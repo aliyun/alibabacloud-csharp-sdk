@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsEipAddressesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EIP instance to query. You can specify up to 50 EIP instance IDs separated by commas (,).</para>
+        /// <para>The ID of the EIP instance. You can specify up to 50 EIP instance IDs. Separate multiple instance IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-5q9uwkd9bznjpxz8hr6cirnjk</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AssociatedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud service instance to associate. Valid values: </para>
+        /// <para>The type of the cloud service instance to attach. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>EnsInstance</b>: a VPC-type ENS instance.</para>
+        /// <item><description><para><b>EnsInstance</b>: ENS instance in a VPC.</para>
         /// </description></item>
-        /// <item><description><para><b>SlbInstance</b>: a load balancing instance.</para>
+        /// <item><description><para><b>SlbInstance</b>: load balancing instance.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AssociatedInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the EIP to query. You can specify up to 50 EIP addresses separated by commas (,).</para>
+        /// <para>The IP address of the EIP. You can specify up to 50 IP addresses. Separate multiple IP addresses with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>120.XXX.XXX.4</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EipName { get; set; }
 
         /// <summary>
-        /// <para>The ENS edge zone ID.</para>
+        /// <para>The ID of the ENS edge zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-chengdu-telecom</para>
@@ -76,17 +76,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The array of ENS edge zone IDs. Array length: 1 to 100.</para>
+        /// <para>The array of ENS edge zone IDs. The array must contain 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether ICMP echo reply is enabled. Valid values:</para>
+        /// <para>Specifies whether to enable ICMP echo reply. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): enabled.</description></item>
-        /// <item><description><b>false</b>: disabled.</description></item>
+        /// <item><description><b>true</b>: ICMP echo reply is enabled. This is the default value.</description></item>
+        /// <item><description><b>false</b>: ICMP echo reply is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? IcmpReplyEnabled { get; set; }
 
         /// <summary>
-        /// <para>The lock type.</para>
+        /// <para>The lock reason. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>financial: locked due to overdue payment.</description></item>
+        /// <item><description><b>financial</b>: The EIP is locked due to an overdue payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -132,9 +132,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Specifies whether the EIP is a standby EIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: standby.</para>
+        /// <item><description><para><b>true</b>: The EIP is a standby EIP.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: not standby.</para>
+        /// <item><description><para><b>false</b>: The EIP is not a standby EIP.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -146,7 +146,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Standby { get; set; }
 
         /// <summary>
-        /// <para>The status of the EIP. Valid values: Associating: being associated. Unassociating: being disassociated. InUse: allocated. Available: available.</para>
+        /// <para>The status of the EIP. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Associating</b>: The EIP is being associated.</description></item>
+        /// <item><description><b>Unassociating</b>: The EIP is being disassociated.</description></item>
+        /// <item><description><b>InUse</b>: The EIP is allocated.</description></item>
+        /// <item><description><b>Available</b>: The EIP is available.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>InUse</para>

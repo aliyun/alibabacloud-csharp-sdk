@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsResourceUsageRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the query range for the expiration time of virtual machine instances. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-06-15T09:07:23Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ExpiredEndTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the query range for the expiration time of virtual machine instances. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-06-15T09:07:23Z</para>

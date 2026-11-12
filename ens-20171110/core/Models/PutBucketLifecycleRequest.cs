@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PutBucketLifecycleRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to allow overlapping prefixes. Valid values:</para>
+        /// <para>Specifies whether to allow overlapping prefixes. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: Overlapping prefixes are allowed.</para>
         /// </description></item>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? AllowSameActionOverlap { get; set; }
 
         /// <summary>
-        /// <para>The name of the bucket.</para>
+        /// <para>The bucket name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The date before which objects expire. The system applies the lifecycle rule to objects last modified before this date.</para>
-        /// <para>Use ISO 8601 format and UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The expiration date. The system performs lifecycle operations on objects that were last modified before this date.</para>
+        /// <para>The date must be specified in the ISO 8601 standard and in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <remarks>
-        /// <para>ExpirationDays and CreatedBeforeDate are mutually exclusive. Specify one.</para>
+        /// <para>ExpirationDays and CreatedBeforeDate are mutually exclusive. You must specify one of them.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CreatedBeforeDate { get; set; }
 
         /// <summary>
-        /// <para>The number of days after an object\&quot;s last modification when the lifecycle rule takes effect. Must be a positive integer greater than zero.</para>
+        /// <para>The number of days after the last modification time of an object before the lifecycle rule takes effect. The value must be a positive integer greater than 0.</para>
         /// <remarks>
-        /// <para>ExpirationDays and CreatedBeforeDate are mutually exclusive. Specify one.</para>
+        /// <para>ExpirationDays and CreatedBeforeDate are mutually exclusive. You must specify one of them.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? ExpirationDays { get; set; }
 
         /// <summary>
-        /// <para>The prefix that the rule applies to. You cannot set duplicate prefixes.</para>
+        /// <para>The prefix to which the rule applies. You cannot specify the same prefix for multiple rules.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you specify a prefix, the rule applies only to objects in the bucket whose names start with that prefix.</para>
+        /// <item><description><para>If you specify a prefix, the rule applies only to objects whose names match the prefix in the bucket.</para>
         /// </description></item>
-        /// <item><description><para>If you leave Prefix empty, the rule applies to all objects in the bucket.</para>
+        /// <item><description><para>If you leave the prefix empty, the rule applies to all objects in the bucket.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>A unique ID that identifies the rule. Maximum length is 255 bytes.</para>
+        /// <para>The unique ID that identifies the rule. The ID can be up to 255 bytes in length.</para>
         /// <list type="bullet">
-        /// <item><description><para>Omit this parameter when creating a new rule. The system generates a unique ID automatically.</para>
+        /// <item><description><para>You do not need to specify this parameter when you create a rule. The system automatically generates a unique ID.</para>
         /// </description></item>
-        /// <item><description><para>Specify RuleId when updating an existing rule. The rule must exist. Otherwise, the call fails.</para>
+        /// <item><description><para>You must specify the RuleId when you update an existing rule. The rule corresponding to the RuleId must exist. Otherwise, an error is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -98,9 +98,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enabled</b>: The system runs the rule on schedule.</para>
+        /// <item><description><para><b>Enabled</b>: The rule is executed periodically.</para>
         /// </description></item>
-        /// <item><description><para><b>Disabled</b>: The system ignores the rule.</para>
+        /// <item><description><para><b>Disabled</b>: The rule is ignored.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AttachEnsInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. Only one ID is supported.</para>
+        /// <para>The instance ID. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The command to run on the instance, encoded in Base64 using UTF-8.</para>
+        /// <para>The command to execute on the instance. The command must be encoded in Base64 and UTF-8.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AssignPrivateIpAddressesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</para>
+        /// <para>The set of information about the elastic network interface controller (NIC) to which secondary private IP addresses are assigned.</para>
         /// </summary>
         [NameInMap("AssignedPrivateIpAddressesSet")]
         [Validation(Required=false)]
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet AssignedPrivateIpAddressesSet { get; set; }
         public class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet : TeaModel {
             /// <summary>
-            /// <para>The ID of the ENI.</para>
+            /// <para>The ID of the elastic network interface controller (NIC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-uf620pb4d19ljnu4a64m</para>

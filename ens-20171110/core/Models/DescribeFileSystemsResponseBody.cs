@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeFileSystemsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the file systems.</para>
+        /// <para>The collection of file system information.</para>
         /// </summary>
         [NameInMap("FileSystems")]
         [Validation(Required=false)]
         public List<DescribeFileSystemsResponseBodyFileSystems> FileSystems { get; set; }
         public class DescribeFileSystemsResponseBodyFileSystems : TeaModel {
             /// <summary>
-            /// <para>The capacity of the file system. Unit: MiB.</para>
+            /// <para>The capacity. Unit: MiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-cmcc</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file system.</para>
+            /// <para>The file system ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c50f8*****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The name of the file system.</para>
+            /// <para>The file system name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FileSystem1</para>
@@ -77,7 +77,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string FileSystemName { get; set; }
 
             /// <summary>
-            /// <para>The storage usage of the file system. The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.</para>
+            /// <para>The file system usage.
+            /// Non-real-time usage. It indicates the maximum usage in the previous hour. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102400</para>
@@ -87,14 +88,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? MeteredSize { get; set; }
 
             /// <summary>
-            /// <para>The information about mount targets.</para>
+            /// <para>The collection of mount target information.</para>
             /// </summary>
             [NameInMap("MountTargets")]
             [Validation(Required=false)]
             public List<DescribeFileSystemsResponseBodyFileSystemsMountTargets> MountTargets { get; set; }
             public class DescribeFileSystemsResponseBodyFileSystemsMountTargets : TeaModel {
                 /// <summary>
-                /// <para>The path of the mount target.</para>
+                /// <para>The mount target path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><em>.</em>.<em>.</em>:/${FileSystemName}/{MountTargetName}</para>
@@ -104,7 +105,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string MountTargetDomain { get; set; }
 
                 /// <summary>
-                /// <para>The name of the mount target.</para>
+                /// <para>The mount target name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>target1</para>
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string MountTargetName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the network.</para>
+                /// <para>The network ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>n-****</para>
@@ -124,16 +125,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string NetWorkId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the mount target. Valid values:</para>
+                /// <para>The mount target status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>active: The mount target is available.</para>
-                /// </description></item>
-                /// <item><description><para>inactive: The mount target is unavailable.</para>
-                /// </description></item>
-                /// <item><description><para>pending: The task is running.</para>
-                /// </description></item>
-                /// <item><description><para>deleting: The mount target is being deleted.</para>
-                /// </description></item>
+                /// <item><description>active: Available.</description></item>
+                /// <item><description>inactive: Unavailable.</description></item>
+                /// <item><description>pending: Processing a task.</description></item>
+                /// <item><description>deleting: Being deleted.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -146,7 +143,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The billing method. PostPaid is returned. PostPaid indicates the pay-as-you-go billing method.</para>
+            /// <para>The billing method. Valid values: PostPaid (pay-as-you-go).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -156,12 +153,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the file system. Valid values:</para>
+            /// <para>The file system protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>NFS: Network File System (NFS)</para>
-            /// </description></item>
-            /// <item><description><para>SMB: Server Message Block (SMB)</para>
-            /// </description></item>
+            /// <item><description>NFS: NFS protocol.</description></item>
+            /// <item><description>SMB: SMB protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,20 +167,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The status of the file system. Valid values:</para>
+            /// <para>The file system status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>pending: The file system is being created or modified.</para>
-            /// </description></item>
-            /// <item><description><para>running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the running state.</para>
-            /// </description></item>
-            /// <item><description><para>stopped: The file system is unavailable.</para>
-            /// </description></item>
-            /// <item><description><para>extending: The file system is being scaled out.</para>
-            /// </description></item>
-            /// <item><description><para>stopping: The file system is being disabled.</para>
-            /// </description></item>
-            /// <item><description><para>deleting: The file system is being deleted.</para>
-            /// </description></item>
+            /// <item><description>pending: The file system is processing a node.</description></item>
+            /// <item><description>running: The file system is active. You can perform What to do next, such as creating a mount target, only when the status is running.</description></item>
+            /// <item><description>stopped: The file system is unavailable.</description></item>
+            /// <item><description>extending: The file system is being expanded.</description></item>
+            /// <item><description>stopping: The file system is being stopped.</description></item>
+            /// <item><description>deleting: The file system is being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -198,10 +187,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>capacity: Capacity NAS file systems</para>
-            /// </description></item>
-            /// <item><description><para>performance: Performance NAS file systems</para>
-            /// </description></item>
+            /// <item><description>capacity: Storage-optimized.</description></item>
+            /// <item><description>performance: Extreme.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -234,7 +221,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>762DD527-358B-1E48-8005-CCE3ED4EB9E0</para>
@@ -244,7 +231,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

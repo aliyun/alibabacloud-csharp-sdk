@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEnsServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource that you want to obtain. You can specify only one ID in a request.</para>
+        /// <para>The required resource ID. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsServiceId { get; set; }
 
         /// <summary>
-        /// <para>The operation to perform after you preview the created edge service. Valid values:</para>
+        /// <para>The operation to perform after previewing the creation of the edge service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Buy</b>: create</para>
+        /// <item><description><para><b>Buy</b>: Create.</para>
         /// </description></item>
-        /// <item><description><para><b>Upgrade</b>: change</para>
+        /// <item><description><para><b>Upgrade</b>: Update.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnloadRegionSDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned Data object.</para>
+        /// <para>The Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UnloadRegionSDGResponseBodyData Data { get; set; }
         public class UnloadRegionSDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. A value of success indicates a successful request.</para>
+            /// <para>The response message. The value is success if the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public List<UnloadRegionSDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
                 public class UnloadRegionSDGResponseBodyDataResultFailedItems : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the destination edge zone.</para>
+                    /// <para>The ID of the destination node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-xxx</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// <para>The number of successes.</para>
+                /// <para>The number of successful requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all requests were successful. Valid values:</para>
+            /// <para>Indicates whether all requests are successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: All requests were successful.</description></item>
+            /// <item><description>true: All requests are successful.</description></item>
             /// <item><description>false: Some requests failed.</description></item>
             /// </list>
             /// 

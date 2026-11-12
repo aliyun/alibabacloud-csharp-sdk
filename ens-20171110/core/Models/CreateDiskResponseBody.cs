@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The order ID. Multiple IDs are separated by commas (,).</para>
+        /// <remarks>
+        /// <para>Order IDs are returned only for subscription resources. No order ID is returned for pay-as-you-go resources.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>21127020370****</para>

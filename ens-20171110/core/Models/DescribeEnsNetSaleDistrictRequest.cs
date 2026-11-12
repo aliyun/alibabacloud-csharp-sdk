@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsNetSaleDistrictRequest : TeaModel {
         /// <summary>
-        /// <para>The region code.</para>
+        /// <para>The district code.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.</para>
+        /// <item><description><para>If this parameter is left empty, only the nodes under the network level specified by NetLevelCode are queried.</para>
         /// </description></item>
-        /// <item><description><para>If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.</para>
+        /// <item><description><para>If this parameter is specified, only the child nodes under the district specified by NetDistrictCode are queried.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The network level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Big</b>: area</para>
+        /// <item><description><para><b>Big</b>: Major region.</para>
         /// </description></item>
-        /// <item><description><para><b>Middle</b>: province</para>
+        /// <item><description><para><b>Middle</b>: Province.</para>
         /// </description></item>
-        /// <item><description><para><b>Small</b>: city</para>
+        /// <item><description><para><b>Small</b>: City.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

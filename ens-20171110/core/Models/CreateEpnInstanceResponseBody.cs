@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEpnInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the EPN instance.</para>
+        /// <para>The Edge-to-Edge network instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>epn-xxxxx</para>

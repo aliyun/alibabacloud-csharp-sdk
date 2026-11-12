@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRouteTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the resource with which the route table is associated. Valid values:</para>
+        /// <para>The type of resource associated with the route table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VSwitch</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Gateway</b></para>
-        /// </description></item>
+        /// <item><description><b>VSwitch</b>: vSwitch</description></item>
+        /// <item><description><b>Gateway</b>: gateway</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AssociateType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS node.</para>
+        /// <para>The ENS edge zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-xian-unicom</para>
@@ -36,14 +34,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of edge nodes. You can specify 1 to 100 IDs.</para>
+        /// <para>The array of ENS edge zone IDs. Array length: 1 to 100.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-257gqcdfvx6n****</para>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -93,9 +91,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteTableName { get; set; }
 
         /// <summary>
-        /// <para>The SNAT type.</para>
+        /// <para>The SNAT type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FullCone: full cone NAT.</description></item>
+        /// <item><description>FullCone: full-cone NAT</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

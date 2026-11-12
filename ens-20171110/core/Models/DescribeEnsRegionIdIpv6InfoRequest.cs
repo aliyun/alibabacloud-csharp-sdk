@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRegionIdIpv6InfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the node. You can specify only one node ID in a call.</para>
+        /// <para>The ID of the edge zone. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

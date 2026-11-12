@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Index { get; set; }
 
         /// <summary>
-        /// <para>The target instance ID for scheduling.</para>
+        /// <para>The ID of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5myukg7hnpbto7m024002****</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the resource has been created.</para>
+        /// <para>Indicates whether it has been created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? RequestRepeated { get; set; }
 
         /// <summary>
-        /// <para>The TCP service port range of the scheduled target virtual machine instance or container. Valid values are in the ${from}-${to} format, such as 80-88.</para>
+        /// <para>The TCP service port range of the scheduled target virtual machine instance or container. Format: ${from}-${to}. Example: 80-88.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80-88</para>

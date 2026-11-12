@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The generated order ID.</para>
+        /// <para>The ID of the generated order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21522202681****</para>

@@ -10,16 +10,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ImportKeyPairRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the key pair. The name must conform to the following naming conventions:</para>
+        /// <para>The name of the key pair. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>The name must be 2 to 128 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// </description></item>
-        /// <item><description><para>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// </description></item>
+        /// <item><description>The name must be 2 to 128 characters in length.</description></item>
+        /// <item><description>The name must start with a letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The name can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
-        /// <para>You can specify the name of only one key pair.</para>
+        /// <para>Only one key pair name can be specified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The public key of the key pair. You can specify only one public key.</para>
+        /// <para>The public key content of the key pair. Only one public key can be specified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

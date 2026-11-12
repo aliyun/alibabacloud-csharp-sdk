@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of EIP addresses used to filter instances.</para>
+        /// <para>The list of elastic IP addresses used to filter instances.</para>
         /// </summary>
         [NameInMap("EipAddresses")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of edge zone IDs. This parameter is a formatted JSON array that contains up to 100 IDs separated by commas (,).</para>
+        /// <para>The list of edge zone IDs. The parameter is a JSON array that contains up to 100 IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The Edge Node Service ID. You can use this ID to query the instances created under the edge service.</para>
+        /// <para>The edge service ID. You can use this ID to query instances created under the edge service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ens-20190730202316s****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs. This parameter is a formatted JSON array that contains up to 100 IDs separated by commas (,).</para>
+        /// <para>The list of instance IDs. The parameter is a JSON array that contains up to 100 IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-5iqczfxps7csjrxeca07****&quot;, &quot;i-5iqczfxps7csjrxeca07****&quot;]</para>
@@ -87,7 +87,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The filter type. Valid values:</para>
+        /// <para>The resource type used for filtering. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EnsInstance: Independently purchased instance.</description></item>
+        /// <item><description>EnsService: Edge service instance.</description></item>
+        /// <item><description>BuildMachine: Image builder.</description></item>
+        /// <item><description>EnsPostPaidInstance: Independently purchased pay-as-you-go instance.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>EnsService</para>
@@ -127,7 +133,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The sorting parameter in JSON format.</para>
+        /// <para>The sorting parameters in JSON format.</para>
+        /// <para>You can sort instances by name, expiration time, edge zone ID, or creation time. Multiple parameters can be combined.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -142,7 +149,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OrderByParams { get; set; }
 
         /// <summary>
-        /// <para>The page number of the instance status list. The value starts from <b>1</b>.</para>
+        /// <para>The page number of the instance status list. The starting value is <b>1</b>.</para>
+        /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -153,6 +161,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The number of entries per page for a paged query. Maximum value: <b>100</b>.</para>
+        /// <para>Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -162,7 +171,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Supports parameters such as <b>ip</b>, <b>InstanceName</b>, and <b>InstanceId</b>.</para>
+        /// <para>The search keyword. Supported parameters include <b>ip</b>, <b>InstanceName</b>, and <b>InstanceId</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Joshua</para>
@@ -182,7 +191,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The business status of the instance, which does not represent the actual running status of the instance.</para>
+        /// <para>The service status of the instance, which does not represent the actual running status of the instance.</para>
         /// </summary>
         [NameInMap("ServiceStatus")]
         [Validation(Required=false)]
@@ -191,9 +200,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Running: Running.</description></item>
-        /// <item><description>Stopped: Stopped.</description></item>
-        /// <item><description>Expired: Expired.</description></item>
+        /// <item><description>Running: The instance is running.</description></item>
+        /// <item><description>Stopped: The instance is stopped.</description></item>
+        /// <item><description>Expired: The instance has expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -204,7 +213,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The resource tags. This operation does not return tag information. Use this parameter in combination with the APIs in the tag category.</para>
+        /// <para>The resource tags. This operation does not support returning tag information. You can use it in combination with tag-related operations.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

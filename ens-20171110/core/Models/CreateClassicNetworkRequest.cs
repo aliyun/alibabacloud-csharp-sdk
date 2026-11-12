@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateClassicNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The CIDR block of the network. You can use one of the following CIDR blocks or their subnets as the CIDR block of the network:</para>
+        /// <para>The CIDR block of the network. You can use one of the following CIDR blocks or their subsets as the CIDR block of the network:</para>
         /// <list type="bullet">
-        /// <item><description><para>10.0.0.0/8 (default)</para>
-        /// </description></item>
-        /// <item><description><para>172.16.0.0/12</para>
-        /// </description></item>
-        /// <item><description><para>192.168.0.0/16</para>
-        /// </description></item>
+        /// <item><description>10.0.0.0/8 (default).</description></item>
+        /// <item><description>172.16.0.0/12.</description></item>
+        /// <item><description>192.168.0.0/16.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,7 +26,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The description of the network. The name must be 2 to 256 characters in length. It must start with a letter but cannot start with http\:// or https\://.</para>
+        /// <para>The description of the network. The description must meet the following rules:</para>
+        /// <list type="bullet">
+        /// <item><description>The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character, and cannot start with http:// or https://.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>This is my vswitch.</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the edge node.</para>
+        /// <para>The ID of the Edge Node Service (ENS) edge node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,14 +50,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the network. The name must meet the following requirements:</para>
+        /// <para>The name of the network. The name must meet the following rules:</para>
         /// <list type="bullet">
-        /// <item><description><para>The name must be 2 to 128 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>The name must start with a letter but cannot start with http\:// or https\://.</para>
-        /// </description></item>
-        /// <item><description><para>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// </description></item>
+        /// <item><description>The name must be 2 to 128 characters in length.</description></item>
+        /// <item><description>The name must start with an uppercase or lowercase letter or a Chinese character, and cannot start with http:// or https://.</description></item>
+        /// <item><description>The name can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The secondary IPv4 CIDR block to be added. The CIDR block must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The CIDR block must be within the 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16 range.</description></item>
+        /// <item><description>The CIDR block must fall within the 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16 range.</description></item>
         /// <item><description>The secondary CIDR block must not overlap with the primary CIDR block or existing secondary CIDR blocks of the network.</description></item>
         /// </list>
         /// 

@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotency of the request to avoid duplicate operations caused by multiple retries.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. This prevents duplicate operations caused by multiple retries.</para>
         /// <list type="bullet">
-        /// <item><description><para>Generate a parameter value from your client and ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <item><description><para>Generate the value from your client and ensure that it is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </description></item>
-        /// <item><description><para>If you use a ClientToken that has been used before and the other request parameters remain unchanged, the client receives the same result as the first submission, with no impact on your server-side state.</para>
+        /// <item><description><para>If you resubmit a request with a used client token and all other request parameters remain unchanged, the client receives the same response as the first request, and the server state remains unaffected.</para>
         /// </description></item>
-        /// <item><description><para>You can retry when the API times out or returns the PROCESSING error code, and idempotency takes effect. If the return result is an HTTP 200 status code, the retry returns the same result as the previous call with no impact on your server-side state. If the return result is an HTTP 4xx status code and the error code is not PROCESSING, idempotency does not take effect.</para>
+        /// <item><description><para>You can retry the request when the operation times out or the error code is PROCESSING, and the idempotence remains valid. If the HTTP status code 200 is returned, the client receives the same response after a retry, and the server state remains unaffected. If an HTTP 4xx status code is returned and the error code is not PROCESSING, the idempotence is invalid.</para>
         /// </description></item>
-        /// <item><description><para>The ClientToken is valid for 10 minutes.</para>
+        /// <item><description><para>The client token is valid for 10 minutes.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS edge zone.</para>
+        /// <para>The ENS edge zone ID. Not all ENS edge zones support creating an Edge Load Balancer (ELB) instance. Before calling this operation, verify that the target edge zone supports this feature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the load balancing instance. The name must be 1 to 80 characters in length and can contain letters and Chinese characters. If you do not specify this parameter, the system automatically assigns an instance name.</para>
+        /// <para>The name of the load balancing instance. The name must be 1 to 80 characters in length, and can contain English letters and Chinese characters. If you do not specify this parameter, the system randomly allocates a name to the instance.</para>
         /// <remarks>
-        /// <para>The name cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerSpec { get; set; }
 
         /// <summary>
-        /// <para>The type of the Edge Load Balancing instance.</para>
+        /// <para>The type of the edge load balancing (ELB) instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CLB: Classic Load Balancing instance.</description></item>
-        /// <item><description>InternetDR: Public pattern load balancing instance.</description></item>
+        /// <item><description>CLB: traditional load balancing instance.</description></item>
+        /// <item><description>InternetDR: public pattern load balancing instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerType { get; set; }
 
         /// <summary>
-        /// <para>The network ID of the Edge Load Balancing (ELB) instance to create.</para>
+        /// <para>The network ID of the edge load balancing (ELB) instance to be created.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The billing type. PostPaid (currently the only supported type): pay-as-you-go.</para>
+        /// <para>The billing method. Currently, only PostPaid (pay-as-you-go) is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to which the VPC instance belongs.</para>
+        /// <para>The ID of the vSwitch to which the VPC-connected instance belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

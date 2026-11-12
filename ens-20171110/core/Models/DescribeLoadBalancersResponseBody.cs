@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries per page during paging in a paged query. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
+        /// <para>The Settings for the number of entries per page for paging in a paged query. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

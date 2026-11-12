@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CopySDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned Data object.</para>
+        /// <para>The Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CopySDGResponseBodyData Data { get; set; }
         public class CopySDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. The value success indicates a successful request.</para>
+            /// <para>The response message. The value is success if the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the synchronous request.</para>
+            /// <para>The execution result of the synchronization request.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>The list of failed edge zone details.</para>
+                /// <para>The list of details about failed edge zones.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// <para>The number of successful operations.</para>
+                /// <para>The number of successful edge zones.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all requests were successful. Valid values:</para>
+            /// <para>Indicates whether all requests are successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: All requests were successful.</description></item>
-            /// <item><description><b>false</b>: Some tasks failed.</description></item>
+            /// <item><description><b>true</b>: All requests are successful.</description></item>
+            /// <item><description><b>false</b>: One or more tasks failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

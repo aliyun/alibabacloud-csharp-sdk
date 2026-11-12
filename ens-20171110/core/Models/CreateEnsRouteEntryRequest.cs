@@ -20,14 +20,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the custom route entry. Make sure that the following requirements are met:</para>
+        /// <para>The destination CIDR block of the custom route entry. The destination CIDR block must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>The destination CIDR block cannot point or belong to 100.64.0.0/10.</para>
-        /// </description></item>
-        /// <item><description><para>The destination CIDR blocks of the custom route entries in the same route table cannot overlap.</para>
-        /// </description></item>
-        /// <item><description><para>0.0.0.0/0 indicates the default CIDR block.</para>
-        /// </description></item>
+        /// <item><description>The destination CIDR block cannot point to or be included in 100.64.0.0/10.</description></item>
+        /// <item><description>The destination CIDR blocks of different route entries in the same route table must be unique.</description></item>
+        /// <item><description>0.0.0.0/0 specifies the default route.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +36,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The ID of the next hop of the custom route entry.</para>
+        /// <para>The ID of the next hop for the custom route entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,14 +47,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// <para>The next hop type of the custom route. Valid values:</para>
+        /// <para>The type of the next hop for the custom route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Instance: an ENS instance.</para>
-        /// </description></item>
-        /// <item><description><para>HaVip: a high-availability virtual IP address (HAVIP).</para>
-        /// </description></item>
-        /// <item><description><para>NetworkPeer: VPC peering connection.</para>
-        /// </description></item>
+        /// <item><description>Instance: ENS instance. This is the default value.</description></item>
+        /// <item><description>HaVip: HaVip.</description></item>
+        /// <item><description>NetworkPeer: network peering connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +62,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NextHopType { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http\:// or https\://.</para>
+        /// <para>The name of the custom route entry. The name must be 1 to 128 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -78,7 +72,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteEntryName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table to which you want to add a custom route entry.</para>
+        /// <para>The ID of the route table for which you want to create a custom route entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +83,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The source CIDR block is available when you configure a route entry in the gateway route table, but is not unavailable when you configure a route entry in the vSwitch route table.</para>
+        /// <para>The source CIDR block. This parameter is available when you configure a route entry for a gateway route table, but is not supported when you configure a route entry for a vSwitch route table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.XXX.XXX.0/24</para>

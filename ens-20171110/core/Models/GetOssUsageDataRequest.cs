@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class GetOssUsageDataRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the logical Object Storage Service (OSS) bucket.</para>
+        /// <para>The name of the OSS logical bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ens-sink-bucketzyp1656903494</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Bucket { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.</para>
+        /// <para>The end time in UTC. Format: 2010-01-21T09:50:23Z.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,8 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The aggregation granularity. Unit: minutes.</para>
-        /// <para>Default value: 5. Valid values: 5 to 1440.</para>
+        /// <para>The time aggregation granularity. Unit: minutes. Default value: 5. Valid values: 5 to 1440.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -42,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time must be in UTC. Format: 2010-01-21T09:50:23Z.</para>
+        /// <para>The start time in UTC. Format: 2010-01-21T09:50:23Z.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The cluster attachment script, Base64-encoded.</para>
+        /// <para>The cluster onboarding script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y2QgWnhiU0o=</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeForwardTableEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of DNAT entries.</para>
+        /// <para>The details of the queried DNAT entries.</para>
         /// </summary>
         [NameInMap("ForwardTableEntries")]
         [Validation(Required=false)]
         public List<DescribeForwardTableEntriesResponseBodyForwardTableEntries> ForwardTableEntries { get; set; }
         public class DescribeForwardTableEntriesResponseBodyForwardTableEntries : TeaModel {
             /// <summary>
-            /// <para>The EIP in the DNAT entry. The public IP address is used to access the Internet.</para>
+            /// <para>The elastic IP address that provides public network access in the DNAT entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120.XXX.XXX.70</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ExternalIp { get; set; }
 
             /// <summary>
-            /// <para>The external port or port range that is used in port forwarding.</para>
+            /// <para>The external port or port range used for port forwarding.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ForwardEntryName { get; set; }
 
             /// <summary>
-            /// <para>The probe port of DNAT.</para>
+            /// <para>The health check port of the DNAT entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string HealthCheckPort { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the instance that uses the DNAT entry for Internet communication.</para>
+            /// <para>The private IP address of the instance that communicates with the Internet through the DNAT entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.XXX.XXX.3</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InternalIp { get; set; }
 
             /// <summary>
-            /// <para>The internal port or port range that is used for port forwarding.</para>
+            /// <para>The internal port or port range used for port forwarding.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -87,13 +87,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InternalPort { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>TCP</b>: forwards TCP packets.</para>
+            /// <item><description><para><b>TCP</b>: Forwards TCP packets.</para>
             /// </description></item>
-            /// <item><description><para><b>UDP</b>: forwards UDP packets.</para>
+            /// <item><description><para><b>UDP</b>: Forwards UDP packets.</para>
             /// </description></item>
-            /// <item><description><para><b>Any</b>: forwards all packets.</para>
+            /// <item><description><para><b>Any</b>: Forwards packets of all protocols.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The secondary EIP that is used to access the Internet.</para>
+            /// <para>The standby elastic IP address that provides public network access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101.XXX.XXX.7</para>
@@ -125,16 +125,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string StandbyExternalIp { get; set; }
 
             /// <summary>
-            /// <para>The status of the secondary EIP. Valid values:</para>
+            /// <para>The status of the standby elastic IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Running</para>
-            /// </description></item>
-            /// <item><description><para>Stopping</para>
-            /// </description></item>
-            /// <item><description><para>Stopped</para>
-            /// </description></item>
-            /// <item><description><para>Starting</para>
-            /// </description></item>
+            /// <item><description>Running: Enabled.</description></item>
+            /// <item><description>Stopping: Disabling.</description></item>
+            /// <item><description>Stopped: Disabled.</description></item>
+            /// <item><description>Starting: Enabling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,12 +143,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the DNAT entry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: The DNAT entry is being created or modified.</para>
-            /// </description></item>
-            /// <item><description><para>Available: The DNAT entry is available.</para>
-            /// </description></item>
-            /// <item><description><para>Deleting: The DNAT entry is being deleted.</para>
-            /// </description></item>
+            /// <item><description>Pending: The entry is being configured, created, or modified.</description></item>
+            /// <item><description>Available: The entry is available.</description></item>
+            /// <item><description>Deleting: The entry is being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +158,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -175,7 +168,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -185,7 +178,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -195,7 +188,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

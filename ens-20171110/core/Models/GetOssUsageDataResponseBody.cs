@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of usage data.</para>
+        /// <para>The usage array.</para>
         /// </summary>
         [NameInMap("UsageList")]
         [Validation(Required=false)]
         public List<GetOssUsageDataResponseBodyUsageList> UsageList { get; set; }
         public class GetOssUsageDataResponseBodyUsageList : TeaModel {
             /// <summary>
-            /// <para>The inbound bandwidth over the internal network. Unit: bit/s.</para>
+            /// <para>The inbound bandwidth over the internal network. Unit: Bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>37865147</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? LanRxBw { get; set; }
 
             /// <summary>
-            /// <para>The outbound bandwidth over the internal network. Unit: bit/s.</para>
+            /// <para>The outbound bandwidth over the internal network. Unit: Bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22012187890</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? LanTxBw { get; set; }
 
             /// <summary>
-            /// <para>The number of time points within a day.</para>
+            /// <para>The sequence number of the time point within a day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>144</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? Point { get; set; }
 
             /// <summary>
-            /// <para>The point in time, in UTC. Format: 2010-01-21T09:50:23Z.</para>
+            /// <para>The time point in UTC. Format: 2010-01-21T09:50:23Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-12T00:00:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? StorageUsageByte { get; set; }
 
             /// <summary>
-            /// <para>The outbound bandwidth over the Internet. Unit: bit/s.</para>
+            /// <para>The inbound bandwidth over the Internet. Unit: Bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>542155715</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? WanRxBw { get; set; }
 
             /// <summary>
-            /// <para>The outbound bandwidth over the Internet. Unit: bit/s.</para>
+            /// <para>The outbound bandwidth over the Internet. Unit: Bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>547126175217</para>

@@ -10,26 +10,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price information.</para>
+        /// <para>The price information list.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The price.</para>
+            /// <para>The price information.</para>
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribePriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The type of currency.</para>
+                /// <para>The currency. Valid values:</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;- CNY: Chinese yuan.</para>
                 /// <list type="bullet">
-                /// <item><description><para>USD: US dollar</para>
-                /// </description></item>
-                /// <item><description><para>JPY: Japanese Yen</para>
-                /// </description></item>
+                /// <item><description>USD: US dollar.</description></item>
+                /// <item><description>JPY: Japanese yen.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,7 +59,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The final price.</para>
+                /// <para>The transaction price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>126.75</para>
@@ -74,7 +73,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>694EB8FF-446C-5B1E-8146-9629E492551F</para>

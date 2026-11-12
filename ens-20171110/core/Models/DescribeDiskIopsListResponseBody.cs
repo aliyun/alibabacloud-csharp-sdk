@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribeDiskIopsListResponseBodyDiskIopsList> DiskIopsList { get; set; }
         public class DescribeDiskIopsListResponseBodyDiskIopsList : TeaModel {
             /// <summary>
-            /// <para>The business time in the format of yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The business time. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-14 00:00:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The read throughput (in bytes).</para>
+            /// <para>The read throughput. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10054</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? ReadBytes { get; set; }
 
             /// <summary>
-            /// <para>The read latency (in microseconds).</para>
+            /// <para>The read latency. Unit: microseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15646532</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? ReadOps { get; set; }
 
             /// <summary>
-            /// <para>The edge zone ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-3</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The write throughput (in bytes).</para>
+            /// <para>The write throughput. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? WriteBytes { get; set; }
 
             /// <summary>
-            /// <para>The write latency (in microseconds).</para>
+            /// <para>The write latency. Unit: microseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRouteTablesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC51ACB0-460D-5CA0-BA2D-E1F3B5547AE9</para>
@@ -40,19 +40,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the route tables.</para>
+        /// <para>The route table information.</para>
         /// </summary>
         [NameInMap("RouteTables")]
         [Validation(Required=false)]
         public List<DescribeEnsRouteTablesResponseBodyRouteTables> RouteTables { get; set; }
         public class DescribeEnsRouteTablesResponseBodyRouteTables : TeaModel {
             /// <summary>
-            /// <para>The type of the resource with which the route table is associated. Valid values:</para>
+            /// <para>The type of resource associated with the route table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>VSwitch</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Gateway</b></para>
-            /// </description></item>
+            /// <item><description><b>VSwitch</b>: vSwitch</description></item>
+            /// <item><description><b>Gateway</b>: gateway</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string AssociateType { get; set; }
 
             /// <summary>
-            /// <para>The time when the route table was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-08T08:35:18Z</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the edge node.</para>
+            /// <para>The ENS edge zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-15</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether it is the default gateway route table.</para>
+            /// <para>Indicates whether the route table is the default gateway route table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public bool? IsDefaultGatewayRouteTable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network.</para>
+            /// <para>The network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n-5v9lufsezl4g****</para>
@@ -113,7 +111,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NetworkId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table.</para>
+            /// <para>The route table ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rt-5xde2bit9****</para>
@@ -123,8 +121,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RouteTableId { get; set; }
 
             /// <summary>
-            /// <para>The name of the route table that you want to query.</para>
-            /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+            /// <para>The name of the route table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-tf-vtb7</para>
@@ -136,7 +133,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Available: The route table is available.</description></item>
+            /// <item><description>Available: available</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,12 +144,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the route table. Examples:</para>
+            /// <para>The type of the route table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Custom: custom route table.</para>
-            /// </description></item>
-            /// <item><description><para>System: system route table.</para>
-            /// </description></item>
+            /// <item><description>Custom: custom route table</description></item>
+            /// <item><description>System: system route table</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,7 +158,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The vSwitches that are associated with the route table.</para>
+            /// <para>The list of vSwitches associated with the route table.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -172,7 +167,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> DestinationRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SDG to copy.</para>
+        /// <para>The ID of the SDG to be copied.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

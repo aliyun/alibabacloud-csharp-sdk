@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The total number of ENS instance IDs.</para>
+        /// <para>The total number of target edge resource instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ExportImageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The image ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket to which you want to export the image.</para>
+        /// <para>The OSS bucket used to store the exported image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSSBucket { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the object as which you want to store the image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.</para>
+        /// <para>The prefix of the OSS object. The prefix must be 1 to 30 characters in length and can contain letters and digits.</para>
         /// </summary>
         [NameInMap("OSSPrefix")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSSRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Resource Access Management (RAM) role.</para>
+        /// <para>The name of the authorized role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunMNSLoggingRole</para>

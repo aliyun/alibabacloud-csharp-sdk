@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnassociateHaVipRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the HAVIP that you want to disassociate.</para>
+        /// <para>The ID of the HaVip to disassociate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS instance or ENI that you want to disassociate from the HAVIP.</para>
+        /// <para>The ID of the ENS instance or network interface controller (NIC) to disassociate from the HaVip.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

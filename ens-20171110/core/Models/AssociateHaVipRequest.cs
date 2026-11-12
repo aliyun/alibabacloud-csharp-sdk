@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AssociateHaVipRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the HAVIP.</para>
+        /// <para>The ID of the HaVip instance to be associated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,12 +32,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance to be associated with the HAVIP. Valid values:</para>
+        /// <para>The type of the instance with which you want to associate the HaVip. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>EnsInstance (default): ENS instance</para>
-        /// </description></item>
-        /// <item><description><para>NetworkInterface: elastic network interface (ENI)</para>
-        /// </description></item>
+        /// <item><description>EnsInstance: ENS instance. This is the default value.</description></item>
+        /// <item><description>NetworkInterface: elastic network interface controller (NIC). If the instance with which you want to associate the HaVip is an elastic network interface controller (NIC), you must specify this parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

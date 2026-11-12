@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route.</para>
+        /// <para>The route entry ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rte-5vb5q8sk0lyoscx8539ds</para>

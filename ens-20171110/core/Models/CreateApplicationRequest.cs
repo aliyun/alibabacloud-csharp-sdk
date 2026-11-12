@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The edge application template. The value must be a JSON string that contains the following information:</para>
+        /// <para>The edge application template in JSON format. It contains the following information:</para>
         /// <list type="bullet">
-        /// <item><description><para>Basic information such as the name of the application</para>
-        /// </description></item>
-        /// <item><description><para>Information such as resource specifications and network security configurations</para>
-        /// </description></item>
-        /// <item><description><para>Service specifications</para>
-        /// </description></item>
-        /// <item><description><para>Required resources</para>
-        /// </description></item>
+        /// <item><description>Basic information such as the application name.</description></item>
+        /// <item><description>Resource specifications and network security configurations.</description></item>
+        /// <item><description>Business configurations.</description></item>
+        /// <item><description>Resource requirements.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

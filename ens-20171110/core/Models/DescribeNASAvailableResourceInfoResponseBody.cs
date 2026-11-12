@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNASAvailableResourceInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Business status code. Returns 0 on success.</para>
+        /// <para>The business status code. A value of 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>you are not authorized to this workspace, or workspace not exists.</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Available NAS resource information.</para>
+        /// <para>The available NAS resource information.</para>
         /// </summary>
         [NameInMap("NasAvailableResourceInfo")]
         [Validation(Required=false)]
         public List<DescribeNASAvailableResourceInfoResponseBodyNasAvailableResourceInfo> NasAvailableResourceInfo { get; set; }
         public class DescribeNASAvailableResourceInfoResponseBodyNasAvailableResourceInfo : TeaModel {
             /// <summary>
-            /// <para>Edge zone product capabilities.</para>
+            /// <para>The product capabilities of the edge zone.</para>
             /// </summary>
             [NameInMap("Ability")]
             [Validation(Required=false)]
             public List<string> Ability { get; set; }
 
             /// <summary>
-            /// <para>Area to which the ENS edge zone belongs.</para>
+            /// <para>The area to which the ENS edge zone belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SouthWestChina</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Area { get; set; }
 
             /// <summary>
-            /// <para>English name.</para>
+            /// <para>The English name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chenzhou-telecom_unicom_cmcc</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnName { get; set; }
 
             /// <summary>
-            /// <para>ENS edge zone ID.</para>
+            /// <para>The ENS edge zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chenzhou-telecom_unicom_cmcc</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>ENS edge zone name.</para>
+            /// <para>The name of the ENS edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China Hangzhou36</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionName { get; set; }
 
             /// <summary>
-            /// <para>Available NAS resource count.</para>
+            /// <para>The resource count of active NAS resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? NasAvailableAmount { get; set; }
 
             /// <summary>
-            /// <para>Available NAS resource type.</para>
+            /// <para>The type of available NAS resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>capacity</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NasAvailableStorgeType { get; set; }
 
             /// <summary>
-            /// <para>Province to which the ENS edge zone belongs.</para>
+            /// <para>The province to which the ENS edge zone belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>湖北省</para>
+            /// <para>Hubei Province</para>
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAE90880-4970-4D81-A534-A6C0F3631F74</para>

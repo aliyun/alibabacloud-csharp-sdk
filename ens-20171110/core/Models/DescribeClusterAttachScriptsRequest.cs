@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeClusterAttachScriptsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ECK cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node pool to which the node will be added.</para>
+        /// <para>The node pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// <para>Optional parameters for the script, provided as a JSON string.</para>
+        /// <para>The optional parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;key1\&quot;:\&quot;val1\&quot;}</para>

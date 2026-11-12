@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteMountTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the edge node.</para>
+        /// <para>The ID of the edge zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

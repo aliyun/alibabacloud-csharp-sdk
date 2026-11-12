@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ResizeDiskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the disk that you want to resize.</para>
+        /// <para>The instance ID of the cloud disk to resize.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The size of the disk that you want to resize. Unit: GiB.</para>
+        /// <para>The target size of the cloud disk, in GiB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

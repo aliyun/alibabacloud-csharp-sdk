@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class SaveSDGRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the SDG to save.</para>
-        /// <para>This parameter is required. If this parameter is not specified, the service returns a Parameter.Invalid error.</para>
+        /// <para>This parameter is required. If it is not provided, the service returns Parameter.Invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sdg-xxxx</para>

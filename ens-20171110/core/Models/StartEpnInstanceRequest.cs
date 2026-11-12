@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class StartEpnInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EPN instance.</para>
+        /// <para>The edge-to-edge network instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

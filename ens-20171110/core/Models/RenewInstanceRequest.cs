@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance that you want to renew.</para>
-        /// <para>Only subscription instances whose InstanceResourceType is EnsInstance are supported. Pay-as-you-go instances cannot be renewed.</para>
+        /// <para>The instance ID for renewal.</para>
+        /// <para>Only upfront instances whose InstanceResourceType is set to EnsInstance are supported. Pay-as-you-go instances cannot be renewed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The subscription renewal duration.</para>
+        /// <para>The renewal period of the subscription instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business code. The value 0 is returned for success.</para>
+        /// <para>The business code. A value of 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

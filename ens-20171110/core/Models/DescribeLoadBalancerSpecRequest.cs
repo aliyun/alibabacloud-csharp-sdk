@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The specifications of the ELB instance.</para>
+        /// <para>The specification of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elb.s2.small</para>

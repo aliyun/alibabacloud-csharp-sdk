@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeServcieScheduleRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
-        /// <para>You can obtain this value after you call the CreateApplication operation to create an application.</para>
+        /// <para>The application ID. You can obtain this value after you call the CreateApplication operation to create an application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is invalid.</para>
+        /// <para>Invalid parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>android</para>
@@ -32,8 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PodConfigName { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the terminal device.</para>
-        /// <para>You can obtain this value after you call the RunServiceSchedule operation and set ServiceAction to Start to start service scheduling.</para>
+        /// <para>The unique ID of the terminal device. You can obtain this value after you call the RunServiceSchedule operation and set ServiceAction to Start to start service scheduling.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

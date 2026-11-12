@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ENS nodes. Array length: 1 to 100.</para>
+        /// <para>The array of ENS edge zone IDs. The array length is 1 to 100.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Settings for paging.</para>
+        /// <para>The number of entries per page in paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The HaVip status. Valid values:</para>
+        /// <para>The status of the HaVip. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Creating: The HaVip is being created.</description></item>
         /// <item><description>Available: The HaVip is available.</description></item>

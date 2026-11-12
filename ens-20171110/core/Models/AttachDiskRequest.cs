@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AttachDiskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the disk to be attached is released with the instance. Valid values:</para>
+        /// <para>Specifies whether the cloud disk to be mounted is released when the instance is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The disk will be released when the ECS instance is released.</para>
-        /// </description></item>
-        /// <item><description><para>false: The disk will be retained when the ECS instance is released.</para>
-        /// </description></item>
-        /// <item><description><para>If you leave this parameter empty, the default value is used.</para>
-        /// </description></item>
+        /// <item><description>true: The cloud disk is released when the instance is released.</description></item>
+        /// <item><description>false: The cloud disk is retained when the instance is released.</description></item>
+        /// <item><description>Empty: The default value is false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk to be attached. The cloud disk and the instance must belong to the same node.</para>
+        /// <para>The ID of the cloud disk to mount. The cloud disk and the instance must be in the same edge zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +36,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

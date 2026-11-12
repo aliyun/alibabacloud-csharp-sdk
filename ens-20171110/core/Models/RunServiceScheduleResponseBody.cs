@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The index number of the scheduled virtual device (pod).</para>
+        /// <para>The index of the scheduled target virtual device (container pod).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Index { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled instance.</para>
+        /// <para>The ID of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5qvji3mom4ec013dyygmtxlkj</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the scheduled instance.</para>
+        /// <para>The IP address of the scheduled target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.246.11</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceIp { get; set; }
 
         /// <summary>
-        /// <para>The start port of the scheduled instance.</para>
+        /// <para>The start port of the scheduled target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? InstancePort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is repeated. This parameter is not returned if ServcieAction is set to Console.</para>
+        /// <para>Specifies whether the operation is repeated for ServiceAction values other than Console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestRepeated { get; set; }
 
         /// <summary>
-        /// <para>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</para>
+        /// <para>The TCP service port range of the scheduled target virtual machine instance or container. Format: ${from}-${to}. Example: 80-88.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;80-88&quot;</para>
