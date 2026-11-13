@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateCertsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The ID of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456-cn-hangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5BBA38B1-07AE-559F-8766-AB50****C300</para>

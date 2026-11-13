@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DescribeCloudResourceAccessedPortsResponseBody : TeaModel {
         /// <summary>
         /// <para>The HTTP port.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[80]</para>
         /// </summary>
         [NameInMap("Http")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The HTTPS port.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[443]</para>
         /// </summary>
         [NameInMap("Https")]
         [Validation(Required=false)]

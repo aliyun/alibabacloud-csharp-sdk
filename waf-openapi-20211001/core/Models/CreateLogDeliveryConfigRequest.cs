@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateLogDeliveryConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the log delivery configuration. The value is a JSON string constructed from a series of parameters.</para>
+        /// <para>The content of the log delivery configuration. The content is a JSON string constructed from a series of parameters.</para>
         /// <remarks>
-        /// <para>The parameters vary based on the specified <b>delivery type</b> (<b>DeliveryType</b>). For more information, see <b>Description of delivery configuration content parameters</b>.</para>
+        /// <para>The specific parameters vary based on the specified <b>log delivery configuration type</b> (<b>DeliveryType</b>). For more information, see <b>Parameter descriptions for log delivery configuration content</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

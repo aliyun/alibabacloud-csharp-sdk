@@ -19,10 +19,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The network access mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>internet</b>: Internet access.</para>
-            /// </description></item>
-            /// <item><description><para><b>vpc</b>: leased line-based private network access.</para>
-            /// </description></item>
+            /// <item><description><b>internet</b>: Internet access.</description></item>
+            /// <item><description><b>vpc</b>: Express Connect private network access.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,14 +31,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AccessMode { get; set; }
 
             /// <summary>
-            /// <para>The region where the leased line is connected. Valid values:</para>
+            /// <para>The Express Connect access region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>cn-hangzhou</b>: Hangzhou</para>
-            /// </description></item>
-            /// <item><description><para><b>cn-beijing</b>: Beijing</para>
-            /// </description></item>
-            /// <item><description><para><b>cn-shanghai</b>: Shanghai</para>
-            /// </description></item>
+            /// <item><description><b>cn-hangzhou</b>: Hangzhou.</description></item>
+            /// <item><description><b>cn-beiijng</b>: Beijing.</description></item>
+            /// <item><description><b>cn-shanghai</b>: Shanghai.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +66,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ClusterResourceId { get; set; }
 
             /// <summary>
-            /// <para>The ports that use the HTTP protocol. The value is a string. If multiple ports are returned, they are separated by commas in the <b>port1,port2,port3</b> format.</para>
+            /// <para>The list of HTTP ports. Separate multiple ports with commas (,). Example: port1,port2,port3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80,8080</para>
@@ -81,7 +76,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string HttpPorts { get; set; }
 
             /// <summary>
-            /// <para>The ports that use the HTTPS protocol. The value is a string. If multiple ports are returned, they are separated by commas in the <b>port1,port2,port3</b> format.</para>
+            /// <para>The list of HTTPS ports. Separate multiple ports with commas (,). Example: port1,port2,port3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>443,8443</para>
@@ -91,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string HttpsPorts { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>524**8</para>
@@ -101,7 +96,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The number of protection nodes that you can add to the cluster.</para>
+            /// <para>The number of protection nodes that can be added to the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -111,12 +106,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ProtectionServerCount { get; set; }
 
             /// <summary>
-            /// <para>The status of the proxy. Valid values:</para>
+            /// <para>The proxy gateway mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: enabled</para>
-            /// </description></item>
-            /// <item><description><para><b>off</b>: disabled</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: Enabled.</description></item>
+            /// <item><description><b>off</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,12 +120,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ProxyStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster. Valid values:</para>
+            /// <para>The cluster type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>cname</b>: reverse proxy cluster</para>
-            /// </description></item>
-            /// <item><description><para><b>service</b>: service cluster</para>
-            /// </description></item>
+            /// <item><description><b>cname</b>: Reverse proxy cluster.</description></item>
+            /// <item><description><b>service</b>: Service cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,11 +154,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleConfig { get; set; }
 
             /// <summary>
-            /// <para>The status of the manual bypass setting. Valid values:</para>
+            /// <para>The manual bypass status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: enabled.</para>
+            /// <item><description><para><b>on</b>: Enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>off</b>: disabled.</para>
+            /// <item><description><para><b>off</b>: Disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -179,9 +170,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the rule. Valid values:</para>
+            /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>bypass</b>: WAF does not perform security checks and allows traffic to pass through.</description></item>
+            /// <item><description><b>bypass</b>: Skips security checks and directly allows requests.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,7 +185,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-ER12-WE34-23PO-301469*****E</para>

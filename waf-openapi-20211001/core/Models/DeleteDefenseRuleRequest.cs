@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the DryRun dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</para>
+        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is initiated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</description></item>
-        /// <item><description><b>false</b>: A normal request is sent. The specified operation is performed after the request passes the check.</description></item>
+        /// <item><description><b>true</b>: initiates a dry run request. The system only checks whether the request meets the execution conditions and does not perform the operations specified in the request. If the dry run fails, the system returns the corresponding error code. If the dry run succeeds, the system returns the Defense.Control.DryRunOperation error code.</description></item>
+        /// <item><description><b>false</b>: initiates a normal request. If the check succeeds, the system performs the operations specified in the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The protected object associated with the rule to delete.</para>
+        /// <para>The protected object to which the rules to be deleted apply.</para>
         /// <remarks>
         /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>resource</b>.</para>
         /// </remarks>
@@ -87,7 +87,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the protection rules to delete. Separate multiple IDs with commas (,).</para>
+        /// <para>The type of the protection target. This parameter applies to rules whose <b>DefenseType</b> is <b>resource</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>single</b> (default): a single protected object.</description></item>
+        /// <item><description><b>group</b>: a protection group.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>single</para>
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        /// <summary>
+        /// <para>The IDs of the protection rules to be deleted. Separate multiple rule IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +112,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection template to delete.</para>
+        /// <para>The ID of the protection template to be deleted.</para>
         /// <remarks>
         /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>template</b>.</para>
         /// </remarks>

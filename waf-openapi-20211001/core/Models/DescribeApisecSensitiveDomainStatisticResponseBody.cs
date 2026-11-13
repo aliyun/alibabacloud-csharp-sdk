@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecSensitiveDomainStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? DomainCount { get; set; }
 
             /// <summary>
-            /// <para>The code of the sensitive data type.</para>
+            /// <para>The code of the sensitive data.</para>
             /// <remarks>
-            /// <para>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported types of sensitive data.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SensitiveLevel { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitive data type.</para>
+            /// <para>The name of the sensitive data.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>自定义敏感类型。</para>
+            /// <para>Custom sensitive data type</para>
             /// </summary>
             [NameInMap("SensitiveName")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27</para>

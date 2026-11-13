@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</para>
+        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is initiated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: A dry run request is sent. Only the request conditions are checked, and the specified operation is not performed. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</para>
+        /// <item><description><para><b>true</b>: initiates a dry run request. The system only checks whether the request meets the execution conditions and does not perform the operations specified in the request. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: A normal request is sent. The specified operation is performed after the request passes the check.</para>
+        /// <item><description><para><b>false</b>: initiates a normal request. If the check succeeds, the operations specified in the request are performed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -66,6 +66,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The protection object or protection group. This parameter is used for protection rules whose <b>DefenseType</b> is <b>resource</b>. Specify the name of the protection object or protection group based on <b>ResourceType</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>resource-api-example</para>
+        /// </summary>
+        [NameInMap("Resource")]
+        [Validation(Required=false)]
+        public string Resource { get; set; }
+
+        /// <summary>
         /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
@@ -76,9 +86,23 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule that you want to modify.</para>
+        /// <para>The type of the protection target. This parameter is applicable to rules whose <b>DefenseType</b> is <b>resource</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>single (default)</b>: single protection object.</description></item>
+        /// <item><description><b>group</b>: protection group.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>single</para>
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the protection rule to be modified.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a> operation to query the protection rule ID. You can create a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a> operation to query the ID of the protection rule. You can create a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,10 +114,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The status of the protection rule that you want to modify. Valid values: </para>
+        /// <para>The status of the protection rule to be modified. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disabled.  </description></item>
-        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled  </description></item>
+        /// <item><description><b>1</b>: enabled</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

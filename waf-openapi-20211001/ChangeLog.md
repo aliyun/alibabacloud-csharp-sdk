@@ -1,3 +1,15 @@
+2026-11-13 Version: 7.9.0
+- Support API DescribeAccessConfig.
+- Support API ModifyAccessConfig.
+- Update API CreateDefenseRule: add request parameters ResourceType.
+- Update API DeleteDefenseRule: add request parameters ResourceType.
+- Update API DescribeInstance: add response parameters Body.Details.AgenticWaf.
+- Update API DescribePrepayDailyBills: add response parameters Body.Bills.$.AgenticWaf.
+- Update API ModifyDefenseRule: add request parameters ResourceType.
+- Update API ModifyDefenseRuleStatus: add request parameters Resource.
+- Update API ModifyDefenseRuleStatus: add request parameters ResourceType.
+
+
 2026-11-09 Version: 7.8.8
 - Update API DescribeChargeResult: add request parameters ChargeModules.$.UsageDecimal.
 

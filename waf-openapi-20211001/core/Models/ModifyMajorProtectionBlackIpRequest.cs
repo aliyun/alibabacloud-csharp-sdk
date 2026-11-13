@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The expiration timestamp, in seconds.</para>
+        /// <para>The expiration timestamp. Unit: seconds.</para>
         /// <remarks>
-        /// <para>If the value is <b>0</b>, the rule takes effect permanently.</para>
+        /// <para>A value of <b>0</b> indicates that the rule permanently takes effect.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP blacklist to add. You can specify custom IP addresses or CIDR blocks. Both IPv4 and IPv6 are supported. Separate multiple IP addresses with commas (,).
+        /// <para>The IP blacklist to be added. You can specify custom IP addresses or CIDR blocks for the IP blacklist. Both IPv4 and IPv6 addresses are supported. Separate multiple IP addresses with commas (,).
         /// For more information, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string IpList { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland</para>
         /// </description></item>
         /// </list>
         /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IP blacklist rule for critical event protection.</para>
+        /// <para>The ID of the IP blacklist rule for critical event protection. Before you obtain the rule ID, enable the critical event protection feature. Then, call the <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> operation and set DefenseScene to major_protection to obtain the ID of the critical event protection template. After that, call the <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a> operation to obtain the ID of the IP blacklist rule under the template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the critical event protection scenario template.</para>
+        /// <para>The ID of the critical event protection template. Before you obtain the template ID, enable the critical event protection feature. Then, call the <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> operation and set DefenseScene to major_protection to obtain the ID of the critical event protection template.</para>
         /// <remarks>
-        /// <para>This parameter requires the ID of a protection template of the critical event protection type. You can create this type of template only after you purchase the critical event protection upgrade.</para>
+        /// <para>You can create this type of template only after you purchase critical event protection through an upgrade.</para>
         /// <para>For more information about how to enable critical event protection and create a critical event protection rule template, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>

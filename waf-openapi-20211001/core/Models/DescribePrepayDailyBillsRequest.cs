@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePrepayDailyBillsRequest : TeaModel {
         /// <summary>
-        /// <para>The WAF instance ID.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

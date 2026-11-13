@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain the hybrid cloud cluster information.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -64,22 +64,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The traffic redirection rule configuration.</para>
+        /// <para>The traffic redirection rule configuration:</para>
         /// <remarks>
-        /// <para>The mode options are mutually exclusive. You can select only one. If you change the mode, all traffic redirection rules under the original mode are cleared.</para>
+        /// <para>The mode selections are mutually exclusive. You can select only one mode. If you change the mode, all traffic redirection rules under the original mode are cleared.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>check_mode</b>: the mode. Valid values:<list type="bullet">
-        /// <item><description><b>all</b>: full traffic redirection.</description></item>
-        /// <item><description><b>part</b>: partial traffic redirection.</description></item>
+        /// <item><description><b>check_mode</b>: the mode selection. Valid values:<list type="bullet">
+        /// <item><description><b>all</b>: full traffic redirection</description></item>
+        /// <item><description><b>part</b>: partial traffic redirection</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>type</b>: the rule matching type. Valid values:<list type="bullet">
-        /// <item><description><b>exact</b>: exact match.</description></item>
-        /// <item><description><b>regex</b>: regular expression.</description></item>
+        /// <item><description><b>type</b>: the rule match type. Valid values:<list type="bullet">
+        /// <item><description><b>exact</b>: exact match</description></item>
+        /// <item><description><b>regex</b>: regular expression</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>substance</b>: the rule value.</description></item>
+        /// <item><description><b>substance</b>: the rule value</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enabled.</description></item>
-        /// <item><description><b>off</b>: disabled.</description></item>
+        /// <item><description><b>on</b>: Enabled.</description></item>
+        /// <item><description><b>off</b>: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pullin</b>: cluster traffic redirection.</description></item>
+        /// <item><description><b>pullin</b>: cluster traffic redirection</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

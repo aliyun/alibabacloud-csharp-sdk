@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudProtectableCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of protectable nodes that can be added to the cluster.</para>
+        /// <para>The number of protection nodes that can be added to the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

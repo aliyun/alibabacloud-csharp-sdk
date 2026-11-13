@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefenseSceneConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the configuration item to modify.</para>
-        /// <para>If <b>DefenseScene</b> is set to <b>apisec</b>, the valid value is:</para>
-        /// <list type="bullet">
-        /// <item><description><b>autoEnabled</b>: indicates whether core API security detection is automatically enabled for new resources.</description></item>
-        /// </list>
+        /// <para>The name of the configuration item that you want to modify.</para>
+        /// <remarks>
+        /// <para>The supported configuration items vary based on the specified defense scene (<b>DefenseScene</b>). For more information, see <b>Protection settings parameters</b>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,9 +24,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ConfigKey { get; set; }
 
         /// <summary>
-        /// <para>The value to set for the configuration item.</para>
+        /// <para>The value of the configuration item that you want to modify.</para>
         /// <remarks>
-        /// <para>The value of this parameter depends on the value of <b>ConfigKey</b>. For more information, see <b>Description of mitigation setting parameters</b>.</para>
+        /// <para>The valid values vary based on the specified configuration item (<b>ConfigKey</b>). For more information, see <b>Protection settings parameters</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,9 +38,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The protection scenario for which you want to modify the mitigation settings. Valid values:</para>
+        /// <para>The defense scene for which you want to modify the protection settings. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>apisec</b>: API security.</description></item>
+        /// <item><description><b>ai_engine</b>: AI Engine.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

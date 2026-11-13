@@ -1001,7 +1001,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an international certificate to WAF for CNAME-based access.</para>
+        /// <para>Uploads an international certificate for WAF CNAME access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1063,7 +1063,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an international certificate to WAF for CNAME-based access.</para>
+        /// <para>Uploads an international certificate for WAF CNAME access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1125,7 +1125,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an international certificate to WAF for CNAME-based access.</para>
+        /// <para>Uploads an international certificate for WAF CNAME access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1143,7 +1143,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an international certificate to WAF for CNAME-based access.</para>
+        /// <para>Uploads an international certificate for WAF CNAME access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1937,7 +1937,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Web core protection rule.</para>
+        /// <para>Creates a web core protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1982,6 +1982,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -2013,7 +2017,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Web core protection rule.</para>
+        /// <para>Creates a web core protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2058,6 +2062,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -2089,7 +2097,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Web core protection rule.</para>
+        /// <para>Creates a web core protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2107,7 +2115,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Web core protection rule.</para>
+        /// <para>Creates a web core protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2349,15 +2357,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a WAF instance for Website Config protection.</para>
+        /// <para>Adds a website config to a WAF instance for protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements.</para>
+        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <b>DomainName</b> parameter to specify the domain name. The <b>DescribeVerifyContent</b> operation also requires the <b>AccessOrigin</b> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</description></item>
-        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
+        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) and public cloud disaster recovery is enabled, you must authenticate the ownership of the domain name first. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain the domain name authentication information, configure a DNS TXT record or upload an HTTP authentication file based on the returned content, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to authenticate the domain name ownership. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, you must use the <b>DomainName</b> parameter to specify the domain name. For the <b>DescribeVerifyContent</b> operation, you must also use the <b>AccessOrigin</b> parameter to specify the access source. For more information about the valid values, see the metric description of the DescribeVerifyContent operation.</description></item>
+        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) and public cloud disaster recovery is enabled, and the website config is added to a region in the Chinese mainland, the domain name must have an ICP filing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2438,15 +2446,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a WAF instance for Website Config protection.</para>
+        /// <para>Adds a website config to a WAF instance for protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements.</para>
+        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <b>DomainName</b> parameter to specify the domain name. The <b>DescribeVerifyContent</b> operation also requires the <b>AccessOrigin</b> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</description></item>
-        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
+        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) and public cloud disaster recovery is enabled, you must authenticate the ownership of the domain name first. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain the domain name authentication information, configure a DNS TXT record or upload an HTTP authentication file based on the returned content, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to authenticate the domain name ownership. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, you must use the <b>DomainName</b> parameter to specify the domain name. For the <b>DescribeVerifyContent</b> operation, you must also use the <b>AccessOrigin</b> parameter to specify the access source. For more information about the valid values, see the metric description of the DescribeVerifyContent operation.</description></item>
+        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) and public cloud disaster recovery is enabled, and the website config is added to a region in the Chinese mainland, the domain name must have an ICP filing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2527,15 +2535,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a WAF instance for Website Config protection.</para>
+        /// <para>Adds a website config to a WAF instance for protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements.</para>
+        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <b>DomainName</b> parameter to specify the domain name. The <b>DescribeVerifyContent</b> operation also requires the <b>AccessOrigin</b> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</description></item>
-        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
+        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) and public cloud disaster recovery is enabled, you must authenticate the ownership of the domain name first. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain the domain name authentication information, configure a DNS TXT record or upload an HTTP authentication file based on the returned content, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to authenticate the domain name ownership. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, you must use the <b>DomainName</b> parameter to specify the domain name. For the <b>DescribeVerifyContent</b> operation, you must also use the <b>AccessOrigin</b> parameter to specify the access source. For more information about the valid values, see the metric description of the DescribeVerifyContent operation.</description></item>
+        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) and public cloud disaster recovery is enabled, and the website config is added to a region in the Chinese mainland, the domain name must have an ICP filing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2554,15 +2562,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a WAF instance for Website Config protection.</para>
+        /// <para>Adds a website config to a WAF instance for protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements.</para>
+        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <b>DomainName</b> parameter to specify the domain name. The <b>DescribeVerifyContent</b> operation also requires the <b>AccessOrigin</b> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</description></item>
-        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
+        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) and public cloud disaster recovery is enabled, you must authenticate the ownership of the domain name first. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain the domain name authentication information, configure a DNS TXT record or upload an HTTP authentication file based on the returned content, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to authenticate the domain name ownership. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, you must use the <b>DomainName</b> parameter to specify the domain name. For the <b>DescribeVerifyContent</b> operation, you must also use the <b>AccessOrigin</b> parameter to specify the access source. For more information about the valid values, see the metric description of the DescribeVerifyContent operation.</description></item>
+        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) and public cloud disaster recovery is enabled, and the website config is added to a region in the Chinese mainland, the domain name must have an ICP filing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2581,8 +2589,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a hybrid cloud cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Specifically, when you call the DescribeInstance operation, the Details.HybridCloud parameter in the response must be true. If the feature is not enabled, upgrade the instance to a hybrid cloud-compatible version in the WAF console.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateHybridCloudClusterRequest
@@ -2683,8 +2696,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a hybrid cloud cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Specifically, when you call the DescribeInstance operation, the Details.HybridCloud parameter in the response must be true. If the feature is not enabled, upgrade the instance to a hybrid cloud-compatible version in the WAF console.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateHybridCloudClusterRequest
@@ -2785,8 +2803,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a hybrid cloud cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Specifically, when you call the DescribeInstance operation, the Details.HybridCloud parameter in the response must be true. If the feature is not enabled, upgrade the instance to a hybrid cloud-compatible version in the WAF console.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateHybridCloudClusterRequest
@@ -2803,8 +2826,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a hybrid cloud cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Specifically, when you call the DescribeInstance operation, the Details.HybridCloud parameter in the response must be true. If the feature is not enabled, upgrade the instance to a hybrid cloud-compatible version in the WAF console.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateHybridCloudClusterRequest
@@ -2826,7 +2854,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2897,7 +2925,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2968,7 +2996,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2991,7 +3019,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.HybridCloud response parameter is set to true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3201,12 +3229,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a log delivery configuration for hybrid cloud environments.</para>
+        /// <para>Creates a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
+        /// <para>Before you call this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes are purchased. If no hybrid cloud extension nodes are purchased, you can log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3268,12 +3296,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a log delivery configuration for hybrid cloud environments.</para>
+        /// <para>Creates a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
+        /// <para>Before you call this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes are purchased. If no hybrid cloud extension nodes are purchased, you can log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3335,12 +3363,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a log delivery configuration for hybrid cloud environments.</para>
+        /// <para>Creates a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
+        /// <para>Before you call this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes are purchased. If no hybrid cloud extension nodes are purchased, you can log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3358,12 +3386,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a log delivery configuration for hybrid cloud environments.</para>
+        /// <para>Creates a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
+        /// <para>Before you call this operation, ensure that you have purchased hybrid cloud extension nodes for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes are purchased. If no hybrid cloud extension nodes are purchased, you can log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3749,7 +3777,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial for a proof of concept (POC) feature.</para>
+        /// <para>Enables the POC feature trial.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3803,7 +3831,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial for a proof of concept (POC) feature.</para>
+        /// <para>Enables the POC feature trial.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3857,7 +3885,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial for a proof of concept (POC) feature.</para>
+        /// <para>Enables the POC feature trial.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3875,7 +3903,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial for a proof of concept (POC) feature.</para>
+        /// <para>Enables the POC feature trial.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4041,7 +4069,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a China National Cryptographic Algorithm (SM) certificate for a domain that is added to WAF in CNAME mode.</para>
+        /// <para>Uploads a ShangMi certificate for WAF CNAME access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4111,7 +4139,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a China National Cryptographic Algorithm (SM) certificate for a domain that is added to WAF in CNAME mode.</para>
+        /// <para>Uploads a ShangMi certificate for WAF CNAME access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4181,7 +4209,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a China National Cryptographic Algorithm (SM) certificate for a domain that is added to WAF in CNAME mode.</para>
+        /// <para>Uploads a ShangMi certificate for WAF CNAME access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4199,7 +4227,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a China National Cryptographic Algorithm (SM) certificate for a domain that is added to WAF in CNAME mode.</para>
+        /// <para>Uploads a ShangMi certificate for WAF CNAME access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4841,7 +4869,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the extended certificate for a resource onboarded in cloud native mode.</para>
+        /// <para>Deletes the extension certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4899,7 +4927,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the extended certificate for a resource onboarded in cloud native mode.</para>
+        /// <para>Deletes the extension certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4957,7 +4985,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the extended certificate for a resource onboarded in cloud native mode.</para>
+        /// <para>Deletes the extension certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4975,7 +5003,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the extended certificate for a resource onboarded in cloud native mode.</para>
+        /// <para>Deletes the extension certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5322,6 +5350,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
             {
                 query["RuleIds"] = request.RuleIds;
@@ -5391,6 +5423,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
             {
@@ -6877,6 +6913,150 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAbnormalCloudResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user access configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessConfigResponse
+        /// </returns>
+        public DescribeAccessConfigResponse DescribeAccessConfigWithOptions(DescribeAccessConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAccessConfig",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAccessConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user access configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessConfigResponse
+        /// </returns>
+        public async Task<DescribeAccessConfigResponse> DescribeAccessConfigWithOptionsAsync(DescribeAccessConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAccessConfig",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAccessConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user access configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessConfigResponse
+        /// </returns>
+        public DescribeAccessConfigResponse DescribeAccessConfig(DescribeAccessConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAccessConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user access configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAccessConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAccessConfigResponse
+        /// </returns>
+        public async Task<DescribeAccessConfigResponse> DescribeAccessConfigAsync(DescribeAccessConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAccessConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10217,7 +10397,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on data endpoints associated with API security sensitive data domains.</para>
+        /// <para>Queries the data domain statistics for API security sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10295,7 +10475,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on data endpoints associated with API security sensitive data domains.</para>
+        /// <para>Queries the data domain statistics for API security sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10373,7 +10553,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on data endpoints associated with API security sensitive data domains.</para>
+        /// <para>Queries the data domain statistics for API security sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10391,7 +10571,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on data endpoints associated with API security sensitive data domains.</para>
+        /// <para>Queries the data domain statistics for API security sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12689,7 +12869,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12743,7 +12923,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12797,7 +12977,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12815,7 +12995,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the ports of cloud service instances that are added to WAF. Only ECS and CLB are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15973,7 +16153,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection configurations for a specific defense scenario.</para>
+        /// <para>Queries the protection settings for user protection scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16031,7 +16211,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection configurations for a specific defense scenario.</para>
+        /// <para>Queries the protection settings for user protection scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16089,7 +16269,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection configurations for a specific defense scenario.</para>
+        /// <para>Queries the protection settings for user protection scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16107,7 +16287,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection configurations for a specific defense scenario.</para>
+        /// <para>Queries the protection settings for user protection scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16981,7 +17161,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Website Config.</para>
+        /// <para>Queries the details of the website config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17035,7 +17215,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Website Config.</para>
+        /// <para>Queries the details of the website config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17089,7 +17269,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Website Config.</para>
+        /// <para>Queries the details of the website config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17107,7 +17287,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Website Config.</para>
+        /// <para>Queries the details of the website config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19305,8 +19485,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of hybrid cloud clusters.</para>
+        /// <para>Queries the hybrid cloud clusters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the hybrid cloud clusters of a specified Web Application Firewall (WAF) instance. The response includes information such as the cluster name, cluster type, network access mode, HTTP and HTTPS ports, proxy gateway mode, and the number of protection nodes that can be added.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.
+        /// If you call this API operation when the hybrid cloud feature is not enabled, the error code Waf.HybridCloud.HybridCloudNotsupport is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHybridCloudClustersRequest
@@ -19355,8 +19543,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of hybrid cloud clusters.</para>
+        /// <para>Queries the hybrid cloud clusters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the hybrid cloud clusters of a specified Web Application Firewall (WAF) instance. The response includes information such as the cluster name, cluster type, network access mode, HTTP and HTTPS ports, proxy gateway mode, and the number of protection nodes that can be added.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.
+        /// If you call this API operation when the hybrid cloud feature is not enabled, the error code Waf.HybridCloud.HybridCloudNotsupport is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHybridCloudClustersRequest
@@ -19405,8 +19601,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of hybrid cloud clusters.</para>
+        /// <para>Queries the hybrid cloud clusters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the hybrid cloud clusters of a specified Web Application Firewall (WAF) instance. The response includes information such as the cluster name, cluster type, network access mode, HTTP and HTTPS ports, proxy gateway mode, and the number of protection nodes that can be added.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.
+        /// If you call this API operation when the hybrid cloud feature is not enabled, the error code Waf.HybridCloud.HybridCloudNotsupport is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHybridCloudClustersRequest
@@ -19423,8 +19627,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of hybrid cloud clusters.</para>
+        /// <para>Queries the hybrid cloud clusters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the hybrid cloud clusters of a specified Web Application Firewall (WAF) instance. The response includes information such as the cluster name, cluster type, network access mode, HTTP and HTTPS ports, proxy gateway mode, and the number of protection nodes that can be added.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.
+        /// If you call this API operation when the hybrid cloud feature is not enabled, the error code Waf.HybridCloud.HybridCloudNotsupport is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHybridCloudClustersRequest
@@ -19817,8 +20029,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</para>
+        /// <para>Retrieves the number of protection nodes that can be added to a hybrid cloud cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHybridCloudProtectableCountRequest
@@ -19867,8 +20085,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</para>
+        /// <para>Retrieves the number of protection nodes that can be added to a hybrid cloud cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHybridCloudProtectableCountRequest
@@ -19917,8 +20141,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</para>
+        /// <para>Retrieves the number of protection nodes that can be added to a hybrid cloud cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHybridCloudProtectableCountRequest
@@ -19935,8 +20165,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</para>
+        /// <para>Retrieves the number of protection nodes that can be added to a hybrid cloud cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <para>Before you call this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHybridCloudProtectableCountRequest
@@ -21317,7 +21553,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a WAF instance in the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of the WAF instance in the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21363,7 +21599,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a WAF instance in the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of the WAF instance in the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21409,7 +21645,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a WAF instance in the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of the WAF instance in the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21427,7 +21663,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a WAF instance in the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of the WAF instance in the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23261,7 +23497,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the burstable pay-as-you-go billing details of a subscription WAF instance, such as burstable QPS.</para>
+        /// <para>Queries the elastic pay-as-you-go bills for an upfront WAF instance, such as burstable QPS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23319,7 +23555,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the burstable pay-as-you-go billing details of a subscription WAF instance, such as burstable QPS.</para>
+        /// <para>Queries the elastic pay-as-you-go bills for an upfront WAF instance, such as burstable QPS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23377,7 +23613,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the burstable pay-as-you-go billing details of a subscription WAF instance, such as burstable QPS.</para>
+        /// <para>Queries the elastic pay-as-you-go bills for an upfront WAF instance, such as burstable QPS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23395,7 +23631,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the burstable pay-as-you-go billing details of a subscription WAF instance, such as burstable QPS.</para>
+        /// <para>Queries the elastic pay-as-you-go bills for an upfront WAF instance, such as burstable QPS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26693,16 +26929,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</para>
+        /// <para>Queries the time series data of attack traffic. Attack requests refer to requests that hit rules and are identified as risky.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</para>
+        /// <para>Attack traffic refers to requests that hit rules and are identified as risky. The following three types of data are not included:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</description></item>
-        /// <item><description>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that hit whitelist rules.</description></item>
+        /// <item><description>Requests that hit bot rules, but the rule action is back-to-origin mark.</description></item>
+        /// <item><description>Requests that hit rules and the rule action is set to dynamic token, slider CAPTCHA, strict slider CAPTCHA, or JavaScript authenticate, but the requests passed user verification and were allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26767,16 +27003,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</para>
+        /// <para>Queries the time series data of attack traffic. Attack requests refer to requests that hit rules and are identified as risky.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</para>
+        /// <para>Attack traffic refers to requests that hit rules and are identified as risky. The following three types of data are not included:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</description></item>
-        /// <item><description>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that hit whitelist rules.</description></item>
+        /// <item><description>Requests that hit bot rules, but the rule action is back-to-origin mark.</description></item>
+        /// <item><description>Requests that hit rules and the rule action is set to dynamic token, slider CAPTCHA, strict slider CAPTCHA, or JavaScript authenticate, but the requests passed user verification and were allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26841,16 +27077,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</para>
+        /// <para>Queries the time series data of attack traffic. Attack requests refer to requests that hit rules and are identified as risky.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</para>
+        /// <para>Attack traffic refers to requests that hit rules and are identified as risky. The following three types of data are not included:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</description></item>
-        /// <item><description>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that hit whitelist rules.</description></item>
+        /// <item><description>Requests that hit bot rules, but the rule action is back-to-origin mark.</description></item>
+        /// <item><description>Requests that hit rules and the rule action is set to dynamic token, slider CAPTCHA, strict slider CAPTCHA, or JavaScript authenticate, but the requests passed user verification and were allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26869,16 +27105,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</para>
+        /// <para>Queries the time series data of attack traffic. Attack requests refer to requests that hit rules and are identified as risky.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</para>
+        /// <para>Attack traffic refers to requests that hit rules and are identified as risky. The following three types of data are not included:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</description></item>
-        /// <item><description>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that hit whitelist rules.</description></item>
+        /// <item><description>Requests that hit bot rules, but the rule action is back-to-origin mark.</description></item>
+        /// <item><description>Requests that hit rules and the rule action is set to dynamic token, slider CAPTCHA, strict slider CAPTCHA, or JavaScript authenticate, but the requests passed user verification and were allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32577,6 +32813,158 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates the user access configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessConfigResponse
+        /// </returns>
+        public ModifyAccessConfigResponse ModifyAccessConfigWithOptions(ModifyAccessConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigValue))
+            {
+                query["ConfigValue"] = request.ConfigValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAccessConfig",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAccessConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the user access configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessConfigResponse
+        /// </returns>
+        public async Task<ModifyAccessConfigResponse> ModifyAccessConfigWithOptionsAsync(ModifyAccessConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigKey))
+            {
+                query["ConfigKey"] = request.ConfigKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigValue))
+            {
+                query["ConfigValue"] = request.ConfigValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAccessConfig",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAccessConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the user access configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessConfigResponse
+        /// </returns>
+        public ModifyAccessConfigResponse ModifyAccessConfig(ModifyAccessConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAccessConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the user access configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAccessConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAccessConfigResponse
+        /// </returns>
+        public async Task<ModifyAccessConfigResponse> ModifyAccessConfigAsync(ModifyAccessConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAccessConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the status of API security risks in batches.</para>
         /// </summary>
         /// 
@@ -34946,6 +35334,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -35021,6 +35413,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -35279,9 +35675,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
+            {
+                query["Resource"] = request.Resource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
@@ -35354,9 +35758,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
+            {
+                query["Resource"] = request.Resource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
             {
                 query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
@@ -35437,7 +35849,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mitigation settings for a protection scenario.</para>
+        /// <para>Modifies the protection settings for a defense scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35499,7 +35911,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mitigation settings for a protection scenario.</para>
+        /// <para>Modifies the protection settings for a defense scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35561,7 +35973,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mitigation settings for a protection scenario.</para>
+        /// <para>Modifies the protection settings for a defense scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35579,7 +35991,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mitigation settings for a protection scenario.</para>
+        /// <para>Modifies the protection settings for a defense scene.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35933,7 +36345,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a CNAME-based domain name.</para>
+        /// <para>Modifies a domain name added in CNAME mode.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36009,7 +36421,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a CNAME-based domain name.</para>
+        /// <para>Modifies a domain name added in CNAME mode.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36085,7 +36497,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a CNAME-based domain name.</para>
+        /// <para>Modifies a domain name added in CNAME mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36103,7 +36515,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a CNAME-based domain name.</para>
+        /// <para>Modifies a domain name added in CNAME mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38157,12 +38569,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP blacklist for a critical event protection scenario.</para>
+        /// <para>Modifies the IP blacklist for critical event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection must be purchased separately through an upgrade. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.MajorProtection parameter is set to true, the instance supports critical event protection. If the instance does not support critical event protection, you can upgrade the instance to enable this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38232,12 +38644,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP blacklist for a critical event protection scenario.</para>
+        /// <para>Modifies the IP blacklist for critical event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection must be purchased separately through an upgrade. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.MajorProtection parameter is set to true, the instance supports critical event protection. If the instance does not support critical event protection, you can upgrade the instance to enable this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38307,12 +38719,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP blacklist for a critical event protection scenario.</para>
+        /// <para>Modifies the IP blacklist for critical event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection must be purchased separately through an upgrade. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.MajorProtection parameter is set to true, the instance supports critical event protection. If the instance does not support critical event protection, you can upgrade the instance to enable this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38330,12 +38742,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP blacklist for a critical event protection scenario.</para>
+        /// <para>Modifies the IP blacklist for critical event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection must be purchased separately through an upgrade. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the returned Details.MajorProtection parameter is set to true, the instance supports critical event protection. If the instance does not support critical event protection, you can upgrade the instance to enable this feature.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -21,10 +21,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string CertId { get; set; }
 
         /// <summary>
-        /// <para>The cipher suite type.</para>
-        /// <remarks>
-        /// <para>This parameter is required. You must specify this parameter when you call this operation.</para>
-        /// </remarks>
+        /// <para>The type of the cipher suite. This parameter is required when you call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,22 +31,23 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? CipherSuite { get; set; }
 
         /// <summary>
-        /// <para>The custom cipher suites to add. This parameter is used only when <b>CipherSuite</b> is set to <b>99</b>.</para>
+        /// <para>The custom cipher suites to be added. This parameter is used only when <b>CipherSuite</b> is set to <b>99</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;ECDHE-ECDSA-AES128-GCM-SHA256&quot;,&quot;ECDHE-ECDSA-AES256-GCM-SHA384&quot;,&quot;ECDHE-RSA-AES128-GCM-SHA256&quot;,&quot;ECDHE-RSA-AES256-GCM-SHA384&quot;]</para>
         /// </summary>
         [NameInMap("CustomCiphers")]
         [Validation(Required=false)]
         public List<string> CustomCiphers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether TLS 1.3 is supported. Valid values:</para>
+        /// <para>Specifies whether to support TLS 1.3. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: TLS 1.3 is supported.</para>
         /// </description></item>
         /// <item><description><para><b>false</b>: TLS 1.3 is not supported.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. If TLSVersion is set to tlsv1.3, this value must be true.</description></item>
-        /// </list>
+        /// <para>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses HTTPS. When TLSVersion is set to tlsv1.3, this parameter must be set to true.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -62,10 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public bool? EnableTLSv3 { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
-        /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
-        /// </remarks>
+        /// <para>The ID of the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +71,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>

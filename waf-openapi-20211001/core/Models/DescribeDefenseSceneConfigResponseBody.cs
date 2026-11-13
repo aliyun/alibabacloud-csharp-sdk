@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseSceneConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The value of the configuration item. For more information, see the <b>ConfigValue</b> parameter in <a href="https://help.aliyun.com/document_detail/2968435.html">ModifyDefenseSceneConfig</a>.</para>
+        /// <para>The value of the queried configuration item. For more information, see the <b>ConfigValue</b> parameter in <a href="https://help.aliyun.com/document_detail/2968435.html">ModifyDefenseSceneConfig</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

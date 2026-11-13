@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public CreateDomainResponseBodyDomainInfo DomainInfo { get; set; }
         public class CreateDomainResponseBodyDomainInfo : TeaModel {
             /// <summary>
-            /// <para>The CNAME assigned by WAF to the domain name.</para>
+            /// <para>The CNAME address assigned by WAF to the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxwww.****.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Cname { get; set; }
 
             /// <summary>
-            /// <para>The name of the added domain name.</para>
+            /// <para>The name of the added domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>

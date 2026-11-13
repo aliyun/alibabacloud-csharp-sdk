@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned time series data. The operation can return time series data for multiple values.</para>
+        /// <para>The returned time series data. Time series data for multiple values is supported.</para>
         /// </summary>
         [NameInMap("SecurityEventTimeSeries")]
         [Validation(Required=false)]
         public List<DescribeSecurityEventTimeSeriesMetricResponseBodySecurityEventTimeSeries> SecurityEventTimeSeries { get; set; }
         public class DescribeSecurityEventTimeSeriesMetricResponseBodySecurityEventTimeSeries : TeaModel {
             /// <summary>
-            /// <para>The content of the returned data. This is consistent with the \<c>Metric\\</c> request parameter.</para>
+            /// <para>The returned data content, which is consistent with the meaning of the Metric parameter in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>monitored_requests</para>
@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The data series. Each point represents the statistical count within a specific time range.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[]</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeSecurityEventTimeSeriesMetricResponseBodyTimeSeriesMetaData TimeSeriesMetaData { get; set; }
         public class DescribeSecurityEventTimeSeriesMetricResponseBodyTimeSeriesMetaData : TeaModel {
             /// <summary>
-            /// <para>The time granularity of each data point in the returned time series data. For example, &quot;15m&quot; indicates that each returned data point represents statistics for a 15-minute interval. For more information about the time granularity of the returned data, see the Time granularity of time series data points section.</para>
+            /// <para>The statistical time granularity of each data point in the returned time series data. For example, &quot;15m&quot; indicates that each returned data point is the statistical data for every 15 minutes. For the time granularity of the returned data, see <b>Time granularity description of time series data points</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1m</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeSecurityEventTimeSeriesMetricResponseBodyTimeSeriesMetaDataDateRange DateRange { get; set; }
             public class DescribeSecurityEventTimeSeriesMetricResponseBodyTimeSeriesMetaDataDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end time of the query. This is a UNIX timestamp. Unit: seconds. This value is the same as the \<c>EndDate\\</c> request parameter.</para>
+                /// <para>The end time used for the data query, represented by a UNIX timestamp in seconds. This value is the same as the EndDate parameter in the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888600</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the query. This is a UNIX timestamp. Unit: seconds. This value is the same as the \<c>StartDate\\</c> request parameter.</para>
+                /// <para>The start time used for the data query, represented by a UNIX timestamp in seconds. This value is the same as the StartDate parameter in the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888000</para>

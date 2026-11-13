@@ -18,7 +18,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the value is <b>share</b>, or if the value is <b>hybrid_cloud_cname</b> and public cloud disaster recovery is enabled, call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to verify domain name ownership first. If the domain name is connected to a region in the Chinese mainland, ICP filing must also be completed.</para>
+        /// <para>If the value is <b>share</b>, or the value is <b>hybrid_cloud_cname</b> and public cloud disaster recovery is enabled, you must invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to authenticate the domain name ownership first. If the website config is added to a region in the Chinese mainland, it must also have an ICP filing.</para>
+        /// <para>If the value is <b>hybrid_cloud_cname</b> and public cloud disaster recovery is disabled, you do not need to authenticate the domain name ownership and can directly invoke this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The listening configuration.</para>
+        /// <para>The listener configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -71,6 +72,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +98,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. You can specify up to 20 tags.</para>
+        /// <para>The list of tags, which can contain up to 20 items.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

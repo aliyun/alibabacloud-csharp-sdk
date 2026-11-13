@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The list of specified header fields.</para>
         /// <remarks>
-        /// <para>When XffStatus is set to 1, the first IP in the specified header field is used as the client source IP to prevent XFF spoofing. When multiple headers are specified, the system attempts to obtain the source IP from each header in order. If the first header does not contain an IP, the system tries the second header, and so on. If no specified header contains an IP, the first IP in the X-Forwarded-For header is used. When XffStatus is set to 1, the IP is obtained from the first available header.</para>
+        /// <para>When XffStatus is set to 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent XFF spoofing. If multiple headers are specified, the system attempts to obtain the originating IP address in sequence. If the first header does not contain an IP address, the system checks the second header, and so on. If no IP address is found in any of the specified headers, the first IP address in the X-Forwarded-For header is used. When XffStatus is set to 1, it indicates that the first IP address is obtained.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CustomHeaders")]
@@ -30,12 +30,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The specific parameter information of the protected object, which is a string converted from a JSON object constructed with a series of parameters.</para>
+        /// <para>The detailed parameter information of the protected object, which is converted into a JSON string constructed from a series of parameters.</para>
         /// <remarks>
-        /// <para>The parameters vary depending on the specified <b>cloud product</b> (<b>Product</b>) and <b>protection mode</b> (<b>Pattern</b>). For more information, see <b>Detail parameter description for protected objects</b>.</para>
+        /// <para>The specific parameters involved vary depending on the specified <b>cloud service</b> (<b>Product</b>) and <b>protection mode</b> (<b>Pattern</b>). For more information, see <b>Parameter description of Detail for protected objects</b>.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Notice: When <b>Product</b> is set to <b>ecs</b>, <b>clb4</b>, <b>clb7</b>, or <b>nlb</b>, domain names connected to regions in the Chinese mainland must have completed ICP filing.</notice></para>
+        /// <para>Notice: When <b>Product</b> is set to <b>ecs</b>, <b>clb4</b>, <b>clb7</b>, or <b>nlb</b>, domain names that are connected to regions in the Chinese mainland must have an ICP filing.</notice></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account to which the protected object belongs in multi-account scenarios. By default, the protected object belongs to the WAF administrator account.</para>
+        /// <para>The ID of the account to which the protected object belongs in a multi-account scenario. By default, the protected object belongs to the WAF administrator account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123221XXX</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Currently, only the following combinations are supported: when <b>Product</b> is set to <b>alb</b>, <b>ecs</b>, <b>clb4</b>, <b>clb7</b>, or <b>nlb</b>, <b>Pattern</b> must be set to <b>domain</b>. When <b>Product</b> is set to <b>waf</b>, <b>Pattern</b> must be set to <b>multi_service</b>.</para>
+        /// <para>Currently, only the following combinations are supported: When <b>Product</b> is set to <b>alb</b>, <b>ecs</b>, <b>clb4</b>, <b>clb7</b>, or <b>nlb</b>, <b>Pattern</b> must be set to <b>domain</b>. When <b>Product</b> is set to <b>waf</b>, <b>Pattern</b> must be set to <b>multi_service</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,19 +91,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Pattern { get; set; }
 
         /// <summary>
-        /// <para>The cloud product name. Valid values:</para>
+        /// <para>The name of the cloud service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>alb</b>: Application Load Balancer (ALB).</para>
+        /// <item><description><para><b>alb</b>: ALB.</para>
         /// </description></item>
-        /// <item><description><para><b>ecs</b>: Elastic Compute Service (ECS).</para>
+        /// <item><description><para><b>ecs</b>: ECS.</para>
         /// </description></item>
-        /// <item><description><para><b>clb4</b>: Classic Load Balancer (CLB) Layer 4 access.</para>
+        /// <item><description><para><b>clb4</b>: CLB Layer 4.</para>
         /// </description></item>
-        /// <item><description><para><b>clb7</b>: Classic Load Balancer (CLB) Layer 7 access.</para>
+        /// <item><description><para><b>clb7</b>: CLB Layer 7.</para>
         /// </description></item>
-        /// <item><description><para><b>nlb</b>: Network Load Balancer (NLB).</para>
+        /// <item><description><para><b>nlb</b>: NLB.</para>
         /// </description></item>
-        /// <item><description><para><b>waf</b>: Web Application Firewall (WAF).</para>
+        /// <item><description><para><b>waf</b>: WAF.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceGroup { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceOrigin { get; set; }
 
         /// <summary>
-        /// <para>The tag list, which contains up to 20 items.</para>
+        /// <para>The list of tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -210,11 +210,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether XFF proxy is enabled for the protected object. Valid values:</para>
+        /// <para>Specifies whether to enable the X-Forwarded-For (XFF) proxy for the protected object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Disabled (default).</para>
+        /// <item><description><para><b>0</b>: disabled (default).</para>
         /// </description></item>
-        /// <item><description><para><b>1</b>: Enabled.</para>
+        /// <item><description><para><b>1</b>: enabled.</para>
         /// </description></item>
         /// </list>
         /// 

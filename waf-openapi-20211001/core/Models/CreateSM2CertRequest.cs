@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// <para>The content of the SM encryption certificate.</para>
+        /// <para>The content of the ShangMi certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EncryptCertificate { get; set; }
 
         /// <summary>
-        /// <para>The private key content of the SM encryption certificate.</para>
+        /// <para>The content of the private key for the ShangMi certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The signing certificate content of the SM certificate.</para>
+        /// <para>The content of the signing certificate for the ShangMi certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SignCertificate { get; set; }
 
         /// <summary>
-        /// <para>The private key content of the SM signing certificate.</para>
+        /// <para>The content of the private key for the signing certificate of the ShangMi certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----</para>

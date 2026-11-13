@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSecurityEventTimeSeriesMetricRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for the query. Multiple filter conditions have a logical AND relationship.</para>
+        /// <para>The query filter conditions. Multiple filter conditions are connected by the logical AND operator.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeSecurityEventTimeSeriesMetricRequestFilter Filter { get; set; }
         public class DescribeSecurityEventTimeSeriesMetricRequestFilter : TeaModel {
             /// <summary>
-            /// <para>A list of filter conditions. Each node describes one filter condition.</para>
+            /// <para>The list of filter conditions. Each node describes a filter condition.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventTimeSeriesMetricRequestFilterConditions> Conditions { get; set; }
             public class DescribeSecurityEventTimeSeriesMetricRequestFilterConditions : TeaModel {
                 /// <summary>
-                /// <para>The name of the field to filter. This operation supports all fields.</para>
+                /// <para>The name of the field on which the filter operation is performed. This operation supports all fields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>matched_host</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The time range to query.</para>
+            /// <para>The time range for the query.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DateRange")]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeSecurityEventTimeSeriesMetricRequestFilterDateRange DateRange { get; set; }
             public class DescribeSecurityEventTimeSeriesMetricRequestFilterDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end time of the query. This is a UNIX timestamp. Unit: seconds.</para>
+                /// <para>The end time of the query. The end time is represented by a UNIX timestamp in seconds.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>You can query data from the last 30 days. The start time of the query. This is a UNIX timestamp. Unit: seconds.</para>
+                /// <para>The start time of the query. The data query range cannot exceed the past 30 days. The start time is represented by a UNIX timestamp in seconds.</para>
                 /// <remarks>
-                /// <h2>The start time must be within the last 30 days.</h2>
+                /// <h2>The start time must be later than the current time minus 30 days.</h2>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,16 +108,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the content of the returned data. Different metrics correspond to different data content. This operation supports the following metrics:</para>
+        /// <para>The metric used to distinguish the returned data content. Different metrics correspond to different data content. This operation supports the following metrics:</para>
         /// <list type="bullet">
-        /// <item><description><para>mitigated_requests: Returns the time series statistics of blocked requests.</para>
-        /// </description></item>
-        /// <item><description><para>monitored_requests: Returns the time series statistics of requests that hit only observation-type rules.</para>
-        /// </description></item>
-        /// <item><description><para>mitigated_requests_group_by_defense_scene: Returns data grouped by module. It records a time series graph of the hit count for each module. A single request may hit multiple modules. Therefore, the hit count returned by this metric may not be consistent with the number of requests.</para>
-        /// </description></item>
-        /// <item><description><para>mitigated_requests_group_by_block_defense_scene: Returns data grouped by module. It records a time series graph of the number of blocked requests for each module. A single request is blocked by only one module. Therefore, the count returned by this metric is consistent with the number of requests.</para>
-        /// </description></item>
+        /// <item><description>mitigated_requests: returns the time series statistics of blocked requests.</description></item>
+        /// <item><description>monitored_requests: returns the time series statistics of requests that only hit monitor rules.</description></item>
+        /// <item><description>mitigated_requests_group_by_defense_scene: returns data grouped by protection module, recording the time series statistics of hits for each module. A single request may hit multiple modules, so the number of module hits returned by this metric may not match the number of requests.</description></item>
+        /// <item><description>mitigated_requests_group_by_block_defense_scene: returns data grouped by protection module, recording the time series statistics of blocked requests for each module. A single request is blocked by only one module, so the statistical count returned by this metric is consistent with the number of requests.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -131,10 +127,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The protection scenario to modify. For more information, see the <b>DefenseScene</b> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
+        /// <para>The protection scenario to be modified. For more information, see the <b>DefenseScene</b> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>waf_group</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</para>
+        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is initiated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</description></item>
-        /// <item><description><b>false</b>: A normal request is sent. The specified operation is performed after the request passes the check.</description></item>
+        /// <item><description><b>true</b>: initiates a dry run request. The system only checks whether the request meets the execution conditions and does not perform the operations specified in the request. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</description></item>
+        /// <item><description><b>false</b>: initiates a normal request. The system performs the operations specified in the request after the check succeeds.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The protected object associated with the rule to modify.</para>
+        /// <para>The protected object to which the modified rule applies.</para>
         /// <remarks>
         /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>resource</b>.</para>
         /// </remarks>
@@ -97,11 +97,25 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The details of the protection rule. The value is a string that is converted from a JSON object constructed by a series of parameters. When you configure this parameter, specify the rule ID and the protection rule configuration to modify. The following parameters are included:</para>
+        /// <para>The protection target type. This applies to rules where <b>DefenseType</b> is set to <b>resource</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>single</b> (default): Single protected object.</description></item>
+        /// <item><description><b>group</b>: Protected object group.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>single</para>
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        /// <summary>
+        /// <para>The details of the protection rule. The value is a JSON string that consists of multiple parameters. When you configure this parameter, you must specify the rule ID and set the configuration of the protection rule to be modified. The details include:</para>
         /// <list type="bullet">
         /// <item><description><para><b>id</b>: Long | Required | The rule ID.</para>
         /// </description></item>
-        /// <item><description><para>Protection rule configuration: Same as the <b>Rules</b> parameter of the <b>CreateDefenseRule</b> operation. For more information, see the <b>protection rule parameter description</b> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
+        /// <item><description><para>Protection rule configuration: Same as the <b>Rules</b> parameter of the <b>CreateDefenseRule</b> operation. For more information, see the <b>Protection rule parameter description</b> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

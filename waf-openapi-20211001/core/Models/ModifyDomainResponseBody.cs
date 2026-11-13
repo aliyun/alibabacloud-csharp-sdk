@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public ModifyDomainResponseBodyDomainInfo DomainInfo { get; set; }
         public class ModifyDomainResponseBodyDomainInfo : TeaModel {
             /// <summary>
-            /// <para>The CNAME assigned by WAF to the domain name.</para>
+            /// <para>The CNAME address assigned by WAF to the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxcvdaf.****.com</para>

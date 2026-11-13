@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string CertContent { get; set; }
 
         /// <summary>
-        /// <para>The content of the private key file that corresponds to the certificate.</para>
+        /// <para>The content of the private key file for the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN RSA PRIVATE KEY----- DADTPZoOHd9WtZ3U<b><b>RgNQmioPQn2bqdKHop+B/dn/4VZL7Jt8zSDGM9sTMThLyvsmLQKBgQCr+ujntC1kN6pGBj2Fw2l/EA/W3rYEce2tyhjgmG7rZ+A/jVE9fld5sQra6ZdwBcQJaiygoIYoaMF2EjRwc0qwHaluq0C15f6ujSoHh2e+D5zdmkTg/3NKNjqNv6xA2gYpinVDzFdZ9Zujxvuh9o4Vqf0YF8</b></b>K5G04RtKadOw== -----END RSA PRIVATE KEY-----</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string CertKey { get; set; }
 
         /// <summary>
-        /// <para>The certificate name.</para>
+        /// <para>The name of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testrsa1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland</para>
         /// </description></item>
         /// </list>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

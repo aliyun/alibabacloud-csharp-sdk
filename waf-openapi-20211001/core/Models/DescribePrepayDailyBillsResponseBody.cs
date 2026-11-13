@@ -10,12 +10,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePrepayDailyBillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of WAF burstable billing records.</para>
+        /// <para>The list of elastic pay-as-you-go bills for the WAF instance.</para>
         /// </summary>
         [NameInMap("Bills")]
         [Validation(Required=false)]
         public List<DescribePrepayDailyBillsResponseBodyBills> Bills { get; set; }
         public class DescribePrepayDailyBillsResponseBodyBills : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether Agentic WAF is activated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("AgenticWaf")]
+            [Validation(Required=false)]
+            public bool? AgenticWaf { get; set; }
+
             /// <summary>
             /// <para>The burstable QPS specification of the WAF instance.</para>
             /// 
@@ -27,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ElasticQpsSetValue { get; set; }
 
             /// <summary>
-            /// <para>The end time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+            /// <para>The end time of the bill. The value is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687591200</para>
@@ -37,9 +47,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The overuse status of the current period. Valid values:</para>
+            /// <para>The overuse status for the current period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Normal.</description></item>
+            /// <item><description><b>0</b>: normal.</description></item>
             /// <item><description><b>1</b>: overused.</description></item>
             /// <item><description><b>2</b>: sandboxed.</description></item>
             /// </list>
@@ -52,10 +62,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ExceedStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the extension plug-in is enabled. Valid values:</para>
+            /// <para>Specifies whether the extension plug-in is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The extension plug-in is enabled.</description></item>
-            /// <item><description><b>false</b>: The extension plug-in is not enabled.</description></item>
+            /// <item><description><b>true</b>: enabled.</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +76,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? ExtensionPlugin { get; set; }
 
             /// <summary>
-            /// <para>The number of requests processed by the plug-in.</para>
+            /// <para>The number of plug-in requests processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -76,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ExtensionPluginRequest { get; set; }
 
             /// <summary>
-            /// <para>The maximum QPS during the current period.</para>
+            /// <para>The maximum QPS for the current period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>600</para>
@@ -86,7 +96,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? MaxQps { get; set; }
 
             /// <summary>
-            /// <para>The unit price for burstable billing. Unit: CNY for the China site and USD for the international site.</para>
+            /// <para>The unit price of elastic billing. Unit: CNY on the Chinese site and USD on the international site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -96,7 +106,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public float? Price { get; set; }
 
             /// <summary>
-            /// <para>The QPS extension specification of the WAF instance.</para>
+            /// <para>The extended QPS specification of the WAF instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -116,10 +126,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? QpsVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether risk identification is enabled. Valid values:</para>
+            /// <para>Specifies whether risk identification is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Risk identification is enabled.</description></item>
-            /// <item><description><b>false</b>: Risk identification is not enabled.</description></item>
+            /// <item><description><b>true</b>: enabled.</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,7 +150,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RiskTraffic { get; set; }
 
             /// <summary>
-            /// <para>The start time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+            /// <para>The start time of the bill. The value is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687822980</para>
@@ -150,7 +160,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The total QPS that is billed.</para>
+            /// <para>The total QPS to be billed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -160,7 +170,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Total { get; set; }
 
             /// <summary>
-            /// <para>The burstable billing type.</para>
+            /// <para>The elastic billing type.</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -169,7 +179,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC10C9EA-A367-52D5-<em><b>-</b></em></para>
@@ -179,7 +189,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
