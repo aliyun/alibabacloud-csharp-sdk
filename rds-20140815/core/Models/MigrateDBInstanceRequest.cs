@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</para>
+        /// <para>The ID of the dedicated cluster. You can call the DescribeDedicatedHostGroups operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The time when the migration takes effect. Valid values:</para>
+        /// <para>The time when the migration is performed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The migration takes effect immediately. This is the default value.</description></item>
-        /// <item><description><b>MaintainTime</b>: The migration takes effect within the maintenance window.</description></item>
-        /// <item><description><b>Specified</b>: The migration takes effect at a specified time.</description></item>
+        /// <item><description><b>Immediately</b>: The migration is performed immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: The migration is performed during the maintenance window.</description></item>
+        /// <item><description><b>Specified</b>: The migration is performed at a specified time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specified time for the migration. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The specified time when the migration is performed. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
         /// <remarks>
         /// <para>This parameter is required when <b>EffectiveTime</b> is set to <b>Specified</b>.</para>
         /// </remarks>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SpecifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination host to which the primary instance is to be migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</para>
+        /// <para>The ID of the destination host to which the primary instance is migrated. You can call the DescribeDedicatedHosts operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bpxxxxxxx1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetDedicatedHostIdForMaster { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination host to which the secondary instance is to be migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</para>
+        /// <para>The ID of the destination host to which the secondary instance is migrated. You can call the DescribeDedicatedHosts operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bpxxxxxxx2</para>

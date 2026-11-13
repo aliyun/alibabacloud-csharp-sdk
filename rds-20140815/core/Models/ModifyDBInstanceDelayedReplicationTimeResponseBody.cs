@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The replication delay time of the read-only instance. Unit: seconds.</para>
+        /// <para>The replication delay time for the read-only instance. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

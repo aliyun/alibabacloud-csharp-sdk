@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotence of the request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. Default value: the current instance type.</para>
+        /// <para>The instance type. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. Default value: the current instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql.n2.medium.2c</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to obtain instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The order type. Valid value: <b>BUY</b>.</para>
+        /// <para>The order type. Set the value to <b>BUY</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the DescribeRegions operation to obtain the ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</para>
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmx****</para>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <para>The subscription type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: year.</description></item>
-        /// <item><description><b>Month</b>: month.</description></item>
+        /// <item><description><b>Year</b>: yearly</description></item>
+        /// <item><description><b>Month</b>: monthly</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -138,8 +138,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The subscription duration of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>TimeType</b> parameter is set to <b>Year</b>, valid values are <b>1 to 3</b>.</description></item>
-        /// <item><description>If the <b>TimeType</b> parameter is set to <b>Month</b>, valid values are <b>1 to 9</b>.</description></item>
+        /// <item><description>If the <b>TimeType</b> parameter is set to <b>Year</b>, valid values are <b>1</b> to <b>3</b>.</description></item>
+        /// <item><description>If the <b>TimeType</b> parameter is set to <b>Month</b>, valid values are <b>1</b> to <b>9</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

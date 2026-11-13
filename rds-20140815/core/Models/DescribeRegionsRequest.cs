@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies the language of the <b>LocalName</b> parameter in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: Chinese</description></item>
-        /// <item><description><b>en-US</b>: English</description></item>
+        /// <item><description><b>zh-CN</b>: Chinese.</description></item>
+        /// <item><description><b>en-US</b>: English.</description></item>
         /// </list>
         /// <para>Default value: <b>en-US</b>.</para>
         /// 

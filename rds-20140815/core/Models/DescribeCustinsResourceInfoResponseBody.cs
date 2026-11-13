@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of I/O requests per second.</para>
+            /// <para>The maximum number of I/O operations per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIopsAdjustDeadline { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of I/O requests per second.</para>
+            /// <para>The maximum number of I/O operations per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIopsIncreaseRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of I/O requests per second.</para>
+            /// <para>The maximum number of I/O operations per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxIopsIncreaseRatioValue { get; set; }
 
             /// <summary>
-            /// <para>The maximum adjustable ratio for the memory.</para>
+            /// <para>The maximum adjustable ratio for memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string OriginMaxConn { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of I/O requests per second.</para>
+            /// <para>The maximum number of I/O operations per second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

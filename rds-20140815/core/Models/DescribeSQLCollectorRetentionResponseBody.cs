@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>1825</b>: 5 years.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Log retention period of SQL Explorer logs for ApsaraDB RDS for PostgreSQL and ApsaraDB RDS for SQL Server is fixed at 30 days.</para>
+        /// <para>Log retention period of SQL Explorer logs for ApsaraDB RDS for PostgreSQL and ApsaraDB RDS for SQL Server instances is fixed at 30 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D5CEDCC2-CA75-43F7-9508-92F418CE6391</para>

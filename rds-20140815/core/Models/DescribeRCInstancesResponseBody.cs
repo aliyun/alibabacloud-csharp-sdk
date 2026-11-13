@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the instance is allowed to join an ACK cluster. If the parameter settings are <b>1</b>, the created instance can be added to an ACK cluster by calling the <b>AttachRCInstances</b> API operation to efficiently manage containerized applications. Valid values:</para>
+            /// <para>Specifies whether the instance can be added to an ACK cluster. If the parameter settings are <b>1</b>, the created instance can be added to an ACK cluster by calling the <b>AttachRCInstances</b> API operation to efficiently manage containerized applications. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: yes</description></item>
-            /// <item><description><b>0</b> (default): no</description></item>
+            /// <item><description><b>1</b>: yes.</description></item>
+            /// <item><description><b>0</b>: no. This is the default value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DeploymentSetId { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -128,9 +128,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EcsHostName { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires. The time follows the ISO 8601 standard and uses the UTC+0 time zone in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+            /// <para>The time when the instance expires. The time is displayed in UTC and follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
             /// <remarks>
-            /// <para>The expiration time displayed in the console is 8 hours ahead of this time.</para>
+            /// <para>The expiration time displayed in the console is 8 hours ahead of the UTC time.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created in GMT.</para>
+            /// <para>The time when the instance was created in GMT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-22 07:56:53.0</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string HostIp { get; set; }
 
             /// <summary>
-            /// <para>The hostname of the host.</para>
+            /// <para>The hostname.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-2zeaiz4g9u23f40m****</para>
@@ -181,10 +181,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PrePaid</b>: subscription</description></item>
-            /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+            /// <item><description><b>PrePaid</b>: subscription.</description></item>
+            /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string OSName { get; set; }
 
             /// <summary>
-            /// <para>The type of the operating system. The operating system can be Windows Server or Linux. Valid values:</para>
+            /// <para>The type of the operating system, which can be Windows Server or Linux. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>windows</description></item>
             /// <item><description>linux</description></item>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The bidding strategy for the pay-as-you-go instance. Valid values:</para>
+            /// <para>The bidding policy for the pay-as-you-go instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>NoSpot</b>: The instance is a regular pay-as-you-go instance.</description></item>
             /// <item><description><b>SpotAsPriceGo</b>: The system automatically places bids based on the current market price.</description></item>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The instance status. Valid values:</para>
+            /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Pending</b>: The instance is being created.</description></item>
             /// <item><description><b>Running</b>: The instance is running.</description></item>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The stop mode of the instance. KeepCharging indicates the standard mode. StopCharging indicates the economical mode. Not-applicable indicates that the instance does not support the economical mode.</para>
+            /// <para>The stop mode of the instance. KeepCharging indicates the standard stop mode. StopCharging indicates the economical stop mode. Not-applicable indicates that the instance does not support the economical stop mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeepCharging</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string StoppedMode { get; set; }
 
             /// <summary>
-            /// <para>The queried instance and tag details.</para>
+            /// <para>The details of the queried instances and tags.</para>
             /// </summary>
             [NameInMap("TagResources")]
             [Validation(Required=false)]
@@ -384,8 +384,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The resource type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>ALIYUN::RDS::INSTANCE</c>: ApsaraDB RDS instance</description></item>
-                /// <item><description><c>ALIYUN::RDS::CUSTOM</c>: RDS Custom instance</description></item>
+                /// <item><description><c>ALIYUN::RDS::INSTANCE</c>: ApsaraDB RDS instance.</description></item>
+                /// <item><description><c>ALIYUN::RDS::CUSTOM</c>: RDS Custom instance.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -418,7 +418,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The tag details.</para>
+            /// <para>The details of the tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -437,8 +437,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The resource type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>ALIYUN::RDS::INSTANCE</c>: ApsaraDB RDS instance</description></item>
-                /// <item><description><c>ALIYUN::RDS::CUSTOM</c>: RDS Custom instance</description></item>
+                /// <item><description><c>ALIYUN::RDS::INSTANCE</c>: ApsaraDB RDS instance.</description></item>
+                /// <item><description><c>ALIYUN::RDS::CUSTOM</c>: RDS Custom instance.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The ID of the virtual private cloud (VPC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-uf6f7l4fg90****</para>

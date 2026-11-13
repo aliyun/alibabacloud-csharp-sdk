@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceVpcRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the instance. The IP address must be within the CIDR block of the vSwitch specified by the <b>VSwitchId</b> parameter.</para>
+        /// <para>The private IP address of the instance. The IP address must fall within the CIDR block of the vSwitch specified by the <b>VSwitchId</b> parameter.</para>
         /// <remarks>
-        /// <para>You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.</para>
+        /// <para>You can call the DescribeVSwitches operation to query the CIDR block of the destination vSwitch.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The VPC ID.</para>
         /// <remarks>
-        /// <para>The VPC and the ApsaraDB RDS instance must be in the same region.</para>
+        /// <para>The VPC must reside in the same region as the ApsaraDB RDS instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <remarks>
-        /// <para>The vSwitch and the ApsaraDB RDS instance must be in the same zone.</para>
+        /// <para>The vSwitch must reside in the same zone as the ApsaraDB RDS instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

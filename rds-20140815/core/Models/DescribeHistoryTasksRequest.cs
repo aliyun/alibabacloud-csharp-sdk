@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHistoryTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than the specified value. Unit: seconds. Default value: 0, which indicates no limit.</para>
+        /// <para>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than this value. Unit: seconds. Default value: 0, which indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the time range to query the task start time. This parameter specifies that the start time of the task is later than the specified time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days ago, it is automatically converted to 30 days ago.</para>
+        /// <para>The start time of the task start time range. This parameter specifies that only tasks whose start time is later than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days ago, it is automatically converted to 30 days ago.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query result. Valid values: positive integers.
+        /// <para>The page number of the returned page. Valid values: positive integers.
         /// Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -111,9 +111,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Scheduled</b>: Pending execution.</description></item>
-        /// <item><description><b>Running</b>: Running.</description></item>
-        /// <item><description><b>Succeed</b>: Succeeded.</description></item>
-        /// <item><description><b>Failed</b>: Failed.</description></item>
+        /// <item><description><b>Running</b>: Executing.</description></item>
+        /// <item><description><b>Succeed</b>: Executed successfully.</description></item>
+        /// <item><description><b>Failed</b>: Execution failed.</description></item>
         /// <item><description><b>Cancelling</b>: Cancelling.</description></item>
         /// <item><description><b>Canceled</b>: Canceled.</description></item>
         /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than or equal to the specified value. Unit: seconds. Default value: 0, which indicates no limit.</para>
+        /// <para>The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration is not less than this value. Unit: seconds. Default value: 0, which indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the time range to query the task start time. This parameter specifies that the start time of the task is earlier than the specified time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time of the task start time range. This parameter specifies that only tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

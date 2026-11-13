@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The algorithms for the rule. Multiple algorithms are supported. Additional parameters can be added for masking algorithms. Format: {name: Algorithm 1}, {name: Algorithm 2, params: {encryption position, number of encrypted digits}}.</para>
+                /// <para>The rule algorithms. Multiple algorithms can be selected. Additional parameters can be added for masking algorithms. Format: {name: algorithm 1}, {name: algorithm 2, params: {encryption position, number of encrypted digits}}.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},

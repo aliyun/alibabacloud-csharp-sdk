@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeGadInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GAD cluster.</para>
+        /// <para>The ID of the ApsaraDB RDS global active database cluster.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the IDs of all GAD clusters under the current account are returned.</description></item>
+        /// <item><description>If you do not specify this parameter, the IDs of all clusters under the current account are returned.</description></item>
         /// <item><description>If you specify this parameter, the details of the specified cluster are returned.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can leave this parameter empty in the first call to obtain the IDs of all GAD clusters under the current account, and then specify a cluster ID to view the details of the cluster.</para>
+        /// <para>You can leave this parameter empty in the first call to obtain the IDs of all clusters under the current account, and then specify a cluster ID to view the details of the cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionLogBackupFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the destination region for cross-region backup. You can call the DescribeCrossRegionBackupDBInstance operation to query the region ID.</para>
+        /// <para>The ID of the destination region for cross-region backups. You can call the DescribeCrossRegionBackupDBInstance operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
+        /// <para>The page number. Valid values: integers greater than 0 and up to the maximum integer value.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

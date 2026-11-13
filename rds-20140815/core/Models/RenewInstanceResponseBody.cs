@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RenewInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20181574543****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

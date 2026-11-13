@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID. You can call the GetResourcePrice operation to obtain the promotion ID.</para>
+        /// <para>The promotion ID. You can obtain this ID by calling the GetResourcePrice operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query region IDs.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

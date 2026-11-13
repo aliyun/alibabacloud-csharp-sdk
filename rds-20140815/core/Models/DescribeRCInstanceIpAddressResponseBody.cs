@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeRCInstanceIpAddressResponseBodyRCInstanceList> RCInstanceList { get; set; }
         public class DescribeRCInstanceIpAddressResponseBodyRCInstanceList : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the RDS Custom instance.</para>
+            /// <para>The instance ID of the Custom instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rc-kti8hw44yy0x53******</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The DDoS mitigation status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>normal</b>: Normal.</description></item>
-            /// <item><description><b>abnormal</b>: Under attack.</description></item>
+            /// <item><description><b>normal</b>: Normal</description></item>
+            /// <item><description><b>abnormal</b>: Under attack</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<DescribeRCInstanceIpAddressResponseBodyRCInstanceListIpAddressConfig> IpAddressConfig { get; set; }
             public class DescribeRCInstanceIpAddressResponseBodyRCInstanceListIpAddressConfig : TeaModel {
                 /// <summary>
-                /// <para>The basic protection Mitigation Threshold for the assets that are assigned public IP addresses. Unit: Mbit/s.</para>
+                /// <para>The basic DDoS mitigation threshold of the assets that are assigned public IP addresses. Unit: Mbit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5200</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? BlackholeThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The traffic scrubbing threshold for the assets that are assigned public IP addresses. Unit: Mbit/s.</para>
+                /// <para>The traffic scrubbing threshold of the assets that are assigned public IP addresses. Unit: Mbit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? DefenseBpsThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The packet rate scrubbing threshold for the assets that are assigned public IP addresses. Unit: pps.</para>
+                /// <para>The packet count scrubbing threshold of the assets that are assigned public IP addresses. Unit: pps.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>70000</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? DefensePpsThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The burstable Mitigation Threshold for the assets that are assigned public IP addresses. Unit: Mbit/s.</para>
+                /// <para>The burstable DDoS mitigation threshold of the assets that are assigned public IP addresses. Unit: Mbit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12310</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string IpStatus { get; set; }
 
                 /// <summary>
-                /// <para>The IP version of the instance. Valid values:</para>
+                /// <para>The IP protocol version of the instance. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>v4</b></description></item>
                 /// <item><description><b>v6</b></description></item>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string IpVersion { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the public IP asset is attached to Anti-DDoS Origin. Valid values:</para>
+                /// <para>Indicates whether the asset that is assigned a public IP address is bound to Anti-DDoS Origin. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>true</b>: Yes.</description></item>
                 /// <item><description><b>false</b>: No.</description></item>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? IsBgppack { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether best-effort protection is enabled for the assets that are assigned public IP addresses in Anti-DDoS Origin. Valid values:</para>
+                /// <para>Indicates whether the asset that is assigned a public IP address is protected by the best-effort protection feature of Anti-DDoS Origin. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>0</b>: Best-effort protection is disabled.</description></item>
                 /// <item><description><b>1</b>: Best-effort protection is enabled.</description></item>

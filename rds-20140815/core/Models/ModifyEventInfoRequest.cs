@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>timePoint</b>: Executes the task at a specified point in time.</description></item>
         /// <item><description><b>immediate</b>: Executes the task immediately.</description></item>
         /// </list>
-        /// <para>The recoverTime parameter specifies the recovery time. The time must be in UTC+0 and in the yyyy-MM-ddTHH:mm:ssZ format. When the recoverMode parameter is set to timePoint, the recoverTime parameter is required.</para>
+        /// <para>The recoverTime parameter specifies the recovery time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. When the recoverMode parameter is set to timePoint, the recoverTime parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;recoverTime&quot;:&quot;2023-04-17T14:02:35Z&quot;,&quot;recoverMode&quot;:&quot;timePoint&quot;}</para>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>The action to process the event. Valid values:</para>
+        /// <para>The action to be performed on the event. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>archive</b>: Archives the event.</description></item>
         /// <item><description><b>undo</b>: Does not process the event.<remarks>

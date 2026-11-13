@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteRCInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a precheck before releasing the instances. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the instance release operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Performs a precheck and does not release the instances.</description></item>
-        /// <item><description><b>false</b> (default): Sends a normal request and directly releases the instances after the check passes.</description></item>
+        /// <item><description><b>true</b>: Performs a dry run and does not release the instances.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request and releases the instances after the check passes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to forcibly release running instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Yes</b>: Forcibly releases the instances.</description></item>
-        /// <item><description><b>No</b> (default): Does not forcibly release the instances.</description></item>
+        /// <item><description><b>true</b>: Forcibly releases the instances.</description></item>
+        /// <item><description><b>false</b> (default): Does not forcibly release the instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Yes</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]

@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The returned message of the request.</para>
+            /// <para>The returned message.</para>
             /// <remarks>
-            /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
+            /// <para>If the request is successful, this parameter returns <b>Successful</b>. If the request fails, this parameter returns exception information, such as an error code.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

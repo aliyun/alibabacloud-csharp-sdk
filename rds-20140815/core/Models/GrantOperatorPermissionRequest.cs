@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GrantOperatorPermissionRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to obtain instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the permissions. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
+        /// <para>The expiration time of the permissions. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the permissions to be granted. Valid values:</para>
+        /// <para>The type of permissions to grant. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Control</b>: configuration permissions. You can view and modify the instance configurations.</description></item>
+        /// <item><description><b>Control</b>: configuration permissions. You can view and modify instance configurations.</description></item>
         /// <item><description><b>Data</b>: database permissions. You can view table schemas, indexes, and SQL statements.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

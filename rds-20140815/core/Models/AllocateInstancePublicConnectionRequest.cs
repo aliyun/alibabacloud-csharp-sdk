@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AllocateInstancePublicConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The TDS port number of Babelfish for RDS PostgreSQL.</para>
+        /// <para>The TDS port number for Babelfish for ApsaraDB RDS for PostgreSQL.</para>
         /// <remarks>
-        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for RDS PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</para>
+        /// <para>This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Babelfish overview</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BabelfishPort { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the public endpoint. The complete public endpoint is in the format of <c>Prefix.DPI engine.rds.aliyuncs.com</c>. Example: <c>test1234.mysql.rds.aliyuncs.com</c>.</para>
+        /// <para>The prefix of the public endpoint. A complete public endpoint is in the following format: <c>Prefix.Engine name.rds.aliyuncs.com</c>. Example: <c>test1234.mysql.rds.aliyuncs.com</c>.</para>
         /// <remarks>
-        /// <para>The prefix must be 5 to 40 characters in length and cannot contain Chinese characters or invalid characters (\~!#%^&amp;*=+|{}\&quot;:&quot;,&lt;&gt;/?). The prefix can contain letters, digits, and hyphens (-).</para>
+        /// <para>The prefix must be 5 to 40 characters in length and cannot contain Chinese characters or invalid characters (\~!#%^&amp;*=+|{};:\&quot;&quot;,&lt;&gt;/?). Use letters, digits, and hyphens (-).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The ID of the instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in a dedicated cluster belongs.</para>
+        /// <para>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in the dedicated cluster belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rgc-bp1tkv8****</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The PgBouncer port.</para>
         /// <remarks>
-        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances.</para>
+        /// <para>This parameter applies only to ApsaraDB RDS for PostgreSQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <list type="bullet">
             /// <item><description><b>precheck</b>: precheck</description></item>
             /// <item><description><b>basebackup</b>: full backup</description></item>
-            /// <item><description><b>startup</b>: link setup</description></item>
+            /// <item><description><b>startup</b>: link building</description></item>
             /// <item><description><b>increment</b>: incremental synchronization</description></item>
-            /// <item><description><b>switch</b>: cloud cutover</description></item>
-            /// <item><description><b>success</b>: cloud migration completed</description></item>
+            /// <item><description><b>switch</b>: switchover</description></item>
+            /// <item><description><b>success</b>: migration completed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <item><description><b>catchup</b>: catching up</description></item>
             /// <item><description><b>streaming</b>: streaming</description></item>
             /// <item><description><b>disconnect</b>: disconnected</description></item>
-            /// <item><description><b>finish</b>: completed</description></item>
+            /// <item><description><b>finish</b>: finished</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public long? SourcePort { get; set; }
 
             /// <summary>
-            /// <para>The cutover time.</para>
+            /// <para>The switchover time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-01T06:40:51Z</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. The value is empty.</para>
+            /// <para>A reserved parameter. The query result is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>

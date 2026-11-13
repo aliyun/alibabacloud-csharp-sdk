@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySQLCollectorRetentionRequest : TeaModel {
         /// <summary>
-        /// <para>The log retention period of SQL Explorer. Valid values:</para>
+        /// <para>The SQL Explorer log retention period. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>30: 30 days.</description></item>
         /// <item><description>180: 180 days.</description></item>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

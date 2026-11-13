@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>This is an internal parameter and can be ignored.</para>
+        /// <para>An internal parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2.25.9</para>
+        /// <para>[&quot;2.25.9_20251028&quot;]</para>
         /// </summary>
         [NameInMap("DBProxyInstanceMinorVersions")]
         [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of enabled proxy instances.</para>
+        /// <para>The number of proxy instances that are enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -132,8 +132,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBProxyInstanceNum { get; set; }
 
         /// <summary>
-        /// <para>This parameter is supported only by ApsaraDB RDS for PostgreSQL. It indicates the actual specifications of the proxy instance.</para>
-        /// <para>Format: <c>CPU/Memory</c>.</para>
+        /// <para>This parameter is supported only by ApsaraDB RDS for PostgreSQL. The actual specifications of the proxy instance.</para>
+        /// <para>Format: <c>CPU cores/Memory</c>.</para>
         /// <para>Example: 4/8 indicates 4 CPU cores and 8 GB of memory.</para>
         /// 
         /// <b>Example:</b>
@@ -162,9 +162,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the proxy service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: shared proxy</description></item>
-        /// <item><description>2: dedicated proxy</description></item>
-        /// <item><description>3: general-purpose database proxy</description></item>
+        /// <item><description>1: Shared proxy.</description></item>
+        /// <item><description>2: Dedicated proxy.</description></item>
+        /// <item><description>3: General-purpose database proxy.</description></item>
         /// </list>
         /// <remarks>
         /// <para>ApsaraDB RDS for PostgreSQL does not support shared proxies.</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceType { get; set; }
 
         /// <summary>
-        /// <para>This is an internal parameter and can be ignored.</para>
+        /// <para>An internal parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18</para>
@@ -216,11 +216,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The status of connection persistence. Valid values:</para>
+        /// <para>The connection keep-alive status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: enabled</description></item>
-        /// <item><description><b>Disabled</b>: disabled</description></item>
-        /// <item><description><b>Unsupported</b>: The instance does not support connection persistence.</description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
+        /// <item><description><b>Unsupported</b>: The instance does not support connection keep-alive.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -233,8 +233,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the database proxy feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Shutdown: disabled</description></item>
-        /// <item><description>Startup: enabled</description></item>
+        /// <item><description>Shutdown: Disabled.</description></item>
+        /// <item><description>Startup: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>909A69EE-71C8-4417-A0B9-FF085407E1E3</para>

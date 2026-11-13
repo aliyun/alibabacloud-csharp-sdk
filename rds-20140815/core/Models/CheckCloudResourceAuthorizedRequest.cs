@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination region. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The destination region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>us-east-1</para>

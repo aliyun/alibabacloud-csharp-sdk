@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for creating the synchronization link of the disaster recovery instance. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run before creating the data synchronization link for the disaster recovery instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Executes a dry run without creating the instance. The system checks items such as request parameters, request format, business limits, and inventory.</description></item>
-        /// <item><description><b>false</b> (default): Sends a normal request and creates the instance after the check is passed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the instance. The system checks items such as request parameters, request format, service limits, and inventory.</description></item>
+        /// <item><description><b>false</b> (default): sends a regular request and creates the instance directly if the request passes the check.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReplicatorPassword { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the PostgreSQL source instance or the IP address of the SQL Server source instance.</para>
+        /// <para>The connection endpoint of the source PostgreSQL instance or the IP address of the source SQL Server instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostgreSQL：pgm-****.pg.rds.aliyuncs.com
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The category of the source instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>other</b>: Other. (<b>Not supported for SQL Server.</b>)</description></item>
-        /// <item><description><b>aliyunRDS</b>: ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>other</b>: other instances. (<b>Not supported by SQL Server</b>)</description></item>
+        /// <item><description><b>aliyunRDS</b>: ApsaraDB RDS instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of a successful dry run task.</para>
+        /// <para>The ID of the successful dry run task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>43994****</para>

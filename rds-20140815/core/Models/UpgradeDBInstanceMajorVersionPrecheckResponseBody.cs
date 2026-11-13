@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceMajorVersionPrecheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-bp1c808s731l****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99C1FEEE-FB44-5342-8EBA-DC1E1A1557A4</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMajorVersion { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>41698****</para>

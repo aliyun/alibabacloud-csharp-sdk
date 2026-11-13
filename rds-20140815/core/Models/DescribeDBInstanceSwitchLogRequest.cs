@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceSwitchLogRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5****</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: values greater than 0 and not exceeding the maximum value of Integer.
+        /// <para>The page number. Valid values: integers greater than 0 and up to the maximum value of the Integer data type.
         /// Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. Default value: 30.</para>
+        /// <para>The number of entries per page. Valid values: integers less than or equal to 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to obtain the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

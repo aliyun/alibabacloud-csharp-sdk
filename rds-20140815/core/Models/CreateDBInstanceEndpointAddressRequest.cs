@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint. You can call the DescribeDBInstanceEndpoints operation to query the ID.</para>
+        /// <para>The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceEndpointId { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</para>
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

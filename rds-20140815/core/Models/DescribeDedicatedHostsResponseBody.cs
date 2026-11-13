@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The host group ID.</para>
+        /// <para>The dedicated host group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dhg-7a9xxxxxxxx</para>

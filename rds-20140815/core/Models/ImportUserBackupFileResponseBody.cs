@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A140DD14-DCC9-4548-9C72-52A49A58A310</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the user backup is imported. If the import is successful, <b>true</b> is returned. Otherwise, an error message is returned.</para>
+        /// <para>Indicates whether the user backup was imported. If the import was successful, <b>true</b> is returned. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

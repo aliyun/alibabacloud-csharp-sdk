@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceDeletionProtectionRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable release protection for the ApsaraDB RDS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: Enables release protection.</description></item>
+        /// <item><description><b>false</b>: Disables release protection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

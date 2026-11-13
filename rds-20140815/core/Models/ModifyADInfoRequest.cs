@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyADInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the Active Directory (AD) domain.</para>
+        /// <para>The username of the AD domain account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_account</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ADAccountName { get; set; }
 
         /// <summary>
-        /// <para>The Domain Name System (DNS) name of the Active Directory (AD) domain.</para>
+        /// <para>The Domain Name System (DNS) name of the AD domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ADDNS { get; set; }
 
         /// <summary>
-        /// <para>The password of the Active Directory (AD) domain.</para>
+        /// <para>The password of the AD domain account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_password</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ADPassword { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the Active Directory (AD) domain.</para>
+        /// <para>The IP address of the AD domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.XX.XX</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ADServerIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the token on the client side. The token must be unique across different requests. It can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>

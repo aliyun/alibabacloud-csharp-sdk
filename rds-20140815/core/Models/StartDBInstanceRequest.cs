@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The effective period. This parameter is only supported for instances in a dedicated cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b>: The changes take effect immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: The changes take effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
-        /// <item><description><b>SpecificTime</b>: The changes take effect at a specified time.</description></item>
+        /// <item><description><b>Immediate</b>: The operation takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The operation takes effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>SpecificTime</b>: The operation takes effect at a specified time.</description></item>
         /// </list>
         /// <para>Default value: MaintainTime.</para>
         /// 
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specified time when the changes take effect. This parameter is only supported for instances in a dedicated cluster. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The specified time when the switchover is performed. This parameter is only supported for instances in a dedicated cluster. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>You must specify this parameter when <b>EffectiveTime</b> is set to <b>Specified</b>.</para>
         /// </remarks>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetDBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be specified.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dh-bp****</para>

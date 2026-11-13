@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>The database engine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql</para>

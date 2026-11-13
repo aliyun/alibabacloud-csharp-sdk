@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The number of days for the classic network address reservation. Valid values: <b>1</b> to <b>120</b>. Unit: days. Default value: <b>7</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required when the <b>RetainClassic</b> parameter is set to <b>True</b>.</para>
+        /// <para>If you set <b>RetainClassic</b> to <b>True</b>, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target network type. Set the value to <b>VPC</b>, which indicates a virtual private cloud (VPC).</para>
+        /// <para>The target network type. Set the value to <b>VPC</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Settings for the internal network IP address of the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <para>Settings for the internal network IP address of the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on <b>VPCId</b> and <b>VSwitchId</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.10.XX.XX</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The number of days for the classic network address reservation for read/write splitting. Valid values: <b>1</b> to <b>120</b>. Unit: days. Default value: <b>7</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when the instance has a read/write splitting address of the classic network type and the <b>RetainClassic</b> parameter is set to <b>True</b>.</para>
+        /// <para>This parameter takes effect only when the instance has a read/write splitting endpoint of the classic network type and <b>RetainClassic</b> is set to <b>True</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ReadWriteSplittingClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// <para>Settings for the internal network IP address of the read/write splitting endpoint for the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <para>Settings for the internal network IP address of the read/write splitting endpoint for the instance. The IP address must be within the address range of the specified vSwitch. By default, the system automatically allocates an IP address based on <b>VPCId</b> and <b>VSwitchId</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when the instance has a read/write splitting address of the classic network type.</para>
+        /// <para>This parameter takes effect only when the instance has a read/write splitting endpoint of the classic network type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Specifies whether to retain the classic network endpoint. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>True</b>: Retains the classic network endpoint.</description></item>
-        /// <item><description><b>False</b>: Does not retain the classic network endpoint. This is the default value.</description></item>
+        /// <item><description><b>False</b> (default): Does not retain the classic network endpoint.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. This parameter is required when the <b>VPCId</b> parameter is specified.</para>
+        /// <para>The vSwitch ID. If you specify <b>VPCId</b>, this parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6adz52c2p****</para>

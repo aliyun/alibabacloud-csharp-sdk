@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database engine type.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C8E88DED-533F-4B3C-9207-731FBF394CCA</para>

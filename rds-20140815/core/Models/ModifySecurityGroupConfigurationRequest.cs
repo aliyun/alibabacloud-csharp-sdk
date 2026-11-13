@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifySecurityGroupConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ECS security group ID. You can associate up to 10 security groups with an instance. Separate multiple security group IDs with commas (,). To disassociate all ECS security groups, pass an empty string. You can call DescribeSecurityGroups to query ECS security group IDs.</para>
+        /// <para>The ID of the ECS security group. You can associate up to 10 security groups. Separate multiple security group IDs with commas (,). To clear the ECS security groups, pass an empty string. You can call the DescribeSecurityGroups operation to query the ECS security group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

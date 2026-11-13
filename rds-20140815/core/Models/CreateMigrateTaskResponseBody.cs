@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test02</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the migration task.</para>
+        /// <para>The migration task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>564563****</para>

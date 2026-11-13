@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceReplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether native replication mode is enabled. Valid values:</para>
+        /// <para>Indicates whether the native replication mode is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ON</b>: Enabled.</description></item>
         /// <item><description><b>OFF</b>: Disabled.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ExternalReplication { get; set; }
 
         /// <summary>
-        /// <para>The executed global transaction identifier.</para>
+        /// <para>The executed global transaction identifier (GTID).</para>
         /// 
         /// <b>Example:</b>
         /// <para>bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string GtidExecuted { get; set; }
 
         /// <summary>
-        /// <para>The import status, which indicates whether full data is successfully imported.</para>
+        /// <para>The import status, which indicates whether the full data is successfully imported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COMPLETED</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ChannelName { get; set; }
 
             /// <summary>
-            /// <para>The executed GTID set.</para>
+            /// <para>The set of executed GTIDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string LastSqlError { get; set; }
 
             /// <summary>
-            /// <para>The address of the primary database.</para>
+            /// <para>The address of the primary instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.10.100</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MasterHost { get; set; }
 
             /// <summary>
-            /// <para>The account of the primary database.</para>
+            /// <para>The account of the primary instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>repl_user</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MasterUser { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the primary database.</para>
+            /// <para>The UUID of the primary instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bd2a34b9-8b8d-11ef-8917-00163e1298b9</para>

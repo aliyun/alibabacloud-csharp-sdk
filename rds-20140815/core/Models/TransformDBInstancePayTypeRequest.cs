@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: Disables auto-renewal.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to use vouchers to offset fees. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Uses vouchers.</description></item>
-        /// <item><description><b>false</b>: Does not use vouchers. This is the default value.</description></item>
+        /// <item><description><b>true</b>: uses vouchers.</description></item>
+        /// <item><description><b>false</b>: does not use vouchers. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The extended business parameters.</para>
+        /// <para>The business extension parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotence of the request and prevents duplicate requests. The client generates the value of this parameter. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The billing method to which the instance is changed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: Pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: Subscription.</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The subscription type of the subscription instance. Valid values:</para>
+        /// <para>Specifies the subscription type of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: Yearly subscription.</description></item>
-        /// <item><description><b>Month</b>: Monthly subscription.</description></item>
+        /// <item><description><b>Year</b>: yearly subscription</description></item>
+        /// <item><description><b>Month</b>: monthly subscription</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required if the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
@@ -133,10 +133,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Valid values:</para>
+        /// <para>Specifies the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the value of the UsedTime parameter ranges from <b>1</b> to <b>5</b>.</description></item>
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of the UsedTime parameter ranges from <b>1</b> to <b>11</b>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, set the value to <b>1</b> to <b>5</b>.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, set the value to <b>1</b> to <b>11</b>.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required if the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>

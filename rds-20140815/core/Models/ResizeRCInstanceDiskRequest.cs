@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>true</b> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
         /// <item><description><b>false</b>: Only an order is generated and no payment is deducted.<remarks>
-        /// <para>If your payment method has an insufficient balance, you can set AutoPay to false. An unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <para>If your payment method has an insufficient balance, you can set the AutoPay parameter to false. An unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a precheck on the operation. Valid values:</para>
+        /// <para>Specifies whether to perform a precheck on this operation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: A precheck is performed, and the operation is not executed. Check items include request parameters, request format, business limits, and inventory.</description></item>
-        /// <item><description><b>false</b> (default): A normal request is sent, and the operation is executed immediately after the precheck is passed.</description></item>
+        /// <item><description><b>false</b> (default): A normal request is sent, and the operation is executed after the request passes the precheck.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new size of the disk after expansion. Unit: GiB.</para>
+        /// <para>The size of the cloud disk after expansion. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The method used to expand the disk. Valid values:</para>
+        /// <para>The method used to expand the cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>offline</b> (default): Offline expansion. You must restart the instance for the expansion to take effect.</description></item>
-        /// <item><description><b>online</b>: Online expansion. The expansion takes effect without restarting the instance.</description></item>
+        /// <item><description><b>offline</b> (default): Offline expansion. After the expansion, you must restart the instance for the changes to take effect.</description></item>
+        /// <item><description><b>online</b>: Online expansion. The expansion is completed without the need to restart the instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

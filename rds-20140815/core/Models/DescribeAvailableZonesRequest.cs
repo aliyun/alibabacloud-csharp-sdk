@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description>Regular instances<list type="bullet">
         /// <item><description><b>Basic</b>: Basic Edition</description></item>
-        /// <item><description><b>HighAvailability</b>: high-availability (active) series</description></item>
+        /// <item><description><b>HighAvailability</b>: High Availability series</description></item>
         /// <item><description><b>cluster</b>: Cluster Edition for MySQL</description></item>
         /// <item><description><b>AlwaysOn</b>: Cluster Edition for SQL Server</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </description></item>
         /// <item><description>Serverless instances<list type="bullet">
         /// <item><description><b>serverless_basic</b>: Serverless Basic Edition (only applicable to MySQL and PostgreSQL)</description></item>
-        /// <item><description><b>serverless_standard</b>: MySQL Serverless high-availability (active) series</description></item>
-        /// <item><description><b>serverless_ha</b>: SQL Server Serverless high-availability (active) series</description></item>
+        /// <item><description><b>serverless_standard</b>: MySQL Serverless High Availability series</description></item>
+        /// <item><description><b>serverless_ha</b>: SQL Server Serverless High Availability series</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -36,18 +36,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The commodity code of the instance. The available resources are queried based on the specified commodity code. Valid values:</para>
+        /// <para>The commodity code of the instance, which is used to query available resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bards</b>: pay-as-you-go primary instances on the China site</description></item>
-        /// <item><description><b>rds</b>: subscription primary instances on the China site</description></item>
-        /// <item><description><b>rords</b>: pay-as-you-go read-only instances on the China site</description></item>
-        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instances on the China site</description></item>
-        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instances on the international site</description></item>
-        /// <item><description><b>rds_intl</b>: subscription primary instances on the international site</description></item>
-        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instances on the international site</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instances on the international site</description></item>
-        /// <item><description><b>rds_serverless_public_cn</b>: Serverless instances on the China site</description></item>
-        /// <item><description><b>rds_serverless_public_intl</b>: Serverless instances on the international site</description></item>
+        /// <item><description><b>bards</b>: pay-as-you-go primary instances (China site)</description></item>
+        /// <item><description><b>rds</b>: subscription primary instances (China site)</description></item>
+        /// <item><description><b>rords</b>: pay-as-you-go read-only instances (China site)</description></item>
+        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instances (China site)</description></item>
+        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instances (International site)</description></item>
+        /// <item><description><b>rds_intl</b>: subscription primary instances (International site)</description></item>
+        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instances (International site)</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instances (International site)</description></item>
+        /// <item><description><b>rds_serverless_public_cn</b>: Serverless instances (China site)</description></item>
+        /// <item><description><b>rds_serverless_public_intl</b>: Serverless instances (International site)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DispenseMode { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Valid values:</para>
+        /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>MySQL</b></description></item>
         /// <item><description><b>SQLServer</b></description></item>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description>PostgreSQL: <b>14.0</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>ApsaraDB RDS for MariaDB does not support Serverless instances.</para>
+        /// <para>You cannot create Serverless instances for MariaDB.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. The format of a multi-zone ID is different from that of a single-zone ID and contains <c>MAZ</c>, such as <c>cn-hangzhou-MAZ6(b,f)</c> and <c>cn-hangzhou-MAZ5(b,e,f)</c>. You can call the DescribeRegions operation to query the zone ID.</para>
+        /// <para>The zone ID. The format of a multi-zone ID is different from that of a single-zone ID and contains <c>MAZ</c>, such as <c>cn-hangzhou-MAZ6(b,f)</c> and <c>cn-hangzhou-MAZ5(b,e,f)</c>. You can call the DescribeRegions operation to query zone IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string GadInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS instance that corresponds to the unit node you want to remove. You can call DescribeGadInstances to query the instance ID.</para>
+        /// <para>The ID of the ApsaraDB RDS instance that serves as the unit node to be removed. You can call the DescribeGadInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MemberInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the central node in the cluster. You can call DescribeGadInstances to query the region ID.</para>
+        /// <para>The region ID of the central node in the cluster. You can call the DescribeGadInstances operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

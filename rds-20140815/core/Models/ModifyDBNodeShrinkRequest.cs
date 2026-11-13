@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBNodeShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically pay for the order.
+        /// <para>Specifies whether to enable automatic payment.
         /// Valid values:</para>
         /// <ol>
         /// <item><description><para><b>true</b>: Automatic payment is enabled. Make sure that your account balance is sufficient.</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new instance storage capacity. Unit: GB. For details, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
+        /// <para>The new instance storage capacity. Unit: GB. For details, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance specifications</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The storage type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_essd</b>: PL1 ESSD.</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a precheck before the node modifications. Valid values:</para>
+        /// <para>Specifies whether to perform a precheck before the node modification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: A precheck is performed, but the modifications are not applied. The precheck includes checks on request parameters, request format, service limits, and inventory.</description></item>
-        /// <item><description><b>false</b>: A normal request is sent, and the modifications are directly applied after the precheck is passed (default).</description></item>
+        /// <item><description><b>true</b>: A precheck is performed, but the modification is not executed. The check items include request parameters, request format, business limits, and inventory.</description></item>
+        /// <item><description><b>false</b>: A normal request is sent, and the modification is executed immediately after the request passes the precheck. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The effective period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b> (default): The modifications immediately take effect.</description></item>
+        /// <item><description><b>Immediate</b> (default): The modifications take effect immediately.</description></item>
         /// <item><description><b>MaintainTime</b>: The modifications take effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
         /// </list>
         /// 
@@ -122,13 +122,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to asynchronously apply the modifications. Valid values:</para>
+        /// <para>Specifies whether to asynchronously execute the modification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Only an order is generated, and the modifications are asynchronously applied (default).</description></item>
-        /// <item><description><b>false</b>: The modifications are synchronously applied after the precheck is passed.</description></item>
+        /// <item><description><b>true</b>: Only an order is generated, and the modification is executed asynchronously. This is the default value.</description></item>
+        /// <item><description><b>false</b>: The modification is executed synchronously after the request passes the check.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Default value: true. The modifications are asynchronously applied. If you set this parameter to false, the modifications are synchronously applied, and the API response time is relatively long.</para>
+        /// <para>Default value: true. The modification is executed asynchronously. If you set this parameter to false, the modification is executed synchronously, and the API response time is relatively long.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

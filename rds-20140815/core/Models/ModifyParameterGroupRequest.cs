@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><para><b>Collectivity</b>: adds or modifies parameters. This is the default value.</para>
         /// <remarks>
-        /// <para>The parameters specified in the <b>Parameters</b> parameter are added to the current parameter template, or the existing parameters in the current parameter template are modified. Other parameters in the current parameter template remain unaffected.</para>
+        /// <para>The parameters specified in the <b>Parameters</b> parameter are added to the current parameter template, or the existing parameters in the current parameter template are modified. Other parameters in the current parameter template are not affected.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description><para><b>Individual</b>: overwrites parameters.</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupDesc { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the ID of the parameter template.</para>
+        /// <para>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the parameter template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// <para>The JSON string of parameters and values. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</para>
+        /// <para>The JSON string of parameters and their values. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Configure the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Configure the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>If the <b>ModifyMode</b> parameter is set to <b>Individual</b>, the specified parameters overwrite the original parameters in the parameter template.</description></item>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>VPC</b> (default): VPC</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when the database engine is RDS MySQL.</para>
+        /// <para>This parameter is required when the database engine is ApsaraDB RDS for MySQL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> You do not need to configure this parameter.</para>
+        /// <para>Deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>

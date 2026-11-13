@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The custom account password policy for ApsaraDB RDS for SQL Server. Supported policies:</para>
         /// <list type="bullet">
-        /// <item><description>Set only the maximum password age. The password must be changed after this period: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: &lt;maximum_age&gt;}}</c></description></item>
-        /// <item><description>Set only the minimum password age. The password cannot be changed again within this period: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MinimumPasswordAge&quot;: &lt;minimum_age&gt;}}</c></description></item>
-        /// <item><description>Set both the maximum and minimum password ages: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: &lt;maximum_age&gt;, &quot;MinimumPasswordAge&quot;: &lt;minimum_age&gt;}}</c></description></item>
+        /// <item><description>Specify only the maximum password age, after which the password must be changed: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: maximum age}}</c></description></item>
+        /// <item><description>Specify only the minimum password age, during which the password cannot be changed: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: minimum age}}</c></description></item>
+        /// <item><description>Specify both the maximum and minimum password ages: <c>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: maximum age, &quot;MinimumPasswordAge&quot;: minimum age}}</c></description></item>
         /// </list>
         /// <remarks>
         /// <para>The minimum password age (valid values: 0 to 998) cannot be greater than the maximum password age (valid values: 0 to 999).</para>

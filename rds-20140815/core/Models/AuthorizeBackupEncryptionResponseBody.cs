@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? AuthorizationState { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create backup encrypt service linked role error.</para>

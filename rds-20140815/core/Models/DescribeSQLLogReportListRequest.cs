@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLLogReportListRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>The ID of the instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than <b>0</b> and cannot exceed the maximum value of the Integer data type.</para>
-        /// <para>Default value: <b>1</b></para>
+        /// <para>The page number. The value must be greater than <b>0</b> and cannot exceed the maximum value of the Integer type.</para>
+        /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
         /// </list>
-        /// <para>Default value: <b>30</b></para>
+        /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

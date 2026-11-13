@@ -77,13 +77,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The expiration status of the minor Milvus version. Valid values:</para>
+            /// <para>The expiration status of the minor engine version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>vaild</b>: The minor Milvus version is valid.</description></item>
-            /// <item><description><b>expired</b>: The minor Milvus version has expired.</description></item>
+            /// <item><description><b>vaild</b>: The minor engine version is valid.</description></item>
+            /// <item><description><b>expired</b>: The minor engine version has expired.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If the offline status is Offline, the minor Milvus version is offline and the expiration status is ignored. If the offline status is Online and the expiration status is expired, the minor Milvus version has reached its end of life. If the offline status is Online and the expiration status is vaild, the minor Milvus version is still within its lifecycle.</para>
+            /// <para>If the deprecation status is Offline, the minor engine version is deprecated and the expiration status is ignored. If the deprecation status is Online and the expiration status is expired, the minor engine version has reached its end of life. If the deprecation status is Online and the expiration status is vaild, the minor engine version is still within its lifecycle.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The instance edition that corresponds to the minor engine version. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Basic</b>: Basic Edition.</description></item>
-            /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
+            /// <item><description><b>HighAvailability</b>: high-availability series.</description></item>
             /// <item><description><b>Finance</b>: RDS Enterprise Edition.</description></item>
             /// </list>
             /// 
@@ -141,8 +141,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The release type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>LTS</b>: Long-term support (LTS) version.</description></item>
-            /// <item><description><b>BETA</b>: Beta version.</description></item>
+            /// <item><description><b>LTS</b>: long-term support version</description></item>
+            /// <item><description><b>BETA</b>: beta version</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,13 +153,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ReleaseType { get; set; }
 
             /// <summary>
-            /// <para>The offline status of the minor Milvus version. Valid values:</para>
+            /// <para>The deprecation status of the minor engine version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Offline</b>: The minor Milvus version is offline.</description></item>
-            /// <item><description><b>Online</b>: The minor Milvus version is online.</description></item>
+            /// <item><description><b>Offline</b>: The minor engine version is deprecated.</description></item>
+            /// <item><description><b>Online</b>: The minor engine version is active.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If the offline status is Offline, the minor Milvus version is offline and the expiration status is ignored. If the offline status is Online and the expiration status is expired, the minor Milvus version has reached its end of life. If the offline status is Online and the expiration status is vaild, the minor Milvus version is still within its lifecycle.</para>
+            /// <para>If the deprecation status is Offline, the minor engine version is deprecated and the expiration status is ignored. If the deprecation status is Online and the expiration status is expired, the minor engine version has reached its end of life. If the deprecation status is Online and the expiration status is vaild, the minor engine version is still within its lifecycle.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -172,8 +172,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>Instance tag that corresponds to the minor engine version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pgsql_docker_image</b>: Instance tag for general instances.</description></item>
-            /// <item><description><b>pgsql_babelfish_image</b>: Instance tag for Babelfish-enabled instances.</description></item>
+            /// <item><description><b>pgsql_docker_image</b>: instance tag for general instances</description></item>
+            /// <item><description><b>pgsql_babelfish_image</b>: instance tag for Babelfish-enabled instances</description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is returned only for <b>PostgreSQL</b>.</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumbers { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EFB6083A-7699-489B-8278-C0CB4793A96E</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

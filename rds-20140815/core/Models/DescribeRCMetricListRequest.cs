@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCMetricListRequest : TeaModel {
         /// <summary>
-        /// <para>The dimensions used to query the monitoring data of specified resources in batches for Custom for SQL Server. Format: a collection of <c>key:value</c> pairs.</para>
+        /// <para>The dimensions used to batch query the monitoring data of specified resources for Custom for SQL Server. Format: a collection of <c>key:value</c> pairs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;instanceId&quot;:&quot;rc-l9hv3rv74ql7oa******&quot;},{&quot;instanceId&quot;:&quot;rc-b532l1uj8n6sex******&quot;}]</para>
@@ -50,7 +50,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return on each page for paging in a paged query. Default value: 1000.</para>
+        /// <para>The number of records to return on each page for paging in a paged query.</para>
+        /// <para>Default value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -60,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Length { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitored metric</a>.</para>
+        /// <para>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">metrics to monitor</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

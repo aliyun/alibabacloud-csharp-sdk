@@ -80,12 +80,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The upper limit for automatic storage expansion. The value must be greater than or equal to the current total storage capacity of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>Upper limit for ESSDs: 32,000 GB</description></item>
-        /// <item><description>Upper limit for standard SSDs: 6,000 GB<remarks>
+        /// <item><description>Upper limit for ESSDs: 32,000 GB.</description></item>
+        /// <item><description>Upper limit for standard SSDs: 6,000 GB.</description></item>
+        /// </list>
+        /// <remarks>
         /// <para>This parameter is required when <b>StorageAutoScale</b> is set to <b>Enable</b>.</para>
         /// </remarks>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

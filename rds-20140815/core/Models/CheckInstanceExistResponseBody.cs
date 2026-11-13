@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckInstanceExistResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the specified instance exists. Valid values:</para>
+        /// <para>Indicates whether the target instance exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Target instance exists.</description></item>
-        /// <item><description><b>false</b>: Target instance does not exist.</description></item>
+        /// <item><description><b>true</b>: The instance exists.</description></item>
+        /// <item><description><b>false</b>: The instance does not exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

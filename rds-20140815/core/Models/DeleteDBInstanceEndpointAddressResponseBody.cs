@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DeleteDBInstanceEndpointAddressResponseBodyData Data { get; set; }
         public class DeleteDBInstanceEndpointAddressResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the endpoint.</para>
+            /// <para>The endpoint ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-****</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F2911788-25E8-42E5-A3A3-1B38D263F01E</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesByExpireTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The number of remaining available days of the instance. Valid values: <b>0</b> to <b>180</b>.</para>
+        /// <para>The number of remaining available days for the instance. Valid values: <b>0</b> to <b>180</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The expiration status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: The instance has expired.</description></item>
-        /// <item><description><b>False</b>: The instance has not expired.</description></item>
+        /// <item><description><b>True</b>: Expired.</description></item>
+        /// <item><description><b>False</b>: Not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: an integer greater than <b>0</b> and less than or equal to the maximum value of the Integer data type.</para>
+        /// <para>The page number. Valid values: any integer greater than <b>0</b> and up to the maximum value of the Integer type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags added to the instances to be queried, including TagKey and TagValue. You can specify up to 5 tags in a single request. Format: <c>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</c>.</para>
+        /// <para>The tags of the instances to be queried, including TagKey and TagValue. You can specify up to 5 tags in a single request. Format: <c>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>

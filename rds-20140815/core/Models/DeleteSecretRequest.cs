@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteSecretRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz*****</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database engine type.</para>
         /// <remarks>
-        /// <para>This parameter currently supports only the value MySQL.</para>
+        /// <para>Currently, only MySQL is supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The user credential of the Data API account that has been created. You can call the createSecret operation to query the value of this parameter.</para>
+        /// <para>The ARN of the user credential for the created Data API account. You can call the CreateSecret operation to obtain the value of this parameter.</para>
         /// <remarks>
-        /// <para>You must specify either <b>SecretName</b> or this parameter.</para>
+        /// <para>You must specify either this parameter or <b>SecretName</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The name of the user credential.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You must specify either <b>SecretArn</b> or this parameter.</description></item>
+        /// <item><description>You must specify either this parameter or <b>SecretArn</b>.</description></item>
         /// <item><description>This parameter must be specified together with <b>DbInstanceId</b>.</description></item>
         /// </list>
         /// </remarks>

@@ -11,12 +11,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ModifyTaskInfoRequest : TeaModel {
         /// <summary>
         /// <para>The parameters related to the action. You can add extensions based on your business requirements. When TaskAction is set to modifySwitchTime, set ActionParams to <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c>.</para>
-        /// <para>recoverMode specifies the task recovery pattern. Valid values:</para>
+        /// <para>recoverMode specifies the node recovery model pattern. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>timePoint</b>: executes the task at a specified point in time.</description></item>
-        /// <item><description><b>immediate</b>: executes the task immediately.</description></item>
+        /// <item><description><b>timePoint</b>: executes the node at a specified point in time.</description></item>
+        /// <item><description><b>immediate</b>: executes the node immediately.</description></item>
         /// </list>
-        /// <para>recoverTime specifies the recovery time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. When recoverMode is set to timePoint, recoverTime is required.</para>
+        /// <para>recoverTime specifies the recovery time in UTC+0. The format is yyyy-MM-ddTHH:mm:ssZ. This parameter is required when recoverMode is set to timePoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;recoverTime&quot;:&quot;2023-04-12T18:30:00Z&quot;,&quot;recoverMode&quot;:&quot;timePoint&quot;}</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string StepName { get; set; }
 
         /// <summary>
-        /// <para>The task action. Set the value to modifySwitchTime, which indicates modifying the switchover time or recovery time.</para>
+        /// <para>The task action. Set the value to modifySwitchTime to modify the switchover time or recovery time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>modifySwitchTime</para>

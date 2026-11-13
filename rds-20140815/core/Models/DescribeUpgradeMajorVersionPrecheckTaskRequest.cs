@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the check report for the major version upgrade.</para>
+        /// <para>The page number of the pre-check report for the major engine version upgrade.</para>
         /// <para>Valid values: an integer greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for the check report before a major engine version upgrade. Valid values:</para>
+        /// <para>The number of entries to return on each page for the pre-check report of the major engine version upgrade.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>30 (default)</description></item>
         /// <item><description>50</description></item>
@@ -63,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The target major engine version of target instance. The value must be later than the current major engine version of target instance.</para>
+        /// <para>The major engine version of the target instance. The value must be later than the major engine version of the current instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12.0</para>
@@ -73,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMajorVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the pre-upgrade check task. You can obtain the task ID from the <b>TaskId</b> response parameter after you call the UpgradeDBInstanceMajorVersionPrecheck operation to perform a pre-upgrade check.</para>
+        /// <para>The ID of the pre-check task for the major engine version upgrade. After you call the UpgradeDBInstanceMajorVersionPrecheck operation to perform a pre-check, you can obtain the task ID from the <b>TaskId</b> response parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>416980000</para>

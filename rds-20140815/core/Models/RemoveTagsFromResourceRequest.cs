@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<RemoveTagsFromResourceRequestTag> Tag { get; set; }
         public class RemoveTagsFromResourceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The TagKey of the first tag to unbind. The tags to unbind include TagKey and TagValue. You can specify up to 5 pairs at a time. TagKey cannot be empty. TagValue can be empty.</para>
+            /// <para>The key of the first tag to be removed. You can specify up to 5 tag key-value pairs at a time. TagKey cannot be empty, but TagValue can be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The TagValue of the first tag to unbind. The tags to unbind include TagKey and TagValue. You can specify up to 5 pairs at a time. TagKey cannot be empty. TagValue can be empty.</para>
+            /// <para>The value of the first tag to be removed. You can specify up to 5 tag key-value pairs at a time. TagKey cannot be empty, but TagValue can be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the ListResourceGroups operation to obtain the resource group ID.</para>
+        /// <para>The ID of the resource group. You can call the ListResourceGroups operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -94,10 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to unbind, including TagKey and TagValue. Format: {&quot;key1&quot;:&quot;value1&quot;}.</para>
-        /// <remarks>
-        /// <para>TagKey cannot be empty. TagValue can be empty.</para>
-        /// </remarks>
+        /// <para>The tags to be removed, including TagKey and TagValue. Format: {&quot;key1&quot;:&quot;value1&quot;}. &gt;TagKey cannot be empty, but TagValue can be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
@@ -107,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The proxy mode ID.</para>
+        /// <para>The ID of the proxy mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>

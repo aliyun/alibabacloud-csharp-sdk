@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBinlogFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The end time of the query. The end time must be later than the start time.</para>
-        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of Integer.</para>
+        /// <para>The page number. Valid values: any positive integer up to the maximum value of the Integer type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The start time of the query.</para>
-        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

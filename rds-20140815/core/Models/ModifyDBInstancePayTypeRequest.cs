@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Set the value to <b>Prepaid</b>, which specifies the subscription billing method.</para>
+        /// <para>The billing method. Set the value to <b>Prepaid</b>, which indicates the subscription billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <para>The subscription period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><b>Year</b>: yearly subscription</description></item>
+        /// <item><description><b>Month</b>: monthly subscription</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration:</para>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Period</b> is set to <b>Year</b>, valid values are 1 to 5.</description></item>
-        /// <item><description>If <b>Period</b> is set to <b>Month</b>, valid values are 1 to 11.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, valid values are 1 to 5.</description></item>
+        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, valid values are 1 to 11.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

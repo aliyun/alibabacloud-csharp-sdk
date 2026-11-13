@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The endpoint ID of the instance.</para>
+            /// <para>The ID of the endpoint for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C8E88DED-533F-4B3C-9207-731FBF394CCA</para>

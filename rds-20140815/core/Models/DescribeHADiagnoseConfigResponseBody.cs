@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The availability detection method used by Alibaba Cloud for the ApsaraDB RDS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LONG</b>: persistent connection.</description></item>
-        /// <item><description><b>SHORT</b>: short-lived connection.</description></item>
+        /// <item><description><b>LONG</b>: persistent connection</description></item>
+        /// <item><description><b>SHORT</b>: short-lived connection</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

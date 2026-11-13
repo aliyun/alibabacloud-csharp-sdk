@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The paginated whitelist template information.</para>
+            /// <para>The information about the whitelist templates returned in pages.</para>
             /// </summary>
             [NameInMap("Templates")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The request is successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

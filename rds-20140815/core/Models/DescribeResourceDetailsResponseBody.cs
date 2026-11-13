@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupSize { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity.</para>
+        /// <para>The disk capacity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceStorageType { get; set; }
 
         /// <summary>
-        /// <para>The whitelist group specifications.</para>
+        /// <para>The whitelist group specifications of the ApsaraDB RDS instance.</para>
         /// </summary>
         [NameInMap("RdsEcsSecurityGroupRel")]
         [Validation(Required=false)]
         public List<DescribeResourceDetailsResponseBodyRdsEcsSecurityGroupRel> RdsEcsSecurityGroupRel { get; set; }
         public class DescribeResourceDetailsResponseBodyRdsEcsSecurityGroupRel : TeaModel {
             /// <summary>
-            /// <para>The security group name.</para>
+            /// <para>The name of the security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_switch</para>
@@ -129,12 +129,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple entries with commas (,). Duplicate entries are not allowed. You can add up to 1,000 entries. The following two formats are supported:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple entries with commas (,). Duplicate entries are not allowed. You can add up to 1,000 entries. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>IP address format, such as 10.10.XX.XX.</description></item>
-        /// <item><description>CIDR format, such as 10.10.XX.XX/24. In this format, 24 indicates the length of the prefix in the IP address, and the value ranges from 1 to 32.</description></item>
+        /// <item><description>IP addresses, such as 10.10.XX.XX.</description></item>
+        /// <item><description>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates the length of the prefix in the Classless Inter-Domain Routing (CIDR) block. The prefix length ranges from 1 to 32.</description></item>
         /// </list>
-        /// <para>If this parameter is not specified, the default whitelist of the original instance is used.</para>
+        /// <para>If you do not specify this parameter, the default whitelist of the original instance is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.1.14,172.16.1.13,172.16.1.44,172.16.1.43,172.16.1.74,172.16.1.73</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchOverMajorVersionUpgradeRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Specifies the client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies the operation type for the switchover. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>switch: Switchover.</description></item>
-        /// <item><description>cancel: Cancel.</description></item>
-        /// <item><description>interrupt: Interrupt.</description></item>
+        /// <item><description>switch: switches the traffic.</description></item>
+        /// <item><description>cancel: cancels the switchover.</description></item>
+        /// <item><description>interrupt: interrupts the switchover.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

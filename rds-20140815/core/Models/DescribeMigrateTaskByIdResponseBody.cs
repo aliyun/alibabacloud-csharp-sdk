@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMigrateTaskByIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of the OSS backup migration task. Valid values:</para>
+        /// <para>The type of the backup-to-cloud task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FULL</b>: restores data by using a full log file.</description></item>
-        /// <item><description><b>UPDF</b>: restores incremental data by using differential or log log files.</description></item>
+        /// <item><description><b>FULL</b>: restores data by using a full backup file.</description></item>
+        /// <item><description><b>UPDF</b>: restores incremental data by using an incremental backup file or a log file.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The time when the OSS backup migration task was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
+        /// <para>The time when the backup-to-cloud task was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-05-30T12:11:04Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The description of the OSS backup migration task.</para>
+        /// <para>The description of the backup-to-cloud task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success to DBCC checkdb asynchronously</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the OSS backup migration task ended. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
+        /// <para>The time when the backup-to-cloud task ended. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-30T15:15:05Z</para>
@@ -76,8 +76,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether the import overwrites the existing database. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>False</b>: no</description></item>
-        /// <item><description><b>True</b>: yes</description></item>
+        /// <item><description><b>False</b>: no.</description></item>
+        /// <item><description><b>True</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string IsDBReplaced { get; set; }
 
         /// <summary>
-        /// <para>The ID of the OSS backup migration task.</para>
+        /// <para>The ID of the OSS backup-to-cloud task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>235943</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the OSS backup migration task. Valid values:</para>
+        /// <para>The status of the backup-to-cloud task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>NoStart</b>: The task is not started.</description></item>
         /// <item><description><b>Running</b>: The task is running.</description></item>

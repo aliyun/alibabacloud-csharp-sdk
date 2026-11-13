@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The primary/secondary switchover setting. Valid values:</para>
+        /// <para>The primary/secondary switchover settings. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Auto</b>: The system automatically switches over between the primary and secondary instances upon a fault.</description></item>
-        /// <item><description><b>Manual</b>: Temporarily disables automatic switchover.</description></item>
+        /// <item><description><b>Auto</b>: automatically performs a primary/secondary switchover when a fault occurs.</description></item>
+        /// <item><description><b>Manual</b>: temporarily disables automatic switchover.</description></item>
         /// </list>
         /// <para>Default value: <b>Auto</b>.</para>
         /// <remarks>
-        /// <para>If you set this parameter to <b>Manual</b>, you must also specify the <b>ManualHATime</b> parameter.</para>
+        /// <para>If you set this parameter to <b>Manual</b>, you must specify the <b>ManualHATime</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HAConfig { get; set; }
 
         /// <summary>
-        /// <para>The deadline for temporarily disabling automatic switchover. You can set this parameter to a point in time up to 23:59:59 seven days later. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The end time of the temporary disabling period. The latest time can be set to 23:59:59 seven days later. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when <b>HAConfig</b> is set to <b>Manual</b>.</para>
+        /// <para>This parameter is valid only when the <b>HAConfig</b> parameter is set to <b>Manual</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

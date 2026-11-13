@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The High-availability Mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RPO: Data consistency is preferred. The instance ensures data reliability to the greatest extent, which minimizes the amount of data loss. Use RPO mode if you have high requirements for data consistency.</description></item>
-        /// <item><description>RTO: Instance availability is preferred. The instance recovers services as soon as possible, which maximizes the active time. Use RTO mode if you have high requirements for database uptime.</description></item>
+        /// <item><description>RPO: Recovery Point Objective. Data consistency is prioritized. The instance ensures data reliability to minimize data loss. This mode is suitable for users who have high requirements for data consistency.</description></item>
+        /// <item><description>RTO: Recovery Time Objective. Instance availability is prioritized. The instance restores services as quickly as possible to maximize available time. This mode is suitable for users who have high requirements for database online time.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The data replication method. Valid values:</para>
+        /// <para>The data replication mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Semi-sync: semi-synchronous replication.</description></item>
         /// <item><description>Sync: synchronous replication.</description></item>

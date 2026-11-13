@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RestoreTableRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID. You can call the DescribeBackups operation to query the backup set list.</para>
+        /// <para>The ID of the backup set. You can call the DescribeBackups operation to query backup sets.</para>
         /// <remarks>
-        /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
+        /// <para>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable fast restoration for individual databases and tables. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: enables fast restoration.</description></item>
+        /// <item><description><b>false</b>: disables fast restoration.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about fast restoration for individual databases and tables, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore individual databases and tables</a>.</para>
+        /// <para>For more information about fast restoration for individual databases and tables, see <a href="https://help.aliyun.com/document_detail/103175.html">Restore databases and tables</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Any point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The point in time to which you want to restore data. The point in time must be within the backup retention period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</description></item>
+        /// <item><description>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Log backup</a> must be enabled for the instance.</description></item>
         /// </list>
         /// </remarks>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>The databases and tables to restore.</para>
+        /// <para>The databases and tables to be restored.</para>
         /// <remarks>
-        /// <para>ApsaraDB RDS for PostgreSQL supports only the restoration of specific databases, not specific tables.</para>
+        /// <para>ApsaraDB RDS for PostgreSQL supports restoring only specific databases and does not support restoring specific tables.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>ApsaraDB RDS for MySQL format: <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 1 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 1 name&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 1 name in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 1 name&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 2 name in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 2 name&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 2 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 2 name&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 3 name in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 3 name&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 4 name in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 4 name&gt;&quot;}]}]</c></para>
+        /// <item><description><para>Format for ApsaraDB RDS for MySQL: <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of Database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of Database 1&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of Table 1 in Database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of Table 1&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of Table 2 in Database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of Table 2&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of Database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of Database 2&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of Table 3 in Database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of Table 3&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of Table 4 in Database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of Table 4&gt;&quot;}]}]</c></para>
         /// </description></item>
-        /// <item><description><para>ApsaraDB RDS for PostgreSQL format: <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 1 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 1 name&gt;&quot;}]</c></para>
+        /// <item><description><para>Format for ApsaraDB RDS for PostgreSQL: <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of Database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of Database 1&gt;&quot;}]</c></para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

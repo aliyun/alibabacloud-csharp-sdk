@@ -9,17 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeModifyPGHbaConfigLogRequest : TeaModel {
+        /// <summary>
+        /// <para>The reserved parameter. You do not need to configure this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pgm-bp1lymyn1v3i****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-11-25T06:00:40Z</para>
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
@@ -32,6 +48,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -44,6 +66,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-11-25T05:00:40Z</para>
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

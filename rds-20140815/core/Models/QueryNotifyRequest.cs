@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: integers greater than <b>0</b> and less than or equal to the maximum value of the Integer type.</para>
+        /// <para>The page number. Valid values: integers greater than <b>0</b> and less than or equal to the maximum value of the Integer data type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether the query results include confirmed notifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Includes confirmed notifications.</description></item>
-        /// <item><description><b>false</b>: Does not include confirmed notifications.<remarks>
-        /// <para>Confirmed notifications are those that have been marked as confirmed by calling the ConfirmNotify operation.</para>
+        /// <item><description><b>true</b>: The query results include confirmed notifications.</description></item>
+        /// <item><description><b>false</b>: The query results do not include confirmed notifications.<remarks>
+        /// <para>Confirmed notifications are notifications that have been marked as confirmed by calling the ConfirmNotify operation.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

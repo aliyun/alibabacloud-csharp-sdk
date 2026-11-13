@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Archived</b>: archived.</description></item>
-        /// <item><description><b>UnArchived</b>: unarchived.</description></item>
-        /// <item><description><b>All</b>: all.</description></item>
+        /// <item><description><b>Archived</b>: The event is archived.</description></item>
+        /// <item><description><b>UnArchived</b>: The event is not archived.</description></item>
+        /// <item><description><b>All</b>: All events.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveStatus { get; set; }
 
         /// <summary>
-        /// <para>The start time of the time range for querying task start times. Tasks that start after this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days before the current time. If you specify a time more than 30 days before the current time, the system automatically changes it to 30 days before the current time.</para>
+        /// <para>The start time of the time range to query task start times. Tasks that start after this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days before the current time, it is automatically changed to 30 days ago.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-02T11:31:03Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The end time of the time range for querying task start times. Tasks that start before this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time of the time range to query task start times. Tasks that start before this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-02T11:31:03Z</para>

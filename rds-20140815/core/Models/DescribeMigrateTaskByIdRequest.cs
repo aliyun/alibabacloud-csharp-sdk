@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeMigrateTaskByIdRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to obtain instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the OSS backup migration task. You can call the DescribeMigrateTasks operation to query the ID.</para>
+        /// <para>The ID of the backup-to-cloud task. You can call the DescribeMigrateTasks operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

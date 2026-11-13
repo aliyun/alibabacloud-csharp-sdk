@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <remarks>
-        /// <para>If this parameter is specified, all tags of the instance are queried, and other filter conditions become invalid.</para>
+        /// <para>If you specify this parameter, all tags of the instance are queried, and other filter conditions become invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. This parameter has a fixed value.</para>
+        /// <para>The resource type. This is a fixed value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>

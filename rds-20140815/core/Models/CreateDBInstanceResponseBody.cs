@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. If the <b>Amount</b> parameter is set to a value greater than <b>1</b>, the number of instance IDs returned corresponds to the value, separated by commas.</para>
+        /// <para>The ID of the instance. If the <b>Amount</b> parameter is set to a value greater than <b>1</b>, the IDs of the corresponding number of instances are returned and separated by commas.</para>
         /// <para>For example, if the <b>Amount</b> parameter is set to <b>3</b>, three instance IDs are returned. Example:
-        /// <c>rm-uf6wjk5*****1, rm-uf6wjk5*****2, rm-uf6wjk5*****3</c></para>
+        /// <c>rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5****</para>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current request requires a precheck before creating the instance.</para>
+        /// <para>Indicates that the current request requires a precheck before creating the instance.</para>
         /// <list type="bullet">
-        /// <item><description>The return value is fixed to <b>true</b>.</description></item>
-        /// <item><description>If no precheck is performed, this parameter is not returned.</description></item>
+        /// <item><description>The value is always <b>true</b>.</description></item>
+        /// <item><description>This parameter is not returned if the precheck is not performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the precheck for creating the instance is successful. Valid values:</para>
+        /// <para>Indicates whether the precheck for creating the instance passed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Passed.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If no precheck is performed, this parameter is not returned.</description></item>
+        /// <item><description>This parameter is not returned if the precheck is not performed.</description></item>
         /// <item><description>If the precheck fails, the corresponding error is returned.</description></item>
         /// </list>
         /// </remarks>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1007893702****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The port number corresponding to the internal endpoint of the instance.</para>
+        /// <para>The port number of the internal endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</para>
@@ -109,13 +109,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance is successfully tagged. Valid values:</para>
+        /// <para>Indicates whether the instance was successfully tagged. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If no tag is bound to the instance, this parameter is not returned.</para>
+        /// <para>This parameter is not returned if no tags are bound to the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,10 +126,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? TagResult { get; set; }
 
         /// <summary>
-        /// <para>The task ID of the batch creation task.</para>
+        /// <para>The ID of the batch creation task.</para>
         /// <list type="bullet">
         /// <item><description>This parameter is returned only when the <b>Amount</b> parameter is greater than 1.</description></item>
-        /// <item><description>Currently, you cannot view the task by using the value of <b>TaskId</b>.</description></item>
+        /// <item><description>Currently, querying tasks by <b>TaskId</b> is not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

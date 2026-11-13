@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeImportTaskValidationRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain this ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

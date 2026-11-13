@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number. Valid values: an integer greater than <b>0</b> and less than or equal to the maximum value of the Integer data type.</para>
+        /// <para>The page number. Valid values: any integer greater than <b>0</b> and up to the maximum value of the Integer type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>

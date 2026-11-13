@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeResourceUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The storage space occupied by archive backups. Unit: bytes.</para>
+        /// <para>The storage space occupied by archived backups. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ArchiveBackupSize { get; set; }
 
         /// <summary>
-        /// <para>The total storage space occupied by data backups, excluding archive backups. Unit: bytes.</para>
+        /// <para>The total storage space occupied by data backups, excluding archived backups. Unit: bytes.</para>
         /// <remarks>
         /// <para>For <b>SQL Server</b> instances, this parameter indicates the total size of physical backups and snapshot backups.</para>
         /// </remarks>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? BackupDataSize { get; set; }
 
         /// <summary>
-        /// <para>The storage space occupied by snapshot backups of <b>SQL Server</b> instances. Unit: bytes. A value of 0 indicates that no data is available.</para>
+        /// <para>The storage space occupied by snapshot backups for <b>SQL Server</b> instances. Unit: bytes. A value of 0 indicates that no data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupEcsSnapshotSize { get; set; }
 
         /// <summary>
-        /// <para>The total storage space occupied by log backups, excluding archive backups. Unit: bytes.</para>
+        /// <para>The total storage space occupied by log backups, excluding archived backups. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45145563</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DiskUsed { get; set; }
 
         /// <summary>
-        /// <para>The database engine.</para>
+        /// <para>The database engine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? LogSize { get; set; }
 
         /// <summary>
-        /// <para>The storage space occupied by backups that you are billed for after the free quota is deducted. Unit: bytes.</para>
+        /// <para>The storage space occupied by backups that are billed after the free quota is deducted. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

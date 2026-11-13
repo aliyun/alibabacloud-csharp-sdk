@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>200</b>: Normal.</description></item>
-        /// <item><description><b>400</b>: Client error.</description></item>
+        /// <item><description><b>400</b>: Client fault.</description></item>
         /// <item><description><b>401</b>: Failed to authenticate.</description></item>
         /// <item><description><b>404</b>: Requested page not found.</description></item>
-        /// <item><description><b>500</b>: Server error.</description></item>
+        /// <item><description><b>500</b>: Server fault.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeAllWhitelistTemplateResponseBodyData Data { get; set; }
         public class DescribeAllWhitelistTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>Indicates whether the queried data has a next page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes.</description></item>
-            /// <item><description><b>false</b>: No.</description></item>
+            /// <item><description><b>true</b>: yes.</description></item>
+            /// <item><description><b>false</b>: no.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,8 +60,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>Indicates whether the queried data has a previous page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes.</description></item>
-            /// <item><description><b>false</b>: No.</description></item>
+            /// <item><description><b>true</b>: yes.</description></item>
+            /// <item><description><b>false</b>: no.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16C62438-491B-5C02-9B49-BA924A1372A2</para>
@@ -198,10 +198,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

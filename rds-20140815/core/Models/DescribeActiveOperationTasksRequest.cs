@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The task level. Default value: all. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>all</b>: all tasks.</description></item>
-        /// <item><description><b>S0</b>: exception recovery tasks.</description></item>
+        /// <item><description><b>S0</b>: exception fix tasks.</description></item>
         /// <item><description><b>S1</b>: system O&amp;M tasks.</description></item>
         /// </list>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ChangeLevel { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Default value: all. Valid values: mysql, pgsql, mssql, and others.</para>
+        /// <para>The database engine. Default value: all. Valid values include mysql, pgsql, and mssql.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the pending event. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The region ID of the pending event. You can call the DescribeRegions operation to obtain the region ID.</para>
         /// <remarks>
         /// <para>A value of <b>all</b> specifies all region IDs.</para>
         /// </remarks>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>-1</b>: all tasks.</description></item>
         /// <item><description><b>3</b>: pending tasks.</description></item>
-        /// <item><description><b>4</b>: tasks in progress.</description></item>
+        /// <item><description><b>4</b>: in-progress tasks.</description></item>
         /// <item><description><b>5</b>: successfully completed tasks.</description></item>
         /// <item><description><b>6</b>: failed tasks.</description></item>
         /// <item><description><b>7</b>: canceled tasks.</description></item>
@@ -158,9 +158,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>rds_apsaradb_ha</b>: primary and secondary node switch.</description></item>
+        /// <item><description><b>rds_apsaradb_ha</b>: primary/secondary node switch.</description></item>
         /// <item><description><b>rds_apsaradb_transfer</b>: instance migration.</description></item>
-        /// <item><description><b>rds_apsaradb_upgrade</b>: minor engine version update.</description></item>
+        /// <item><description><b>rds_apsaradb_upgrade</b>: minor version update.</description></item>
         /// <item><description><b>rds_apsaradb_maxscale</b>: proxy minor version upgrade.</description></item>
         /// <item><description><b>all</b>: all task types.</description></item>
         /// </list>

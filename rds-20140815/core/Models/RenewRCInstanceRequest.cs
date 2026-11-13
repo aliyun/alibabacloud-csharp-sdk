@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: Only an order is generated. No payment is made.</description></item>
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: generates an unpaid order without deducting fees.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to pay for the order.</para>
+        /// <para>Default value: true. If the balance of your payment method is insufficient, you can change the AutoPay Settings to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Auto-renewal is enabled.</description></item>
-        /// <item><description><b>false</b> (default): Auto-renewal is disabled.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b> (default): no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use coupons. Valid values:</para>
+        /// <para>Specifies whether to use vouchers. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): Coupons are used.</description></item>
-        /// <item><description><b>false</b>: Coupons are not used.</description></item>
+        /// <item><description><b>true</b> (default): uses vouchers.</description></item>
+        /// <item><description><b>false</b>: does not use vouchers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The additional information about the order.</para>
+        /// <para>The additional information of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;promotion_input_param\&quot;:\&quot;{\\\&quot;promotionFilter\\\&quot;:{},\\\&quot;promotionOptionCode\\\&quot;:\\\&quot;youhui_quan\\\&quot;}\&quot;}</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOC****</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the target instance. Only <b>Prepaid</b> (upfront, subscription) is supported.</para>
+        /// <para>The billing method of the target instance. Only <b>Prepaid</b> (subscription) is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Prepaid</para>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use annual subscription. Valid values:</para>
+        /// <para>Specifies whether to align the subscription period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Annual subscription is used.</description></item>
-        /// <item><description><b>false</b> (default): Annual subscription is not used.</description></item>
+        /// <item><description><b>true</b>: aligns the subscription period.</description></item>
+        /// <item><description><b>false</b> (default): does not align the subscription period.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration specified by the <b>UsedTime</b> parameter. Valid values:</para>
+        /// <para>The unit of the subscription duration, which is the unit of the <b>UsedTime</b> parameter. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: year</description></item>
         /// <item><description><b>2</b> (default): month</description></item>
@@ -176,10 +176,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TimeType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Valid values:</para>
+        /// <para>Specifies the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>TimeType</b> is set to <b>1</b> (year), the valid values of UsedTime are <b>1 to 5</b>.</description></item>
-        /// <item><description>If <b>TimeType</b> is set to <b>2</b> (month), the valid values of UsedTime are <b>1 to 11</b>.</description></item>
+        /// <item><description>If the <b>TimeType</b> parameter is set to <b>1</b> (year), valid values are <b>1</b> to <b>5</b>.</description></item>
+        /// <item><description>If the <b>TimeType</b> parameter is set to <b>2</b> (month), valid values are <b>1</b> to <b>11</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

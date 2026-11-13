@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreateMemberCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the global active database cluster.</para>
+            /// <para>The ID of the GAD cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gad-rm-bp1npi2j8****</para>

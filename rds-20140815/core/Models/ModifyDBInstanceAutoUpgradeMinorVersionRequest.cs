@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceAutoUpgradeMinorVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The method used to upgrade the minor engine version of the instance. Valid values:</para>
+        /// <para>The minor version upgrade method for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Auto</b>: automatically upgrades the minor engine version.</description></item>
-        /// <item><description><b>Manual</b>: does not automatically upgrade the minor engine version. The minor engine version is forcibly upgraded only when the current version is retired.</description></item>
+        /// <item><description><b>Auto</b>: Automatically upgrades the minor version.</description></item>
+        /// <item><description><b>Manual</b>: Does not automatically upgrade the minor version. The minor version is forcibly upgraded only when the current version is retired.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AutoUpgradeMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The value can be up to 64 characters in length and can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>

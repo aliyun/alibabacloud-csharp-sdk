@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The monitoring data points.</para>
+        /// <para>The list of monitoring data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;timestamp\&quot;:1722909960000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988******\&quot;,\&quot;Minimum\&quot;:0.097,\&quot;Maximum\&quot;:0.097,\&quot;Average\&quot;:0.097},{\&quot;timestamp\&quot;:1722910020000,\&quot;instanceId\&quot;:\&quot;rc-dh2jf9n6j4s14926****\&quot;,\&quot;userId\&quot;:\&quot;1695619988******\&quot;,\&quot;Minimum\&quot;:0.093,\&quot;Maximum\&quot;:0.093,\&quot;Average\&quot;:0.093}]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Datapoints { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
         /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>

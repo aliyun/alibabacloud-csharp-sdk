@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBProxyInstanceKernelVersionRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The specified time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>If you set <b>UpgradeTime</b> to <b>SpecifyTime</b>, you must specify this parameter.</para>
+        /// <para>This parameter is required when <b>UpgradeTime</b> is set to <b>SpecifyTime</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The time when you want to perform the upgrade. Valid values:</para>
+        /// <para>The time when the upgrade is performed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>MaintainTime</b> (default): The upgrade is performed within the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</description></item>
         /// <item><description><b>Immediate</b>: The upgrade is performed immediately.</description></item>

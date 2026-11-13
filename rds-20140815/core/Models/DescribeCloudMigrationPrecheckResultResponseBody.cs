@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCloudMigrationPrecheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of pre-check reports for one-click cloud migration.</para>
+        /// <para>The list of cloud migration precheck reports.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeCloudMigrationPrecheckResultResponseBodyItems> Items { get; set; }
         public class DescribeCloudMigrationPrecheckResultResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The content of the pre-check report for cloud migration.</para>
+            /// <para>The content of the cloud migration precheck report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[Check rds empty]\nCheck rds databases: success\n[Check source connectivity]\nCheck ip connectable: success\nCheck port connectable: success\nCheck database connectable: success\nCheck account replication privilege: success\nCheck account createrole privilege: success\nCheck account monitor privilege: success\n[Check source version]\nCheck major version consistent: success\n[Check source glibc version]\nCheck source glibc version compatible: warning(warning:source glibc version is not compatible with rds pg)\n[Check disk size]\nCheck disk size enough: success\n[Check wal keep size]\nCheck wal keep size large enough: success\n[Check spec params]\nCheck if spec params too large: success\n [Check triggers]\nCheck triggers compatible: success\n[Check user functions]\nCheck user functions compatible: success\n<em>Migrate check success</em></para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

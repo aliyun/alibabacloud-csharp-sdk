@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupJobStatus { get; set; }
 
         /// <summary>
-        /// <para>The backup pattern. Valid values:</para>
+        /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Automated</b>: automatic backup</description></item>
         /// <item><description><b>Manual</b>: manual backup</description></item>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. It cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>

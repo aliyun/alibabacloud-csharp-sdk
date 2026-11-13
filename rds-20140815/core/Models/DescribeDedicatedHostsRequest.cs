@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether the host allows instance allocation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not allowed.</description></item>
-        /// <item><description><b>1</b>: Allowed.</description></item>
+        /// <item><description><b>0</b>: Instance allocation is not allowed.</description></item>
+        /// <item><description><b>1</b>: Instance allocation is allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AllocationStatus { get; set; }
 
         /// <summary>
-        /// <para>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to obtain the dedicated cluster ID.</para>
+        /// <para>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dhg-7a9xxxxxxxx</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The host ID of the dedicated cluster.</para>
+        /// <para>The dedicated host ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ch-t4nn100ddxxxxxxxx</para>
@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostId { get; set; }
 
         /// <summary>
-        /// <para>The host status. Valid values:</para>
+        /// <para>The status of the host. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Creating.</description></item>
         /// <item><description><b>1</b>: Running.</description></item>
         /// <item><description><b>2</b>: Down.</description></item>
-        /// <item><description><b>3</b>: Down and offline (host replacement in progress).</description></item>
+        /// <item><description><b>3</b>: Down and being replaced.</description></item>
         /// <item><description><b>4</b>: Offline.</description></item>
         /// <item><description><b>5</b>: Deleted.</description></item>
         /// <item><description><b>6</b>: Restarting.</description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The storage type of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>dhg_cloud_ssd</b>: ESSD cloud disk.</description></item>
+        /// <item><description><b>dhg_cloud_ssd</b>: standard SSD.</description></item>
         /// <item><description><b>dhg_local_ssd</b>: local SSD.</description></item>
         /// </list>
         /// 
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

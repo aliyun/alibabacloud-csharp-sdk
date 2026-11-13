@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The list of proxy nodes.</para>
         /// <remarks>
-        /// <para>This parameter is required when the current proxy instance is active in a multi-zone deployment.</para>
+        /// <para>This parameter is required when the current proxy instance is deployed across multiple active zones.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("DBProxyNodes")]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CpuCores { get; set; }
 
             /// <summary>
-            /// <para>The number of proxy nodes in the zone. Valid values: <b>1</b> and <b>2</b>.</para>
+            /// <para>The number of proxy nodes in the zone. Valid values: <b>1</b> to <b>2</b>.</para>
             /// <remarks>
             /// <para>This parameter is required when <b>DBProxyNodes</b> is specified.</para>
             /// </remarks>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The specified time when the modifications take effect. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
+        /// <para>The specific time when the modification takes effect. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>EffectiveTime</b> is set to <b>SpecificTime</b>.</para>
         /// </remarks>
@@ -124,11 +124,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveSpecificTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the modifications take effect. Valid values:</para>
+        /// <para>The time when the modification takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b>: The modifications take effect immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: The modifications take effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
-        /// <item><description><b>SpecificTime</b>: The modifications take effect at a specified time.</description></item>
+        /// <item><description><b>Immediate</b>: The modification immediately takes effect.</description></item>
+        /// <item><description><b>MaintainTime</b>: The modification takes effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>SpecificTime</b>: The modification takes effect at a specified time.</description></item>
         /// </list>
         /// <para>Default value: <b>MaintainTime</b>.</para>
         /// 
@@ -140,9 +140,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The list of zones to which the proxy is migrated.</para>
+        /// <para>The list of active zones for proxy migration.</para>
         /// <remarks>
-        /// <para>Currently, only ApsaraDB RDS for MySQL instances with cloud disks support proxy instance migration across zones.</para>
+        /// <para>Currently, only ApsaraDB RDS for MySQL instances with cloud disks support migrating proxy instances to other active zones.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("MigrateAZ")]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

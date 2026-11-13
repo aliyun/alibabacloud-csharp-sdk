@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeBackupDatabaseRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID.</para>
+        /// <para>The ID of the backup set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9026xxxx</para>

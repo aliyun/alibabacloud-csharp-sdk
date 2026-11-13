@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The effective period of the parameter modification.</para>
+            /// <para>The effective period of the parameter modifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-06T09:24:00Z</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduled parameter modification task.</para>
+            /// <para>The ID of the scheduled task for modifying parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27056921</para>

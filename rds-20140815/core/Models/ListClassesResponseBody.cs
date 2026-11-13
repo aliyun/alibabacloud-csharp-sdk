@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClassGroup { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores for the instance type. Unit: cores.</para>
+            /// <para>The number of CPU cores for the instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EncryptedMemory { get; set; }
 
             /// <summary>
-            /// <para>The architecture type of the instance type. Valid values:</para>
+            /// <para>The architecture type of the instance type.</para>
             /// <list type="bullet">
             /// <item><description>If the instance uses the <b>x86</b> architecture, this parameter is left empty by default.</description></item>
             /// <item><description>If the instance uses the <b>arm</b> architecture, <b>arm</b> is returned.</description></item>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string MaxConnections { get; set; }
 
             /// <summary>
-            /// <para>The maximum I/O bandwidth for the instance type. Unit: Mbps.</para>
+            /// <para>The maximum I/O bandwidth for the instance type. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024Mbps</para>
@@ -114,11 +114,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The price of the instance type.</para>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description>Unit: cents (CNY).</description></item>
+            /// <item><description>Unit: cent (CNY).</description></item>
             /// </list>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description>Unit: cents (USD).</description></item>
+            /// <item><description>Unit: cent (USD).</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
@@ -138,17 +138,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The instance edition. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Regular instances<list type="bullet">
-            /// <item><description><b>Basic</b>: Basic Edition.</description></item>
-            /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
-            /// <item><description><b>cluster</b>: Cluster Edition for MySQL or PostgreSQL.</description></item>
-            /// <item><description><b>AlwaysOn</b>: Cluster Edition for SQL Server.</description></item>
-            /// <item><description><b>Finance</b>: RDS Enterprise Edition.</description></item>
+            /// <item><description><b>Basic</b>: Basic Edition</description></item>
+            /// <item><description><b>HighAvailability</b>: high-availability series</description></item>
+            /// <item><description><b>cluster</b>: Cluster Edition for MySQL or PostgreSQL</description></item>
+            /// <item><description><b>AlwaysOn</b>: Cluster Edition for SQL Server</description></item>
+            /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
             /// </list>
             /// </description></item>
             /// <item><description>Serverless instances<list type="bullet">
-            /// <item><description><b>serverless_basic</b>: Serverless Basic Edition. (Applicable only to MySQL and PostgreSQL)</description></item>
-            /// <item><description><b>serverless_standard</b>: Serverless High-availability Edition. (Applicable only to MySQL and PostgreSQL)</description></item>
-            /// <item><description><b>serverless_ha</b>: Serverless High-availability Edition for SQL Server.</description></item>
+            /// <item><description><b>serverless_basic</b>: Serverless Basic Edition (applicable only to MySQL and PostgreSQL)</description></item>
+            /// <item><description><b>serverless_standard</b>: Serverless high-availability series (applicable only to MySQL and PostgreSQL)</description></item>
+            /// <item><description><b>serverless_ha</b>: SQL Server Serverless high-availability series</description></item>
             /// </list>
             /// </description></item>
             /// </list>

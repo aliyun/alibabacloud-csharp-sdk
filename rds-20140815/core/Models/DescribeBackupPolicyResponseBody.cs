@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The number of archived backups retained for an <b>ApsaraDB RDS for MySQL</b> instance.</para>
+        /// <para>The number of archive backups retained for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveBackupKeepCount { get; set; }
 
         /// <summary>
-        /// <para>The retention cycle of archived backups for an <b>ApsaraDB RDS for MySQL</b> instance.</para>
+        /// <para>The retention period of archive backups for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ByMonth</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveBackupKeepPolicy { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which archived backups are retained for an <b>ApsaraDB RDS for MySQL</b> instance.</para>
+        /// <para>The number of days for which archive backups are retained for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>365</para>
@@ -176,8 +176,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup interval. Unit: minutes.</para>
         /// <list type="bullet">
-        /// <item><description>For an ApsaraDB RDS for MySQL instance, this parameter indicates the <a href="https://help.aliyun.com/document_detail/98818.html">snapshot backup frequency</a> rather than the snapshot backup cycle.</description></item>
-        /// <item><description>For an ApsaraDB RDS for SQL Server instance, this parameter indicates the log backup frequency.</description></item>
+        /// <item><description>For ApsaraDB RDS for MySQL instances: the <a href="https://help.aliyun.com/document_detail/98818.html">snapshot backup frequency</a>, not the snapshot backup cycle.</description></item>
+        /// <item><description>For ApsaraDB RDS for SQL Server instances: the log backup frequency.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -190,13 +190,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Indicates whether log backup is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: yes</description></item>
-        /// <item><description><b>Disabled</b>: no</description></item>
+        /// <item><description><b>Enable</b>: yes.</description></item>
+        /// <item><description><b>Disabled</b>: no.</description></item>
         /// </list>
-        /// <para><b>For an ApsaraDB RDS for SQL Server instance:</b></para>
+        /// <para><b>For ApsaraDB RDS for SQL Server instances:</b></para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b> is returned only when instance log backup frequency of the instance is set to <b>Every 5 Minutes</b>.</description></item>
-        /// <item><description><b>Disabled</b> is returned when instance log backup frequency is set to <b>Every 30 Minutes</b> or <b>Same as Data Backup</b>. <b>Refer to the value of BackupInterval</b>.</description></item>
+        /// <item><description><b>Enable</b> is returned only when instance log backup frequency is <b>every 5 minutes</b>.</description></item>
+        /// <item><description><b>Disabled</b> is returned when instance log backup frequency is <b>every 30 minutes</b> or <b>the same as the data backup frequency</b>. <b>Refer to the value of BackupInterval</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -207,10 +207,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupLog { get; set; }
 
         /// <summary>
-        /// <para>The backup method for an <b>ApsaraDB RDS for SQL Server instance with cloud disks</b>. Valid values:</para>
+        /// <para>The backup method for <b>ApsaraDB RDS for SQL Server instances with cloud disks</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Physical</b>: physical backup</description></item>
-        /// <item><description><b>Snapshot</b>: snapshot backup</description></item>
+        /// <item><description><b>Physical</b>: physical backup.</description></item>
+        /// <item><description><b>Snapshot</b>: snapshot backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -221,10 +221,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMethod { get; set; }
 
         /// <summary>
-        /// <para>The secondary node backup setting for an <b>ApsaraDB RDS for SQL Server Cluster Edition</b> instance. Valid values:</para>
+        /// <para>The secondary node backup setting for <b>ApsaraDB RDS for SQL Server Cluster Edition</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: prefer secondary node</description></item>
-        /// <item><description><b>2</b>: force primary node</description></item>
+        /// <item><description><b>1</b>: prefer secondary node.</description></item>
+        /// <item><description><b>2</b>: force primary node.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is returned only when SupportModifyBackupPriority is set to True.</para>
@@ -250,11 +250,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Indicates whether backup within seconds is enabled for <b>ApsaraDB RDS for MySQL</b> and <b>ApsaraDB RDS for PostgreSQL</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Flash</b>: enabled</description></item>
-        /// <item><description><b>Standard</b>: disabled</description></item>
+        /// <item><description><b>Flash</b>: enabled.</description></item>
+        /// <item><description><b>Standard</b>: disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only when the <b>BackupPolicyMode</b> parameter is set to <b>DataBackupPolicy</b>.</para>
+        /// <para>This parameter takes effect only when <b>BackupPolicyMode</b> is set to <b>DataBackupPolicy</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -267,11 +267,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup compression method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no compression</description></item>
-        /// <item><description><b>1</b>: zlib compression</description></item>
-        /// <item><description><b>2</b>: parallel zlib compression</description></item>
-        /// <item><description><b>4</b>: QuickLZ compression with database and table restoration enabled</description></item>
-        /// <item><description><b>8</b>: QuickLZ compression without database and table restoration supported</description></item>
+        /// <item><description><b>0</b>: no compression.</description></item>
+        /// <item><description><b>1</b>: zlib compression.</description></item>
+        /// <item><description><b>2</b>: parallel zlib compression.</description></item>
+        /// <item><description><b>4</b>: quicklz compression with database and table restoration enabled.</description></item>
+        /// <item><description><b>8</b>: quicklz compression without database and table restoration supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -284,13 +284,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Indicates whether log backup is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
-        /// <para><b>For an ApsaraDB RDS for SQL Server instance:</b></para>
+        /// <para><b>For ApsaraDB RDS for SQL Server instances:</b></para>
         /// <list type="bullet">
-        /// <item><description><b>1</b> is returned only when instance log backup frequency of the instance is set to <b>Every 5 Minutes</b>.</description></item>
-        /// <item><description><b>0</b> is returned when instance log backup frequency is set to <b>Every 30 Minutes</b> or <b>Same as Data Backup</b>. <b>Refer to the value of BackupInterval</b>.</description></item>
+        /// <item><description><b>1</b> is returned only when instance log backup frequency is <b>every 5 minutes</b>.</description></item>
+        /// <item><description><b>0</b> is returned when instance log backup frequency is <b>every 30 minutes</b> or <b>the same as the data backup frequency</b>. <b>Refer to the value of BackupInterval</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -311,10 +311,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? EnableImmutableBackup { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether incremental backup is enabled for an <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
+        /// <para>Indicates whether incremental backup is enabled for the <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: yes</description></item>
-        /// <item><description><b>False</b>: no</description></item>
+        /// <item><description><b>True</b>: yes.</description></item>
+        /// <item><description><b>False</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -325,10 +325,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? EnableIncrementDataBackup { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether point-in-time recovery (PITR) is enabled for an <b>ApsaraDB RDS for MySQL</b> instance. PITR is an upgraded version of log backup. Valid values:</para>
+        /// <para>Indicates whether point-in-time recovery (PITR) is enabled for the <b>ApsaraDB RDS for MySQL</b> instance. PITR is an upgraded version of log backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: yes</description></item>
-        /// <item><description><b>False</b>: no</description></item>
+        /// <item><description><b>True</b>: yes.</description></item>
+        /// <item><description><b>False</b>: no.</description></item>
         /// </list>
         /// <remarks>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2666046.html">Configure a point-in-time recovery policy</a>.</para>
@@ -342,10 +342,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? EnablePitrProtection { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether binary logs are forcibly deleted when the storage usage of an <b>ApsaraDB RDS for MySQL</b> instance exceeds 80% or the remaining storage is less than 5 GB. Valid values:</para>
+        /// <para>Indicates whether binary logs are forcibly deleted when the storage usage of the <b>ApsaraDB RDS for MySQL</b> instance exceeds 80% or the remaining storage is less than 5 GB. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b>: no</description></item>
-        /// <item><description><b>Enable</b>: yes</description></item>
+        /// <item><description><b>Disable</b>: no.</description></item>
+        /// <item><description><b>Enable</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HighSpaceUsageProtection { get; set; }
 
         /// <summary>
-        /// <para>The interval for high-frequency incremental backups. Unit: minutes. Valid values: 60, 120, 240, 360, and 720.</para>
+        /// <para>The high-frequency incremental backup interval. Unit: minutes. Valid values: 60, 120, 240, 360, and 720.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? IncBackupInterval { get; set; }
 
         /// <summary>
-        /// <para>The number of hours for which local binary log backups are retained for an <b>ApsaraDB RDS for MySQL</b> instance.</para>
+        /// <para>The number of hours for which binary log backups are retained for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LocalLogRetentionHours { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage usage of binary logs for an <b>ApsaraDB RDS for MySQL</b> instance.</para>
+        /// <para>The maximum storage usage of binary logs for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -386,9 +386,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LocalLogRetentionSpace { get; set; }
 
         /// <summary>
-        /// <para>The log backup frequency for an <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
+        /// <para>The log backup frequency for the <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LogInterval</b>: every 30 minutes</description></item>
+        /// <item><description><b>LogInterval</b>: every 30 minutes.</description></item>
         /// <item><description>Default value: the same as the data backup cycle specified by <b>PreferredBackupPeriod</b>.</description></item>
         /// </list>
         /// 
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LogBackupFrequency { get; set; }
 
         /// <summary>
-        /// <para>The number of local binary logs retained for an <b>ApsaraDB RDS for MySQL</b> instance.</para>
+        /// <para>The number of local binary logs retained for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LogBackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The number of days to which an <b>ApsaraDB RDS for MySQL</b> instance can be restored by using PITR.</para>
+        /// <para>The number of days for which point-in-time recovery is supported for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -432,13 +432,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The data backup cycle. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b>: Monday</description></item>
-        /// <item><description><b>Tuesday</b>: Tuesday</description></item>
-        /// <item><description><b>Wednesday</b>: Wednesday</description></item>
-        /// <item><description><b>Thursday</b>: Thursday</description></item>
-        /// <item><description><b>Friday</b>: Friday</description></item>
-        /// <item><description><b>Saturday</b>: Saturday</description></item>
-        /// <item><description><b>Sunday</b>: Sunday</description></item>
+        /// <item><description><b>Monday</b>: Monday.</description></item>
+        /// <item><description><b>Tuesday</b>: Tuesday.</description></item>
+        /// <item><description><b>Wednesday</b>: Wednesday.</description></item>
+        /// <item><description><b>Thursday</b>: Thursday.</description></item>
+        /// <item><description><b>Friday</b>: Friday.</description></item>
+        /// <item><description><b>Saturday</b>: Saturday.</description></item>
+        /// <item><description><b>Sunday</b>: Sunday.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The time of the next backup. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
+        /// <para>The next backup time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-19T15:15Z</para>
@@ -469,11 +469,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PreferredNextBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The data retention policy for archived backups of a deleted <b>ApsaraDB RDS for MySQL</b> instance. Valid values:</para>
+        /// <para>The data retention policy for archive backups of deleted <b>ApsaraDB RDS for MySQL</b> instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>None</b>: does not retain archived backups</description></item>
-        /// <item><description><b>Lastest</b>: retains only the last archived backup</description></item>
-        /// <item><description><b>All</b>: retains all archived backups</description></item>
+        /// <item><description><b>None</b>: do not retain.</description></item>
+        /// <item><description><b>Lastest</b>: retain the last one.</description></item>
+        /// <item><description><b>All</b>: retain all.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -494,10 +494,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the secondary node backup option can be modified for an <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
+        /// <para>Indicates whether the secondary node backup option can be modified for the <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: yes</description></item>
-        /// <item><description><b>False</b>: no</description></item>
+        /// <item><description><b>True</b>: yes.</description></item>
+        /// <item><description><b>False</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -518,10 +518,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? SupportReleasedKeep { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether snapshot backup is supported for an <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
+        /// <para>Indicates whether snapshot backup is supported for the <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><b>1</b>: yes.</description></item>
+        /// <item><description><b>0</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -532,10 +532,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? SupportVolumeShadowCopy { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the <a href="https://help.aliyun.com/document_detail/95717.html">5-minute log backup feature</a> is supported for an <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
+        /// <para>Indicates whether the <a href="https://help.aliyun.com/document_detail/95717.html">5-minute log backup feature</a> is supported for the <b>ApsaraDB RDS for SQL Server</b> instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: not supported</description></item>
-        /// <item><description><b>1</b>: supported</description></item>
+        /// <item><description><b>0</b>: not supported.</description></item>
+        /// <item><description><b>1</b>: supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

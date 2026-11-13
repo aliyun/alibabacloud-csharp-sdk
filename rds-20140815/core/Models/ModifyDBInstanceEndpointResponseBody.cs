@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of returned fields.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDBInstanceEndpointResponseBodyData Data { get; set; }
         public class ModifyDBInstanceEndpointResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the endpoint.</para>
+            /// <para>The endpoint ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-****</para>

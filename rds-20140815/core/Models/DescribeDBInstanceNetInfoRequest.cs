@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The reserved parameter. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Flag")]
         [Validation(Required=false)]
         public int? Flag { get; set; }
 
         /// <summary>
-        /// <para>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in the dedicated cluster belongs.</para>
+        /// <para>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in a dedicated cluster belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rgc-2ze****</para>

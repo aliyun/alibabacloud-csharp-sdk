@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>This parameter does not affect the query result. You can specify any region ID. You can call the DescribeRegions operation to query available region IDs.</para>
+        /// <para>This parameter does not affect the query result. You can specify any region. You can call the DescribeRegions operation to query available region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

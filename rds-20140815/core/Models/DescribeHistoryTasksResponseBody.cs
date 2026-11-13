@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeHistoryTasksResponseBodyItems> Items { get; set; }
         public class DescribeHistoryTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The allowed operation information. In actual use, the operation action is matched in this information based on currentStepName and status. If no action is matched, the current status of the task does not support the operation. Example:</para>
+            /// <para>The information about allowed operations. During actual use, the operation action is matched in this information based on currentStepName and status. If no action is matched, the current task status does not support the operation. Example:</para>
             /// <pre><c>  &quot;steps&quot;: [
             ///     {
             ///       &quot;step_name&quot;: &quot;exec_task&quot;, // The step name, which matches currentStepName.
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CallerUid { get; set; }
 
             /// <summary>
-            /// <para>The name of the current step. If this parameter is empty, the task has not started.</para>
+            /// <para>The name of the currently executed step. If this parameter is empty, the task has not started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exec_task</para>
@@ -158,10 +158,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? Progress { get; set; }
 
             /// <summary>
-            /// <para>The cause of the current task.</para>
+            /// <para>The reason why the current task was initiated.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>The user initiated an instance configuration change</para>
             /// </summary>
             [NameInMap("ReasonCode")]
             [Validation(Required=false)]
@@ -201,9 +201,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Scheduled: Pending execution.</description></item>
-            /// <item><description>Running: Running.</description></item>
-            /// <item><description>Succeed: Succeeded.</description></item>
-            /// <item><description>Failed: Failed.</description></item>
+            /// <item><description>Running: Executing.</description></item>
+            /// <item><description>Succeed: Executed successfully.</description></item>
+            /// <item><description>Failed: Execution failed.</description></item>
             /// <item><description>Cancelling: Cancelling.</description></item>
             /// <item><description>Canceled: Canceled.</description></item>
             /// <item><description>Waiting: Waiting for the scheduled time.</description></item>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query result.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID. If you encounter any issues, provide this request ID for troubleshooting.</para>
+        /// <para>The unique ID of the request. If you encounter any issues, provide this request ID to the technical support team for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5CD61041-35F7-10F7-BE94-33A48B22****</para>

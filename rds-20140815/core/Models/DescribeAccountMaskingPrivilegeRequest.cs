@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myDB</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The account name. You can specify a specific account to query.</para>
+        /// <para>The name of the account. You can specify an account to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>

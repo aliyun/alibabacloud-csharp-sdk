@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to obtain instance ID.</para>
         /// <remarks>
-        /// <para>SQL Server 2017 Cluster Edition instances are not supported.</para>
+        /// <para>ApsaraDB RDS for SQL Server 2017 Cluster Edition instances are not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</para>
+        /// <para>The page number. Default value: <b>1</b>. The value must be a positive integer that does not exceed the maximum value of the Integer type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

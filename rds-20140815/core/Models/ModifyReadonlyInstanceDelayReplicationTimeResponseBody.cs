@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the read-only instance.</para>
+        /// <para>The ID of the read-only instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rr-bp****</para>

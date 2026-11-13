@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDetachedBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set.</para>
+        /// <para>The backup set ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>327****</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupStatus { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum integer value.</para>
+        /// <para>The page number. Valid values: integers greater than 0 and up to the maximum value of the Integer data type.</para>
         /// <remarks>
         /// <para>Default value: 1.</para>
         /// </remarks>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSQLCollectorRetentionRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to obtain instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</para>
+        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

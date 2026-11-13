@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The column encryption key mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>client_key: A user-generated random key configured on the client side.</description></item>
-        /// <item><description>kms_key: A custom key configured by using Alibaba Cloud KMS.</description></item>
+        /// <item><description>client_key: Use a user-generated random key configured on the client side.</description></item>
+        /// <item><description>kms_key: Use a custom key configured by using Alibaba Cloud KMS.</description></item>
         /// </list>
         /// <para>Note
         /// After an instance is configured to use a KMS key, you can no longer use a random key configured on the client side.</para>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The column encryption status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Encryption is enabled.</description></item>
-        /// <item><description>0: Encryption is disabled.</description></item>
+        /// <item><description>1: Enable encryption.</description></item>
+        /// <item><description>0: Disable encryption.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -112,9 +112,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor of the role, used to specify the specific role. For details, see RAM role overview.
+        /// <para>The global resource descriptor of the role, used to specify a specific role. For details, see RAM role overview.
         /// Note
-        /// This parameter takes effect only when the column encryption key pattern is set to kms_key. If you do not specify this parameter, the internal default value is used.</para>
+        /// This parameter takes effect only when the column encryption key mode is kms_key. If this parameter is not specified, the internal default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</para>

@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Specifies the maximum number of disks attached to the instance to return. Valid values: 10 to 500.</para>
+        /// <para>The maximum number of disks of the instance to return. Valid values: 10 to 500.</para>
         /// <list type="bullet">
         /// <item><description>If this parameter is not specified, the default value is 20.</description></item>
         /// <item><description>If the specified value is less than 10, the value is fixed to 10.</description></item>
-        /// <item><description>If the specified value is greater than or equal to 10 and less than or equal to 500, the specified value takes effect.</description></item>
+        /// <item><description>If the specified value is greater than or equal to 10 and less than or equal to 500, the specified value is used.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyWhitelistTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Duplicates are not allowed. The following two formats are supported:</para>
+        /// <para>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Duplicate IP addresses are not allowed. The following two formats are supported:</para>
         /// <list type="bullet">
         /// <item><description>IP address format, such as 10.23.XX.XX.</description></item>
-        /// <item><description>CIDR format, such as 10.23.XX.XX/24 (Classless Inter-Domain Routing, where 24 indicates the length of the prefix in the address, and the valid values are 1 to 32).</description></item>
+        /// <item><description>CIDR format, such as 10.23.XX.XX/24. 24 indicates the length of the prefix in the Classless Inter-Domain Routing (CIDR) block. Valid values: 1 to 32.</description></item>
         /// </list>
         /// <remarks>
         /// <para>You can add up to 1,000 IP addresses or CIDR blocks to each instance. The total number of IP addresses and CIDR blocks in all IP address whitelist groups cannot exceed 1,000. If you have a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The name of the whitelist template. This parameter is required when you create a template. The name cannot be modified after the template is created. The name must be unique within the same account and start with a letter. You can call the DescribeWhitelistTemplate operation to obtain the name.</para>
+        /// <para>The name of the whitelist template. This parameter is required when you create a template. The name cannot be modified after the template is created. The name must be unique within the account and start with a letter. You can call the DescribeWhitelistTemplate operation to obtain the name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>template_123</para>

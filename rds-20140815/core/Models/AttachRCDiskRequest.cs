@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AttachRCDiskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to release the cloud disk when the instance is released. Valid values:</para>
+        /// <para>Specifies whether the cloud disk is released together with the instance when the instance is released. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The cloud disk is released.</description></item>
-        /// <item><description>false: The cloud disk is not released. The cloud disk is retained and converted to a pay-as-you-go data cloud disk.</description></item>
+        /// <item><description>false: The cloud disk is not released. The cloud disk is retained and converted to a pay-as-you-go data cloud disk.
+        /// Default value: false.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// <para>When you configure this parameter, take note of the following items:</para>
-        /// <para>If you set DeleteWithInstance to false and the instance is locked for security reasons (the &quot;LockReason&quot; : &quot;security&quot; attribute is included in OperationLocks), the cloud disk is released along with the instance regardless of this parameter setting.</para>
-        /// <para>If the cloud disk you want to attach is an elastic ephemeral disk, you must set DeleteWithInstance to true.</para>
+        /// <para>If you set DeleteWithInstance to false and the instance is locked for security reasons (OperationLocks contains &quot;LockReason&quot; : &quot;security&quot;), this property of the cloud disk is ignored and the cloud disk is released together with the instance.</para>
+        /// <para>If the cloud disk to be attached is an elastic ephemeral disk, you must set DeleteWithInstance to true.</para>
         /// <para>This parameter cannot be configured for cloud disks that have the multi-attach feature enabled.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud disk to be attached. The cloud disk (DiskId) and the instance (InstanceId) must be in the same zone.</para>
+        /// <para>The ID of the cloud disk to be attached. The cloud disk specified by DiskId and the instance specified by InstanceId must be in the same zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

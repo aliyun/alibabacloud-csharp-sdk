@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the new instance.</para>
+        /// <para>The instance ID of the new instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-****</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The port used to connect to the new instance.</para>
+        /// <para>The port number of the new instance.</para>
         /// <remarks>
         /// <para>The <b>DBInstanceNetType</b> parameter determines whether the port is an internal port or a public port.</para>
         /// </remarks>

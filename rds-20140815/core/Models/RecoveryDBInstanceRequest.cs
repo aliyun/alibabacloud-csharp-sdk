@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The ID of the original instance.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is not required when you restore data from a backup set (by specifying the BackupId parameter).</description></item>
-        /// <item><description>This parameter is required when you restore data to a point in time (by specifying the RestoreTime parameter).</description></item>
+        /// <item><description>This parameter is not required when you restore data from a backup set (that is, when you specify the BackupId parameter).</description></item>
+        /// <item><description>This parameter is required when you restore data to a point in time (that is, when you specify the RestoreTime parameter).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the new instance. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
+        /// <para>The instance storage capacity of the new instance. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</para>
         /// <remarks>
-        /// <para>The storage capacity of the new instance cannot be less than that of the original instance.</para>
+        /// <para>The disk space of the new instance cannot be less than the disk space of the original instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the new instance. Valid values:</para>
+        /// <para>The instance storage type of the new instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>local_ssd/ephemeral_ssd</b>: local SSD</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Classic</b>: classic network</description></item>
         /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC)</description></item>
         /// </list>
-        /// <para>The default value is the network type of the original instance.</para>
+        /// <para>Default value: the network type of the original instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -123,11 +123,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The subscription period of the new subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: yearly subscription</description></item>
-        /// <item><description><b>Month</b>: monthly subscription</description></item>
+        /// <item><description><b>Year</b>: yearly</description></item>
+        /// <item><description><b>Month</b>: monthly</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required when the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The internal IP address of the new instance. The IP address must be within the IP address range of the specified vSwitch. By default, the system automatically allocates an IP address based on the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <para>The internal IP address of the new instance. The IP address must be within the CIDR block of the specified vSwitch. By default, the system automatically allocates an IP address based on the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.XX.XX.69</para>
@@ -178,11 +178,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The subscription duration of the new instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>3</b>.</description></item>
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>9</b>.</description></item>
+        /// <item><description>When the <b>Period</b> parameter is set to <b>Year</b>, the valid values of the <b>UsedTime</b> parameter are <b>1 to 3</b>.</description></item>
+        /// <item><description>When the <b>Period</b> parameter is set to <b>Month</b>, the valid values of the <b>UsedTime</b> parameter are <b>1 to 9</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required when the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the new instance. Separate multiple IDs with commas (,).</para>
+        /// <para>The vSwitch ID of the new instance. Separate multiple vSwitch IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-****</para>

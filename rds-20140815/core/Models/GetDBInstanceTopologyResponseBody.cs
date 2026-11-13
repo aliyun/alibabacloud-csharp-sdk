@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GetDBInstanceTopologyResponseBody : TeaModel {
         /// <summary>
-        /// <para>An internal parameter. You can ignore this parameter.</para>
+        /// <para>The internal parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The network endpoint type of the instance. Valid values:</para>
+                /// <para>The type of the network endpoint for the instance. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>vpc</b>: internal endpoint.</description></item>
                 /// <item><description><b>public</b>: public endpoint.</description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The ID of the dedicated cluster.</para>
                 /// <remarks>
-                /// <para>An empty value is returned for instances that are not deployed in a dedicated cluster.</para>
+                /// <para>An empty value is returned for instances that do not belong to a dedicated cluster.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The ID of the host in the dedicated cluster.</para>
                 /// <remarks>
-                /// <para>An empty value is returned for instances that are not deployed in a dedicated cluster.</para>
+                /// <para>An empty value is returned for instances that do not belong to a dedicated cluster.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The unique identifier of the instance.</para>
                 /// <remarks>
-                /// <para><b>-1</b> is returned for instances that are not deployed in a dedicated cluster.</para>
+                /// <para><b>-1</b> is returned for instances that do not belong to a dedicated cluster.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The role of the node. Valid values:</para>
+                /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Master</b>: primary node.</description></item>
                 /// <item><description><b>Slave</b>: secondary node.</description></item>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>An internal parameter. You can ignore this parameter.</para>
+        /// <para>The internal parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

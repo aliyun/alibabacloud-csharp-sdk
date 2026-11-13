@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version.</para>
+        /// <para>The version of the database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.0</para>

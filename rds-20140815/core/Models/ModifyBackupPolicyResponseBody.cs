@@ -15,8 +15,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>0</b>: no compression.</description></item>
         /// <item><description><b>1</b>: zlib compression.</description></item>
         /// <item><description><b>2</b>: parallel zlib compression.</description></item>
-        /// <item><description><b>4</b>: quicklz compression. Database and table restoration is enabled.</description></item>
-        /// <item><description><b>8</b>: quicklz compression for MySQL 8.0. Database and table restoration is not supported.</description></item>
+        /// <item><description><b>4</b>: QuickLZ compression. Database and table restoration is enabled.</description></item>
+        /// <item><description><b>8</b>: QuickLZ compression for ApsaraDB RDS for MySQL 8.0. Database and table restoration is not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceID { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether log backup is enabled. Valid values:</para>
+        /// <para>Indicates whether instance log backup is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: enabled.</description></item>
         /// <item><description><b>0</b>: disabled.</description></item>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string HighSpaceUsageProtection { get; set; }
 
         /// <summary>
-        /// <para>The high-frequency incremental backup interval. Unit: minutes. Valid values: 60, 120, 240, 360, and 720.</para>
+        /// <para>The high-frequency incremental backup interval, in minutes. Valid values: 60, 120, 240, 360, and 720.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? IncBackupInterval { get; set; }
 
         /// <summary>
-        /// <para>The number of hours for which log backups are retained locally on the <b>ApsaraDB RDS for MySQL</b> instance.</para>
+        /// <para>The number of hours for which instance log backups are retained locally on the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LocalLogRetentionHours { get; set; }
 
         /// <summary>
-        /// <para>The maximum usage of the local binary log loop space for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
+        /// <para>The maximum usage of the local log circular space for the <b>ApsaraDB RDS for MySQL</b> instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? LogBackupLocalRetentionNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DA147739-AEAD-4417-9089-65E9B1D8240D</para>

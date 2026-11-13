@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeRCInstanceDdosCountResponseBodyDdosCount DdosCount { get; set; }
         public class DescribeRCInstanceDdosCountResponseBodyDdosCount : TeaModel {
             /// <summary>
-            /// <para>The number of instances under blackhole filtering.</para>
+            /// <para>The number of instances that are in the blackhole filtering status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string BlackholeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are undergoing traffic scrubbing.</para>
+            /// <para>The number of instances for which traffic is being scrubbed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

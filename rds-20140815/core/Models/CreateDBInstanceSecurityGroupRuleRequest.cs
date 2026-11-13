@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The range of destination ports for the transport layer protocol (TCP or UDP) specified in the security group rule. Valid values: 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</para>
+        /// <para>The range of destination ports that are open for the transport layer protocol (TCP or UDP) in the security group. Valid values: 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address range. IP address ranges in CIDR format and IPv4 format are supported.</para>
+        /// <para>The source IP address range. CIDR blocks and IPv4 addresses are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.XX.XX.100</para>

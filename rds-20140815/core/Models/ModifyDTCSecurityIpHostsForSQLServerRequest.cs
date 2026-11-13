@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDTCSecurityIpHostsForSQLServerRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeDBInstanceAttribute to query the region ID.</para>
+        /// <para>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses of ECS instances and the computer names of the Windows operating systems. Format: <c>ip,hostname</c>. Separate multiple instances with semicolons (;).</para>
+        /// <para>The IP addresses of the ECS instances and the computer names of the Windows systems. Format: <c>ip,hostname</c>. Separate multiple instances with semicolons (;).</para>
         /// <remarks>
-        /// <para>For more information about how to view the computer name, see <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a>.</para>
+        /// <para>For more information about how to view the computer name, see <a href="https://help.aliyun.com/document_detail/124321.html">Set the distributed transaction whitelist</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

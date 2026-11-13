@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The task ID. This ID is returned when you call the <b>CreateReplicationLink</b> operation to create a disaster recovery instance.</para>
+        /// <para>The task ID. This is the task ID returned when you call the <b>CreateReplicationLink</b> operation to create a disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8413252</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task name. This is the name of the task when you call the <b>CreateReplicationLink</b> operation to create a disaster recovery instance.</para>
+        /// <para>The task name. This is the task name specified when you call the <b>CreateReplicationLink</b> operation to create a disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test01</para>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>create</b>: Creates a synchronization link.</description></item>
-        /// <item><description><b>create-dryrun</b>: Performs a precheck for creating a synchronization link.</description></item>
+        /// <item><description><b>create</b>: Creates a replication link.</description></item>
+        /// <item><description><b>create-dryrun</b>: Performs a precheck for creating a replication link.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

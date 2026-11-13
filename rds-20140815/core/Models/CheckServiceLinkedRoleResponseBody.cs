@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the service-linked role (SLR) has been created.</para>
+        /// <para>Indicates whether a service-linked role (SLR) has been created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

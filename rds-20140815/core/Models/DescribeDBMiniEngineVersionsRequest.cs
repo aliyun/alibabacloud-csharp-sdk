@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MySQL: <b>8.0</b>, <b>5.7</b>, <b>5.6</b>, and <b>5.5</b>.</description></item>
-        /// <item><description>PostgreSQL: <b>17.0</b>, <b>16.0</b>, <b>15.0</b>, <b>14.0</b>, <b>13.0</b>, <b>12.0</b>, <b>11.0</b>, and <b>10.0</b>.</description></item>
+        /// <item><description>MySQL: <b>8.0</b>, <b>5.7</b>, <b>5.6</b>, and <b>5.5</b></description></item>
+        /// <item><description>PostgreSQL: <b>17.0</b>, <b>16.0</b>, <b>15.0</b>, <b>14.0</b>, <b>13.0</b>, <b>12.0</b>, <b>11.0</b>, and <b>10.0</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Basic</b>: Basic Edition.</description></item>
-        /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
+        /// <item><description><b>HighAvailability</b>: high-availability series.</description></item>
         /// <item><description><b>cluster</b>: Cluster Edition.</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition.</description></item>
         /// </list>
@@ -103,12 +103,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>local_ssd</b>: premium local SSD.</description></item>
-        /// <item><description><b>general_essd</b>: premium performance disk.</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
-        /// <item><description><b>cloud_essd</b>: PL1 ESSD.</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
+        /// <item><description><b>local_ssd</b>: premium local SSD</description></item>
+        /// <item><description><b>general_essd</b>: premium performance disk</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD cloud disk</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD cloud disk</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD cloud disk</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD cloud disk</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

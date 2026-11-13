@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The effective time. Valid values:</para>
+            /// <para>The effective period. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Immediate</b> (default): takes effect immediately.</description></item>
             /// <item><description><b>MaintainTime</b>: takes effect within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</description></item>

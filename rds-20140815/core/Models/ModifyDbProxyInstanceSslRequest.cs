@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDbProxyInstanceSslRequest : TeaModel {
         /// <summary>
-        /// <para>A reserved parameter. No configuration is required.</para>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The operation to perform on Secure Sockets Layer (SSL) encryption. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: Disables Secure Sockets Layer (SSL) encryption.</description></item>
-        /// <item><description>1: Enables Secure Sockets Layer (SSL) encryption or modifies the Secure Sockets Layer (SSL) encryption endpoint.</description></item>
+        /// <item><description>1: Enables Secure Sockets Layer (SSL) encryption or modifies the endpoint for Secure Sockets Layer (SSL) encryption.</description></item>
         /// <item><description>2: Updates the certificate validity period.</description></item>
         /// </list>
         /// <remarks>

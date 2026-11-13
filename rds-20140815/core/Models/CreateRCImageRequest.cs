@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot used to create the custom image. You can call the DescribeRCSnapshots operation to query the snapshot ID.</para>
+        /// <para>The ID of the snapshot used to create the custom image. You can call the DescribeRCSnapshots operation to query snapshot IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rcds-c9bjdl79vz5dx********</para>

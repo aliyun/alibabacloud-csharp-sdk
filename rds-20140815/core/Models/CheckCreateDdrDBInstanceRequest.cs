@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CheckCreateDdrDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set that is used for restoration from a backup set. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</para>
+        /// <para>The ID of the backup set that is used to restore data. This parameter is required when you restore data by using a backup set. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>RestoreType</b> is set to <b>0</b>.</para>
+        /// <para>Required when <b>RestoreType</b> is set to <b>0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the destination database engine. Valid values vary based on the <b>Engine</b> parameter:</para>
+        /// <para>The version of the destination database engine. Valid values vary based on the value of the <b>Engine</b> parameter:</para>
         /// <list type="bullet">
         /// <item><description>MySQL: <b>5.5/5.6/5.7/8.0</b></description></item>
-        /// <item><description>SQL Server: <b>2008r2 (Premium Local SSD, discontinued)/08r2_ent_ha (cloud disk, discontinued)/2012/2012_ent_ha/2012_std_ha/2012_web/2014_std_ha/2016_ent_ha/2016_std_ha/2016_web/2017_std_ha/2017_ent/2019_std_ha/2019_ent</b></description></item>
+        /// <item><description>SQL Server: <b>2008r2 (instance with Premium Local SSDs, discontinued)/08r2_ent_ha (cloud disk edition, discontinued)/2012/2012_ent_ha/2012_std_ha/2012_web/2014_std_ha/2016_ent_ha/2016_std_ha/2016_web/2017_std_ha/2017_ent/2019_std_ha/2019_ent</b></description></item>
         /// <item><description>PostgreSQL: <b>10.0/11.0/12.0/13.0/14.0/15.0</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>For SQL Server instances, <c>_ent</c> indicates the Enterprise Cluster Edition, <c>_ent_ha</c> indicates the Enterprise Edition, <c>_std_ha</c> indicates the Standard Edition, and <c>_web</c> indicates the Web Edition.</para>
+        /// <para>For SQL Server instances, <c>_ent</c> indicates Enterprise Cluster Edition, <c>_ent_ha</c> indicates Enterprise Edition, <c>_std_ha</c> indicates Standard Edition, and <c>_web</c> indicates Web Edition.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the destination instance. You can call the DescribeRegions operation to query region IDs.</para>
+        /// <para>The region ID of the destination instance. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,9 +113,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time to which you want to restore data. The point in time must be earlier than the current time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
+        /// <para>The point in time to which you want to restore data. This parameter is required when you restore data to a specific point in time. The specified point in time must be earlier than the current time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
+        /// <para>Required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,8 +128,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The restoration method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): Restoration from a backup set. If you set this parameter to 0, you must also specify the <b>BackupSetId</b> parameter.</description></item>
-        /// <item><description><b>1</b>: Point-in-time restoration. If you set this parameter to 1, you must also specify the <b>RestoreTime</b>, <b>SourceRegion</b>, and <b>SourceDBInstanceName</b> parameters.</description></item>
+        /// <item><description><b>0</b> (default): Restores data by using a backup set. You must also specify the <b>BackupSetId</b> parameter.</description></item>
+        /// <item><description><b>1</b>: Restores data to a specific point in time. You must also specify the <b>RestoreTime</b>, <b>SourceRegion</b>, and <b>SourceDBInstanceName</b> parameters.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -141,9 +141,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source instance.</para>
+        /// <para>The ID of the source instance. This parameter is required when you restore data to a specific point in time.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
+        /// <para>Required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -154,9 +154,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceDBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source instance.</para>
+        /// <para>The region ID of the source instance. This parameter is required when you restore data to a specific point in time.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
+        /// <para>Required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

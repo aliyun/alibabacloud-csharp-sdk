@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpdatePostgresExtensionsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate requests. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate requests. You can generate the value on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database in the instance. You can call the DescribeDatabases operation to query the name.</para>
+        /// <para>The names of the databases in the instance. You can call the DescribeDatabases operation to query the names.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBNames { get; set; }
 
         /// <summary>
-        /// <para>The names of the plug-ins. Separate multiple plug-in names with commas (,).</para>
+        /// <para>The names of the extensions. Separate multiple extension names with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

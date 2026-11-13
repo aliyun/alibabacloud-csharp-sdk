@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to perform a fuzzy match on the instance description.</para>
+        /// <para>The keyword used for fuzzy matching of the instance description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance ID. This parameter is used to query a single instance.</para>
         /// <remarks>
-        /// <para>If no instance ID is specified (neither <b>InstanceId</b> nor <b>InstanceIds</b> is specified), the details of all RDS Custom instances in the specified region are returned.</para>
+        /// <para>If no instance ID is specified (neither <b>InstanceId</b> nor <b>InstanceIds</b> is passed), the details of all RDS Custom instances in the specified region are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The instance IDs.</para>
-        /// <para>This parameter is used to query multiple instances at a time. Separate multiple instance IDs with commas (,). You can specify up to 100 instance IDs. Input format: <c>[&quot;InstanceId1&quot;,&quot;InstanceId2&quot;]</c>.</para>
+        /// <para>This parameter is used to query multiple instances at a time. Separate multiple instance IDs with commas (,). You can specify up to 100 instance IDs. Format: <c>[&quot;Instance ID 1&quot;,&quot;Instance ID 2&quot;]</c>.</para>
         /// <remarks>
         /// <para>If both <b>InstanceIds</b> and <b>InstanceId</b> are specified, the value of <b>InstanceIds</b> prevails.</para>
         /// </remarks>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query.</para>
+        /// <para>The number of entries per page set in the paging settings for a paged query.</para>
         /// <para>Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags used to filter instances. Input format: <c>{&quot;TagKey&quot;:&quot;TagValue&quot;}</c>.</para>
+        /// <para>The tags used to filter instances. Format: <c>{&quot;TagKey&quot;:&quot;TagValue&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;testRC&quot;:&quot;test01&quot;}</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6f7l4fg90****</para>

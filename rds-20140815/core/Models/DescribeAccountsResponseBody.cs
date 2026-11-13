@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The time when the super administrator (SA) account was first activated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The time when the privileged account was enabled for the first time. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time).</para>
         /// <remarks>
         /// <para>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</para>
         /// </remarks>
@@ -141,13 +141,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SystemAdminAccountFirstActivationTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the super administrator (SA) account is activated. Valid values:</para>
+        /// <para>Specifies whether the privileged account is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: Activated.</description></item>
-        /// <item><description><b>False</b>: Not activated.</description></item>
+        /// <item><description><b>True</b>: The account is enabled.</description></item>
+        /// <item><description><b>False</b>: The account is not enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only ApsaraDB RDS for SQL Server instances support the <a href="https://help.aliyun.com/document_detail/170736.html">super administrator (SA) account</a>, and this parameter has a return value. For instances of other engines, the return value is empty.</para>
+        /// <para>Only ApsaraDB RDS for SQL Server instances support <a href="https://help.aliyun.com/document_detail/170736.html">privileged accounts</a> and return a value for this parameter. Instances of other database engines return an empty value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SystemAdminAccountStatus { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

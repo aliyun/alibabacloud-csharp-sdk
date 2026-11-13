@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <para>The details of the instance operation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx</para>
+                /// <para>Instance type adjustment</para>
                 /// </summary>
                 [NameInMap("DetailReason")]
                 [Validation(Required=false)]
@@ -78,12 +78,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The system event categorization. Valid values:</para>
+                /// <para>The category of the system event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Exception</b>: abnormal event</description></item>
+                /// <item><description><b>Exception</b>: exception events</description></item>
                 /// <item><description><b>Optimize</b>: optimization events</description></item>
-                /// <item><description><b>Notification</b>: notification event</description></item>
-                /// <item><description><b>Maintenance</b>: scheduled maintenance event</description></item>
+                /// <item><description><b>Notification</b>: notification events</description></item>
+                /// <item><description><b>Maintenance</b>: scheduled maintenance events</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <para>The event details.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxxx</para>
+                /// <para>The instance type adjustment task has started</para>
                 /// </summary>
                 [NameInMap("EventDetail")]
                 [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <para>The impact overview of the event.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxxx</para>
+                /// <para>The event may cause a brief connection interruption</para>
                 /// </summary>
                 [NameInMap("EventImpact")]
                 [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <para>The source of the event operation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxxx</para>
+                /// <para>Initiated by the user</para>
                 /// </summary>
                 [NameInMap("EventReason")]
                 [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <item><description><b>SystemMaintenance.Redeploy</b>: The instance undergoes redeployment due to system maintenance.</description></item>
                 /// <item><description><b>SystemFailure.Reboot</b>: The instance is restarted due to a system fault.</description></item>
                 /// <item><description><b>SystemFailure.Redeploy</b>: The instance undergoes redeployment due to a system fault.</description></item>
-                /// <item><description><b>SystemFailure.Delete</b>: The instance is released because instance creation failed.</description></item>
+                /// <item><description><b>SystemFailure.Delete</b>: The instance is released due to a failed creation.</description></item>
                 /// <item><description><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance fault.</description></item>
                 /// <item><description><b>InstanceExpiration.Stop</b>: The subscription instance is stopped due to expiration.</description></item>
                 /// <item><description><b>InstanceExpiration.Delete</b>: The subscription instance is released due to expiration.</description></item>
@@ -259,10 +259,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the event is successfully closed. Valid values:</para>
+                /// <para>Indicates whether the event is closed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: closed</description></item>
-                /// <item><description><b>1</b>: open</description></item>
+                /// <item><description><b>0</b>: no</description></item>
+                /// <item><description><b>1</b>: yes</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</para>

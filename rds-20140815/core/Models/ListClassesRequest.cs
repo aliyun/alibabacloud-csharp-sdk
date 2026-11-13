@@ -23,17 +23,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The commodity code of the instance to query.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><b>bards</b>: Pay-as-you-go primary instance.</description></item>
-        /// <item><description><b>rds</b>: Subscription primary instance.</description></item>
-        /// <item><description><b>rords</b>: Pay-as-you-go read-only instance.</description></item>
-        /// <item><description><b>rds_rordspre_public_cn</b>: Subscription read-only instance.</description></item>
+        /// <item><description><b>bards</b>: pay-as-you-go primary instance</description></item>
+        /// <item><description><b>rds</b>: subscription primary instance</description></item>
+        /// <item><description><b>rords</b>: pay-as-you-go read-only instance</description></item>
+        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instance</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><b>bards_intl</b>: Pay-as-you-go primary instance.</description></item>
-        /// <item><description><b>rds_intl</b>: Subscription primary instance.</description></item>
-        /// <item><description><b>rords_intl</b>: Pay-as-you-go read-only instance.</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: Subscription read-only instance.</description></item>
+        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instance</description></item>
+        /// <item><description><b>rds_intl</b>: subscription primary instance</description></item>
+        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instance</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instance</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the ID.</para>
         /// <remarks>
-        /// <para>When you query the list of instance types for read-only instances, which means you specify the commodity code of a read-only instance for the <b>CommodityCode</b> parameter, this parameter is required.</para>
+        /// <para>When you query the instance types of read-only instances, which means you specify the commodity code of a read-only instance for the <b>CommodityCode</b> parameter, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The order type to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b>: Purchase.</description></item>
-        /// <item><description><b>UPGRADE</b>: Upgrade.</description></item>
-        /// <item><description><b>RENEW</b>: Renewal.</description></item>
-        /// <item><description><b>CONVERT</b>: Billing method conversion.</description></item>
+        /// <item><description><b>BUY</b>: purchase</description></item>
+        /// <item><description><b>UPGRADE</b>: upgrade</description></item>
+        /// <item><description><b>RENEW</b>: renewal</description></item>
+        /// <item><description><b>CONVERT</b>: billing method conversion</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The region ID. You can call the DescribeRegions operation to obtain the region ID.</para>
         /// <remarks>
-        /// <para>If you use an Alibaba Cloud international site account, this parameter is required.</para>
+        /// <para>If you use an Alibaba Cloud International site account, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

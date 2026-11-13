@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. You do not need to configure it.</para>
+        /// <para>Deprecated. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>

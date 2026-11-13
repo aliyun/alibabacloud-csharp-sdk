@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AllocateReadWriteSplittingConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the read-only endpoint. The prefix must be unique, can contain lowercase letters and hyphens (-), must start with a letter, and cannot exceed 30 characters in length.</para>
+        /// <para>The prefix of the read-only endpoint. The prefix must be unique and can contain only lowercase letters and hyphens. It must start with a letter and be up to 30 characters in length.</para>
         /// <remarks>
-        /// <para>By default, the prefix is in the format of &quot;instance name + rw&quot;.</para>
+        /// <para>By default, the prefix consists of the instance name followed by &quot;rw&quot;.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary instance. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the primary instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The mode of read weight distribution. Valid values:</para>
+        /// <para>The read weight distribution mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b>: Read weights are automatically assigned based on instance specifications.</description></item>
-        /// <item><description><b>Custom</b>: Read weights are manually assigned.</description></item>
+        /// <item><description><b>Standard</b>: automatic distribution based on instance specifications</description></item>
+        /// <item><description><b>Custom</b>: custom weight distribution</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the read-only endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b>: public endpoint.</description></item>
-        /// <item><description><b>Intranet</b>: internal endpoint.</description></item>
+        /// <item><description><b>Internet</b>: public network</description></item>
+        /// <item><description><b>Intranet</b>: internal network</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is Intranet, and the network type of the internal endpoint is the same as that of the primary instance.</para>
+        /// <para>Default value: Intranet. The internal network type is consistent with that of the primary instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,15 +104,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The read weight distribution, which specifies the ratio of read requests that are routed to the primary instance and read-only instances. The value is incremented in steps of 100. Maximum value: 10000.</para>
+        /// <para>The read weight distribution, which specifies the ratio of read requests routed to the primary and read-only instances. The value must be a multiple of 100. Maximum value: 10000.</para>
         /// <list type="bullet">
         /// <item><description>Format for ApsaraDB RDS instances: <c>{&quot;&lt;Read-only instance ID&gt;&quot;:&lt;Weight&gt;,&quot;master&quot;:&lt;Weight&gt;,&quot;slave&quot;:&lt;Weight&gt;}</c></description></item>
-        /// <item><description>Format for MyBASE instances: <c>[{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;Read-only instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</c></description></item>
+        /// <item><description>Format for ApsaraDB MyBase instances: <c>[{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;Read-only instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</c></description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required when <b>DistributionType</b> is set to <b>Custom</b>.</description></item>
-        /// <item><description>This parameter is invalid when <b>DistributionType</b> is set to <b>Standard</b>.</description></item>
+        /// <item><description>If <b>DistributionType</b> is set to <b>Custom</b>, this parameter is required.</description></item>
+        /// <item><description>If <b>DistributionType</b> is set to <b>Standard</b>, this parameter is invalid.</description></item>
         /// </list>
         /// </remarks>
         /// 

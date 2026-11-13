@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateRCNodePoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIdSets")]
         [Validation(Required=false)]

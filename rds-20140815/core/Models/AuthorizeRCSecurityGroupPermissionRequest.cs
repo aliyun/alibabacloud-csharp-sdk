@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class AuthorizeRCSecurityGroupPermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The rule direction. Valid values:</para>
+        /// <para>The direction of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ingress</b>: inbound traffic to the security group.</description></item>
-        /// <item><description><b>egress</b>: outbound traffic from the security group.</description></item>
+        /// <item><description><b>ingress</b>: inbound</description></item>
+        /// <item><description><b>egress</b>: outbound</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The security group information.</para>
+        /// <para>The security group rules.</para>
         /// </summary>
         [NameInMap("SecurityGroupPermissions")]
         [Validation(Required=false)]
         public List<AuthorizeRCSecurityGroupPermissionRequestSecurityGroupPermissions> SecurityGroupPermissions { get; set; }
         public class AuthorizeRCSecurityGroupPermissionRequestSecurityGroupPermissions : TeaModel {
             /// <summary>
-            /// <para>The destination IP address range for outbound authorization. Both CIDR format and IPv4 format IP address ranges are supported.</para>
+            /// <para>The destination IP address range for outbound authorization. CIDR format and IPv4 format IP addresses are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.1/12</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DestCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The protocol type. This parameter is not case-sensitive. Valid values: </para>
+            /// <para>The protocol type. The value is not case-sensitive. Valid values: </para>
             /// <list type="bullet">
             /// <item><description><b>ICMP</b></description></item>
             /// <item><description><b>GRE</b></description></item>
@@ -88,9 +88,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The destination port range for the transport layer protocol. Valid values:</para>
+            /// <para>The range of destination ports for the transport layer protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP or UDP: <b>1</b> to <b>65535</b>. Separate the start port and the end port with a forward slash (/). Example: <b>1/200</b>. Invalid example: <b>200/1</b>.</description></item>
+            /// <item><description>TCP or UDP: <b>1</b> to <b>65535</b>. Use a forward slash (/) to separate the start port and the end port. Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
             /// <item><description>ICMP: <b>-1/-1</b>.</description></item>
             /// <item><description>GRE: <b>-1/-1</b>.</description></item>
             /// <item><description>ALL: <b>-1/-1</b>.</description></item>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string PortRange { get; set; }
 
             /// <summary>
-            /// <para>The rule priority. Valid values: 1 to 100. A smaller value indicates a higher priority. If multiple security group rules have the same priority, the drop rule takes precedence.</para>
+            /// <para>The priority of the rule. Valid values: 1 to 100. A smaller value indicates a higher priority. If multiple rules have the same priority, the drop rule takes precedence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The source IP address range for inbound authorization. Both CIDR format and IPv4 format IP address ranges are supported.</para>
+            /// <para>The source IP address range for inbound authorization. CIDR format and IPv4 format IP addresses are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.1/12</para>
@@ -124,9 +124,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The source port range for the transport layer protocol. Valid values:</para>
+            /// <para>The range of source ports for the transport layer protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP or UDP: <b>1</b> to <b>65535</b>. Separate the start port and the end port with a forward slash (/). Example: <b>1/200</b>. Invalid example: <b>200/1</b>.</description></item>
+            /// <item><description>TCP or UDP: <b>1</b> to <b>65535</b>. Use a forward slash (/) to separate the start port and the end port. Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
             /// <item><description>ICMP: <b>-1/-1</b>.</description></item>
             /// <item><description>GRE: <b>-1/-1</b>.</description></item>
             /// <item><description>ALL: <b>-1/-1</b>.</description></item>

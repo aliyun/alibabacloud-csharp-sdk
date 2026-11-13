@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the internal endpoint.</para>
-        /// <para>When you create an endpoint, an internal endpoint is automatically created. This parameter specifies the prefix of the internal endpoint.</para>
+        /// <para>The prefix of the internal endpoint. Creating an endpoint automatically creates an internal endpoint. This parameter specifies the prefix of the internal endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceEndpointDescription { get; set; }
 
         /// <summary>
-        /// <para>The endpoint type. Valid values:</para>
+        /// <para>The type of the endpoint. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Primary: the read/write endpoint of the instance.</para>
         /// </description></item>
@@ -59,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceEndpointType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +69,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes associated with the endpoint.</para>
+        /// <para>The list of node information for the endpoint.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeItems")]
@@ -78,8 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string NodeItemsShrink { get; set; }
 
         /// <summary>
-        /// <para>The port number for the internal network connection. You can specify a custom port number when you create an internal network connection.</para>
-        /// <para>Valid values: 3000 to 5999.</para>
+        /// <para>The port number for the internal connection. You can specify a custom port number when you create an internal connection. Valid values: 3000 to 5999.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +88,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The IP address for the internal network connection.</para>
+        /// <para>The IP address for the internal connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.XX.XX</para>
@@ -100,7 +98,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -114,7 +112,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch for the internal network connection.</para>
+        /// <para>The vSwitch ID for the internal connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +123,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC for the internal network connection.</para>
+        /// <para>The VPC ID for the internal connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

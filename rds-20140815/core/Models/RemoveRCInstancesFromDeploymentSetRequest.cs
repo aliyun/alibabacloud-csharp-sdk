@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RCInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

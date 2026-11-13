@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteGadInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS global active database cluster that you want to delete. You can call DescribeGadInstances to query the cluster ID.</para>
+        /// <para>The ID of the ApsaraDB RDS global active database cluster to be deleted. You can call the DescribeGadInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string GadInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the central node (primary node) in the cluster. You can call DescribeGadInstances to query the region ID.</para>
+        /// <para>The region ID of the central node of the cluster. You can call the DescribeGadInstances operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

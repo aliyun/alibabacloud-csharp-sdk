@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The usage of the key. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>DiskEncryption</b>: cloud disk encryption.</description></item>
-            /// <item><description><b>TDE</b>: transparent data encryption.</description></item>
+            /// <item><description><b>TDE</b>: Transparent Data Encryption (TDE).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
             /// <item><description><b>RESTARTING</b>: The instance is being restarted.</description></item>
             /// <item><description><b>CLASS_CHANGING</b>: The instance is undergoing a specification change.</description></item>
-            /// <item><description><b>INS_MAINTAINING</b>: The instance is undergoing maintenance.</description></item>
+            /// <item><description><b>INS_MAINTAINING</b>: The instance is under maintenance.</description></item>
             /// <item><description><b>BACKUP_RECOVERING</b>: The instance is being restored from a backup.</description></item>
             /// <item><description><b>NET_MODIFYING</b>: The network configuration of the instance is being changed.</description></item>
             /// </list>

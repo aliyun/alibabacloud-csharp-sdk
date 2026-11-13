@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The ID of the dedicated cluster. You can call the DescribeDedicatedHostGroups operation to query the ID. This parameter is used to query the details of all vSwitches in the VPC to which the dedicated cluster belongs.</para>
         /// <remarks>
-        /// <para>You must specify either this parameter or <b>VpcId</b>.</para>
+        /// <para>You must specify this parameter or <b>VpcId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the vSwitches belong.</para>
+        /// <para>The ID of the VPC to which the vSwitch belongs.</para>
         /// <remarks>
-        /// <para>You must specify either this parameter or <b>DedicatedHostGroupId</b>.</para>
+        /// <para>You must specify this parameter or <b>DedicatedHostGroupId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone to which the vSwitch belongs. You can call the DescribeAvailableZones operation to query the zone ID. This parameter is used to filter the results and return only the vSwitches in the specified zone.</para>
+        /// <para>The ID of the zone to which the vSwitch belongs. You can call the DescribeAvailableZones operation to query the zone ID. This parameter is used to filter the query results and return only the details of vSwitches in the specified zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-k</para>

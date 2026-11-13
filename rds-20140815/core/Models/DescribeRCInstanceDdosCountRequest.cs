@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the RDS Custom instance.</para>
+        /// <para>The region ID of the Custom instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

@@ -11,15 +11,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class CreateOrderForDeleteDBNodesRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
-        /// <ol>
-        /// <item><description><para><b>true</b>: enables automatic payment. You must ensure that your account balance is sufficient.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: generates an unpaid order without deducting fees.</para>
-        /// </description></item>
-        /// </ol>
-        /// <remarks>
-        /// <para>Default value: true. If your payment method has an insufficient balance, you can change the Settings of the AutoPay parameter to false. In this case, an unpaid order is generated, and you can logon to the ApsaraDB RDS console to pay for the order.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enables automatic payment. You must ensure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: Generates an unpaid order without deducting fees.</description></item>
+        /// </list>
+        /// <para>Default value: true. If your payment method has an insufficient balance, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -39,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can be up to 64 characters in length and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -87,8 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<string> DBNodeId { get; set; }
 
         /// <summary>
-        /// <para>The current database engine version. Valid values:</para>
-        /// <para>MySQL: <b>5.5, 5.6, 5.7, and 8.0</b></para>
+        /// <para>The current database engine version. Valid values for MySQL: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, and <b>8.0</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.7</para>

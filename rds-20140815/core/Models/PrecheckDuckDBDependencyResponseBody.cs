@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class PrecheckDuckDBDependencyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The check items that do not meet the prerequisites for creating a DuckDB-based analytical instance.</para>
+        /// <para>The items that do not meet the prerequisites for creating a DuckDB-based analytical instance.</para>
         /// </summary>
         [NameInMap("FailedCheckItems")]
         [Validation(Required=false)]
         public List<PrecheckDuckDBDependencyResponseBodyFailedCheckItems> FailedCheckItems { get; set; }
         public class PrecheckDuckDBDependencyResponseBodyFailedCheckItems : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the issue can be fixed with one click.</para>
+            /// <para>Specifies whether the item can be fixed with one click.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes. You can call the <a href="https://help.aliyun.com/document_detail/2623684.html">ModifyDBInstanceConfig</a> operation to fix the issue with one click.</description></item>
+            /// <item><description><b>true</b>: Yes. You can call the <a href="https://help.aliyun.com/document_detail/2623684.html">ModifyDBInstanceConfig</a> operation to fix the item with one click.</description></item>
             /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Notice: If the major version of the database instance does not meet the requirements, you must <a href="https://help.aliyun.com/document_detail/2623684.html">manually upgrade</a> the major version.</para>
+            /// <para>Notice: If the major engine version of the database instance does not meet the requirements, you must <a href="https://help.aliyun.com/document_detail/2623684.html">manually upgrade</a> the instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <list type="bullet">
             /// <item><description><b>Parameter</b>: parameter.</description></item>
             /// <item><description><b>MinorVersion</b>: minor engine version.</description></item>
-            /// <item><description><b>MajorVersion</b>: major database version.</description></item>
+            /// <item><description><b>MajorVersion</b>: major engine version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the precheck for creating a DuckDB-based analytical instance is passed. Valid values:</para>
+        /// <para>Specifies whether the primary instance passes the precheck for creating a DuckDB-based analytical instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Yes.</description></item>
-        /// <item><description><b>false</b>: No.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

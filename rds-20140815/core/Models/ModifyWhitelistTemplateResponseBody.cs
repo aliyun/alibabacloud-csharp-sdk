@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The returned status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ok</b>: Normal response.</description></item>
-            /// <item><description><b>error</b>: Error response.</description></item>
+            /// <item><description><b>ok</b>: Normal.</description></item>
+            /// <item><description><b>error</b>: Error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. The ID is unique for each request and can be used for troubleshooting.</para>
+        /// <para>The ID of the request. Each request has a unique ID to facilitate troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</para>
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

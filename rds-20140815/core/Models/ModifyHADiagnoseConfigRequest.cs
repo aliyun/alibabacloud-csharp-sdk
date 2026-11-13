@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The availability check method of the instance. Valid values:</para>
+        /// <para>The availability detection method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SHORT</b>: Short connection.</description></item>
-        /// <item><description><b>LONG</b>: Long connection.</description></item>
+        /// <item><description><b>SHORT</b>: short connection</description></item>
+        /// <item><description><b>LONG</b>: long connection</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

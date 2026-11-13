@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class StopRCInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to force a shutdown. Valid values:</para>
+        /// <para>Specifies whether to force shutdown. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Forces a shutdown.</para>
+        /// <item><description><para><b>true</b>: Forces the instance to shut down.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): Performs a normal shutdown.</para>
+        /// <item><description><para><b>false</b> (default): Shuts down the instance normally.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The stop mode configured when the instance is stopped. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>StopCharging: Economical mode. After economical mode is enabled:</para>
+        /// <item><description><para>StopCharging: economical mode. After economical mode is enabled:</para>
         /// <list type="bullet">
         /// <item><description>Billing for compute resources is suspended.</description></item>
         /// <item><description>Billing for the system cloud disk and data cloud disks continues.</description></item>
-        /// <item><description>Because compute resources are reclaimed, the instance may fail to start due to insufficient inventory. Try again later or change the instance type.</description></item>
+        /// <item><description>Because compute resources are reclaimed, the instance may fail to start due to insufficient resources. In this case, try again later or change the instance type.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>KeepCharging: Standard mode. The instance continues to be billed after it is stopped.</para>
+        /// <item><description><para>KeepCharging: standard mode. The instance continues to be billed after it is stopped.</para>
         /// </description></item>
         /// </list>
         /// 

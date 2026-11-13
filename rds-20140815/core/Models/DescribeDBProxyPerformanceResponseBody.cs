@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>An internal parameter. You can ignore this parameter.</para>
+        /// <para>The internal parameter. You can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>

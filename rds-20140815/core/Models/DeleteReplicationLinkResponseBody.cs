@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteReplicationLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the disaster recovery instance.</para>
+        /// <para>The ID of the disaster recovery instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostgreSQL：pgm-bp1trqb4p1******
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1EFCFB59-7152-19C4-8C53-F887D107AFD3</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>159****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zbtest</para>

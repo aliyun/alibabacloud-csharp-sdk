@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateReadOnlyDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The internal database connection address of the read-only instance.</para>
+        /// <para>The internal database endpoint of the created read-only instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rr-****.mysql.rds.aliyuncs.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The read-only instance ID.</para>
+        /// <para>The instance ID of the created read-only instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rr-uf6wjk5****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The internal database connection port of the read-only instance.</para>
+        /// <para>The internal database port of the created read-only instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>

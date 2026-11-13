@@ -27,7 +27,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The cycle time. Multiple values are separated by commas. If cycleType is Week, valid values are 1 to 7, which represent Monday to Sunday. If cycleType is Month, valid values are 1 to 28.</para>
+            /// <para>The cycle time. Multiple values are separated by commas.</para>
+            /// <list type="bullet">
+            /// <item><description>If cycleType is Week, valid values are 1 to 7, which represent Monday to Sunday.</description></item>
+            /// <item><description>If cycleType is Month, valid values are 1 to 28.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the configuration takes effect. Valid values: </para>
+            /// <para>Specifies whether the configuration is valid. Valid values: </para>
             /// <list type="bullet">
             /// <item><description>1: Valid. </description></item>
             /// <item><description>2: Invalid.</description></item>
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether the configuration has been set. The value is 0 when you access the configuration for the first time. Valid values:</para>
+        /// <para>Specifies whether the configuration has been set. The value is 0 for the first access. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Yes. </description></item>
         /// <item><description>0: No.</description></item>

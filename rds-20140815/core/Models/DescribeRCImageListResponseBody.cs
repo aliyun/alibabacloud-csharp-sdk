@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The mapping between cloud disks and snapshots included in the image.</para>
+            /// <para>The mappings between cloud disks and snapshots in the image.</para>
             /// </summary>
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
             public List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> DiskDeviceMappings { get; set; }
             public class DescribeRCImageListResponseBodyImagesDiskDeviceMappings : TeaModel {
                 /// <summary>
-                /// <para>The device information of the cloud disk, such as <c>/dev/xvdb</c>.</para>
+                /// <para>The device name of the cloud disk, such as <c>/dev/xvdb</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/dev/xvdb</para>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Size { get; set; }
 
                 /// <summary>
-                /// <para>The property of the cloud disk. Valid values:</para>
+                /// <para>The type of the cloud disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>system</b>: System cloud disk.</description></item>
-                /// <item><description><b>data</b>: Data cloud disk.</description></item>
+                /// <item><description><b>system</b>: system cloud disk</description></item>
+                /// <item><description><b>data</b>: data cloud disk</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

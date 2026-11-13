@@ -12,15 +12,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Logical</b>: logical backup (supported only for ApsaraDB RDS for MySQL instances with local SSDs)</description></item>
-        /// <item><description><b>Physical</b>: physical backup (supported for ApsaraDB RDS for MySQL instances with local SSDs, ApsaraDB RDS for SQL Server, and ApsaraDB RDS for PostgreSQL)</description></item>
-        /// <item><description><b>Snapshot</b>: snapshot backup (supported for ApsaraDB RDS for MySQL instances with cloud disks, ApsaraDB RDS for SQL Server, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for MariaDB)</description></item>
+        /// <item><description><b>Logical</b>: logical backup. This value is supported only for ApsaraDB RDS for MySQL instances with local SSDs.</description></item>
+        /// <item><description><b>Physical</b>: physical backup. This value is supported for ApsaraDB RDS for MySQL instances with local SSDs, ApsaraDB RDS for SQL Server instances, and ApsaraDB RDS for PostgreSQL instances.</description></item>
+        /// <item><description><b>Snapshot</b>: snapshot backup. This value is supported for ApsaraDB RDS for MySQL instances with cloud disks, ApsaraDB RDS for SQL Server instances, ApsaraDB RDS for PostgreSQL instances, and ApsaraDB RDS for MariaDB instances.</description></item>
         /// </list>
         /// <para>Default value: <b>Physical</b>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When you use logical backup, the database must contain data.</description></item>
-        /// <item><description>ApsaraDB RDS for MariaDB instances support only snapshot backup, but you must set this parameter to <b>Physical</b>.</description></item>
+        /// <item><description>When you use logical backup, the databases must contain data.</description></item>
+        /// <item><description>ApsaraDB RDS for MariaDB instances support only snapshot backup. However, you must set this parameter to <b>Physical</b> for these instances.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -32,9 +32,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupMethod { get; set; }
 
         /// <summary>
+        /// <para>The retention period of the backup set.</para>
         /// <list type="bullet">
-        /// <item><description><b>SQL Server</b>: When the BackupStrategy parameter is set to db, the BackupMethod parameter is set to Physical, and the BackupType parameter is set to FullBackup, you can specify the retention period of the backup set. Valid values: 7 to 730 days, and -1 (long-term retention (LTR)).</description></item>
-        /// <item><description><b>MySQL</b>: You can specify the retention period of the backup set. Valid values: 7 to 730 days, and -1 (long-term retention (LTR)).</description></item>
+        /// <item><description><b>ApsaraDB RDS for SQL Server</b>: When the BackupStrategy parameter is set to db, the BackupMethod parameter is set to Physical, and the BackupType parameter is set to FullBackup, you can specify the retention period of the backup set. Valid values: 7 to 730 days, and -1 (long-term retention (LTR)).</description></item>
+        /// <item><description><b>ApsaraDB RDS for MySQL</b>: You can specify the retention period of the backup set. Valid values: 7 to 730 days, and -1 (long-term retention (LTR)).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,8 +48,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>db</b>: database-level backup</description></item>
-        /// <item><description><b>instance</b>: instance-level backup</description></item>
+        /// <item><description><b>db</b>: database-level backup.</description></item>
+        /// <item><description><b>instance</b>: instance-level backup.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when the following conditions are met:</para>
@@ -68,8 +69,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup type for ApsaraDB RDS for SQL Server instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Auto</b> (default): automatically selects full backup or incremental backup</description></item>
-        /// <item><description><b>FullBackup</b>: full backup</description></item>
+        /// <item><description><b>Auto</b>: The system automatically selects full backup or incremental backup. This is the default value.</description></item>
+        /// <item><description><b>FullBackup</b>: full backup.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when the <b>BackupMethod</b> parameter is set to <b>Physical</b>.</para>
@@ -83,7 +84,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of databases. Separate multiple databases with commas (,).</para>
+        /// <para>The names of the databases. Separate multiple database names with commas (,).</para>
         /// <remarks>
         /// <para>This parameter takes effect only when the <b>BackupStrategy</b> parameter is set to <b>db</b>.</para>
         /// </remarks>

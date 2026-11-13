@@ -20,9 +20,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AliUid { get; set; }
 
         /// <summary>
+        /// <para>The business ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>China site: 26842</description></item>
-        /// <item><description>International site: 26888</description></item>
+        /// <item><description>26842: China site.</description></item>
+        /// <item><description>26888: International site.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,10 +69,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The dynamic attributes of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance dynamics</a>.</para>
+        /// <para>The dynamic properties of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2391834.html">Instance activities</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1 (indicating that the target instance does not participate in any promotional activities)</para>
+        /// <para>1 (The target instance is not enrolled in any promotional activities.)</para>
         /// </summary>
         [NameInMap("IsActivity")]
         [Validation(Required=false)]

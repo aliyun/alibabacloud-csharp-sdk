@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ConfirmNotifyRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the user who confirms the notification. You can also set this parameter to <b>0</b>, which indicates that the notification is automatically confirmed by the system.</para>
+        /// <para>The Alibaba Cloud account ID of the user who confirms the notification. You can also specify <b>0</b> to indicate that the notification is automatically confirmed by the system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

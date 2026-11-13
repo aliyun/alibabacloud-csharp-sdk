@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the backup encryption service-linked role.</para>
+        /// <para>The ARN of the service-linked role for backup encryption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1139916************:role/AliyunServiceRoleForRdsBackupEncryption</para>

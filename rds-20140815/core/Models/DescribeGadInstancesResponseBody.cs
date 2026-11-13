@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeGadInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of GAD clusters.</para>
+        /// <para>The list of ApsaraDB RDS global active database clusters.</para>
         /// </summary>
         [NameInMap("GadInstances")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string DBInstanceID { get; set; }
 
                 /// <summary>
-                /// <para>The JSON array that contains the Data Transmission Service (DTS) synchronization information.</para>
+                /// <para>The JSON array that contains Data Transmission Service (DTS) synchronization information.</para>
                 /// <remarks>
                 /// <para>Each unit node (secondary node) synchronizes data with the central node (primary node) through DTS. This parameter contains the DTS synchronization link ID and request ID.</para>
                 /// </remarks>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The resource group ID.</para>
+                /// <para>The ID of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-acfmy****</para>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The role of the node in the GAD cluster. Valid values:</para>
+                /// <para>The node type in the ApsaraDB RDS global active database cluster. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>CENTRAL</b>: the central node, which is the only primary node in the cluster. All unit nodes synchronize data from this node.</description></item>
-                /// <item><description><b>UNIT</b>: the unit node. A cluster can have up to 10 unit nodes, and all unit nodes synchronize data from the central node.</description></item>
+                /// <item><description><b>CENTRAL</b>: The central node, which is the only primary node in the cluster. All unit nodes synchronize data from this node.</description></item>
+                /// <item><description><b>UNIT</b>: The unit node. A cluster can contain up to 10 unit nodes, and all unit nodes synchronize data from the central node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,8 +126,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 /// <summary>
                 /// <para>The status of the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>activation</b>: running</description></item>
-                /// <item><description><b>creating</b>: being created</description></item>
+                /// <item><description><b>activation</b>: The node is running.</description></item>
+                /// <item><description><b>creating</b>: The node is being created.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The ID of the GAD cluster.</para>
+            /// <para>The ID of the ApsaraDB RDS global active database cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gad-rm-bp1npi2j8****</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>The database engine of the GAD cluster.</para>
+            /// <para>The database engine of the ApsaraDB RDS global active database cluster.</para>
             /// <remarks>
             /// <para>Only <b>mysql</b> is supported.</para>
             /// </remarks>
@@ -175,9 +175,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The status of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>activation</b>: running</description></item>
-            /// <item><description><b>creating</b>: being created</description></item>
-            /// <item><description><b>replica_adding</b>: adding nodes</description></item>
+            /// <item><description><b>activation</b>: The cluster is running.</description></item>
+            /// <item><description><b>creating</b>: The cluster is being created.</description></item>
+            /// <item><description><b>replica_adding</b>: Nodes are being added to the cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

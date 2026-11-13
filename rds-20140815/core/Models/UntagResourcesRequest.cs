@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs. You can remove labels from N instances at a time. Valid values of N: <b>1</b> to <b>50</b>.</para>
+        /// <para>The instance IDs. You can remove tags from up to N instances at a time. Valid values of N: <b>1</b> to <b>50</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>[&quot;rm-uf6wjk5****&quot;]</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INSTANCE</b>: Regular ApsaraDB RDS instance.</description></item>
+        /// <item><description><b>INSTANCE</b>: regular ApsaraDB RDS instance.</description></item>
         /// <item><description><b>CUSTOM</b>: ApsaraDB RDS Custom instance.</description></item>
         /// <item><description><b>CUSTOMDEPLOYMENTSET</b>: ApsaraDB RDS Custom deployment set.</description></item>
         /// <item><description><b>CUSTOMDISK</b>: ApsaraDB RDS Custom cloud disk.</description></item>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys. You can remove N tag keys at a time. Valid values of N: <b>1</b> to <b>20</b>. Empty strings are not allowed.</para>
+        /// <para>The tag keys. You can remove up to N tag keys at a time. Valid values of N: <b>1</b> to <b>20</b>. Empty strings are not allowed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testkey1</para>
+        /// <para>[&quot;key1&quot;]</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

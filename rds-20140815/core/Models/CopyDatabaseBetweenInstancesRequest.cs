@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CopyDatabaseBetweenInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set of the source instance. When you copy a database based on a backup set, you can call the DescribeBackups operation to query the backup set ID.</para>
+        /// <para>The ID of the backup set of the source instance. When you copy a database based on a backup set, you can call the DescribeBackups operation to query the ID of the backup set.</para>
         /// <remarks>
         /// <para>When you call this operation, you must specify either <b>BackupId</b> or <b>RestoreTime</b>.</para>
         /// </remarks>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>Instance ID of the source instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,13 +34,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The names of the databases to be copied. Specify the names in the following format: <c>{&quot;Source database name&quot;:&quot;Target database name&quot;}</c>. Separate multiple databases with commas (,). Examples:</para>
+        /// <para>The list of names of the databases to be copied. Specify the names in the following format: <c>{&quot;Name of the database in the source instance&quot;:&quot;Name of the database in the target instance&quot;}</c>. Separate multiple databases with commas (,). Examples:</para>
         /// <list type="bullet">
         /// <item><description>Copy a single database: <c>{&quot;zhttest&quot;:&quot;zhttest&quot;}</c></description></item>
         /// <item><description>Copy multiple databases: <c>{&quot;zhttest01&quot;:&quot;zhttest01&quot;,&quot;zhttest02&quot;:&quot;zhttest02&quot;}</c></description></item>
         /// </list>
         /// <remarks>
-        /// <para>The name of the database in the target instance can be different from that in the source instance. However, before copying, make sure that the target instance does not contain a database with the same name.</para>
+        /// <para>The name of the database in the target instance can be different from that in the source instance. However, before you copy the database, make sure that the target instance does not contain a database with the same name.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the replication of users and permissions. Valid values:</para>
+        /// <para>Specifies whether to copy users and permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>YES</b>: Enables the replication of users and permissions. If the target instance contains a user with the same name as a user in the source instance, the permissions of the source user are added to the target user.</description></item>
-        /// <item><description><b>NO</b>: Disables the replication of users and permissions. This is the default value.</description></item>
+        /// <item><description><b>YES</b>: Copies users and permissions. If the target instance contains a user that has the same name as a user in the source instance, the permissions of the user in the source instance are added to the user in the target instance.</description></item>
+        /// <item><description><b>NO</b>: Does not copy users and permissions. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SyncUserPrivilege { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

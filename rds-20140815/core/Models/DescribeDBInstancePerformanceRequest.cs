@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The performance metrics that you want to query. Separate multiple values with commas (,). You can specify up to 30 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/26316.html">Performance metrics</a>.</para>
         /// <remarks>
-        /// <para>If <b>Key</b> is set to <b>MySQL_SpaceUsage</b> or <b>SQLServer_SpaceUsage</b>, you can query only the monitoring data collected within the last 24 hours.</para>
+        /// <para>If <b>Key</b> is set to <b>MySQL_SpaceUsage</b> or <b>SQLServer_SpaceUsage</b>, you can query only the monitoring data within the last 24 hours.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

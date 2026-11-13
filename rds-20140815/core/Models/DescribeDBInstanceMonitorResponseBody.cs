@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The interval at which monitoring data is collected. Unit: seconds.</para>
+        /// <para>The data collection interval for monitoring. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30829FD4-1A84-4C2A-A625-2EADECB95CA3</para>

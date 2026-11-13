@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public DescribeAccountMaskingPrivilegeResponseBodyData Data { get; set; }
         public class DescribeAccountMaskingPrivilegeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of user encryption or masking permissions.</para>
+            /// <para>The list of encryption or data masking permissions for the user.</para>
             /// </summary>
             [NameInMap("UserPrivilege")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Privilege { get; set; }
 
                 /// <summary>
-                /// <para>The account name.</para>
+                /// <para>The name of the account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>

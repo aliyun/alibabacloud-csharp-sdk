@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the account. The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character and can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</para>
+        /// <para>The description of the account. It must be 2 to 256 characters in length. It must start with a letter or a Chinese character and can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</para>
         /// <remarks>
-        /// <para>The description cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The name of the database account.</para>
         /// <remarks>
-        /// <para>The name must be unique and can contain uppercase letters (supported only by MySQL), lowercase letters, digits, or underscores. For specific naming conventions, refer to the tutorials for each engine: <a href="https://help.aliyun.com/document_detail/96089.html">Create a MySQL account</a>, <a href="https://help.aliyun.com/document_detail/96753.html">Create a PostgreSQL account</a>, <a href="https://help.aliyun.com/document_detail/95810.html">Create a SQL Server account</a>, <a href="https://help.aliyun.com/document_detail/97132.html">Create a MariaDB account</a>.</para>
+        /// <para>The name must be unique and can contain uppercase letters (supported only by MySQL), lowercase letters, digits, and underscores (_). For specific naming rules, see the tutorials for each engine: <a href="https://help.aliyun.com/document_detail/96089.html">Create an ApsaraDB RDS for MySQL account</a>, <a href="https://help.aliyun.com/document_detail/96753.html">Create an ApsaraDB RDS for PostgreSQL account</a>, <a href="https://help.aliyun.com/document_detail/95810.html">Create an ApsaraDB RDS for SQL Server account</a>, and <a href="https://help.aliyun.com/document_detail/97132.html">Create an ApsaraDB RDS for MariaDB account</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b> (default): standard account.</description></item>
-        /// <item><description><b>Super</b>: privileged account. You can create at most one privileged account per instance.</description></item>
-        /// <item><description><b>Sysadmin</b> (SQL Server instances only): database account with SA permissions. Before you create this account, check whether the instance meets the <a href="https://help.aliyun.com/document_detail/170736.html">prerequisites</a>.</description></item>
-        /// <item><description><b>GlobalRO</b> (SQL Server instances only): global read-only account. You can create at most two global read-only accounts per instance. The database engine version of the instance must be SQL Server 2016 or later, and the instance type must be dedicated or general-purpose.</description></item>
+        /// <item><description><b>Normal</b> (default): Standard account.</description></item>
+        /// <item><description><b>Super</b>: Privileged account. You can create only one privileged account for each instance.</description></item>
+        /// <item><description><b>Sysadmin</b> (ApsaraDB RDS for SQL Server only): Database account with SA permissions. Before you create an account of this type, check whether the instance meets the <a href="https://help.aliyun.com/document_detail/170736.html">prerequisites</a>.</description></item>
+        /// <item><description><b>GlobalRO</b> (ApsaraDB RDS for SQL Server only): Global read-only account. You can create up to two global read-only accounts for each instance. The database engine version of the instance must be SQL Server 2016 or later, and the instance family must be dedicated or general-purpose.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,13 +70,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/2845728.html">account password policy</a> for the SQL Server instance. Valid values:</para>
+        /// <para>Specifies whether to apply the <a href="https://help.aliyun.com/document_detail/2845728.html">account password policy</a> to the ApsaraDB RDS for SQL Server instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The policy is applied.</description></item>
-        /// <item><description><b>false</b>: The policy is not applied.<remarks>
+        /// <item><description><b>true</b>: Applies the policy.</description></item>
+        /// <item><description><b>false</b>: Does not apply the policy.<remarks>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to true, you must first <a href="https://help.aliyun.com/document_detail/2848317.html">configure the SQL Server account password policy</a>.</description></item>
-        /// <item><description>This parameter does not support SQL Server instances of the <a href="https://help.aliyun.com/document_detail/57184.html">shared instance type</a>, <a href="https://help.aliyun.com/document_detail/145468.html">2008 R2 edition</a>, or <a href="https://help.aliyun.com/document_detail/603466.html">serverless type</a>.</description></item>
+        /// <item><description>If you set this parameter to true, you must <a href="https://help.aliyun.com/document_detail/2848317.html">configure the account password policy for ApsaraDB RDS for SQL Server</a> in advance.</description></item>
+        /// <item><description>This parameter is not supported for ApsaraDB RDS for SQL Server instances of the <a href="https://help.aliyun.com/document_detail/57184.html">shared instance type</a>, <a href="https://help.aliyun.com/document_detail/145468.html">SQL Server 2008 R2</a>, or <a href="https://help.aliyun.com/document_detail/603466.html">Serverless</a> type.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? CheckPolicy { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

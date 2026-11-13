@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Classic</b>: the classic network in enhanced whitelist mode</description></item>
-        /// <item><description><b>VPC</b>: the VPC in enhanced whitelist mode</description></item>
-        /// <item><description><b>MIX</b>: the standard whitelist mode</description></item>
+        /// <item><description><b>Classic</b>: classic network in enhanced whitelist mode</description></item>
+        /// <item><description><b>VPC</b>: VPC in enhanced whitelist mode</description></item>
+        /// <item><description><b>MIX</b>: standard whitelist mode</description></item>
         /// </list>
         /// <para>By default, the IP addresses in the whitelists of all network types are returned.</para>
         /// 

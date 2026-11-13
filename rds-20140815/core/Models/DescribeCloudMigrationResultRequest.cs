@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCloudMigrationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The instance ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The internal IP address of the self-managed PostgreSQL database.</para>
         /// <list type="bullet">
-        /// <item><description>In the scenario of migrating a self-managed PostgreSQL database on an ECS instance to the cloud with one click, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</description></item>
-        /// <item><description>In the scenario of migrating a self-managed PostgreSQL database in an on-premises data center to the cloud with one click, set this parameter to the internal IP address of the data center.</description></item>
+        /// <item><description>In the one-click cloud migration scenario for a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</description></item>
+        /// <item><description>In the one-click cloud migration scenario for a self-managed PostgreSQL database in a data center, set this parameter to the internal IP address of the data center.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? SourcePort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task. You can obtain the task ID from the response when you call the CreateCloudMigrationTask operation to create an ApsaraDB RDS for PostgreSQL cloud migration task.</para>
+        /// <para>The ID of the task. You can obtain the task ID from the response message when you call the CreateCloudMigrationTask operation to create an ApsaraDB RDS for PostgreSQL cloud migration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>440437220</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task. You can obtain the task name from the response when you call the CreateCloudMigrationTask operation to create an ApsaraDB RDS for PostgreSQL cloud migration task.</para>
+        /// <para>The name of the task. You can obtain the task name from the response message when you call the CreateCloudMigrationTask operation to create an ApsaraDB RDS for PostgreSQL cloud migration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>362c6c7a-4d20-4eac-898c-1495ceab374c</para>

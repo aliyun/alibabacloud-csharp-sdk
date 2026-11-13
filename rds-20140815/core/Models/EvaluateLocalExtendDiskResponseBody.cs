@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class EvaluateLocalExtendDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the resource is available. Valid values:</para>
+        /// <para>Specifies whether the disk space is available. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: Available.</para>
         /// </description></item>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The transmission type of the database instance.</para>
+        /// <para>The transfer type of the database instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

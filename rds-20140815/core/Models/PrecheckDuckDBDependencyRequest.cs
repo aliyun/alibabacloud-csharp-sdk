@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class PrecheckDuckDBDependencyRequest : TeaModel {
         /// <summary>
-        /// <para>The primary instance ID.</para>
+        /// <para>The instance ID of the primary instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The target node mode for the precheck. primary indicates the primary node. readOnly indicates a read-only node. If you do not specify this parameter, the default value is readOnly.</para>
+        /// <para>The target node mode for the precheck. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>primary: the primary node.</description></item>
+        /// <item><description>readOnly: a read-only node.</description></item>
+        /// </list>
+        /// <para>Default value: readOnly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>readOnly</para>

@@ -17,12 +17,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeHistoryEventsStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The categorization of system events. Valid values:</para>
+            /// <para>The category of the system event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Exception</b>: abnormal events.</description></item>
-            /// <item><description><b>Optimize</b>: optimization events.</description></item>
-            /// <item><description><b>Notification</b>: notification events.</description></item>
-            /// <item><description><b>Maintenance</b>: scheduled O&amp;M events.</description></item>
+            /// <item><description><b>Exception</b>: Exception events.</description></item>
+            /// <item><description><b>Optimize</b>: Optimization events.</description></item>
+            /// <item><description><b>Notification</b>: Notification events.</description></item>
+            /// <item><description><b>Maintenance</b>: Scheduled O&amp;M events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

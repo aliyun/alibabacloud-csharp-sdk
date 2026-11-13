@@ -21,9 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? AliUid { get; set; }
 
         /// <summary>
+        /// <para>The business ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>China site: 26842</description></item>
-        /// <item><description>International site: 26888</description></item>
+        /// <item><description>26842: Chinese mainland.</description></item>
+        /// <item><description>26888: International.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Bid { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. It cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>

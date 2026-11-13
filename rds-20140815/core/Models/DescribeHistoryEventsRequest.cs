@@ -25,12 +25,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ArchiveStatus { get; set; }
 
         /// <summary>
-        /// <para>The system event categorization. Valid values:</para>
+        /// <para>The category of the system event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Exception</b>: abnormal event</description></item>
+        /// <item><description><b>Exception</b>: exception events</description></item>
         /// <item><description><b>Optimize</b>: optimization events</description></item>
-        /// <item><description><b>Notification</b>: notification event</description></item>
-        /// <item><description><b>Maintenance</b>: scheduled maintenance event</description></item>
+        /// <item><description><b>Notification</b>: notification events</description></item>
+        /// <item><description><b>Maintenance</b>: scheduled maintenance events</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,13 +93,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>SystemMaintenance.Redeploy</b>: The instance undergoes redeployment due to system maintenance.</description></item>
         /// <item><description><b>SystemFailure.Reboot</b>: The instance is restarted due to a system fault.</description></item>
         /// <item><description><b>SystemFailure.Redeploy</b>: The instance undergoes redeployment due to a system fault.</description></item>
-        /// <item><description><b>SystemFailure.Delete</b>: The instance is released because instance creation failed.</description></item>
+        /// <item><description><b>SystemFailure.Delete</b>: The instance is released due to a failed creation.</description></item>
         /// <item><description><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance fault.</description></item>
         /// <item><description><b>InstanceExpiration.Stop</b>: The subscription instance is stopped due to expiration.</description></item>
         /// <item><description><b>InstanceExpiration.Delete</b>: The subscription instance is released due to expiration.</description></item>
         /// <item><description><b>AccountUnbalanced.Stop</b>: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
         /// <item><description><b>AccountUnbalanced.Delete</b>: The pay-as-you-go instance is released due to an overdue payment.<remarks>
-        /// <para>You can specify only instance system events for this parameter. Disk system events are not supported.</para>
+        /// <para>This parameter can only be set to an instance system event, not a disk system event.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the time range to query the task start time. This parameter specifies that the start time of the task must be later than the specified time. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in <c>UTC +0</c>. The earliest supported time is 30 days ago. If the specified time is more than 30 days before the current time, it is automatically converted to 30 days ago.</para>
+        /// <para>The start time of the time range to query tasks based on their start time. This parameter specifies that the start time of the task must be later than the specified time. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days before the current time, it is automatically converted to 30 days ago.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// <para>The RDS instance ID.</para>
+        /// <para>The ApsaraDB RDS instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf62br2491p5l****</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of an integer. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the integer type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Instance</b>: instance</description></item>
         /// <item><description><b>Host</b>: host</description></item>
         /// <item><description><b>User</b>: user<remarks>
-        /// <para>If you do not specify this parameter, all resource types are queried.</para>
+        /// <para>If this parameter is left empty, all resource types are queried.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the time range to query the task start time. This parameter specifies that the start time of the task must be earlier than the specified time. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in <c>UTC +0</c>.</para>
+        /// <para>The end time of the time range to query tasks based on their start time. This parameter specifies that the start time of the task must be earlier than the specified time. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

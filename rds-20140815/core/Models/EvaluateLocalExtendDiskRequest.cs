@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity after scaling. Unit: GB.</para>
+        /// <para>The storage capacity after the expansion. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

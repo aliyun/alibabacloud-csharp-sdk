@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination instance. The name must be 2 to 256 characters in length. It must start with a Chinese or English letter and can contain digits, Chinese characters, English letters, underscores (_), and hyphens (-).</para>
+        /// <para>The name of the target instance. The name must be 2 to 256 characters in length. It must start with a Chinese character or an English letter and can contain digits, Chinese characters, English letters, underscores (_), and hyphens (-).</para>
         /// <remarks>
         /// <para>The name cannot start with http:// or https://.</para>
         /// </remarks>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network connectivity type of the instance. Valid values:</para>
+        /// <para>The network connection type of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Internet</b>: public network connection.</description></item>
         /// <item><description><b>Intranet</b>: internal network connection.</description></item>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceNetType { get; set; }
 
         /// <summary>
-        /// <para>The network type of the destination instance. Valid values:</para>
+        /// <para>The network type of the target instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>VPC</b>: VPC.</description></item>
         /// <item><description><b>Classic</b>: classic network.</description></item>
         /// </list>
-        /// <para>By default, an instance in the classic network is created.</para>
+        /// <para>By default, instances of the classic network type are created.</para>
         /// <remarks>
-        /// <para>If the instance is a cloud disk instance, you must set this parameter to <b>VPC</b>. If you set this parameter to <b>VPC</b>, you must also specify the <b>VpcId</b> and <b>VSwitchId</b> parameters.</para>
+        /// <para>You must specify this parameter and set it to <b>VPC</b> when the instance is a cloud disk instance. When this parameter is set to <b>VPC</b>, you must also specify the <b>VpcId</b> and <b>VSwitchId</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the destination instance. Valid values:</para>
+        /// <para>The billing method of the target instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
         /// <item><description><b>Prepaid</b>: subscription.</description></item>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The subscription period of the subscription instance. Valid values:</para>
+        /// <para>The subscription period of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Year</b>: yearly subscription.</description></item>
         /// <item><description><b>Month</b>: monthly subscription.</description></item>
@@ -146,12 +146,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple entries with commas (,). Duplicate entries are not allowed. A maximum of 1,000 entries are supported. The following formats are supported:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the instance. Separate multiple entries with commas (,). Entries must be unique. A maximum of 1,000 entries are supported. The following formats are supported:</para>
         /// <list type="bullet">
         /// <item><description>IP address format, such as 10.10.XX.XX.</description></item>
-        /// <item><description>CIDR format, such as 10.10.XX.XX/24. In this format, 24 indicates the length of the prefix in the CIDR block, and the length ranges from 1 to 32.</description></item>
+        /// <item><description>CIDR format, such as 10.10.XX.XX/24. In Classless Inter-Domain Routing (CIDR), 24 indicates the prefix length of the address, which ranges from 1 to 32.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the default whitelist of the original instance is used.</para>
+        /// <para>If this parameter is not specified, the IP whitelist of the default group of the original instance is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -167,8 +167,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>5</b>.</description></item>
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of the <b>UsedTime</b> parameter ranges from <b>1</b> to <b>11</b>.</description></item>
+        /// <item><description>When the <b>Period</b> parameter is set to <b>Year</b>, the value of <b>UsedTime</b> ranges from <b>1</b> to <b>5</b>.</description></item>
+        /// <item><description>When the <b>Period</b> parameter is set to <b>Month</b>, the value of <b>UsedTime</b> ranges from <b>1</b> to <b>11</b>.</description></item>
         /// </list>
         /// <remarks>
         /// <para>You must specify this parameter when <b>PayType</b> is set to <b>Prepaid</b>.</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID of the destination instance. You must specify this parameter when <b>InstanceNetworkType</b> is set to <b>VPC</b>.</para>
+        /// <para>The VPC ID of the target instance. You must specify this parameter when <b>InstanceNetworkType</b> is set to <b>VPC</b>.</para>
         /// <remarks>
         /// <para>If you specify this parameter, you must also specify the <b>ZoneId</b> parameter.</para>
         /// </remarks>
@@ -195,11 +195,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID. The zone where the vSwitch is located must match the zone ID specified by the <b>ZoneId</b> parameter.</para>
+        /// <para>The vSwitch ID. The zone of the vSwitch must match the zone ID specified in the <b>ZoneId</b> parameter.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The <b>InstanceNetworkType</b> parameter must be set to <b>VPC</b>.</description></item>
-        /// <item><description>If you specify the ZoneSlaveId1 (secondary zone ID) parameter, you must specify two vSwitch IDs and separate them with a comma (,).</description></item>
+        /// <item><description>The network type <b>InstanceNetworkType</b> must be set to <b>VPC</b>.</description></item>
+        /// <item><description>If you specify the ZoneIdSlave1 parameter (secondary zone ID), you must specify two vSwitch IDs and separate them with a comma (,).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the primary node. You can call the DescribeRegions operation to query the zone ID.</para>
+        /// <para>The zone ID of the primary node. You can call the DescribeRegions operation to query zone IDs.</para>
         /// <remarks>
         /// <para>If you specify a VPC and a vSwitch, you must specify this parameter to match the zone of the vSwitch.</para>
         /// </remarks>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone 1.</para>
+        /// <para>The ID of secondary zone 1.</para>
         /// <remarks>
         /// <para>You must specify this parameter for instances that are not of the Basic Edition.</para>
         /// </remarks>
@@ -237,9 +237,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneIdSlave1 { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone 2.</para>
+        /// <para>The ID of secondary zone 2.</para>
         /// <remarks>
-        /// <para>You can specify this parameter only for instances of the Enterprise Edition.</para>
+        /// <para>You can specify this parameter only for instances of the RDS Enterprise Edition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

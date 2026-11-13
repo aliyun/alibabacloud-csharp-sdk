@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of available database engines.</para>
+            /// <para>The list of supported database engine types.</para>
             /// </summary>
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
             public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> SupportedEngines { get; set; }
             public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines : TeaModel {
                 /// <summary>
-                /// <para>The database engine.</para>
+                /// <para>The database engine type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MySQL</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>The list of available database engine versions.</para>
+                /// <para>The list of supported database engine versions.</para>
                 /// </summary>
                 [NameInMap("SupportedEngineVersions")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> SupportedEngineVersions { get; set; }
                 public class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions : TeaModel {
                     /// <summary>
-                    /// <para>The list of available instance editions.</para>
+                    /// <para>The list of supported instance editions.</para>
                     /// </summary>
                     [NameInMap("SupportedCategorys")]
                     [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         public string Category { get; set; }
 
                         /// <summary>
-                        /// <para>The list of available storage types.</para>
+                        /// <para>The list of supported storage types.</para>
                         /// </summary>
                         [NameInMap("SupportedStorageTypes")]
                         [Validation(Required=false)]

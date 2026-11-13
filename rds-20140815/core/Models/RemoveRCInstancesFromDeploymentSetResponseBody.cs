@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RCInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the node. Valid values:</para>
+            /// <para>The node status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Success</b>: Successful.</description></item>
-            /// <item><description><b>Failed</b>: Failed.</description></item>
+            /// <item><description><b>Success</b>: The operation succeeded.</description></item>
+            /// <item><description><b>Failed</b>: The operation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

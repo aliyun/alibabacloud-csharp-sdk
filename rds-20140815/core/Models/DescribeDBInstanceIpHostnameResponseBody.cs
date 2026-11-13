@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The internal IP addresses and hostnames of the underlying ECS instances for the ApsaraDB RDS for SQL Server instance, including the primary and secondary instances. Format: <c>ip1,hostname1;ip2,hostname2</c>.</para>
+        /// <para>The internal IP addresses and ECS hostnames of the underlying ECS instances where the ApsaraDB RDS for SQL Server instance is deployed, including the primary and secondary instances. Format: <c>ip1,hostname1;ip2,hostname2</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.xx.xx,sd<b><b>B;172.16.xx.xx,sd</b></b>A</para>

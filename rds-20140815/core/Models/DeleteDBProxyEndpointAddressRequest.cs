@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the database proxy endpoint that you want to delete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Public</b>: public network</description></item>
+        /// <item><description><b>Public</b>: Internet</description></item>
         /// <item><description><b>VPC</b>: internal network (VPC)</description></item>
         /// <item><description><b>Classic</b>: internal network (classic network)</description></item>
         /// </list>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</para>
+        /// <para>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the endpoint ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to configure it.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>

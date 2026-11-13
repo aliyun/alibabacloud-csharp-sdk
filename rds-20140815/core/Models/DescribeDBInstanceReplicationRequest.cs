@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can leave this parameter empty.</para>
+        /// <para>The resource group ID. This parameter can be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmx****</para>

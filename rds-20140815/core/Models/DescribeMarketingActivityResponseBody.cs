@@ -20,9 +20,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? AliUid { get; set; }
 
         /// <summary>
+        /// <para>The business ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>China site: 26842</description></item>
-        /// <item><description>International site: 26888</description></item>
+        /// <item><description>26842: Chinese mainland.</description></item>
+        /// <item><description>26888: International.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,10 +43,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The instance edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Basic</b>: Basic Edition</description></item>
-            /// <item><description><b>HighAvailability</b>: High-availability Edition</description></item>
-            /// <item><description><b>AlwaysOn</b>: Cluster Edition</description></item>
-            /// <item><description><b>Finance</b>: Enterprise Edition</description></item>
+            /// <item><description><b>Basic</b>: Basic Edition.</description></item>
+            /// <item><description><b>HighAvailability</b>: High-availability Edition.</description></item>
+            /// <item><description><b>AlwaysOn</b>: Cluster Edition.</description></item>
+            /// <item><description><b>Finance</b>: Enterprise Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,8 +59,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>POSTPAY: pay-as-you-go</description></item>
-            /// <item><description>PREPAY: subscription</description></item>
+            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// <item><description>PREPAY: subscription.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,7 +91,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClassGroup { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores for the instance type.</para>
+            /// <para>The number of CPU cores for the instance type. Unit: cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -100,7 +101,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity per node. Unit: GB.</para>
+            /// <para>The disk storage size per node. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>900</para>
@@ -167,7 +168,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? MaxConnections { get; set; }
 
             /// <summary>
-            /// <para>The maximum I/O throughput.</para>
+            /// <para>The maximum I/O bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -199,11 +200,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The instance storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>local_ssd</b>: local SSD</description></item>
-            /// <item><description><b>cloud_ssd</b>: standard SSD cloud disk</description></item>
-            /// <item><description><b>cloud_essd</b>: PL1 ESSD cloud disk</description></item>
-            /// <item><description><b>cloud_essd2</b>: PL2 ESSD cloud disk</description></item>
-            /// <item><description><b>cloud_essd3</b>: PL3 ESSD cloud disk</description></item>
+            /// <item><description><b>local_ssd</b>: local SSD.</description></item>
+            /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+            /// <item><description><b>cloud_essd</b>: PL1 ESSD.</description></item>
+            /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
+            /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -214,7 +215,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The instance edition after the upgrade.</para>
+            /// <para>The upgraded instance edition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HighAvailability</para>
@@ -224,7 +225,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string UpgradeCategory { get; set; }
 
             /// <summary>
-            /// <para>The instance type code after the upgrade.</para>
+            /// <para>The upgraded instance type code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds.mysql.s3.large</para>
@@ -234,7 +235,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string UpgradeClassCode { get; set; }
 
             /// <summary>
-            /// <para>The instance family after the upgrade.</para>
+            /// <para>The upgraded instance family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d</para>
@@ -264,7 +265,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string UpgradeDescContent { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity after the upgrade.</para>
+            /// <para>The disk size after the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -284,7 +285,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? UpgradeMaxConnections { get; set; }
 
             /// <summary>
-            /// <para>The maximum I/O throughput after the upgrade.</para>
+            /// <para>The maximum I/O bandwidth after the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>

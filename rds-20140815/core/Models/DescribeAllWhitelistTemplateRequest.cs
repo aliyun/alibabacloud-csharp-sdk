@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAllWhitelistTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable fuzzy match. Valid values:</para>
+        /// <para>Specifies whether to enable fuzzy search. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: enables fuzzy search.</description></item>
+        /// <item><description><b>false</b>: disables fuzzy search.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MaxRecordsPerPage { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the whitelist template. Specify this parameter for fuzzy match. You can call the DescribeWhitelistTemplate operation to obtain the template name.</para>
+        /// <para>The name of the whitelist template. Specify this parameter to perform a fuzzy search. You can call the DescribeWhitelistTemplate operation to obtain the template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>template</para>

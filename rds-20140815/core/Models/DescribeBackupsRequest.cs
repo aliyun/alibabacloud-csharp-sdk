@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Automated</b>: automatic backup</description></item>
-        /// <item><description><b>Manual</b>: manual backup</description></item>
+        /// <item><description><b>Automated</b>: Automatic backup.</description></item>
+        /// <item><description><b>Manual</b>: Manual backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The backup type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FullBackup</b>: full backup</description></item>
-        /// <item><description><b>IncrementalBackup</b>: incremental backup</description></item>
+        /// <item><description><b>FullBackup</b>: Full backup.</description></item>
+        /// <item><description><b>IncrementalBackup</b>: Incremental backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupType { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The ID of the instance. You can call the DescribeDBInstances operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>When you call this operation to query backup sets, keep the time range short. A long time range may cause a timeout.</para>
+        /// <para>To prevent timeouts, specify a shorter time range when you call this operation to query backup sets.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum integer value.</para>
+        /// <para>The page number. Valid values: integers greater than 0 and less than or equal to the maximum integer value.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class GrantAccountPrivilegeRequest : TeaModel {
         /// <summary>
-        /// <para>The account name. You can call <a href="https://help.aliyun.com/document_detail/610454.html">DescribeAccounts</a> to query the account name.</para>
+        /// <para>The name of the account. You can call the <a href="https://help.aliyun.com/document_detail/610454.html">DescribeAccounts</a> operation to query the account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,39 +21,39 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The type of account permission. If you specify multiple values for DBName, you must specify the same number of permission types in the same order, separated by commas (,).</para>
-        /// <para>The supported permission types vary by database engine. Valid values:</para>
+        /// <para>The permission type of the account. If you specify multiple values for DBName, you must specify the same number of permission types in the same order and separate them with commas (,).</para>
+        /// <para>The supported permission types vary based on the database engine. Valid values:</para>
         /// <remarks>
-        /// <para>For more information about account permissions, see <a href="https://help.aliyun.com/document_detail/146395.html">MySQL/MariaDB permission list</a>, <a href="https://help.aliyun.com/document_detail/95692.html">SQL Server permission list</a>, and <a href="https://help.aliyun.com/document_detail/257684.html">PostgreSQL permission list</a>.</para>
+        /// <para>For more information about account permissions, see <a href="https://help.aliyun.com/document_detail/146395.html">MySQL and MariaDB permissions</a>, <a href="https://help.aliyun.com/document_detail/95692.html">SQL Server permissions</a>, and <a href="https://help.aliyun.com/document_detail/257684.html">PostgreSQL permissions</a>.</para>
         /// </remarks>
         /// <details>
-        /// <summary>ApsaraDB RDS for MySQL/ApsaraDB RDS for MariaDB</summary>
+        /// <summary>RDS MySQL and RDS MariaDB</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description><b>ReadWrite</b>: read and write.</description></item>
-        /// <item><description><b>ReadOnly</b>: read-only.</description></item>
+        /// <item><description><b>ReadWrite</b>: Read and write.</description></item>
+        /// <item><description><b>ReadOnly</b>: Read-only.</description></item>
         /// <item><description><b>DDLOnly</b>: DDL only.</description></item>
         /// <item><description><b>DMLOnly</b>: DML only.</description></item>
         /// </list>
         /// </details>
         /// 
         /// <details>
-        /// <summary>ApsaraDB RDS for SQL Server</summary>
+        /// <summary>RDS SQL Server</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description><b>ReadWrite</b>: read and write. This permission corresponds to the <c>db_datawriter</c> and <c>db_datareader</c> database roles in SQL Server.</description></item>
-        /// <item><description><b>ReadOnly</b>: read-only. This permission corresponds to the <c>db_datareader</c> database role in SQL Server.</description></item>
-        /// <item><description><b>DBOwner</b>: database owner. This permission corresponds to the <c>db_owner</c> database role in SQL Server.<remarks>
-        /// <para>For more information about database-level roles, see <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-ver16">Microsoft official documentation</a>.</para>
+        /// <item><description><b>ReadWrite</b>: Read and write. This permission corresponds to the <c>db_datawriter</c> and <c>db_datareader</c> database roles in SQL Server.</description></item>
+        /// <item><description><b>ReadOnly</b>: Read-only. This permission corresponds to the <c>db_datareader</c> database role in SQL Server.</description></item>
+        /// <item><description><b>DBOwner</b>: Database owner. This permission corresponds to the <c>db_owner</c> database role in SQL Server.<remarks>
+        /// <para>For more information about database-level roles, see <a href="https://learn.microsoft.com/en-us/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-ver16">Microsoft documentation</a>.</para>
         /// </remarks>
         /// </details></description></item>
         /// </list>
         /// <details>
-        /// <summary>ApsaraDB RDS for PostgreSQL</summary>
+        /// <summary>RDS PostgreSQL</summary>
         /// 
-        /// <para><b>DBOwner</b>: database owner.</para>
+        /// <para><b>DBOwner</b>: Database owner.</para>
         /// <remarks>
-        /// <para>For fine-grained permission management, see <a href="https://help.aliyun.com/document_detail/352149.html">Best practices for PostgreSQL permission management</a>.</para>
+        /// <para>For more information about fine-grained management of account permissions, see <a href="https://help.aliyun.com/document_detail/352149.html">Best practices for PostgreSQL permission management</a>.</para>
         /// </remarks>
         /// </details>
         /// 
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database to which you want to grant access permissions. To grant permissions on multiple databases at a time, separate the database names with commas (,), such as <c>db1,db2,db3</c>.</para>
+        /// <para>The name of the database to which you want to grant access. To grant access to multiple databases at a time, separate multiple database names with commas (,), such as <c>db1,db2,db3</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

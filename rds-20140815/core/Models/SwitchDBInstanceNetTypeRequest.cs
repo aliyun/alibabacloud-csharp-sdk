@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchDBInstanceNetTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique across different requests. The value can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the custom endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 64 characters in length. The complete endpoint is in the format of prefix.engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.</para>
+        /// <para>The prefix of the custom endpoint. The prefix must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter. The complete endpoint is in the following format: Prefix.EngineName.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: standard endpoint.</description></item>
-        /// <item><description><b>ReadWriteSplitting</b>: read/write splitting connection.</description></item>
+        /// <item><description><b>Normal</b>: regular endpoint</description></item>
+        /// <item><description><b>ReadWriteSplitting</b>: read/write splitting connection</description></item>
         /// </list>
         /// <para>By default, all endpoints are returned.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

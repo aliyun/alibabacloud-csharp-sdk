@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The database engine version.</para>
+            /// <para>The database version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.7</para>
@@ -191,8 +191,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <list type="bullet">
             /// <item><description><b>Importing</b>: The backup is being imported.</description></item>
             /// <item><description><b>Failed</b>: The import failed.</description></item>
-            /// <item><description><b>CheckSuccess</b>: The verification passed.</description></item>
-            /// <item><description><b>BackupSuccess</b>: The import succeeded.</description></item>
+            /// <item><description><b>CheckSuccess</b>: The verification is successful.</description></item>
+            /// <item><description><b>BackupSuccess</b>: The import is successful.</description></item>
             /// <item><description><b>Deleted</b>: The backup is deleted.</description></item>
             /// </list>
             /// 
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AD67C22F-64F3-4448-A9A8-D1606D242879</para>

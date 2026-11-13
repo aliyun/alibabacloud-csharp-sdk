@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceCrossBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the cross-region backup feature. Valid values:</para>
+        /// <para>Indicates whether the cross-region backup feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b>: disabled.</description></item>
-        /// <item><description><b>Enable</b>: enabled.</description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CrossBackupRegion { get; set; }
 
         /// <summary>
-        /// <para>The storage type for cross-region backup. Default value: <b>1</b>, which indicates that each backup is retained.</para>
+        /// <para>The retention type of cross-region backups. Default value: <b>1</b>, which indicates that all backups are retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CrossBackupType { get; set; }
 
         /// <summary>
-        /// <para>The instance name. The name is 2 to 256 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter or a Chinese character.</para>
+        /// <para>The instance name. The name must be 2 to 256 characters in length. It must start with a letter or a Chinese character and can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</para>
         /// <remarks>
-        /// <para>The name cannot start with http:// or https://.</para>
+        /// <para>It cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</para>
+        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance statuses</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -111,9 +111,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>Unlock</b>: The instance is not locked.</description></item>
         /// <item><description><b>ManualLock</b>: The instance is manually locked.</description></item>
-        /// <item><description><b>LockByExpiration</b>: The instance is automatically locked due to instance expiration.</description></item>
+        /// <item><description><b>LockByExpiration</b>: The instance is automatically locked because it has expired.</description></item>
         /// <item><description><b>LockByRestoration</b>: The instance is automatically locked before a rollback.</description></item>
-        /// <item><description><b>LockByDiskQuota</b>: The instance is automatically locked because the storage space is exhausted. The instance is inaccessible.</description></item>
+        /// <item><description><b>LockByDiskQuota</b>: The instance is automatically locked because its storage space is exhausted. In this case, the instance is inaccessible.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string LockMode { get; set; }
 
         /// <summary>
-        /// <para>The status of the cross-region log backup feature. Valid values:</para>
+        /// <para>Indicates whether cross-region log backup is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b>: disabled.</description></item>
-        /// <item><description><b>Enable</b>: enabled.</description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The retention method for cross-region backup. Default value: <b>1</b>, which indicates that backups are retained based on the specified retention period.</para>
+        /// <para>The retention method for cross-region backups. Default value: <b>1</b>, which indicates that backups are retained based on a specified retention period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? RetentType { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which cross-region backups are retained. Valid values: <b>7 to 1825</b>.</para>
+        /// <para>The retention period of cross-region backups. Valid values: <b>7 to 1825</b>. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

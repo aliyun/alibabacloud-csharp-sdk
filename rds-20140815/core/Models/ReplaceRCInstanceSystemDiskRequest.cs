@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter. Not supported.</para>
+        /// <para>A reserved parameter. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? IsLocalDisk { get; set; }
 
         /// <summary>
-        /// <para>The name of the new key pair. If you do not specify this parameter, you must reset the key pair after the operating system is reinstalled.</para>
+        /// <para>The name of the new key pair. If you do not specify this parameter, you must configure a key pair after the operating system is reinstalled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testKeyPairName</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The new logon password for the RDS Custom instance. If you do not specify this parameter, you must reset the logon password after the operating system is reinstalled.</para>
+        /// <para>The new logon password for the RDS Custom instance. If you do not specify this parameter, you must set a logon password after the operating system is reinstalled.</para>
         /// <list type="bullet">
         /// <item><description>The password must be 8 to 30 characters in length.</description></item>
-        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include: ()`~!@#$%^&amp;*-_+=.</description></item>
+        /// <item><description>The password must contain characters from at least three of the following categories: uppercase letters, lowercase letters, digits, and special characters. Special characters include: ()`~!@#$%^&amp;*-_+=.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

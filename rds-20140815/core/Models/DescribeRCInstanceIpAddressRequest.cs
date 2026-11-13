@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstanceIpAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number of the returned page. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DdosRegionId { get; set; }
 
         /// <summary>
-        /// <para>The DDoS mitigation status of the assets that are assigned public IP addresses to query. Valid values:</para>
+        /// <para>The DDoS mitigation status of the assets that are assigned public IP addresses. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>defense</b>: Cleaning. Queries assets that are assigned public IP addresses and for which the system scrubs traffic.</description></item>
-        /// <item><description><b>blackhole</b>: Black Hole Activated. Queries assets that are assigned public IP addresses and are under the blackhole filtering status.</description></item>
+        /// <item><description><b>defense</b>: Cleaning. Queries the assets that are assigned public IP addresses that are undergoing traffic scrubbing.</description></item>
+        /// <item><description><b>blackhole</b>: Black Hole Activated. Queries the assets that are assigned public IP addresses that are in the blackhole filtering status.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DdosStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the RDS Custom instance to which the assets that are assigned public IP addresses belong.</para>
+        /// <para>The instance ID of the Custom instance to which the assets that are assigned public IP addresses belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rc-y6dn4pyuub1r89******</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceIp { get; set; }
 
         /// <summary>
-        /// <para>The name of the RDS Custom instance to which the assets that are assigned public IP addresses belong.</para>
+        /// <para>The name of the Custom instance to which the assets that are assigned public IP addresses belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rc-y6dn4pyuub1r89******</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The number of instances per page in a paged query.</para>
+        /// <para>The number of instances per page during a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

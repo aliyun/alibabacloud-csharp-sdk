@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The consistency check method used after the database is opened. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SyncExecuteDBCheck</b>: Executes the database check synchronously.</description></item>
-        /// <item><description><b>AsyncExecuteDBCheck</b>: Executes the database check asynchronously.</description></item>
+        /// <item><description><b>SyncExecuteDBCheck</b>: Synchronously executes the database check.</description></item>
+        /// <item><description><b>AsyncExecuteDBCheck</b>: Asynchronously executes the database check.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Compatible with SQL Server 2008 R2.</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CheckDBMode { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. It cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>

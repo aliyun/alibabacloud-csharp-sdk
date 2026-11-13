@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The custom Key Management Service (KMS) master key ID.
+        /// <para>The custom KMS master key ID.
         /// Note
         /// This parameter takes effect only when the column encryption key pattern is set to kms_key. If this parameter is not specified, the current column encryption key settings of the database remain unchanged.</para>
         /// 
@@ -48,11 +48,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The column encryption key mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>client_key: configures a user-generated random key on the client side.</description></item>
-        /// <item><description>kms_key: configures a custom key by using Alibaba Cloud KMS.</description></item>
+        /// <item><description>client_key: Configures a user-generated random key on the client side.</description></item>
+        /// <item><description>kms_key: Configures a custom key by using Alibaba Cloud Key Management Service (KMS).
+        /// Note
+        /// After an instance is configured to use a KMS key, you can no longer configure a random key on the client side.</description></item>
         /// </list>
-        /// <para>Note
-        /// After an instance is configured to use a KMS key, you can no longer configure a random key on the client side.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kms_key</para>

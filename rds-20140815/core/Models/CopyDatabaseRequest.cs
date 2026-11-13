@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CopyDatabaseRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name. <b>This parameter is required</b>.</para>
+        /// <para>The name of the instance. <b>This parameter is required.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-wz9s06u4drm******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The destination database name. <b>This parameter is required</b>.</para>
+        /// <para>The name of the destination database. <b>This parameter is required.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>db2***</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The reserved account.</para>
+        /// <para>Specifies whether to retain the accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? ReserveAccount { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy*****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The source database name. <b>This parameter is required</b>.</para>
+        /// <para>The name of the source database. <b>This parameter is required.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>db1***</para>

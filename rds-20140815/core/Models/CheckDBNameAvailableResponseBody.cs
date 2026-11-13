@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The request ID.</para>
         /// <remarks>
-        /// <para>If only the request ID is returned, the database name is available. Otherwise, an error message is returned, indicating that the database name is duplicate or does not comply with naming conventions.</para>
+        /// <para>If only the request ID is returned, the database name is available. Otherwise, an error message is returned, indicating that the database name is duplicated or does not comply with naming conventions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

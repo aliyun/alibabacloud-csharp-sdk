@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCustinsResourceInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The instance IDs. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance IDs.</para>
+        /// <para>The IDs of the instances. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

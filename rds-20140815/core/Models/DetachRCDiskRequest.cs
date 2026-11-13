@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DetachRCDiskRequest : TeaModel {
         /// <summary>
-        /// <para>A reserved parameter. This parameter is not supported.</para>
+        /// <para>A reserved parameter that is not currently supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>none</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? DeleteWithInstance { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud disk to detach.</para>
+        /// <para>The ID of the cloud disk to be detached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

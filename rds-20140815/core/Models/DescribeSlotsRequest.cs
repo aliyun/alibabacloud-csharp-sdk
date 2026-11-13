@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlotsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the token on your client. Make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the token on your client and ensure that it is unique across different requests. The client token supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOC****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The ID of the instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter can be left empty.</para>
+        /// <para>The ID of the resource group. This parameter can be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

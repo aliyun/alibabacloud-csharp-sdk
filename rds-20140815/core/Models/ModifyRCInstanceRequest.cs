@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): enables automatic payment. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b>: generates an order without deducting fees.<remarks>
-        /// <para>If your account balance is insufficient, you can set the AutoPay parameter to false. An unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</para>
+        /// <item><description><b>true</b>: enables automatic payment. This is the default value. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: generates an unpaid order without deducting fees.<remarks>
+        /// <para>If the balance of your payment method is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -48,13 +48,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The instance upgrade or downgrade type. Valid values:</para>
+        /// <para>The scaling direction. Valid values:</para>
         /// <remarks>
-        /// <para>You do not need to specify this parameter. The system automatically determines whether to upgrade or downgrade the instance type. If you want to specify it, follow these rules:</para>
+        /// <para>You do not need to specify this parameter. The system automatically determines whether to upgrade or downgrade the instance type. If you specify this parameter, follow these rules:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>Up</b> (default): upgrades the instance type. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>Down</b>: downgrades the instance type. When the instance type specified in InstanceType is lower than the current instance type, set Direction to Down.</description></item>
+        /// <item><description><b>Up</b>: upgrades the instance type. This is the default value. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>Down</b>: downgrades the instance type. Set this parameter to Down when the instance type specified by InstanceType is lower than the current instance type.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a precheck on the instance creation operation. Valid values:</para>
+        /// <para>Specifies whether to perform a precheck on this operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a precheck without creating an instance. Check items include request parameters, request format, service limits, and inventory.</description></item>
-        /// <item><description><b>false</b>: sends a normal request and directly creates the instance after the request passes the precheck. This is the default value.</description></item>
+        /// <item><description><b>true</b>: performs a precheck without modifying the instance type. The system checks items such as request parameters, request format, service limits, and inventory.</description></item>
+        /// <item><description><b>false</b>: sends a normal request and modifies the instance type after the request passes the precheck. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,11 +125,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to immediately restart the instance after the instance type change is complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: restarts the instance immediately. This is the default value.</description></item>
-        /// <item><description><b>false</b>: does not restart the instance immediately.</description></item>
+        /// <item><description><b>true</b>: immediately restarts the instance. This is the default value.</description></item>
+        /// <item><description><b>false</b>: does not immediately restart the instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the instance is in the <b>Stopped</b> state, it remains in the Stopped state and is not restarted even if you set RebootWhenFinished to true.</para>
+        /// <para>If the instance is in the <b>Stopped</b> state, it remains in the Stopped state and is not restarted even if you set <c>RebootWhenFinished</c> to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

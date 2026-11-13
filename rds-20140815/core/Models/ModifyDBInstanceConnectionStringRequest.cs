@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
         /// <summary>
-        /// <para>The TDS port number for Babelfish for RDS PostgreSQL.</para>
+        /// <para>The TDS port number for Babelfish for ApsaraDB RDS for PostgreSQL.</para>
         /// <remarks>
-        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for RDS PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</para>
+        /// <para>This parameter is only applicable to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Babelfish overview</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BabelfishPort { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the endpoint. You can modify only the prefix of the value specified by the <b>CurrentConnectionString</b> parameter.</para>
+        /// <para>The prefix of the new endpoint. You can only modify the prefix of the <b>CurrentConnectionString</b> parameter.</para>
         /// <remarks>
-        /// <para>The prefix must be 8 to 64 characters in length and cannot contain Chinese characters or special characters (~!#%^&amp;*=+\|{};:\&quot;&quot;,&lt;&gt;/?). The prefix can contain letters, digits, and hyphens (-).</para>
+        /// <para>The prefix must be 8 to 64 characters in length and cannot contain Chinese characters or invalid characters (such as ~!#%^&amp;*=+\|{}:\&quot;&quot;,&lt;&gt;/?). We recommend that you use letters, digits, and hyphens (-).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The current endpoint of the instance. The endpoint can be a public endpoint or internal endpoint, or a classic network connectivity endpoint in hybrid access mode.</para>
+        /// <para>The current endpoint of the instance. The endpoint can be an internal endpoint or public endpoint, or a classic network endpoint in hybrid access mode.</para>
         /// <remarks>
-        /// <para>Modification of read/write splitting connection endpoints is not supported.</para>
+        /// <para>You cannot modify the read/write splitting endpoint.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the group to which the dedicated cluster MySQL general-purpose instance belongs.</para>
+        /// <para>The name of the group to which the general-purpose instance in the dedicated cluster belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rgc-bp1tkv8****</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The PgBouncer port number.</para>
         /// <remarks>
-        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances. If PgBouncer is enabled, you can modify the PgBouncer port number.</para>
+        /// <para>This parameter is only applicable to ApsaraDB RDS for PostgreSQL instances. You can modify the PgBouncer port number only if PgBouncer is enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PGBouncerPort { get; set; }
 
         /// <summary>
-        /// <para>The target port.</para>
+        /// <para>The new port.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,13 +112,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain the virtual IP address (VIP) when swapping the endpoint.</para>
+        /// <para>Specifies whether to retain the virtual IP address (VIP) when swapping endpoints.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The VIP is retained.</description></item>
-        /// <item><description><b>false</b> (default): The VIP is not retained.</description></item>
+        /// <item><description><b>true</b>: Retains the VIP.</description></item>
+        /// <item><description><b>false</b> (default): Does not retain the VIP.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances.</para>
+        /// <para>This parameter is only supported for ApsaraDB RDS for PostgreSQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -129,9 +129,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? RetainVip { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the target ApsaraDB RDS for PostgreSQL instance with which you want to swap the endpoint.</para>
+        /// <para>The instance ID of the destination ApsaraDB RDS for PostgreSQL instance with which you want to swap endpoints.</para>
         /// <remarks>
-        /// <para>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances.</para>
+        /// <para>This parameter is only supported for ApsaraDB RDS for PostgreSQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

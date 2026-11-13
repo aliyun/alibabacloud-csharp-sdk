@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParameterGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The parameter overview information.</para>
+        /// <para>Specifies whether to return the parameter overview information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: Returns parameter overview information. This is the default value.</para>
+        /// <item><description><para><b>false</b>: returns the parameter overview information. This is the default value.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: Does not return parameter overview information.</para>
+        /// <item><description><para><b>true</b>: does not return the parameter overview information.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token. The token must be unique across different requests. The token can be up to 64 characters in length and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the existing instance to be recovered.</para>
+        /// <para>The instance ID of the existing instance to which data is recovered.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The restoration method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: restores data based on a backup set. If you set this parameter to 0, you must also specify the <b>BackupId</b> parameter.</description></item>
-        /// <item><description><b>1</b>: restores data to a point in time. If you set this parameter to 1, you must also specify the <b>RestoreTime</b>, <b>SourceRegion</b>, and <b>SourceDBInstanceName</b> parameters.</description></item>
+        /// <item><description><b>1</b>: restores data to a specific point in time. If you set this parameter to 1, you must also specify the <b>RestoreTime</b>, <b>SourceRegion</b>, and <b>SourceDBInstanceName</b> parameters.</description></item>
         /// </list>
         /// <para>Default value: <b>0</b>.</para>
         /// <para>This parameter is required.</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the source instance to recover data to a point in time.</para>
+        /// <para>The instance ID of the source instance for point-in-time recovery.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>RestoreType</b> is set to <b>1</b>.</para>
         /// </remarks>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourceRegion { get; set; }
 
         /// <summary>
-        /// <para>The databases and tables that you want to restore. Format:
+        /// <para>The databases and tables to be restored. Format:
         /// <c>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of database 1&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 1 in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 1&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 2 in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 2&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of database 2&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 3 in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 3&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 4 in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 4&gt;&quot;}]}]</c></para>
         /// <para>This parameter is required.</para>
         /// 

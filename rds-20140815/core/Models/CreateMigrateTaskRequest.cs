@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the cloud migration task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FULL</b>: restores data by using a full backup file. This value is applicable to the first migration or full data recovery scenarios.</description></item>
+        /// <item><description><b>FULL</b>: restores data by using a full backup file. This value is applicable to initial migration or full data recovery scenarios.</description></item>
         /// <item><description><b>UPDF</b>: restores incremental data by using an incremental backup file or log file. This value is applicable to incremental synchronization scenarios based on an existing full backup.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CheckDBMode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? KeepCDC { get; set; }
 
         /// <summary>
-        /// <para>The ID of the migration task. Valid values:</para>
+        /// <para>The migration task ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>BackupMode</b> is set to <b>FULL</b>, leave this parameter empty. This ensures compatibility with SQL Server 2008 R2.</description></item>
-        /// <item><description>If <b>BackupMode</b> is set to <b>UPDF</b>, set this parameter to the ID of the corresponding FULL task. You can call the DescribeMigrateTasks operation to query the ID.</description></item>
+        /// <item><description>If <b>BackupMode</b> is set to <b>FULL</b>, leave this parameter empty (compatible with SQL Server 2008 R2).</description></item>
+        /// <item><description>If <b>BackupMode</b> is set to <b>UPDF</b>, set this parameter to the ID of the corresponding FULL task. You can call the DescribeMigrateTasks operation to query the task ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string MigrateTaskId { get; set; }
 
         /// <summary>
-        /// <para>The shared URL of the backup file in OSS. The URL must be encoded. If multiple URLs exist, separate them with vertical bars (|) and then encode the string before passing it as the parameter value.</para>
+        /// <para>The shared URL of the backup file in OSS. The URL must be encoded. If multiple URLs exist, separate them with vertical bars (|) and encode the string before passing it as the parameter value.</para>
         /// <remarks>
         /// <para>This parameter is required for SQL Server 2008 R2.</para>
         /// </remarks>
@@ -121,14 +121,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OSSUrls { get; set; }
 
         /// <summary>
-        /// <para>The components of the OSS file. The value consists of the following three parts separated by colons (:):</para>
+        /// <para>The components of the OSS object. The value consists of the following three parts separated by colons (:):</para>
         /// <list type="bullet">
         /// <item><description><b>OSS endpoint</b>: oss-ap-southeast-1.aliyuncs.com.</description></item>
         /// <item><description><b>OSS bucket name</b>: rdsmssqlsingapore.</description></item>
         /// <item><description><b>Backup file name in OSS</b>: autotest_2008R2_TestMigration_FULL.bak.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required for SQL Server versions later than 2008 R2.</para>
+        /// <para>This parameter is required for SQL Server versions later than SQL Server 2008 R2.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

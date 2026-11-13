@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor of the role, which is used to specify a specific role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
+        /// <para>The global resource descriptor of the role, used to specify a specific role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</para>

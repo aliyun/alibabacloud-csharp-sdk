@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The dedicated cluster ID.</para>
+        /// <para>The ID of the dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dhg-7a9xxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>The host image category used to query dedicated clusters. Valid values:</para>
+        /// <para>The host image used to query dedicated clusters. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>WindowsWithMssqlStdLicense</b>: Windows (with SQL Server Standard Edition license).</description></item>
         /// <item><description><b>WindowsWithMssqlEntLisence</b>: Windows (with SQL Server Enterprise Edition license).</description></item>

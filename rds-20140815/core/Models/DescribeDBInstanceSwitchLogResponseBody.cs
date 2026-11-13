@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceSwitchLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6wjk5****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

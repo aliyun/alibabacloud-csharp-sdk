@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance series. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Basic</b>: Basic Edition</description></item>
-        /// <item><description><b>HighAvailability</b>: high availability series</description></item>
+        /// <item><description><b>HighAvailability</b>: High-availability Edition</description></item>
         /// <item><description><b>cluster</b>: Cluster Edition</description></item>
         /// <item><description><b>serverless_basic</b>: Serverless</description></item>
         /// </list>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Expired { get; set; }
 
         /// <summary>
-        /// <para>The JSON string of instance filter parameters and their values.</para>
+        /// <para>The filter conditions and their values in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;babelfishEnabled&quot;:&quot;true&quot;}</para>
@@ -195,8 +195,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: VPC</description></item>
-        /// <item><description><b>Classic</b>: classic network</description></item>
+        /// <item><description><b>VPC</b>: instances in a VPC</description></item>
+        /// <item><description><b>Classic</b>: instances in the classic network</description></item>
         /// </list>
         /// <para>By default, instances of all network types are returned.</para>
         /// 
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. The value is the <b>NextToken</b> parameter value returned from the previous call to the <b>DescribeDBInstances</b> operation. If the results are displayed across multiple pages, you can pass this value in the next call to display the next page.</para>
+        /// <para>The pagination token. The value is the <b>NextToken</b> parameter value returned from the previous call to the <b>DescribeDBInstances</b> operation. If the results are paginated, you can pass this value in the next call to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>o7PORW5o2TJg****</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</para>
+        /// <para>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum integer value.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -276,17 +276,17 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter. You do not need to configure this parameter.</para>
+        /// <para>Reserved parameter. No configuration is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("QueryAutoRenewal")]
         [Validation(Required=false)]
         public bool? QueryAutoRenewal { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to obtain the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The search key. You can perform a fuzzy search based on the instance ID or instance description.</para>
+        /// <para>The search key. You can perform a fuzzy search based on the instance ID or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6w</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the instances to be queried, including TagKey and TagValue. You can specify up to 5 tags in a single request. Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}. If an instance matches any of the specified tags, the instance information is returned.</para>
+        /// <para>The tags used to query instances. Each tag includes a tag key and a tag value. You can specify up to 5 tags in a single request. Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}. If an instance matches any of the specified tags, the instance information is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> You do not need to configure this parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>

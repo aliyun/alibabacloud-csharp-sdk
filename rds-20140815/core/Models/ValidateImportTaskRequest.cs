@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ValidateImportTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>The ID of the instance. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SourcePlatform { get; set; }
 
         /// <summary>
-        /// <para>The port number for backup transmission.</para>
+        /// <para>The port number used for backup transmission.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string User { get; set; }
 
         /// <summary>
-        /// <para>The path to the XtraBackup tool on the source instance.</para>
+        /// <para>The path of the XtraBackup tool on the source instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/usr/local/bin/xtrabackup</para>

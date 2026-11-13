@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeAvailableClassesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of available instance specifications.</para>
+        /// <para>The available instance types for the instance.</para>
         /// </summary>
         [NameInMap("DBInstanceClasses")]
         [Validation(Required=false)]
         public List<DescribeAvailableClassesResponseBodyDBInstanceClasses> DBInstanceClasses { get; set; }
         public class DescribeAvailableClassesResponseBodyDBInstanceClasses : TeaModel {
             /// <summary>
-            /// <para>The instance specification.</para>
+            /// <para>The instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds.mysql.c1.large</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DBInstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The instance storage range.</para>
+            /// <para>The instance storage space range.</para>
             /// </summary>
             [NameInMap("DBInstanceStorageRange")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? MinValue { get; set; }
 
                 /// <summary>
-                /// <para>The minimum step size for adjusting the storage space. The storage space increases in fixed increments of 5 GB.</para>
+                /// <para>The minimum step size for adjusting the storage space. The storage space increases in increments of 5 GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>

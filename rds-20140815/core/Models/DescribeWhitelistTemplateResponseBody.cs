@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <list type="bullet">
         /// <item><description><b>200</b>: Normal.</description></item>
         /// <item><description><b>400</b>: Client fault.</description></item>
-        /// <item><description><b>401</b>: Failed to authenticate during identity verification.</description></item>
+        /// <item><description><b>401</b>: Authentication failed.</description></item>
         /// <item><description><b>404</b>: The requested page is not found.</description></item>
         /// <item><description><b>500</b>: Server fault.</description></item>
         /// </list>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ED169A3E-1657-4104-82AB-24EA8CD0DB75</para>
@@ -130,10 +130,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeOperatorPermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The effective period of the authorization. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The effective period of the authorization. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-12T02:27:04Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the authorization expires. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+        /// <para>The time when the authorization expires. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2030-01-01T11:58:17Z</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The types of permissions that are granted. Valid values:</para>
+        /// <para>The type of authorization obtained. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Control</b>: configuration permissions. Allows you to view and modify instance configurations.</description></item>
         /// <item><description><b>Data</b>: database permissions. Allows you to view table schemas, indexes, and SQL statements.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Control,Data</para>
+        /// <para>Data</para>
         /// </summary>
         [NameInMap("Privileges")]
         [Validation(Required=false)]

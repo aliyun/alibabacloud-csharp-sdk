@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteSlotRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate the value from your client and make sure that the value is unique across different requests. The client token supports only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the parameter value on your client and ensure that it is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOC****</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the target instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,8 +70,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The status of the replication slot. You can call the DescribeSlots operation to query the status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ACTIVE</b>: The replication slot is active.</description></item>
-        /// <item><description><b>INACTIVE</b>: The replication slot is inactive.</description></item>
+        /// <item><description><b>ACTIVE</b>: Active.</description></item>
+        /// <item><description><b>INACTIVE</b>: Inactive.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

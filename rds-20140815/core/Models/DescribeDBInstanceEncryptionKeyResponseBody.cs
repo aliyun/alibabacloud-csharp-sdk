@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The estimated time when the key is deleted. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+        /// <para>The scheduled deletion time of the key. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-08T08:14:16Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The estimated time when the key is deleted. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+            /// <para>The scheduled deletion time of the key. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-08T08:14:16Z</para>
@@ -165,10 +165,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Origin { get; set; }
 
             /// <summary>
-            /// <para>The usage of the key:</para>
+            /// <para>The usage scenario of the key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>TDE</b>: transparent data encryption.</description></item>
-            /// <item><description><b>DiskEncryption</b>: cloud disk encryption.</description></item>
+            /// <item><description><b>TDE</b>: transparent data encryption</description></item>
+            /// <item><description><b>DiskEncryption</b>: cloud disk encryption</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

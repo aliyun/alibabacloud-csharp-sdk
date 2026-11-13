@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyConnectStringNetType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</para>
+        /// <para>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the endpoint ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. No configuration is required.</para>
+        /// <para>Reserved parameter. No configuration is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID of the new database proxy endpoint. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</para>
+        /// <para>The ID of the VPC to which the new database proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>DBProxyConnectStringNetType</b> is set to <b>VPC</b>.</para>
         /// </remarks>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the new database proxy endpoint. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</para>
+        /// <para>The ID of the vSwitch to which the new database proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>DBProxyConnectStringNetType</b> is set to <b>VPC</b>.</para>
         /// </remarks>

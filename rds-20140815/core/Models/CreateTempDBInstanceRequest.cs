@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateTempDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</para>
+        /// <para>The ID of the backup set. You can call the DescribeBackups operation to query the ID.</para>
         /// <remarks>
-        /// <para>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</para>
+        /// <para>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>A point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The point in time to which you want to restore the data. The point in time must be within the backup retention period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify any point in time within the last 7 days that is at least 30 minutes earlier than the current time. The default time zone is UTC.</description></item>
-        /// <item><description>You must specify at least one of <b>BackupId</b> and <b>RestoreTime</b>.</description></item>
+        /// <item><description>You can specify any point in time within the last seven days. The point in time must be at least 30 minutes earlier than the current time. The default time zone is UTC.</description></item>
+        /// <item><description>You must specify at least one of the <b>BackupId</b> and <b>RestoreTime</b> parameters.</description></item>
         /// </list>
         /// </remarks>
         /// 

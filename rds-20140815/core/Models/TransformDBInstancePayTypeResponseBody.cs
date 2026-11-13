@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class TransformDBInstancePayTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method.</para>
         /// <list type="bullet">
-        /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
-        /// <item><description>PREPAY: Subscription.</description></item>
+        /// <item><description>POSTPAY: pay-as-you-go</description></item>
+        /// <item><description>PREPAY: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20515760028****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E6E09DE-5B12-4BFF-A55E-1C86EDE06D9A</para>

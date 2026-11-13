@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The cloud product type.</para>
+        /// <para>The cloud service type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>

@@ -1,3 +1,7 @@
+2026-11-13 Version: 15.11.0
+- Support API SwitchToPrimaryInstance.
+
+
 2026-11-11 Version: 15.10.3
 - Generated csharp 2014-08-15 for Rds.
 

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
     public class ModifyMaskingRulesResponseBody : TeaModel {
         /// <summary>
         /// <para>The returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;DBInstanceId&quot;:&quot;rm-t4n8t18o*****6d5&quot;}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The reserved parameter. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal (default)</description></item>
-        /// <item><description><b>false</b>: disables auto-renewal</description></item>
+        /// <item><description><b>true</b>: enabled (default)</description></item>
+        /// <item><description><b>false</b>: disabled</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The reserved parameter. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>PrePaid</para>
         /// </summary>
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
@@ -142,10 +142,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the subscription period unit. Valid values:</para>
+        /// <para>The subscription period of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: year</description></item>
-        /// <item><description><b>Month</b>: month</description></item>
+        /// <item><description><b>Year</b>: yearly subscription</description></item>
+        /// <item><description><b>Month</b>: monthly subscription</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required if <b>PayType</b> is set to <b>Prepaid</b>.</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the subscription duration. Valid values:</para>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the value of UsedTime ranges from <b>1</b> to <b>5</b>.</description></item>
         /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of UsedTime ranges from <b>1</b> to <b>11</b>.</description></item>

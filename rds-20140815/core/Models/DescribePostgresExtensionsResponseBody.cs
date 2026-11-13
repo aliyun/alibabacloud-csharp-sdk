@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <list type="bullet">
             /// <item><description><b>external_access</b>: external access</description></item>
             /// <item><description><b>index_support</b>: index support</description></item>
-            /// <item><description><b>information_sta</b>t: information statistics</description></item>
+            /// <item><description><b>information_stat</b>: information statistics</description></item>
             /// <item><description><b>geography_space</b>: geospatial</description></item>
             /// <item><description><b>vector_engine</b>: vector engine</description></item>
             /// <item><description><b>timing_engine</b>: time series engine</description></item>
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The priority of the extension. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: displayed by default</description></item>
-            /// <item><description><b>1</b>: displayed with priority</description></item>
+            /// <item><description><b>0</b>: default display</description></item>
+            /// <item><description><b>1</b>: priority display</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The Alibaba Cloud account ID.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for exclusive extensions (extensions written by users). Each Alibaba Cloud account displays only its own exclusive extensions.</para>
+            /// <para>This parameter is returned only for exclusive plugins (plugins written by users). Each Alibaba Cloud account can view only its own exclusive plugins.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The overview information about the extensions.</para>
+        /// <para>The overview information about extensions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public Dictionary<string, object> Overview { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E4448A6-9FE6-4474-A0C1-AA7CFC772CAC</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The Alibaba Cloud account ID.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for exclusive extensions (extensions written by users). Each Alibaba Cloud account displays only its own exclusive extensions.</para>
+            /// <para>This parameter is returned only for exclusive plugins (plugins written by users). Each Alibaba Cloud account can view only its own exclusive plugins.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

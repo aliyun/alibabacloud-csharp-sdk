@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The information about the parameter template.</para>
+        /// <para>The parameter template information.</para>
         /// </summary>
         [NameInMap("ParamGroupInfo")]
         [Validation(Required=false)]

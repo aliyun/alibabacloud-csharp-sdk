@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceMajorVersionPrecheckRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call DescribeDBInstances to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The major engine version of the target instance. The version must be later than the current major engine version of the instance.</para>
+        /// <para>The major engine version of the target instance. The value must be greater than the major engine version of the current instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

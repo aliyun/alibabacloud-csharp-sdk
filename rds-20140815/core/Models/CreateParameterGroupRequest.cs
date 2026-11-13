@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the parameter template. The description can be up to 200 characters in length.</para>
+        /// <para>The description of the parameter template. The description must be 0 to 200 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that consists of parameters and their values. Format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Modify the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Modify the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</para>
+        /// <para>The JSON string of parameters and values. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the parameter template. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the parameter template. You can call the DescribeRegions operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
+        /// <para>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>

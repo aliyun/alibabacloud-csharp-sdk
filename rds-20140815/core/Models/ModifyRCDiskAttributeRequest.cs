@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>true: enables the feature.
         /// false: disables the feature.
         /// Note
-        /// An error is returned if you specify any value for a disk that does not support the performance burst feature.</para>
+        /// If you specify any value for a disk that does not support the performance burst feature, an error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>Specifies whether to release the disk when the instance is released. Default value: null. A value of null indicates that the current value remains unchanged.</para>
-        /// <para>You cannot configure this parameter for cloud disks that have the multi-attach feature enabled.</para>
+        /// <para>This parameter is not supported for cloud disks that have the multi-attach feature enabled.</para>
         /// <para>An error is returned if you set the DeleteWithInstance parameter to false in the following scenarios:</para>
         /// <para>The disk category is local disk (ephemeral).
         /// The disk category is basic cloud disk (cloud) and the disk is not detachable (Portable=false).
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The cloud disk name. The name must be 2 to 128 characters in length and can contain characters in the Letter category of Unicode, such as English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the disk. The name must be 2 to 128 characters in length. It can contain letters and digits in the Unicode Letter category, as well as colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDisk</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbVersion { get; set; }
 
         /// <summary>
-        /// <para>The task details.</para>
+        /// <para>The detailed information about the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Error Message</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The category of the source instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS</b>: Alibaba Cloud ECS.</description></item>
-        /// <item><description><b>other</b>: Other.</description></item>
+        /// <item><description><b>ECS</b>: an Alibaba Cloud ECS instance.</description></item>
+        /// <item><description><b>other</b>: an instance of another type.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination disaster recovery instance for the switchover.</para>
+        /// <para>The name of the target disaster recovery instance for the switchover.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-t4neh0q12v1******</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The task type, which is used to query tasks of specific types. Separate multiple values with commas (,). A maximum of 30 values are supported. By default, this parameter is left empty, which indicates that no limit is applied.</para>
+        /// <para>The task type. This parameter is used to query tasks of a specific type. Separate multiple task types with commas (,). You can specify up to 30 task types. By default, this parameter is left empty, which indicates that no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>import</para>

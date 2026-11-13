@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4A23265-C5B6-42E1-98A0-EFA1EB42E723</para>
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para><b>[Deprecated]</b> Indicates whether the specified region has parameter templates. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: No parameter templates exist.</description></item>
-        /// <item><description>false: Parameter templates exist.<remarks>
-        /// <para>Warning: This parameter is deprecated and is not recommended.</para>
+        /// <item><description>true: The region does not have parameter templates.</description></item>
+        /// <item><description>false: The region has parameter templates.<remarks>
+        /// <para>Warning: This parameter is deprecated. We recommend that you do not use it.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

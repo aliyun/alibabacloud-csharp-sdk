@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pricing information.</para>
+        /// <para>The price information.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeRenewalPriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The pricing information.</para>
+            /// <para>The promotion information.</para>
             /// </summary>
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the request was successful.</para>
+                /// <para>Indicates whether the request is successful.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC9F4EF6-D038-4405-B497-1F48E722C9F2</para>

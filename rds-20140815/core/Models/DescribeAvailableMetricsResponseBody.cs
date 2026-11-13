@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The category of the enhanced monitoring metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>os</b>: operating system metrics</description></item>
-            /// <item><description><b>db</b>: database metrics</description></item>
+            /// <item><description><b>os</b>: operating system metrics.</description></item>
+            /// <item><description><b>db</b>: database metrics.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string GroupKeyType { get; set; }
 
             /// <summary>
-            /// <para>The statistical method of the enhanced monitoring metric. Valid values:</para>
+            /// <para>The statistical method for the enhanced monitoring metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>avg</b>: average value</description></item>
-            /// <item><description><b>min</b>: minimum value</description></item>
-            /// <item><description><b>max</b>: maximum value</description></item>
+            /// <item><description><b>avg</b>: average value.</description></item>
+            /// <item><description><b>min</b>: minimum value.</description></item>
+            /// <item><description><b>max</b>: maximum value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

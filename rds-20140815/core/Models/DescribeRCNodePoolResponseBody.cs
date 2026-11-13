@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeRCNodePoolResponseBodyNodePoolList> NodePoolList { get; set; }
         public class DescribeRCNodePoolResponseBodyNodePoolList : TeaModel {
             /// <summary>
-            /// <para>Indicates whether automatic payment is enabled. Valid values:</para>
+            /// <para>Specifies whether to enable automatic payment. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
-            /// <item><description><b>false</b>: Only an order is generated and no payment is made.</description></item>
+            /// <item><description><b>false</b>: An order is generated but no payment is made.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public bool? AutoPay { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether auto-renewal is enabled for the instance. Valid values:</para>
+            /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b> (default): Auto-renewal is enabled.</description></item>
-            /// <item><description><b>false</b>: Auto-renewal is disabled.</description></item>
+            /// <item><description><b>true</b> (default): yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether joining an ACK cluster is allowed.</para>
+            /// <para>Specifies whether the node pool is allowed to join an ACK cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>A reserved parameter. This parameter is not supported.</para>
+                /// <para>A reserved parameter. This parameter is not currently supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? DeleteWithInstance { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the cloud disk is encrypted. Valid values:</para>
+                /// <para>Specifies whether to encrypt the cloud disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The cloud disk is encrypted.</description></item>
-                /// <item><description><b>false</b> (default): The cloud disk is not encrypted.</description></item>
+                /// <item><description><b>true</b>: yes</description></item>
+                /// <item><description><b>false</b> (default): no</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Encrypted { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the ESSD cloud disk. Valid values:</para>
+                /// <para>The performance level of the cloud disk. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>PL0</b>: A single cloud disk delivers up to 10,000 random read/write IOPS.</description></item>
                 /// <item><description><b>PL1</b>: A single cloud disk delivers up to 50,000 random read/write IOPS.</description></item>
@@ -176,8 +176,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Prepaid</b>: Subscription.</description></item>
-            /// <item><description><b>Postpaid</b>: Pay-as-you-go.</description></item>
+            /// <item><description><b>Prepaid</b>: subscription</description></item>
+            /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not currently supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not currently supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? InternetMaxBandwidthOut { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not currently supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -288,10 +288,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription duration for the subscription Billable methods. Valid values:</para>
+            /// <para>The unit of the billing duration for the subscription billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Year</b>: Year.</description></item>
-            /// <item><description><b>Month</b> (default): Month.</description></item>
+            /// <item><description><b>Year</b>: year</description></item>
+            /// <item><description><b>Month</b> (default): month</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmy****</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not currently supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SecurityEnhancementStrategy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group.</para>
+            /// <para>The security group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-uf6av412xaxixuez****</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter. This parameter is not supported.</para>
+            /// <para>A reserved parameter. This parameter is not currently supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the system cloud disk.</para>
+            /// <para>The system cloud disk specifications.</para>
             /// </summary>
             [NameInMap("SystemDisk")]
             [Validation(Required=false)]
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the ESSD cloud disk. Valid values:</para>
+                /// <para>The performance level of the cloud disk. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>PL0</b>: A single cloud disk delivers up to 10,000 random read/write IOPS.</description></item>
                 /// <item><description><b>PL1</b>: A single cloud disk delivers up to 50,000 random read/write IOPS.</description></item>

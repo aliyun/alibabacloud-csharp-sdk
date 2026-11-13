@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyParameterRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, and you must ensure that the value is unique across different requests. The value can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully restart the database after the modification. Valid values:</para>
+        /// <para>Specifies whether to restart the database after the parameters are modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: forcefully restarts the database. If any of the modified parameters require a restart to take effect, you must set this parameter to true. Otherwise, the modification does not take effect.</description></item>
-        /// <item><description><b>false</b>: does not forcefully restart the database.</description></item>
+        /// <item><description><b>true</b>: forces a restart. If any of the modified parameters require a restart, you must set this parameter to true. Otherwise, the modifications do not take effect.</description></item>
+        /// <item><description><b>false</b>: does not force a restart.</description></item>
         /// </list>
         /// <para>Default value: <b>false</b>.</para>
         /// 
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The parameter template ID.</para>
+        /// <para>The ID of the parameter template.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you specify this parameter, you do not need to specify <b>Parameters</b>.</description></item>
-        /// <item><description>If applying the parameter template requires a restart of the instance, you must specify <b>Forcerestart</b>.</description></item>
+        /// <item><description>If you specify this parameter, you do not need to specify the <b>Parameters</b> parameter.</description></item>
+        /// <item><description>If the instance must be restarted to apply the parameter template, you must specify the <b>Forcerestart</b> parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The JSON string that consists of parameters and their values. All parameter values are of the string type. Format: {&quot;Parameter name 1&quot;:&quot;Parameter value 1&quot;,&quot;Parameter name 2&quot;:&quot;Parameter value 2&quot;...}. You can call the DescribeParameterTemplates operation to query parameter names and values.</para>
+        /// <para>The JSON string of parameters and their values. All parameter values are of the string type. Format: {&quot;ParameterName1&quot;:&quot;ParameterValue1&quot;,&quot;ParameterName2&quot;:&quot;ParameterValue2&quot;...}. You can call the DescribeParameterTemplates operation to query parameter names and values.</para>
         /// <remarks>
-        /// <para>If you specify this parameter, you do not need to specify <b>ParameterGroupId</b>.</para>
+        /// <para>If you specify this parameter, you do not need to specify the <b>ParameterGroupId</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scheduled time for the modification to take effect. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+        /// <para>The time when the parameter modifications take effect. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>The specified time must be later than the current time when you call this operation.</para>
+        /// <para>The specified time must be later than the current time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,11 +104,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>The time at which the modification takes effect. Valid values:</para>
+        /// <para>The time when the parameter modifications take effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b>: default value. The modification takes effect immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: The modification takes effect during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to modify the maintenance window.</description></item>
-        /// <item><description><b>ScheduleTime</b>: The modification takes effect at a manually specified time. If you set this parameter to ScheduleTime, you must also specify <b>SwitchTime</b>.</description></item>
+        /// <item><description><b>Immediate</b>: takes effect immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: takes effect within the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to modify the maintenance window.</description></item>
+        /// <item><description><b>ScheduleTime</b>: takes effect at a specified time. If you set this parameter to ScheduleTime, you must also specify the <b>SwitchTime</b> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

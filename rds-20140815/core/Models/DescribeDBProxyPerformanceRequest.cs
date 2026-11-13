@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// <para>The reserved parameter. You do not need to configure this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -45,15 +45,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The aggregation dimension. You cannot specify both service and server at the same time. Valid values:</para>
+        /// <para>The aggregation dimension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>service: aggregates monitoring metrics by proxy endpoint.</para>
-        /// </description></item>
-        /// <item><description><para>node: aggregates monitoring metrics by proxy node.</para>
-        /// </description></item>
-        /// <item><description><para>server: aggregates monitoring metrics by database node.</para>
-        /// </description></item>
+        /// <item><description>service: aggregates monitoring metrics by proxy endpoint.</description></item>
+        /// <item><description>node: aggregates monitoring metrics by proxy node.</description></item>
+        /// <item><description>server: aggregates monitoring metrics by database node.</description></item>
         /// </list>
+        /// <para>You cannot specify both service and server at the same time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>service,node
@@ -65,7 +63,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Dimension { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than or equal to the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Maxscale_MemUsage</b>: memory utilization</description></item>
         /// <item><description><b>Maxscale_CpuUsage</b>: CPU utilization</description></item>
         /// </list>
-        /// <para>To query multiple performance metrics, separate the metrics with commas (,). You can query up to six performance metrics at a time.</para>
+        /// <para>To query multiple performance metrics, separate them with commas (,). You can query up to six performance metrics at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

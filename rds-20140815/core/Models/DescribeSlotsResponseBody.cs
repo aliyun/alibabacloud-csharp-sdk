@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeSlotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76AF0609-4195-5DFC-BC78-3AD76FF872BB</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of replication slots for the instance.</para>
+        /// <para>The list of replication slots of the instance.</para>
         /// </summary>
         [NameInMap("Slots")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Database { get; set; }
 
             /// <summary>
-            /// <para>The plugin used by the replication slot.</para>
+            /// <para>The plug-in used by the replication slot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_decoding</para>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The status of the replication slot. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ACTIVE: active</description></item>
-            /// <item><description>INACTIVE: inactive</description></item>
+            /// <item><description>ACTIVE: Active.</description></item>
+            /// <item><description>INACTIVE: Inactive.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The type of the replication slot. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>physical: physical</description></item>
-            /// <item><description>logical: logical</description></item>
+            /// <item><description>physical: Physical.</description></item>
+            /// <item><description>logical: Logical.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SlotType { get; set; }
 
             /// <summary>
-            /// <para>The latency of the logical subscription for the subscriber that corresponds to the current replication slot, in seconds.</para>
+            /// <para>The logical subscription latency of the subscriber corresponding to the replication slot. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string SubReplayLag { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the replication slot is temporary. Valid values:</para>
+            /// <para>Specifies whether the replication slot is temporary. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Yes.</description></item>
             /// <item><description>false: No.</description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Temporary { get; set; }
 
             /// <summary>
-            /// <para>The volume of accumulated logs in the replication slot.</para>
+            /// <para>The amount of accumulated logs in the replication slot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16 MB</para>

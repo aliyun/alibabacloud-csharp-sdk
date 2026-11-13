@@ -13,13 +13,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The certificate file.</para>
         /// <para>Format:</para>
         /// <list type="bullet">
-        /// <item><description>Public endpoint: <c>oss-&lt;region ID&gt;.aliyuncs.com:&lt;bucket name&gt;:&lt;certificate file name with extension&gt;</c></description></item>
-        /// <item><description>Internal network address: <c>oss-&lt;region ID&gt;-internal.aliyuncs.com:&lt;bucket name&gt;:&lt;certificate file name with extension&gt;</c></description></item>
+        /// <item><description>Public endpoint: <c>oss-&lt;region ID&gt;.aliyuncs.com:&lt;bucket name&gt;:&lt;certificate file name (with extension)&gt;</c></description></item>
+        /// <item><description>Internal endpoint: <c>oss-&lt;region ID&gt;-internal.aliyuncs.com:&lt;bucket name&gt;:&lt;certificate file name (with extension)&gt;</c></description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is active only for SQL Server 2019 Standard Edition, SQL Server 2022 Standard Edition, SQL Server 2025 Standard Edition, and SQL Server Enterprise instance.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query active region IDs.</description></item>
+        /// <item><description>This parameter is available only for instances that run SQL Server 2019 Standard Edition, SQL Server 2022 Standard Edition, SQL Server 2025 Standard Edition, or SQL Server Enterprise Edition.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query available region IDs.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The names of the databases for which you want to enable TDE. You can specify multiple database names separated by commas (,). A maximum of 50 database names can be specified.</para>
+        /// <para>The names of the databases for which you want to enable TDE. You can specify multiple database names separated by commas (,). You can specify up to 50 database names.</para>
         /// <remarks>
-        /// <para>This parameter is required and active only for SQL Server 2019 Standard Edition, SQL Server 2022 Standard Edition, SQL Server 2025 Standard Edition, and SQL Server Enterprise instance.</para>
+        /// <para>This parameter is available only for instances that run SQL Server 2019 Standard Edition, SQL Server 2022 Standard Edition, SQL Server 2025 Standard Edition, or SQL Server Enterprise Edition. This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The ID of the custom key.</para>
         /// <remarks>
-        /// <para>This parameter is available only for RDS MySQL or RDS PostgreSQL instances.</para>
+        /// <para>This parameter is available only for MySQL or PostgreSQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Specifies whether to rotate the key. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Rotates the key.</description></item>
-        /// <item><description><b>false</b>: Does not rotate the key. This is the default value.</description></item>
+        /// <item><description><b>false</b> (default): Does not rotate the key.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is applicable only to RDS PostgreSQL instances.</para>
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password of the certificate.</para>
+        /// <para>The certificate password.</para>
         /// <remarks>
-        /// <para>This parameter is active only for SQL Server 2019 Standard Edition, SQL Server 2022 Standard Edition, SQL Server 2025 Standard Edition, and SQL Server Enterprise instance.</para>
+        /// <para>This parameter is available only for instances that run SQL Server 2019 Standard Edition, SQL Server 2022 Standard Edition, SQL Server 2025 Standard Edition, or SQL Server Enterprise Edition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,13 +109,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The private key file.</para>
         /// <para>Format:</para>
         /// <list type="bullet">
-        /// <item><description>Public endpoint: <c>oss-&lt;region ID&gt;.aliyuncs.com:&lt;bucket name&gt;:&lt;private key file name with extension&gt;</c></description></item>
-        /// <item><description>Internal network address: <c>oss-&lt;region ID&gt;-internal.aliyuncs.com:&lt;bucket name&gt;:&lt;private key file name with extension&gt;</c></description></item>
+        /// <item><description>Public endpoint: <c>oss-&lt;region ID&gt;.aliyuncs.com:&lt;bucket name&gt;:&lt;private key file name (with extension)&gt;</c></description></item>
+        /// <item><description>Internal endpoint: <c>oss-&lt;region ID&gt;-internal.aliyuncs.com:&lt;bucket name&gt;:&lt;private key file name (with extension)&gt;</c></description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is active only for SQL Server 2019 Standard Edition, SQL Server 2022 Standard Edition, SQL Server 2025 Standard Edition, and SQL Server Enterprise instance.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query active region IDs.</description></item>
+        /// <item><description>This parameter is available only for instances that run SQL Server 2019 Standard Edition, SQL Server 2022 Standard Edition, SQL Server 2025 Standard Edition, or SQL Server Enterprise Edition.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query available region IDs.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -135,9 +135,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The global resource descriptor of the role, which is used to specify the role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
+        /// <para>The global resource descriptor of the role, which is used to specify the specific role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// <remarks>
-        /// <para>This parameter is active only for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances.</para>
+        /// <para>This parameter is available only for MySQL and PostgreSQL instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

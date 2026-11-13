@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response dataset.</para>
+        /// <para>The response result set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

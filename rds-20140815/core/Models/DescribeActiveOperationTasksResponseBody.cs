@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// <para>The event level code. Valid values: S1 (system O&amp;M) and S0 (exception recovery).</para>
+            /// <para>The event level code. Valid values: S1 (system O&amp;M) and S0 (risk fix).</para>
             /// 
             /// <b>Example:</b>
             /// <para>S1</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The event level in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>System O&amp;M</para>
+            /// <para>系统运维</para>
             /// </summary>
             [NameInMap("ChangeLevelZh")]
             [Validation(Required=false)]
             public string ChangeLevelZh { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The creation time. The time is displayed in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The kernel version.</para>
+            /// <para>The kernel version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.7</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string DbVersion { get; set; }
 
             /// <summary>
-            /// <para>The latest time to which the task execution time can be adjusted. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The deadline for adjusting the task execution time. The time is displayed in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T23:59:59Z</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The impact of the event in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Instance interruption</para>
+            /// <para>实例闪断</para>
             /// </summary>
             [NameInMap("ImpactZh")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was modified. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The modification time. The time is displayed in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The preparation time required between the start time and the switchover time. The time is in the HH:mm:ss format.</para>
+            /// <para>The preparation time required between the start time and the switchover time. Format: HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04:00:00</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The time when the backend executes the task. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The time when the backend executes the task. The time is displayed in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T00:00:00Z</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>3</b>: pending tasks.</description></item>
-            /// <item><description><b>4</b>: tasks in progress.</description></item>
+            /// <item><description><b>4</b>: in-progress tasks.</description></item>
             /// <item><description><b>5</b>: successfully completed tasks.</description></item>
             /// <item><description><b>6</b>: failed tasks.</description></item>
             /// <item><description><b>7</b>: canceled tasks.</description></item>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public List<string> SubInsNames { get; set; }
 
             /// <summary>
-            /// <para>The time when the backend initiates the switchover. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The time when the backend initiates the switchover. The time is displayed in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -275,9 +275,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>rds_apsaradb_ha</b>: primary and secondary node switch.</description></item>
+            /// <item><description><b>rds_apsaradb_ha</b>: primary/secondary node switch.</description></item>
             /// <item><description><b>rds_apsaradb_transfer</b>: instance migration.</description></item>
-            /// <item><description><b>rds_apsaradb_upgrade</b>: minor engine version update.</description></item>
+            /// <item><description><b>rds_apsaradb_upgrade</b>: minor version update.</description></item>
             /// <item><description><b>rds_apsaradb_maxscale</b>: proxy minor version upgrade.</description></item>
             /// </list>
             /// 
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The task cause in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Minor engine version update</para>
+            /// <para>小版本升级</para>
             /// </summary>
             [NameInMap("TaskTypeZh")]
             [Validation(Required=false)]

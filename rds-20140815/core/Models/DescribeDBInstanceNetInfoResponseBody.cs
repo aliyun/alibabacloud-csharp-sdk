@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The whitelist mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: general mode.</description></item>
+        /// <item><description><b>normal</b>: standard mode.</description></item>
         /// <item><description><b>safety</b>: enhanced whitelist mode.</description></item>
         /// </list>
         /// 

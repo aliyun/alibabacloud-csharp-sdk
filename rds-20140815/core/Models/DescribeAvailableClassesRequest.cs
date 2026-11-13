@@ -12,19 +12,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Regular instances</para>
+        /// <item><description><para>Standard instances</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: Basic Edition</description></item>
+        /// <item><description><b>Basic</b>: Basic series</description></item>
         /// <item><description><b>HighAvailability</b>: high availability series</description></item>
-        /// <item><description><b>cluster</b>: Cluster Edition (only applicable to MySQL and PostgreSQL)</description></item>
-        /// <item><description><b>AlwaysOn</b>: AlwaysOn</description></item>
+        /// <item><description><b>cluster</b>: Cluster Edition (only for MySQL and PostgreSQL)</description></item>
+        /// <item><description><b>AlwaysOn</b>: Cluster Edition for SQL Server</description></item>
         /// <item><description><b>Finance</b>: RDS Enterprise Edition</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Serverless instances</para>
         /// <list type="bullet">
-        /// <item><description><b>serverless_basic</b>: Serverless Basic Edition (only applicable to MySQL and PostgreSQL)</description></item>
-        /// <item><description><b>serverless_standard</b>: Serverless high availability series (only applicable to MySQL and PostgreSQL)</description></item>
+        /// <item><description><b>serverless_basic</b>: Serverless Basic series (only for MySQL and PostgreSQL)</description></item>
+        /// <item><description><b>serverless_standard</b>: Serverless high availability series (only for MySQL and PostgreSQL)</description></item>
         /// <item><description><b>serverless_ha</b>: SQL Server Serverless high availability series</description></item>
         /// </list>
         /// <remarks>
@@ -44,16 +44,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The commodity code of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bards</b>: pay-as-you-go primary instances on the China site</description></item>
-        /// <item><description><b>rds</b>: subscription primary instances on the China site</description></item>
-        /// <item><description><b>rords</b>: pay-as-you-go read-only instances on the China site</description></item>
-        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instances on the China site</description></item>
-        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instances on the international site</description></item>
-        /// <item><description><b>rds_intl</b>: subscription primary instances on the international site</description></item>
-        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instances on the international site</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instances on the international site</description></item>
-        /// <item><description><b>rds_serverless_public_cn</b>: serverless instances on the China site</description></item>
-        /// <item><description><b>rds_serverless_public_intl</b>: serverless instances on the international site</description></item>
+        /// <item><description><b>bards</b>: pay-as-you-go primary instance (Alibaba Cloud China site)</description></item>
+        /// <item><description><b>rds</b>: subscription primary instance (Alibaba Cloud China site)</description></item>
+        /// <item><description><b>rords</b>: pay-as-you-go read-only instance (Alibaba Cloud China site)</description></item>
+        /// <item><description><b>rds_rordspre_public_cn</b>: subscription read-only instance (Alibaba Cloud China site)</description></item>
+        /// <item><description><b>bards_intl</b>: pay-as-you-go primary instance (Alibaba Cloud International site)</description></item>
+        /// <item><description><b>rds_intl</b>: subscription primary instance (Alibaba Cloud International site)</description></item>
+        /// <item><description><b>rords_intl</b>: pay-as-you-go read-only instance (Alibaba Cloud International site)</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: subscription read-only instance (Alibaba Cloud International site)</description></item>
+        /// <item><description><b>rds_serverless_public_cn</b>: serverless instance (Alibaba Cloud China site)</description></item>
+        /// <item><description><b>rds_serverless_public_intl</b>: serverless instance (Alibaba Cloud International site)</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required when you query read-only instances.</para>
@@ -79,16 +79,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The instance storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>general_essd</b>: Premium ESSD</description></item>
+        /// <item><description><b>general_essd</b>: premium performance disk</description></item>
         /// <item><description><b>local_ssd</b>: premium local SSD</description></item>
-        /// <item><description><b>cloud_ssd</b>: standard SSD</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD cloud disk</description></item>
         /// <item><description><b>cloud_essd0</b>: PL0 ESSD</description></item>
         /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
         /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
         /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Serverless instances support only PL1 ESSDs. You must set this parameter to <b>cloud_essd</b>.</para>
+        /// <para>Serverless instances support only PL1 ESSD. You must set this parameter to <b>cloud_essd</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database engine version of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Regular instances</para>
+        /// <item><description><para>Standard instances</para>
         /// <list type="bullet">
         /// <item><description>MySQL: <b>5.5, 5.6, 5.7, and 8.0</b></description></item>
         /// <item><description>SQL Server: <b>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</b></description></item>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The order type. Set the value to <b>BUY</b>.</para>
+        /// <para>The order type. Valid value: <b>BUY</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>

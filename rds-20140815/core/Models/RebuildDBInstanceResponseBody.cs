@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RebuildDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queue number for the rebuild. When the number is 0, the rebuild migration starts.</para>
+        /// <para>The queue number for the rebuild task. When the number is 0, the rebuild and migration process starts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3298015</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? MigrationId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>355DA57C-8CC4-40AB-B3F8-B684BA32EB9E</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>208676661</para>

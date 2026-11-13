@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: Normal.</description></item>
-        /// <item><description><b>400</b>: Client fault.</description></item>
-        /// <item><description><b>401</b>: Failed to authenticate.</description></item>
-        /// <item><description><b>404</b>: The requested page is not found.</description></item>
-        /// <item><description><b>500</b>: Server fault.</description></item>
+        /// <item><description><b>200</b>: normal</description></item>
+        /// <item><description><b>400</b>: client fault</description></item>
+        /// <item><description><b>401</b>: authentication failed</description></item>
+        /// <item><description><b>404</b>: requested page not found</description></item>
+        /// <item><description><b>500</b>: server fault</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <summary>
             /// <para>The returned status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ok</b>: Successful.</description></item>
-            /// <item><description><b>error</b>: Failed.</description></item>
+            /// <item><description><b>ok</b>: normal return</description></item>
+            /// <item><description><b>error</b>: error return</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: Successful.</description></item>
-        /// <item><description><b>400</b>: Client error.</description></item>
-        /// <item><description><b>500</b>: Server error.</description></item>
+        /// <item><description><b>200</b>: normal</description></item>
+        /// <item><description><b>400</b>: client error</description></item>
+        /// <item><description><b>500</b>: server error</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: successful</description></item>
+        /// <item><description><b>false</b>: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

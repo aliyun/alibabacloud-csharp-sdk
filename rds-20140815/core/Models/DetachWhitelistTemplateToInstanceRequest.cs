@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information about resource groups, see What is a resource group.</para>
+        /// <para>The ID of the resource group. For more information about resource groups, see Resource groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmz3kjr******</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeCrossRegionBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the user backup.</para>
+        /// <para>The backup ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>603524****</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The ID of the cross-region backup file.</para>
         /// <remarks>
-        /// <para>You must specify either <b>CrossBackupId</b> or the start and end time parameters (<b>StartTime</b> and <b>EndTime</b>).</para>
+        /// <para>You must specify either <b>CrossBackupId</b> or the time range parameters (<b>StartTime</b> and <b>EndTime</b>).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The end time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>If the time zone is not UTC+0, you must subtract 8 hours from the actual time.</para>
+        /// <para>For time zones other than UTC+0, subtract 8 hours from the local time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</para>
+        /// <para>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum integer value.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The start time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>If the time zone is not UTC+0, you must subtract 8 hours from the actual time.</para>
+        /// <para>For time zones other than UTC+0, subtract 8 hours from the local time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

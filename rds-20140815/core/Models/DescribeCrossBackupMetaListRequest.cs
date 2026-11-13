@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database to query. Exact match is used. The specific database name and the names of tables in the database are returned.</para>
+        /// <para>The name of the database to query. This parameter supports exact match and returns the specific database name and the tables within the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb1</para>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</para>
+        /// <para>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum value of the Integer type.</para>
         /// <remarks>
-        /// <para>This parameter must be used together with <b>PageSize</b> to take effect.</para>
+        /// <para>This parameter takes effect only when it is specified together with <b>PageSize</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The number of entries per page. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para>This parameter must be used together with <b>PageIndex</b> to take effect.</para>
+        /// <para>This parameter takes effect only when it is specified together with <b>PageIndex</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the database to query. Fuzzy match is used. Only the matched database names are returned, and table names are not returned.</para>
+        /// <para>The name of the database to query. This parameter supports fuzzy match and returns only the matched database names without table names.</para>
         /// <remarks>
         /// <para>You can use fuzzy match first. For example, enter test to match testdb1 and testdb2. After you determine the target database name, use exact match by specifying <b>GetDbName</b> to view the specific database name and table names.</para>
         /// </remarks>

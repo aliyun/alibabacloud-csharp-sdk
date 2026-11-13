@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ListImportTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>None.</para>
+        /// <para>The list of import tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]

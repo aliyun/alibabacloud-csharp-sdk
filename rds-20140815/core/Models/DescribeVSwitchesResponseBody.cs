@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. This value corresponds to the value specified for the <b>PageSize</b> request parameter.</para>
+        /// <para>The number of entries per page. The value corresponds to the <b>PageSize</b> request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitch information.</para>
+        /// <para>The list of vSwitches.</para>
         /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the vSwitch is the default vSwitch.</para>
+            /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The vSwitch is the default vSwitch.</description></item>
-            /// <item><description><b>false</b>: The vSwitch is not the default vSwitch.</description></item>
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>The ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1pnaz94xc****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch name.</para>
+            /// <para>The name of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
