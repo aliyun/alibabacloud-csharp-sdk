@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. A value of success indicates that the request was successful.</para>
+        /// <para>The response message. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

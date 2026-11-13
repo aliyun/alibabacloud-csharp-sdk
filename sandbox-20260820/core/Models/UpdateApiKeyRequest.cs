@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class UpdateApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The request parameters for updating the API key.</para>
+        /// <para>The request parameters for updating an API key.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

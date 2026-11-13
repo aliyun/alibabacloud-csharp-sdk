@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class ListTemplateCacheResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. The value is 200 if the request is successful.</para>
+        /// <para>The error code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page returned in this response.</para>
+        /// <para>The maximum number of entries returned per page in this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty if no more results are available.</para>
+        /// <para>The pagination token for the next page. The value is empty if no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</para>

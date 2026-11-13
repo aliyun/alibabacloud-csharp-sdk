@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters teams by plan specification. Valid values: eco (Economy), std (Standard), pro (Professional), and ent (Enterprise).</para>
+        /// <para>Filters teams by plan specifications. Valid values: eco (Economy), std (Standard), pro (Professional), and ent (Enterprise).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pro</para>

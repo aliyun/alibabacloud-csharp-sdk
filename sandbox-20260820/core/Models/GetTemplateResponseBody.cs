@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The name of the template.</para>
+        /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-template</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public PublicTemplateRuntimeConfig RuntimeConfig { get; set; }
 
         /// <summary>
-        /// <para>The status of the template.</para>
+        /// <para>The template status.</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamID { get; set; }
 
         /// <summary>
-        /// <para>The name of the team.</para>
+        /// <para>The team name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-team</para>
@@ -141,6 +141,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("templateID")]
         [Validation(Required=false)]
         public string TemplateID { get; set; }
+
+        /// <summary>
+        /// <para>The templatetype. The default value is runtime template if it is not returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>layer</para>
+        /// </summary>
+        [NameInMap("templateType")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
 
     }
 

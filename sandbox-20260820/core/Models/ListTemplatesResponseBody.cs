@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page used in this response.</para>
+        /// <para>The maximum number of entries returned per page in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

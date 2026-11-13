@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class DeleteTeamResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success.</para>
+        /// <para>The response code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message. A value of success indicates success.</para>
+        /// <para>The response message. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

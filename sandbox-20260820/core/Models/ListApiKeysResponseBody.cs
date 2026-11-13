@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<ApiKey> ApiKeys { get; set; }
 
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success.</para>
+        /// <para>The response code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message. The value is success if the request succeeds.</para>
+        /// <para>The response message. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page used in the current query.</para>
+        /// <para>The number of entries per page for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

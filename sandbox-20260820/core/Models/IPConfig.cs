@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class IPConfig : TeaModel {
         /// <summary>
-        /// <para>The description of the IP rule. The description can be up to 128 characters in length.</para>
+        /// <para>The description of the IP rule. The length cannot exceed 128 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Office network egress address</para>
+        /// <para>办公网出口地址</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

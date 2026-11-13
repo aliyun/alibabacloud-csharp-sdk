@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class UpdateQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success.</para>
+        /// <para>The response code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

@@ -40,13 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
-        /// <para>Filters by storage volume status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CREATING: The storage volume is being created.</description></item>
-        /// <item><description>AVAILABLE: The storage volume is available.</description></item>
-        /// <item><description>ERROR: The storage volume is in an error state.</description></item>
-        /// <item><description>DELETING: The storage volume is being deleted.</description></item>
-        /// </list>
+        /// <para>Filters storage volumes by status. Valid values: CREATING (creating), AVAILABLE (available), ERROR (error), and DELETING (deleting).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATING</para>

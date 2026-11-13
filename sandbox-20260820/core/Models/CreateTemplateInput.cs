@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class CreateTemplateInput : TeaModel {
         /// <summary>
-        /// <para>The build configuration of the template. This configuration specifies the build process in action-based blocks. If this parameter is not specified, the service automatically derives the configuration based on the source image. Public runtime images are used directly without building. For other images, the copy and envdInject actions are automatically executed.</para>
+        /// <para>The build configuration of the template. This configuration specifies the build process in action-based chunks. If this parameter is not specified, the service automatically derives the configuration based on the source image. Public runtime images are used directly without building. For other images, the copy and envdInject actions are automatically executed.</para>
         /// </summary>
         [NameInMap("buildConfig")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public CreateTemplateRuntimeConfig RuntimeConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team to which the template belongs. The ID is in UUID format. If this parameter is not specified, the default team of the current account is used.</para>
+        /// <para>The ID of the team to which the template belongs. The ID must be in UUID format. If this parameter is not specified, the default team of the current account is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5f4a2c18-****</para>
@@ -71,6 +71,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("teamID")]
         [Validation(Required=false)]
         public string TeamID { get; set; }
+
+        /// <summary>
+        /// <para>The templatetype. Set this parameter to layer to build a layer template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>layer</para>
+        /// </summary>
+        [NameInMap("templateType")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
 
     }
 

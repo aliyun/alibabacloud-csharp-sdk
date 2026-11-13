@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of nextToken returned in the response of the previous page.</para>
+        /// <para>The pagination token. Use the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</para>

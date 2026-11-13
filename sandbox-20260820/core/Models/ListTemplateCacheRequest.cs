@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned from the previous request.</para>
+        /// <para>The pagination token returned in the response of the previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cae5f900-8b1d-4c0e-9c2a-1a2b3c4d5e6f</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Filters results by cache status. Valid values: InProgress, Success, Failed, Deleting, and Evicted.</para>
+        /// <para>Filters by cache status. Valid values: InProgress, Success, Failed, Deleting, and Evicted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

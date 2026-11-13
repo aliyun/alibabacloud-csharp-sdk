@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the template, which is unique within a team.</para>
+        /// <para>The template name, which is unique within a team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python-data-analysis</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         }
 
         /// <summary>
-        /// <para>The runtime configuration of the template, which determines the specifications and environment of the sandbox instances created from the template.</para>
+        /// <para>The runtime configuration of the template, which determines the specifications and environment of sandbox instances created from this template.</para>
         /// </summary>
         [NameInMap("runtimeConfig")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamID { get; set; }
 
         /// <summary>
-        /// <para>The name of the team.</para>
+        /// <para>The team name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sandbox-dev</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sandbox template.</para>
+        /// <para>The sandbox template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tm-8f3a2c7b5e14d806</para>
@@ -111,6 +111,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("templateID")]
         [Validation(Required=false)]
         public string TemplateID { get; set; }
+
+        /// <summary>
+        /// <para>The templatetype. An empty value indicates a runtime template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>layer</para>
+        /// </summary>
+        [NameInMap("templateType")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
 
     }
 

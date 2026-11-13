@@ -285,6 +285,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Creates a template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a template. runtimeConfig.vpcBindings is supported only for second-generation templates. A null value is treated as omitted. First-generation templates return a 400 error if an empty or non-empty array is explicitly provided. Inbound bindings are independent of the egress vpcConfig and API key source policies. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of the E2B sandbox are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTemplateRequest
         /// </param>
@@ -325,6 +330,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <summary>
         /// <para>Creates a template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a template. runtimeConfig.vpcBindings is supported only for second-generation templates. A null value is treated as omitted. First-generation templates return a 400 error if an empty or non-empty array is explicitly provided. Inbound bindings are independent of the egress vpcConfig and API key source policies. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of the E2B sandbox are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTemplateRequest
@@ -367,6 +377,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Creates a template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a template. runtimeConfig.vpcBindings is supported only for second-generation templates. A null value is treated as omitted. First-generation templates return a 400 error if an empty or non-empty array is explicitly provided. Inbound bindings are independent of the egress vpcConfig and API key source policies. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of the E2B sandbox are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTemplateRequest
         /// </param>
@@ -385,6 +400,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <summary>
         /// <para>Creates a template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a template. runtimeConfig.vpcBindings is supported only for second-generation templates. A null value is treated as omitted. First-generation templates return a 400 error if an empty or non-empty array is explicitly provided. Inbound bindings are independent of the egress vpcConfig and API key source policies. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of the E2B sandbox are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTemplateRequest
@@ -1776,6 +1796,474 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询监控指标</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查看某一时刻的监控指标，或查询一段时间内的变化趋势。支持按账号、团队、模板或沙箱查询。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GetMetricDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetricDataResponse
+        /// </returns>
+        public GetMetricDataResponse GetMetricDataWithOptions(GetMetricDataRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetMetricDataShrinkRequest request = new GetMetricDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetricNames))
+            {
+                request.MetricNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetricNames, "metricNames", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["groupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricNamesShrink))
+            {
+                query["metricNames"] = request.MetricNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxID))
+            {
+                query["sandboxID"] = request.SandboxID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxPlan))
+            {
+                query["sandboxPlan"] = request.SandboxPlan;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateID))
+            {
+                query["templateID"] = request.TemplateID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Time))
+            {
+                query["time"] = request.Time;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMetricData",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/metrics",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMetricDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控指标</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查看某一时刻的监控指标，或查询一段时间内的变化趋势。支持按账号、团队、模板或沙箱查询。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GetMetricDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetricDataResponse
+        /// </returns>
+        public async Task<GetMetricDataResponse> GetMetricDataWithOptionsAsync(GetMetricDataRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetMetricDataShrinkRequest request = new GetMetricDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MetricNames))
+            {
+                request.MetricNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MetricNames, "metricNames", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["groupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricNamesShrink))
+            {
+                query["metricNames"] = request.MetricNamesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxID))
+            {
+                query["sandboxID"] = request.SandboxID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxPlan))
+            {
+                query["sandboxPlan"] = request.SandboxPlan;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateID))
+            {
+                query["templateID"] = request.TemplateID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Time))
+            {
+                query["time"] = request.Time;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMetricData",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/metrics",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMetricDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控指标</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查看某一时刻的监控指标，或查询一段时间内的变化趋势。支持按账号、团队、模板或沙箱查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMetricDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetricDataResponse
+        /// </returns>
+        public GetMetricDataResponse GetMetricData(GetMetricDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMetricDataWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询监控指标</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查看某一时刻的监控指标，或查询一段时间内的变化趋势。支持按账号、团队、模板或沙箱查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMetricDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetricDataResponse
+        /// </returns>
+        public async Task<GetMetricDataResponse> GetMetricDataAsync(GetMetricDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMetricDataWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource usage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GetResourceUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceUsageResponse
+        /// </returns>
+        public GetResourceUsageResponse GetResourceUsageWithOptions(GetResourceUsageRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetResourceUsageShrinkRequest request = new GetResourceUsageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UsageNames))
+            {
+                request.UsageNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UsageNames, "usageNames", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["groupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxPlan))
+            {
+                query["sandboxPlan"] = request.SandboxPlan;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateID))
+            {
+                query["templateID"] = request.TemplateID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageNamesShrink))
+            {
+                query["usageNames"] = request.UsageNamesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceUsage",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/resource-usage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource usage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GetResourceUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceUsageResponse
+        /// </returns>
+        public async Task<GetResourceUsageResponse> GetResourceUsageWithOptionsAsync(GetResourceUsageRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetResourceUsageShrinkRequest request = new GetResourceUsageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UsageNames))
+            {
+                request.UsageNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UsageNames, "usageNames", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["groupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxPlan))
+            {
+                query["sandboxPlan"] = request.SandboxPlan;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateID))
+            {
+                query["templateID"] = request.TemplateID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageNamesShrink))
+            {
+                query["usageNames"] = request.UsageNamesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceUsage",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/resource-usage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource usage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceUsageResponse
+        /// </returns>
+        public GetResourceUsageResponse GetResourceUsage(GetResourceUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetResourceUsageWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource usage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceUsageResponse
+        /// </returns>
+        public async Task<GetResourceUsageResponse> GetResourceUsageAsync(GetResourceUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetResourceUsageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a specified team.</para>
         /// </summary>
         /// 
@@ -2332,7 +2820,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the quota configuration list for the current account.</para>
+        /// <para>Queries the quota configuration list for the current account by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2382,7 +2870,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the quota configuration list for the current account.</para>
+        /// <para>Queries the quota configuration list for the current account by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2432,7 +2920,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the quota configuration list for the current account.</para>
+        /// <para>Queries the quota configuration list for the current account by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2451,7 +2939,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the quota configuration list for the current account.</para>
+        /// <para>Queries the quota configuration list for the current account by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2632,7 +3120,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on template caches with paging support.</para>
+        /// <para>Queries template caches by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2694,7 +3182,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on template caches with paging support.</para>
+        /// <para>Queries template caches by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2756,7 +3244,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on template caches with paging support.</para>
+        /// <para>Queries template caches by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2775,7 +3263,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on template caches with paging support.</para>
+        /// <para>Queries template caches by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2794,7 +3282,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the template list.</para>
+        /// <para>Performs a paging query to retrieve the template list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2858,7 +3346,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the template list.</para>
+        /// <para>Performs a paging query to retrieve the template list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2922,7 +3410,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the template list.</para>
+        /// <para>Performs a paging query to retrieve the template list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2941,7 +3429,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the template list.</para>
+        /// <para>Performs a paging query to retrieve the template list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2960,7 +3448,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of storage volumes by using paging.</para>
+        /// <para>Queries a list of storage volumes by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3034,7 +3522,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of storage volumes by using paging.</para>
+        /// <para>Queries a list of storage volumes by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3108,7 +3596,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of storage volumes by using paging.</para>
+        /// <para>Queries a list of storage volumes by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3127,7 +3615,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of storage volumes by using paging.</para>
+        /// <para>Queries a list of storage volumes by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3148,6 +3636,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <summary>
         /// <para>Resets a specified API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Rotates the credential value of an API key while retaining the original API key ID, IP address whitelist, IP address blacklist, and vpcBindings source policy. The apiKey field in the response returns the retained policy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetApiKeyRequest
@@ -3189,6 +3682,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Resets a specified API key.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Rotates the credential value of an API key while retaining the original API key ID, IP address whitelist, IP address blacklist, and vpcBindings source policy. The apiKey field in the response returns the retained policy.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ResetApiKeyRequest
         /// </param>
@@ -3229,6 +3727,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Resets a specified API key.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Rotates the credential value of an API key while retaining the original API key ID, IP address whitelist, IP address blacklist, and vpcBindings source policy. The apiKey field in the response returns the retained policy.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ResetApiKeyRequest
         /// </param>
@@ -3248,6 +3751,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Resets a specified API key.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Rotates the credential value of an API key while retaining the original API key ID, IP address whitelist, IP address blacklist, and vpcBindings source policy. The apiKey field in the response returns the retained policy.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ResetApiKeyRequest
         /// </param>
@@ -3266,6 +3774,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <summary>
         /// <para>Updates the configuration of a specified API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an API key. IP blacklists and whitelists follow a paired replacement rule. If you commit a non-null array for one list and omit the other list or set it to null, the omitted list is cleared. If both lists are omitted or set to null, they are retained. The vpcBindings field is updated independently. If it is omitted or set to null, the current value is retained. A non-empty array replaces the current value, and an empty array [] clears it. Updates to IP addresses and VPCs do not clear each other. Source restrictions are retained if the source is null or if you update only other fields. An empty request body {} clears the IP address whitelist, IP blacklist, and VPC restrictions. You can also explicitly commit empty IP and VPC arrays to clear all source restrictions. To update the access policy, you must commit only the permissionPolicy and expectedPolicyVersion fields. Do not include other fields, including source fields with null values.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateApiKeyRequest
@@ -3308,6 +3821,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Updates the configuration of a specified API key.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an API key. IP blacklists and whitelists follow a paired replacement rule. If you commit a non-null array for one list and omit the other list or set it to null, the omitted list is cleared. If both lists are omitted or set to null, they are retained. The vpcBindings field is updated independently. If it is omitted or set to null, the current value is retained. A non-empty array replaces the current value, and an empty array [] clears it. Updates to IP addresses and VPCs do not clear each other. Source restrictions are retained if the source is null or if you update only other fields. An empty request body {} clears the IP address whitelist, IP blacklist, and VPC restrictions. You can also explicitly commit empty IP and VPC arrays to clear all source restrictions. To update the access policy, you must commit only the permissionPolicy and expectedPolicyVersion fields. Do not include other fields, including source fields with null values.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateApiKeyRequest
         /// </param>
@@ -3349,6 +3867,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Updates the configuration of a specified API key.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an API key. IP blacklists and whitelists follow a paired replacement rule. If you commit a non-null array for one list and omit the other list or set it to null, the omitted list is cleared. If both lists are omitted or set to null, they are retained. The vpcBindings field is updated independently. If it is omitted or set to null, the current value is retained. A non-empty array replaces the current value, and an empty array [] clears it. Updates to IP addresses and VPCs do not clear each other. Source restrictions are retained if the source is null or if you update only other fields. An empty request body {} clears the IP address whitelist, IP blacklist, and VPC restrictions. You can also explicitly commit empty IP and VPC arrays to clear all source restrictions. To update the access policy, you must commit only the permissionPolicy and expectedPolicyVersion fields. Do not include other fields, including source fields with null values.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateApiKeyRequest
         /// </param>
@@ -3367,6 +3890,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <summary>
         /// <para>Updates the configuration of a specified API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an API key. IP blacklists and whitelists follow a paired replacement rule. If you commit a non-null array for one list and omit the other list or set it to null, the omitted list is cleared. If both lists are omitted or set to null, they are retained. The vpcBindings field is updated independently. If it is omitted or set to null, the current value is retained. A non-empty array replaces the current value, and an empty array [] clears it. Updates to IP addresses and VPCs do not clear each other. Source restrictions are retained if the source is null or if you update only other fields. An empty request body {} clears the IP address whitelist, IP blacklist, and VPC restrictions. You can also explicitly commit empty IP and VPC arrays to clear all source restrictions. To update the access policy, you must commit only the permissionPolicy and expectedPolicyVersion fields. Do not include other fields, including source fields with null values.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateApiKeyRequest
@@ -3627,6 +4155,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Updates a template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a template. For Generation 2 templates, runtimeConfig.vpcBindings supports omission or null retention, full replacement with a non-empty array, or clearing with an empty array. The new list takes effect upon a successful build of the new version. Existing sandboxes continue to use the original functions and policies. If the build fails, the previously effective version is retained. For Generation 1 templates, explicitly passing an empty or non-empty array returns a 400 error. Before switching to Generation 1, you must clear the bindings and wait for the update to succeed. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of E2B sandboxes are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateTemplateRequest
         /// </param>
@@ -3673,6 +4206,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <summary>
         /// <para>Updates a template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a template. For Generation 2 templates, runtimeConfig.vpcBindings supports omission or null retention, full replacement with a non-empty array, or clearing with an empty array. The new list takes effect upon a successful build of the new version. Existing sandboxes continue to use the original functions and policies. If the build fails, the previously effective version is retained. For Generation 1 templates, explicitly passing an empty or non-empty array returns a 400 error. Before switching to Generation 1, you must clear the bindings and wait for the update to succeed. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of E2B sandboxes are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTemplateRequest
@@ -3721,6 +4259,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <para>Updates a template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a template. For Generation 2 templates, runtimeConfig.vpcBindings supports omission or null retention, full replacement with a non-empty array, or clearing with an empty array. The new list takes effect upon a successful build of the new version. Existing sandboxes continue to use the original functions and policies. If the build fails, the previously effective version is retained. For Generation 1 templates, explicitly passing an empty or non-empty array returns a 400 error. Before switching to Generation 1, you must clear the bindings and wait for the update to succeed. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of E2B sandboxes are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateTemplateRequest
         /// </param>
@@ -3739,6 +4282,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// <summary>
         /// <para>Updates a template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a template. For Generation 2 templates, runtimeConfig.vpcBindings supports omission or null retention, full replacement with a non-empty array, or clearing with an empty array. The new list takes effect upon a successful build of the new version. Existing sandboxes continue to use the original functions and policies. If the build fails, the previously effective version is retained. For Generation 1 templates, explicitly passing an empty or non-empty array returns a 400 error. Before switching to Generation 1, you must clear the bindings and wait for the update to succeed. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of E2B sandboxes are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTemplateRequest

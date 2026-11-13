@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of API keys to return on each page. Default value: 10. Valid values: 1 to 100.</para>
+        /// <para>The number of API keys to return per page. Default value: 10. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
-        /// <para>Filters API keys by status. Valid values: active (enabled), inactive (disabled).</para>
+        /// <para>Filters API keys by status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>active: Enabled.</description></item>
+        /// <item><description>inactive: Disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

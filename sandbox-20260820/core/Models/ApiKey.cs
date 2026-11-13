@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ApiKeyID { get; set; }
 
         /// <summary>
-        /// <para>The masked value of the API key. The prefix and the first and last four characters are retained, and the middle portion is replaced with four asterisks. This value is used for secure display in the user interface.</para>
+        /// <para>The masked value of the API key. It retains the prefix and the first and last four characters, and replaces the middle characters with four asterisks for secure display in the user interface.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e2b_3f9a****b915</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ApiKeyMask { get; set; }
 
         /// <summary>
-        /// <para>The name of the API key. The name can be up to 128 characters in length and can contain letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</para>
+        /// <para>The name of the API key. The name can be up to 128 characters in length and can contain only letters, digits, spaces, hyphens (-), underscores (_), and half-width periods (.).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ci-pipeline-key</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ApiKeyName { get; set; }
 
         /// <summary>
-        /// <para>The plaintext value of the API key, prefixed with e2b_. This value is returned only in responses from the create, import, and reset operations. Other operations do not return this value.</para>
+        /// <para>The plaintext value of the API key, which starts with e2b_. This value is returned only in the responses of the create, import, and reset operations, and is not returned by other operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e2b_****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ApiKeyValue { get; set; }
 
         /// <summary>
-        /// <para>The time when the API key was created, in UTC and RFC 3339 format.</para>
+        /// <para>The creation time of the API key, in UTC and RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-20T08:30:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the API key expires, in UTC and RFC 3339 format. An empty value indicates that the API key never expires.</para>
+        /// <para>The expiration time of the API key, in UTC and RFC 3339 format. An empty value indicates that the API key never expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2099-12-31T23:59:59Z</para>
@@ -70,21 +70,21 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The IP blacklist. After configuration, IP addresses in the list cannot use this API key. This parameter is mutually exclusive with ipWhitelist.</para>
+        /// <para>The IP address blacklist. After configuration, the IP addresses in the list cannot use the API key. This parameter is mutually exclusive with ipWhitelist.</para>
         /// </summary>
         [NameInMap("ipBlacklist")]
         [Validation(Required=false)]
         public List<IPConfig> IpBlacklist { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist. After configuration, only IP addresses in the list can use this API key. This parameter is mutually exclusive with ipBlacklist.</para>
+        /// <para>The IP address whitelist. After configuration, only the IP addresses in the list can use the API key. This parameter is mutually exclusive with ipBlacklist.</para>
         /// </summary>
         [NameInMap("ipWhitelist")]
         [Validation(Required=false)]
         public List<IPConfig> IpWhitelist { get; set; }
 
         /// <summary>
-        /// <para>The time when the API key was last used, in UTC and RFC 3339 format. An empty value indicates that the API key has never been used.</para>
+        /// <para>The time when the API key was last used, in UTC and RFC 3339 format. This value is empty if the API key has never been used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-09-10T14:22:07Z</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string LastUsedTime { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID to which the team belongs.</para>
+        /// <para>The ID of the Alibaba Cloud resource group to which the team belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-****</para>
@@ -104,11 +104,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
-        /// <para>The source of the API key. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>generated: The API key is generated by the service.</description></item>
-        /// <item><description>custom: The API key is imported by the user.</description></item>
-        /// </list>
+        /// <para>The source of the API key. Valid values: generated (generated by the service) and custom (imported by the user).</para>
         /// 
         /// <b>Example:</b>
         /// <para>generated</para>
@@ -118,11 +114,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The status of the API key. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>active: The API key is enabled.</description></item>
-        /// <item><description>inactive: The API key is disabled. A disabled API key cannot be used to access sandbox services.</description></item>
-        /// </list>
+        /// <para>The status of the API key. Valid values: active (enabled) and inactive (disabled). A disabled API key can no longer be used to access the sandbox service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -142,7 +134,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamID { get; set; }
 
         /// <summary>
-        /// <para>The team name.</para>
+        /// <para>The name of the team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sandbox-dev</para>
@@ -152,13 +144,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamName { get; set; }
 
         /// <summary>
-        /// <para>The team plan. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>eco: economy</description></item>
-        /// <item><description>std: standard</description></item>
-        /// <item><description>pro: professional</description></item>
-        /// <item><description>ent: enterprise</description></item>
-        /// </list>
+        /// <para>The team plan edition. Valid values: eco (Economy), std (Standard), pro (Professional), and ent (Enterprise).</para>
         /// 
         /// <b>Example:</b>
         /// <para>std</para>
@@ -186,6 +172,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [NameInMap("username")]
         [Validation(Required=false)]
         public string Username { get; set; }
+
+        /// <summary>
+        /// <para>The set of source VPC IDs allowed for this API key. An omitted or empty array indicates that no VPC source restrictions are configured. If the array is not empty, requests must meet both this VPC restriction and the configured IP source policies. This list is retained when credentials are rotated by calling ResetApiKey.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</para>
+        /// </summary>
+        [NameInMap("vpcBindings")]
+        [Validation(Required=false)]
+        public List<string> VpcBindings { get; set; }
 
     }
 

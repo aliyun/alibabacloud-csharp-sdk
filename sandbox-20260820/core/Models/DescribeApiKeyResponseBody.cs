@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public ApiKey ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success.</para>
+        /// <para>The response code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<IPConfig> IpWhitelist { get; set; }
 
         /// <summary>
-        /// <para>The response message. The value is success for a successful request.</para>
+        /// <para>The response message. The value is success when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
