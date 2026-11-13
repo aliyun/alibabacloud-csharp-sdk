@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The name of the function.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example-function</para>
         /// </summary>
         [NameInMap("functionName")]
         [Validation(Required=false)]
@@ -83,6 +86,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-a1b2c3d4e5f6g7h</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]

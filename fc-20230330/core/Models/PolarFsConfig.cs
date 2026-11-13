@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The mount points.</para>
+        /// <para>The list of mount points.</para>
         /// </summary>
         [NameInMap("mountPoints")]
         [Validation(Required=false)]

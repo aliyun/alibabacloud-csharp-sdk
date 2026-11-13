@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? Disable { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2026-10-01T10:00:00Z</para>
+        /// </summary>
         [NameInMap("lastModifiedTime")]
         [Validation(Required=false)]
         public string LastModifiedTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Function invocation is disabled.</para>
+        /// </summary>
         [NameInMap("reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }

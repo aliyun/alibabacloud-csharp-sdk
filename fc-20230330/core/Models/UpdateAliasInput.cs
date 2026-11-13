@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateAliasInput : TeaModel {
         /// <summary>
-        /// <para>Weight of the canary release version</para>
+        /// <para>The weight of the canary release version.</para>
         /// </summary>
         [NameInMap("additionalVersionWeight")]
         [Validation(Required=false)]
         public Dictionary<string, float?> AdditionalVersionWeight { get; set; }
 
         /// <summary>
-        /// <para>Description of the alias</para>
+        /// <para>The description of the alias.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my alias</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Version that the alias points to</para>
+        /// <para>The version pointed to by the alias.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

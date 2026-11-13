@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<string> ExposeHeaders { get; set; }
 
         /// <summary>
-        /// <para>The cache time for preflight requests, in seconds.</para>
+        /// <para>The preflight request cache time, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>

@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The operating system type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>linux-amd64</para>
         /// </summary>
         [NameInMap("osType")]
         [Validation(Required=false)]
@@ -32,6 +35,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The ready command.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>curl -fs <a href="http://127.0.0.1:8080/health">http://127.0.0.1:8080/health</a></para>
         /// </summary>
         [NameInMap("readyCommand")]
         [Validation(Required=false)]
@@ -46,6 +52,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The startup command.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/usr/local/bin/start-service</para>
         /// </summary>
         [NameInMap("startCommand")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class TLSConfig : TeaModel {
         /// <summary>
-        /// <para>The TLS cipher suites.</para>
+        /// <para>The list of TLS cipher suites.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("cipherSuites")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TLSv1.0</para>
+        /// <para>TLSv1.2</para>
         /// </summary>
         [NameInMap("minVersion")]
         [Validation(Required=false)]

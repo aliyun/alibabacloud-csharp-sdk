@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class OSSMountPoint : TeaModel {
         /// <summary>
-        /// <para>The OSS bucket that you want to mount.</para>
+        /// <para>The mounted OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-bucket</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The path of the mounted OSS bucket.</para>
+        /// <para>The mounted OSS bucket path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/my-dir</para>
@@ -50,7 +50,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string MountDir { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether it is read-only.</para>
+        /// <para>Specifies whether to allow mounting OSS to a local directory that contains existing files or subdirectories.</para>
+        /// </summary>
+        [NameInMap("nonempty")]
+        [Validation(Required=false)]
+        public bool? Nonempty { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether the mount is read-only.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

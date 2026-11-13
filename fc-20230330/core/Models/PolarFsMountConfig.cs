@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PolarFsMountConfig : TeaModel {
         /// <summary>
-        /// <para>The additional mount parameter settings.</para>
+        /// <para>The other mount parameter settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--skip-delete-rows-check=false  --skip-dir-nlink=0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ExtraOptions { get; set; }
 
         /// <summary>
-        /// <para>The PolarFS instance ID.</para>
+        /// <para>The PolarFs instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-xxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? ReadOnly { get; set; }
 
         /// <summary>
-        /// <para>The PolarFS directory.</para>
+        /// <para>The PolarFs directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/share</para>

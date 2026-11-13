@@ -13,12 +13,15 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? AllowInternetAccess { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to save only the file system during auto-pause.</para>
+        /// </summary>
         [NameInMap("autoPauseFileSystemOnly")]
         [Validation(Required=false)]
         public bool? AutoPauseFileSystemOnly { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the function associated with the session.</para>
+        /// <para>The function instance ID associated with the session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-68999e02-16a1955c-d2a03d1ccs</para>
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The time when the session was created.</para>
+        /// <para>The creation time of the session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-04-01T08:15:27Z</para>
@@ -38,12 +41,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable session ID reuse after the session expires. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>False: After the session expires, you can use the same session ID to initiate requests. The system treats it as a new session and binds it to a new instance.</description></item>
-        /// <item><description>True: After the session expires, the session ID cannot be reused.</description></item>
-        /// </list>
-        /// <para>Default value: False.</para>
+        /// <para>Specifies whether to disable session ID reuse. Default value: False. A value of False indicates that after a session expires, you can continue to send requests with the same session ID, and the system treats it as a new session and binds it to a new instance. A value of True indicates that after a session expires, the session ID cannot be reused.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -70,6 +68,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
+        /// <summary>
+        /// <para>The JuiceFS mount configuration.</para>
+        /// </summary>
         [NameInMap("juiceFsConfig")]
         [Validation(Required=false)]
         public JuiceFsConfig JuiceFsConfig { get; set; }
@@ -85,7 +86,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LastModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The NAS configuration. After configuration, the instance associated with the session can access the specified NAS resource.</para>
+        /// <para>The NAS configuration. After this configuration is applied, the instance associated with the session can access the specified NAS resources.</para>
         /// </summary>
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
@@ -95,16 +96,32 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public CreateSessionNetworkConfig Network { get; set; }
 
+        /// <summary>
+        /// <para>The OSS mount configuration, which allows the associated function instance to access the specified OSS resources.</para>
+        /// </summary>
         [NameInMap("ossMountConfig")]
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
 
+        /// <summary>
+        /// <para>The deep hibernation retention duration for the saved session, in seconds. The minimum value is 600. The timing starts each time the session successfully enters deep hibernation. If this parameter is not configured, this field may not be returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
+        /// </summary>
+        [NameInMap("pausedExpirationSeconds")]
+        [Validation(Required=false)]
+        public long? PausedExpirationSeconds { get; set; }
+
+        /// <summary>
+        /// <para>The PolarFS mount configuration, which allows the associated function instance to access the specified PolarFS resources.</para>
+        /// </summary>
         [NameInMap("polarFsConfig")]
         [Validation(Required=false)]
         public PolarFsConfig PolarFsConfig { get; set; }
 
         /// <summary>
-        /// <para>The qualifier passed when the customer created the session. If not specified, the default value is LATEST.</para>
+        /// <para>The qualifier passed by the user when creating the session. If no qualifier is passed, the default value LATEST is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliasName1</para>
@@ -144,11 +161,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? SessionIdleTimeoutInSeconds { get; set; }
 
         /// <summary>
-        /// <para>The session status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Active: The session is valid.</description></item>
-        /// <item><description>Expired: The session has expired.</description></item>
-        /// </list>
+        /// <para>The session status. Active indicates that the session is valid, and Expired indicates that the session has expired.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -166,6 +179,16 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("sessionTTLInSeconds")]
         [Validation(Required=false)]
         public long? SessionTTLInSeconds { get; set; }
+
+        /// <summary>
+        /// <para>The retention duration for subsequent user snapshots saved in the session, in seconds. The minimum value is 600. Updating this policy affects only newly created user snapshots and does not modify the expiration time of existing snapshots.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
+        /// </summary>
+        [NameInMap("snapshotExpirationSeconds")]
+        [Validation(Required=false)]
+        public long? SnapshotExpirationSeconds { get; set; }
 
         [NameInMap("trafficAccessToken")]
         [Validation(Required=false)]
