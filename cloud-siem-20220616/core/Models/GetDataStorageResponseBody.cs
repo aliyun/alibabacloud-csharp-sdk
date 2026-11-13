@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class GetDataStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned details.</para>
+        /// <para>The detailed response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataStorageRegionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact the product manager to reset the region. The region can be reset only once. Valid values:</para>
+            /// <para>Specifies whether the storage region can be modified. By default, the storage region cannot be modified. To reset the region, contact the product manager. The region can be reset only once. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>allow: The storage region can be modified.</description></item>
             /// <item><description>deny: The storage region cannot be modified.</description></item>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataStorageRegionPermission { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity purchased in the prepaid scenario.</para>
+            /// <para>The purchased storage capacity for subscription instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public double? DataStorageUsedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The storage usage details for log management users.</para>
+            /// <para>The details of storage used by the user for log management.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;purchasedHotStorageCapacity\&quot;:1000,\&quot;usedHotStorageCapacity\&quot;:4.2,\&quot;usedHotStorageCapacityDetail\&quot;:{\&quot;ap-southeast-1\&quot;:4.2,\&quot;cn-shenzhen\&quot;:0.0,\&quot;cn-shanghai\&quot;:0.0}}</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataStorageUsedCapacityDetail { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service (SLS) project that stores user logs.</para>
+            /// <para>The name of the Simple Log Service project that stores user logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun-cloudsiem-data-171835723111****-cn-shanghai</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string LogProject { get; set; }
 
             /// <summary>
-            /// <para>The details of Logstores for normalized data.</para>
+            /// <para>The Logstore details of normalized data.</para>
             /// </summary>
             [NameInMap("NormalizationLogStores")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public List<GetDataStorageResponseBodyDataNormalizationLogViews> NormalizationLogViews { get; set; }
             public class GetDataStorageResponseBodyDataNormalizationLogViews : TeaModel {
                 /// <summary>
-                /// <para>The log type of the normalized log.</para>
+                /// <para>The log type of normalized logs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>API security risk log</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ActivityName { get; set; }
 
                 /// <summary>
-                /// <para>The category of the normalized log.</para>
+                /// <para>The category of normalized logs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Security Category</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string CategoryName { get; set; }
 
                 /// <summary>
-                /// <para>The number of times the normalized dataset is referenced in the threat analysis access center.</para>
+                /// <para>The number of times the normalized dataset is referenced in the Threat Analysis integration center.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public int? DetectionRuleReferenceCount { get; set; }
 
                 /// <summary>
-                /// <para>The product IDs in the threat analysis access center.</para>
+                /// <para>The product IDs in the Threat Analysis integration center.</para>
                 /// </summary>
                 [NameInMap("DetectionRuleReferenceProductIds")]
                 [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogSearchConditions { get; set; }
 
                 /// <summary>
-                /// <para>The Logstore where threat analysis stores normalized logs.</para>
+                /// <para>The Logstore where Threat Analysis stores normalized logs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>risk-activity</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             }
 
             /// <summary>
-            /// <para>The details of raw log storage for Security Center.</para>
+            /// <para>The storage details of raw logs in Security Center.</para>
             /// </summary>
             [NameInMap("SasLogStores")]
             [Validation(Required=false)]
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogDeliveryGroup { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether log delivery can be toggled. Log delivery cannot be enabled if the service is not purchased. Valid values:</para>
+                /// <para>Indicates whether log delivery can be enabled or disabled. Log delivery is unavailable if the service has not been purchased. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>allow: Allowed.</description></item>
                 /// <item><description>deny: Not allowed.</description></item>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogDeliveryStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the log delivery was last modified. The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
+                /// <para>The time of the last log delivery operation. The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-16T15:10:29</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogSearchConditions { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Logstore where the log resides exists. Valid values:</para>
+                /// <para>Indicates whether the Logstore where the log is stored exists. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: The Logstore exists.</description></item>
                 /// <item><description>false: The Logstore does not exist.</description></item>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public bool? LogStoreExisted { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Logstore where the log resides.</para>
+                /// <para>The name of the Logstore where the log is stored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas-security-log</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogStoreName { get; set; }
 
                 /// <summary>
-                /// <para>The storage duration of the Logstore where the log resides. Logs are stored for at least 30 days.</para>
+                /// <para>The storage duration of the Logstore where the log is stored. The minimum storage duration is 30 days.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>180</para>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81FB0DEA-52C1-55A0-8631-8E1B9A9D****</para>

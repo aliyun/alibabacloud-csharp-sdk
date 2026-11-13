@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class ListEntitiesRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number, which must be greater than or equal to 1.</para>
+        /// <para>The number of the current page. The value must be greater than or equal to 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +32,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// <para>The entity type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ip: IP address</description></item>
+        /// <item><description>domain: Domain name</description></item>
+        /// <item><description>url: URL</description></item>
+        /// <item><description>process: Process</description></item>
+        /// <item><description>file: File</description></item>
+        /// <item><description>host: Host</description></item>
+        /// <item><description>cloud_account: Cloud account</description></item>
+        /// <item><description>container: Container</description></item>
+        /// <item><description>bucket: OSS bucket</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ip</para>
@@ -73,6 +84,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 
         /// <summary>
         /// <para>Specifies whether the entity is malicious. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: No.</description></item>
+        /// <item><description>1: Yes.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string MalwareType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page, up to a maximum of 100.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,10 +118,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of threat analysis is located. Select the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member to which the administrator switches the view.</para>
+        /// <para>The ID of the user whose view the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -127,7 +142,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
+        /// <para>The view type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -137,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The entity tags. The value is a JSON array string:</para>
+        /// <para>The entity tags. The format is a JSON array string:</para>
         /// <para><c>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</c></para>
         /// 
         /// <b>Example:</b>

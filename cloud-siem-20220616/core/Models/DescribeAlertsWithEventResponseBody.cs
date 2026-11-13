@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public List<DescribeAlertsWithEventResponseBodyDataResponseDataAlertInfoList> AlertInfoList { get; set; }
                 public class DescribeAlertsWithEventResponseBodyDataResponseDataAlertInfoList : TeaModel {
                     /// <summary>
-                    /// <para>The key of the alert detail property.</para>
+                    /// <para>The key of the alert detail attribute.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>suspicious.wbd.wb.trojanpath</para>
@@ -160,9 +160,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The threat level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>serious: High.</description></item>
-                /// <item><description>suspicious: Medium.</description></item>
-                /// <item><description>remind: Low.</description></item>
+                /// <item><description>serious: High risk.</description></item>
+                /// <item><description>suspicious: Medium risk.</description></item>
+                /// <item><description>remind: Low risk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string AlertSrcProdModule { get; set; }
 
                 /// <summary>
-                /// <para>The alert status. Valid values: 0: Pending; 1: Processed; 2: Processing; 3: Whitelisted, false positive, or rejected; 999: Unknown.</para>
+                /// <para>The alert status. Valid values: 0: pending; 1: handled; 2: processing; 3: whitelisted, false positive, or rejected; 999: unknown.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string EntityList { get; set; }
 
                 /// <summary>
-                /// <para>The extended alert information.</para>
+                /// <para>The extended information of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;main_user_id&quot;: &quot;165295629792****&quot;;&quot;log_uuid_count&quot;: &quot;99****&quot;}</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string ExtendContent { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert was created.</para>
+                /// <para>The time when the alert was recorded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert was last updated.</para>
+                /// <para>The last update time of the alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string IsDefend { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert was recorded. The format is YYYY-MM-DD HH:mm:ss.</para>
+                /// <para>The time when the alert was logged. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-06 16:37:29</para>
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogUuid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the SIEM primary account associated with the alert.</para>
+                /// <para>The ID of the main account associated with the alert in SIEM.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127608589417****</para>

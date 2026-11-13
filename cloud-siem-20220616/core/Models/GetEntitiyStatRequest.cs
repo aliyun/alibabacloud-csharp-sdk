@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EntityUuids { get; set; }
 
         /// <summary>
-        /// <para>The incident ID.</para>
+        /// <para>The ID of the incident.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The sort order of the incident list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: descending order</description></item>
-        /// <item><description>asc: ascending order</description></item>
+        /// <item><description>desc: Descending order.</description></item>
+        /// <item><description>asc: Ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IsMalwareEntity { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets reside. Valid values:</para>
+        /// <para>The region of the data management center for Threat Analysis. Select the region based on where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Assets reside in the Chinese mainland and Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: Assets reside in regions outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user whose view the administrator switches to.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1637941677243702</para>
@@ -129,13 +129,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The role type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: single-account logon</description></item>
-        /// <item><description>1: global view</description></item>
-        /// <item><description>2: switched view</description></item>
-        /// <item><description>3: local view</description></item>
-        /// </list>
+        /// <para>The role type. Valid values: 0 (single-account logon), 1 (global view), 2 (switched view), and 3 (local view).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -145,7 +139,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The entity tags. The value is a JSON array string in the following format: &quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;.</para>
+        /// <para>The tags of the entity. The format is a JSON array string: \&quot;[{\&quot;tagKey1\&quot;:\&quot;tagValue1\&quot;},{\&quot;tagKey2\&quot;:\&quot;tagValue2\&quot;}]\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sys:agent:dispose</para>

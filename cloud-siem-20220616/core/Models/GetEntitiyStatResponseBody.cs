@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class GetEntitiyStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public int? EntityNum { get; set; }
 
             /// <summary>
-            /// <para>The entity type.</para>
+            /// <para>The type of the entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The entity UUID.</para>
+            /// <para>The UUID of the entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5cde2118666ffda40783ebd7cec9a60a</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>

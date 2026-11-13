@@ -1,3 +1,8 @@
+2026-11-13 Version: 6.3.2
+- Update API DescribeAlertsWithEvent: add request parameters GroupBy.
+- Update API DescribeAlertsWithEvent: add request parameters GroupByValue.
+
+
 2026-11-11 Version: 6.3.1
 - Update API DescribeUserSiemOrderStatus: add response parameters Body.Data.CreditsPostpaidInfo.
 

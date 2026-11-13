@@ -101,6 +101,26 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string EntityName { get; set; }
 
         /// <summary>
+        /// <para>The aggregation drill-down dimension. Valid values: ALERT_NAME and ALERT_TYPE. This parameter is used together with GroupByValue.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALERT_NAME</para>
+        /// </summary>
+        [NameInMap("GroupBy")]
+        [Validation(Required=false)]
+        public string GroupBy { get; set; }
+
+        /// <summary>
+        /// <para>The original grouping key returned by DescribeAlertsGroup. The name can contain up to 300 characters, and the type can contain up to 100 characters. Exact match is performed based on the original field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>network_web_security_rule_10005239</para>
+        /// </summary>
+        [NameInMap("GroupByValue")]
+        [Validation(Required=false)]
+        public string GroupByValue { get; set; }
+
+        /// <summary>
         /// <para>The incident ID.</para>
         /// 
         /// <b>Example:</b>
@@ -125,11 +145,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IsDefend { get; set; }
 
         /// <summary>
-        /// <para>The threat level. The value is a JSON array. Valid values:</para>
+        /// <para>The threat level. The value is formatted as a JSON array. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>serious: High.</description></item>
-        /// <item><description>suspicious: Medium.</description></item>
-        /// <item><description>remind: Low.</description></item>
+        /// <item><description>serious: High risk.</description></item>
+        /// <item><description>suspicious: Medium risk.</description></item>
+        /// <item><description>remind: Low risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,10 +171,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is deployed. You must select the region of the management center based on the region where your assets are deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,7 +185,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member account in the resource directory.</para>
+        /// <para>The ID of the member accounts in the resource folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -209,7 +229,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account associated with the alert.</para>
+        /// <para>The ID of the linked account associated with the alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>176555323***</para>
