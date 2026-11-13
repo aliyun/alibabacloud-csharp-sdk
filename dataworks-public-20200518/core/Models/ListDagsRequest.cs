@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDagsRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the data backfill instance. You can call the <a href="https://help.aliyun.com/document_detail/189753.html">GetDag</a> operation to obtain this value.</para>
+        /// <para>The OpSeq. You can obtain this value from the response of CreateDagComplement. Before creating a data backfill task, you typically need to complete the business process, create files, and submit them. You can also obtain the DagId by calling RunCycleDagNodes, RunSmokeTest, or RunManualDagNodes, and then call GetDag to obtain the OpSeq.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? OpSeq { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the scheduling O&amp;M environment. PROD indicates the production environment, and DEV indicates the development environment.</para>
+        /// <para>The identity of the scheduling and O&amp;M environment. PROD indicates the production environment, and DEV indicates the development environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

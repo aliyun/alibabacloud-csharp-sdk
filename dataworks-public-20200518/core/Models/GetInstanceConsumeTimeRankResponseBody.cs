@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRankConsumeTimeRank> ConsumeTimeRank { get; set; }
             public class GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRankConsumeTimeRank : TeaModel {
                 /// <summary>
-                /// <para>The data timestamp on which the instance was run.</para>
+                /// <para>The business date on which the instance was run.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1600963200000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the node.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>节点名称</para>
+                /// <para>Node name</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]

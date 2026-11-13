@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMigrationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListMigrationsResponseBodyDataMigrations> Migrations { get; set; }
             public class ListMigrationsResponseBodyDataMigrations : TeaModel {
                 /// <summary>
-                /// <para>The time when the migration task was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123124123123123</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who created the migration task.</para>
+                /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user who created the migration task.</para>
+                /// <para>The name of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3h1_test</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.</para>
+                /// <para>The download URL of the export task package. You can use this URL to download the package.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4/trace/v1.20220424123842.dex?Expires=1650780849&OSSAccessKeyId=XXXXXXeF4Lv5j&Signature=qxxxxx">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4/trace/v1.20220424123842.dex?Expires=1650780849&amp;OSSAccessKeyId=XXXXXXeF4Lv5j&amp;Signature=qxxxxx</a></para>
+                /// <para><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4/trace/v1.20220424123842.dex?Expires=1650780849&OSSAccessKeyId=*****&Signature=qxxxxx">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4/trace/v1.20220424123842.dex?Expires=1650780849&amp;OSSAccessKeyId=*****&amp;Signature=qxxxxx</a></para>
                 /// </summary>
                 [NameInMap("DownloadUrl")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned.</para>
+                /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>An internal system error occurred. datasource kafka region is not cn-chengdu, can\&quot;t open network for it</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The type of the migration task. Valid values:</para>
+                /// <para>The operation type of the migration task. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>IMPORT</description></item>
                 /// <item><description>EXPORT</description></item>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string MigrationType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the migration task.</para>
+                /// <para>The name of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_task_1638498642279</para>
@@ -118,14 +118,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the import or export package. Valid values:</para>
+                /// <para>The type of the import and export package. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DWMA (standard format)</description></item>
-                /// <item><description>DATAWORKS_MODEL (standard format)</description></item>
-                /// <item><description>DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)</description></item>
-                /// <item><description>DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)</description></item>
+                /// <item><description>DWMA: Standard format.</description></item>
+                /// <item><description>DATAWORKS_MODEL: Standard format.</description></item>
+                /// <item><description>DATAWORKS_V2: Apsara Stack (V3.6.1 to V3.11).</description></item>
+                /// <item><description>DATAWORKS_V3: Apsara Stack (V3.12 and later).</description></item>
                 /// </list>
-                /// <para>The DWMA and DATAWORKS_MODEL types are interchangeable.</para>
+                /// <para>DWMA and DATAWORKS_MODEL are interchangeable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DATAWORKS_MODEL</para>
@@ -145,13 +145,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the migration task. Valid values:</para>
+                /// <para>The execution status of the import and export migration task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INIT: The migration task is in the initial state.</description></item>
-                /// <item><description>EDITING: The migration task is being edited.</description></item>
-                /// <item><description>RUNNING: The migration task is running.</description></item>
-                /// <item><description>FAILURE: The migration task fails to run.</description></item>
-                /// <item><description>SUCCESS: The migration task is successfully run.</description></item>
+                /// <item><description>INIT: The task is in the initial state.</description></item>
+                /// <item><description>EDITING: The task is being edited.</description></item>
+                /// <item><description>RUNNING: The task is running.</description></item>
+                /// <item><description>FAILURE: The task failed.</description></item>
+                /// <item><description>SUCCESS: The task succeeded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? TenantId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the migration task was last updated.</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123123123123</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who last updated the migration task.</para>
+                /// <para>The updater.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1231****</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string UpdateUser { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user who last updated the migration task.</para>
+                /// <para>The name of the updater.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3h1_test</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+            /// <para>The number of entries returned per page. Default value: 10. Maximum value: 50.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -236,20 +236,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F9198AA3-9010-53D5-9714-DC4461427D3E</para>
+        /// <para>F9198AA3-9010-53D5-9714-DC4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

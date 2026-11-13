@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to overwrite the advanced settings of nodes in DataStudio. Valid values:</para>
+        /// <para>Specifies whether to overwrite the advanced settings of nodes in Data Studio. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: overwrite.</description></item>
+        /// <item><description>false: do not overwrite.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The module in which the cluster is configured. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ide: DataStudio.</description></item>
+        /// <item><description>ide: Data Studio.</description></item>
         /// <item><description>da: DataAnalysis.</description></item>
         /// <item><description>scheduler.auto: Operation Center - auto triggered instances.</description></item>
         /// <item><description>scheduler.backfill: Operation Center - data backfill instances.</description></item>

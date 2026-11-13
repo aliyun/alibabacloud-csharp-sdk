@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetSensitiveDataRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters that you can configure to query the access records. Valid values:</para>
+        /// <para>The condition settings for retrieving access records. Optional parameters:</para>
         /// <list type="bullet">
-        /// <item><description>dbType</description></item>
-        /// <item><description>instanceName</description></item>
-        /// <item><description>databaseName</description></item>
-        /// <item><description>projectName</description></item>
-        /// <item><description>clusterName</description></item>
+        /// <item><description>dbType: The data type.</description></item>
+        /// <item><description>instanceName: The instance name.</description></item>
+        /// <item><description>databaseName: The database name.</description></item>
+        /// <item><description>projectName: The project name.</description></item>
+        /// <item><description>clusterName: The cluster name.</description></item>
         /// </list>
-        /// <para>The sample value shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC. You must configure the parameters based on the compute engine that you use in your business.</para>
+        /// <para>Example: Retrieve sensitive data access records for the abc database of the ABC instance in Hologres. Configure the parameters based on the engine used in your business.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. Minimum value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 1000.</para>
+        /// <para>The number of entries to return per page. Maximum value: 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string BaselineName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the baseline. Valid values: DAILY and HOURLY.</para>
+                /// <para>The type of the baseline. Valid values: DAILY (day-level baseline) and HOURLY (hour-level baseline).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DAILY</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<ListBaselinesResponseBodyDataBaselinesOverTimeSettings> OverTimeSettings { get; set; }
                 public class ListBaselinesResponseBodyDataBaselinesOverTimeSettings : TeaModel {
                     /// <summary>
-                    /// <para>The cycle that corresponds to the committed completion time. For a day-level baseline, the value of this parameter is 1. For an hour-level baseline, the value of this parameter cannot exceed 24.</para>
+                    /// <para>The cycle that corresponds to the committed completion time. For a day-level baseline, the value of this parameter is 1. For an hour-level baseline, you can configure up to 24 cycles.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>

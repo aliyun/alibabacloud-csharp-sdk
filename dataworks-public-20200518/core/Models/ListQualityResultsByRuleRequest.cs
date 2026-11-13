@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityResultsByRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
-        /// <para>You must configure this parameter together with the StartDate parameter. The time range to query cannot exceed 7 days.</para>
+        /// <para>The end of the business date range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>You must configure this parameter together with the StartDate parameter. The business date range to query cannot exceed 7 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,8 +76,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
-        /// <para>You must configure this parameter together with the EndDate parameter. The time range to query cannot exceed 7 days.</para>
+        /// <para>The beginning of the business date range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>You must configure this parameter together with the EndDate parameter. The business date range to query cannot exceed 7 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

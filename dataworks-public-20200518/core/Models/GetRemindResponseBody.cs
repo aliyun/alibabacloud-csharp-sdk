@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetRemindResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the custom alert rule.</para>
+        /// <para>The details of the custom monitoring rule.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRemindResponseBodyData Data { get; set; }
         public class GetRemindResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The minimum interval at which alerts are reported. Unit: seconds.</para>
+            /// <para>The minimum alert interval, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1800</para>
@@ -27,25 +27,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? AlertInterval { get; set; }
 
             /// <summary>
-            /// <para>The notification method.</para>
+            /// <para>The alert methods.</para>
             /// </summary>
             [NameInMap("AlertMethods")]
             [Validation(Required=false)]
             public List<string> AlertMethods { get; set; }
 
             /// <summary>
-            /// <para>The description of the alert recipient. For more information about alert recipients, see the Receivers parameter.</para>
+            /// <para>The alert recipients. For multiple types of alert recipients, refer to the Receivers response parameter.</para>
             /// </summary>
             [NameInMap("AlertTargets")]
             [Validation(Required=false)]
             public List<string> AlertTargets { get; set; }
 
             /// <summary>
-            /// <para>The type of the alert recipient. For more information about alert recipient types, see the Receivers parameter. Valid values:</para>
+            /// <para>The alert recipient type. For multiple types of alert recipients, refer to the Receivers response parameter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OWNER: the task owner</description></item>
-            /// <item><description>OTHER: specified personnel</description></item>
-            /// <item><description>SHIFT_SCHEDULE: personnel in a shift schedule</description></item>
+            /// <item><description>OWNER: task owner.</description></item>
+            /// <item><description>OTHER: specified user.</description></item>
+            /// <item><description>SHIFT_SCHEDULE: duty roster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,21 +56,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string AlertUnit { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the nodes that are added to a whitelist.</para>
+            /// <para>The alert allowlist.</para>
             /// </summary>
             [NameInMap("AllowNodes")]
             [Validation(Required=false)]
             public List<long?> AllowNodes { get; set; }
 
             /// <summary>
-            /// <para>The baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.</para>
+            /// <para>The list of baselines for monitoring by the rule when the RemindUnit object type is BASELINE.</para>
             /// </summary>
             [NameInMap("Baselines")]
             [Validation(Required=false)]
             public List<GetRemindResponseBodyDataBaselines> Baselines { get; set; }
             public class GetRemindResponseBodyDataBaselines : TeaModel {
                 /// <summary>
-                /// <para>The baseline ID.</para>
+                /// <para>The ID of the baseline.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The workflows to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BIZPROCESS.</para>
+            /// <para>The list of business flows for monitoring by the rule when the RemindUnit object type is BIZPROCESS.</para>
             /// </summary>
             [NameInMap("BizProcesses")]
             [Validation(Required=false)]
             public List<GetRemindResponseBodyDataBizProcesses> BizProcesses { get; set; }
             public class GetRemindResponseBodyDataBizProcesses : TeaModel {
                 /// <summary>
-                /// <para>The ID of the workflow.</para>
+                /// <para>The ID of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BizId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the workflow.</para>
+                /// <para>The name of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Business process name</para>
@@ -122,11 +122,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>If the value of the RemindType parameter is FINISHED, this parameter is left empty.</description></item>
-            /// <item><description>If the value of the RemindType parameter is UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {&quot;hour&quot;:23,&quot;minu&quot;:59}. Valid values of hour: [0,47]. Valid values of minu: [0,59].</description></item>
-            /// <item><description>If the value of the RemindType parameter is ERROR, this parameter is left empty.</description></item>
-            /// <item><description>If the value of the RemindType parameter is CYCLE_UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;}. The key indicates the ID of the cycle. Valid values: [1,288]. The value indicates the timeout period of the node that is running in the cycle. Specify the value in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</description></item>
-            /// <item><description>If the value of the RemindType parameter is TIMEOUT, the timeout period is returned. Unit: seconds. Example: 1800. This value indicates that an alert is reported if the node has run for more than 30 minutes.</description></item>
+            /// <item><description><para>If the RemindType trigger condition is FINISHED, an empty value is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If the RemindType trigger condition is UNFINISHED, the value is returned in the {&quot;hour&quot;:23,&quot;minu&quot;:59} format. The value of hour ranges from 0 to 47, and the value of minu ranges from 0 to 59.</para>
+            /// </description></item>
+            /// <item><description><para>If the RemindType trigger condition is ERROR, an empty value is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If the RemindType trigger condition is CYCLE_UNFINISHED, the value is returned in the {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;} format. The key in the JSON string is the cycle number, which ranges from 1 to 288. The value is the time by which the cycle must be completed for the cycle, in the hh:mm format. The value of hh ranges from 0 to 47, and the value of mm ranges from 0 to 59.</para>
+            /// </description></item>
+            /// <item><description><para>If the RemindType trigger condition is TIMEOUT, the value is returned in seconds, such as 1800. This indicates that an alert is triggered if the node runs for more than 30 minutes.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -137,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The end time of the quiet hours. The value is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</para>
+            /// <para>The end time of the do-not-disturb period, in the hh:mm format. The value of hh ranges from 0 to 23, and the value of mm ranges from 0 to 59.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08:00</para>
@@ -147,7 +152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DndEnd { get; set; }
 
             /// <summary>
-            /// <para>The start time of the quiet hours. The value is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</para>
+            /// <para>The start time of the do-not-disturb period, in the hh:mm format. The value of hh ranges from 0 to 23, and the value of mm ranges from 0 to 59.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00</para>
@@ -157,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DndStart { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the creator of the custom alert rule.</para>
+            /// <para>The Alibaba Cloud UID of the user who created the custom monitoring rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9527951795****</para>
@@ -177,14 +182,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? MaxAlertTimes { get; set; }
 
             /// <summary>
-            /// <para>The nodes to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is NODE.</para>
+            /// <para>The list of nodes for monitoring by the rule when the RemindUnit object type is NODE.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<GetRemindResponseBodyDataNodes> Nodes { get; set; }
             public class GetRemindResponseBodyDataNodes : TeaModel {
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The ID of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -204,7 +209,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// <para>The Alibaba Cloud UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527951795****</para>
@@ -226,14 +231,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The workspaces to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is PROJECT.</para>
+            /// <para>The list of workspaces for monitoring by the rule when the RemindUnit object type is PROJECT.</para>
             /// </summary>
             [NameInMap("Projects")]
             [Validation(Required=false)]
             public List<GetRemindResponseBodyDataProjects> Projects { get; set; }
             public class GetRemindResponseBodyDataProjects : TeaModel {
                 /// <summary>
-                /// <para>The workspace ID.</para>
+                /// <para>The ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -245,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The information about the alert recipients.</para>
+            /// <para>The alert recipient information.</para>
             /// </summary>
             [NameInMap("Receivers")]
             [Validation(Required=false)]
@@ -259,11 +264,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<string> AlertTargets { get; set; }
 
                 /// <summary>
-                /// <para>The type of the alert recipient. For more information about alert recipients, see the Receivers parameter. Valid values:</para>
+                /// <para>The alert recipient type. For multiple types of alert recipients, refer to the Receivers response parameter. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OWNER: indicate the task owner.</description></item>
-                /// <item><description>OTHER: indicates specified personnel.</description></item>
-                /// <item><description>SHIFT_SCHEDULE: indicates personnel in a shift schedule.</description></item>
+                /// <item><description>OWNER: task owner.</description></item>
+                /// <item><description>OTHER: specified user.</description></item>
+                /// <item><description>SHIFT_SCHEDULE: duty roster.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -276,7 +281,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The custom alert rule ID.</para>
+            /// <para>The ID of the custom monitoring rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -296,7 +301,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string RemindName { get; set; }
 
             /// <summary>
-            /// <para>The conditions that trigger an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT.</para>
+            /// <para>The trigger condition. Valid values: FINISHED (completed), UNFINISHED (not completed), ERROR (error occurred), CYCLE_UNFINISHED (epoch uncompleted), and TIMEOUT (timeout).</para>
             /// 
             /// <b>Example:</b>
             /// <para>FINISHED</para>
@@ -306,7 +311,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string RemindType { get; set; }
 
             /// <summary>
-            /// <para>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates a node. The value BASELINE indicates a baseline. The value PROJECT indicates a workspace. The value BIZPROCESS indicates a workflow.</para>
+            /// <para>The type of the monitored object. Valid values: NODE (node), BASELINE (baseline), PROJECT (workspace), and BIZPROCESS (business flow).</para>
             /// 
             /// <b>Example:</b>
             /// <para>NODE</para>
@@ -323,7 +328,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<GetRemindResponseBodyDataRobots> Robots { get; set; }
             public class GetRemindResponseBodyDataRobots : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether all group members are notified when the alert notification is sent to a DingTalk group. Valid values: true and false.</para>
+                /// <para>Specifies whether to mention all members. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: yes.</description></item>
+                /// <item><description>false: no.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -345,7 +354,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the custom alert rule is enabled. Valid values: true and false.</para>
+            /// <para>Indicates whether the custom monitoring rule is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: enabled.</description></item>
+            /// <item><description>false: disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -394,7 +407,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues if an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFGH-IJK****</para>
@@ -404,7 +417,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

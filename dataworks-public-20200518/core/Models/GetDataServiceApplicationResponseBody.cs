@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the application.</para>
+        /// <para>The application details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataServiceApplicationResponseBodyData Data { get; set; }
         public class GetDataServiceApplicationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AppCode for simple authentication. You can select simple authentication or signature authentication when you call an API operation.</para>
+            /// <para>The AppCode used for simple authentication, which is the first authentication method for API calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CODE123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The AppKey for signature authentication. You can select simple authentication or signature authentication when you call an API operation.</para>
+            /// <para>The AppKey used for encrypted signature authentication, which is the second authentication method for API calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KEY123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ApplicationKey { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test application</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>The AppSecret for signature authentication. You can select simple authentication or signature authentication when you call an API operation.</para>
+            /// <para>The AppSecret used for encrypted signature authentication, which is the second authentication method for API calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SECRET123</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ApplicationSecret { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the associated workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10001</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

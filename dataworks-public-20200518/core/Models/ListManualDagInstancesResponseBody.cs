@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListManualDagInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances in the manually triggered workflow.</para>
+        /// <para>The instances in the manually executed business flow.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? BeginWaitTimeTime { get; set; }
 
             /// <summary>
-            /// <para>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</para>
+            /// <para>The business date of the instance. In most cases, the value is one day before the time when the instance was run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1605178414676</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? CycTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the DAG for the instance in the manually triggered workflow.</para>
+            /// <para>The ID of the DAG for the instance in the manually executed business flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>350850491</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? DagId { get; set; }
 
             /// <summary>
-            /// <para>The type of the manually triggered workflow.</para>
+            /// <para>The type of the manually executed business flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node in the manually triggered workflow.</para>
+            /// <para>The ID of the node in the manually executed business flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>37851</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NOT_RUN: The instance is not run.</description></item>
-            /// <item><description>WAIT_TIME: The instance is waiting for its scheduling time to arrive.</description></item>
+            /// <item><description>WAIT_TIME: The instance is waiting for its scheduled DueTime or CycleTime to arrive.</description></item>
             /// <item><description>WAIT_RESOURCE: The instance is waiting for resources.</description></item>
             /// <item><description>RUNNING: The instance is running.</description></item>
             /// <item><description>CHECKING: Data quality is being checked for the instance.</description></item>
@@ -187,16 +187,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The scheduling type of the node. Valid values:</para>
+            /// <para>The scheduling type of the instance task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</description></item>
-            /// <item><description>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</description></item>
-            /// <item><description>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</description></item>
-            /// <item><description>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</description></item>
-            /// <item><description>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</description></item>
-            /// <item><description>SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</description></item>
-            /// <item><description>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</description></item>
-            /// <item><description>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</description></item>
+            /// <item><description>NORMAL(0): The instance is an auto triggered node. The scheduling system regularly runs the instance.</description></item>
+            /// <item><description>MANUAL(1): The instance is a manually triggered node. The scheduling system does not regularly run the instance.</description></item>
+            /// <item><description>PAUSE(2): The instance is a frozen node. The scheduling system regularly runs the instance but sets the status of the instance to failed when the scheduling system starts to run the instance.</description></item>
+            /// <item><description>SKIP(3): The instance is a dry-run node. The scheduling system regularly runs the instance but sets the status of the instance to successful when the scheduling system starts to run the instance.</description></item>
+            /// <item><description>SKIP_UNCHOOSE(4): The instance is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the instance to successful when the scheduling system starts to run the instance.</description></item>
+            /// <item><description>SKIP_CYCLE(5): The instance is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the instance but sets the status of the instance to successful when the scheduling system starts to run the instance.</description></item>
+            /// <item><description>CONDITION_UNCHOOSE(6): The instance is not selected by its ancestor branch node and is run as a dry-run node.</description></item>
+            /// <item><description>REALTIME_DEPRECATED(7): The instance is an expired scheduled instance generated in real time. The scheduling system sets the status of the instance to successful.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

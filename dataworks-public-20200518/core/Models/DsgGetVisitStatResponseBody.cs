@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The details of the file.</para>
+        /// <para>The file details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

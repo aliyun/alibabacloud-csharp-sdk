@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://shanghai-xxx-oss.oss-cn-shanghai.aliyuncs.com/pre/store/f10_bf47_b4fa7df0860f.zip?Expires=1639540903&OSSAccessKeyId=XXXXXXeF4Lv5j&Signature=qxxxxx">https://shanghai-xxx-oss.oss-cn-shanghai.aliyuncs.com/pre/store/f10_bf47_b4fa7df0860f.zip?Expires=1639540903&amp;OSSAccessKeyId=XXXXXXeF4Lv5j&amp;Signature=qxxxxx</a></para>
+            /// <para><a href="https://shanghai-xxx-oss.oss-cn-shanghai.aliyuncs.com/pre/store/f10_bf47_b4fa7df0860f.zip?Expires=1639540903&OSSAccessKeyId=****&Signature=qxxxxx">https://shanghai-xxx-oss.oss-cn-shanghai.aliyuncs.com/pre/store/f10_bf47_b4fa7df0860f.zip?Expires=1639540903&amp;OSSAccessKeyId=\<em>\</em>\<em>\</em>&amp;Signature=qxxxxx</a></para>
             /// </summary>
             [NameInMap("DownloadUrl")]
             [Validation(Required=false)]
@@ -99,16 +99,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The status of the migration task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT</description></item>
-            /// <item><description>EDITING</description></item>
-            /// <item><description>IMPORTING</description></item>
-            /// <item><description>IMPORT_ERROR</description></item>
-            /// <item><description>IMPORT_SUCCESS</description></item>
-            /// <item><description>EXPORTING</description></item>
-            /// <item><description>EXPORT_ERROR</description></item>
-            /// <item><description>EXPORT_SUCCESS</description></item>
-            /// <item><description>REVOKED</description></item>
-            /// <item><description>PARTIAL_SUCCESS</description></item>
+            /// <item><description>INIT: initial state</description></item>
+            /// <item><description>EDITING: being edited</description></item>
+            /// <item><description>IMPORTING: being imported</description></item>
+            /// <item><description>IMPORT_ERROR: import failed</description></item>
+            /// <item><description>IMPORT_SUCCESS: import succeeded</description></item>
+            /// <item><description>EXPORTING: being exported</description></item>
+            /// <item><description>EXPORT_ERROR: export failed</description></item>
+            /// <item><description>EXPORT_SUCCESS: export succeeded</description></item>
+            /// <item><description>REVOKED: canceled</description></item>
+            /// <item><description>PARTIAL_SUCCESS: only some tasks imported or exported successfully</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID. You can use the request ID to query logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>19999A96-71BA-2845-B455-ED620EF4E37F</para>
+        /// <para>19999A96-71BA-1845-B455-ED620EF4E37F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -133,8 +133,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: successful</description></item>
+        /// <item><description>false: failed. You can use the request ID to troubleshoot the issue</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

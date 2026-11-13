@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for a critical alert. For a strong rule, exceeding this threshold blocks the downstream scheduling task.</para>
+                /// <para>The threshold for a critical alert, representing the deviation from the expected sample value. You can customize this threshold based on business requirements. If a strong rule is used and this critical threshold is triggered, the scheduled task is blocked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.6</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? DiscreteCheck { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the check.</para>
+                /// <para>The end time for querying check results.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1600704000000</para>
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string BizDate { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the sample column after being grouped by the <c>GROUP BY</c> clause. For example, if you group by a gender column, the values of this parameter can be \&quot;male\&quot;, \&quot;female\&quot;, or \&quot;null\&quot;.</para>
+                    /// <para>The value of the sample column after being grouped by the <c>GROUP BY</c> clause. For example, if you group by a gender column, the values of this parameter can be \&quot;male\&quot;, \&quot;female\&quot;, or null.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>type1</para>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string DiscreteProperty { get; set; }
 
                     /// <summary>
-                    /// <para>The result of a single check.</para>
+                    /// <para>The check result as a string.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string BizDate { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the sample column after being grouped by the <c>GROUP BY</c> clause. For example, if you group by a gender column, the values of this parameter can be \&quot;male\&quot;, \&quot;female\&quot;, or \&quot;null\&quot;.</para>
+                    /// <para>The value of the sample column after being grouped by the <c>GROUP BY</c> clause. For example, if you group by a gender column, the values of this parameter can be \&quot;male\&quot;, \&quot;female\&quot;, or null.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>type2</para>

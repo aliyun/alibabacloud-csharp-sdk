@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListRefDISyncTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListRefDISyncTasksResponseBodyData Data { get; set; }
         public class ListRefDISyncTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the synchronization tasks. In most cases, a data source is used by multiple synchronization tasks. Therefore, the value of this parameter is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a synchronization task.</para>
+            /// <para>The array of returned data. Typically, a target data source is associated with multiple data integration synchronization tasks. When you call the ListRefDISyncTasks operation to query the synchronization tasks associated with the target data source, the returned result is an array of the associated synchronization tasks. The following information is an example of a synchronization task in the array.</para>
             /// </summary>
             [NameInMap("DISyncTasks")]
             [Validation(Required=false)]
             public List<ListRefDISyncTasksResponseBodyDataDISyncTasks> DISyncTasks { get; set; }
             public class ListRefDISyncTasksResponseBodyDataDISyncTasks : TeaModel {
                 /// <summary>
-                /// <para>The destination of the synchronization task. If the synchronization task has multiple destinations, the return value is a JSON array, such as \\&quot;odps_writer\\&quot;, \\&quot;mysql\\&quot;. If the RefType parameter is set to to, the synchronization tasks that use the specified data source as the destination are returned. In this case, the value of this parameter indicates the specified data source.</para>
+                /// <para>The destination data source of the current synchronization task associated with the target data source. If the current synchronization task has multiple destination data sources, multiple destination data sources are returned in a JSON array, such as [&quot;odps_writer&quot;, &quot;mysql&quot;]. If the RefType parameter is set to to, which means the target data source serves as the destination of the data integration synchronization task, the value of this parameter is the target data source itself.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[\&quot;qcc_polardb2\&quot;]</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DiDestinationDatasource { get; set; }
 
                 /// <summary>
-                /// <para>The source of the synchronization task. If the synchronization task has multiple sources, the return value is a JSON array, such as \\&quot;odps_writer\\&quot;, \\&quot;mysql\\&quot;. If the RefType parameter is set to from, the synchronization tasks that use the specified data source as the source are returned. In this case, the value of this parameter indicates the specified data source.</para>
+                /// <para>The source data source of the current synchronization task associated with the target data source. If the current synchronization task has multiple source data sources, multiple source data sources are returned in a JSON array, such as [&quot;odps_writer&quot;, &quot;mysql&quot;]. If the RefType parameter is set to from, which means the target data source serves as the source of the data integration synchronization task, the value of this parameter is the target data source itself.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[\&quot;odps_writer\&quot;]</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DiSourceDatasource { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the synchronization task.</para>
+                /// <para>The ID of the current data integration synchronization task associated with the target data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the synchronization task.</para>
+                /// <para>The name of the current data integration synchronization task associated with the target data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abcd1234</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the synchronization task. Valid values:</para>
+                /// <para>The type of the current data integration synchronization task associated with the target data source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DI_OFFLINE: batch synchronization task</description></item>
-                /// <item><description>DI_REALTIME: real-time synchronization task</description></item>
+                /// <item><description>DI_OFFLINE: Batch data integration synchronization task.</description></item>
+                /// <item><description>DI_REALTIME: Real-time data integration synchronization task.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1411515937635973****</para>
@@ -94,8 +94,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

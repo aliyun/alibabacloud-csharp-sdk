@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDIJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the synchronization task.</para>
+        /// <para>The description of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Synchronize mysql to hologres</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The settings of the destination. Only a single destination is supported.</para>
+        /// <para>The settings of the destination data source. Currently, only a single data source is supported.</para>
         /// </summary>
         [NameInMap("DestinationDataSourceSettings")]
         [Validation(Required=false)]
         public string DestinationDataSourceSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The destination type. Valid values: Hologres and Hive.</para>
+        /// <para>The type of the destination data source. Valid values: Hologres and Hive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DestinationDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the synchronization task.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql_to_holo_sync_8772</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</para>
+        /// <para>The settings at the synchronization task level, including DDL handling policies, column data type mapping policies between the source and destination, and task runtime parameters.</para>
         /// </summary>
         [NameInMap("JobSettings")]
         [Validation(Required=false)]
@@ -56,11 +56,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The synchronization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FullAndRealtimeIncremental (one-time full synchronization and real-time incremental synchronization)</description></item>
-        /// <item><description>RealtimeIncremental (real-time incremental synchronization)</description></item>
-        /// <item><description>Full (full synchronization)</description></item>
-        /// <item><description>OfflineIncremental (batch incremental synchronization)</description></item>
-        /// <item><description>FullAndOfflineIncremental (one-time full synchronization and batch incremental synchronization)</description></item>
+        /// <item><description>FullAndRealtimeIncremental: full and real-time incremental synchronization</description></item>
+        /// <item><description>RealtimeIncremental: real-time incremental synchronization</description></item>
+        /// <item><description>Full: full synchronization</description></item>
+        /// <item><description>OfflineIncremental: batch incremental synchronization</description></item>
+        /// <item><description>FullAndOfflineIncremental: full and batch incremental synchronization</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MigrationType { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ResourceSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The settings of the source. Only a single source is supported.</para>
+        /// <para>The settings of the source data source. Currently, only a single data source is supported.</para>
         /// </summary>
         [NameInMap("SourceDataSourceSettings")]
         [Validation(Required=false)]
         public string SourceDataSourceSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The source type. Set this parameter to MySQL.</para>
+        /// <para>The type of the source data source. Valid value: MySQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SourceDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform system debugging. Valid values: true and false. Default value: false.</para>
+        /// <para>Used for system debugging. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SystemDebug { get; set; }
 
         /// <summary>
-        /// <para>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</para>
+        /// <para>The list of transformation mappings for synchronization objects. Each element in the list describes a set of source synchronization object selection rules and a list of synchronization object transformation rules applied to this set of synchronization objects.</para>
         /// </summary>
         [NameInMap("TableMappings")]
         [Validation(Required=false)]
         public string TableMappingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of transformation rules that you want to apply to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</para>
+        /// <para>The list of transformation rule definitions for synchronization objects. Each element in the list represents a transformation rule definition.</para>
         /// </summary>
         [NameInMap("TransformationRules")]
         [Validation(Required=false)]

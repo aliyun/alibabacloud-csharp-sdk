@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The mode of the workspace. For more information about the differences between modes, see <a href="https://help.aliyun.com/document_detail/85772.html">Must-read: Differences between simple mode and standard mode</a>.</para>
+        /// <para>The mode of the workspace. For more information about the differences between modes, see <a href="https://help.aliyun.com/document_detail/85772.html">Must-read: Differences between basic mode and standard mode</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b> (default): simple workspace mode.</description></item>
+        /// <item><description><b>2</b> (default): basic workspace mode.</description></item>
         /// <item><description><b>3</b>: standard workspace mode.</description></item>
         /// </list>
         /// 

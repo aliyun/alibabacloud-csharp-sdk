@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryDISyncTaskConfigProcessResultRequest : TeaModel {
         /// <summary>
-        /// <para>The asynchronous thread ID. You can call the <a href="https://help.aliyun.com/document_detail/383463.html">GenerateDISyncTaskConfigForCreating</a> or <a href="https://help.aliyun.com/document_detail/383464.html">GenerateDISyncTaskConfigForUpdating</a> operation to obtain the ID.</para>
+        /// <para>The ID of the asynchronous thread. You can call the <a href="https://help.aliyun.com/document_detail/383463.html">GenerateDISyncTaskConfigForCreating</a> or <a href="https://help.aliyun.com/document_detail/383464.html">GenerateDISyncTaskConfigForUpdating</a> operation to obtain the ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>The GenerateDISyncTaskConfigForCreating operation is used to generate the ID of the asynchronous thread that is used to create a real-time synchronization task in Data Integration.</para>
-        /// </description></item>
-        /// <item><description><para>The GenerateDISyncTaskConfigForUpdating operation is used to generate the ID of the asynchronous thread that is used to update a real-time synchronization task in Data Integration.</para>
-        /// </description></item>
+        /// <item><description>GenerateDISyncTaskConfigForCreating: creates a Data Integration synchronization task.</description></item>
+        /// <item><description>GenerateDISyncTaskConfigForUpdating: updates a Data Integration synchronization task.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,8 +25,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? AsyncProcessId { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for the current API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,21 +37,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of the object that you want to create or update in Data Integration in asynchronous mode. Valid values:</para>
+        /// <para>The type of the synchronization task created or updated asynchronously. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DI_REALTIME: real-time synchronization task</para>
-        /// </description></item>
-        /// <item><description><para>DI_SOLUTION: synchronization solution DataWorks allows you to create or update real-time synchronization tasks and synchronization solutions in Data Integration only in asynchronous mode.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>DI_OFFLINE</para>
-        /// </description></item>
-        /// <item><description><para>DI_REALTIME</para>
-        /// </description></item>
-        /// <item><description><para>DI_SOLUTION</para>
-        /// </description></item>
+        /// <item><description>DI_REALTIME: real-time synchronization task.</description></item>
+        /// <item><description>DI_SOLUTION: solution synchronization task.
+        /// Only real-time synchronization tasks and solution synchronization tasks in Data Integration can be created or updated asynchronously.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

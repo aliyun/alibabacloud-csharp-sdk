@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class LineageEntityVO : TeaModel {
         /// <summary>
-        /// <para>A map of additional key-value attributes for the entity.</para>
+        /// <para>The other attributes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>attribute map</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
-        /// <para>A URL for more details about the entity.</para>
+        /// <para>Detail url of entity</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://domain.test.url/entity">http://domain.test.url/entity</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DetailUrl { get; set; }
 
         /// <summary>
-        /// <para>The type of the entity.</para>
+        /// <para>Entity type</para>
         /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The human-readable name of the entity.</para>
+        /// <para>Name of entity</para>
         /// 
         /// <b>Example:</b>
         /// <para>tableName</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The owner of the entity.</para>
+        /// <para>Owner</para>
         /// 
         /// <b>Example:</b>
         /// <para>owner</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The name of the entity\&quot;s parent container, such as a database.</para>
+        /// <para>Parent name of entity</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbName</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ParentName { get; set; }
 
         /// <summary>
-        /// <para>The unique, fully qualified name of the entity.</para>
+        /// <para>Unique identifier of entity</para>
         /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table.projectName.tablename</para>

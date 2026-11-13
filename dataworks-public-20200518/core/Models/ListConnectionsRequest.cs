@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListConnectionsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the data source. Valid values:</para>
+        /// <para>The type of the connection string. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>odps</description></item>
         /// <item><description>mysql</description></item>
@@ -35,7 +35,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ConnectionType { get; set; }
 
         /// <summary>
-        /// <para>The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</para>
+        /// <para>The environment to which the data source belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Development environment.</description></item>
+        /// <item><description>1: Production environment.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? EnvType { get; set; }
 
         /// <summary>
-        /// <para>The name of the data source that you want to query.</para>
+        /// <para>The name of the data source to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number for the paging query. Valid values: integers greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the data source belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</para>
+        /// <para>The ID of the workspace to which the data source belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,22 +92,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The status of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENABLED</description></item>
-        /// <item><description>DISABLED</description></item>
+        /// <item><description>ENABLED: Normal.</description></item>
+        /// <item><description>DISABLED: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>ENABLED</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:</para>
+        /// <para>The subtype of the connection string. This parameter applies to scenarios where a parent type contains subtypes. The following combinations are supported:</para>
         /// <list type="bullet">
-        /// <item><description>Type: <c>rds</c></description></item>
-        /// <item><description>Subtypes: <c>mysql</c>, <c>sqlserver</c>, and <c>postgresql</c></description></item>
+        /// <item><description>Parent type: <c>rds</c></description></item>
+        /// <item><description>Subtypes: <c>mysql</c>, <c>sqlserver</c>, or <c>postgresql</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

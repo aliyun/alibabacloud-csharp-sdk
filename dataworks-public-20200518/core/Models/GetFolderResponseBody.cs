@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFolderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the folder.</para>
+        /// <para>The folder details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. Use this ID to troubleshoot issues if an error occurs.</para>
+        /// <para>The request ID. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>

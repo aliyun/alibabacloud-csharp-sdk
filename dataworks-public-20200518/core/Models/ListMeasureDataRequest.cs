@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DomainCode { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp of the metering cycle, in milliseconds. The metering data is aggregated by day. The time range between EndTime and StartTime cannot exceed 30 days.</para>
+        /// <para>The end timestamp of the metering cycle, in milliseconds. The metering data is aggregated by day. Only data from the most recent 30 days can be queried for the range between EndTime and StartTime.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the metering cycle, in milliseconds. The metering data is aggregated by day. The time range between EndTime and StartTime cannot exceed 30 days.</para>
+        /// <para>The start timestamp of the metering cycle, in milliseconds. The metering data is aggregated by day. Only data from the most recent 30 days can be queried for the range between EndTime and StartTime.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

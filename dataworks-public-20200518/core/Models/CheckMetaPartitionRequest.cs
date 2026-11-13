@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckMetaPartitionRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Set the value to odps.</para>
+        /// <para>The data source type. Currently, only odps is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the metadatabase.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The name of the partition in the MaxCompute metatable.</para>
+        /// <para>The name of the partition in the MaxCompute table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Partition { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the MaxCompute metatable.</para>
+        /// <para>The unique identifier of the MaxCompute table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.engine_name.table_name</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableGuid { get; set; }
 
         /// <summary>
-        /// <para>The name of the metatable.</para>
+        /// <para>The name of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>

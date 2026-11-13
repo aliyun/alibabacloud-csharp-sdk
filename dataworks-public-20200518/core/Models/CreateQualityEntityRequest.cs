@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityEntityRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b>
+        /// Includes 0 (verified upon SQL completion).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? EntityLevel { get; set; }
 
         /// <summary>
-        /// <para>The type of the engine or data source. Valid values: ODPS, EMR, CDH, and HOLO.</para>
+        /// <para>The type of the engine or data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MatchExpression { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can go to the DataWorks console to obtain the workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can obtain the ID from the DataWorks console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -52,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the engine or data source.</para>
+        /// <para>The name of the project for the engine or the name of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>OK: The event passes the check.</description></item>
         /// <item><description>FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.</description></item>
-        /// <item><description>WARN: The event passes the check, but an alert is reported.</description></item>
+        /// <item><description>WARN: The event passes the check, but an warning is reported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CheckResult { get; set; }
 
         /// <summary>
-        /// <para>The summary information of the check result. The information is displayed in DataStudio. If an alert is reported or the event fails the check, you can troubleshoot errors based on the information.</para>
+        /// <para>The summary information of the check result. The information is displayed in Data Studio. If an warning is reported or the event fails the check, you can troubleshoot errors based on the information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
@@ -46,6 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The message ID. You can obtain the ID from a received message when an extension point event is triggered.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For the message format, see <a href="https://help.aliyun.com/document_detail/215367.html">Message format</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>

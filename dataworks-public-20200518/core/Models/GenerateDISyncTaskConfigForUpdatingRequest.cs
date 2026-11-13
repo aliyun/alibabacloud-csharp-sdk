@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GenerateDISyncTaskConfigForUpdatingRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</para>
+        /// <para>The client token that is used to ensure idempotence. This parameter prevents duplicate operations caused by multiple calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABFUOEUOTRTRJKE</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</para>
+        /// <para>This parameter determines the DataWorks workspace in which the API operation is called.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The task ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set the TaskType parameter to DI_REALTIME, set the TaskId parameter to the value of the FileId parameter for the real-time synchronization task.</para>
-        /// </description></item>
-        /// <item><description><para>If you set the TaskType parameter to DI_SOLUTION, set the TaskId parameter to the value of the FileId parameter for the synchronization solution.</para>
-        /// </description></item>
+        /// <item><description>If TaskType is set to DI_REALTIME, TaskId is the FileId of the real-time synchronization task.</description></item>
+        /// <item><description>If TaskType is set to DI_SOLUTION, TaskId is the FileId of the solution synchronization task.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,21 +47,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The script for updating the real-time synchronization task in Data Integration. DataWorks allows you to add or remove tables for a real-time synchronization task in Data Integration only in asynchronous mode. The following types of real-time synchronization tasks are supported:</para>
+        /// <para>The script statements for updating the synchronization task.
+        /// Currently, the asynchronous method only supports adding or removing tables for data integration synchronization tasks. Only the following types of synchronization tasks can be updated:</para>
         /// <list type="bullet">
-        /// <item><description><para>Synchronization task that is used to synchronize data from MySQL to MaxCompute</para>
-        /// </description></item>
-        /// <item><description><para>Synchronization task that is used to synchronize data from MySQL data to Kafka</para>
-        /// </description></item>
-        /// <item><description><para>Synchronization task that is used to synchronize data from MySQL to Hologres</para>
-        /// </description></item>
+        /// <item><description>Synchronizing MySQL data to MaxCompute.</description></item>
+        /// <item><description>Synchronizing MySQL data to Kafka.</description></item>
+        /// <item><description>Synchronizing MySQL data to Hologres.</description></item>
         /// </list>
-        /// <para>The SelectedTables parameter is used to specify tables that you want to synchronize from multiple databases. The Tables parameter is used to specify tables that you want to synchronize from a single database.</para>
+        /// <para>In a synchronization task, SelectedTables is used to select tables in multi-database mode, and Tables is used to select tables in single-database mode.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the script contains the SelectedTables parameter, the system synchronizes data from the tables that you specify in the SelectedTables parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If the script contains the Tables parameter, the system synchronizes data from the tables that you specify in the Tables parameter.</para>
-        /// </description></item>
+        /// <item><description>If the script contains the SelectedTables statement, the system uses the table information in the SelectedTables statement for synchronization.</description></item>
+        /// <item><description>If the script contains the Tables statement, the system uses the field information in the Tables statement for synchronization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,21 +69,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TaskParam { get; set; }
 
         /// <summary>
-        /// <para>The type of the object that you want to update in Data Integration in asynchronous mode. Valid values:</para>
+        /// <para>The type of the Data Integration synchronization task to be updated asynchronously. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DI_REALTIME: real-time synchronization task</para>
-        /// </description></item>
-        /// <item><description><para>DI_SOLUTION: synchronization solution DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>DI_OFFLINE</para>
-        /// </description></item>
-        /// <item><description><para>DI_REALTIME</para>
-        /// </description></item>
-        /// <item><description><para>DI_SOLUTION</para>
-        /// </description></item>
+        /// <item><description>DI_REALTIME: real-time synchronization task.</description></item>
+        /// <item><description>DI_SOLUTION: solution synchronization task.
+        /// Only real-time and solution synchronization tasks can be updated asynchronously.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

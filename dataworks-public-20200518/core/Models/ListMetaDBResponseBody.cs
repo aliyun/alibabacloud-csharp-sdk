@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListMetaDBResponseBodyDatabaseInfoDbList> DbList { get; set; }
             public class ListMetaDBResponseBodyDatabaseInfoDbList : TeaModel {
                 /// <summary>
-                /// <para>The time when the database was created. The value is a timestamp. You can convert the timestamp to a date based on your time zone.</para>
+                /// <para>The time when the database was created. The time is displayed as a timestamp. You can convert the timestamp to a date based on the time zone you use.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1388776825</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTimeStamp { get; set; }
 
                 /// <summary>
-                /// <para>The storage address of the database.</para>
+                /// <para>The storage location of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hdfs://localhost:777/user/hadoop/test.txt</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// <para>The time when the database was last updated.</para>
+                /// <para>The time when the database was updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1388776837</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>

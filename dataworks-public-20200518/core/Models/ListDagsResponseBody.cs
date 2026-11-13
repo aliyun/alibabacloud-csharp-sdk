@@ -17,15 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public ListDagsResponseBodyData Data { get; set; }
         public class ListDagsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The returned entities.</para>
+            /// <para>The returned DAG entities.</para>
             /// </summary>
             [NameInMap("Dags")]
             [Validation(Required=false)]
             public List<ListDagsResponseBodyDataDags> Dags { get; set; }
             public class ListDagsResponseBodyDataDags : TeaModel {
                 /// <summary>
-                /// <para>The business date.</para>
-                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
+                /// <para>The business date. The value is a 13-digit timestamp, such as <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -35,8 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Bizdate { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
-                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
+                /// <para>The creation time. The value is a 13-digit timestamp, such as <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>DagId。</para>
+                /// <para>The DAG ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>351249682</para>
@@ -66,8 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? DagId { get; set; }
 
                 /// <summary>
-                /// <para>The end time.</para>
-                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
+                /// <para>The end time. The value is a 13-digit timestamp, such as <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -77,8 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The GMT date.</para>
-                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
+                /// <para>The GMT date. The value is a 13-digit timestamp, such as <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -88,8 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Gmtdate { get; set; }
 
                 /// <summary>
-                /// <para>The modification time.</para>
-                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
+                /// <para>The update time. The value is a 13-digit timestamp, such as <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -109,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The operation sequence code.</para>
+                /// <para>The identifier of the operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -129,8 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The start time.</para>
-                /// <para>The value is a 13-digit number, for example, <c>1605052800000</c>.</para>
+                /// <para>The start time. The value is a 13-digit timestamp, such as <c>1605052800000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605052800000</para>
@@ -142,10 +136,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the DAG. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CREATED: created</description></item>
-                /// <item><description>RUNNING: running</description></item>
-                /// <item><description>FAILURE: failed</description></item>
-                /// <item><description>SUCCESS: succeeded</description></item>
+                /// <item><description>CREATED: created.</description></item>
+                /// <item><description>RUNNING: running.</description></item>
+                /// <item><description>FAILURE: failed.</description></item>
+                /// <item><description>SUCCESS: successful.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -158,10 +152,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the DAG. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>MANUAL: manual task workflow</description></item>
-                /// <item><description>SMOKE_TEST: smoke test workflow</description></item>
-                /// <item><description>SUPPLY_DATA: data backfill</description></item>
-                /// <item><description>BUSINESS_PROCESS_DAG: one-time business process workflow</description></item>
+                /// <item><description>MANUAL: manual task workflow.</description></item>
+                /// <item><description>SMOKE_TEST: smoke test workflow.</description></item>
+                /// <item><description>SUPPLY_DATA: data backfill.</description></item>
+                /// <item><description>BUSINESS_PROCESS_DAG: one-time business process workflow.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -206,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7782a299-b291-4fee-8424-cf8058efa8e8</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBusinessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the workflows returned.</para>
+        /// <para>The details of the business flows.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListBusinessResponseBodyData Data { get; set; }
         public class ListBusinessResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the workflow.</para>
+            /// <para>The details of the business flow.</para>
             /// </summary>
             [NameInMap("Business")]
             [Validation(Required=false)]
             public List<ListBusinessResponseBodyDataBusiness> Business { get; set; }
             public class ListBusinessResponseBodyDataBusiness : TeaModel {
                 /// <summary>
-                /// <para>The ID of the workflow.</para>
+                /// <para>The ID of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000001</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BusinessId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the workflow.</para>
+                /// <para>The name of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>My first workflow</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string BusinessName { get; set; }
 
                 /// <summary>
-                /// <para>The description of the workflow.</para>
+                /// <para>The description of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>My first workflow</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the workflow.</para>
+                /// <para>The owner of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>34824327****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workspace to which the workflow belongs.</para>
+                /// <para>The ID of the workspace to which the business flow belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ. The value NORMAL indicates that the workflow belongs to auto triggered workflows. The value MANUAL_BIZ indicates that the workflow belongs to manually triggered workflows.</para>
+                /// <para>The functional module to which the business flow belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (manual business flow).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceFolderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the folder.</para>
+        /// <para>The folder details.</para>
         /// </summary>
         [NameInMap("Folder")]
         [Validation(Required=false)]
         public GetDataServiceFolderResponseBodyFolder Folder { get; set; }
         public class GetDataServiceFolderResponseBodyFolder : TeaModel {
             /// <summary>
-            /// <para>The time when the folder was created.</para>
+            /// <para>The creation time of the folder.</para>
+            /// <para>The format is <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c>. Example: <c>2020-09-24T18:37:51+0800</c>. The time zone offset in this example is <c>+0800</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-09-24T18:37:51+0800</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? FolderId { get; set; }
 
             /// <summary>
-            /// <para>The name of the folder.</para>
+            /// <para>The folder name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string FolderName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the business process to which the folder belongs.</para>
+            /// <para>The ID of the workflow to which the folder belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds_1234</para>
@@ -57,7 +58,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The time when the folder was last modified.</para>
+            /// <para>The modification time of the folder.</para>
+            /// <para>The format is <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c>. Example: <c>2020-09-24T18:37:51+0800</c>. The time zone offset in this example is <c>+0800</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-09-24T18:37:51+0800</para>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The parent folder ID. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.</para>
+            /// <para>The parent folder ID. The ID of the root folder under a workflow is 0, and the ID of a user-created folder is greater than 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

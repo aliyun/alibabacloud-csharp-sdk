@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgSceneQuerySceneListByNameRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword for a fuzzy search of data masking scenario names.</para>
+        /// <para>The fuzzy match keyword for the masking scenario name. The platform retrieves related masking scenario information based on this keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_</para>

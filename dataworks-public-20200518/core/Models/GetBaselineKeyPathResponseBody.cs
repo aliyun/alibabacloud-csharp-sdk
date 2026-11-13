@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<GetBaselineKeyPathResponseBodyData> Data { get; set; }
         public class GetBaselineKeyPathResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The timestamp of the business date of the instance.</para>
+            /// <para>The timestamp of the business date for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553443200000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Bizdate { get; set; }
 
             /// <summary>
-            /// <para>The cycle number of the instance. Valid values: [1,288\].</para>
+            /// <para>The cycle number of the instance. Valid values: 1 to 288.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The node type. Common node types include Data Integration (23), MaxCompute SQL (10), Shell (6), and virtual node (99).</para>
+            /// <para>The type of the node. Common node types include Data Integration (23), MaxCompute SQL (10), Shell (6), and virtual node (99).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<GetBaselineKeyPathResponseBodyDataRuns> Runs { get; set; }
             public class GetBaselineKeyPathResponseBodyDataRuns : TeaModel {
                 /// <summary>
-                /// <para>The timestamp calculated by adding the historical average run duration to the estimated start time of the instance.</para>
+                /// <para>The timestamp calculated by adding the historical average running duration to the estimated start time of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531402000</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? AbsTime { get; set; }
 
                 /// <summary>
-                /// <para>The estimated start time of the instance.</para>
+                /// <para>The estimated start timestamp of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531686000</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginRunningTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the instance entered the waiting-for-resources state.</para>
+                /// <para>The timestamp when the instance entered the resource waiting state.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531401000</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginWaitResTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the instance entered the waiting-for-time state.</para>
+                /// <para>The timestamp when the instance started waiting for the scheduled time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531400000</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginWaitTimeTime { get; set; }
 
                 /// <summary>
-                /// <para>The estimated end time of the instance.</para>
+                /// <para>The estimated end timestamp of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553531687000</para>
@@ -174,17 +174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>NOT_RUN: not run.</description></item>
-                /// <item><description>WAIT_TIME: waiting for the scheduled time.</description></item>
-                /// <item><description>WAIT_RESOURCE: waiting for resources.</description></item>
-                /// <item><description>RUNNING: running.</description></item>
-                /// <item><description>CHECKING: checking.</description></item>
-                /// <item><description>CHECKING_CONDITION: checking conditions.</description></item>
-                /// <item><description>FAILURE: failed.</description></item>
-                /// <item><description>SUCCESS: succeeded.</description></item>
-                /// </list>
+                /// <para>The status of the instance. Valid values: NOT_RUN (not run), WAIT_TIME (waiting for the scheduled time), WAIT_RESOURCE (waiting for resources), RUNNING (running), CHECKING (checking), CHECKING_CONDITION (checking conditions), FAILURE (failed), and SUCCESS (successful).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -277,7 +267,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -287,7 +277,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateImportMigrationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The import task ID. The ID is used as an input parameter if you want the system to run the import task or you want to obtain the running progress of the import task.</para>
+        /// <para>The ID of the import and export package. You can use this ID as an input parameter to execute the import task or query the execution progress of the import task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADFASDFASDFA-ADFASDF-ASDFADSDF-AFFADS</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

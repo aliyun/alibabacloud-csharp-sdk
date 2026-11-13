@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QuerySensNodeInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data category. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation or log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Data Security Guard page to obtain the ID.</para>
+        /// <para>The ID of the classification and grading node. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation, or by logging on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and going to the Data Security Guard page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ce67949-0810-400f-a24a-cc5ffafe1024</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number for paging. Valid values: integers starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 10 to 1000. The recommended number of entries per page ranges from 10 to 100.</para>
+        /// <para>The number of entries per page for paging. Valid values: 10 to 1000. Recommended values: 10 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the sensitive field. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Data Security Guard page to obtain the name.</para>
+        /// <para>The name of the sensitive field. You can obtain the name by logging on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and going to the Data Security Guard page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID card</para>
@@ -50,18 +50,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SensitiveName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data category and data sensitivity level template. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to query the ID.</para>
+        /// <para>The ID of the classification and grading template. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>e1970541-6cf5-4d23-b101-d5b66f6e1024</para>
+        /// <para>e1970541-6cf5-4d23-b101-d5b****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</para>
+        /// <para>The tenant ID. To obtain the tenant ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the Data Studio page, click the username in the upper-right corner, and then choose Menu &gt; User Info.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The status of the sensitive field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: draft</description></item>
-        /// <item><description>1: published</description></item>
+        /// <item><description>0: Draft.</description></item>
+        /// <item><description>1: Published.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

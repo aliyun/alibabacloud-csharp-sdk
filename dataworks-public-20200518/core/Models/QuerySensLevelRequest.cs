@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>e1970541-6cf5-4d23-b101-d5b66f6e10af</para>
+        /// <para>e1970541-6cf5-4d23-b101-d5b6****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</para>
+        /// <para>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the Data Studio page. On the Data Studio page, click the logon username in the upper-right corner and click User Info in the Menu section.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

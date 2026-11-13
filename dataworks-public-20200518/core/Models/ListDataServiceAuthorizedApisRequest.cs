@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceAuthorizedApisRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the API name. This parameter is used to filter APIs whose names contain the specified keyword.</para>
+        /// <para>The keyword in the API name. This parameter is used to filter APIs whose names contain the keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MyAPIName</para>
+        /// <para>My API name</para>
         /// </summary>
         [NameInMap("ApiNameKeyword")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can obtain this value from the PageResult.ProjectList[].ProjectId field returned by the ListProjects operation.</para>
+        /// <para>The ID of the workspace. You can obtain the ID from the PageResult.ProjectList[].ProjectId field returned by the ListProjects operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

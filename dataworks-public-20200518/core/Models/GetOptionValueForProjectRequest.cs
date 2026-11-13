@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExtensionCode { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234</para>

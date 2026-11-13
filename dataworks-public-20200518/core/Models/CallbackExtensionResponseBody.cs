@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CallbackExtensionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C352CB7-CD88-50CF-9D0D-E81BDF020E7F</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <para>true: The call was successful.</para>
-        /// <para>false: The call failed.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>true: The call is successful.</para>
+        /// <para>false: The call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

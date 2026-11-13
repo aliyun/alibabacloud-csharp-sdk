@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? BlockType { get; set; }
 
             /// <summary>
-            /// <para>The checker ID, which is derived from a primary key and used for front-end identification.</para>
+            /// <para>The checker ID, which is converted from pkId and used for front-end identification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The threshold for a critical Alert, which defines the maximum acceptable deviation from the Expected Value. If this threshold is met for a Strong Rule, the associated Scheduling Task is blocked.</para>
+            /// <para>The red alert threshold, which indicates the degree of deviation from the expected sample value. You can customize this threshold based on your business requirements. If a strong rule triggers the red threshold, the scheduling task is blocked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

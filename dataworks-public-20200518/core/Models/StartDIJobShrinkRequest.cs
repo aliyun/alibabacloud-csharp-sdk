@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not forcefully rerun the task.</para>
+        /// <para>Specifies whether to forcibly rerun all synchronization steps. If this parameter is not specified, the steps are not forcibly rerun.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? ForceToRerun { get; set; }
 
         /// <summary>
-        /// <para>The settings for the start.</para>
+        /// <para>The real-time synchronization startup settings.</para>
         /// </summary>
         [NameInMap("RealtimeStartSettings")]
         [Validation(Required=false)]

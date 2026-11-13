@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUserGroupAddOrUpdateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation. Valid values:</para>
+        /// <para>The operation result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The operation succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The operation failed.</para>
-        /// </description></item>
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code that is returned if the request fails.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1029030003</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message that is returned if the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>param error</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. This is a common parameter. We recommend that you save this ID. If an issue occurs, you can use the ID to locate logs for troubleshooting.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102400001</para>
@@ -66,12 +64,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

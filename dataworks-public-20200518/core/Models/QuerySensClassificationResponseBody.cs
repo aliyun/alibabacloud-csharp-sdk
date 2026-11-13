@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QuerySensClassificationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data about data categories. The data is in the JSON format.</para>
+        /// <para>The information about the classification nodes in the data classification and grading feature of Data Security Guard. The value is in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{         &quot;nodeName&quot;: &quot;teset1&quot;,         &quot;sensitiveNotNull&quot;: true,         &quot;nodeId&quot;: &quot;1aac2e35-b437-486b-95c7-a5ae48371024&quot;,         &quot;nodeOldId&quot;: &quot;1aac2e35-b437-486b-95c7-a5ae48371024&quot;,         &quot;parentId&quot;: &quot;0&quot;     }]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

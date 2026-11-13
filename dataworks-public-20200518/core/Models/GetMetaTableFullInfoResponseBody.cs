@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The list of fields.</para>
+            /// <para>The list of columns.</para>
             /// </summary>
             [NameInMap("ColumnList")]
             [Validation(Required=false)]
             public List<GetMetaTableFullInfoResponseBodyDataColumnList> ColumnList { get; set; }
             public class GetMetaTableFullInfoResponseBodyDataColumnList : TeaModel {
                 /// <summary>
-                /// <para>The description of the field.</para>
+                /// <para>The description of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>data comment</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Caption { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the field.</para>
+                /// <para>The GUID of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.engine_name.table_name.1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ColumnGuid { get; set; }
 
                 /// <summary>
-                /// <para>The name of the field.</para>
+                /// <para>The name of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field.</para>
+                /// <para>The type of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ColumnType { get; set; }
 
                 /// <summary>
-                /// <para>The comment of the field.</para>
+                /// <para>The comment of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>comment</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the field is a foreign key. Valid values:</para>
+                /// <para>Indicates whether the column is a foreign key. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The field is a foreign key.</description></item>
-                /// <item><description>false: The field is not a foreign key.</description></item>
+                /// <item><description>true: The column is a foreign key.</description></item>
+                /// <item><description>false: The column is not a foreign key.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsForeignKey { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the field is a partition field. Valid values:</para>
+                /// <para>Indicates whether the column is a partition column. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The field is a partition field.</description></item>
-                /// <item><description>false: The field is not a partition field.</description></item>
+                /// <item><description>true: The column is a partition column.</description></item>
+                /// <item><description>false: The column is not a partition column.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsPartitionColumn { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the field is a primary key. Valid values:</para>
+                /// <para>Indicates whether the column is a primary key. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The field is a primary key.</description></item>
-                /// <item><description>false: The field is not a primary key.</description></item>
+                /// <item><description>true: The column is a primary key.</description></item>
+                /// <item><description>false: The column is not a primary key.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsPrimaryKey { get; set; }
 
                 /// <summary>
-                /// <para>The ordinal position of the field.</para>
+                /// <para>The ordinal position of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>The total number of fields.</para>
+            /// <para>The total number of columns.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>

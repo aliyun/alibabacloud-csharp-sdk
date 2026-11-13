@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateImportMigrationRequest : TeaModel {
         /// <summary>
-        /// <para>The mapping between the source compute engine instance and the destination compute engine instance. The following types of compute engine instances are supported: MaxCompute, E-MapReduce (EMR), Hadoop CDH, and Hologres.</para>
+        /// <para>The mapping between the source compute engines and the destination compute engine instances in the import task. Compute engine types include ODPS, EMR, HADOOP_CDH, and HOLOGRES.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;ODPS&quot;: {       &quot;zxy_8221431_engine&quot;: &quot;wzp_kaifazheban_engine&quot;     },     &quot;EMR&quot;: {         &quot;aaaa&quot;: &quot;bbb&quot;     }   }</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CalculateEngineMap { get; set; }
 
         /// <summary>
-        /// <para>The rule configured for automatically committing and deploying the import task. The rule contains the following parameters:</para>
+        /// <para>The rules for automatic submission and publishing of tasks during the import operation. The parameters are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>resourceAutoCommit: specifies whether resources are automatically committed. The value true indicates yes and the value false indicates no.</description></item>
-        /// <item><description>resourceAutoDeploy: specifies whether resources are automatically deployed. The value true indicates yes and the value false indicates no.</description></item>
-        /// <item><description>functionAutoCommit: specifies whether the function is automatically committed. The value true indicates yes and the value false indicates no.</description></item>
-        /// <item><description>functionAutoDeploy: specifies whether the function is automatically deployed. The value true indicates yes and the value false indicates no.</description></item>
-        /// <item><description>tableAutoCommitToDev: specifies whether the table is automatically committed to the development environment. The value true indicates yes and the value false indicates no.</description></item>
-        /// <item><description>tableAutoCommitToProd: specifies whether the table is automatically committed to the production environment. The value true indicates yes and the value false indicates no.</description></item>
-        /// <item><description>ignoreLock: specifies whether the lock is automatically ignored when an import task is locked. The value true indicates yes and the value false indicates no. If you set this parameter to true for an import task, you can forcefully update the task even if the task is locked.</description></item>
-        /// <item><description>fileAutoCommit: specifies whether the file is automatically committed. The value true indicates yes and the value false indicates no.</description></item>
-        /// <item><description>fileAutoDeploy: specifies whether the file is automatically deployed. The value true indicates yes and the value false indicates no.</description></item>
+        /// <item><description>resourceAutoCommit: Specifies whether to automatically submit resources. true: yes. false: no.</description></item>
+        /// <item><description>resourceAutoDeploy: Specifies whether to automatically publish resources. true: yes. false: no.</description></item>
+        /// <item><description>functionAutoCommit: Specifies whether to automatically submit functions. true: yes. false: no.</description></item>
+        /// <item><description>functionAutoDeploy: Specifies whether to automatically publish functions. true: yes. false: no.</description></item>
+        /// <item><description>tableAutoCommitToDev: Specifies whether to automatically submit tables to the development environment. true: yes. false: no.</description></item>
+        /// <item><description>tableAutoCommitToProd: Specifies whether to automatically submit tables to the production environment. true: yes. false: no.</description></item>
+        /// <item><description>ignoreLock: Specifies whether to automatically bypass locks. true: yes. false: no. If a task is locked by another user for editing, you can forcibly update the current task by choosing to bypass the lock.</description></item>
+        /// <item><description>fileAutoCommit: Specifies whether to automatically submit files. true: yes. false: no.</description></item>
+        /// <item><description>fileAutoDeploy: Specifies whether to automatically publish files. true: yes. false: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CommitRule { get; set; }
 
         /// <summary>
-        /// <para>The description of the import package.</para>
+        /// <para>The description of the import and export package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test description</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the import task. The name must be unique within the workspace.</para>
+        /// <para>The name of the import task to be created. The name must be unique within the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The path of the import package. <b>The import package must be uploaded. Example of the upload method:</b></para>
+        /// <para>The path of the import package file.
+        /// <b>Note: This operation involves file uploads. The following example shows how to call this operation:</b></para>
         /// <pre><code class="language-java">        Config config = new Config();
         ///         config.setAccessKeyId(accessId);
         ///         config.setAccessKeySecret(accessKey);
@@ -80,6 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         ///         RuntimeOptions runtime = new RuntimeOptions();
         ///         CreateImportMigrationResponse response = client.createImportMigrationAdvance(request, runtime);
         /// </c></pre>
+        /// <para>If you directly pass the file path, the parameter value must be a valid URL of an OSS object within the caller\&quot;s account, such as https://{bucket}.oss-{region}.aliyuncs.com/{object_key}. Cross-account OSS URLs are rejected. If you use the SDK Advance method, you can upload the file by using a local file stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,11 +92,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string PackageFile { get; set; }
 
         /// <summary>
-        /// <para>The type of the import package. Valid values:</para>
+        /// <para>The type of the import and export package. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DATAWORKS_MODEL (standard format)</description></item>
-        /// <item><description>DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)</description></item>
-        /// <item><description>DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)</description></item>
+        /// <item><description>DATAWORKS_MODEL: standard format</description></item>
+        /// <item><description>DATAWORKS_V2: Apsara Stack (V3.6.1 to V3.11)</description></item>
+        /// <item><description>DATAWORKS_V3: Apsara Stack (V3.12 and later)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -106,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Configuration page to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The mapping between the resource group for scheduling and the resource group for Data Integration. The keys and values in the mapping are the identifiers of the resource groups. Specify the mapping in the following format:</para>
+        /// <para>The mapping between schedule resource groups and data integration resource groups. Both the keys and values in the mapping are identifiers of resource groups. The format is as follows:</para>
         /// <pre><code class="language-json">{
         ///     &quot;SCHEDULER_RESOURCE_GROUP&quot;: {
         ///         &quot;xxx&quot;: &quot;yyy&quot;
@@ -136,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ResourceGroupMap { get; set; }
 
         /// <summary>
-        /// <para>The mapping between the prefixes for the names of the source and destination workspaces. When the system performs the import operation, the prefix for the name of the source workspace in the import package is replaced based on the mapping.</para>
+        /// <para>The mapping used to change the input and output workspace names in the import and export package to the mapped workspace names during import and export operations. For example, during an import, the prefixes of the input and output workspace names are replaced based on the mapping.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test_workspace_src&quot;: &quot;test_workspace_target&quot;}</para>

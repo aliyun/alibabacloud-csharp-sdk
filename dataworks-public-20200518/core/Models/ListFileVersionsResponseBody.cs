@@ -144,7 +144,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value SKIP indicates that the node corresponding to the file is run in dry-run mode.</para>
+                /// <para>The functional module to which the file belongs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: NORMAL (Data Studio).</description></item>
+                /// <item><description>1: MANUAL (manually triggered tasks).</description></item>
+                /// <item><description>2: MANUAL_BIZ (manually triggered workflows).</description></item>
+                /// <item><description>3: SKIP (dry-run scheduling in Data Studio).</description></item>
+                /// <item><description>10: ADHOCQUERY (ad hoc queries).</description></item>
+                /// <item><description>30: COMPONENT (component management).</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -176,7 +184,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that match the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>

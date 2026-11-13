@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The tenant ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>529889518659842</para>
+            /// <para>52988951865****</para>
             /// </summary>
             [NameInMap("TenantId")]
             [Validation(Required=false)]

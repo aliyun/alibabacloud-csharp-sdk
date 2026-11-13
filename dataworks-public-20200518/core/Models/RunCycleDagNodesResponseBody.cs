@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RunCycleDagNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DagId returned by the data backfill instance. You can use this DagId to query the corresponding instances.</para>
+        /// <para>The DAG ID returned for data backfill for a scheduled task. You can use the DAG ID to query the corresponding instances.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <remarks>

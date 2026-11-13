@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ExportDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the exported data sources.</para>
+        /// <para>The return result of the batch export of data sources.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExportDataSourcesResponseBodyData Data { get; set; }
         public class ExportDataSourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the exported data sources. The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.</para>
+            /// <para>The details of the data sources in the batch export. When you invoke this operation, the return result is an array of data source details. The following information is an example of the details of a single data source in the array.</para>
             /// </summary>
             [NameInMap("DataSources")]
             [Validation(Required=false)]
             public List<ExportDataSourcesResponseBodyDataDataSources> DataSources { get; set; }
             public class ExportDataSourcesResponseBodyDataDataSources : TeaModel {
                 /// <summary>
-                /// <para>The ID of the compute engine that is added as the data source.</para>
+                /// <para>The ID of the engine to which the data source is bound.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? BindingCalcEngineId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the data source is connected to an exclusive resource group. Valid values:</para>
+                /// <para>The connectivity status between the data source and exclusive resource groups. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>1: The data source is connected to at least one exclusive resource group.</description></item>
                 /// <item><description>0: The data source is not connected to any exclusive resource group.</description></item>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? ConnectStatus { get; set; }
 
                 /// <summary>
-                /// <para>The configuration of the data source.</para>
+                /// <para>The detailed configurations of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;pubEndpoint&quot;:&quot;<a href="http://service.cn.maxcompute.aliyun.com/api%22,%22accessId%22:%22TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC%22,%22securityToken%22:null,%22endpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22accessKey%22:%22***%22,%22name%22:%22PRE_PROJECT_A_engine%22,%22project%22:%22PRE_PROJECT_A%22,%22vpcEndpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22region%22:%22cn-shanghai%22,%22authType%22:%222%22%7D">http://service.cn.maxcompute.aliyun.com/api&quot;,&quot;accessId&quot;:&quot;TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC&quot;,&quot;securityToken&quot;:null,&quot;endpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;accessKey&quot;:&quot;***&quot;,&quot;name&quot;:&quot;PRE_PROJECT_A_engine&quot;,&quot;project&quot;:&quot;PRE_PROJECT_A&quot;,&quot;vpcEndpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;region&quot;:&quot;cn-shanghai&quot;,&quot;authType&quot;:&quot;2&quot;}</a></para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The type of the data source. Valid values:</para>
+                /// <para>The type of the data source. Common types include:</para>
                 /// <list type="bullet">
                 /// <item><description>odps</description></item>
                 /// <item><description>mysql</description></item>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DataSourceType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the compute engine that is added as the data source is the default compute engine. Valid values:</para>
+                /// <para>Indicates whether the engine where the data source resides is the default engine. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The compute engine is the default compute engine.</description></item>
-                /// <item><description>false: The compute engine is not the default compute engine.</description></item>
+                /// <item><description>true: The engine is the default engine.</description></item>
+                /// <item><description>false: The engine is not the default engine.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The environment in which the data source resides. Valid values:</para>
+                /// <para>The environment to which the data source belongs. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>0: development environment</description></item>
                 /// <item><description>1: production environment</description></item>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The data source ID.</para>
+                /// <para>The ID of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who exported the data source.</para>
+                /// <para>The ID of the user who manages the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>193543050****</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The sequence number of the data source.</para>
+                /// <para>The sequence of the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -219,8 +219,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.</para>
-                /// <para>If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.</para>
+                /// <para>The subtype of the data source. This parameter takes effect only when the parameter settings for DataSourceType are set to RDS.</para>
+                /// <para>When the parameter settings for DataSourceType are set to RDS, this parameter can be set to mysql, sqlserver, or postgresql.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string SubType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account to which the data source belongs.</para>
+                /// <para>The ID of the tenant to which the data source belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234567</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number. Pages start from page 1.</para>
+            /// <para>The page number for the paged query. The value must be a positive integer greater than or equal to 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of data sources that meet the specified conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -276,8 +276,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The HTTP status code returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>200: The request was successful.</description></item>
-        /// <item><description>Other values: The request failed. You can troubleshoot issues based on the HTTP status code returned.</description></item>
+        /// <item><description>200: The call is successful.</description></item>
+        /// <item><description>Other values: The call fails. You can troubleshoot the issue based on the corresponding error code.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc14115159376359****</para>
@@ -298,10 +298,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

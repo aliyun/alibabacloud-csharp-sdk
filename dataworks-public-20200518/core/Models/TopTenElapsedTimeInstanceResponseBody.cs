@@ -10,21 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TopTenElapsedTimeInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ranking record of the running durations of the instances.</para>
+        /// <para>The ranking records of instance execution durations.</para>
         /// </summary>
         [NameInMap("InstanceConsumeTimeRank")]
         [Validation(Required=false)]
         public TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRank InstanceConsumeTimeRank { get; set; }
         public class TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRank : TeaModel {
             /// <summary>
-            /// <para>The ranking data of the running durations of the instances.</para>
+            /// <para>The ranking data of instance execution durations.</para>
             /// </summary>
             [NameInMap("ConsumeTimeRank")]
             [Validation(Required=false)]
             public List<TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRankConsumeTimeRank> ConsumeTimeRank { get; set; }
             public class TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRankConsumeTimeRank : TeaModel {
                 /// <summary>
-                /// <para>The data timestamp of the instance.</para>
+                /// <para>The business date when the instance was run.</para>
+                /// <para>The value is a 13-digit number, such as <c>1600963200000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1600963200000</para>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BusinessDate { get; set; }
 
                 /// <summary>
-                /// <para>The run time length of the instance. Unit: seconds.</para>
+                /// <para>The execution duration of the instance, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The ID of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527</para>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// <para>The Alibaba Cloud UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>952795279527</para>
@@ -84,7 +85,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</para>
+                /// <para>The type of the node.
+                /// Common types include:
+                /// 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (Virtual node), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object check), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (Real-time synchronization), 1089 (Cross-tenant node), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (Assignment node), and 1221 (PyODPS 3).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The timestamp at which the ranking of the running durations of the instances was updated.</para>
+            /// <para>The timestamp when the ranking of instance execution durations was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1600963200000</para>
@@ -108,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can use this ID to troubleshoot issues when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6347364dadsfadf****</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The GUID of the metatable.</para>
+        /// <para>The unique identifier of the table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

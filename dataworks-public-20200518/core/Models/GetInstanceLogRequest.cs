@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceLogRequest : TeaModel {
         /// <summary>
-        /// <para>The historical record number of the instance. You can call the ListInstanceHistory operation to query the ID.</para>
+        /// <para>The instance history ID. You can call the ListInstanceHistory operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values: PROD and DEV.</para>
+        /// <para>The workspace environment, including PROD and DEV.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

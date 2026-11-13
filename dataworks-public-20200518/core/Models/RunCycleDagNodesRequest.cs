@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The alert notification method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SMS: text message.</description></item>
-        /// <item><description>MAIL: email.</description></item>
-        /// <item><description>SMS_MAIL: text message and email.</description></item>
+        /// <item><description>SMS: Text message.</description></item>
+        /// <item><description>MAIL: Email.</description></item>
+        /// <item><description>SMS_MAIL: Text message and email.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertNoticeType { get; set; }
 
         /// <summary>
-        /// <para>The Alarm Metric. Valid values:</para>
+        /// <para>The alert type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUCCESS: Alerting on success.</description></item>
-        /// <item><description>FAILURE: Alerting on failed.</description></item>
-        /// <item><description>SUCCESS_FAILURE: Alerting on success or failed.</description></item>
+        /// <item><description>SUCCESS: Alerts on success.</description></item>
+        /// <item><description>FAILURE: Alerts on failure.</description></item>
+        /// <item><description>SUCCESS_FAILURE: Alerts on both success and failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the node. This parameter is required only for hourly scheduled nodes. Format: HH:mm:ss. Valid values: 00:00:00 to 23:59:59.</para>
+        /// <para>The start time of the task. This parameter is required only for tasks scheduled by hour. Specify the time in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:00</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizBeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the node. This parameter is required only for hourly scheduled nodes. Format: HH:mm:ss. Valid values: 00:00:00 to 23:59:59.</para>
+        /// <para>The end time of the task. This parameter is required only for tasks scheduled by hour. Specify the time in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01:00:00</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizEndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of concurrent nodes. Valid values: 2 to 10.</para>
+        /// <para>The number of tasks that can run in parallel. Valid values: 2 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? ConcurrentRuns { get; set; }
 
         /// <summary>
-        /// <para>The end business date for data backfill. Format: yyyy-MM-dd 00:00:00.</para>
+        /// <para>The end business date for data backfill. Specify the time in the yyyy-MM-dd 00:00:00 format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EndBizDate { get; set; }
 
         /// <summary>
-        /// <para>The list of node IDs that do not require data backfill. Nodes in this list generate dry-run instances. After a dry-run instance is scheduled, it directly succeeds without executing the script content.</para>
+        /// <para>The IDs of the nodes that do not require data backfill. Dry-run instances are generated for the nodes in this list. After a dry-run instance is scheduled, it directly succeeds without executing the script content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234,123465</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExcludeNodeIds { get; set; }
 
         /// <summary>
-        /// <para>The node IDs for data backfill. Separate multiple node IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain node IDs.</para>
+        /// <para>The IDs of the nodes for data backfill. If you backfill data for multiple nodes, separate the node IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>A JSON string in which the key is the node ID and the value is the actual parameter value.</para>
+        /// <para>The node parameters configured as a JSON string. The key is the node ID, and the value is the actual value of the parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;74324&quot;:&quot;a=123 b=456&quot;}</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParams { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether nodes across multiple business dates can run in parallel.</para>
+        /// <para>Specifies whether tasks for multiple business dates can run in parallel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Parallelism { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. PROD indicates the production environment. DEV indicates the development environment.</para>
+        /// <para>The workspace environment. Valid values: PROD for the production environment and DEV for the development environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? RootNodeId { get; set; }
 
         /// <summary>
-        /// <para>The start business date for data backfill. Format: yyyy-MM-dd 00:00:00.</para>
+        /// <para>The start business date for data backfill. Specify the time in the yyyy-MM-dd 00:00:00 format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string StartBizDate { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately run instances whose scheduling time is in the future. If this parameter is set to true, instances with a scheduling time later than the current time run immediately. Otherwise, the instances wait until the scheduling time.</para>
+        /// <para>Specifies whether to immediately run instances whose scheduled time is later than the current time. If this parameter is set to true, these instances run immediately. Otherwise, they wait until their scheduled time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

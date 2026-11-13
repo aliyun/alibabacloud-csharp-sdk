@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOptionValueForProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned In the example, cuNumber is a custom key.</para>
+        /// <para>The returned data. In the example, cuNumber is a custom key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;cuNumber&quot;:&quot;0&quot;}</para>

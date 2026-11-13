@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QuerySensNodeInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned business data in the JSON format.</para>
+        /// <para>The business data returned in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;success&quot;: true, &quot;httpStatusCode&quot;: 200, &quot;data&quot;: { &quot;result&quot;: [ { &quot;sensitiveName&quot;: &quot;certificate expiration date&quot;, &quot;sensitiveId&quot;: &quot;fd4ff5a2-9537-43d1-8e4f-1d0b5ffaac12&quot;, &quot;status&quot;: 0, &quot;templateName&quot;: &quot;built-in classification and grading template&quot;, &quot;keyRuleId&quot;: &quot;228248921215042 certificate expiration date&quot;} ], &quot;totalCount&quot;: 1, &quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10 }, &quot;requestId&quot;: 10000001}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

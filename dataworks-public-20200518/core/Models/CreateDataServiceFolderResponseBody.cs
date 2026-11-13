@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FolderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-E****</para>

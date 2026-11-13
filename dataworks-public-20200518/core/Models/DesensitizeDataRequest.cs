@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The masking scene code. You can view this on the Data Masking Management page of DataWorks Data Protection Umbrella in the DataWorks console.</para>
-        /// <para>You can obtain this value from Data[].SceneCode in the response of DsgSceneQuerySceneListByName.</para>
+        /// <para>The masking scene code. You can view this on the Data Masking Management page of DataWorks Data Security Guard in the DataWorks console.</para>
+        /// <para>You can obtain this value from Data[\].SceneCode in the response of DsgSceneQuerySceneListByName.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

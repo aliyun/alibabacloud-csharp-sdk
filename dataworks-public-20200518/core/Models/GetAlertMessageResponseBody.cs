@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetAlertMessageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about returned alerts.</para>
+        /// <para>The details of the returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? AlertId { get; set; }
 
             /// <summary>
-            /// <para>The sending status of the notification. Valid values:</para>
+            /// <para>The sending status of the alert message. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>READY_TO_SEND: The notification is waiting to be sent.</description></item>
-            /// <item><description>SEND_FAIL: The notification fails to be sent.</description></item>
-            /// <item><description>SEND_SUCCESS: The notification is sent.</description></item>
-            /// <item><description>SEND_OVERLIMIT: The number of notifications that are sent exceeds the upper limit.</description></item>
+            /// <item><description>READY_TO_SEND: The message is ready to be sent.</description></item>
+            /// <item><description>SEND_FAIL: The message fails to be sent.</description></item>
+            /// <item><description>SEND_SUCCESS: The message is sent.</description></item>
+            /// <item><description>SEND_OVERLIMIT: The alert limit is exceeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string AlertMessageStatus { get; set; }
 
             /// <summary>
-            /// <para>The notification method. Valid values:</para>
+            /// <para>The alert notification method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>MAIL.</description></item>
-            /// <item><description>SMS.</description></item>
-            /// <item><description>PHONE. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</description></item>
+            /// <item><description>MAIL: Email.</description></item>
+            /// <item><description>SMS: Text message.</description></item>
+            /// <item><description>PHONE: Phone call. This method is supported only in DataWorks Professional Edition or a higher edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string AlertMethod { get; set; }
 
             /// <summary>
-            /// <para>The time when the alert was reported.</para>
+            /// <para>The time when the alert is triggered. The value is a 13-digit timestamp, such as <c>1553524393000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? AlertTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account used by the alert recipient.</para>
+            /// <para>The Alibaba Cloud UID of the alert message recipient.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9527952795****</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string AlertUser { get; set; }
 
             /// <summary>
-            /// <para>The content of the alert.</para>
+            /// <para>The content of the alert message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Node error</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The instances that triggered the custom alert rule. This parameter is returned if the value of the Source parameter is REMIND_ALERT. This parameter is left empty if the value of the Source parameter is not REMIND_ALERT.</para>
+            /// <para>The list of instances that trigger the custom monitoring rule. This parameter is returned only when the Source parameter is set to REMIND_ALERT. For other alert sources, an empty list is returned.</para>
             /// </summary>
             [NameInMap("Instances")]
             [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node.</para>
+                /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node name</para>
@@ -135,16 +135,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance. Valid values:</para>
+                /// <para>The instance status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NOT_RUN</description></item>
-                /// <item><description>WAIT_TIME</description></item>
-                /// <item><description>WAIT_RESOURCE</description></item>
-                /// <item><description>RUNNING</description></item>
-                /// <item><description>CHECKING</description></item>
-                /// <item><description>CHECKING_CONDITION</description></item>
-                /// <item><description>FAILURE</description></item>
-                /// <item><description>SUCCESS</description></item>
+                /// <item><description>NOT_RUN: The instance is not run.</description></item>
+                /// <item><description>WAIT_TIME: The instance is waiting for the scheduled time.</description></item>
+                /// <item><description>WAIT_RESOURCE: The instance is waiting for resources.</description></item>
+                /// <item><description>RUNNING: The instance is running.</description></item>
+                /// <item><description>CHECKING: The instance is being checked.</description></item>
+                /// <item><description>CHECKING_CONDITION: The conditions are being checked.</description></item>
+                /// <item><description>FAILURE: The instance failed to run.</description></item>
+                /// <item><description>SUCCESS: The instance runs successfully.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -157,7 +157,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The nodes returned for different alert sources. The nodes that form a loop are returned if the value of the Source parameter is NODE_CYCLE_ALERT. The nodes that are isolated are returned if the value of the Source parameter is NODE_LONELY_ALERT.</para>
+            /// <para>The returned node list varies based on the alert source:
+            /// If Source is NODE_CYCLE_ALERT (cyclic node alert), the types of cyclic nodes are returned.
+            /// If Source is NODELONELYALERT (isolated node alert), the types of isolated nodes are returned.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
@@ -174,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node.</para>
+                /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node name</para>
@@ -184,7 +186,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// <para>The Alibaba Cloud UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>95279527952****</para>
@@ -206,7 +208,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The ID of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</para>
+            /// <para>The ID of the custom monitoring rule that triggers the alert. This parameter is returned only when the Source parameter is set to REMIND_ALERT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -216,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? RemindId { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</para>
+            /// <para>The name of the custom monitoring rule that triggers the alert. This parameter is returned only when the Source parameter is set to REMIND_ALERT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom monitoring rule name</para>
@@ -226,7 +228,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string RemindName { get; set; }
 
             /// <summary>
-            /// <para>The basic information about the baseline instance that triggered an alert. This parameter is returned if the value of the Source parameter is SLA_ALERT. This parameter is left empty if the value of the Source parameter is not SLA_ALERT.</para>
+            /// <para>The basic information about the baseline instance that triggers the baseline alert. This parameter is returned only when the Source parameter is set to SLA_ALERT. For other alert sources, this parameter is empty.</para>
             /// </summary>
             [NameInMap("SlaAlert")]
             [Validation(Required=false)]
@@ -243,7 +245,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BaselineId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the baseline.</para>
+                /// <para>The baseline name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Baseline name</para>
@@ -253,7 +255,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string BaselineName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</para>
+                /// <para>The Alibaba Cloud UIDs of the baseline owners. Multiple UIDs are separated by commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>952795279****</para>
@@ -263,7 +265,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string BaselineOwner { get; set; }
 
                 /// <summary>
-                /// <para>The data timestamp of the baseline instance.</para>
+                /// <para>The timestamp of the business date for the baseline instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553443200000</para>
@@ -273,7 +275,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Bizdate { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.</para>
+                /// <para>The cycle number of the baseline instance. The value is 1 for daily baselines and ranges from 1 to 24 for hourly baselines.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -293,12 +295,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the baseline. Valid values:</para>
+                /// <para>The baseline status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ERROR</description></item>
-                /// <item><description>SAFE</description></item>
-                /// <item><description>DANGEROUS</description></item>
-                /// <item><description>OVER</description></item>
+                /// <item><description>ERROR: Abnormal.</description></item>
+                /// <item><description>SAFE: Safe.</description></item>
+                /// <item><description>DANGEROUS: Warning.</description></item>
+                /// <item><description>OVER: Broken.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -311,13 +313,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The type of the alert. Valid values:</para>
+            /// <para>The source of the alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>REMIND_ALERT: The alert is a custom alert.</description></item>
-            /// <item><description>TOPIC_ALERT: The alert is an event alert.</description></item>
-            /// <item><description>SLA_ALERT: The alert is a baseline alert.</description></item>
-            /// <item><description>NODE_CYCLE_ALERT: The alert is reported for a node dependency loop.</description></item>
-            /// <item><description>NODE_LONELY_ALERT: The alert is reported for isolated nodes.</description></item>
+            /// <item><description>REMIND_ALERT: Custom alert.</description></item>
+            /// <item><description>TOPIC_ALERT: Event alert.</description></item>
+            /// <item><description>SLA_ALERT: Baseline alert.</description></item>
+            /// <item><description>NODE_CYCLE_ALERT: Node loop alert.</description></item>
+            /// <item><description>NODE_LONELY_ALERT: Isolated node alert.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -328,14 +330,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The events that triggered alerts. This parameter is returned if the value of the Source parameter is TOPIC_ALERT. This parameter is left empty if the value of the Source parameter is not TOPIC_ALERT.</para>
+            /// <para>The list of events that trigger the alerting. This parameter is returned only when the Source parameter is set to TOPIC_ALERT (global event alerting). For other alerting sources, an empty list is returned.</para>
             /// </summary>
             [NameInMap("Topics")]
             [Validation(Required=false)]
             public List<GetAlertMessageResponseBodyDataTopics> Topics { get; set; }
             public class GetAlertMessageResponseBodyDataTopics : TeaModel {
                 /// <summary>
-                /// <para>The ID of the instance that triggered the event.</para>
+                /// <para>The instance ID associated with the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -345,7 +347,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node that triggered the event.</para>
+                /// <para>The ID of the node associated with the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -365,7 +367,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? TopicId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the event.</para>
+                /// <para>The event name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>error</para>
@@ -375,7 +377,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TopicName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the event owner.</para>
+                /// <para>The Alibaba Cloud UID of the event owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527952795****</para>
@@ -387,10 +389,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>IGNORE</description></item>
-                /// <item><description>NEW</description></item>
-                /// <item><description>FIXING</description></item>
-                /// <item><description>RECOVER</description></item>
+                /// <item><description>IGNORE: The event is ignored.</description></item>
+                /// <item><description>NEW: The event is newly discovered.</description></item>
+                /// <item><description>FIXING: The event is being handled.</description></item>
+                /// <item><description>RECOVER: The event is recovered.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -435,7 +437,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can use the request ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -445,10 +447,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Specifies whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

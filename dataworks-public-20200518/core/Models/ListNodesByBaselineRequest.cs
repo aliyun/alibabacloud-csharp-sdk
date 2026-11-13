@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesByBaselineRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the baseline. You can call the <a href="https://help.aliyun.com/document_detail/173964.html">ListBaselineConfigs</a> operation to obtain the baseline ID.</para>
+        /// <para>The baseline ID. To obtain the baseline ID, call ListProjects to obtain the project ID, and then call ListBaselineConfigs by using the project ID to obtain the baseline ID from the response. If no baseline exists in the current workspace, create one in the DataWorks console first.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

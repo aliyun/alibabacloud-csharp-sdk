@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Specifies whether alerting is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? AlertEnabled { get; set; }
 
         /// <summary>
-        /// <para>The baseline alert margin. Unit: minutes.</para>
+        /// <para>The alert margin of the baseline. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? AlertMarginThreshold { get; set; }
 
         /// <summary>
-        /// <para>The baseline alert configurations.</para>
+        /// <para>The alert configurations of the baseline.</para>
         /// </summary>
         [NameInMap("AlertSettings")]
         [Validation(Required=false)]
         public string AlertSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the baseline. You can call <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> to obtain the ID.</para>
+        /// <para>The ID of the baseline. You can call the <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? BaselineId { get; set; }
 
         /// <summary>
-        /// <para>The baseline name.</para>
+        /// <para>The name of the baseline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BaselineName</para>
@@ -62,11 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BaselineName { get; set; }
 
         /// <summary>
-        /// <para>The baseline type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DAILY: daily baseline.</description></item>
-        /// <item><description>HOURLY: hourly baseline.</description></item>
-        /// </list>
+        /// <para>The type of the baseline. Valid values: DAILY (daily baseline) and HOURLY (hourly baseline).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DAILY</para>
@@ -78,8 +74,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Specifies whether the baseline is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The list of upstream node IDs for the baseline, separated by commas. If there are many nodes, we recommend that you add a virtual node downstream for easier management.</para>
+        /// <para>The list of upstream nodes of the baseline. Separate multiple node IDs with commas (,). If there are many nodes, add a zero-load node downstream to facilitate management.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -100,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The baseline committed time configurations.</para>
+        /// <para>The committed time configurations of the baseline.</para>
         /// </summary>
         [NameInMap("OvertimeSettings")]
         [Validation(Required=false)]
@@ -127,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The project ID. You can call <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> to obtain the ID.</para>
+        /// <para>The ID of the project. You can call the <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -138,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of nodes to remove from the baseline. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the nodes to be removed from the baseline. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123,456</para>

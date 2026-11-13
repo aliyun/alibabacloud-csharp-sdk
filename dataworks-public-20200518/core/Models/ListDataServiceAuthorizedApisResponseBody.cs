@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceAuthorizedApisResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about authorized APIs.</para>
+        /// <para>The authorized API information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the API.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>MyAPIName</para>
+                /// <para>My API name</para>
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the API. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: unpublished.</description></item>
-                /// <item><description>1: published.</description></item>
+                /// <item><description>0: Unpublished.</description></item>
+                /// <item><description>1: Published.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,7 +68,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? ApiStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the API was created. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (the example time zone is +0800).</para>
+                /// <para>The ID of the authorization rule for the cloud-native API gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>car-ctgdn8em1hko5krqq03g</para>
+                /// </summary>
+                [NameInMap("ConsumerAuthorizationRuleId")]
+                [Validation(Required=false)]
+                public string ConsumerAuthorizationRuleId { get; set; }
+
+                /// <summary>
+                /// <para>The creation time of the API. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (example time zone: +0800).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-23T00:21:01+0800</para>
@@ -88,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the API was authorized. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (the example time zone is +0800).</para>
+                /// <para>The authorization time of the API. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (example time zone: +0800).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-23T00:21:01+0800</para>
@@ -98,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GrantCreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the API authorization. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (the example time zone is +0800).</para>
+                /// <para>The expiration time of the API authorization. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (example time zone: +0800).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-24T00:21:01+0800</para>
@@ -108,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GrantEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud ID of the user who granted the authorization.</para>
+                /// <para>The Alibaba Cloud ID of the grantor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23456</para>
@@ -118,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GrantOperatorId { get; set; }
 
                 /// <summary>
-                /// <para>The group ID.</para>
+                /// <para>The ID of the group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abcde123456789</para>
@@ -128,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time of the API. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (the example time zone is +0800).</para>
+                /// <para>The last update time of the API. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (example time zone: +0800).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-23T00:21:01+0800</para>
@@ -138,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The workspace ID.</para>
+                /// <para>The ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -160,7 +170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number, which is the same as the PageNumber value in the request.</para>
+            /// <para>The page number, which is the same as the PageNumber parameter in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -222,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. A unique identifier for the request.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>

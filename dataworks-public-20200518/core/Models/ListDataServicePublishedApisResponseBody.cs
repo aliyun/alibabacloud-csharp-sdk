@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServicePublishedApisResponseBody : TeaModel {
         /// <summary>
-        /// <para>The published API information returned.</para>
+        /// <para>The published API information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataServicePublishedApisResponseBodyData Data { get; set; }
         public class ListDataServicePublishedApisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of published API information.</para>
+            /// <para>The list of published APIs.</para>
             /// </summary>
             [NameInMap("Apis")]
             [Validation(Required=false)]
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the API. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: wizard API.</description></item>
-                /// <item><description>1: script API.</description></item>
-                /// <item><description>2: registration API.</description></item>
+                /// <item><description>0: Wizard API.</description></item>
+                /// <item><description>1: Script API.</description></item>
+                /// <item><description>2: Registered API.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -69,7 +69,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ApiPath { get; set; }
 
                 /// <summary>
-                /// <para>The time when the API was created.</para>
+                /// <para>The gateway version. Valid values: 1: API Gateway; 2: Cloud-native API Gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("ApigwVersion")]
+                [Validation(Required=false)]
+                public int? ApigwVersion { get; set; }
+
+                /// <summary>
+                /// <para>The security authentication method for the cloud-native API gateway. Valid values: 1: no authentication; 2: ApiKey; 3: JWT; 4: HMAC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("CloudNativeApiGwAuthType")]
+                [Validation(Required=false)]
+                public int? CloudNativeApiGwAuthType { get; set; }
+
+                /// <summary>
+                /// <para>The time when the API was created. The time is in the <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c> format. Example: <c>2020-06-23T00:21:01+0800</c>. In this example, the time zone offset is <c>+0800</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-23T00:21:01+0800</para>
@@ -99,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The group ID.</para>
+                /// <para>The ID of the group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ab123</para>
@@ -109,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the API was last modified.</para>
+                /// <para>The time when the API was last modified. The time is in the <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c> format. Example: <c>2020-06-23T00:21:01+0800</c>. In this example, the time zone offset is <c>+0800</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-23T00:21:01+0800</para>
@@ -119,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud ID of the user who last edited the API.</para>
+                /// <para>The Alibaba Cloud ID of the last editor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2345678</para>
@@ -139,7 +159,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The API protocol. Valid values:</para>
+                /// <para>The protocol of the API. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>0: HTTP.</description></item>
                 /// <item><description>1: HTTPS.</description></item>
@@ -150,14 +170,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<int?> Protocols { get; set; }
 
                 /// <summary>
-                /// <para>The details of the registration API. This is returned only for registration APIs.</para>
+                /// <para>The details of the registered API. This parameter is returned only for registered APIs.</para>
                 /// </summary>
                 [NameInMap("RegistrationDetails")]
                 [Validation(Required=false)]
                 public ListDataServicePublishedApisResponseBodyDataApisRegistrationDetails RegistrationDetails { get; set; }
                 public class ListDataServicePublishedApisResponseBodyDataApisRegistrationDetails : TeaModel {
                     /// <summary>
-                    /// <para>The sample of an error response.</para>
+                    /// <para>The sample error response.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;success&quot;: false}</para>
@@ -167,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string FailedResultSample { get; set; }
 
                     /// <summary>
-                    /// <para>The list of error codes for the registration API.</para>
+                    /// <para>The list of error codes for the registered API.</para>
                     /// </summary>
                     [NameInMap("RegistrationErrorCodes")]
                     [Validation(Required=false)]
@@ -194,7 +214,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public string ErrorMessage { get; set; }
 
                         /// <summary>
-                        /// <para>The fault Solutions.</para>
+                        /// <para>The Solutions to the fault.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>retry</para>
@@ -206,7 +226,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     }
 
                     /// <summary>
-                    /// <para>The list of request parameters for the registration API.</para>
+                    /// <para>The list of request parameters for the registered API.</para>
                     /// </summary>
                     [NameInMap("RegistrationRequestParameters")]
                     [Validation(Required=false)]
@@ -244,6 +264,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                         /// <summary>
                         /// <para>The data type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: String.</description></item>
+                        /// <item><description>1: Int.</description></item>
+                        /// <item><description>2: Long.</description></item>
+                        /// <item><description>3: Float.</description></item>
+                        /// <item><description>4: Double.</description></item>
+                        /// <item><description>5: Boolean.</description></item>
+                        /// <item><description>6: StringList.</description></item>
+                        /// <item><description>7: IntList.</description></item>
+                        /// <item><description>8: LongList.</description></item>
+                        /// <item><description>9: FloatList.</description></item>
+                        /// <item><description>10: DoubleList.</description></item>
+                        /// <item><description>11: BooleanList.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -263,7 +297,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public string ParameterDescription { get; set; }
 
                         /// <summary>
-                        /// <para>The parameter name.</para>
+                        /// <para>The name of the parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>name1</para>
@@ -274,6 +308,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                         /// <summary>
                         /// <para>The operator. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: Equal.</description></item>
+                        /// <item><description>1: Like.</description></item>
+                        /// <item><description>2: Const.</description></item>
+                        /// <item><description>3: In.
+                        /// Wizard APIs support Equal, Like, and In. Script APIs support Equal. Registered APIs support Equal and Const.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -283,7 +324,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public int? ParameterOperator { get; set; }
 
                         /// <summary>
-                        /// <para>The parameter position. Valid values:</para>
+                        /// <para>The position of the parameter. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: Path.</description></item>
+                        /// <item><description>1: Query.</description></item>
+                        /// <item><description>2: Head.</description></item>
+                        /// <item><description>3: Body.
+                        /// Wizard and script APIs support only Query. For registered APIs, the GET and DELETE methods support Query and Head, and the PUT and POST methods support Query, Head, and Body.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -295,12 +343,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     }
 
                     /// <summary>
-                    /// <para>The return data type of the API. Valid values:</para>
+                    /// <para>The response data type of the API. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>0: JSON.</description></item>
-                    /// <item><description>1: XML.</description></item>
+                    /// <item><description>1: XML.
+                    /// Wizard and script APIs support JSON. Registered APIs support both JSON and XML.</description></item>
                     /// </list>
-                    /// <para>Wizard and script APIs support JSON. Registration APIs support JSON and XML.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -310,7 +358,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public int? ServiceContentType { get; set; }
 
                     /// <summary>
-                    /// <para>The backend service address.</para>
+                    /// <para>The address of the backend service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://www.abc.com">http://www.abc.com</a></para>
@@ -320,7 +368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string ServiceHost { get; set; }
 
                     /// <summary>
-                    /// <para>The backend service path.</para>
+                    /// <para>The path of the backend service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/index</para>
@@ -330,7 +378,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string ServicePath { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the backend request body content.</para>
+                    /// <para>The description of the backend request body.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;abc&quot;:1}</para>
@@ -340,7 +388,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string ServiceRequestBodyDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The sample of a successful response.</para>
+                    /// <para>The sample success response.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;success&quot;: true}</para>
@@ -357,9 +405,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <item><description>0: GET.</description></item>
                 /// <item><description>1: POST.</description></item>
                 /// <item><description>2: PUT.</description></item>
-                /// <item><description>3: DELETE.</description></item>
+                /// <item><description>3: DELTE.
+                /// Wizard and script APIs support GET and POST. Registered APIs support GET, POST, PUT, and DELETE.</description></item>
                 /// </list>
-                /// <para>Wizard and script APIs support GET and POST. Registration APIs support GET, POST, PUT, and DELETE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -369,6 +417,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? RequestMethod { get; set; }
 
                 /// <summary>
+                /// <para>The response data type of the API. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: JSON.</description></item>
+                /// <item><description>1: XML.
+                /// Wizard and script APIs support JSON. Registered APIs support both JSON and XML.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -377,14 +432,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? ResponseContentType { get; set; }
 
                 /// <summary>
-                /// <para>The details of the script API. This is returned only for script APIs.</para>
+                /// <para>The details of the script API. This parameter is returned only for script APIs.</para>
                 /// </summary>
                 [NameInMap("ScriptDetails")]
                 [Validation(Required=false)]
                 public ListDataServicePublishedApisResponseBodyDataApisScriptDetails ScriptDetails { get; set; }
                 public class ListDataServicePublishedApisResponseBodyDataApisScriptDetails : TeaModel {
                     /// <summary>
-                    /// <para>The sample of an error response.</para>
+                    /// <para>The sample error response.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;success&quot;: false}</para>
@@ -414,14 +469,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string Script { get; set; }
 
                     /// <summary>
-                    /// <para>The data source information for the script API.</para>
+                    /// <para>The data source information of the script API.</para>
                     /// </summary>
                     [NameInMap("ScriptConnection")]
                     [Validation(Required=false)]
                     public ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptConnection ScriptConnection { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisScriptDetailsScriptConnection : TeaModel {
                         /// <summary>
-                        /// <para>The data source ID.</para>
+                        /// <para>The ID of the data source.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
@@ -431,7 +486,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public long? ConnectionId { get; set; }
 
                         /// <summary>
-                        /// <para>The table name of the data source.</para>
+                        /// <para>The name of the data source table.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>t</para>
@@ -470,7 +525,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public string ErrorMessage { get; set; }
 
                         /// <summary>
-                        /// <para>The fault Solutions.</para>
+                        /// <para>The Solutions to the fault.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>retry</para>
@@ -520,6 +575,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                         /// <summary>
                         /// <para>The data type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: String.</description></item>
+                        /// <item><description>1: Int.</description></item>
+                        /// <item><description>2: Long.</description></item>
+                        /// <item><description>3: Float.</description></item>
+                        /// <item><description>4: Double.</description></item>
+                        /// <item><description>5: Boolean.
+                        /// Advanced scripts also support the following data types:</description></item>
+                        /// <item><description>6: StringList.</description></item>
+                        /// <item><description>7: IntList.</description></item>
+                        /// <item><description>8: LongList.</description></item>
+                        /// <item><description>9: FloatList.</description></item>
+                        /// <item><description>10: DoubleList.</description></item>
+                        /// <item><description>11: BooleanList.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -539,7 +609,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public string ParameterDescription { get; set; }
 
                         /// <summary>
-                        /// <para>The parameter name.</para>
+                        /// <para>The name of the parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>param1</para>
@@ -550,6 +620,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                         /// <summary>
                         /// <para>The operator. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: Equal.</description></item>
+                        /// <item><description>1: Like.</description></item>
+                        /// <item><description>2: Const.</description></item>
+                        /// <item><description>3: In.
+                        /// Wizard APIs support Equal, Like, and In. Script APIs support Equal. Registered APIs support Equal and Const.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -559,7 +636,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public int? ParameterOperator { get; set; }
 
                         /// <summary>
-                        /// <para>The parameter position. Valid values:</para>
+                        /// <para>The position of the parameter. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: Path.</description></item>
+                        /// <item><description>1: Query.</description></item>
+                        /// <item><description>2: Head.</description></item>
+                        /// <item><description>3: Body.
+                        /// Wizard and script APIs support only Query. For registered APIs, the GET and DELETE methods support Query and Head, and the PUT and POST methods support Query, Head, and Body.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -589,6 +673,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                         /// <summary>
                         /// <para>The data type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: String.</description></item>
+                        /// <item><description>1: Int.</description></item>
+                        /// <item><description>2: Long.</description></item>
+                        /// <item><description>3: Float.</description></item>
+                        /// <item><description>4: Double.</description></item>
+                        /// <item><description>5: Boolean.</description></item>
+                        /// <item><description>6: StringList.</description></item>
+                        /// <item><description>7: IntList.</description></item>
+                        /// <item><description>8: LongList.</description></item>
+                        /// <item><description>9: FloatList.</description></item>
+                        /// <item><description>10: DoubleList.</description></item>
+                        /// <item><description>11: BooleanList.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -608,7 +706,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public string ParameterDescription { get; set; }
 
                         /// <summary>
-                        /// <para>The parameter name.</para>
+                        /// <para>The name of the parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>param2</para>
@@ -620,7 +718,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     }
 
                     /// <summary>
-                    /// <para>The sample of a successful response.</para>
+                    /// <para>The sample success response.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;success&quot;: true}</para>
@@ -632,7 +730,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The SQL mode. Valid values: 0 (basic SQL) and 1 (advanced SQL).</para>
+                /// <para>The SQL mode. Valid values: 0: basic SQL; 1: advanced SQL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -644,8 +742,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the API. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: unpublished.</description></item>
-                /// <item><description>1: published.</description></item>
+                /// <item><description>0: Unpublished.</description></item>
+                /// <item><description>1: Published.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -656,7 +754,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The tenant ID.</para>
+                /// <para>The ID of the tenant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10001</para>
@@ -666,7 +764,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? TenantId { get; set; }
 
                 /// <summary>
-                /// <para>The timeout period, in milliseconds (ms).</para>
+                /// <para>The timeout period, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -676,10 +774,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Timeout { get; set; }
 
                 /// <summary>
-                /// <para>The visibility range. Valid values:</para>
+                /// <para>The visibility scope. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: workspace.</description></item>
-                /// <item><description>1: private.</description></item>
+                /// <item><description>0: Workspace.</description></item>
+                /// <item><description>1: Private.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -690,14 +788,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? VisibleRange { get; set; }
 
                 /// <summary>
-                /// <para>The details of the wizard API. This is returned only for wizard APIs.</para>
+                /// <para>The details of the wizard API. This parameter is returned only for wizard APIs.</para>
                 /// </summary>
                 [NameInMap("WizardDetails")]
                 [Validation(Required=false)]
                 public ListDataServicePublishedApisResponseBodyDataApisWizardDetails WizardDetails { get; set; }
                 public class ListDataServicePublishedApisResponseBodyDataApisWizardDetails : TeaModel {
                     /// <summary>
-                    /// <para>The sample of an error response.</para>
+                    /// <para>The sample error response.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;success&quot;: false}</para>
@@ -717,7 +815,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public bool? IsPagedResponse { get; set; }
 
                     /// <summary>
-                    /// <para>The sample of a successful response.</para>
+                    /// <para>The sample success response.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;success&quot;: true}</para>
@@ -727,14 +825,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string SuccessfulResultSample { get; set; }
 
                     /// <summary>
-                    /// <para>The data source information of the wizard API.</para>
+                    /// <para>The data source information for the wizard API.</para>
                     /// </summary>
                     [NameInMap("WizardConnection")]
                     [Validation(Required=false)]
                     public ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection WizardConnection { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection : TeaModel {
                         /// <summary>
-                        /// <para>The data source ID.</para>
+                        /// <para>The ID of the data source.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>12354</para>
@@ -744,7 +842,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public long? ConnectionId { get; set; }
 
                         /// <summary>
-                        /// <para>The table name of the data source.</para>
+                        /// <para>The name of the table in the data source.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>t</para>
@@ -783,7 +881,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public string ErrorMessage { get; set; }
 
                         /// <summary>
-                        /// <para>The fault Solutions.</para>
+                        /// <para>The error solution.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>retry</para>
@@ -822,7 +920,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public string ExampleValue { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the parameter is required.</para>
+                        /// <para>Specifies whether the parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -833,6 +931,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                         /// <summary>
                         /// <para>The data type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: String.</description></item>
+                        /// <item><description>1: Int.</description></item>
+                        /// <item><description>2: Long.</description></item>
+                        /// <item><description>3: Float.</description></item>
+                        /// <item><description>4: Double.</description></item>
+                        /// <item><description>5: Boolean.</description></item>
+                        /// <item><description>6: StringList.</description></item>
+                        /// <item><description>7: IntList.</description></item>
+                        /// <item><description>8: LongList.</description></item>
+                        /// <item><description>9: FloatList.</description></item>
+                        /// <item><description>10: DoubleList.</description></item>
+                        /// <item><description>11: BooleanList.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -872,7 +984,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public int? ParameterOperator { get; set; }
 
                         /// <summary>
-                        /// <para>The position of the parameter. Valid values: 0 (Path), 1 (Query), 2 (Head), and 3 (Body). Wizard and script APIs support only Query. For registered APIs, the GET and DELETE methods support Query and Head, and the PUT and POST methods support Query, Head, and Body.</para>
+                        /// <para>The position of the parameter. Valid values: 0 (Path), 1 (Query), 2 (Head), and 3 (Body). Wizard and script APIs support only Query. For registered APIs, the GET and DELETE methods support Query and Head, while the PUT and POST methods support Query, Head, and Body.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -902,6 +1014,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                         /// <summary>
                         /// <para>The data type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: String.</description></item>
+                        /// <item><description>1: Int.</description></item>
+                        /// <item><description>2: Long.</description></item>
+                        /// <item><description>3: Float.</description></item>
+                        /// <item><description>4: Double.</description></item>
+                        /// <item><description>5: Boolean.</description></item>
+                        /// <item><description>6: StringList.</description></item>
+                        /// <item><description>7: IntList.</description></item>
+                        /// <item><description>8: LongList.</description></item>
+                        /// <item><description>9: FloatList.</description></item>
+                        /// <item><description>10: DoubleList.</description></item>
+                        /// <item><description>11: BooleanList.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -937,7 +1063,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number, which is consistent with the PageNumber in the request.</para>
+            /// <para>The page number, which is the same as the PageNumber value in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -957,7 +1083,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -999,7 +1125,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is the unique identifier for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>

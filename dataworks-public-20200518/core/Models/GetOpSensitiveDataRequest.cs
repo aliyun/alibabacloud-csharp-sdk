@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOpSensitiveDataRequest : TeaModel {
         /// <summary>
-        /// <para>The date on which access records were generated. Specify the value in the yyyyMMdd format.</para>
+        /// <para>The date for which to retrieve access records. Format: yyyyMMdd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,16 +21,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>The parameters that you can configure to query the access records. Valid values:</para>
+        /// <para>The condition settings for retrieving access records. Optional parameters are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>dbType</description></item>
-        /// <item><description>instanceName</description></item>
-        /// <item><description>databaseName</description></item>
-        /// <item><description>projectName</description></item>
-        /// <item><description>clusterName</description></item>
+        /// <item><description>dbType: The database type.</description></item>
+        /// <item><description>instanceName: The instance name.</description></item>
+        /// <item><description>databaseName: The database name.</description></item>
+        /// <item><description>projectName: The project name.</description></item>
+        /// <item><description>clusterName: The cluster name.</description></item>
         /// </list>
-        /// <para>The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC: [ {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;} ]</para>
-        /// <para>You must configure the parameters based on the compute engine that you use in your business.</para>
+        /// <para>Example of retrieving sensitive data access records for the abc database of the ABC instance in Hologres:
+        /// [  {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;} ]</para>
+        /// <para>Configure the parameters based on the engine used in your business.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,10 +42,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The operation that is performed on the data. Valid values:</para>
+        /// <para>The type of operation performed by the user on the data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SQL_SELECT: specifies the data access operation. For example, execute a SELECT statement to query data.</description></item>
-        /// <item><description>TUNNEL_DOWNLOAD: specifies the data download operation. For example, run a Tunnel command to download data.</description></item>
+        /// <item><description>SQL_SELECT: Access behavior. For example, querying data by using a SELECT statement.</description></item>
+        /// <item><description>TUNNEL_DOWNLOAD: Export behavior. For example, downloading data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,18 +56,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string OpType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 1000.</para>
+        /// <para>The page number. Minimum value: 1. Maximum value: 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Minimum value: 1. Maximum value: 1000.</para>
+        /// <para>The number of entries to return on each page. Minimum value: 1. Maximum value: 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

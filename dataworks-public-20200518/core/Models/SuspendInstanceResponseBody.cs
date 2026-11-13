@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SuspendInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result details returned after the SuspendInstance operation is called.</para>
+        /// <para>The details of the result returned after the SuspendInstance operation is called.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0baf87f0159376****</para>

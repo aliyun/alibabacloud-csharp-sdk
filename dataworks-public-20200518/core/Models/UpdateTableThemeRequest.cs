@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the theme.</para>
+        /// <para>The theme ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

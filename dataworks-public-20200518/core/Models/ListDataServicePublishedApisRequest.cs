@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServicePublishedApisRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword used to filter APIs by name. APIs whose names contain this keyword are returned.</para>
+        /// <para>The keyword in the API name. This parameter filters APIs whose names contain the keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My API name</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApiNameKeyword { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to filter APIs by path. APIs whose paths contain this keyword are returned.</para>
+        /// <para>The keyword in the API path. This parameter filters APIs whose paths contain the keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/test/</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApiPathKeyword { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud ID of the API creator. Only APIs created by this user are returned.</para>
+        /// <para>The Alibaba Cloud ID of the API creator. This parameter filters APIs created by the specified user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -61,6 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The ID of the workspace.</para>
+        /// <para>The example value is for format demonstration only. You can obtain a valid value from the PageResult.ProjectList[].ProjectId parameter in the response of the ListProjects operation. Before calling this operation, activate DataWorks Enterprise Edition or Ultimate Edition. Otherwise, a 403 Forbidden.Access error is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. To obtain the tenant ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the DataStudio page, click your username in the upper-right corner, and select Menu &gt; User Info.</para>
+        /// <para>The tenant ID. To obtain the tenant ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the DataStudio page, click the username in the upper-right corner, and then choose Menu &gt; User Information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>

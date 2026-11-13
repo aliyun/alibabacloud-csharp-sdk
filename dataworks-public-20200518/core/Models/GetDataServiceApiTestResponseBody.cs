@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ApiId { get; set; }
 
             /// <summary>
-            /// <para>Time consuming</para>
+            /// <para>The elapsed time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ParamMap { get; set; }
 
             /// <summary>
-            /// <para>The test API returns the code. If it is not completed, the data is empty.</para>
+            /// <para>The response code returned by the tested API. This field is empty if the test is not complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>adssdsewe</para>
+        /// <para>adssd****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

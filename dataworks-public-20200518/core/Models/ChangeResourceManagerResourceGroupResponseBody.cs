@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ChangeResourceManagerResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the resource group was changed.</para>
+        /// <para>Indicates whether the resource group was modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AFAE64E-D1BE-432B-A9****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateMetaCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks of the category.</para>
+        /// <para>The description of the category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>category 1</para>

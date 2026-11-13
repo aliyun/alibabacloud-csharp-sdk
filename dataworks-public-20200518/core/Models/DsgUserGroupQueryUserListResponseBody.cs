@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string BaseId { get; set; }
 
             /// <summary>
-            /// <para>The parent user ID. This parameter is required if a RAM user is used.</para>
+            /// <para>The parent user ID. This parameter applies to RAM users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -115,8 +115,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: successful</description></item>
+        /// <item><description>false: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceConsumeTimeRankRequest : TeaModel {
         /// <summary>
-        /// <para>The data timestamp, accurate to the day. The value must be in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format in UTC.</para>
+        /// <para>The business date, accurate to the day. The value must be in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

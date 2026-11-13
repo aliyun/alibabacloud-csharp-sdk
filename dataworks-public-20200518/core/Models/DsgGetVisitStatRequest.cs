@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgGetVisitStatRequest : TeaModel {
         /// <summary>
-        /// <para>The start time in the format of &quot;2026-06-30 03:59:59&quot;.</para>
+        /// <para>The start time. Format: 2026-06-30 03:59:59.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end time in the format of &quot;2026-06-30 23:59:59&quot;.</para>
+        /// <para>The end time. Format: &quot;2026-06-30 23:59:59&quot;.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EngineName { get; set; }
 
         /// <summary>
-        /// <para>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</para>
+        /// <para>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d0c72253-8eea-435b-91fc-163a90a54b33</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the project space. Example value: dsg_demo_gw.</para>
+        /// <para>The name of the workspace. Reference value: dsg_demo_gw.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dsg_demo_gw</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The name of the sensitive field.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Name.</para>
+        /// <para>Name</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The classification level. Example value: 3.</para>
+        /// <para>The classification level. Reference value: 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

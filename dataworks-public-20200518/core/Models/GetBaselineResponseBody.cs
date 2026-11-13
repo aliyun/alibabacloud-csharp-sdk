@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetBaselineResponseBodyData Data { get; set; }
         public class GetBaselineResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether alerting is started. Valid values:</para>
+            /// <para>Specifies whether alerts are enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? AlertInterval { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of event alerting notifications.</para>
+                /// <para>The maximum number of event alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -75,11 +75,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<string> AlertMethods { get; set; }
 
                 /// <summary>
-                /// <para>The alert recipient details.</para>
+                /// <para>The details of the alert recipient.</para>
                 /// <list type="bullet">
-                /// <item><description>If AlertRecipientType is set to OWNER: empty.</description></item>
-                /// <item><description>If AlertRecipientType is set to SHIFT_SCHEDULE: the UID of the shift schedule.</description></item>
-                /// <item><description>If AlertRecipientType is set to OTHER: a list of UIDs. Separate multiple UIDs with commas (,).</description></item>
+                /// <item><description>If AlertRecipientType is set to OWNER, this parameter is left empty.</description></item>
+                /// <item><description>If AlertRecipientType is set to SHIFT_SCHEDULE, the value is the UID of the shift schedule.</description></item>
+                /// <item><description>If AlertRecipientType is set to OTHER, the value is a list of UIDs. Multiple UIDs are separated by commas (,).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string AlertRecipient { get; set; }
 
                 /// <summary>
-                /// <para>The type of alert recipient. Valid values:</para>
+                /// <para>The type of the alert recipient. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OWNER: node owner.</description></item>
-                /// <item><description>OTHER: specified users.</description></item>
-                /// <item><description>SHIFT_SCHEDULE: shift schedule.</description></item>
+                /// <item><description>OWNER: The owner of the node.</description></item>
+                /// <item><description>OTHER: Specified users.</description></item>
+                /// <item><description>SHIFT_SCHEDULE: Shift schedule.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,8 +107,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The alerting type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>BASELINE: baseline.</description></item>
-                /// <item><description>TOPIC: event.</description></item>
+                /// <item><description>BASELINE: Baseline.</description></item>
+                /// <item><description>TOPIC: Event.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -119,10 +119,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string AlertType { get; set; }
 
                 /// <summary>
-                /// <para>The baseline alert switch. This is a baseline-specific configuration. Valid values:</para>
+                /// <para>Specifies whether baseline alerts are enabled. This is a baseline-specific configuration. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: started.</description></item>
-                /// <item><description>false: stopped.</description></item>
+                /// <item><description>true: Enabled.</description></item>
+                /// <item><description>false: Disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<GetBaselineResponseBodyDataAlertSettingsDingRobots> DingRobots { get; set; }
                 public class GetBaselineResponseBodyDataAlertSettingsDingRobots : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether to @ all members.</para>
+                    /// <para>Specifies whether to @all.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The silence end time, in the HH:mm:ss format.</para>
+                /// <para>The end time of the silence period, in the HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00:00</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string SilenceEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The silence start time, in the HH:mm:ss format.</para>
+                /// <para>The start time of the silence period, in the HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00:00</para>
@@ -181,11 +181,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string SilenceStartTime { get; set; }
 
+                /// <summary>
+                /// <para>The threshold configuration for slow event alerts.</para>
+                /// </summary>
                 [NameInMap("TopicSlowConfig")]
                 [Validation(Required=false)]
                 public GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig TopicSlowConfig { get; set; }
                 public class GetBaselineResponseBodyDataAlertSettingsTopicSlowConfig : TeaModel {
                     /// <summary>
+                    /// <para>The minimum threshold for slow events, in seconds. Valid values: 300 to 18000.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>3600</para>
                     /// </summary>
@@ -194,6 +199,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public int? MinOver { get; set; }
 
                     /// <summary>
+                    /// <para>The ratio used to calculate the slow event threshold based on the historical average execution duration of the node. Valid values: 0.1 to 2.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0.2</para>
                     /// </summary>
@@ -242,8 +249,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The type of the baseline. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DAILY: daily baseline.</description></item>
-            /// <item><description>HOURLY: hourly baseline.</description></item>
+            /// <item><description>DAILY: Daily baseline.</description></item>
+            /// <item><description>HOURLY: Hourly baseline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -254,7 +261,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string BaselineType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the baseline is started.</para>
+            /// <para>Specifies whether the baseline is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -271,14 +278,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<long?> NodeIds { get; set; }
 
             /// <summary>
-            /// <para>The baseline committed time settings.</para>
+            /// <para>The commitment time settings of the baseline.</para>
             /// </summary>
             [NameInMap("OverTimeSettings")]
             [Validation(Required=false)]
             public List<GetBaselineResponseBodyDataOverTimeSettings> OverTimeSettings { get; set; }
             public class GetBaselineResponseBodyDataOverTimeSettings : TeaModel {
                 /// <summary>
-                /// <para>The cycle corresponding to the committed time. The value is 1 for daily baselines. You can configure up to 24 cycles for hourly baselines.</para>
+                /// <para>The cycle corresponding to the commitment time. The value is 1 for a daily baseline. For an hourly baseline, you can configure up to 24 cycles.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -288,7 +295,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Cycle { get; set; }
 
                 /// <summary>
-                /// <para>The committed time in hh:mm format, where hh ranges from 0 to 47 and mm ranges from 0 to 59.</para>
+                /// <para>The commitment time, in the hh:mm format. Valid values for hh: 0 to 47. Valid values for mm: 0 to 59.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00</para>
@@ -320,7 +327,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The project ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -372,10 +379,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

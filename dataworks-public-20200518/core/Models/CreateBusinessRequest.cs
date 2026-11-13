@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateBusinessRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the business process. The name must be unique within the same workspace.</para>
+        /// <para>The name of the workflow. The name must be unique within the same workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BusinessName { get; set; }
 
         /// <summary>
-        /// <para>The description of the business process.</para>
+        /// <para>The description of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a business process created through an interface.</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the owner of the business process. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and hover over the profile picture in the upper-right corner of the top navigation bar to view the account ID. If this parameter is left empty, the Alibaba Cloud account ID of the caller is used by default.</para>
+        /// <para>The Alibaba Cloud account ID of the owner of the workflow. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and move the pointer over the profile picture in the upper-right corner of the top menu bar to view the account ID. If this parameter is left empty, the Alibaba Cloud account ID of the caller is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000000001</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to view the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to view the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -51,8 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier (workspace name) of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to view the name.
-        /// You must specify either this parameter or projectId to determine the DataWorks project for this API call.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the workspace name. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to view the name. You must specify either this parameter or the ProjectId parameter to determine the DataWorks project for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
@@ -62,10 +61,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The functional module to which the business process belongs. Valid values:</para>
+        /// <para>The functional module to which the workflow belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: DataStudio.</description></item>
-        /// <item><description>MANUAL_BIZ: manual business process.</description></item>
+        /// <item><description>NORMAL: Data Studio.</description></item>
+        /// <item><description>MANUAL_BIZ: Manual workflow.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

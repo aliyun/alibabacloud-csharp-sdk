@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The name of the field.</para>
+        /// <para>The name of the column.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Property { get; set; }
 
         /// <summary>
-        /// <para>The type of the field.</para>
+        /// <para>The type of the column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bigint</para>

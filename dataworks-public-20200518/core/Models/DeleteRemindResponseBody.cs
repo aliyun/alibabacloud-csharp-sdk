@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteRemindResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the deletion was successful. Valid values: true (success) and false (failure).</para>
+        /// <para>Indicates whether the deletion was successful. Valid values: true (successful) and false (failed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID. Use this ID to troubleshoot issues.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues if an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

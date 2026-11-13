@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgSceneAddOrUpdateSceneRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the level-2 data masking scenario.</para>
+        /// <para>The level-2 masking scenario information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("scenes")]
@@ -19,6 +19,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public class DsgSceneAddOrUpdateSceneRequestScenes : TeaModel {
             /// <summary>
             /// <para>The description.</para>
+            /// <para>Note: Specifying this parameter in the current version may return PARAMS.ERROR (400). Specify only the required sceneName and sceneCode fields.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test scenarios</para>
@@ -28,28 +29,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Desc { get; set; }
 
             /// <summary>
-            /// <para>The ID of the level-2 data masking scenario.</para>
+            /// <para>The ID of the level-2 masking scenario.</para>
             /// <list type="bullet">
-            /// <item><description>If you do not configure this parameter, the current operation is to add a level-2 data masking scenario.</description></item>
-            /// <item><description>If you configure this parameter, the current operation is to modify a level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the ID of the level-2 data masking scenario.</description></item>
+            /// <item><description>If you do not specify this parameter, the current operation creates a level-2 masking scenario.</description></item>
+            /// <item><description>If you specify this parameter, the operation modifies the specified level-2 masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the ID of the level-2 masking scenario.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>123</para>
+            /// <para>10000</para>
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The information about the compute engine for which the data masking scenario takes effect.</para>
+            /// <para>The engine information for which the masking scenario takes effect.</para>
+            /// <para>Note: Specifying this parameter in the current version may return PARAMS.ERROR (400). Specify only the required sceneName and sceneCode fields.</para>
             /// </summary>
             [NameInMap("projects")]
             [Validation(Required=false)]
             public List<DsgSceneAddOrUpdateSceneRequestScenesProjects> Projects { get; set; }
             public class DsgSceneAddOrUpdateSceneRequestScenesProjects : TeaModel {
                 /// <summary>
-                /// <para>If the data masking scenario takes effect for an E-MapReduce (EMR) compute engine, enter the ID of an EMR cluster. This parameter is required only when you use an EMR compute engine.</para>
+                /// <para>The ID of the E-MapReduce (EMR) cluster. Specify this parameter only when the masking scenario takes effect on an EMR engine.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c-1234</para>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the compute engine for which the data masking scenario takes effect. Valid values:</para>
+                /// <para>The type of the engine for which the masking scenario takes effect. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ODPS: ODPS.ODPS</description></item>
                 /// <item><description>HOLO: HOLO.POSTGRES</description></item>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the compute engine instance for which the data masking scenario takes effect.</para>
+                /// <para>The name of the engine instance for which the masking scenario takes effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dev_project</para>
@@ -86,12 +88,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The code of the level-1 data masking scenario to which the level-2 data masking scenario belongs. Valid values:</para>
+            /// <para>The code of the level-1 masking scenario to which the level-2 masking scenario belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</description></item>
-            /// <item><description>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</description></item>
-            /// <item><description>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</description></item>
-            /// <item><description>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</description></item>
+            /// <item><description>dataworks_display_desense_code: masking for display in Data Studio and Data Map</description></item>
+            /// <item><description>maxcompute_desense_code: masking at the MaxCompute engine layer</description></item>
+            /// <item><description>maxcompute_new_desense_code: masking at the MaxCompute engine layer (new)</description></item>
+            /// <item><description>dataworks_analysis_desense_code: masking for display in Data Analysis</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -103,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string SceneCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the level-2 data masking scenario.</para>
+            /// <para>The name of the level-2 masking scenario.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -114,7 +116,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string SceneName { get; set; }
 
             /// <summary>
-            /// <para>The information about the user group for which the data masking scenario takes effect.</para>
+            /// <para>The user group information for which the masking scenario takes effect.</para>
+            /// <para>Note: Specifying this parameter in the current version may return PARAMS.ERROR (400). Specify only the required sceneName and sceneCode fields.</para>
             /// </summary>
             [NameInMap("userGroupIds")]
             [Validation(Required=false)]

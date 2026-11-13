@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgQueryDesensStatusListRequest : TeaModel {
         /// <summary>
-        /// <para>Query keyword</para>
+        /// <para>The query keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The page size.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Primary scene code</para>
+        /// <para>The level-1 scenario code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>Scene ID. Only required when querying project workspace switch data.</para>
+        /// <para>The scenario ID. This parameter is required only when querying switch data for a project workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>124</para>

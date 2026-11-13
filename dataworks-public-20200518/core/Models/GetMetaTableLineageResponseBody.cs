@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? HasNext { get; set; }
 
             /// <summary>
-            /// <para>The pagination key. Set this parameter based on the HasNext and key values returned in the response.</para>
+            /// <para>The pagination key. When HasNext is true in the response, use the returned key for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>odps.tt.2</para>

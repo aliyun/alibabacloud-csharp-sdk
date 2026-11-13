@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AddedLabels { get; set; }
 
         /// <summary>
-        /// <para>The display name of the table.</para>
+        /// <para>The Chinese name of the table.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>中文名</para>
+        /// <para>Chinese name</para>
         /// </summary>
         [NameInMap("Caption")]
         [Validation(Required=false)]

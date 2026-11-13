@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The business process ID.</para>
+        /// <para>The ID of the business flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
+        /// <para>You can obtain the ID from the ProjectId parameter in the response of the ListProjects operation or view it in the workspace configurations in the DataWorks console. The example value in the documentation is for format demonstration only and cannot be used directly in actual API calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>

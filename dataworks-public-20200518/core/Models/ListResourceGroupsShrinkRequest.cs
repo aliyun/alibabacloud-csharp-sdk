@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The category of the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>default: public resource group.</description></item>
-        /// <item><description>single: dedicated resource group.</description></item>
+        /// <item><description>default: Public resource group. This is the default value.</description></item>
+        /// <item><description>single: Exclusive resource group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizExtKey { get; set; }
 
         /// <summary>
-        /// <para>The keyword. Used for fuzzy matching of resource group names and resource group identifiers.</para>
+        /// <para>The keyword used to fuzzy match resource group names and identifiers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -34,18 +34,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The type ID of the resource group to query. Valid values:</para>
+        /// <para>The ID of the resource group type to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: DataWorks</description></item>
-        /// <item><description>1: scheduling</description></item>
-        /// <item><description>2: MaxCompute</description></item>
-        /// <item><description>3: PAI</description></item>
-        /// <item><description>4: data integration</description></item>
-        /// <item><description>7: the purchase resource ID generated when you purchase a dedicated schedule resource group</description></item>
-        /// <item><description>9: dataService</description></item>
-        /// <item><description>Default value: 1 (scheduling).</description></item>
+        /// <item><description>0: DataWorks.</description></item>
+        /// <item><description>1: Scheduling.</description></item>
+        /// <item><description>2: MaxCompute.</description></item>
+        /// <item><description>3: PAI.</description></item>
+        /// <item><description>4: Data Integration.</description></item>
+        /// <item><description>7: The purchase resource ID generated when you purchase an exclusive scheduling resource group.</description></item>
+        /// <item><description>9: dataService.
+        /// Default value: 1.
+        /// If the value represents an engine, the returned list contains resource groups created when you purchase the engine.</description></item>
         /// </list>
-        /// <para>When the value represents an engine, the returned resource group list contains the resource groups created when you purchased that type of engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? ResourceGroupType { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzbn7pti3zfa</para>

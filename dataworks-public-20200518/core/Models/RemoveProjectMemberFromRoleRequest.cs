@@ -21,18 +21,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The role code of the DataWorks workspace. You can invoke the ListProjectRoles operation to obtain the list of role codes for a project.
-        /// The default preset roles are as follows:</para>
+        /// <para>The code of the role in the DataWorks workspace. You can invoke the ListProjectRoles operation to obtain the list of role codes in the project. The default preset roles are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>role_project_owner: Project owner.</description></item>
-        /// <item><description>role_project_admin: Storage management administrator.</description></item>
-        /// <item><description>role_project_dev: Developer.</description></item>
-        /// <item><description>role_project_pe: O&amp;M engineer.</description></item>
-        /// <item><description>role_project_deploy: Deployment.</description></item>
-        /// <item><description>role_project_guest: Visitor.</description></item>
-        /// <item><description>role_project_security: Security administrator.</description></item>
-        /// <item><description>role_project_tester: Experience user.</description></item>
-        /// <item><description>role_project_erd: Model designer.</description></item>
+        /// <item><description>role_project_owner: project owner</description></item>
+        /// <item><description>role_project_admin: workspace administrator</description></item>
+        /// <item><description>role_project_dev: developer</description></item>
+        /// <item><description>role_project_pe: operator</description></item>
+        /// <item><description>role_project_deploy: deployer</description></item>
+        /// <item><description>role_project_guest: guest</description></item>
+        /// <item><description>role_project_security: security administrator</description></item>
+        /// <item><description>role_project_tester: tester</description></item>
+        /// <item><description>role_project_erd: model designer</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

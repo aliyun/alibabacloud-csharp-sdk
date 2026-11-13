@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DagId { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values: PROD and DEV.</para>
+        /// <para>The scheduling and operations environment. PROD specifies the production environment, and DEV specifies the development environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

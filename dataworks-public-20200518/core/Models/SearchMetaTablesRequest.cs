@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SearchMetaTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The GUID of the workspace where the metatables reside.</para>
+        /// <para>The identifier of the workspace to which the table belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.engine_name</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AppGuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</para>
-        /// <para>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the ID.</para>
+        /// <para>The ID of the EMR cluster. This parameter is required only when the data source type is EMR.</para>
+        /// <para>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values: odps and emr.</para>
+        /// <para>The data source type. Valid values: ODPS and emr.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr</para>
@@ -41,7 +41,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The type of the metatables. Valid values: 0 and 1. The value 0 indicates that tables are queried. The value 1 indicates that views are queried. If you do not configure this parameter, all types of metatables are queried.</para>
+        /// <para>The type of the table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: table.</description></item>
+        /// <item><description>1: view.
+        /// If you do not specify this parameter, tables of all types are searched by default.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -51,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? EntityType { get; set; }
 
         /// <summary>
-        /// <para>The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, the value null is returned. By default, the system uses underscores (_) to tokenize the names.</para>
+        /// <para>The keyword used to search for table names by using a tokenization matching algorithm. If no matching field is found, null is returned. By default, the search is performed based on underscore tokenization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number for the paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -82,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The schema information of the table. You must configure this parameter if you enable the three-layer model of MaxCompute.</para>
+        /// <para>The schema information of the table. If the three-level model is enabled for MaxCompute, you must specify the schema information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

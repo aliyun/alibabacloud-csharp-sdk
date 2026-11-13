@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetDagResponseBodyData Data { get; set; }
         public class GetDagResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data timestamp.</para>
+            /// <para>The business date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1605052800000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.</para>
+            /// <para>The status of the DAG. Valid values: CREATED (created), RUNNING (running), FAILURE (failed), and SUCCESS (successful).</para>
             /// 
             /// <b>Example:</b>
             /// <para>FAILURE</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG. The value MANUAL indicates the DAG for a manually triggered workflow. The value SMOKE_TEST indicates the DAG for a smoke testing workflow. The value SUPPLY_DATA indicates the DAG for a data backfill instance. The value BUSINESS_PROCESS_DAG indicates the DAG for a one-time workflow.</para>
+            /// <para>The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG. The value MANUAL indicates the DAG for a manual task workflow. The value SMOKE_TEST indicates the DAG for a smoke testing workflow. The value SUPPLY_DATA indicates the DAG for a data backfill instance. The value BUSINESS_PROCESS_DAG indicates the DAG for a one-time business flow workflow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANUAL_FLOW</para>

@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>The name of the engine or data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

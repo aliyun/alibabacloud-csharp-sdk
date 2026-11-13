@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListAlertMessagesRequest : TeaModel {
         /// <summary>
-        /// <para>The notification method. Valid values:</para>
+        /// <para>The alert notification method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MAIL</description></item>
-        /// <item><description>SMS Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.</description></item>
+        /// <item><description>MAIL: Email.</description></item>
+        /// <item><description>SMS: Text message.
+        /// &lt;props=&quot;intl&quot;&gt;Text message alerts are available in the following regions: Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt).
+        /// &lt;props=&quot;china&quot;&gt;- PHONE: Phone call. This method is supported only in DataWorks Professional Edition and more advanced editions.</description></item>
         /// </list>
-        /// <para>You can specify multiple notification methods. Separate them with commas (,).</para>
+        /// <para>Separate multiple notification methods with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMS,MAIL,PHONE</para>
@@ -25,7 +27,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertMethods { get; set; }
 
         /// <summary>
-        /// <para>The type of the alert rule. Valid values: GLOBAL, USER_DEFINE, and OTHER. The value GLOBAL indicates that the alert rule is a global alert rule. The value USER_DEFINE indicates that the alert rule is customized by a user. The value OTHER indicates that the alert rule is a rule of another type. You can specify multiple types. Separate them with commas (,).</para>
+        /// <para>The rule type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>GLOBAL: Global rule.</description></item>
+        /// <item><description>USER_DEFINE: Custom rule.</description></item>
+        /// <item><description>OTHER: Other.</description></item>
+        /// </list>
+        /// <para>Separate multiple rule types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>GLOBAL,USER_DEFINE,OTHER</para>
@@ -35,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertRuleTypes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the alert recipient.</para>
+        /// <para>The Alibaba Cloud UID of the alert recipient.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -45,7 +53,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AlertUser { get; set; }
 
         /// <summary>
-        /// <para>The baseline ID. This parameter takes effect if the AlertRuleTypes parameter is set to GLOBAL. You can configure either this parameter or the RemindId parameter.</para>
+        /// <para>The baseline ID. This parameter takes effect when AlertRuleTypes is set to GLOBAL.
+        /// You can specify either this parameter or the RemindId parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -55,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? BaselineId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the alert. Specify the time in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time of the alert. Specify the time in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +108,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The custom alert rule ID. This parameter takes effect if the AlertRuleTypes parameter is set to USER_DEFINE. You can configure either this parameter or the BaselineId parameter.</para>
+        /// <para>The ID of the custom rule. This parameter takes effect when AlertRuleTypes is set to USER_DEFINE (custom rule).
+        /// You can specify either this parameter or the BaselineId parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9527</para>

@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? DiscreteCheck { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the check. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The end time for querying check results.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1600704000000</para>

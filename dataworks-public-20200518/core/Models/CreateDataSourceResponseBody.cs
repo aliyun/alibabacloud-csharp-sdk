@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data source ID.</para>
+        /// <para>The ID of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

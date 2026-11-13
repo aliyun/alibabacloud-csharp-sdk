@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetTopicResponseBodyData Data { get; set; }
         public class GetTopicResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the event was discovered.</para>
+            /// <para>The timestamp when the event was detected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? AlertTime { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud UID of the assigner.</para>
+            /// <para>The Alibaba Cloud UID of the assignee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>952795****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Assigner { get; set; }
 
             /// <summary>
-            /// <para>The buffer of the worst baseline instance, in seconds.</para>
+            /// <para>The buffer time of the worst baseline instance, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? BaselineBuffer { get; set; }
 
             /// <summary>
-            /// <para>The baseline ID of the worst baseline instance.</para>
+            /// <para>The ID of the baseline for the worst baseline instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? BaselineInGroupId { get; set; }
 
             /// <summary>
-            /// <para>The baseline name of the worst baseline instance.</para>
+            /// <para>The name of the baseline for the worst baseline instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Baseline name</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string BaselineName { get; set; }
 
             /// <summary>
-            /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS (warning), and OVER (exceeded).</para>
+            /// <para>The status of the baseline. Valid values: ERROR (abnormal), SAFE (safe), DANGROUS (warning), and OVER (broken).</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAFE</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string BaselineStatus { get; set; }
 
             /// <summary>
-            /// <para>The buffer of the event, in seconds.</para>
+            /// <para>The buffer time of the event, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Buffer { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the last handling.</para>
+            /// <para>The timestamp when the event was last processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? DealTime { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud UID of the last handler.</para>
+            /// <para>The Alibaba Cloud UID of the user who last processed the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>952795****</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? FixTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the event occurred. There may be a time difference between when the event occurred and when it was discovered.</para>
+            /// <para>The timestamp when the event occurred. There may be a time difference between when the event occurs and when it is detected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1553524393000</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string TopicName { get; set; }
 
             /// <summary>
-            /// <para>The status of the event. Valid values: IGNORE (ignored), NEW (newly discovered), FIXING (being handled), and RECOVER (recovered).</para>
+            /// <para>The status of the event. Valid values: IGNORE (ignored), NEW (new), FIXING (processing), and RECOVER (recovered).</para>
             /// 
             /// <b>Example:</b>
             /// <para>FIXING</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string TopicStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the event. Valid values: SLOW and ERROR.</para>
+            /// <para>The type of the event. Valid values: SLOW (slowdown) and ERROR (error).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ERROR</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The unique ID of the request. If an error occurs, you can use the ID to troubleshoot the issue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFGH-IJKLMNOPQ</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

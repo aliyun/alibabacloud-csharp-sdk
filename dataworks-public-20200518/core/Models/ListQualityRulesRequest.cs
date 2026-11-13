@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the partition expression. Call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to get this ID.</para>
+        /// <para>The ID of the partition expression. You can call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Default: 10. Maximum: 20.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the engine or data source. You can find this name on the Data Source Configuration page.</para>
+        /// <para>The name of the DPI engine or data source. You can obtain the name from the datasource config.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

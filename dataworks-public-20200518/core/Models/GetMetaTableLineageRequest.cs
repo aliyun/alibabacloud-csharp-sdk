@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableLineageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EMR cluster. This parameter is required for EMR scenarios.</para>
+        /// <para>The ID of the EMR cluster. This parameter applies to EMR scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>

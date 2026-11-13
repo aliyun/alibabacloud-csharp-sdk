@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class QueryDefaultTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The default data classification template returned. The value is in JSON format.</para>
+        /// <para>The default data classification and grading template returned. The value is in JSON format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

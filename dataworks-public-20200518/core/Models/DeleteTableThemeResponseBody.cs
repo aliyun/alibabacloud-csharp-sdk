@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableThemeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the theme was deleted.</para>
+        /// <para>The deletion result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,10 +60,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the theme is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Yes.</para>
+        /// </description></item>
+        /// <item><description><para>false: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

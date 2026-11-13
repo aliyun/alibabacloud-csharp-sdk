@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateDIAlarmRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The alert rule ID.</para>
+        /// <para>The ID of the alert rule.</para>
+        /// <para>You can obtain the ID from the DIAlarmRulePaging.DIJobAlarmRules[].DIAlarmRuleId parameter in the response of the ListDIAlarmRules operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DIAlarmRuleId { get; set; }
 
         /// <summary>
-        /// <para>The description of the alert rule.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql synchronizes to hologres heartbeat alert</para>
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</para>
+        /// <para>Specifies whether the alert rule is enabled. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,14 +42,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The metric type in the alert rule. Valid values:</para>
+        /// <para>The type of the alert metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Heartbeat</para>
-        /// </description></item>
-        /// <item><description><para>FailoverCount</para>
-        /// </description></item>
-        /// <item><description><para>Delay</para>
-        /// </description></item>
+        /// <item><description>Heartbeat: task status alert</description></item>
+        /// <item><description>FailoverCount: failover count alert</description></item>
+        /// <item><description>Delay: task latency alert</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NotificationSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The conditions that are used to trigger the alert rule.</para>
+        /// <para>The list of alert trigger conditions. Multiple conditions are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]

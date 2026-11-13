@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CheckMetaPartitionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the partition in the MaxCompute metatable exists. Valid values:</para>
+        /// <para>Indicates whether the partition in the MaxCompute table exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The partition exists.</description></item>
+        /// <item><description>false: The partition does not exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

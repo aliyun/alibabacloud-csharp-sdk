@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the data source. Valid values: ODPS, emr, mysql, holo, analyticdb_for_mysql, oracle, postgresql, sqlserver, clickhouse, and starrocks.</para>
+        /// <para>The type of the data source. Valid values: odps, emr, mysql, holo, analyticdb_for_mysql, oracle, postgresql, sqlserver, clickhouse, and starrocks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusCountRequest : TeaModel {
         /// <summary>
-        /// <para>The data timestamp of instances.</para>
+        /// <para>The business date of the instance.</para>
+        /// <para>The format is <c>yyyy-MM-dd</c>, such as <c>2020-01-01</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizDate { get; set; }
 
         /// <summary>
-        /// <para>The runtime environment. Valid values: PROD and DEV.</para>
+        /// <para>The runtime environment, including PROD and DEV.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abcde</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the task that is used to delete the table.</para>
+        /// <para>The task information for deleting the table.</para>
         /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task that is running.</para>
+            /// <para>The ID of the running task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string NextTaskId { get; set; }
 
             /// <summary>
-            /// <para>The status of the task that is complete.</para>
+            /// <para>The status of the completed task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task that is complete.</para>
+            /// <para>The ID of the completed task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>

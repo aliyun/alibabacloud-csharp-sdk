@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RelationshipVO : TeaModel {
         /// <summary>
-        /// <para>Additional attributes.</para>
+        /// <para>The other properties.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>attribute map</para>
         /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the relationship.</para>
+        /// <para>The unique identifier of the relationship.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>relationship-guid</para>
         /// </summary>
         [NameInMap("RelationshipGuid")]
         [Validation(Required=false)]
         public string RelationshipGuid { get; set; }
 
         /// <summary>
-        /// <para>The type of the relationship.</para>
+        /// <para>Type name of relationship</para>
         /// 
         /// <b>Example:</b>
         /// <para>sql</para>

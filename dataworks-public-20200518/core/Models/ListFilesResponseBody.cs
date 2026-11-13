@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The files returned.</para>
+        /// <para>The list of files that meet the specified conditions.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListFilesResponseBodyData Data { get; set; }
         public class ListFilesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the files.</para>
+            /// <para>The file details.</para>
             /// </summary>
             [NameInMap("Files")]
             [Validation(Required=false)]
             public List<ListFilesResponseBodyDataFiles> Files { get; set; }
             public class ListFilesResponseBodyDataFiles : TeaModel {
                 /// <summary>
-                /// <para>The path of the folder to which the file belongs.</para>
+                /// <para>The path of the folder where the file is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
@@ -34,12 +34,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string AbsoluteFolderPath { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the automatic parsing feature is enabled for the file. Valid values:</para>
+                /// <para>Indicates whether the automatic parsing feature is enabled for the file. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The automatic parsing feature is enabled for the file.</description></item>
-                /// <item><description>false: The automatic parsing feature is not enabled for the file.</description></item>
+                /// <item><description>true: The file automatically parses code.</description></item>
+                /// <item><description>false: The file does not automatically parse code.</description></item>
                 /// </list>
-                /// <para>This parameter is equivalent to the Analyze Code parameter in the Dependencies section of the Properties panel in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+                /// <para>This parameter corresponds to the Code Parsing setting that takes effect when you set Schedule Dependencies to Same Cycle under Schedule Settings for a Data Studio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? AutoParsing { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workflow to which the file belongs. This parameter is deprecated and replaced by the BusinessId parameter.</para>
+                /// <para><b>[Deprecated]</b> The ID of the business flow to which the file belongs. Use the BusinessId field instead.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300000</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BizId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workflow to which the file belongs.</para>
+                /// <para>The ID of the business flow to which the file belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300000</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BusinessId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the latest code in the file is committed. Valid values: 0 and 1. The value 0 indicates that the latest code in the file is not committed. The value 1 indicates that the latest code in the file is committed.</para>
+                /// <para>The current commit status of the file. Valid values: 0 (the latest code is not committed) and 1 (the latest code is committed).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -79,17 +79,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? CommitStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the compute engine instance that is used to run the node that corresponds to the file.</para>
+                /// <para>The name of the data source used when the task corresponding to the file is run.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>odps_source</para>
                 /// </summary>
                 [NameInMap("ConnectionName")]
                 [Validation(Required=false)]
                 public string ConnectionName { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated. You can call the <a href="~~173954#doc-api-dataworks-public-GetFile~~">GetFile</a> operation to query the details of the file.</para>
+                /// <para><b>[Deprecated]</b> The content of the file. You can call the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation to query the file content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SHOW TABLES;</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The time when the file was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the file was created. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593950832000</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is used to create the file.</para>
+                /// <para>The Alibaba Cloud user ID of the user who created the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>382762****</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The latest version number of the file.</para>
+                /// <para>The latest committed version number of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string FileDescription { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the folder to which the file belongs.</para>
+                /// <para>The ID of the folder where the file is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2735c2****</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the code in the file. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).</para>
+                /// <para>The file type. Different file types correspond to different code types. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node types</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -179,8 +179,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? FileType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the file needs to be uploaded to MaxCompute if the file is a MaxCompute resource file.</para>
-                /// <para>This parameter is returned only if the file is a MaxCompute resource file.</para>
+                /// <para>Indicates whether the resource file needs to be uploaded to MaxCompute. This field is returned only if the current file is a MaxCompute resource file.</para>
+                /// <para>This field is valid only when the file is a MaxCompute resource file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsMaxCompute { get; set; }
 
                 /// <summary>
-                /// <para>The time when the file was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the file was last edited. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593950832000</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? LastEditTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is used to last modify the file.</para>
+                /// <para>The Alibaba Cloud user ID of the user who last edited the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>38748246285727</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string LastEditUser { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the auto triggered node that is generated in the scheduling system after the file is committed.</para>
+                /// <para>The ID of the scheduled task generated in the scheduling system after the file is committed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300001</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the file owner.</para>
+                /// <para>The Alibaba Cloud user ID of the file owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3872572****</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node group file to which the current file belongs. This parameter is returned only if the current file is an inner file of the node group file.</para>
+                /// <para>The ID of the composite node file to which the current file belongs. This field is returned only if the current file is an internal file of a composite node file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -240,14 +240,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ParentId { get; set; }
 
                 /// <summary>
-                /// <para>The module to which the file belongs. Valid values:</para>
+                /// <para>The functional module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: The file is used for DataStudio.</description></item>
-                /// <item><description>MANUAL: The file is used for a manually triggered node.</description></item>
-                /// <item><description>MANUAL_BIZ: The file is used for a manually triggered workflow.</description></item>
-                /// <item><description>SKIP: The files is used for a dry-run node in DataStudio.</description></item>
-                /// <item><description>ADHOCQUERY: The file is used for an ad hoc query.</description></item>
-                /// <item><description>COMPONENT: The file is used for a snippet.</description></item>
+                /// <item><description>NORMAL: Data Studio.</description></item>
+                /// <item><description>MANUAL: Manual task.</description></item>
+                /// <item><description>MANUAL_BIZ: Manual business flow.</description></item>
+                /// <item><description>SKIP: Dry-run scheduling in Data Studio.</description></item>
+                /// <item><description>ADHOCQUERY: Ad hoc query.</description></item>
+                /// <item><description>COMPONENT: Component management.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the specified conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -322,20 +322,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use the ID to troubleshoot errors.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0000-ABCD-EFG</para>
+        /// <para>0000-ABCD-****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request is successful.</description></item>
-        /// <item><description>false: The request fails.</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

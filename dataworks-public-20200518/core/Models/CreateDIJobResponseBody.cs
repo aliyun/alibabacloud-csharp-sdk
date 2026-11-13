@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDIJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The synchronization task ID.</para>
+        /// <para>The ID of the Data Integration task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11792</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the request ID to query logs and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4F6AB6B3-41FB-5EBB-AFB2-0C98D49DA2BB</para>

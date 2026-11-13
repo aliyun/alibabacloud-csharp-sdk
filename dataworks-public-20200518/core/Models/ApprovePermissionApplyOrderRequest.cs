@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ApprovePermissionApplyOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The approval action to perform. Valid values:</para>
+        /// <para>The approval action to be performed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Approve.</description></item>
         /// <item><description>2: Reject.</description></item>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? ApproveAction { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the approval.</para>
+        /// <para>The comment for the approval.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApproveComment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the permission request order to approve. You can call the <a href="https://help.aliyun.com/document_detail/211008.html">ListPermissionApplyOrders</a> operation to obtain the ID.</para>
+        /// <para>The ID of the application ticket to be approved. You can call the <a href="https://help.aliyun.com/document_detail/211008.html">ListPermissionApplyOrders</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

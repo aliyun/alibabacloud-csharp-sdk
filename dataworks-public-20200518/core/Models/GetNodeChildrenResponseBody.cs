@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeChildrenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of node information returned.</para>
+        /// <para>The list of returned node information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BaselineId { get; set; }
 
                 /// <summary>
-                /// <para>The CRON expression. The expression is used for timed scheduling to execute the node task.</para>
+                /// <para>The cron expression. Used for timed scheduling to execute node tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00 00 * * * *</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the node can be rerun upon failure. Valid values:</para>
+                /// <para>Indicates whether the node task can be rerun after a failure. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The node can be rerun.</description></item>
-                /// <item><description>false: The node cannot be rerun.</description></item>
+                /// <item><description>true: The task can be rerun.</description></item>
+                /// <item><description>false: The task cannot be rerun.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The scheduling type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: normal scheduling node.</description></item>
-                /// <item><description>MANUAL: manual node. The node is not scheduled on a regular basis.</description></item>
-                /// <item><description>PAUSE: paused node. The node is scheduled on a regular basis but is set to failed when scheduling starts.</description></item>
-                /// <item><description>SKIP: dry-run node. The node is scheduled on a regular basis but is set to successful when scheduling starts.</description></item>
+                /// <item><description>NORMAL: normal scheduling task</description></item>
+                /// <item><description>MANUAL: manual task that is not scheduled on a daily basis</description></item>
+                /// <item><description>PAUSE: paused task that is scheduled on a daily basis but is directly set to failed when scheduling starts</description></item>
+                /// <item><description>SKIP: dry-run task that is scheduled on a daily basis but is directly set to successful when scheduling starts</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -136,8 +136,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The scheduling dependency type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: same-cycle dependency.</description></item>
-                /// <item><description><b>3</b>: cross-cycle dependency.</description></item>
+                /// <item><description><b>0</b>: same-cycle dependency</description></item>
+                /// <item><description><b>3</b>: cross-cycle dependency</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adsfasdf-adf-asdf-asdf-asdfadfasdd</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

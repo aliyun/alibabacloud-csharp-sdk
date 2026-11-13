@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, the <b>ErrorCode</b> field is not returned.</description></item>
-        /// <item><description>If the request fails, the <b>ErrorCode</b> field is returned. For more information, see the <b>Error codes</b> section of this topic.</description></item>
+        /// <item><description>If the request succeeds, the <b>ErrorCode</b> field is omitted.</description></item>
+        /// <item><description>If the request fails, the <b>ErrorCode</b> field is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

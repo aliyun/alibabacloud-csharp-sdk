@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The date on which the numbers of instances in different states are obtained. Specify the date in the yyyy-MM-dd format.</para>
+        /// <para>The business date for which to retrieve the number of instances in each instance status. Specify the date in the yyyy-MM-dd format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,21 +21,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizDate { get; set; }
 
         /// <summary>
-        /// <para>The type of the directed acyclic graph (DAG). Valid values:</para>
+        /// <para>The DAG type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MANUAL: DAG for a manually triggered workflow</description></item>
-        /// <item><description>SMOKE_TEST: DAG for a smoke testing workflow</description></item>
-        /// <item><description>SUPPLY_DATA: DAG for a data backfill instance</description></item>
-        /// <item><description>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</description></item>
-        /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
-        /// <item><description>DAILY</description></item>
-        /// <item><description>MANUAL</description></item>
-        /// <item><description>SMOKE_TEST</description></item>
-        /// <item><description>SUPPLY_DATA</description></item>
-        /// <item><description>BUSINESS_PROCESS_DAG</description></item>
+        /// <item><description>MANUAL: Manual task workflow.</description></item>
+        /// <item><description>SMOKE_TEST: Smoke test workflow.</description></item>
+        /// <item><description>SUPPLY_DATA: Data backfill.</description></item>
+        /// <item><description>BUSINESS_PROCESS_DAG: One-time business process workflow.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DagType { get; set; }
 
         /// <summary>
-        /// <para>The runtime environment. Valid values: PROD and DEV.</para>
+        /// <para>The runtime environment, including PROD (production environment) and DEV (development environment).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Configuration page to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,11 +61,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The scheduling cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MINUTE</description></item>
-        /// <item><description>HOUR</description></item>
-        /// <item><description>DAY</description></item>
-        /// <item><description>WEEK</description></item>
-        /// <item><description>MONTH</description></item>
+        /// <item><description>MINUTE: Minute.</description></item>
+        /// <item><description>HOUR: Hour.</description></item>
+        /// <item><description>DAY: Day.</description></item>
+        /// <item><description>WEEK: Week.</description></item>
+        /// <item><description>MONTH: Month.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,12 +76,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SchedulerPeriod { get; set; }
 
         /// <summary>
-        /// <para>The scheduling type of the node. Valid values:</para>
+        /// <para>The scheduling type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: auto triggered node</description></item>
-        /// <item><description>MANUAL: manually triggered node</description></item>
-        /// <item><description>PAUSE: paused node</description></item>
-        /// <item><description>SKIP: dry-run node</description></item>
+        /// <item><description>NORMAL: Periodic scheduling.</description></item>
+        /// <item><description>MANUAL: Manual scheduling.</description></item>
+        /// <item><description>PAUSE: Paused scheduling.</description></item>
+        /// <item><description>SKIP: Dry run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

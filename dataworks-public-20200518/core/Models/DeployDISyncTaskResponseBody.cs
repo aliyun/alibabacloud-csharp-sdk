@@ -10,19 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeployDISyncTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>success: The real-time synchronization node or data synchronization solution is deployed.</description></item>
-        /// <item><description>fail: The real-time synchronization node or data synchronization solution fails to be deployed.</description></item>
-        /// </list>
+        /// <para>The result of publishing the synchronization task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeployDISyncTaskResponseBodyData Data { get; set; }
         public class DeployDISyncTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The reason for the failure to publish a data integration synchronization task.</para>
-            /// <para>If the data integration synchronization task is published successfully, the return value of this parameter is empty.</para>
+            /// <para>The cause of the failure to publish the Data Integration synchronization task.</para>
+            /// <para>If the Data Integration synchronization task is published, this parameter is left empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>submit and deploy fail.</para>
@@ -32,8 +28,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The cause of the failure to deploy the real-time synchronization node or data synchronization solution.</para>
-            /// <para>If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.</para>
+            /// <para>The status of the result of publishing the Data Integration synchronization task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>success: The Data Integration synchronization task is published.</description></item>
+            /// <item><description>fail: The Data Integration synchronization task fails to be published.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -45,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc14115159376359******</para>
@@ -55,7 +54,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can query logs and troubleshoot issues based on the ID.</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful. </description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

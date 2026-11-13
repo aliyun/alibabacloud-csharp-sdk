@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The display name of the field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>中文</para>
+            /// <para>Chinese name</para>
             /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The comment of the field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>备注</para>
+            /// <para>Comment</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Remarks</para>
+        /// <para>Comment</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.</para>
+        /// <para>The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all members. The value 1 indicates that the table is visible to all members. The value 2 indicates that the table is visible to workspace members.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

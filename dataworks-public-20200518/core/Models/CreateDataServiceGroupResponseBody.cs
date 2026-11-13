@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataServiceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business process ID.</para>
+        /// <para>The ID of the created business flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds_12345</para>

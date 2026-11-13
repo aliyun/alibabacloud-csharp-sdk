@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class RestartInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
-        /// <para>You can obtain the ID from Data.Instances[].InstanceId in the ListInstances response.</para>
+        /// <para>The ID of the instance. You can obtain the instance ID from the Data.Instances[].InstanceId field in the response of the ListInstances operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,11 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PROD: production environment</description></item>
-        /// <item><description>DEV: development environment</description></item>
-        /// </list>
+        /// <para>The workspace environment. Valid values: PROD and DEV.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

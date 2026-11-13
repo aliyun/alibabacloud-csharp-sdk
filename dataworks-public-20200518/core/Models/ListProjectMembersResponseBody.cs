@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of workspace members.</para>
+            /// <para>The list of members in the workspace.</para>
             /// </summary>
             [NameInMap("ProjectMemberList")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the member.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John Doe</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("ProjectMemberName")]
                 [Validation(Required=false)]
@@ -96,7 +96,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<ListProjectMembersResponseBodyDataProjectMemberListProjectRoleList> ProjectRoleList { get; set; }
                 public class ListProjectMembersResponseBodyDataProjectMemberListProjectRoleList : TeaModel {
                     /// <summary>
-                    /// <para>The role code. DataWorks provides preset roles. You can also create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
+                    /// <para>The role code.
+                    /// DataWorks provides preset roles. You can also create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>role_project_guest</para>
@@ -116,7 +117,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public int? ProjectRoleId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the role. DataWorks provides preset roles. You can also create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
+                    /// <para>The role name.
+                    /// DataWorks provides preset roles. You can also create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Visitor</para>
@@ -128,9 +130,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The type of the role. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>SYSTEM (0): system role.</para>
+                    /// <item><description><para>SYSTEM (0): System role.</para>
                     /// </description></item>
-                    /// <item><description><para>USER_CUSTOM (2): custom role.</para>
+                    /// <item><description><para>USER_CUSTOM (2): Custom role.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The query status. Valid values:</para>
+                /// <para>The status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>0: Normal (NORMAL).</description></item>
                 /// <item><description>1: Disabled (FORBIDDEN).</description></item>
@@ -161,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

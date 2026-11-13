@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The data type. Currently, only emr is supported.</para>
+        /// <para>The type of the data source. Currently, only the emr type is supported. If you specify other types, an empty result is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can call <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> to obtain the workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

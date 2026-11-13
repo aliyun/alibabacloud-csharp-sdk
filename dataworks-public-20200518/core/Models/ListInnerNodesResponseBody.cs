@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of inner nodes returned.</para>
+            /// <para>The total number of inner nodes that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

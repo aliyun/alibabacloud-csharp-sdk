@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceApisRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</para>
+        /// <para>The keyword in the API name. This parameter filters APIs whose names contain the specified keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My API name</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApiNameKeyword { get; set; }
 
         /// <summary>
-        /// <para>The keyword in API paths. The keyword is used to search for the APIs whose paths contain the keyword.</para>
+        /// <para>The keyword in the API path. This parameter filters APIs whose paths contain the specified keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/test/</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApiPathKeyword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the creator of the APIs. The ID is used to search for the APIs created by the creator.</para>
+        /// <para>The Alibaba Cloud ID of the API creator. This parameter filters APIs created by the specified user.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345</para>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("CreatorId")]
         [Validation(Required=false)]
         public string CreatorId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,6 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The workspace ID.</para>
+        /// <para>You can call the ListProjects operation to obtain a valid workspace ID, or view it in the workspace configurations in the DataWorks console. The example value in the documentation is for demonstration purposes only.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</para>
+        /// <para>The tenant ID. To obtain the tenant ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the Data Studio page, click the username in the upper-right corner, and then choose Menu &gt; User Info.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableListByCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The category ID. You can call the <a href="https://help.aliyun.com/document_detail/2780099.html">GetMetaCategory</a> operation to obtain the ID of the category. Categories allow you to efficiently organize and manage tables by category. You can search for the desired table by category.</para>
+        /// <para>The ID of the category. You can call the <a href="https://help.aliyun.com/document_detail/2780099.html">GetMetaCategory</a> operation to obtain the category ID. Categories help you organize and manage tables by type. You can filter target tables by category when searching for tables.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

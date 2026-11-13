@@ -20,11 +20,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The check result. sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:</para>
+        /// <para>The check result. sensDatas indicates the rules matched by the identified sensitive data. sensDatas includes the following parameters:</para>
         /// <list type="bullet">
         /// <item><description>hitCount: the number of times that the sensitive data hits the rule.</description></item>
         /// <item><description>ruleName: the name of the rule.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <pre><c>{ &quot;sensDatas&quot;: [ { &quot;hitCount&quot;: 1, &quot;ruleName&quot;: &quot;Mobile phone number&quot; } ] }
+        /// </c></pre>
         /// </summary>
         [NameInMap("Sensitives")]
         [Validation(Required=false)]

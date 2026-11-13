@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgStopSensIdentifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data, which is of the Boolean type.</para>
+        /// <para>The returned data, which is a Boolean value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,20 +50,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000001</para>
+        /// <para>10000111</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: successful.</description></item>
+        /// <item><description>false: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

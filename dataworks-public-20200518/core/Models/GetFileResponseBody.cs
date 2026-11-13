@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>For information about the advanced parameters of each type of EMR node, see <a href="https://help.aliyun.com/document_detail/473077.html">Develop EMR tasks</a>.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{&quot;queue&quot;:&quot;default&quot;,&quot;SPARK_CONF&quot;:&quot;--conf spark.driver.memory=2g&quot;}</para>
+                /// <para>{&quot;priority&quot;:&quot;1&quot;,&quot;ENABLE_SPARKSQL_JDBC&quot;:false,&quot;FLOW_SKIP_SQL_ANALYZE&quot;:false,&quot;queue&quot;:&quot;default&quot;}</para>
                 /// </summary>
                 [NameInMap("AdvancedSettings")]
                 [Validation(Required=false)]
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? CommitStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the compute engine instance that is used to run the node that corresponds to the file.</para>
+                /// <para>The name of the data source used to run the task corresponding to the file.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>odps_source</para>
                 /// </summary>
                 [NameInMap("ConnectionName")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The latest version number of the file.</para>
+                /// <para>The latest submitted version number of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>Indicates whether the file needs to be uploaded to MaxCompute.</para>
-                /// <para>This parameter is returned only if the file is a MaxCompute resource file.</para>
+                /// <para>This parameter applies only to MaxCompute resource files.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -262,12 +262,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: The file is used for DataStudio.</description></item>
+                /// <item><description>NORMAL: The file is used for Data Studio.</description></item>
                 /// <item><description>MANUAL: The file is used for a manually triggered node.</description></item>
                 /// <item><description>MANUAL_BIZ: The file is used for a manually triggered workflow.</description></item>
-                /// <item><description>SKIP: The file is used for a dry-run DataStudio node.</description></item>
+                /// <item><description>SKIP: The file is used for a dry-run Data Studio node.</description></item>
                 /// <item><description>ADHOCQUERY: The file is used for an ad hoc query.</description></item>
-                /// <item><description>COMPONENT: The file is used for a snippet.</description></item>
+                /// <item><description>COMPONENT: The file is used for component management.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>Input parameters of the node.</para>
+                /// <para>Input context parameters of the node.</para>
                 /// <para>This parameter corresponds to the Input Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                 /// </summary>
                 [NameInMap("InputParameters")]
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>Output parameters of the node.</para>
+                /// <para>Output context parameters of the node.</para>
                 /// <para>This parameter corresponds to the Output Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                 /// </summary>
                 [NameInMap("OutputParameters")]
@@ -529,7 +529,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <list type="bullet">
                     /// <item><description>1: indicates a constant.</description></item>
                     /// <item><description>2: indicates a variable.</description></item>
-                    /// <item><description>3: indicates a pass-through variable.</description></item>
+                    /// <item><description>3: indicates a pass-through variable from a parameter node.</description></item>
                     /// </list>
                     /// <para>This parameter corresponds to the Type parameter in the Output Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                     /// 
@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the output parameter of the node.</para>
+                    /// <para>The expression of the output context parameter of the node.</para>
                     /// <para>This parameter corresponds to the Value parameter in the Output Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                     /// 
                     /// <b>Example:</b>

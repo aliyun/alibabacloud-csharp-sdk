@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListClusterConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of configurations of cluster modules.</para>
+        /// <para>The list of module-specific configuration information for the cluster.</para>
         /// </summary>
         [NameInMap("ClusterConfigs")]
         [Validation(Required=false)]
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0000-ABCD-E****</para>
+        /// <para>0000-ABCD-*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TestNetworkConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the data source.</para>
+        /// <para>The name of the destination data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// <para>The environment in which the data source resides. Valid values:</para>
+        /// <para>The environment to which the destination data source belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: development environment</description></item>
-        /// <item><description>1: production environment</description></item>
+        /// <item><description>0: development environment.</description></item>
+        /// <item><description>1: production environment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace to which the data source belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</para>
+        /// <para>The ID of the DataWorks workspace to which the destination data source belongs. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</para>
+        /// <para>The identifier of the resource group used by the destination data source. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to obtain the identifier of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

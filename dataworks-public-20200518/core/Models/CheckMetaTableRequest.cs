@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The data source type. Valid values: odps and emr.</para>
+        /// <para>The type of the data source. Valid values: odps and emr.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The globally unique identifier of the table.</para>
+        /// <para>The unique identifier of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.engine_name.table_name</para>

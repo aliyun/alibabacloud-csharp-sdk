@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetOpRiskDataRequest : TeaModel {
         /// <summary>
-        /// <para>The date on which access records were generated. Specify the value in the yyyyMMdd format.</para>
+        /// <para>The date for which to retrieve access records. Format: yyyyMMdd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,16 +21,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>The parameters that you can configure to query the access records. Valid values:</para>
+        /// <para>The condition settings for retrieving access records. Optional parameters are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>dbType</description></item>
-        /// <item><description>instanceName</description></item>
-        /// <item><description>databaseName</description></item>
-        /// <item><description>projectName</description></item>
-        /// <item><description>clusterName</description></item>
+        /// <item><description>dbType: The database type.</description></item>
+        /// <item><description>instanceName: The instance name.</description></item>
+        /// <item><description>databaseName: The database name.</description></item>
+        /// <item><description>projectName: The project name.</description></item>
+        /// <item><description>clusterName: The cluster name.</description></item>
         /// </list>
-        /// <para>The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC: [ {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;} ]</para>
-        /// <para>You must configure the parameters based on the compute engine that you use in your business.</para>
+        /// <para>Example of retrieving sensitive data access records for the abc database of the ABC instance in Hologres:
+        /// [  {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;} ]</para>
+        /// <para>Configure the parameters based on the engine used in your business.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[ {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;}, {&quot;dbType&quot;:&quot;ODPS.ODPS&quot;,&quot;projectName&quot;:&quot;adbc&quot;} ]</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1.</para>
+        /// <para>The page number. Minimum value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,21 +52,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 1000.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The method that you use to identify risks.</para>
+        /// <para>The method used to identify the risk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You can manually identify risks.</description></item>
-        /// <item><description>You can also use a sensitive data identification rule to identify risks. You can log on to the DataWorks console and go to the Risk Identification Rules page in Data Security Guard to obtain the name of the rule.</description></item>
+        /// <item><description>Manual identification.</description></item>
+        /// <item><description>The name of the risk rule. You can obtain the name on the Risk Identification Management page in Data Security Guard of DataWorks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

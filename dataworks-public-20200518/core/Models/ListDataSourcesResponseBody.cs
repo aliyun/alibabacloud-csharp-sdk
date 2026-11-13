@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the data source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: The data source is accessible.</description></item>
-                /// <item><description>2: The data source is inaccessible.</description></item>
+                /// <item><description>1: The data source is in normal use.</description></item>
+                /// <item><description>2: The data source is disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The type of the data source. Valid values:</para>
+                /// <para>The type of the data source. Common values include:</para>
                 /// <list type="bullet">
                 /// <item><description>odps</description></item>
                 /// <item><description>mysql</description></item>
@@ -272,8 +272,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the data source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: The data source is accessible.</description></item>
-                /// <item><description>2: The data source is inaccessible.</description></item>
+                /// <item><description>1: The data source is in normal use.</description></item>
+                /// <item><description>2: The data source is disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

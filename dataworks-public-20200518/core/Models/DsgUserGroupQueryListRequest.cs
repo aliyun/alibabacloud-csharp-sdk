@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUserGroupQueryListRequest : TeaModel {
         /// <summary>
-        /// <para>A keyword for the user group name. The service performs a fuzzy search to find matching user groups.</para>
+        /// <para>The keyword for the user group name. The platform performs a fuzzy match based on the keyword to query relevant user group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yun_group</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the MaxCompute project to query for user groups.</para>
+        /// <para>The name of the engine. Configure this parameter to query MaxCompute user group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_project</para>
@@ -61,6 +61,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <para>The user group type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Alibaba Cloud user</description></item>
+        /// <item><description>2: RAM role</description></item>
+        /// <item><description>3: MaxCompute role</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("userGroupType")]
         [Validation(Required=false)]
         public int? UserGroupType { get; set; }

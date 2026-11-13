@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgRunSensIdentifyRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters that you need to configure to scan specified metadata.</para>
+        /// <para>The list of parameter objects for metadata scanning.</para>
         /// </summary>
         [NameInMap("EsMetaParams")]
         [Validation(Required=false)]
         public List<DsgRunSensIdentifyRequestEsMetaParams> EsMetaParams { get; set; }
         public class DsgRunSensIdentifyRequestEsMetaParams : TeaModel {
             /// <summary>
-            /// <para>The cluster ID. You can obtain the ID based on the data source you use.</para>
+            /// <para>The cluster ID. You can obtain the ID from your data source cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101010</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The type of the data source. Valid values:</para>
+            /// <para>The data source type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ODPS.ODPS</description></item>
             /// <item><description>EMR</description></item>
@@ -42,27 +42,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The instance ID. You can obtain the ID based on the data source you use.</para>
+            /// <para>The instance ID. You can obtain the ID from your data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hgprecn-cn-9lb37k181024</para>
+            /// <para>hgprecn-cn-9lb37k****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public long? InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the name.</para>
+            /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to obtain the workspace name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1666676756691024</para>
+            /// <para>16666767566****</para>
             /// </summary>
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The name of the schema.</para>
+            /// <para>The schema name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string SchemaName { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>table1</para>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>The names of the tables.</para>
+            /// <para>The list of table names.</para>
             /// </summary>
             [NameInMap("TableNameList")]
             [Validation(Required=false)]
             public List<string> TableNameList { get; set; }
 
             /// <summary>
-            /// <para>The username of the operator. We recommend that you enter the username of your Alibaba Cloud account.</para>
+            /// <para>The username of the operator. We recommend that you enter your Alibaba Cloud account name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx-uat</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</para>
+        /// <para>The tenant ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the Data Studio page, click the current username in the upper-right corner, and choose Menu &gt; User Information to obtain the tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GenerateDISyncTaskConfigForCreatingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information returned for the ID of the asynchronous thread.</para>
+        /// <para>The generation result of the asynchronous thread ID.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GenerateDISyncTaskConfigForCreatingResponseBodyData Data { get; set; }
         public class GenerateDISyncTaskConfigForCreatingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, no value is returned for this parameter.</para>
+            /// <para>The description of the cause for the failure to generate the asynchronous thread ID.
+            /// If the asynchronous thread ID is generated, this parameter is left empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>XXX is invalid.</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asynchronous thread. You can call the <a href="https://help.aliyun.com/document_detail/383465.html">QueryDISyncTaskConfigProcessResult</a> operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to create a synchronization task in Data Integration.</para>
+            /// <para>The asynchronous thread ID. You must use this ID to call the <a href="https://help.aliyun.com/document_detail/383465.html">QueryDISyncTaskConfigProcessResult</a> operation to obtain the parameters required for asynchronously generating the configuration of the Data Integration synchronization task, and then use the parameters to create the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,10 +38,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ProcessId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the ID of the asynchronous thread is generated. Valid values: Valid values:</para>
+            /// <para>The status of generating the asynchronous thread ID. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>success: indicates that the ID of the asynchronous thread is generated.</description></item>
-            /// <item><description>fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.</description></item>
+            /// <item><description>success: The asynchronous thread ID is generated.</description></item>
+            /// <item><description>fail: The asynchronous thread ID fails to be generated. You can view the cause of the failure and troubleshoot the issue.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1411515937635973****</para>
@@ -63,10 +64,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -11,10 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetDISyncTaskRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If you set TaskType to DI_REALTIME, set this parameter to the ID of the real-time synchronization task that you want to deploy.</para>
-        /// </description></item>
-        /// <item><description><para>If you set TaskType to DI_SOLUTION, set this parameter to the ID of the data synchronization solution that you want to deploy.</para>
-        /// </description></item>
+        /// <item><description>If you set TaskType to DI_REALTIME, set this parameter to the ID of the real-time synchronization task whose details you want to retrieve.</description></item>
+        /// <item><description>If you set TaskType to DI_SOLUTION, set this parameter to the ID of the data synchronization solution whose details you want to retrieve.</description></item>
         /// </list>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID of the real-time synchronization task or data synchronization solution.</para>
         /// <para>This parameter is required.</para>

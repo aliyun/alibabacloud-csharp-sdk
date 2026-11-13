@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ColumnNameCn { get; set; }
 
             /// <summary>
-            /// <para>The type of the column. For more information, see the column types supported by MaxCompute.</para>
+            /// <para>The data type of the column. For more information, see the column types supported by MaxCompute.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The unique identifier of the MaxCompute table. Format: odps.projectName.tableName.</para>
+        /// <para>The unique identifier of the MaxCompute table. The format is odps.projectName.tableName.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

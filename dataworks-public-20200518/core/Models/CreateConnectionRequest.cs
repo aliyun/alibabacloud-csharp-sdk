@@ -36,12 +36,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ConnectionType { get; set; }
 
         /// <summary>
-        /// <para>The details of the data source. Examples of details of some common data sources:</para>
+        /// <para>The detailed information of the data source. Examples of common data sources:</para>
         /// <list type="bullet">
         /// <item><description>odps</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;accessId&quot;: &quot;xssssss&quot;,
         ///   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
@@ -54,8 +52,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>mysql</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;database&quot;: &quot;xsaxsa&quot;,
         ///   &quot;instanceName&quot;: &quot;rm-xsaxsa&quot;,
@@ -69,8 +65,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>rds</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;configType&quot;: 1,
         ///   &quot;tag&quot;: &quot;rds&quot;,
@@ -84,8 +78,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>oss</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;accessId&quot;: &quot;sssssxx&quot;,
         ///   &quot;accessKey&quot;: &quot;xsaxaxsaxs&quot;,
@@ -97,8 +89,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>sqlserver</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs&quot;,
         ///   &quot;password&quot;: &quot;sdasda$fs&quot;,
@@ -109,8 +99,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>polardb</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;clusterId&quot;: &quot;pc-sdadsadsa&quot;,
         ///   &quot;database&quot;: &quot;dsadsadsa&quot;,
@@ -124,8 +112,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>oracle</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;jdbcUrl&quot;: &quot;jdbc:oracle:saaa:@xxxxx:1521:PROD&quot;,
         ///   &quot;password&quot;: &quot;sxasaxsa&quot;,
@@ -136,8 +122,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>mongodb</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;address&quot;: &quot;[\\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\\&quot;]&quot;,
         ///   &quot;database&quot;: &quot;admin&quot;,
@@ -149,8 +133,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>emr</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;accessId&quot;: &quot;xsaxsa&quot;,
         ///   &quot;emrClusterId&quot;: &quot;C-dsads&quot;,
@@ -168,8 +150,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>postgresql</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;jdbcUrl&quot;: &quot;jdbc:postgresql://xxxx:1921/ssss&quot;,
         ///   &quot;password&quot;: &quot;sdadsads&quot;,
@@ -180,8 +160,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>analyticdb_for_mysql</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;instanceId&quot;: &quot;am-sadsada&quot;,
         ///   &quot;database&quot;: &quot;xsxsx&quot;,
@@ -193,8 +171,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>hybriddb_for_postgresql</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;connectionString&quot;: &quot;gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com&quot;,
         ///   &quot;database&quot;: &quot;xsaxsaxas&quot;,
@@ -208,8 +184,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>holo</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;accessId&quot;: &quot;xsaxsaxs&quot;,
         ///   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
@@ -221,8 +195,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <list type="bullet">
         /// <item><description>kafka</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///   &quot;instanceId&quot;: &quot;xsax-cn-xsaxsa&quot;,
         ///   &quot;regionId&quot;: &quot;cn-shanghai&quot;,
@@ -250,7 +222,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</para>
+        /// <para>The environment to which the data source belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: development environment.</description></item>
+        /// <item><description>1: production environment.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -272,7 +248,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace with which the data source is associated. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID.</para>
+        /// <para>The ID of the workspace associated with the data source. You can obtain the workspace ID by calling the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -283,10 +259,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The subtype of the connection string. This parameter is used for scenarios where a type includes subtypes. The following type and subtypes are supported:</para>
+        /// <para>The subtype of the connection string. This parameter is used when a parent type has subtypes. Valid combinations:</para>
         /// <list type="bullet">
-        /// <item><description>Type: <c>rds</c></description></item>
-        /// <item><description>Subtypes: <c>mysql</c>, <c>sqlserver</c>, and <c>postgresql</c>.</description></item>
+        /// <item><description>Parent type: <c>rds</c></description></item>
+        /// <item><description>Subtypes: <c>mysql</c>, <c>sqlserver</c>, or <c>postgresql</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

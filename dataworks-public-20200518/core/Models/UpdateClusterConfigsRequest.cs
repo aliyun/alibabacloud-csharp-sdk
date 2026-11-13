@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The configuration information of the cluster submodule.</para>
+        /// <para>The list of configuration information of the cluster submodule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConfigValues")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StopInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/173982.html">ListInstances</a> to obtain the ID.</para>
+        /// <para>The ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/173982.html">ListInstances</a> to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values: PROD and DEV.</para>
+        /// <para>The environment of the workspace. Valid values: PROD (production environment) and DEV (development environment).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

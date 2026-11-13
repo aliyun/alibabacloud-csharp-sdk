@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The unique ID of the request. If an error occurs, you can use this ID to troubleshoot the issue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-E****</para>

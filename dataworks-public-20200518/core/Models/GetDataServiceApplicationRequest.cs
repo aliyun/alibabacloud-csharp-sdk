@@ -10,8 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can view the information about the application in the API Gateway console.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The gateway version. Valid values: 1: API Gateway. 2: Cloud-native API Gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ApigwVersion")]
+        [Validation(Required=false)]
+        public int? ApigwVersion { get; set; }
+
+        /// <summary>
+        /// <para>The application ID. You can view the application information in the API Gateway console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -21,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</para>
+        /// <para>The tenant ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the DataStudio page, click the username in the upper-right corner, and choose Menu &gt; User Information to obtain the tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10002</para>

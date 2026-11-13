@@ -10,31 +10,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTablePartitionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The business data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMetaTablePartitionResponseBodyData Data { get; set; }
         public class GetMetaTablePartitionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of partitions.</para>
+            /// <para>The list of instances.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
             public List<GetMetaTablePartitionResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTablePartitionResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// <para>The remarks.</para>
+                /// <para>The comment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Remarks</para>
+                /// <para>Comment</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. Unit: milliseconds.</para>
+                /// <para>The time when the partition was created. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590032868000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The partition size. Unit: bytes.</para>
+                /// <para>The size of the partition. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>19</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? DataSize { get; set; }
 
                 /// <summary>
-                /// <para>The modification time. Unit: milliseconds.</para>
+                /// <para>The time when the partition was modified. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590032868000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string PartitionName { get; set; }
 
                 /// <summary>
-                /// <para>The directory of the partition.</para>
+                /// <para>The partition path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string PartitionType { get; set; }
 
                 /// <summary>
-                /// <para>The record count.</para>
+                /// <para>The number of records in the partition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>233</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The number of the page to return.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

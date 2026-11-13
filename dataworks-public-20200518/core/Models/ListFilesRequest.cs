@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The exact matching file name. The file name of the query result is exactly the same as this parameter.</para>
+        /// <para>The file name for exact match. The file name in the query result must be an exact match with the value of this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ods_create.sql</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExactFileName { get; set; }
 
         /// <summary>
-        /// <para>The path of the folder to which files belong.</para>
+        /// <para>The path of the folder where the file resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileFolderPath { get; set; }
 
         /// <summary>
-        /// <para>The file ID list. The File ID set of the query result can only be a subset of the list. You can specify up to 50 fileids at a time.</para>
+        /// <para>The list of file IDs. The file IDs in the query result must be a subset of the IDs in this list. You can specify up to 50 file IDs at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78237,816123</para>
@@ -40,8 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileIdIn { get; set; }
 
         /// <summary>
-        /// <para>The types of the code in the files.</para>
-        /// <para>Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (node group), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI inner node), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), 1106 (for-each), and 1221 (PyODPS 3).</para>
+        /// <para>The file type. The code varies by file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node types</a>. Specifies the code type of the file to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10,23</para>
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileTypes { get; set; }
 
         /// <summary>
-        /// <para>The keyword in the file names. The keyword is used to perform a fuzzy match. You can specify a keyword to query all files whose names contain the keyword.</para>
+        /// <para>The keyword in the file name. Fuzzy match is supported. You can enter a keyword to query all files whose names contain the keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ods</para>
@@ -61,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used to last modify the file.</para>
+        /// <para>The Alibaba Cloud user ID of the user who last edited the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38748246285727</para>
@@ -71,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string LastEditUser { get; set; }
 
         /// <summary>
-        /// <para>Whether the query result contains the path of the folder where the file is located.</para>
+        /// <para>Specifies whether the query result includes the path of the folder where the file is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -81,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? NeedAbsoluteFolderPath { get; set; }
 
         /// <summary>
-        /// <para>Whether the query results contain file content (for files with more content, there may be a long network transmission delay).</para>
+        /// <para>Specifies whether the query result includes the file content. For files with a large amount of content, network transmission latency may be high.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -91,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? NeedContent { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node that is scheduled. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</para>
+        /// <para>The ID of the scheduled node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123541234</para>
@@ -101,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The owner of the files.</para>
+        /// <para>The owner of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3726346****</para>
@@ -111,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -121,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -132,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</para>
-        /// <para>You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// <para>You must specify either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace for the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -143,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace name.</para>
-        /// <para>You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// <para>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
@@ -153,14 +152,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The module to which the files belong. Valid values:</para>
+        /// <para>The functional module to which the file belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: The files are used for DataStudio.</description></item>
-        /// <item><description>MANUAL: The files are used for manually triggered nodes.</description></item>
-        /// <item><description>MANUAL_BIZ: The files are used for manually triggered workflows.</description></item>
-        /// <item><description>SKIP: The files are used for dry-run nodes in DataStudio.</description></item>
-        /// <item><description>ADHOCQUERY: The files are used for ad hoc queries.</description></item>
-        /// <item><description>COMPONENT: The files are used for snippets.</description></item>
+        /// <item><description>NORMAL: Data Studio.</description></item>
+        /// <item><description>MANUAL: Manual task.</description></item>
+        /// <item><description>MANUAL_BIZ: Manual business flow.</description></item>
+        /// <item><description>SKIP: Dry-run scheduling in Data Studio.</description></item>
+        /// <item><description>ADHOCQUERY: Ad hoc query.</description></item>
+        /// <item><description>COMPONENT: Component management.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

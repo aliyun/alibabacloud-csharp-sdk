@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApiDescription { get; set; }
 
         /// <summary>
-        /// <para>The type of the API. Valid values: 0 (wizard API), 1 (script API), and 2 (registration API).</para>
+        /// <para>The type of the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: wizard API</description></item>
+        /// <item><description>1: script API</description></item>
+        /// <item><description>2: registered API</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// <para>The path of the API. The path can contain letters, digits, underscores (_), and hyphens (-), and must start with a forward slash (/). The path cannot exceed 200 characters in length.</para>
+        /// <para>The path of the API. The path can contain letters, digits, underscores (_), and hyphens (-), and must start with a forward slash (/). The path can be up to 200 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +59,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApiPath { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination folder in which the API is created. The ID of the root folder under a business process is 0. The ID of a user-created folder is greater than 0.</para>
+        /// <para>The authentication type for the cloud-native API gateway. This parameter is only valid for cloud-native groups. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: no authentication</description></item>
+        /// <item><description>2: ApiKey</description></item>
+        /// <item><description>3: JWT. When published, it is mapped to the gateway JWT, and the JWT identity is configured by the caller in the gateway.</description></item>
+        /// <item><description>4: HMAC
+        /// Other values are invalid.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("CloudNativeApiGwAuthType")]
+        [Validation(Required=false)]
+        public int? CloudNativeApiGwAuthType { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the destination folder where the API is created. The ID of the root folder in a business flow is 0. The ID of a user-created folder is greater than 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -64,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FolderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the business process.</para>
+        /// <para>The ID of the business flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +108,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The protocol of the API. Valid values: 0 (HTTP) and 1 (HTTPS). Multiple values are supported. Separate multiple values with commas (,).</para>
+        /// <para>The protocols of the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: HTTP</description></item>
+        /// <item><description>1: HTTPS
+        /// You can specify multiple values. Separate multiple values with commas (,).</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Protocols { get; set; }
 
         /// <summary>
-        /// <para>The details of the registration API. For more information, see the JSON string of the registrationDetails field in the <a href="https://help.aliyun.com/document_detail/174013.html">GetDataServiceApi</a> operation.</para>
+        /// <para>The details of the registered API. For more information, see the JSON string of the registrationDetails field in the <a href="https://help.aliyun.com/document_detail/174013.html">GetDataServiceApi</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;failedResultSample&quot;:&quot;fail&quot;,&quot;registrationErrorCodes&quot;:[{&quot;errorCode&quot;:&quot;e1&quot;,&quot;errorMessage&quot;:&quot;msg1&quot;,&quot;errorSolution&quot;:&quot;sol1&quot;},{&quot;errorCode&quot;:&quot;e2&quot;,&quot;errorMessage&quot;:&quot;msg2&quot;,&quot;errorSolution&quot;:&quot;sol2&quot;}],&quot;registrationRequestParameters&quot;:[{&quot;columnName&quot;:&quot;&quot;,&quot;defaultValue&quot;:&quot;&quot;,&quot;exampleValue&quot;:&quot;&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;id&quot;,&quot;parameterOperator&quot;:0,&quot;parameterPosition&quot;:1},{&quot;columnName&quot;:&quot;&quot;,&quot;defaultValue&quot;:&quot;xx&quot;,&quot;exampleValue&quot;:&quot;&quot;,&quot;isRequiredParameter&quot;:true,&quot;parameterDataType&quot;:0,&quot;parameterDescription&quot;:&quot;&quot;,&quot;parameterName&quot;:&quot;cc&quot;,&quot;parameterOperator&quot;:2,&quot;parameterPosition&quot;:2}],&quot;serviceContentType&quot;:1,&quot;serviceHost&quot;:&quot;<a href="http://www.baidu.com%22,%22servicePath%22:%22/%5Buid%5D%22,%22serviceRequestBodyDescription%22:%22body%22,%22successfulResultSample%22:%22success%22%7D">http://www.baidu.com&quot;,&quot;servicePath&quot;:&quot;/[uid]&quot;,&quot;serviceRequestBodyDescription&quot;:&quot;body&quot;,&quot;successfulResultSample&quot;:&quot;success&quot;}</a></para>
@@ -107,14 +134,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RegistrationDetails { get; set; }
 
         /// <summary>
-        /// <para>The request content type. Valid values:</para>
+        /// <para>The request data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: XML</para>
-        /// </description></item>
-        /// <item><description><para>1: JSON</para>
-        /// </description></item>
-        /// <item><description><para>2: form</para>
-        /// </description></item>
+        /// <item><description>0: XML</description></item>
+        /// <item><description>1: JSON</description></item>
+        /// <item><description>2: form</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +149,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? RequestContentType { get; set; }
 
         /// <summary>
-        /// <para>The request method of the API. Valid values: 0 (GET), 1 (POST), 2 (PUT), and 3 (DELETE). Wizard and script APIs support GET and POST. Registration APIs support GET, POST, PUT, and DELETE.</para>
+        /// <para>The request method of the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: GET</description></item>
+        /// <item><description>1: POST</description></item>
+        /// <item><description>2: PUT</description></item>
+        /// <item><description>3: DELETE
+        /// Wizard and script APIs support GET and POST. Registered APIs support GET, POST, PUT, and DELETE.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -146,7 +177,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The response data type of the API. Valid values: 0 (JSON) and 1 (XML). Wizard and script APIs support JSON. Registration APIs support JSON and XML.</para>
+        /// <para>The response data type of the API. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: JSON</description></item>
+        /// <item><description>1: XML
+        /// Wizard and script APIs support JSON. Registered APIs support JSON and XML.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -167,11 +203,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ScriptDetails { get; set; }
 
         /// <summary>
+        /// <para>The SQL mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: basic mode.</para>
-        /// </description></item>
-        /// <item><description><para>1: MyBatis mode.</para>
-        /// </description></item>
+        /// <item><description>0: basic mode</description></item>
+        /// <item><description>1: MyBatis</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? TenantId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period, in milliseconds (ms). Valid values: (0, 30000].</para>
+        /// <para>The timeout period in milliseconds. Valid values: (0, 30000].</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -203,7 +238,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The visibility. Valid values: 0 (workspace) and 1 (private).</para>
+        /// <para>The visibility scope. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: workspace</description></item>
+        /// <item><description>1: private</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

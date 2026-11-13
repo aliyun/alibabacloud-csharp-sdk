@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The name of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_bizName</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the baseline with which the node is associated.</para>
+        /// <para>The name of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liux_test_n****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The description of the node.</para>
+        /// <para>The ID of the owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>193379****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>ListNodes</b>.</para>
+        /// <para>The type of the node. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to view node types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ODPS_SQL</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProgramType { get; set; }
 
         /// <summary>
-        /// <para>The environment in which the node runs. Valid values: DEV and PROD.</para>
+        /// <para>The runtime environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// <para>The ID of the owner.</para>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,12 +94,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The scheduling type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>NORMAL: Nodes are scheduled as expected.</para>
-        /// </description></item>
-        /// <item><description><para>PAUSE: Nodes are paused.</para>
-        /// </description></item>
-        /// <item><description><para>SKIP: Nodes are dry-run. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</para>
-        /// </description></item>
+        /// <item><description>NORMAL: Normal scheduling task.</description></item>
+        /// <item><description>PAUSE: Paused task.</description></item>
+        /// <item><description>SKIP: Dry-run task. The task is scheduled on a daily basis, but its status is directly set to successful when the scheduling is triggered.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

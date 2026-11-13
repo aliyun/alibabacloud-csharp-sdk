@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateFileRequest : TeaModel {
         /// <summary>
-        /// <para>The advanced settings of the node.</para>
-        /// <para>This parameter corresponds to the Advanced Settings in the right-side navigation pane on the editing page for EMR Spark Streaming and EMR Streaming SQL data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
-        /// <para>Currently, only EMR Spark Streaming and EMR Streaming SQL nodes support this parameter. The parameter value is in JSON format.</para>
+        /// <para>The advanced settings of the task.</para>
+        /// <para>This parameter corresponds to the Advanced Settings section in the right-side navigation pane of the edit page for EMR Spark Streaming and EMR Streaming SQL data development tasks in the DataWorks console.</para>
+        /// <para>Only EMR Spark Streaming and EMR Streaming SQL tasks support this parameter. The parameter value must be in JSON format.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;queue&quot;:&quot;default&quot;,&quot;SPARK_CONF&quot;:&quot;--conf spark.driver.memory=2g&quot;}</para>
@@ -22,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AdvancedSettings { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the scheduling configuration takes effect immediately after publishing.</para>
+        /// <para>Specifies whether the scheduling configurations take effect immediately after the file is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -37,7 +38,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <item><description>true: The file automatically parses code.</description></item>
         /// <item><description>false: The file does not automatically parse code.</description></item>
         /// </list>
-        /// <para>This parameter corresponds to the Code Parsing setting when you select Same Cycle under Scheduling Configuration &gt; Scheduling Dependency for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter corresponds to the Code Parsing option in the Schedule Settings &gt; Scheduling Dependencies &gt; Same Cycle section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -47,9 +49,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? AutoParsing { get; set; }
 
         /// <summary>
-        /// <para>The interval between automatic reruns upon an error, in milliseconds. The maximum value is 1800000 milliseconds (30 minutes).</para>
-        /// <para>This parameter corresponds to the Rerun Interval setting under Scheduling Configuration &gt; Time Properties &gt; Auto Rerun upon Error for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.
-        /// The time unit for Rerun Interval in the console is minutes. Convert the time accordingly when calling this operation.</para>
+        /// <para>The interval for automatic reruns after an error occurs. Unit: milliseconds. Maximum value: 1800000, which equals 30 minutes.</para>
+        /// <para>This parameter corresponds to the Rerun Interval parameter in the Schedule Settings &gt; Time Attributes &gt; Automatic Rerun after Error section of the DataWorks console.
+        /// The unit of the Rerun Interval parameter in the console is minutes. Convert the time unit when you call this operation.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>120000</para>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? AutoRerunTimes { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the data source used when the node corresponding to the file runs. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to obtain the list of available data sources.</para>
+        /// <para>The identifier of the data source used by the task when the task corresponding to the file is run. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to obtain the list of available data sources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps_source</para>
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ConnectionName { get; set; }
 
         /// <summary>
-        /// <para>The code content of the file. Files of different code types (fileType) have different code formats. In Operation Center, right-click a node of the corresponding type and select View Code to view the specific code format.</para>
+        /// <para>The code content of the file. The code format varies based on the file type. You can go to Operation Center, right-click a task of the corresponding type, and select View Code to view the specific code format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT &quot;1&quot;;</para>
@@ -89,29 +92,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The cron expression for timed scheduling. This parameter corresponds to the cron Expression setting under Scheduling Configuration &gt; Time Property for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the Scheduling Epoch and Timed Scheduling time, DataWorks automatically generates the corresponding cron expression.</para>
+        /// <para>The cron expression for periodic scheduling. This parameter corresponds to the Cron Expression parameter in the Schedule &gt; Time Property &gt; Cron Expression section of the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the scheduling cycle and scheduled time, DataWorks automatically generates the corresponding cron expression.</para>
         /// <para>Examples:</para>
         /// <list type="bullet">
-        /// <item><description><para>Timed scheduling at 05:30 every day: <c>00 30 05 * * ?</c>.</para>
+        /// <item><description><para>Schedule a node at 05:30 every day: <c>00 30 05 * * ?</c>.</para>
         /// </description></item>
-        /// <item><description><para>Timed scheduling at the 15th minute of every hour: <c>00 15 * * * ?</c>.</para>
+        /// <item><description><para>Schedule a node at the 15th minute of every hour: <c>00 15 * * * ?</c>.</para>
         /// </description></item>
-        /// <item><description><para>Schedule every 10 minutes: <c>00 00/10 * * * ?</c>.</para>
+        /// <item><description><para>Schedule a node every 10 minutes: <c>00 00/10 * * * ?</c>.</para>
         /// </description></item>
-        /// <item><description><para>Schedule every 10 minutes from 08:00 to 17:00 every day: <c>00 00-59/10 8-23 * * * ?</c>.</para>
+        /// <item><description><para>Schedule a node every 10 minutes from 08:00 to 17:00 every day: <c>00 00-59/10 8-23 * * * ?</c>.</para>
         /// </description></item>
-        /// <item><description><para>Timed scheduling at 00:20 on the 1st of every month: <c>00 20 00 1 * ?</c>.</para>
+        /// <item><description><para>Schedule a node at 00:20 on the first day of every month: <c>00 20 00 1 * ?</c>.</para>
         /// </description></item>
-        /// <item><description><para>Schedule every 3 months starting from 00:10 on January 1: <c>00 10 00 1 1-12/3 ?</c>.</para>
+        /// <item><description><para>Schedule a node every three months starting from 00:10 on January 1: <c>00 10 00 1 1-12/3 ?</c>.</para>
         /// </description></item>
-        /// <item><description><para>Timed scheduling at 00:05 every Tuesday and Friday: <c>00 05 00 * * 2,5</c>.</para>
+        /// <item><description><para>Schedule a node at 00:05 every Tuesday and Friday: <c>00 05 00 * * 2,5</c>.</para>
         /// </description></item>
         /// </list>
-        /// <para>The cron expression has the following limits due to the DataWorks scheduling system rules:</para>
+        /// <para>Due to the rules of the DataWorks scheduling system, cron expressions have the following limits:</para>
         /// <list type="bullet">
         /// <item><description><para>The minimum scheduling interval is 5 minutes.</para>
         /// </description></item>
-        /// <item><description><para>The earliest scheduling time each day is 00:05.</para>
+        /// <item><description><para>The earliest scheduling time of a day is 00:05.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -123,8 +126,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CronExpress { get; set; }
 
         /// <summary>
-        /// <para>The type of the scheduling cycle. Valid values: NOT_DAY (minute or hour) and DAY (day, week, or month).</para>
-        /// <para>This parameter corresponds to the Scheduling Cycle setting under Scheduling Configuration &gt; Time Properties for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>The type of the scheduling cycle. Valid values: NOT_DAY (minute and hour) and DAY (day, week, and month).</para>
+        /// <para>This parameter corresponds to the Scheduling Cycle parameter in the Schedule Settings &gt; Time Attributes &gt; Scheduling Cycle section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>NOT_DAY</para>
@@ -134,8 +138,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CycleType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the nodes on which the current file depends when DependentType is set to USER_DEFINE. Separate multiple node IDs with commas (,).</para>
-        /// <para>This parameter corresponds to the Settings when you select Other Nodes as the dependency after configuring Scheduling Configuration &gt; Scheduling Dependency to Previous Epoch for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. This is part of the parameter settings for scheduling dependencies.</para>
+        /// <para>The IDs of the nodes on which the current file depends. This parameter is used to specify the dependent node IDs when the DependentType parameter is set to USER_DEFINE. Separate multiple node IDs with commas (,).</para>
+        /// <para>This parameter corresponds to the content configured when the Schedule Settings &gt; Scheduling Dependencies parameter is set to Previous Cycle and the dependent item is set to Other Nodes for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5,10,15,20</para>
@@ -145,12 +149,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DependentNodeIdList { get; set; }
 
         /// <summary>
-        /// <para>The mode in which the node depends on the previous cycle. Valid values:</para>
+        /// <para>The dependency on the previous cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SELF: The dependency is set to the current node.</description></item>
-        /// <item><description>CHILD: The dependency is set to first-level child nodes.</description></item>
-        /// <item><description>USER_DEFINE: The dependency is set to other nodes.</description></item>
-        /// <item><description>NONE: No dependency is selected. The node does not depend on the previous cycle.</description></item>
+        /// <item><description>SELF: The node depends on itself.</description></item>
+        /// <item><description>CHILD: The node depends on its level-1 child nodes.</description></item>
+        /// <item><description>USER_DEFINE: The node depends on other nodes.</description></item>
+        /// <item><description>NONE: The node does not depend on the previous cycle.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,7 +166,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The timestamp in milliseconds when automatic scheduling stops.</para>
-        /// <para>This parameter corresponds to the end time in milliseconds under Scheduling Configuration &gt; Time Properties &gt; Effective Date for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter corresponds to the end time of the Effective Date parameter in the Schedule Settings &gt; Time Attributes &gt; Effective Date section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>4155787800000</para>
@@ -203,8 +208,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FileId { get; set; }
 
         /// <summary>
-        /// <para>The name of the file. You can modify the file name by setting FileName to a new value.
-        /// For example, call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID in the target folder, and then call the <a href="https://help.aliyun.com/document_detail/173951.html">UpdateFile</a> operation to specify the file ID for the FileId parameter and configure the FileName parameter to rename the file.</para>
+        /// <para>The name of the file. You can change the file name by resetting the value of FileName.
+        /// For example, you can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID of a file in the destination directory, and then call the <a href="https://help.aliyun.com/document_detail/173951.html">UpdateFile</a> operation. Set the FileId parameter to the queried file ID and specify the FileName parameter to change the name of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ods_user_info_d</para>
@@ -214,7 +219,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip the dry-run property of the upstream node under Scheduling Configuration &gt; Previous Cycle.</para>
+        /// <para>Specifies whether to skip the dry-run property of upstream nodes in the previous cycle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -224,7 +229,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? IgnoreParentSkipRunningProperty { get; set; }
 
         /// <summary>
-        /// <para>The custom image ID.</para>
+        /// <para>The ID of the custom image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-uf6d7npxk1hhek8ng0cb</para>
@@ -235,9 +240,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The output names of the upstream files on which the current file depends. Separate multiple output names with commas (,).</para>
-        /// <para>This parameter corresponds to the Parent Node Output Name setting when you select Same Cycle under Scheduling Configuration &gt; Scheduling Dependency for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter corresponds to the Parent Node Output Name parameter in the Schedule Settings &gt; Scheduling Dependencies &gt; Same Cycle section of the DataWorks console.</para>
         /// <remarks>
-        /// <para>This parameter is required when you create a batch synchronization node by calling CreateDISyncTask and UpdateFile.</para>
+        /// <para>This parameter is required when you create a batch synchronization task by calling the CreateDISyncTask and UpdateFile operations.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -248,8 +254,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string InputList { get; set; }
 
         /// <summary>
-        /// <para>The input context parameters of the node. The parameter value is in JSON format. For the fields included, refer to the InputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</para>
-        /// <para>This parameter corresponds to the Input Parameters of Current Node setting under Scheduling Configuration &gt; Node Context for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>The context input parameters of the node. The parameter value must be in JSON format. For the fields included, refer to the InputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</para>
+        /// <para>This parameter corresponds to the Input Parameters of Current Node parameter in the Schedule Settings &gt; Node Context &gt; Input Parameters section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;ValueSource&quot;: &quot;project_001.first_node:bizdate_param&quot;,&quot;ParameterName&quot;: &quot;bizdate_input&quot;}]</para>
@@ -260,7 +267,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The output of the file.</para>
-        /// <para>This parameter corresponds to the Output Name of Current Node setting when you select Same Cycle under Scheduling Configuration &gt; Scheduling Dependency for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter corresponds to the Output Name of Current Node parameter in the Schedule Settings &gt; Scheduling Dependencies &gt; Same Cycle section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project.ods_user_info_d</para>
@@ -270,8 +278,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string OutputList { get; set; }
 
         /// <summary>
-        /// <para>The output context parameters of the node. The parameter value is in JSON format. For the fields included, refer to the OutputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</para>
-        /// <para>This parameter corresponds to the Output Parameters of Current Node setting under Scheduling Configuration &gt; Node Context for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>The context output parameters of the node. The parameter value must be in JSON format. For the fields included, refer to the OutputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</para>
+        /// <para>This parameter corresponds to the Output Parameters of Current Node parameter in the Schedule Settings &gt; Node Context &gt; Output Parameters section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Type&quot;: 1,&quot;Value&quot;: &quot;${bizdate}&quot;,&quot;ParameterName&quot;: &quot;bizdate_param&quot;}]</para>
@@ -292,7 +301,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The scheduling parameters.</para>
-        /// <para>This parameter corresponds to the Parameters setting under Scheduling Configuration for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.</para>
+        /// <para>This parameter corresponds to the Parameters section in the Schedule Settings &gt; Parameters section of the DataWorks console. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>x=a y=b z=c</para>
@@ -302,7 +312,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ParaValue { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Storage Management page to obtain the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100001</para>
@@ -312,8 +322,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace name.</para>
-        /// <para>You must specify either this parameter or ProjectId to determine the DataWorks workspace for this API call.</para>
+        /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to obtain the workspace name.</para>
+        /// <para>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
@@ -323,13 +333,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The rerun property. Valid values:</para>
+        /// <para>The rerun mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_ALLOWED: The node can be rerun regardless of whether it runs successfully or fails.</description></item>
-        /// <item><description>FAILURE_ALLOWED: The node can be rerun only after it fails.</description></item>
-        /// <item><description>ALL_DENIED: The node cannot be rerun regardless of whether it runs successfully or fails.</description></item>
+        /// <item><description>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</description></item>
+        /// <item><description>FAILURE_ALLOWED: The node cannot be rerun if it is successfully run, but can be rerun if it fails to run.</description></item>
+        /// <item><description>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</description></item>
         /// </list>
-        /// <para>This parameter corresponds to the Rerun Property setting under Scheduling Configuration &gt; Time Properties &gt; Rerun Property for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter corresponds to the Rerun Mode parameter in the Schedule Settings &gt; Time Attributes &gt; Rerun Mode section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL_ALLOWED</para>
@@ -339,7 +350,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The schedule resource used when the file is published as a node and the node runs. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to obtain the list of available resource groups for the workspace.</para>
+        /// <para>The resource group used to run the task after the file is deployed as a task. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to obtain the list of available resource groups in the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default_group</para>
@@ -351,10 +362,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The scheduling type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: A normal scheduling node.</description></item>
-        /// <item><description>MANUAL: A manual node that is not scheduled on a daily basis. This corresponds to nodes in a manual workflow.</description></item>
-        /// <item><description>PAUSE: A paused node.</description></item>
-        /// <item><description>SKIP: A dry-run node that is scheduled on a daily basis but is directly set to successful when scheduling starts.</description></item>
+        /// <item><description>NORMAL: Normal scheduling task.</description></item>
+        /// <item><description>MANUAL: Manual task. The task is not run on a daily schedule and corresponds to a node in a manual workflow.</description></item>
+        /// <item><description>PAUSE: Paused task.</description></item>
+        /// <item><description>SKIP: Dry-run task. The task is run on a daily schedule, but its status is directly set to successful when the scheduling is started.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -366,7 +377,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The timestamp in milliseconds when automatic scheduling starts.</para>
-        /// <para>This parameter corresponds to the start time in milliseconds under Scheduling Configuration &gt; Time Properties &gt; Effective Date for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter corresponds to the start time of the Effective Date parameter in the Schedule Settings &gt; Time Attributes &gt; Effective Date section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>936923400000</para>
@@ -376,12 +388,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? StartEffectDate { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to start the node immediately after publishing. Valid values:</para>
+        /// <para>Specifies whether to start the task immediately after it is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Starts immediately after publishing.</description></item>
-        /// <item><description>false: Does not start after publishing.</description></item>
+        /// <item><description>true: Start the task immediately after it is deployed.</description></item>
+        /// <item><description>false: Do not start the task immediately after it is deployed.</description></item>
         /// </list>
-        /// <para>This parameter corresponds to the Start Mode setting under Configuration &gt; Time Properties in the right-side navigation pane on the editing page for EMR Spark Streaming and EMR Streaming SQL data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter corresponds to the Start Mode parameter in the Configuration &gt; Time Attributes &gt; Start Mode section in the right-side navigation pane of the edit page for EMR Spark Streaming and EMR Streaming SQL data development tasks in the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -393,10 +406,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Specifies whether to pause scheduling. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Pauses scheduling.</description></item>
-        /// <item><description>false: Does not pause scheduling.</description></item>
+        /// <item><description>true: Pause scheduling.</description></item>
+        /// <item><description>false: Do not pause scheduling.</description></item>
         /// </list>
-        /// <para>This parameter corresponds to the setting when Scheduling Type is set to Pause Scheduling under Scheduling Configuration &gt; Time Properties &gt; Scheduling Type for a data development node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter corresponds to the Pause Scheduling option in the Schedule Settings &gt; Time Attributes &gt; Schedule Type section of the DataWorks console.
+        /// <a href="https://workbench.data.aliyun.com/console">DataWorks console</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -406,7 +420,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Stop { get; set; }
 
         /// <summary>
-        /// <para>The timeout setting for the scheduling configuration.</para>
+        /// <para>The timeout definition in the scheduling configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

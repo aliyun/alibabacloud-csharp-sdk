@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableLevelResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the table level was deleted.</para>
+        /// <para>The deletion result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

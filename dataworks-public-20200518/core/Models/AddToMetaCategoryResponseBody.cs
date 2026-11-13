@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddToMetaCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the metatable was added to the specified category.</para>
+        /// <para>Indicates whether the table was successfully added to the specified category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1ec92159376</para>

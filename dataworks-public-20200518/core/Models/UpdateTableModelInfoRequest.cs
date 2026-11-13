@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableModelInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The first-level topic ID.</para>
+        /// <para>The ID of the first-level theme.</para>
+        /// <para>When you call this operation, you must specify at least one of the following parameters: FirstLevelThemeId, SecondLevelThemeId, LevelId, and LevelType for the operation to perform an actual update. If you specify only TableGuid, the operation may return a success response without updating any content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FirstLevelThemeId { get; set; }
 
         /// <summary>
-        /// <para>The level ID.</para>
+        /// <para>The hierarchy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -30,11 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? LevelId { get; set; }
 
         /// <summary>
-        /// <para>The level type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: logical level.</description></item>
-        /// <item><description>2: physical level.</description></item>
-        /// </list>
+        /// <para>The hierarchy type. Valid values: 1 (logical hierarchy) and 2 (physical hierarchy).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? LevelType { get; set; }
 
         /// <summary>
-        /// <para>The second-level topic ID.</para>
+        /// <para>The ID of the second-level theme.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -54,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? SecondLevelThemeId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the table, in the format of odps.{projectName}.{tableName}.</para>
+        /// <para>The unique identifier of the table. The format is odps.{projectName}.{tableName}.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

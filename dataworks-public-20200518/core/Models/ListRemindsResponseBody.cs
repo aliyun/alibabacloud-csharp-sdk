@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListRemindsResponseBodyDataReminds> Reminds { get; set; }
             public class ListRemindsResponseBodyDataReminds : TeaModel {
                 /// <summary>
-                /// <para>The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</para>
+                /// <para>The notification method. Valid values: MAIL (email), SMS (text message), and PHONE (phone call). The value MAIL indicates that the notification is sent by email. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</para>
                 /// </summary>
                 [NameInMap("AlertMethods")]
                 [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string RemindName { get; set; }
 
                 /// <summary>
-                /// <para>The condition that triggers an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT.</para>
+                /// <para>The condition that triggers an alert. Valid values: FINISHED: finished, UNFINISHED: unfinished: finished, ERROR: error, CYCLE_UNFINISHED: cycle unfinished: unfinished: finished, and TIMEOUT: execution timeout.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FINISHED</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The total number of custom alert rules returned.</para>
+            /// <para>The total number of custom alert rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddRecognizeRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account that is used to create a sensitive data identification rule. Enter the username of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud user who creates the sensitive data identification rule. Enter the username.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>Excludes fields. The system does not identify fields that are assigned with values.</para>
+        /// <para>The column exclusion setting. The specified columns are excluded from identification.</para>
         /// <list type="bullet">
-        /// <item><description>The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.</description></item>
-        /// <item><description><em>Wildcards are supported. For example, the asterisk (\</em>) in default.table.column1\* can be used to match any content following default.table.column1, such as default.table.column10.</description></item>
+        /// <item><description>Format: ${workspace}.${table}.${column} or ${workspace}.${schema}.${table}.${column}.</description></item>
+        /// <item><description>You can use the asterisk (<em>) as a wildcard. For example, default.table.column1</em> matches default.table.column10 and other column names starting with column1.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ColExclude { get; set; }
 
         /// <summary>
-        /// <para>Scans fields. The system identifies only fields that are assigned with values.</para>
+        /// <para>The column scan setting. Only the specified columns are identified.</para>
         /// <list type="bullet">
-        /// <item><description>The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.</description></item>
-        /// <item><description><em>Wildcards are supported. For example, the asterisk (\</em>) in default.table.column1\* can be used to match any content following default.table.column1, such as default.table.column10.</description></item>
+        /// <item><description>Format: ${workspace}.${table}.${column} or ${workspace}.${schema}.${table}.${column}.</description></item>
+        /// <item><description>You can use the asterisk (<em>) as a wildcard. For example, default.table.column1</em> matches default.table.column10 and other column names starting with column1.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ColScan { get; set; }
 
         /// <summary>
-        /// <para>Scans content. The value is the text of each field comment in your data asset. Fuzzy match is supported.</para>
+        /// <para>The comment scanning configuration. The value is the text of the comment for each field in your data assets. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CommentScan { get; set; }
 
         /// <summary>
-        /// <para>Identifies content. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation to query the value of the current parameter for a built-in sensitive field.</para>
+        /// <para>The content recognition configuration. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation and refer to the configuration of the same field in the built-in rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;_clazz&quot;:&quot;com.alipay.dsgclient.sdk.dsg.fastscan.engine.cond.NationalityCond&quot;}</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ContentScan { get; set; }
 
         /// <summary>
-        /// <para>The hit ratio threshold. If more than 60%, which is a sample hit ratio threshold, of all sample data records hit the Name Entity Recognition (NER) model, the sensitive field is hit. The value can be an integer from 0 to 100.</para>
+        /// <para>The hit threshold. If the percentage of sampled data that hits the named entity recognition (NER) model exceeds the threshold, such as 60%, the data is considered to hit the sensitive field. Valid values: an integer from 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HitThreshold { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level of the sensitive field. You can select one from all sensitivity levels that are defined in a template as the sensitivity level of the sensitive field, such as level 1 to level 10.</para>
+        /// <para>The sensitivity level of the sensitive field. Select a level defined in the template for the new sensitive field, such as levels 1 to 10.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The name of the sensitivity level. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the name of the sensitivity level in the related template.</para>
+        /// <para>The name of the sensitivity level. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the name of the selected level in the template.</para>
+        /// <para>Note: This parameter is required by the current service. If it is omitted, a 400 error (InternalError.Bad.Parameters: levelName not empty) is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Confidential</para>
@@ -100,18 +101,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string LevelName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data category. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to query the ID of all data categories. Then, you can select a data category to create a sensitive field. Enter the ID of the selected data category.</para>
+        /// <para>The classification node ID. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to obtain all node IDs and select a node to create a sensitive field. Enter the ID of the selected node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0ce67949-0810-400f-a24a-cc5ffafe1024</para>
+        /// <para>0ce67949-0810-400f-a24a-****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The information about the parent data category of the current data category. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to obtain the ID of a data category.</para>
+        /// <para>The parent node information of the classification node. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to obtain the information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParent { get; set; }
 
         /// <summary>
-        /// <para>The type of the arithmetic operation. Valid values:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: OR</description></item>
         /// <item><description>1: AND</description></item>
@@ -137,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? OperationType { get; set; }
 
         /// <summary>
-        /// <para>The content of the sensitive data identification rule. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation to query the value of the current parameter for a built-in sensitive field.</para>
+        /// <para>The content of the sensitive data identification rule. Call <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> to see how the same field is configured in a built-in rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;contentRule&quot;:{&quot;_clazz&quot;:&quot;com.alipay.dsgclient.sdk.dsg.fastscan.engine.cond.GenderCond&quot;},&quot;_clazz&quot;:&quot;com.alipay.dsg.dal.model.RuleContent&quot;}</para>
@@ -147,12 +148,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RecognizeRules { get; set; }
 
         /// <summary>
-        /// <para>The type of the sensitive data identification rule. Valid values:</para>
+        /// <para>The type of sensitive data identification rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: regular expression</description></item>
         /// <item><description>2: built-in rule</description></item>
         /// <item><description>3: sample library</description></item>
-        /// <item><description>4: self-generated data identification model</description></item>
+        /// <item><description>4: self-generated model</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RecognizeRulesType { get; set; }
 
         /// <summary>
-        /// <para>The description of the sensitive field. Enter a string that is less than 128 characters in length.</para>
+        /// <para>The description of the sensitive field. The value must be a string less than 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a sensitive field that identifies the name.</para>
@@ -173,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SensitiveDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom sensitive field. Enter a string that is less than 128 characters in length.</para>
+        /// <para>The custom name of the sensitive field. The value must be a string less than 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -187,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The status of the sensitive field. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: draft</description></item>
-        /// <item><description>1: effective</description></item>
+        /// <item><description>1: active</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -198,18 +199,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The template ID. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the template ID.</para>
+        /// <para>The template ID. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the ID of the current default template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>e1970541-6cf5-4d23-b101-d5b66f6e1024</para>
+        /// <para>e1970541-6cf5-4d23-b101-****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</para>
+        /// <para>The tenant ID. To obtain the tenant ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the Data Studio page, click the username in the upper-right corner, and choose Menu &gt; User Info.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

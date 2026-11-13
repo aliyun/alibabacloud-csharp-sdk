@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgScenedDeleteSceneShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of level-2 data masking scenarios.</para>
+        /// <para>The list of IDs of the secondary data masking scenarios.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ids")]

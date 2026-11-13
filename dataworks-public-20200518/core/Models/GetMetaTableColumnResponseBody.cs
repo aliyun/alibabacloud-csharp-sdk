@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Position { get; set; }
 
                 /// <summary>
-                /// <para>The number of times the field is read.</para>
+                /// <para>The popularity of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>

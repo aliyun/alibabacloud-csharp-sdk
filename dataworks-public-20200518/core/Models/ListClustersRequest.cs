@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

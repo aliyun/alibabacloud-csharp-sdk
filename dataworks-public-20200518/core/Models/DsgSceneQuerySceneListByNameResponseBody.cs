@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgSceneQuerySceneListByNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of data masking scenarios.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DsgSceneQuerySceneListByNameResponseBodyData> Data { get; set; }
         public class DsgSceneQuerySceneListByNameResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The nested data masking scenarios.</para>
+            /// <para>The parameter information of multi-level masking scenarios.</para>
             /// </summary>
             [NameInMap("Children")]
             [Validation(Required=false)]
             public List<object> Children { get; set; }
 
             /// <summary>
-            /// <para>The description of the data masking scenario.</para>
+            /// <para>The description of the masking scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test scenarios</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Desc { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data masking scenario.</para>
+            /// <para>The ID of the masking scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The engine instances to which the data masking scenario applies.</para>
+            /// <para>The engine information where the masking scenario takes effect.</para>
             /// </summary>
             [NameInMap("Projects")]
             [Validation(Required=false)]
             public List<DsgSceneQuerySceneListByNameResponseBodyDataProjects> Projects { get; set; }
             public class DsgSceneQuerySceneListByNameResponseBodyDataProjects : TeaModel {
                 /// <summary>
-                /// <para>The ID of the E-MapReduce (EMR) cluster. This parameter is returned only if the <c>DbType</c> is <c>EMR</c>.</para>
+                /// <para>The ID of the EMR cluster. This parameter is returned only when the data scope where the masking scenario takes effect is an EMR engine.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c-123456</para>
@@ -63,12 +63,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The engine type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>MaxCompute: <c>ODPS.ODPS</c></para>
-                /// </description></item>
-                /// <item><description><para>Hologres: <c>HOLO.POSTGRES</c></para>
-                /// </description></item>
-                /// <item><description><para>E-MapReduce (EMR): <c>EMR</c></para>
-                /// </description></item>
+                /// <item><description>ODPS: ODPS.ODPS</description></item>
+                /// <item><description>HOLO: HOLO.POSTGRES</description></item>
+                /// <item><description>EMR: EMR</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -91,20 +88,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The code for the level-1 scenario. Valid values:</para>
+            /// <para>The code of the level-1 masking scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Data masking in Data Map and DataStudio: <c>dataworks_display_desense_code</c></para>
-            /// </description></item>
-            /// <item><description><para>Data masking at the MaxCompute engine layer: <c>maxcompute_desense_code</c></para>
-            /// </description></item>
-            /// <item><description><para>Data masking at the MaxCompute engine layer (new): <c>maxcompute_new_desense_code</c></para>
-            /// </description></item>
-            /// <item><description><para>Data masking at the Hologres engine layer: <c>hologres_display_desense_code</c></para>
-            /// </description></item>
-            /// <item><description><para>Static data masking in Data Integration: <c>dataworks_data_integration_desense_code</c></para>
-            /// </description></item>
-            /// <item><description><para>Data masking in Data Analysis: <c>dataworks_analysis_desense_code</c></para>
-            /// </description></item>
+            /// <item><description>dataworks_display_desense_code: masking for Data Studio and Data Map display</description></item>
+            /// <item><description>maxcompute_desense_code: masking at the MaxCompute engine layer</description></item>
+            /// <item><description>maxcompute_new_desense_code: masking at the MaxCompute engine layer (new)</description></item>
+            /// <item><description>hologres_display_desense_code: masking at the Hologres engine layer</description></item>
+            /// <item><description>dataworks_data_integration_desense_code: static data masking for Data Integration</description></item>
+            /// <item><description>dataworks_analysis_desense_code: masking for Data Analysis display</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,12 +106,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string SceneCode { get; set; }
 
             /// <summary>
-            /// <para>The level of the data masking scenario. Valid values:</para>
+            /// <para>The level of the masking scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>0</c>: level-1 scenario</para>
-            /// </description></item>
-            /// <item><description><para><c>1</c>: level-2 scenario</para>
-            /// </description></item>
+            /// <item><description>0: level-1 scenario</description></item>
+            /// <item><description>1: level-2 scenario</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? SceneLevel { get; set; }
 
             /// <summary>
-            /// <para>The name of the data masking scenario.</para>
+            /// <para>The name of the masking scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_scene</para>
@@ -141,7 +130,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string SceneName { get; set; }
 
             /// <summary>
-            /// <para>The user groups to which the data masking scenario applies. Multiple user group names are separated by a comma (,).</para>
+            /// <para>The list of user group names for the masking scenario. Multiple names are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>user1,user2</para>
@@ -150,6 +139,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string UserGroups { get; set; }
 
+            /// <summary>
+            /// <para>The data source type of the masking scenario.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>EMR</para>
+            /// </summary>
             [NameInMap("scenceDbType")]
             [Validation(Required=false)]
             public string ScenceDbType { get; set; }
@@ -187,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102400001</para>
@@ -197,12 +192,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

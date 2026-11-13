@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The data timestamp.</para>
+            /// <para>The timestamp corresponding to the business date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1600963200000</para>

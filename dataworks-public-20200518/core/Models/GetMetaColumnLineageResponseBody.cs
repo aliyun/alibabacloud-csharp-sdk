@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the field.</para>
+                /// <para>The unique identifier of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.engine_name.table_name.1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ColumnGuid { get; set; }
 
                 /// <summary>
-                /// <para>The name of the field.</para>
+                /// <para>The name of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of fields.</para>
+            /// <para>The total number of columns.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

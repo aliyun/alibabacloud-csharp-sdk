@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselinesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the baseline. Valid values: DAILY and HOURLY. You can specify multiple types. Separate multiple types with commas (,).</para>
+        /// <para>The type of the baseline. Valid values: DAILY (day-level baseline) and HOURLY (hour-level baseline). You can specify multiple types. Separate multiple types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DAILY</para>

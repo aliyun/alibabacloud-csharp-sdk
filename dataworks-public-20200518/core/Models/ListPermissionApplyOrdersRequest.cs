@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The query type of the application order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: Application orders submitted by me.</description></item>
-        /// <item><description>1: Application orders approved by me.</description></item>
+        /// <item><description>1: Application orders for me to approve.</description></item>
         /// <item><description>2: All application orders.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParameters { get; set; }
 
         /// <summary>
-        /// <para>The environment identifier of the O&amp;M center. PROD indicates the production environment. DEV indicates the development environment.</para>
+        /// <para>The environment identifier of the Operation Center. PROD indicates the production environment. DEV indicates the development environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

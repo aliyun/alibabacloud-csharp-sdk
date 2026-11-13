@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateUdfFileRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the class where the function is defined, which corresponds to the Class Name field in the Create Function form.</para>
+        /// <para>The name of the class where the function is defined, which corresponds to the class name in the create function form.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClassName { get; set; }
 
         /// <summary>
-        /// <para>The command format for calling the function, which corresponds to the Command Format field in the Create Function form.</para>
+        /// <para>The command format for calling the function, which corresponds to the command format in the create function form.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StringConcat(String... substrs)</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CmdDescription { get; set; }
 
         /// <summary>
-        /// <para>The example of calling the function, which corresponds to the Example field in the Create Function form.</para>
+        /// <para>The call example of the function, which corresponds to the example in the create function form.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StringConcat(\&quot;a\&quot;, \&quot;b\&quot;, \&quot;c\&quot;)</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Example { get; set; }
 
         /// <summary>
-        /// <para>The path of the folder where the function file is stored.</para>
+        /// <para>The path to the folder that contains the function file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Business_process/First_Business_Process/function/string_processing_function</para>
@@ -62,15 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The categorization of the function, which corresponds to the udf type field in the Create Function form. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>MATH: mathematical operation function.</description></item>
-        /// <item><description>AGGREGATE: aggregate functions.</description></item>
-        /// <item><description>STRING: character string processing function.</description></item>
-        /// <item><description>DATE: date processing function.</description></item>
-        /// <item><description>ANALYTIC: window function.</description></item>
-        /// <item><description>OTHER: other function.</description></item>
-        /// </list>
+        /// <para>The category of the function, which corresponds to the function type in the create function form. Valid values: MATH (mathematical operation functions), AGGREGATE (aggregate functions), STRING (string processing functions), DATE (date processing functions), ANALYTIC (window functions), and OTHER (other functions).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FunctionType { get; set; }
 
         /// <summary>
-        /// <para>The description of the function input parameters, which corresponds to the metric description field in the Create Function form.</para>
+        /// <para>The description of the input parameters for the function, which corresponds to the parameter description in the create function form.</para>
         /// 
         /// <b>Example:</b>
         /// <para>List of strings to be connected</para>
@@ -91,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ParameterDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can click the wrench icon in the upper-right corner to go to the Workspace Management page and view the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -101,8 +93,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page.</para>
-        /// <para>You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed when you switch workspaces at the top of the Data Studio page.
+        /// You must specify either this parameter or the ProjectId parameter to determine the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
@@ -112,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The list of resource names referenced by the function, separated by commas (,). This corresponds to the resources field in the Create Function form.</para>
+        /// <para>The list of resource names referenced by the function, separated by commas (,), which corresponds to the resources in the create function form.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Resources { get; set; }
 
         /// <summary>
-        /// <para>The description of the function return value, which corresponds to the Return Value field in the Create Function form.</para>
+        /// <para>The description of the return value of the function, which corresponds to the return value in the create function form.</para>
         /// 
         /// <b>Example:</b>
         /// <para>New strings generated by concatenating all strings before and after the input order</para>
@@ -133,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ReturnValue { get; set; }
 
         /// <summary>
-        /// <para>The description of the function purpose, which corresponds to the Description field in the Create Function form.</para>
+        /// <para>The description of the function purpose, which corresponds to the description in the create function form.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Concatenate several strings to generate a new string</para>

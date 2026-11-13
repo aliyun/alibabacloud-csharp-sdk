@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple baseline types with commas (,).</para>
+        /// <para>The type of the baseline. Valid values: DAILY (daily baseline) and HOURLY (hourly baseline). Separate multiple types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DAILY,HOURLY</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BaselineTypes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the baseline owner.</para>
+        /// <para>The Alibaba Cloud UID of the baseline owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>95279527****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 30. Default value: 1.</para>
+        /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Minimum value: 1. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The priority of the baseline. Valid values: {1,3,5,7,8}. Separate multiple priorities with commas (,).</para>
+        /// <para>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Separate multiple priorities with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,3,5,7,8</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can call the ListProjects operation to query the ID.</para>
+        /// <para>The ID of the workspace. You can call the ListProjects operation to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The keyword in the baseline name, which is used to search for the baseline.</para>
+        /// <para>The search keyword for the baseline name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Baseline name search keywords</para>
@@ -83,7 +83,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SearchText { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the baseline. Valid values: true and false.</para>
+        /// <para>Specifies whether the baseline is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

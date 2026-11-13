@@ -1,3 +1,31 @@
+2026-11-13 Version: 8.1.2
+- Update API AbolishDataServiceApi: add request parameters ApigwInstanceId.
+- Update API CreateDataServiceApi: add request parameters CloudNativeApiGwAuthType.
+- Update API CreateDataServiceGroup: add request parameters ApigwVersion.
+- Update API CreateDataServiceGroup: add request parameters CloudNativeApigwGroupId.
+- Update API GetDataServiceApi: add response parameters Body.Data.ApigwVersion.
+- Update API GetDataServiceApi: add response parameters Body.Data.CloudNativeApiGwAuthType.
+- Update API GetDataServiceApplication: add request parameters ApigwVersion.
+- Update API GetDataServiceGroup: add response parameters Body.Group.ApigwVersion.
+- Update API GetDataServiceGroup: add response parameters Body.Group.CloudNativeApigwGroupId.
+- Update API GetDataServicePublishedApi: add response parameters Body.Data.ApigwVersion.
+- Update API GetDataServicePublishedApi: add response parameters Body.Data.CloudNativeApiGwAuthType.
+- Update API ListDataServiceApiAuthorities: add request parameters ApigwVersion.
+- Update API ListDataServiceApiAuthorities: add response parameters Body.Data.ApiAuthorizationList.$.AuthorizationRecords.$.ConsumerAuthorizationRuleId.
+- Update API ListDataServiceApis: add response parameters Body.Data.Apis.$.ApigwVersion.
+- Update API ListDataServiceApis: add response parameters Body.Data.Apis.$.CloudNativeApiGwAuthType.
+- Update API ListDataServiceAuthorizedApis: add response parameters Body.Data.ApiAuthorizedList.$.ConsumerAuthorizationRuleId.
+- Update API ListDataServiceGroups: add request parameters ApigwVersion.
+- Update API ListDataServiceGroups: add response parameters Body.GroupPagingResult.Groups.$.ApigwVersion.
+- Update API ListDataServiceGroups: add response parameters Body.GroupPagingResult.Groups.$.CloudNativeApigwGroupId.
+- Update API ListDataServicePublishedApis: add response parameters Body.Data.Apis.$.ApigwVersion.
+- Update API ListDataServicePublishedApis: add response parameters Body.Data.Apis.$.CloudNativeApiGwAuthType.
+- Update API PublishDataServiceApi: add request parameters ApigwDomainIds.
+- Update API PublishDataServiceApi: add request parameters ApigwInstanceId.
+- Update API PublishDataServiceApi: add request parameters ApigwService.
+- Update API UpdateDataServiceApi: add request parameters CloudNativeApiGwAuthType.
+
+
 2026-09-20 Version: 8.1.1
 - Update API GetBaseline: add response parameters Body.Data.AlertSettings.$.TopicSlowConfig.
 - Update API UpdateBaseline: add request parameters AlertSettings.$.TopicSlowConfig.

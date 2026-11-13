@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the theme is successfully updated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: Yes.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: No.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the update result is returned. Valid values:</para>
+        /// <para>Indicates whether the update result is successfully returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: Yes.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: No.</para>
         /// </description></item>
         /// </list>
         /// 

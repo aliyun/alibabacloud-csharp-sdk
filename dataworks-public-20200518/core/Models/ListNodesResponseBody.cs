@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The nodes.</para>
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListNodesResponseBodyData Data { get; set; }
         public class ListNodesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the nodes.</para>
+            /// <para>The node information.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<ListNodesResponseBodyDataNodes> Nodes { get; set; }
             public class ListNodesResponseBodyDataNodes : TeaModel {
                 /// <summary>
-                /// <para>The number of the page to return. Minimum value: 1. Maximum value: 100.</para>
+                /// <para>The baseline ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BaselineId { get; set; }
 
                 /// <summary>
-                /// <para>The operation that you want to perform. Set the value to <b>ListNodes</b>.</para>
+                /// <para>The ID of the workflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BusinessId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource group.</para>
+                /// <para>The connection string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_source</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the workflow.</para>
+                /// <para>The cron expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00 00 00 * * ?</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CronExpress { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the node was deployed. Unit: milliseconds.</para>
+                /// <para>The timestamp of the submission and release date. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1734537600000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? DeployDate { get; set; }
 
                 /// <summary>
-                /// <para>The priority for running the node. Valid values: 1, 3, 5, 7, and 8.</para>
+                /// <para>The description of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the owner.</para>
+                /// <para>The DQC partitioning rule string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DqcDescription { get; set; }
 
                 /// <summary>
-                /// <para>The connection string.</para>
+                /// <para>The Data Quality Center (DQC) type. A value of 0 indicates that no DQC rule is associated. A value of 1 indicates that a DQC rule is associated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,9 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? DqcType { get; set; }
 
                 /// <summary>
-                /// <para>The file ID. You can call the ListFiles operation to query the ID.</para>
-                /// <para>\<em>\</em></para>
-                /// <para><b>Warning</b> This field is deprecated.</para>
+                /// <para><b>[Deprecated]</b> The ID of the file. You can call the ListFiles operation to query the ID of the corresponding file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -126,8 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FileId { get; set; }
 
                 /// <summary>
-                /// <para>Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.
-                /// You can also call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> interface to query the code type of the file.</para>
+                /// <para>The code varies by file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>. You can also call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the code type of a file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -137,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? FileType { get; set; }
 
                 /// <summary>
-                /// <para>The latest version number of the file.</para>
+                /// <para>The version of the file. The value is the latest submitted version number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -157,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The types of the nodes. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the type of the node.</para>
+                /// <para>The ID of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -167,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The total number of nodes returned.</para>
+                /// <para>The name of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>liux_test_n****</para>
@@ -177,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The additional parameters.</para>
+                /// <para>The ID of the owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>19337906836551</para>
@@ -187,7 +184,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node.</para>
+                /// <para>The additional parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a=b</para>
@@ -197,7 +194,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ParamValues { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the owner.</para>
+                /// <para>The priority. Valid values: 1, 3, 5, 7, and 8.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -207,7 +204,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned.</para>
+                /// <para>The type of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ODPS_SQL</para>
@@ -217,7 +214,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ProgramType { get; set; }
 
                 /// <summary>
-                /// <para>The information about the nodes.</para>
+                /// <para>The ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>33671</para>
@@ -227,7 +224,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The table and partition filter expression in Data Quality that are associated with the node.</para>
+                /// <para>The ID of the associated workflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1231123</para>
@@ -237,7 +234,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? RelatedFlowId { get; set; }
 
                 /// <summary>
-                /// <para>The environment of the workspace. Valid values: PROD and DEV.</para>
+                /// <para>The rescheduling interval after an error occurs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -247,7 +244,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? RepeatInterval { get; set; }
 
                 /// <summary>
-                /// <para>The rerun mode. The value 0 indicates that rerun can be performed only if a failure occurs. The value 1 indicates that rerun can be performed in all cases. The value 2 indicates that rerun cannot be performed in all cases.</para>
+                /// <para>The rerun mode. A value of 0 indicates that the node can be rerun only after it fails. A value of 1 indicates that the node can be rerun in all scenarios. A value of 2 indicates that the node cannot be rerun in any scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -257,7 +254,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? RepeatMode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node.</para>
+                /// <para>Indicates whether the node can be run repeatedly.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -277,7 +274,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ResGroupIdentifier { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workflow.</para>
+                /// <para>The name of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Default resource group</para>
@@ -287,7 +284,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ResGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The types of the nodes. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the type of the node.</para>
+                /// <para>The scheduling type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NORMAL: Normal scheduling task.</description></item>
+                /// <item><description>PAUSE: Paused task.</description></item>
+                /// <item><description>SKIP: Dry-run task. The task is scheduled on a daily basis, but its status is directly set to successful when the scheduling is triggered.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -299,7 +301,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -309,7 +311,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The cron expression returned.</para>
+            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -319,7 +321,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The name of the workflow.</para>
+            /// <para>The total number of nodes that meet the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66</para>
@@ -331,7 +333,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -341,7 +343,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -351,7 +353,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the node is rerun after the node fails to run.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -361,7 +363,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6F0DBDD-5AD****</para>
@@ -371,7 +373,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the node can be rerun.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

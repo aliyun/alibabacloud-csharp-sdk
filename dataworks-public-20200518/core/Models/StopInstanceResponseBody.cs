@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StopInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result details returned after the stop instance operation is called.</para>
+        /// <para>The details of the result returned after the instance is stopped.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6F0DBDD-5AD****</para>

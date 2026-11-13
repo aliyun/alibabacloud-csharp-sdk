@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceFoldersRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the folder name. Substring matching is supported.</para>
+        /// <para>The keyword in the folder name. Substring matching is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FolderNameKeyword</para>
+        /// <para>Folder name keyword</para>
         /// </summary>
         [NameInMap("FolderNameKeyword")]
         [Validation(Required=false)]
         public string FolderNameKeyword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the business process to which the folder belongs.</para>
+        /// <para>The ID of the workflow to which the folder belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds_123abc</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace. You can call the ListProjects operation to obtain a valid workspace ID, or view the ID in the workspace settings of the DataWorks console. The example value in the documentation is for format demonstration only.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. To obtain the tenant ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the DataStudio page, click your username in the upper-right corner, and select Menu &gt; User Info.</para>
+        /// <para>The tenant ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the Data Studio page, click the username of the current logged-on user in the upper-right corner, and choose Menu &gt; User Information to obtain the tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10002</para>

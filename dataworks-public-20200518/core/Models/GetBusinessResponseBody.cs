@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ.</para>
+            /// <para>The type of the workflow. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (a manually triggered workflow).</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>

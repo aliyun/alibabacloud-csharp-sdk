@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteTableRequest : TeaModel {
         /// <summary>
-        /// <para>The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.</para>
+        /// <para>The unique identifier of the MaxCompute project. Format: odps.{projectName}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AppGuid { get; set; }
 
         /// <summary>
-        /// <para>The type of the compute engine or data source. Valid values:</para>
+        /// <para>The type of the engine or data source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cdh</description></item>
         /// <item><description>analyticdb_for_mysql</description></item>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.</para>
+        /// <para>The schema information of the table. In ODPS, you must specify the schema information when the three-tier model is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

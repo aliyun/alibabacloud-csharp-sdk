@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the code for the file.</para>
-        /// <para>Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</para>
+        /// <para>The code type of the file.</para>
+        /// <para>Different file types use different code. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.
+        /// You can also call <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> to query the code type of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

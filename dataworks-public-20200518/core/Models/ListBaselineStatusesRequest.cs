@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineStatusesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple values with commas (,).</para>
+        /// <para>The type of the baseline. Valid values: DAILY (daily baseline) and HOURLY (hourly baseline). Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DAILY,HOURLY</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Bizdate { get; set; }
 
         /// <summary>
-        /// <para>The completion status of the baseline instance. Valid values: UNFINISH and FINISH. Separate multiple values with commas (,).</para>
+        /// <para>The completion status of the baseline instance. Valid values: UNFINISH (not finished) and FINISH (finished). Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>FINISH,UNFINISH</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SearchText { get; set; }
 
         /// <summary>
-        /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. Separate multiple values with commas (,).</para>
+        /// <para>The status of the baseline. Valid values: ERROR (abnormal), SAFE (safe), DANGROUS (warning), and OVER (baseline breached). Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAFE,DANGROUS,OVER</para>

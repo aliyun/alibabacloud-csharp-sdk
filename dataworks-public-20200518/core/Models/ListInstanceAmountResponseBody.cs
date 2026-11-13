@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.</para>
+            /// <para>The business date for querying the number of auto triggered node instances, represented by the timestamp corresponding to that business date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1623772800000</para>

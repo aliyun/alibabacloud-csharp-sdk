@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the request task. After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask is complete, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is terminated due to one of the following issues, address the issue based on the error code and initiate the request task again:</para>
+        /// <para>The information about the request task. After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask succeeds, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is terminated due to one of the following issues, address the issue based on the error code and initiate the request task again:</para>
         /// <list type="bullet">
-        /// <item><description><para>The request task fails to be submitted.</para>
-        /// </description></item>
-        /// <item><description><para>After the request task is submitted, a subtask fails to run.</para>
-        /// </description></item>
+        /// <item><description>The request task fails to be submitted.</description></item>
+        /// <item><description>After the request task is submitted, a subtask fails to run.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("TaskInfo")]
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete. You can call the <a href="https://help.aliyun.com/document_detail/185659.html">GetDDLJobStatus</a> operation to query the status of the subtask based on the subtask ID.</para>
+            /// <para>The ID of the next subtask to run. If this field is empty, all subtasks have finished. You can use this ID to query the corresponding subtask status by calling <a href="https://help.aliyun.com/document_detail/185659.html">GetDDLJobStatus</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc1</para>

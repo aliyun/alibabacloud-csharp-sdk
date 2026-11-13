@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableListByCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business data returned.</para>
+        /// <para>The business data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMetaTableListByCategoryResponseBodyData Data { get; set; }
         public class GetMetaTableListByCategoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: 10. Maximum value: 100.</para>
+            /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The returned result.</para>
+            /// <para>The response data structure.</para>
             /// </summary>
             [NameInMap("TableGuidList")]
             [Validation(Required=false)]
             public List<string> TableGuidList { get; set; }
 
             /// <summary>
-            /// <para>The total number of metatables.</para>
+            /// <para>The total number of tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1ec92159376</para>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the event. You can call <a href="https://help.aliyun.com/document_detail/173973.html">listTopics</a> to obtain the ID.</para>
-        /// <para>The documentation example is for format demonstration only. Valid TopicId values can be obtained from Data.Topics[].TopicId in the ListTopics response.</para>
+        /// <para>The ID of the event. You can call the <a href="https://help.aliyun.com/document_detail/173973.html">listTopics</a> operation to retrieve the ID.</para>
+        /// <para>The sample value in the documentation is for format demonstration only. You can obtain a valid TopicId from Data.Topics[].TopicId in the ListTopics response.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

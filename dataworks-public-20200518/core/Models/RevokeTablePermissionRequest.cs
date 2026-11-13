@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MaxComputeProjectName { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID from which you want to revoke table permissions. You can logon to the DataWorks console and go to the Security Settings page to obtain the account ID.</para>
+        /// <para>The Alibaba Cloud account ID from which you want to revoke table permissions. You can log on to the DataWorks console and go to the Security Settings page to obtain the account ID.</para>
         /// <para>You only need to specify either this parameter or the RevokeUserName parameter. If both this parameter and the RevokeUserName parameter are specified in the parameter settings but have different values, the value of the RevokeUserId parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateProjectMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence string. A UUID is recommended.</para>
+        /// <para>The client token used to ensure idempotence. We recommend that you use a UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AFAE64E-D1BE-432B-A9****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The role code. This parameter is optional. If this parameter is specified, the user is also added to the specified role.</para>
+        /// <para>The code of the role. This parameter is optional. If you specify this parameter, the user is also added to the specified role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>role_project_guest</para>

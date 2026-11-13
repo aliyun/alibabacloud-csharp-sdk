@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceStatusCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics of instances.</para>
+        /// <para>The status statistics of instances.</para>
         /// </summary>
         [NameInMap("StatusCount")]
         [Validation(Required=false)]
         public GetInstanceStatusCountResponseBodyStatusCount StatusCount { get; set; }
         public class GetInstanceStatusCountResponseBodyStatusCount : TeaModel {
             /// <summary>
-            /// <para>The number of instances that failed.</para>
+            /// <para>The number of failed instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? FailureCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are not run.</para>
+            /// <para>The number of instances that have not run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? NotRunCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are running.</para>
+            /// <para>The number of running instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? RunningCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are successfully run.</para>
+            /// <para>The number of successful instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of instances returned.</para>
+            /// <para>The total number of instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are waiting for resources.</para>
+            /// <para>The number of instances waiting for resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? WaitResCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are waiting for their scheduling time to arrive.</para>
+            /// <para>The number of instances that meet the conditions and are waiting to run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

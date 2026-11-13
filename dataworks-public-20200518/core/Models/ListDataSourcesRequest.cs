@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the data source. Valid values:</para>
+        /// <para>The type of the data source. Common values include:</para>
         /// <list type="bullet">
         /// <item><description>odps</description></item>
         /// <item><description>mysql</description></item>
@@ -88,8 +88,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The status of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENABLED</description></item>
-        /// <item><description>DISABLED</description></item>
+        /// <item><description>ENABLED: normal.</description></item>
+        /// <item><description>DISABLED: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

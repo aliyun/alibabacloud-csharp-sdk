@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SetDataSourceShareResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the sharing operation.</para>
+        /// <para>The returned data for sharing the target data source.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SetDataSourceShareResponseBodyData Data { get; set; }
         public class SetDataSourceShareResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The reason why the data source failed to be shared. If the data source is successfully shared, the value of this parameter is an empty string.</para>
+            /// <para>The description of the cause for the failure to share the target data source. If the target data source is shared, the value of this parameter is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>datasource is wrong</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the data source was shared. Valid values:</para>
+            /// <para>The result status of sharing the target data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>success.</description></item>
-            /// <item><description>fail. You can view the value of the Message parameter to identify the cause of the failure.</description></item>
+            /// <item><description>success: The target data source was shared.</description></item>
+            /// <item><description>fail: The target data source failed to be shared. You can check the Message parameter to locate the cause of the failure.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request. You can use the ID to locate logs and troubleshoot issues when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG</para>
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

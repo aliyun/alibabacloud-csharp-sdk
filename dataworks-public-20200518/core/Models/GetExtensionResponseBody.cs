@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetExtensionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the extension.</para>
+        /// <para>The extension details.</para>
         /// </summary>
         [NameInMap("Extension")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<GetExtensionResponseBodyExtensionBindEventList> BindEventList { get; set; }
             public class GetExtensionResponseBodyExtensionBindEventList : TeaModel {
                 /// <summary>
-                /// <para>The code of the extension point event.</para>
+                /// <para>The event code of the extension point.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>commit-file</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string EventCode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the extension point event.</para>
+                /// <para>The event name of the extension point.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>File submission pre-event</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The URL of the extension details page, on which users can view the details of the process blocked by the extension.</para>
+            /// <para>The URL of the extension details page. Extension users can use this URL to view the details of the blocked process.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ExtensionName { get; set; }
 
             /// <summary>
-            /// <para>The URL of the help documentation of the extension.</para>
+            /// <para>The URL of the help documentation for the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string HelpDocUrl { get; set; }
 
             /// <summary>
-            /// <para>The options defined for the extension.</para>
+            /// <para>The option settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Option configuration</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string OptionSetting { get; set; }
 
             /// <summary>
-            /// <para>The parameter settings of the extension. For more information, see <a href="https://help.aliyun.com/document_detail/405354.html">Configure extension parameters</a>.</para>
+            /// <para>The parameter settings. For more information, see <a href="https://help.aliyun.com/document_detail/405354.html">Extension parameter settings</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>extension.project.disabled=projectId1,projectId2,projectId3</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ParameterSetting { get; set; }
 
             /// <summary>
-            /// <para>The workspace for testing. If the extension is being tested, the extension can be used only in the workspace for testing.</para>
+            /// <para>The workspace used for testing. When the extension is in the testing state, only the testing workspace can use the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1355211</para>
@@ -155,7 +155,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ProjectTesting { get; set; }
 
             /// <summary>
-            /// <para>The state of the extension. 0: Testing, 1: Publishing, 3: Disabled, 4: Processing, 5: Approved, 6: Approve Failed</para>
+            /// <para>The status of the extension. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: testing</description></item>
+            /// <item><description>1: online</description></item>
+            /// <item><description>3: disabled</description></item>
+            /// <item><description>4: pending approval</description></item>
+            /// <item><description>5: approved</description></item>
+            /// <item><description>6: rejected</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -167,7 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use the request ID to query logs and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG</para>

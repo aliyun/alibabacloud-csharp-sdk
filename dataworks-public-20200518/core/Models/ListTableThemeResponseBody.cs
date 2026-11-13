@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the table level.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Level name</para>
+                /// <para>Table level name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ancestor node ID.</para>
+                /// <para>The parent node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>122</para>

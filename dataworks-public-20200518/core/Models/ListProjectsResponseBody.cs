@@ -60,8 +60,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>Indicates whether the workspace is the default workspace. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: yes.</description></item>
-                /// <item><description><b>0</b>: no.</description></item>
+                /// <item><description><b>1</b>: Yes.</description></item>
+                /// <item><description><b>0</b>: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The description of the workspace.</para>
+                /// <para>The detailed description of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_describe</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ProjectDescription { get; set; }
 
                 /// <summary>
-                /// <para>The workspace ID.</para>
+                /// <para>The ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>466230</para>
@@ -124,16 +124,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the workspace. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AVAILABLE: The status value is 0, which indicates that the workspace is Normal.</description></item>
-                /// <item><description>DELETED: The status value is 1, which indicates that the workspace is deleted.</description></item>
-                /// <item><description>INITIALIZING: The status value is 2, which indicates that the workspace is being initialized.</description></item>
-                /// <item><description>INIT_FAILED: The status value is 3, which indicates that the workspace failed to be initialized.</description></item>
-                /// <item><description>FORBIDDEN: The status value is 4, which indicates that the workspace is manually disabled.</description></item>
-                /// <item><description>DELETING: The status value is 5, which indicates that the workspace is being deleted.</description></item>
-                /// <item><description>DEL_FAILED: The status value is 6, which indicates that the workspace failed to be deleted.</description></item>
-                /// <item><description>FROZEN: The status value is 7, which indicates that the workspace is frozen due to overdue payment.</description></item>
-                /// <item><description>UPDATING: The status value is 8, which indicates that the workspace is being updated (a compute engine is being added and initialized for the project).</description></item>
-                /// <item><description>UPDATE_FAILED: The status value is 9, which indicates that the workspace failed to be updated (a compute engine failed to be added and initialized for the project).</description></item>
+                /// <item><description>AVAILABLE: 0. The workspace is normal.</description></item>
+                /// <item><description>DELETED: 1. The workspace is deleted.</description></item>
+                /// <item><description>INITIALIZING: 2. The workspace is being initialized.</description></item>
+                /// <item><description>INIT_FAILED: 3. The workspace failed to be initialized.</description></item>
+                /// <item><description>FORBIDDEN: 4. The workspace is manually disabled.</description></item>
+                /// <item><description>DELETING: 5. The workspace is being deleted.</description></item>
+                /// <item><description>DEL_FAILED: 6. The workspace failed to be deleted.</description></item>
+                /// <item><description>FROZEN: 7. The workspace is frozen due to an overdue payment.</description></item>
+                /// <item><description>UPDATING: 8. The workspace is being updated by adding and initializing a compute engine.</description></item>
+                /// <item><description>UPDATE_FAILED: 9. The workspace failed to be updated by adding and initializing a compute engine.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -146,16 +146,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status code of the workspace. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AVAILABLE: The status value is 0, which indicates that the workspace is Normal.</description></item>
-                /// <item><description>DELETED: The status value is 1, which indicates that the workspace is deleted.</description></item>
-                /// <item><description>INITIALIZING: The status value is 2, which indicates that the workspace is being initialized.</description></item>
-                /// <item><description>INIT_FAILED: The status value is 3, which indicates that the workspace failed to be initialized.</description></item>
-                /// <item><description>FORBIDDEN: The status value is 4, which indicates that the workspace is manually disabled.</description></item>
-                /// <item><description>DELETING: The status value is 5, which indicates that the workspace is being deleted.</description></item>
-                /// <item><description>DEL_FAILED: The status value is 6, which indicates that the workspace failed to be deleted.</description></item>
-                /// <item><description>FROZEN: The status value is 7, which indicates that the workspace is frozen due to overdue payment.</description></item>
-                /// <item><description>UPDATING: The status value is 8, which indicates that the workspace is being updated (a compute engine is being added and initialized for the project).</description></item>
-                /// <item><description>UPDATE_FAILED: The status value is 9, which indicates that the workspace failed to be updated (a compute engine failed to be added and initialized for the project).</description></item>
+                /// <item><description>AVAILABLE: 0. The workspace is normal.</description></item>
+                /// <item><description>DELETED: 1. The workspace is deleted.</description></item>
+                /// <item><description>INITIALIZING: 2. The workspace is being initialized.</description></item>
+                /// <item><description>INIT_FAILED: 3. The workspace failed to be initialized.</description></item>
+                /// <item><description>FORBIDDEN: 4. The workspace is manually disabled.</description></item>
+                /// <item><description>DELETING: 5. The workspace is being deleted.</description></item>
+                /// <item><description>DEL_FAILED: 6. The workspace failed to be deleted.</description></item>
+                /// <item><description>FROZEN: 7. The workspace is frozen due to an overdue payment.</description></item>
+                /// <item><description>UPDATING: 8. The workspace is being updated by adding and initializing a compute engine.</description></item>
+                /// <item><description>UPDATE_FAILED: 9. The workspace failed to be updated by adding and initializing a compute engine.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ProjectStatusCode { get; set; }
 
                 /// <summary>
-                /// <para>The resource group ID.</para>
+                /// <para>The ID of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-acfmzbn7****</para>
@@ -176,10 +176,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ResourceManagerResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The visibility permission of MaxCompute tables. Valid values:</para>
+                /// <para>The visibility permissions of MaxCompute tables. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: MaxCompute tables are not visible to users within the tenant.</description></item>
-                /// <item><description><b>1</b>: MaxCompute tables are visible to users within the tenant.</description></item>
+                /// <item><description><b>0</b>: MaxCompute tables are invisible to users in the tenant.</description></item>
+                /// <item><description><b>1</b>: MaxCompute tables are visible to users in the tenant.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of returned entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20658801****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the new rule.</para>
+        /// <para>The ID of the created rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request succeeded.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

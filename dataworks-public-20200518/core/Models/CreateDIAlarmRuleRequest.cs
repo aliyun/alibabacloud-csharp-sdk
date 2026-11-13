@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDIAlarmRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task with which the alert rule is associated.</para>
+        /// <para>The ID of the task. This is the ID of the task associated with the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>The description of the task.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql synchronizes to hologres heartbeat alert</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</para>
+        /// <para>Specifies whether the alert rule is enabled. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,14 +41,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The metric type in the alert rule. Valid values:</para>
+        /// <para>The alert metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Heartbeat</para>
-        /// </description></item>
-        /// <item><description><para>FailoverCount</para>
-        /// </description></item>
-        /// <item><description><para>Delay</para>
-        /// </description></item>
+        /// <item><description>Heartbeat: task status alert</description></item>
+        /// <item><description>FailoverCount: failover count alert</description></item>
+        /// <item><description>Delay: task latency alert</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public CreateDIAlarmRuleRequestNotificationSettings NotificationSettings { get; set; }
         public class CreateDIAlarmRuleRequestNotificationSettings : TeaModel {
             /// <summary>
-            /// <para>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</para>
+            /// <para>The alert suppression interval, in minutes. Default value: 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -78,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? InhibitionInterval { get; set; }
 
             /// <summary>
-            /// <para>The alert notification methods.</para>
+            /// <para>The alert notification channels. Multiple values are supported.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NotificationChannels")]
@@ -86,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<CreateDIAlarmRuleRequestNotificationSettingsNotificationChannels> NotificationChannels { get; set; }
             public class CreateDIAlarmRuleRequestNotificationSettingsNotificationChannels : TeaModel {
                 /// <summary>
-                /// <para>The alert notification methods.</para>
+                /// <para>The list of channels.</para>
                 /// </summary>
                 [NameInMap("Channels")]
                 [Validation(Required=false)]
@@ -95,10 +92,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The severity level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Warning</para>
-                /// </description></item>
-                /// <item><description><para>Critical</para>
-                /// </description></item>
+                /// <item><description>Warning</description></item>
+                /// <item><description>Critical</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -111,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The settings of alert notification recipients.</para>
+            /// <para>The alert notification recipients. Multiple values are supported.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NotificationReceivers")]
@@ -119,12 +114,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<CreateDIAlarmRuleRequestNotificationSettingsNotificationReceivers> NotificationReceivers { get; set; }
             public class CreateDIAlarmRuleRequestNotificationSettingsNotificationReceivers : TeaModel {
                 /// <summary>
-                /// <para>The recipient type. Valid values: AliyunUid and DingToken.</para>
+                /// <para>The recipient type.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If the alert notification method is Mail, Phone, or Sms, set this parameter to <b>AliyunUid</b>, which specifies the Alibaba Cloud account ID.</para>
-                /// </description></item>
-                /// <item><description><para>If the alert notification method is Ding, set this parameter to <b>DingToken</b>, which indicates the DingTalk chatbot token.</para>
-                /// </description></item>
+                /// <item><description>When the alert notification channel is email, phone call, or text message, set the recipient type to Alibaba Cloud user ID (<b>AliyunUid</b>).</description></item>
+                /// <item><description>When the alert notification channel is DingTalk, set the recipient type to DingTalk token (<b>DingToken</b>).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -135,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ReceiverType { get; set; }
 
                 /// <summary>
-                /// <para>The recipients.</para>
+                /// <para>The list of recipient values.</para>
                 /// </summary>
                 [NameInMap("ReceiverValues")]
                 [Validation(Required=false)]
@@ -146,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The conditions that are used to trigger the alert rule.</para>
+        /// <para>The list of alert trigger conditions. Multiple conditions are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]
@@ -154,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<CreateDIAlarmRuleRequestTriggerConditions> TriggerConditions { get; set; }
         public class CreateDIAlarmRuleRequestTriggerConditions : TeaModel {
             /// <summary>
-            /// <para>The time interval for alert calculation. Unit: minutes.</para>
+            /// <para>The time interval for alert calculation, in minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -166,10 +159,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The severity level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Warning</para>
-            /// </description></item>
-            /// <item><description><para>Critical</para>
-            /// </description></item>
+            /// <item><description>Warning</description></item>
+            /// <item><description>Critical</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,12 +173,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The alert threshold.</para>
             /// <list type="bullet">
-            /// <item><description><para>If the alert rule is for task status, you do not need to specify a threshold.</para>
-            /// </description></item>
-            /// <item><description><para>If the alert rule is for failovers, specify the number of failovers.</para>
-            /// </description></item>
-            /// <item><description><para>If the alert rule is for latency, the threshold is the latency duration, in seconds.</para>
-            /// </description></item>
+            /// <item><description>Task status alert: No threshold is required.</description></item>
+            /// <item><description>Failover count alert: The threshold is the number of failovers.</description></item>
+            /// <item><description>Task latency alert: The threshold is the latency duration, in seconds.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

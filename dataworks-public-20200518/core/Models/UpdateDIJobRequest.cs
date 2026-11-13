@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</para>
+        /// <para>The settings at the synchronization task level. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</para>
         /// </summary>
         [NameInMap("JobSettings")]
         [Validation(Required=false)]
@@ -119,13 +119,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the DDL operation. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>RenameColumn</description></item>
-                /// <item><description>ModifyColumn</description></item>
-                /// <item><description>CreateTable</description></item>
-                /// <item><description>TruncateTable</description></item>
-                /// <item><description>DropTable</description></item>
-                /// <item><description>DropColumn</description></item>
-                /// <item><description>AddColumn</description></item>
+                /// <item><description>RenameColumn: rename a column</description></item>
+                /// <item><description>ModifyColumn: update a column</description></item>
+                /// <item><description>CreateTable: create a table</description></item>
+                /// <item><description>TruncateTable: empty a table</description></item>
+                /// <item><description>DropTable: delete a table</description></item>
+                /// <item><description>DropColumn: delete a column</description></item>
+                /// <item><description>AddColumn: add a column</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</para>
+        /// <para>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry describes a list of source object selection rules and a list of transformation rules applied to that group of objects.</para>
         /// </summary>
         [NameInMap("TableMappings")]
         [Validation(Required=false)]
@@ -262,8 +262,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the object. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Table</description></item>
-                /// <item><description>Database</description></item>
+                /// <item><description>Table: table</description></item>
+                /// <item><description>Database: database</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -285,14 +285,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the action. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DefinePrimaryKey</description></item>
-                /// <item><description>Rename</description></item>
-                /// <item><description>AddColumn</description></item>
-                /// <item><description>HandleDml</description></item>
-                /// <item><description>DefineIncrementalCondition</description></item>
-                /// <item><description>DefineCycleScheduleSettings</description></item>
-                /// <item><description>DefineRuntimeSettings</description></item>
-                /// <item><description>DefinePartitionKey</description></item>
+                /// <item><description>DefinePrimaryKey: define primary keys</description></item>
+                /// <item><description>Rename: rename</description></item>
+                /// <item><description>AddColumn: add columns</description></item>
+                /// <item><description>HandleDml: process DML</description></item>
+                /// <item><description>DefineIncrementalCondition: define incremental conditions</description></item>
+                /// <item><description>DefineCycleScheduleSettings: define periodic scheduling settings</description></item>
+                /// <item><description>DefineRuntimeSettings: define advanced configuration parameters</description></item>
+                /// <item><description>DefinePartitionKey: define partition columns</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -315,8 +315,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the object on which you want to perform the action. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Table</description></item>
-                /// <item><description>Schema</description></item>
+                /// <item><description>Table: table</description></item>
+                /// <item><description>Schema: schema</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -340,14 +340,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The type of the action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DefinePrimaryKey</description></item>
-            /// <item><description>Rename</description></item>
-            /// <item><description>AddColumn</description></item>
-            /// <item><description>HandleDml</description></item>
-            /// <item><description>DefineIncrementalCondition</description></item>
-            /// <item><description>DefineCycleScheduleSettings</description></item>
-            /// <item><description>DefineRuntimeSettings</description></item>
-            /// <item><description>DefinePartitionKey</description></item>
+            /// <item><description>DefinePrimaryKey: define primary keys</description></item>
+            /// <item><description>Rename: rename</description></item>
+            /// <item><description>AddColumn: add columns</description></item>
+            /// <item><description>HandleDml: process DML</description></item>
+            /// <item><description>DefineIncrementalCondition: define incremental conditions</description></item>
+            /// <item><description>DefineCycleScheduleSettings: define periodic scheduling settings</description></item>
+            /// <item><description>DefineRuntimeSettings: define advanced configuration parameters</description></item>
+            /// <item><description>DefinePartitionKey: define partition columns</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -385,8 +385,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The type of the object on which you want to perform the action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Table</description></item>
-            /// <item><description>Schema</description></item>
+            /// <item><description>Table: table</description></item>
+            /// <item><description>Schema: schema</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

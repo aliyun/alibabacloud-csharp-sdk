@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SubmitDataServiceApiResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the API was submitted.</para>
+        /// <para>Indicates whether the submission was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,22 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceFoldersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination result of the folder list.</para>
+        /// <para>The paginated result of the folder list.</para>
         /// </summary>
         [NameInMap("FolderPagingResult")]
         [Validation(Required=false)]
         public ListDataServiceFoldersResponseBodyFolderPagingResult FolderPagingResult { get; set; }
         public class ListDataServiceFoldersResponseBodyFolderPagingResult : TeaModel {
             /// <summary>
-            /// <para>The folder list.</para>
+            /// <para>The list of folders.</para>
             /// </summary>
             [NameInMap("Folders")]
             [Validation(Required=false)]
             public List<ListDataServiceFoldersResponseBodyFolderPagingResultFolders> Folders { get; set; }
             public class ListDataServiceFoldersResponseBodyFolderPagingResultFolders : TeaModel {
                 /// <summary>
-                /// <para>The time when the folder was created.</para>
-                /// <para>The format is <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c>, for example, <c>2020-09-24T18:37:51+0800</c>. The time zone offset in this example is <c>+0800</c>.</para>
+                /// <para>The time when the folder was created. The time follows the <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c> format. Example: <c>2020-09-24T18:37:51+0800</c>. The time zone offset in the example is <c>+0800</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-09-24T18:37:51+0800</para>
@@ -35,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The folder ID.</para>
+                /// <para>The ID of the folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -45,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FolderId { get; set; }
 
                 /// <summary>
-                /// <para>The folder name.</para>
+                /// <para>The name of the folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test1</para>
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string FolderName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the business process to which the folder belongs.</para>
+                /// <para>The ID of the workflow to which the folder belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds_1234</para>
@@ -65,8 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the folder was last modified.</para>
-                /// <para>The format is <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c>, for example, <c>2020-09-24T18:37:51+0800</c>. The time zone offset in this example is <c>+0800</c>.</para>
+                /// <para>The time when the folder was modified. The time follows the <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c> format. Example: <c>2020-09-24T18:37:51+0800</c>. The time zone offset in the example is <c>+0800</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-09-24T18:37:51+0800</para>
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the parent folder. The root folder ID under a business process is 0. User-created folder IDs are greater than 0.</para>
+                /// <para>The ID of the parent folder. The ID of the root folder under a workflow is 0, and the ID of a user-created folder is greater than 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ParentId { get; set; }
 
                 /// <summary>
-                /// <para>The workspace ID.</para>
+                /// <para>The ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10001</para>
@@ -108,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number, which is the same as the PageNumber parameter in the request.</para>
+            /// <para>The page number. The value is the same as the PageNumber parameter in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -128,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -140,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. A unique identifier for the request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EF****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateMetaCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the category.</para>
+        /// <para>The category information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateMetaCategoryResponseBodyData Data { get; set; }
         public class CreateMetaCategoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The category ID.</para>
+            /// <para>The ID of the category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>223</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1ec92159376</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

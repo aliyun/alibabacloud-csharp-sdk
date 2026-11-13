@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public SearchMetaTablesResponseBodyData Data { get; set; }
         public class SearchMetaTablesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of metatables.</para>
+            /// <para>The list of tables returned by the query.</para>
             /// </summary>
             [NameInMap("DataEntityList")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the metadatabase.</para>
+                /// <para>The name of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -44,12 +44,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DatabaseName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the metatable. Valid values:</para>
+                /// <para>The type of the table. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: table</para>
-                /// </description></item>
-                /// <item><description><para>1: view</para>
-                /// </description></item>
+                /// <item><description>0: table.</description></item>
+                /// <item><description>1: view.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,12 +58,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? EntityType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the environment. Valid values:</para>
+                /// <para>The environment type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>1: production environment</para>
-                /// </description></item>
-                /// <item><description><para>0: development environment</para>
-                /// </description></item>
+                /// <item><description>1: production environment.</description></item>
+                /// <item><description>0: development environment.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? EnvType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the workspace owner.</para>
+                /// <para>The Alibaba Cloud account ID of the workspace owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -106,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The schema information of the table. You must configure this parameter if you enable the three-layer model of MaxCompute.</para>
+                /// <para>The schema information of the table. If the three-level model is enabled for MaxCompute, you must specify the schema information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -116,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Schema { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the metatable.</para>
+                /// <para>The unique identifier of the table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.engine_name.test_name</para>
@@ -126,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TableGuid { get; set; }
 
                 /// <summary>
-                /// <para>The name of the metatable.</para>
+                /// <para>The name of the table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_name</para>
@@ -148,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number for the paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -158,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries per page for the paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -168,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of metatables.</para>
+            /// <para>The total number of tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -220,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

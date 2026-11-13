@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tree category.</para>
+        /// <para>The ID of the category tree.</para>
         /// 
         /// <b>Example:</b>
         /// <para>333</para>

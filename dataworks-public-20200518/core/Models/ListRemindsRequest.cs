@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The keyword in a rule name that is used to search for the rule. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Fuzzy search rule name</para>
+        /// <para>Fuzzy search for a rule name</para>
         /// </summary>
         [NameInMap("SearchText")]
         [Validation(Required=false)]

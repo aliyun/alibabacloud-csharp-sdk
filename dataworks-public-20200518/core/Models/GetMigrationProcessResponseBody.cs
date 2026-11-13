@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The running status of the step in the migration task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>FAILURE</description></item>
-            /// <item><description>SUCCESS</description></item>
+            /// <item><description>INIT: initial state</description></item>
+            /// <item><description>RUNNING: running</description></item>
+            /// <item><description>FAILURE: failed</description></item>
+            /// <item><description>SUCCESS: successful</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

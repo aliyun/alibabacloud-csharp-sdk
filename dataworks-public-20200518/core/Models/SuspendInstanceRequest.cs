@@ -21,11 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PROD: production environment</description></item>
-        /// <item><description>DEV: development environment</description></item>
-        /// </list>
+        /// <para>The environment of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

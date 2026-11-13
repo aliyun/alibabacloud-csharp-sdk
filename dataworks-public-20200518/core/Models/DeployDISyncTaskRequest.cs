@@ -11,10 +11,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class DeployDISyncTaskRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization task that you want to deploy.</description></item>
-        /// <item><description>If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the synchronization task that you want to deploy.</description></item>
+        /// <item><description>If TaskType is set to DI_REALTIME, FileId is the file ID of the real-time synchronization task.</description></item>
+        /// <item><description>If TaskType is set to DI_SOLUTION, FileId is the task ID of the primary site synchronization task.</description></item>
         /// </list>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID of the real-time synchronization task or the synchronization task created in Data Integration.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain the task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FileId { get; set; }
 
         /// <summary>
-        /// <para>The type of the object that you want to deploy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DI_REALTIME: real-time synchronization node</description></item>
-        /// <item><description>DI_SOLUTION: data synchronization solution</description></item>
-        /// </list>
+        /// <para>The ID of the DataWorks workspace. Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for the current API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,10 +37,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of the object that you want to deploy. Valid values:</para>
+        /// <para>The type of the Data Integration synchronization task associated with the destination data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DI_REALTIME: real-time synchronization task</description></item>
-        /// <item><description>DI_SOLUTION: synchronization task created in Data Integration</description></item>
+        /// <item><description>DI_REALTIME: a real-time synchronization task in Data Integration.</description></item>
+        /// <item><description>DI_SOLUTION: a primary site synchronization task in Data Integration.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

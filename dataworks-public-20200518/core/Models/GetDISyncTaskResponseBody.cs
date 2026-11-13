@@ -33,10 +33,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The calculation method of a metric. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>avg</para>
-                    /// </description></item>
-                    /// <item><description><para>max</para>
-                    /// </description></item>
+                    /// <item><description>avg: average over the interval</description></item>
+                    /// <item><description>max: maximum over the interval</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -76,10 +74,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <list type="bullet">
-                    /// <item><description><para>WARNING</para>
-                    /// </description></item>
-                    /// <item><description><para>CRITICAL</para>
-                    /// </description></item>
+                    /// <item><description>WARNING: warning alert</description></item>
+                    /// <item><description>CRITICAL: critical alert</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -134,18 +130,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The alert type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>taskStatus</para>
-                /// </description></item>
-                /// <item><description><para>bizDelay</para>
-                /// </description></item>
-                /// <item><description><para>taskFailoverCount</para>
-                /// </description></item>
-                /// <item><description><para>ddlUnsupport</para>
-                /// </description></item>
-                /// <item><description><para>ddlReport</para>
-                /// </description></item>
-                /// <item><description><para>totalDirtyRecordWriteInLines</para>
-                /// </description></item>
+                /// <item><description>taskStatus: task status</description></item>
+                /// <item><description>bizDelay: business latency</description></item>
+                /// <item><description>taskFailoverCount: failover monitoring</description></item>
+                /// <item><description>ddlUnsupport: unsupported DDL</description></item>
+                /// <item><description>ddlReport: DDL notification</description></item>
+                /// <item><description>totalDirtyRecordWriteInLines: dirty data</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -374,7 +364,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>Indicates whether the details of the real-time synchronization task or data synchronization solution are obtained. Valid values:</para>
-            /// <para>success: The details are obtained. fail: The details fail to be obtained.</para>
+            /// <para>Success: The details are obtained. Fail: The details fail to be obtained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -398,10 +388,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>True</para>
-        /// </description></item>
-        /// <item><description><para>False</para>
-        /// </description></item>
+        /// <item><description>True: successful</description></item>
+        /// <item><description>False: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

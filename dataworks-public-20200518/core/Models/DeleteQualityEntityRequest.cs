@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The type of the engine or data source. Valid values: E-MapReduce (EMR), Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka, and DataHub.</para>
+        /// <para>The type of the engine or data source. Supported data sources include EMR, Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka, and DataHub.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

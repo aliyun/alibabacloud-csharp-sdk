@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class StopDIJobRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

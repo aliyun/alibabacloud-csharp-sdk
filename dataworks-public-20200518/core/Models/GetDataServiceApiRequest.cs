@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDataServiceApiRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DataService Studio API.</para>
+        /// <para>The ID of the data service API.</para>
+        /// <para>You can obtain the ID from the Data.Apis[].ApiId parameter in the response of the ListDataServiceApis operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,6 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The ID of the workspace.</para>
+        /// <para>You can obtain the ID from the PageResult.ProjectList[].ProjectId parameter in the response of the ListProjects operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

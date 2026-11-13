@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteDataServiceApiAuthorityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EF****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the authorization revocation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

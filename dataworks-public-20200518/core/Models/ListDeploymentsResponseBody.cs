@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Executor { get; set; }
 
                 /// <summary>
-                /// <para>The deployment package ID. You can call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to obtain the ID.</para>
+                /// <para>The deployment package ID. You can call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation with this ID to query the deployment package details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11111</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that match the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string BaselineName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the baseline. Valid values: DAILY and HOURLY.</para>
+                /// <para>The type of the baseline. Valid values: DAILY (daily baseline) and HOURLY (hourly baseline).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BaselineType</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ExpTime { get; set; }
 
                 /// <summary>
-                /// <para>The completion status of the baseline instance. Valid values: UNFINISH and FINISH.</para>
+                /// <para>The completion status of the baseline instance. Valid values: UNFINISH (not finished) and FINISH (finished).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UNFINISH</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? SlaTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER.</para>
+                /// <para>The status of the baseline. Valid values: ERROR (abnormal), SAFE (safe), DANGEROUS (warning), and OVER (baseline breached).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAFE</para>

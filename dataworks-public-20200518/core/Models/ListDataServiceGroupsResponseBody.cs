@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination result of business processes.</para>
+        /// <para>The pagination result of the business flows.</para>
         /// </summary>
         [NameInMap("GroupPagingResult")]
         [Validation(Required=false)]
         public ListDataServiceGroupsResponseBodyGroupPagingResult GroupPagingResult { get; set; }
         public class ListDataServiceGroupsResponseBodyGroupPagingResult : TeaModel {
             /// <summary>
-            /// <para>The list of business processes.</para>
+            /// <para>The list of business flows.</para>
             /// </summary>
             [NameInMap("Groups")]
             [Validation(Required=false)]
             public List<ListDataServiceGroupsResponseBodyGroupPagingResultGroups> Groups { get; set; }
             public class ListDataServiceGroupsResponseBodyGroupPagingResultGroups : TeaModel {
                 /// <summary>
-                /// <para>The ID of the API Gateway group associated with the business process.</para>
+                /// <para>The ID of the API Gateway group bound to the business flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100abc</para>
@@ -34,8 +34,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ApiGatewayGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the business process was created.</para>
-                /// <para>The format is <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c>, for example, <c>2020-09-24T18:37:51+0800</c>. The time zone offset in this example is <c>+0800</c>.</para>
+                /// <para>The gateway version. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: API Gateway.</description></item>
+                /// <item><description>2: Cloud-native API Gateway.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("ApigwVersion")]
+                [Validation(Required=false)]
+                public int? ApigwVersion { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the destination REST API in the cloud-native API Gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>api-xxx</para>
+                /// </summary>
+                [NameInMap("CloudNativeApigwGroupId")]
+                [Validation(Required=false)]
+                public string CloudNativeApigwGroupId { get; set; }
+
+                /// <summary>
+                /// <para>The creation time of the business flow. The format is <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c>, such as <c>2020-09-24T18:37:51+0800</c>. The time zone offset in this example is <c>+0800</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-09-24T18:37:51+0800</para>
@@ -45,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The UID of the creator. The creator UID may be empty for some legacy business processes.</para>
+                /// <para>The UID of the creator. The creator UID of some historical business flows may be empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10001</para>
@@ -55,17 +78,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the business process.</para>
+                /// <para>The description of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Business process description</para>
+                /// <para>Business flow description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the business process.</para>
+                /// <para>The ID of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds_123abc</para>
@@ -75,18 +98,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the business process.</para>
+                /// <para>The name of the business flow.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Business process name</para>
+                /// <para>Business flow name</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the business process was last modified.</para>
-                /// <para>The format is <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c>, for example, <c>2020-09-24T18:37:51+0800</c>. The time zone offset in this example is <c>+0800</c>.</para>
+                /// <para>The modification time of the business flow. The format is <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ssZ</c>, such as <c>2020-09-24T18:37:51+0800</c>. The time zone offset in this example is <c>+0800</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-09-24T18:37:51+0800</para>
@@ -96,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The workspace ID.</para>
+                /// <para>The ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10002</para>
@@ -118,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number, which is the same as the PageNumber value in the request.</para>
+            /// <para>The page number. The value is the same as the PageNumber parameter in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -128,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// <para>The number of entries returned on each page. Default value: 10. Maximum value: 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -150,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. A unique identifier for the request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EF****</para>

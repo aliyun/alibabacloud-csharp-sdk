@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? BeginWaitTimeTime { get; set; }
 
             /// <summary>
-            /// <para>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</para>
+            /// <para>The business date of the instance. In most cases, the value is one day before the time when the instance was run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1590336000000</para>
@@ -127,13 +127,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? DagId { get; set; }
 
             /// <summary>
-            /// <para>The type of the workflow. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DAILY: The workflow is used to run auto triggered nodes.</description></item>
-            /// <item><description>MANUAL: The workflow is used to run manually triggered nodes.</description></item>
-            /// <item><description>SMOKE_TEST: The workflow is used to perform smoke testing.</description></item>
-            /// <item><description>SUPPLY_DATA: The workflow is used to backfill data.</description></item>
-            /// </list>
+            /// <para>The workflow type. Valid values: DAILY(0): daily scheduled workflow; MANUAL(1): manually triggered task workflow; SMOKE_TEST(2): smoke testing workflow; SUPPLY_DATA(3): data backfill workflow; MANUAL_FLOW(4): manually run dataflow or PAI workflow, such as running a workflow in the IDE; BUSINESS_PROCESS_DAG(5): manual workflow DAG.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DAILY</para>
@@ -277,7 +271,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? RepeatInterval { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node that generates the instance can be rerun.</para>
+            /// <para>Indicates whether the instance can be rerun.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -287,17 +281,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? Repeatability { get; set; }
 
             /// <summary>
-            /// <para>The status of the node that generates the instance. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NOT_RUN: The node is not run.</description></item>
-            /// <item><description>WAIT_TIME: The node is waiting for its scheduling time to arrive.</description></item>
-            /// <item><description>WAIT_RESOURCE: The node is waiting for resources.</description></item>
-            /// <item><description>RUNNING: The node is running.</description></item>
-            /// <item><description>CHECKING: Data quality is being checked for the node.</description></item>
-            /// <item><description>CHECKING_CONDITION: Branch conditions are being checked for the node.</description></item>
-            /// <item><description>FAILURE: The node fails to run.</description></item>
-            /// <item><description>SUCCESS: The node is successfully run.</description></item>
-            /// </list>
+            /// <para>The task status. Valid values: NOT_RUN(1): not run; WAIT_TIME(2): waiting for the scheduled time; WAIT_RESOURCE(3): dispatched to the execution engine and waiting in the resource queue; RUNNING(4): running; CHECKING(7): execution finished and sent to Data Quality for validation; CHECKING_CONDITION(8): execution finished and branch conditions being checked; WAIT_TRIGGER(9): waiting for a trigger, a state entered by trigger-based nodes after waiting for the scheduled time; FAILURE(5): failed; SUCCESS(6): successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NOT_RUN</para>
@@ -307,12 +291,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of times the node can be rerun. The value of this parameter can be empty or an integer that is greater than or equal to 0.</para>
-            /// <list type="bullet">
-            /// <item><description>If the value of this parameter is empty, the number of times that the node can be rerun is not specified.</description></item>
-            /// <item><description>If the value of this parameter is 0, the node cannot be rerun.</description></item>
-            /// <item><description>If the value of this parameter is a positive integer such as n, the node can still be rerun n times. For example, if the value of this parameter is 1, the node can still be rerun once. If the value of this parameter is 2, the node can still be rerun twice.</description></item>
-            /// </list>
+            /// <para>The number of times the instance can still run. This value can be empty or an integer greater than or equal to 0. An empty value indicates that automatic reruns are not configured for the corresponding node. A value of 0 indicates that the instance cannot be rerun. A positive integer n indicates that the instance can still be rerun n times. For example, 1 means one remaining rerun and 2 means two remaining reruns. The initial value is the automatic rerun count configured for the corresponding node plus 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

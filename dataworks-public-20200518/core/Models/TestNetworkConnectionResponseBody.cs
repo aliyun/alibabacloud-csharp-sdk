@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TestNetworkConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The unique ID of the request. You can use the ID to locate logs and troubleshoot issues when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The information about the connectivity test.</para>
+        /// <para>The results of the network connectivity test between the data source and the resource group.</para>
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
         public TestNetworkConnectionResponseBodyTaskList TaskList { get; set; }
         public class TestNetworkConnectionResponseBodyTaskList : TeaModel {
             /// <summary>
-            /// <para>The reason why the data source and resource group failed the connectivity test. If data source and the resource group passed the connectivity test, this parameter is left empty.</para>
+            /// <para>The cause of the failure if the network connectivity test between the destination data source and the resource group fails. If the test is successful, this parameter is left empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Connectable</para>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ConnectMessage { get; set; }
 
             /// <summary>
-            /// <para>The result of the connectivity test. Valid values:</para>
+            /// <para>The result of the network connectivity test between the destination data source and the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The data source and the resource group passed the connectivity test.</description></item>
-            /// <item><description>false: The data source and the resource group failed the connectivity test. You can troubleshoot issues based on the ConnectMessage parameter.</description></item>
+            /// <item><description>true: The network connectivity test is successful.</description></item>
+            /// <item><description>false: The network connectivity test fails. You can check the ConnectMessage parameter to locate the cause of the failure.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

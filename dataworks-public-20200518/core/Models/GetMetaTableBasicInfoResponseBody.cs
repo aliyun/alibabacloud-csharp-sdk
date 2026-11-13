@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The display name of the metatable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>中文名</para>
+            /// <para>Chinese name</para>
             /// </summary>
             [NameInMap("Caption")]
             [Validation(Required=false)]

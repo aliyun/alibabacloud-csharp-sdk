@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class TestDataServiceApiRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DataService Studio API on which the test is performed.</para>
+        /// <para>The ID of the Data Service API on which the test is performed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

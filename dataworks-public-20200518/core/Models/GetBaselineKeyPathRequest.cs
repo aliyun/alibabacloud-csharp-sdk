@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? BaselineId { get; set; }
 
         /// <summary>
-        /// <para>The business date in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ UTC format.</para>
+        /// <para>The business date. The value must be in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format and in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Bizdate { get; set; }
 
         /// <summary>
-        /// <para>The cycle number of the baseline instance. The value is 1 for a daily baseline. Valid values for an hourly baseline: [1,24\].</para>
+        /// <para>The cycle number of the baseline instance. The value is 1 for daily baselines. For hourly baselines, valid values are 1 to 24.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

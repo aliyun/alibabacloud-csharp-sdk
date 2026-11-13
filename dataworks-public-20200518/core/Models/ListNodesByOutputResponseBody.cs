@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<ListNodesByOutputResponseBodyData> Data { get; set; }
         public class ListNodesByOutputResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the nodes returned.</para>
+            /// <para>The list of node information corresponding to input and output.</para>
             /// </summary>
             [NameInMap("NodeList")]
             [Validation(Required=false)]
@@ -84,8 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? DqcType { get; set; }
 
                 /// <summary>
-                /// <para>The node type. Valid values:</para>
-                /// <para>6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</para>
+                /// <para>The file type. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ODPS_SQL</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FolderName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the desired workflow to which the folder belongs.</para>
+        /// <para>The ID of the destination business flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the desired parent folder of the folder. The ID of the root folder in a workflow is 0. The ID of the folder created by users in a workflow is greater than 0.</para>
+        /// <para>The ID of the destination parent folder. The ID of the root folder of a business flow is 0, and the IDs of user-created folders are greater than 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ParentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

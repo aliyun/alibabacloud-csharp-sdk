@@ -10,10 +10,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the business process name. Fuzzy match is supported.</para>
+        /// <para>The gateway version. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: API Gateway.</description></item>
+        /// <item><description>2: Cloud-native API Gateway.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>TestBusinessProcess</para>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ApigwVersion")]
+        [Validation(Required=false)]
+        public int? ApigwVersion { get; set; }
+
+        /// <summary>
+        /// <para>The keyword in the business flow name. Substring matching is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test business flow</para>
         /// </summary>
         [NameInMap("GroupNameKeyword")]
         [Validation(Required=false)]
@@ -30,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,8 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
-        /// <para>You can obtain this value from PageResult.ProjectList[].ProjectId in the response of the ListProjects operation.</para>
+        /// <para>The ID of the workspace. You can obtain the ID from the PageResult.ProjectList[].ProjectId parameter in the response of the ListProjects operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

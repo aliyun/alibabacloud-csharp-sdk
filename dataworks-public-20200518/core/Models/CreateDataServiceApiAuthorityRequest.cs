@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDataServiceApiAuthorityRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the API.</para>
+        /// <para>The API ID.</para>
+        /// <para>The ApiId must correspond to a published data service API. Create a data service API, submit it, call PublishDataServiceApi to publish it, and then use the published ApiId to create the authorization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ApiId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the access permissions on the API are granted.</para>
+        /// <para>The ID of the authorized workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? AuthorizedProjectId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the validity period of the access permissions. The time must be a UNIX timestamp. Unit: seconds. Example: 1600531564, which indicates 2020-09-20 00:06:04 (UTC+8).</para>
+        /// <para>The end time of the authorization validity period. The value is a UNIX timestamp in seconds. Example: 1600531564, which represents 2020-09-20 00:06:04 (UTC+8).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

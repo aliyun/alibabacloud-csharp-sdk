@@ -122,9 +122,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The expiration time of the requested permissions. Specify a UNIX timestamp. If you do not specify this parameter, the default expiration time is January 1, 2065.
-        /// If LabelSecurity is not enabled for the MaxCompute project, or the security level of the requested table field is 0 or less than or equal to the security level of the requesting account, you can only request permanent permissions.
+        /// If LabelSecurity is not enabled for the MaxCompute project, or the security level of the requested table column is 0 or less than or equal to the security level of the requesting account, you can only request permanent permissions.
         /// Go to the management page of the DataWorks workspace and check whether column-level access control is enabled on the advanced configuration page of the MaxCompute engine.
-        /// Go to the DataWorks workspace to view the security level of fields in Data Map and the security level of accounts on the member management page.</para>
+        /// Go to the DataWorks workspace to view the security level of columns in Data Map and the security level of accounts on the member management page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1617115071885</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Data { get; set; }
 
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>The ID of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6F0DBDD-5AD****</para>

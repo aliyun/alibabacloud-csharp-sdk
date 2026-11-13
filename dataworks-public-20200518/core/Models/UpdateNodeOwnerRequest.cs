@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateNodeOwnerRequest : TeaModel {
         /// <summary>
-        /// <para>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</para>
+        /// <para>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.</para>
-        /// <list type="bullet">
-        /// <item><description>PROD</description></item>
-        /// <item><description>DEV</description></item>
-        /// </list>
+        /// <para>The runtime environment. Valid values: DEV (development environment) and PROD (production environment).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the node owner. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</para>
+        /// <para>The Alibaba Cloud account ID of the node owner. To view the account ID, log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner of the top menu bar.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

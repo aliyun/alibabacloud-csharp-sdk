@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateWorkbenchEventResultRequest : TeaModel {
         /// <summary>
-        /// <para>The check result of the extension point event. Valid values: OK and Fail.</para>
+        /// <para>The callback result. A value of OK indicates that the check is successful. A value of FAIL indicates that the check fails.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CheckResult { get; set; }
 
         /// <summary>
-        /// <para>The cause of the check failure.</para>
+        /// <para>The reason for the check failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL is too long</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExtensionCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message received when the related extension point event is triggered after you enable message subscription by using the OpenEvent module.</para>
+        /// <para>The message ID. You can obtain the MessageId only from the OpenEvent extension point event message generated when a process in the Operation Center is blocked by an extension. The ExtensionCode must be the code of an extension that is registered in the DataWorks console and is handling the process. You can use ListExtensions and ListCheckProcesses only to query existing configurations or processes. These operations cannot create valid events.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

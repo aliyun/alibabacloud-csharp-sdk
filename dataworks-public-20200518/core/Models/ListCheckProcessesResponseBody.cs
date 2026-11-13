@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public ListCheckProcessesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListCheckProcessesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The details of the extension check processes.</para>
+            /// <para>Details of the extension checks.</para>
             /// </summary>
             [NameInMap("CheckProcesses")]
             [Validation(Required=false)]
             public List<ListCheckProcessesResponseBodyPagingInfoCheckProcesses> CheckProcesses { get; set; }
             public class ListCheckProcessesResponseBodyPagingInfoCheckProcesses : TeaModel {
                 /// <summary>
-                /// <para>The event code of the extension point.</para>
+                /// <para>The code of the extension point event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>commit-file</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string EventNameEn { get; set; }
 
                 /// <summary>
-                /// <para>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</para>
+                /// <para>The ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>b824a5de-4223-4315-af3e-c4449d236db4</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the operation object, such as the file name or node name.</para>
+                /// <para>The name of the object being checked, such as the file name or node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_sql_test</para>
@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The check status of the extension. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CHECKING: The check is in progress.</description></item>
-                /// <item><description>PASSED: The check is passed.</description></item>
-                /// <item><description>BLOCKED: The check is not passed.</description></item>
+                /// <item><description>CHECKING: Checking.</description></item>
+                /// <item><description>PASSED: Passed.</description></item>
+                /// <item><description>BLOCKED: Blocked.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

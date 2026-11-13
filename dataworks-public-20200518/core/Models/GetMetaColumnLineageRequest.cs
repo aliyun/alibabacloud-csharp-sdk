@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaColumnLineageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EMR cluster. This parameter is required for EMR scenarios.</para>
+        /// <para>The ID of the EMR cluster. This parameter applies to EMR scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the field.</para>
+        /// <para>The unique identifier of the column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.engine_name.table_name.column_name</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ColumnGuid { get; set; }
 
         /// <summary>
-        /// <para>The name of the field.</para>
+        /// <para>The name of the column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The direction of the field lineage. Valid values:</para>
+        /// <para>The direction of the column lineage. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>up: upstream.</description></item>
         /// <item><description>down: downstream.</description></item>

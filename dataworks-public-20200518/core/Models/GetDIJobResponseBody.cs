@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetDIJobResponseBodyData Data { get; set; }
         public class GetDIJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the synchronization task was created. The timestamp is accurate to the second.</para>
+            /// <para>The timestamp when the synchronization task was created. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671516776</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</para>
+            /// <para>The settings at the synchronization task level. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</para>
             /// </summary>
             [NameInMap("JobSettings")]
             [Validation(Required=false)]
@@ -216,13 +216,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The type of the DDL operation. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>RenameColumn</description></item>
-                    /// <item><description>ModifyColumn</description></item>
-                    /// <item><description>CreateTable</description></item>
-                    /// <item><description>TruncateTable</description></item>
-                    /// <item><description>DropTable</description></item>
-                    /// <item><description>DropColumn</description></item>
-                    /// <item><description>AddColumn</description></item>
+                    /// <item><description>RenameColumn: rename a column</description></item>
+                    /// <item><description>ModifyColumn: update a column</description></item>
+                    /// <item><description>CreateTable: create a table</description></item>
+                    /// <item><description>TruncateTable: empty a table</description></item>
+                    /// <item><description>DropTable: delete a table</description></item>
+                    /// <item><description>DropColumn: delete a column</description></item>
+                    /// <item><description>AddColumn: add a column</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -278,12 +278,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The status of the synchronization task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Finished</description></item>
-            /// <item><description>Initialized</description></item>
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Stopping</description></item>
+            /// <item><description>Finished: successfully completed</description></item>
+            /// <item><description>Initialized: initialized</description></item>
+            /// <item><description>Stopped: stopped</description></item>
+            /// <item><description>Failed: failed</description></item>
+            /// <item><description>Running: running</description></item>
+            /// <item><description>Stopping: stopping</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string SourceDataSourceType { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the synchronization task was last started. The timestamp is accurate to the second.</para>
+            /// <para>The timestamp when the synchronization task was last started. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1673859999</para>
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string StartedUid { get; set; }
 
             /// <summary>
-            /// <para>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</para>
+            /// <para>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry describes a list of source object selection rules and a list of transformation rules applied to that group of objects.</para>
             /// </summary>
             [NameInMap("TableMappings")]
             [Validation(Required=false)]
@@ -467,8 +467,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The object type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Table</description></item>
-                    /// <item><description>Database</description></item>
+                    /// <item><description>Table: table</description></item>
+                    /// <item><description>Database: database</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -490,14 +490,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The action type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>DefinePrimaryKey</description></item>
-                    /// <item><description>Rename</description></item>
-                    /// <item><description>AddColumn</description></item>
-                    /// <item><description>HandleDml</description></item>
-                    /// <item><description>DefineIncrementalCondition</description></item>
-                    /// <item><description>DefineCycleScheduleSettings</description></item>
-                    /// <item><description>DefineRuntimeSettings</description></item>
-                    /// <item><description>DefinePartitionKey</description></item>
+                    /// <item><description>DefinePrimaryKey: define primary keys</description></item>
+                    /// <item><description>Rename: rename</description></item>
+                    /// <item><description>AddColumn: add columns</description></item>
+                    /// <item><description>HandleDml: process DML</description></item>
+                    /// <item><description>DefineIncrementalCondition: define incremental conditions</description></item>
+                    /// <item><description>DefineCycleScheduleSettings: define periodic scheduling settings</description></item>
+                    /// <item><description>DefineRuntimeSettings: define advanced configuration parameters</description></item>
+                    /// <item><description>DefinePartitionKey: define partition columns</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -520,8 +520,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The type of the object on which the action is performed. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Table</description></item>
-                    /// <item><description>Schema</description></item>
+                    /// <item><description>Table: table</description></item>
+                    /// <item><description>Schema: schema</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -545,14 +545,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The action type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DefinePrimaryKey</description></item>
-                /// <item><description>Rename</description></item>
-                /// <item><description>AddColumn</description></item>
-                /// <item><description>HandleDml</description></item>
-                /// <item><description>DefineIncrementalCondition</description></item>
-                /// <item><description>DefineCycleScheduleSettings</description></item>
-                /// <item><description>DefineRuntimeSettings</description></item>
-                /// <item><description>DefinePartitionKey</description></item>
+                /// <item><description>DefinePrimaryKey: define primary keys</description></item>
+                /// <item><description>Rename: rename</description></item>
+                /// <item><description>AddColumn: add columns</description></item>
+                /// <item><description>HandleDml: process DML</description></item>
+                /// <item><description>DefineIncrementalCondition: define incremental conditions</description></item>
+                /// <item><description>DefineCycleScheduleSettings: define periodic scheduling settings</description></item>
+                /// <item><description>DefineRuntimeSettings: define advanced configuration parameters</description></item>
+                /// <item><description>DefinePartitionKey: define partition columns</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -569,12 +569,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <list type="bullet">
                 /// <item><description><para>expression: the expression of the renaming rule. The expression may contain the following variables:</para>
                 /// <list type="bullet">
-                /// <item><description>${srcDatasourceName}</description></item>
-                /// <item><description>${srcDatabaseName}</description></item>
-                /// <item><description>${srcTableName}</description></item>
+                /// <item><description>${srcDatasourceName}: name of the source data source</description></item>
+                /// <item><description>${srcDatabaseName}: name of the source database</description></item>
+                /// <item><description>${srcTableName}: name of the source table</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. A group of string replacement rules used to change the original values may be returned.</para>
+                /// <item><description><para>variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. You can define a group of string replacement rules to change the original values as needed.</para>
                 /// <list type="bullet">
                 /// <item><description>variableName: the name of the variable. The variable name is not enclosed in ${}.</description></item>
                 /// <item><description>variableRules: the string replacement rules for variables. The system runs the string replacement rules in sequence. from indicates the original string. to indicates the new string.</description></item>
@@ -583,7 +583,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// </list>
                 /// </description></item>
                 /// <item><description><para>Example of a rule used to add a specific field to the destination and assign a value to the field: <c>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}\\]}</c>.</para>
-                /// <para>If no rule of this type is configured, no fields are added to the destination and no values are assigned by default.</para>
+                /// <para>  If no rule of this type is configured, no fields are added to the destination and no values are assigned by default.</para>
                 /// <list type="bullet">
                 /// <item><description><para>columnName: the name of the field that is added.</para>
                 /// </description></item>
@@ -598,14 +598,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// </list>
                 /// </description></item>
                 /// <item><description><para>Example of a rule used to specify primary key fields for a destination table: <c>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;\\]}</c>.</para>
-                /// <para>If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default.</para>
+                /// <para>  If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default.</para>
                 /// <list type="bullet">
                 /// <item><description>If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run.</description></item>
                 /// <item><description>If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run.</description></item>
                 /// </list>
                 /// </description></item>
                 /// <item><description><para>Example of a rule used to process DML messages: <c>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}\\]}</c>.</para>
-                /// <para>If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal.</para>
+                /// <para>  If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal.</para>
                 /// <list type="bullet">
                 /// <item><description>dmlType: the DML operation. Valid values: Insert, Update, and Delete.</description></item>
                 /// <item><description>dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. The value Filter is returned for the dmlAction parameter only when the value of the dmlType parameter is Update or Delete.</description></item>
@@ -634,8 +634,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the object on which the action is performed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Table</description></item>
-                /// <item><description>Schema</description></item>
+                /// <item><description>Table: table</description></item>
+                /// <item><description>Schema: schema</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -648,7 +648,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The timestamp when the synchronization task was last modified. The timestamp is accurate to the second.</para>
+            /// <para>The timestamp when the synchronization task was last modified. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1673859985</para>

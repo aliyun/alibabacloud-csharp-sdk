@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListCheckProcessesRequest : TeaModel {
         /// <summary>
-        /// <para>The event code of the extension point.</para>
+        /// <para>The code of the extension point event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</para>
+        /// <para>The ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;For the message format, refer to <a href="https://help.aliyun.com/document_detail/215367.html">Message format</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>The page number in a paged query. This parameter is used for paging. Default value: 1.</para>
+        /// <para>The page number in a paging query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. This parameter is used for paging.</para>
+        /// <para>The number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The check status of the extension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CHECKING: The check is in progress.</description></item>
-        /// <item><description>PASSED: The check is passed.</description></item>
-        /// <item><description>BLOCKED: The check is not passed.</description></item>
+        /// <item><description>CHECKING: Checking.</description></item>
+        /// <item><description>PASSED: Passed.</description></item>
+        /// <item><description>BLOCKED: Blocked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

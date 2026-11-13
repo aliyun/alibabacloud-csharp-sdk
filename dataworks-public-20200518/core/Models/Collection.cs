@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The level of the collection. This parameter takes effect only if the CollectionType parameter is set to ALBUM_CATEGORY. Maximum value: 4.</para>
+        /// <para>The level of the collection. This parameter is returned only for collections of the ALBUM_CATEGORY type. Maximum value: 4.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

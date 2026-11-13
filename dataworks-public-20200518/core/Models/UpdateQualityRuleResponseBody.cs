@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateQualityRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the quality check rule is updated.</para>
+        /// <para>Indicates whether the quality check rule is updated successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

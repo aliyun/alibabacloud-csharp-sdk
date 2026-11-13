@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateResourceFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the file after it is created.</para>
+        /// <para>The ID of the created file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
+        /// <para>The unique ID of the request. You can use the ID to troubleshoot issues when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG</para>

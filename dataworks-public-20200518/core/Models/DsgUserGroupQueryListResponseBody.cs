@@ -40,31 +40,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The paginated query results.</para>
+        /// <para>The paginated query result.</para>
         /// </summary>
         [NameInMap("PageData")]
         [Validation(Required=false)]
         public DsgUserGroupQueryListResponseBodyPageData PageData { get; set; }
         public class DsgUserGroupQueryListResponseBodyPageData : TeaModel {
             /// <summary>
-            /// <para>A list of user groups.</para>
+            /// <para>The list of user groups.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{     &quot;accounts&quot;: [         &quot;role_project_scheduler&quot;     ],     &quot;gmtCreate&quot;: &quot;2024-05-10 15:22:18&quot;,     &quot;gmtModified&quot;: &quot;2024-05-10 15:22:18&quot;,     &quot;id&quot;: 1955,     &quot;name&quot;: &quot;dsg_fin_test-copy&quot;,     &quot;owner&quot;: &quot;UAT&quot; }</para>
+            /// <para>{     &quot;accounts&quot;: [         &quot;role_project_scheduler&quot;     ],     &quot;gmtCreate&quot;: &quot;2024-05-10 15:22:18&quot;,     &quot;gmtModified&quot;: &quot;2024-05-10 15:22:18&quot;,     &quot;id&quot;: 1955,     &quot;name&quot;: &quot;dsg_fin_test-Copy&quot;,     &quot;owner&quot;: &quot;UAT&quot; }</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<DsgUserGroupQueryListResponseBodyPageDataData> Data { get; set; }
             public class DsgUserGroupQueryListResponseBodyPageDataData : TeaModel {
                 /// <summary>
-                /// <para>A list of usernames in the user group.</para>
+                /// <para>The collection of usernames in the user group.</para>
                 /// </summary>
                 [NameInMap("Accounts")]
                 [Validation(Required=false)]
                 public List<string> Accounts { get; set; }
 
                 /// <summary>
-                /// <para>The time when the user group was created.</para>
+                /// <para>The creation time of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-10 17:14:44</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the user group was last modified.</para>
+                /// <para>The modification time of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-10 17:14:44</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user group.</para>
+                /// <para>The user group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -113,6 +113,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
+                /// <summary>
+                /// <para>The MaxCompute aggregation information.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{&quot;projectName&quot;:&quot;alpha_xy&quot;,&quot;accounts&quot;:&quot;alice,bob_exampleaccount&quot;}]</para>
+                /// </summary>
                 [NameInMap("mcAggregationInfo")]
                 [Validation(Required=false)]
                 public string McAggregationInfo { get; set; }
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of user groups.</para>
+            /// <para>The total number of returned user groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -152,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102400001</para>
@@ -162,12 +168,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

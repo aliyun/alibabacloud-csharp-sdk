@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not forcefully rerun the task.</para>
+        /// <para>Specifies whether to forcibly rerun all synchronization steps. If this parameter is not specified, the steps are not forcibly rerun.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? ForceToRerun { get; set; }
 
         /// <summary>
-        /// <para>The settings for the start.</para>
+        /// <para>The real-time synchronization startup settings.</para>
         /// </summary>
         [NameInMap("RealtimeStartSettings")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public StartDIJobRequestRealtimeStartSettingsFailoverSettings FailoverSettings { get; set; }
             public class StartDIJobRequestRealtimeStartSettingsFailoverSettings : TeaModel {
                 /// <summary>
-                /// <para>The failover interval. Unit: minutes.</para>
+                /// <para>The failover time interval, in minutes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The timestamp of the start offset. Unit: seconds. If you do not configure this parameter, the offset is not reset by default.</para>
+            /// <para>The start timestamp for the real-time synchronization position, in seconds. If this parameter is not specified, the position is not reset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671516776</para>

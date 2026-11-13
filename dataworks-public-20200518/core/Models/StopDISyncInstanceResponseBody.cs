@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>Indicates whether the synchronization task is stopped. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>success</description></item>
-            /// <item><description>fail</description></item>
+            /// <item><description>success: stopped successfully</description></item>
+            /// <item><description>fail: failed to stop</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: successful</description></item>
+        /// <item><description>false: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

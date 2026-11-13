@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFileTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the node type. You can log on to the DataWorks console, go to the DataStudio page, and then view the name of a specific node type on the left side of the page. Take note of the following items when you configure this parameter:</para>
+        /// <para>The name of the node type. You can log on to the DataWorks console, go to the Data Studio page, and then view the name of a specific node type on the left side of the page. Take note of the following items when you configure this parameter:</para>
         /// <list type="bullet">
-        /// <item><description>You can view the name of a specific node type, but the language specified by this parameter to present the name must be the same as the language specified by the Locale parameter.</description></item>
+        /// <item><description>You can view the Chinese or English name of a specific node type, but the language specified by this parameter to present the name must be the same as the language specified by the Locale parameter.</description></item>
         /// <item><description>Fuzzy match is supported.</description></item>
         /// <item><description>If this parameter is not configured, the names of all node types are returned.</description></item>
         /// </list>

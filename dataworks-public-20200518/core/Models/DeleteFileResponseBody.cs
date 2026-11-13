@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request. You can troubleshoot errors based on the ID.</para>
+        /// <para>If the file has been submitted, DeleteFile also triggers an asynchronous process to delete the file from the scheduling system. Use the DeploymentId returned by DeleteFile to call GetDeployment and poll the status of this process. If this field is empty, the file has been deleted and no further polling is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DeploymentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file. You can use the ListFiles interface to query the ID of the corresponding file.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -30,11 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request is successful.</description></item>
-        /// <item><description>false: The request fails.</description></item>
-        /// </list>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -44,8 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the deployment task that deploys the file. If the file has been committed, an asynchronous process is triggered to delete the file in the scheduling system. The value of this parameter is used to call the GetDeployment operation to poll the status of the asynchronous process.</para>
-        /// <para>If this parameter is empty, the file is deleted and the polling is not required.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -55,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The request ID. You can use it to troubleshoot errors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>Indicates whether the request is successful. Valid values: true (successful) and false (failed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

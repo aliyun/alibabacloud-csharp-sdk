@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? FileVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the version is the latest version in the production environment.</para>
+            /// <para>Indicates whether this file version is the latest version in the production environment. Valid values: true (latest) and false (not latest).</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -137,7 +137,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value NORMAL indicates DataStudio. The value MANUAL indicates a manually triggered node. The value MANUAL_BIZ indicates a manually triggered workflow. The value SKIP indicates a dry-run DataStudio node. The value ADHOCQUERY indicates an ad hoc query. The value COMPONENT indicates snippets.</para>
+            /// <para>The functional module to which the file belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: NORMAL (Data Studio).</description></item>
+            /// <item><description>1: MANUAL (manually triggered tasks).</description></item>
+            /// <item><description>2: MANUAL_BIZ (manually triggered workflows).</description></item>
+            /// <item><description>3: SKIP (dry-run scheduling in Data Studio).</description></item>
+            /// <item><description>10: ADHOCQUERY (ad hoc queries).</description></item>
+            /// <item><description>30: COMPONENT (component management).</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -189,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request is successful. Valid values: true (successful) and false (failed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

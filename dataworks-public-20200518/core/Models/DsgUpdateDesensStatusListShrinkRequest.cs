@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUpdateDesensStatusListShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The switch status. Valid values:
-        /// 1: enabled
-        /// 0: disabled</para>
+        /// <para>The status of the switch. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Enabled.</description></item>
+        /// <item><description>0: Disabled.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

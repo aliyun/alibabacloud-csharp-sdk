@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListDataServiceApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The basic information of the applications.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataServiceApplicationsResponseBodyData Data { get; set; }
         public class ListDataServiceApplicationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The basic information of the applications.</para>
+            /// <para>The list of basic information about the applications.</para>
             /// </summary>
             [NameInMap("Applications")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</para>
+            /// <para>The page number. The value is the same as the PageNumber parameter in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

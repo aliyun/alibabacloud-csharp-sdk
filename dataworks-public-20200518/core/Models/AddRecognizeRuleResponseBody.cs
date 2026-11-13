@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class AddRecognizeRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result in the JSON format.</para>
+        /// <para>The returned result in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{   &quot;HttpStatusCode&quot;: 200,   &quot;Success&quot;: true }</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
