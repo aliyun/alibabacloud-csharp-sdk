@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeTTSDemoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL of the preview audio file.</para>
+        /// <para>The URL of the preview file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://XXX/XXX">http://XXX/XXX</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The API response message.</para>
+        /// <para>The API message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

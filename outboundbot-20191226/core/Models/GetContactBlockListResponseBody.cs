@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The contact blocklist.</para>
+        /// <para>The list of contacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public List<GetContactBlockListResponseBodyContactBlocklistListList> List { get; set; }
             public class GetContactBlockListResponseBodyContactBlocklistListList : TeaModel {
                 /// <summary>
-                /// <para>The unique business key of the outbound call blocklist.</para>
+                /// <para>The unique business identifier of the outbound call blocklist.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>demo-user</para>
                 /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The operator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>demo-user</para>
                 /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>The remark.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx</para>
+                /// <para>Sample remark</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]

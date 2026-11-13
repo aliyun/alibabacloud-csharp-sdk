@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveAnnotationMissionTagInfoListRequest : TeaModel {
         /// <summary>
-        /// <para>The tag list.</para>
-        /// <remarks>
-        /// <para>This parameter is the same as the AnnotationMissionTagInfoListJsonString parameter. Specify either one.</para>
-        /// </remarks>
+        /// <para>The tag list. The parameters are the same as those in the AnnotationMissionTagInfoListJsonString parameter. Specify only one of them.</para>
         /// </summary>
         [NameInMap("AnnotationMissionTagInfoList")]
         [Validation(Required=false)]
@@ -50,10 +47,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string AnnotationMissionTagInfoName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to delete the tag.</para>
-            /// <remarks>
-            /// <para>Set this parameter to true to delete the tag, or false to add the tag.</para>
-            /// </remarks>
+            /// <para>Specifies whether to delete the tag. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The tag is deleted.</description></item>
+            /// <item><description>false: The tag is added.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -85,13 +83,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The tag JSON data.</para>
-        /// <remarks>
-        /// <para>The parameters in the JSON are the same as those in the AnnotationMissionTagInfoList parameter. Specify either this parameter or AnnotationMissionTagInfoList.</para>
-        /// </remarks>
+        /// <para>The JSON data of tags. The specific parameters in the JSON data are the same as those in the AnnotationMissionTagInfoList parameter. Specify only one of them.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;delete&quot;:false,				&quot;InstanceId&quot;:&quot;00b37342-e759-4fe5-b296-aef775933af0&quot;,					&quot;AnnotationMissionTagInfoName&quot;:&quot;TestData1&quot;,					&quot;AnnotationMissionTagInfoDescription&quot;:&quot;Test&quot;}]</para>
+        /// <para>[{&quot;delete&quot;:false,				&quot;InstanceId&quot;:&quot;00b37342-e759-4fe5-b296-aef775933af0&quot;,					&quot;AnnotationMissionTagInfoName&quot;:&quot;Test data 1&quot;,					&quot;AnnotationMissionTagInfoDescription&quot;:&quot;Test&quot;}]</para>
         /// </summary>
         [NameInMap("AnnotationMissionTagInfoListJsonString")]
         [Validation(Required=false)]

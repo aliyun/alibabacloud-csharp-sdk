@@ -528,6 +528,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 
             /// <summary>
             /// <para>The natural language understanding (NLU) engine used by the script.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Prompts</para>
             /// </summary>
             [NameInMap("ScriptNluEngine")]
             [Validation(Required=false)]

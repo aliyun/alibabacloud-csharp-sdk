@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The name of the user who created the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>张三</para>
             /// </summary>
             [NameInMap("CreatorName")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The name of the instance owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxx</para>
+            /// <para>张三</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]

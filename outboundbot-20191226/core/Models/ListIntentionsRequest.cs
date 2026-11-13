@@ -10,10 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListIntentionsRequest : TeaModel {
         /// <summary>
-        /// <remarks>
-        /// <para>Notice: This parameter is required. Select a value based on the scenario.</para>
-        /// </remarks>
-        /// <para>The annotation data source. Valid values:</para>
+        /// <para><notice>This parameter is required. Select a value based on the scenario.</notice></para>
+        /// <para>The data source of the annotation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: outbound call</description></item>
         /// <item><description>2: navigation</description></item>
@@ -27,10 +25,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? AnnotationMissionDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The robot ID.</para>
-        /// <remarks>
-        /// <para>You can obtain this value from the DescribeScript operation, which corresponds to the ChatbotId parameter.</para>
-        /// </remarks>
+        /// <para>The ID of the bot. You can obtain the ID from the ChatbotId parameter in the response of the DescribeScript operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatbot-cn-n7QmzrUnNe</para>
@@ -64,7 +59,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The intent ID.</para>
+        /// <para>The ID of the intent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10717802</para>
@@ -94,7 +89,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scenario ID.</para>
+        /// <para>The ID of the scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</para>
@@ -104,13 +99,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>The intent name.</para>
-        /// <remarks>
-        /// <para>Supports fuzzy match by keyword as a filter condition.</para>
-        /// </remarks>
+        /// <para>The name of the intent. You can use keywords to perform a fuzzy match.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>know</para>
+        /// <para>Know</para>
         /// </summary>
         [NameInMap("UserNick")]
         [Validation(Required=false)]

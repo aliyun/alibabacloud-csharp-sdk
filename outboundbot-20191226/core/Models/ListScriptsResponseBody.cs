@@ -85,6 +85,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 
                 /// <summary>
                 /// <para>The chatbot ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>d31794e2a51f47d2901b4094d88311d7</para>
                 /// </summary>
                 [NameInMap("ChatBotId")]
                 [Validation(Required=false)]

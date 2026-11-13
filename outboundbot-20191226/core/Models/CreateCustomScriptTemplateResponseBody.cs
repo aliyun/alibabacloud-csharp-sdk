@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned by the API.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public GetAnnotationMissionSummaryResponseBodyDataAsrSummaryInfo AsrSummaryInfo { get; set; }
             public class GetAnnotationMissionSummaryResponseBodyDataAsrSummaryInfo : TeaModel {
                 /// <summary>
-                /// <para>The number of times language model data was added.</para>
+                /// <para>The number of times language model data is added.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AddCustomizationDataCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of times hot words were added.</para>
+                /// <para>The number of times hotwords are added.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AddVocabularyDataCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of invalid data entries.</para>
+                /// <para>The number of invalid data records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AnnotationInvalid { get; set; }
 
                 /// <summary>
-                /// <para>The character accuracy rate, in units of 0.01%.</para>
+                /// <para>The character accuracy rate. Unit: 0.01%.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? CharacterCorrectRate { get; set; }
 
                 /// <summary>
-                /// <para>The character error rate, in units of 0.01%.</para>
+                /// <para>The character error rate. Unit: 0.01%.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? ChatTotalCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of unannotated entries.</para>
+                /// <para>The number of unannotated records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? NoAnnotation { get; set; }
 
                 /// <summary>
-                /// <para>The sentence error rate, in units of 0.01%.</para>
+                /// <para>The sentence error rate. Unit: 0.01%.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? SentenceErrorRate { get; set; }
 
                 /// <summary>
-                /// <para>The word error rate, in units of 0.01%. Generally used for English.</para>
+                /// <para>The word error rate. Unit: 0.01%. This metric is generally used for English.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? AnnotationCorrectCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of invalid data entries.</para>
+                /// <para>The number of invalid data records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? MatchErrorCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of unannotated entries.</para>
+                /// <para>The number of unannotated records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? NoAnnotation { get; set; }
 
                 /// <summary>
-                /// <para>The number of unrecognized translation attempts.</para>
+                /// <para>The number of unrecognized translations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</para>
+            /// <para>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>You are not authorized to perform this action. CDR:View privileges are required.</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the call was successful. true: The call was successful. false: The call failed.</para>
+            /// <para>Specifies whether the call is successful. Valid values: true: The call is successful. false: The call fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -245,21 +245,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The custom tags and their counts.</para>
+            /// <para>The custom tags and counts.</para>
             /// </summary>
             [NameInMap("TagSummaryInfo")]
             [Validation(Required=false)]
             public GetAnnotationMissionSummaryResponseBodyDataTagSummaryInfo TagSummaryInfo { get; set; }
             public class GetAnnotationMissionSummaryResponseBodyDataTagSummaryInfo : TeaModel {
                 /// <summary>
-                /// <para>The list of tags.</para>
+                /// <para>The tag list.</para>
                 /// </summary>
                 [NameInMap("TagSummaryInfoDetailList")]
                 [Validation(Required=false)]
                 public List<GetAnnotationMissionSummaryResponseBodyDataTagSummaryInfoTagSummaryInfoDetailList> TagSummaryInfoDetailList { get; set; }
                 public class GetAnnotationMissionSummaryResponseBodyDataTagSummaryInfoTagSummaryInfoDetailList : TeaModel {
                     /// <summary>
-                    /// <para>The number of tags.</para>
+                    /// <para>The tag count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     /// <para>The tag name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>知晓率1_复制</para>
+                    /// <para>AwarenessRate1_Copy</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</para>
+        /// <para>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You are not authorized to perform this action. CDR:View privileges are required.</para>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. true: The call was successful. false: The call failed.</para>
+        /// <para>Specifies whether the call is successful. Valid values: true: The call is successful. false: The call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

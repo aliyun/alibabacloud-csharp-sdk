@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyScriptResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the API.</para>
+        /// <para>The API status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public ModifyScriptResponseBodyScript Script { get; set; }
         public class ModifyScriptResponseBodyScript : TeaModel {
             /// <summary>
-            /// <para>The debug status of the script.</para>
+            /// <para>The script debug status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DRAFTED</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The industry.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>政务</para>
+            /// <para>Government</para>
             /// </summary>
             [NameInMap("Industry")]
             [Validation(Required=false)]
@@ -100,24 +100,24 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The scenario.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>回访</para>
+            /// <para>Follow-up visit</para>
             /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>The description of the script.</para>
+            /// <para>The script description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>返工回访话术</para>
+            /// <para>Rework callback script</para>
             /// </summary>
             [NameInMap("ScriptDescription")]
             [Validation(Required=false)]
             public string ScriptDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the script.</para>
+            /// <para>The script ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c153d0d8-ba04-41c0-8632-453944c9dd0b</para>
@@ -127,17 +127,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// <para>The name of the script.</para>
+            /// <para>The script name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>回访话术</para>
+            /// <para>Callback script</para>
             /// </summary>
             [NameInMap("ScriptName")]
             [Validation(Required=false)]
             public string ScriptName { get; set; }
 
             /// <summary>
-            /// <para>The status of the script.</para>
+            /// <para>The script status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLISHED</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

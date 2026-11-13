@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data. No business data is returned if the deletion succeeds.</para>
+        /// <para>The returned data. No business data is returned if the deletion is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

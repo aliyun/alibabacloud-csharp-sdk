@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyVoiceCloneResponseBody : TeaModel {
         /// <summary>
+        /// <para>The API status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The ID of the modified voice.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cosyvoice-v2-067dc4b2e9d34dbeb5de20b5b093d1e3</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The message returned by the API operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7A573837-3AD3-54CF-930A-07A3287042C2</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

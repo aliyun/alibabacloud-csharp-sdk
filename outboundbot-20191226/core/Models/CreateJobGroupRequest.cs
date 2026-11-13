@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <item><description>templateContent: the flash SMS content.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The value of templateContent must be obtained from the corresponding flash SMS capability partner.</para>
+        /// <para>To obtain the value of templateContent, contact the partner that provides the corresponding flash SMS capability.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the job.</para>
+        /// <para>The job description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Job description</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The job name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupName { get; set; }
 
         /// <summary>
-        /// <para>The guaranteed concurrency.  </para>
+        /// <para>The guaranteed concurrency value.  </para>
         /// <list type="bullet">
         /// <item><description>When the job starts, a minimum of N concurrent calls are guaranteed.</description></item>
-        /// <item><description>The sum of guaranteed concurrency for jobs of the same priority cannot exceed the instance concurrency.  </description></item>
-        /// <item><description>If the guaranteed concurrency is set to 0, the system intelligently allocates idle concurrency.</description></item>
+        /// <item><description>The sum of guaranteed concurrency values for jobs of the same priority cannot exceed the instance concurrency.  </description></item>
+        /// <item><description>If the guaranteed concurrency value is set to 0, the system intelligently allocates idle concurrency.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? MinConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The priority of the job group. Valid values:</para>
+        /// <para>The job group priority. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Urgent</b>: urgent job.</description></item>
         /// <item><description><b>Daily</b>: daily job.</description></item>
@@ -96,18 +96,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The list of caller numbers for redialing.</para>
+        /// <para>The list of caller numbers for recall.</para>
         /// </summary>
         [NameInMap("RecallCallingNumber")]
         [Validation(Required=false)]
         public List<string> RecallCallingNumber { get; set; }
 
         /// <summary>
-        /// <para>The redial strategy in JSON format. The default value of the parameters in the JSON object is false.</para>
+        /// <para>The recall strategy in JSON format. The default value of parameters in the JSON string is false.</para>
         /// <list type="bullet">
-        /// <item><description><b>emptyNumberIgnore</b>: specifies whether to skip nonexistent numbers.</description></item>
-        /// <item><description><b>inArrearsIgnore</b>: specifies whether to skip numbers with overdue payments.</description></item>
-        /// <item><description><b>outOfServiceIgnore</b>: specifies whether to skip suspended numbers.</description></item>
+        /// <item><description><b>emptyNumberIgnore</b>: does not call nonexistent numbers.</description></item>
+        /// <item><description><b>inArrearsIgnore</b>: does not call numbers with overdue payments.</description></item>
+        /// <item><description><b>outOfServiceIgnore</b>: does not call suspended numbers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScenarioId { get; set; }
 
         /// <summary>
-        /// <para>The scenario ID.</para>
+        /// <para>The script ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</para>
@@ -148,24 +148,24 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>The execution strategy of the job.  </para>
+        /// <para>The job execution strategy.  </para>
         /// <list type="bullet">
-        /// <item><description>repeatBy: the repetition type. Valid values: Once (no repetition), Week (weekly repetition), and Month (monthly repetition).  </description></item>
-        /// <item><description>startTime: the start time of the time-based strategy.</description></item>
-        /// <item><description>endTime: the end time of the time-based strategy.  <remarks>
-        /// <para>Execution methods:</para>
+        /// <item><description>repeatBy: the recurrence type. Valid values: Once (no recurrence), Week (weekly recurrence), and Month (monthly recurrence).  </description></item>
+        /// <item><description>startTime: the start time of the strategy when executed by time.</description></item>
+        /// <item><description>endTime: the end time of the strategy when executed by time.  <remarks>
+        /// <para>Execution methods are divided into:</para>
         /// <list type="bullet">
-        /// <item><description>If the start and end times of the strategy are not specified, the execution method is immediate execution.</description></item>
-        /// <item><description>If the strategy time is specified, the job is executed based on the time, and the repetition type repeatBy must be selected.</description></item>
+        /// <item><description>If the start and end times are not specified, the job is executed immediately.</description></item>
+        /// <item><description>If the start and end times are specified, the job is executed by time, and the repeatBy recurrence type must be selected.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// <item><description>workingTime: the time period during which outbound calls can be made.</description></item>
-        /// <item><description>maxAttemptsPerDay: the maximum number of call attempts per day for numbers under this job.</description></item>
-        /// <item><description>minAttemptInterval: the retry interval for numbers, in minutes.</description></item>
-        /// <item><description>routingStrategy: the number strategy. Valid values: None (not specified), LocalFirst (local numbers first), and LocalProvinceFirst (local province numbers first).</description></item>
-        /// <item><description>repeatDays: the execution days corresponding to the repetition type. If the repetition type RepeatBy is Week, 0 represents Sunday, and 1 to 6 represent Monday to Saturday. If the repetition cycle RepeatBy is Month, 1 to 31 represent the 1st to the 31st day. Months without the specified date are not executed. For example, if the 30th is selected, the job is not executed in February.</description></item>
-        /// <item><description>repeatable: specifies whether to enable cyclic jobs. Valid values: true and false.</description></item>
+        /// <item><description>maxAttemptsPerDay: the maximum number of call attempts per day for numbers in this job.</description></item>
+        /// <item><description>minAttemptInterval: the retry interval for calling a number, in minutes.</description></item>
+        /// <item><description>routingStrategy: the number routing strategy. Valid values: None (not specified), LocalFirst (local city numbers first), and LocalProvinceFirst (local province numbers first).</description></item>
+        /// <item><description>repeatDays: the execution days corresponding to the recurrence type. If the repeatBy recurrence type is Week, 0 indicates Sunday, and 1 to 6 indicate Monday to Saturday. If the repeatBy recurrence type is Month, 1 to 31 indicate the 1st to the 31st day. Months without the specified date are not executed. For example, if the 30th is selected, the job is not executed in February.</description></item>
+        /// <item><description>repeatable: specifies whether to enable recurring jobs. Valid values: true and false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

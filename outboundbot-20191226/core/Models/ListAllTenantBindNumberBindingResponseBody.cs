@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public class ListAllTenantBindNumberBindingResponseBodyDataList : TeaModel {
                 /// <summary>
                 /// <para>The billing method of the number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("BillingType")]
                 [Validation(Required=false)]

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>Node name</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>示例节点</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>Node name</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>示例节点</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]

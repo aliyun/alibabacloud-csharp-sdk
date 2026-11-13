@@ -1,3 +1,9 @@
+2026-11-13 Version: 2.3.0
+- Support API DeleteNotificationRegistration.
+- Support API GetNotificationRegistration.
+- Support API SaveNotificationRegistration.
+
+
 2026-10-13 Version: 2.2.0
 - Support API CreateCustomScriptTemplate.
 - Support API CreateNumber.

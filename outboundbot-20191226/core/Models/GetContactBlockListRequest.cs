@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetContactBlockListRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to display the total number of entries.</para>
+        /// <para>Specifies whether to return the total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

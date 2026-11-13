@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The dialog flow information in the format: key:{value:aaa}}, where aaa indicates the number of occurrences.</para>
+        /// <para>The dialog flow information in the format of key:{value:aaa}, where aaa indicates the count.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;{\&quot;Label1\&quot;:{\&quot;LabelValue1\&quot;:2},\&quot;Label2\&quot;:{\&quot;LabelValue1\&quot;:2},\&quot;Label3\&quot;:{\&quot;LabelValue1\&quot;:1,\&quot;LabelValue2\&quot;:1}}&quot;</para>
+        /// <para>&quot;{\&quot;Tag1\&quot;:{\&quot;TagValue1\&quot;:2},\&quot;Tag2\&quot;:{\&quot;TagValue1\&quot;:2},\&quot;Tag3\&quot;:{\&quot;TagValue1\&quot;:1,\&quot;TagValue2\&quot;:1}}&quot;</para>
         /// </summary>
         [NameInMap("DsReports")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The API response message.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

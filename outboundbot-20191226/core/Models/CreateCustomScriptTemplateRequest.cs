@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <para>The label descriptions in JSON array format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;name\&quot;:\&quot;Delivered\&quot;,\&quot;description\&quot;:\&quot;Whether the purchased home appliance has been delivered\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Yes\\\&quot;,\\\&quot;No\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;Appointment Time\&quot;,\&quot;description\&quot;:\&quot;Collect the customer\&quot;s expected on-site installation time\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</para>
+        /// <para>[{\&quot;name\&quot;:\&quot;Delivered\&quot;,\&quot;description\&quot;:\&quot;Whether the purchased home appliance has been delivered\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Yes\\\&quot;,\\\&quot;No\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;Scheduled on-site service time\&quot;,\&quot;description\&quot;:\&quot;Collect the customer\&quot;s preferred time for on-site installation\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</para>
         /// </summary>
         [NameInMap("LabelsJson")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <para>The prompt for professional mode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>\nName: Annie \nIdentity: Game Promoter\nBackground: Promote the latest welfare activities to players over the phone to ensure that every player can get the information in time and enjoy the game.\nSkills: As a game customer service representative, recommend time-limited game welfare activities to users, highlight the benefits, and inform them of the participation process.\nConstraints: You need to remember that you are Annie,</para>
+        /// <para>\nName: Annie \nRole: Game Promoter\nBackground: Promote the latest promotional events to players over the phone, ensuring that every player stays informed and enjoys the game.\nSkills: As a game customer service representative, recommend time-limited promotional events to users, highlight the benefits, and explain the participation process.\nConstraints: You must remember that you are Annie,</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]

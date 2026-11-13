@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListCustomScriptTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0ec0c897-b92c-40e4-9ad7-e6e4f5ce13bb</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number for a paged query. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page for a paged query. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

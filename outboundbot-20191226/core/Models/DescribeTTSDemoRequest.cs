@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeTTSDemoRequest : TeaModel {
         /// <summary>
-        /// <para>The AccessKey (AK) of the namespace.</para>
+        /// <para>The AccessKey ID of the namespace.</para>
         /// <remarks>
-        /// <para>When the engine is xunfei, enter the AK here.</para>
+        /// <para>When the engine is xunfei, you must enter the AccessKey ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AccessKey { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud custom voice, which is the voice invocation ID.</para>
+        /// <para>The Alibaba Cloud custom voice, which is the voice call ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>voice-e1be3a6</para>
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AliCustomizedVoice { get; set; }
 
         /// <summary>
-        /// <para>The speech service type.</para>
+        /// <para>The speech service type. </para>
         /// <list type="bullet">
-        /// <item><description><para>When you use <b>ali</b> as the custom service, this field stores the appKey of the interactive voice response product project.</para>
+        /// <item><description><para>When <b>ali</b> is used as the custom service, this field stores the AppKey of the interactive voice response project.</para>
         /// </description></item>
-        /// <item><description><para>When you use <b>xunfei</b> as the custom service provider, this field stores the corresponding appKey.</para>
+        /// <item><description><para>When <b>xunfei</b> is used as the custom service provider, this field stores the corresponding AppKey.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -49,13 +49,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AppKey { get; set; }
 
         /// <summary>
-        /// <para>The storage engine. Valid values: ali, volc, xunfei.</para>
+        /// <para>The storage engine. Valid values: <b>ali</b>, <b>volc</b>, and <b>xunfei</b>.</para>
         /// <list type="bullet">
-        /// <item><description>When using traditional voices, CosyVoice, or selecting Alibaba Cloud as the custom service, set this to <b>ali</b>.</description></item>
-        /// <item><description>When using the doubao service, set this to <b>volc</b>.</description></item>
-        /// <item><description>When using xunfei as the service provider, set this to <b>xunfei</b> (can only be used in small model scenarios).</description></item>
-        /// <item><description>When using your own service, set this to <b>dock</b>, and set NlsServiceType to Authorized.</description></item>
-        /// <item><description>When using CV-v3-flash and Qwen voices, set this to <b>bailian</b>.</description></item>
+        /// <item><description>Set the value to <b>ali</b> when you use traditional voices, CosyVoice, or Alibaba Cloud as the custom service.</description></item>
+        /// <item><description>Set the value to <b>volc</b> when you use the Doubao service.</description></item>
+        /// <item><description>Set the value to <b>xunfei</b> when you use iFLYTEK as the service provider. This value can only be used in small model scenarios.</description></item>
+        /// <item><description>Set the value to <b>dock</b> and set NlsServiceType to Authorized when you use a self-managed service.</description></item>
+        /// <item><description>Set the value to <b>bailian</b> when you use CV-v3-flash and Qwen voices.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The extended parameter. When Engine is set to <b>dock</b>, enter the configuration ID.</para>
+        /// <para>The extended parameters. When Engine is set to <b>dock</b>, you must specify the configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;thirdVoiceConfigUuid&quot;:&quot;3cd82813ece049c4aff3ea3d***********&quot;}</para>
@@ -87,11 +87,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The service type.
-        /// Managed: the default service (public service) of the outbound robot product.
-        /// Authorized: the interactive voice response service purchased by the public cloud customer (custom service), configured through system administration &gt; Third-party Voice Configuration.</para>
+        /// <para>The service type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Managed: the default service for the outbound robot product, which is a public service.</description></item>
+        /// <item><description>Authorized: the interactive voice response service purchased by public cloud customers, which is a custom service. You can configure it by choosing system administration &gt; third-party speech configuration.</description></item>
+        /// </list>
         /// <remarks>
-        /// <para>When using Alibaba Cloud interactive voice response as the custom service provider, set this to Authorized.</para>
+        /// <para>When you need to use Alibaba Cloud interactive voice response, which means using Alibaba Cloud as the custom service provider, set the value to Authorized.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,6 +114,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PitchRate { get; set; }
 
         /// <summary>
+        /// <para>The sample rate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8000</para>
+        /// </summary>
+        [NameInMap("SampleRate")]
+        [Validation(Required=false)]
+        public int? SampleRate { get; set; }
+
+        /// <summary>
         /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
@@ -122,9 +134,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey Secret (SK) of the namespace.</para>
+        /// <para>The AccessKey secret of the namespace.</para>
         /// <remarks>
-        /// <para>When the engine is xunfei, enter the SK here.</para>
+        /// <para>When the engine is xunfei, you must enter the AccessKey secret.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -135,9 +147,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string SecretKey { get; set; }
 
         /// <summary>
-        /// <para>The speech rate. The value is an integer in the range of [-500, 500]. Default value: 0.</para>
-        /// <para>A value greater than 0 increases the pitch.</para>
-        /// <para>A value less than 0 decreases the pitch.</para>
+        /// <para>The speech rate. Valid values: an integer from -500 to 500. Default value: 0. A value greater than 0 increases the pitch. A value less than 0 decreases the pitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -158,9 +168,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Text { get; set; }
 
         /// <summary>
-        /// <para>The voice information, such as aixia, siyue, or xiaoyun. For the complete list of available voices, refer to the voice list below.</para>
+        /// <para>The voice information, such as aixia, siyue, or xiaoyun. For the complete list of voices, refer to the voice list below.</para>
         /// <remarks>
-        /// <para>Because the Voice value for cloned voices is a non-fixed value generated during voice cloning, a specific Voice value cannot be provided at this stage. You can obtain the specific VoiceID from the voice cloning page by calling the ListVoiceClone operation.</para>
+        /// <para>Because the voice ID for a cloned voice is a dynamic value generated during voice cloning, a specific voice ID cannot be provided at this stage. To obtain the specific voice ID, you must call the ListVoiceClone operation on the cloned voice page.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -171,9 +181,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Voice { get; set; }
 
         /// <summary>
-        /// <para>The volume. The value is an integer in the range of [0, 100]. Default value: 50.</para>
-        /// <para>A value greater than 50 increases the volume.</para>
-        /// <para>A value less than 50 decreases the volume.</para>
+        /// <para>The volume. Valid values: an integer from 0 to 100. Default value: 50. A value greater than 50 increases the volume. A value less than 50 decreases the volume.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

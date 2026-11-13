@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 /// <para>Tag value</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>demo</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

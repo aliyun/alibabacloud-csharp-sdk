@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? HasAnsweredFilter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the call is hung up due to rejection.</para>
+        /// <para>Specifies whether the call is hung up due to unrecognized intent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? HasHangUpByRejectionFilter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the flow is completed.</para>
+        /// <para>Specifies whether the call flow is completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -84,12 +84,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <summary>
         /// <para>The job status filter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduling: scheduling</description></item>
-        /// <item><description>Executing: executing</description></item>
-        /// <item><description>Succeeded: finished and reached</description></item>
-        /// <item><description>Paused: paused</description></item>
-        /// <item><description>Failed: finished but not reached</description></item>
-        /// <item><description>Cancelled: cancelled due to manual intervention</description></item>
+        /// <item><description>Scheduling: Scheduling.</description></item>
+        /// <item><description>Executing: Executing.</description></item>
+        /// <item><description>Succeeded: Completed - Reached.</description></item>
+        /// <item><description>Paused: Paused.</description></item>
+        /// <item><description>Failed: Completed - Not reached.</description></item>
+        /// <item><description>Cancelled: Canceled - Manual intervention.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// <remarks>
         /// <para>Notice: This parameter is required.</para>
         /// </remarks>
@@ -156,42 +156,43 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? StartActualTimeFilter { get; set; }
 
         /// <summary>
-        /// <para>The call status. Multiple values are separated by commas. Example: [&quot;Executing&quot;,&quot;Succeeded&quot;]. Valid values:
-        /// (Note: The <b>Succeeded</b> status is subdivided into specific causes. The <b>Succeeded</b>: 1 (answered) status is not displayed. All subsequent returned values are specific subdivided cause types.)</para>
+        /// <para>The call status. Separate multiple values with commas, such as [&quot;Executing&quot;,&quot;Succeeded&quot;].
+        /// Valid values:
+        /// (Note: The <b>Succeeded</b> status is subdivided into specific causes. The general <b>Succeeded</b>: 1 (Connected) status is not returned. All returned values are specific subdivided causes.)</para>
         /// <list type="bullet">
-        /// <item><description><b>Executing</b>: 0 (dialing)</description></item>
-        /// <item><description><b>Succeeded</b>: 1 (answered)</description></item>
-        /// <item><description><b>NoAnswer</b>: 2 (not answered - no answer)</description></item>
-        /// <item><description><b>NotExist</b>: 3 (not answered - nonexistent number)</description></item>
-        /// <item><description><b>Busy</b>: 4 (not answered - busy)</description></item>
-        /// <item><description><b>Cancelled</b>: 5 (not called - task stopped)</description></item>
-        /// <item><description><b>Failed</b>: 6 (failed)</description></item>
-        /// <item><description><b>NotConnected</b>: 7 (not answered - unreachable)</description></item>
-        /// <item><description><b>PoweredOff</b>: 8 (not answered - powered off)</description></item>
-        /// <item><description><b>OutOfService</b>: 9 (not answered - callee suspended)</description></item>
-        /// <item><description><b>InArrears</b>: 10 (not answered - callee overdue payment)</description></item>
-        /// <item><description><b>EmptyNumber</b>: 11 (not called - nonexistent number not called)</description></item>
-        /// <item><description><b>PerDayCallCountLimit</b>: 12 (not called - daily limit exceeded)</description></item>
-        /// <item><description><b>ContactBlockList</b>: 13 (not called - blacklist)</description></item>
-        /// <item><description><b>CallerNotRegistered</b>: 14 (not called - caller number not registered)</description></item>
-        /// <item><description><b>Terminated</b>: 15 (not called - terminated)</description></item>
-        /// <item><description><b>VerificationCancelled</b>: 16 (not called - cancelled due to pre-call verification failure)</description></item>
-        /// <item><description><b>OutOfServiceNoCall</b>: 17 (not called - callee suspended and not called)</description></item>
-        /// <item><description><b>InArrearsNoCall</b>: 18 (not called - callee overdue payment and not called)</description></item>
-        /// <item><description><b>CallingNumberNotExist</b>: 19 (not called - caller number does not exist)</description></item>
-        /// <item><description><b>SucceededFinish</b>: 20 (answered - normally completed)</description></item>
-        /// <item><description><b>SucceededChatbotHangUpAfterNoAnswer</b>: 21 (answered - robot hangs up after rejection)</description></item>
-        /// <item><description><b>SucceededChatbotHangUpAfterSilence</b>: 22 (answered - hangs up due to silence timeout)</description></item>
-        /// <item><description><b>SucceededClientHangUpAfterNoAnswer</b>: 23 (answered - user hangs up after rejection)</description></item>
-        /// <item><description><b>SucceededClientHangUp</b>: 24 (answered - user hangs up without reason)</description></item>
-        /// <item><description><b>SucceededTransferByIntent</b>: 25 (answered - transferred to agent due to intent match)</description></item>
-        /// <item><description><b>SucceededTransferAfterNoAnswer</b>: 26 (answered - transferred to agent after rejection)</description></item>
-        /// <item><description><b>SucceededInoInterAction</b>: 27 (answered - no interaction from user)</description></item>
-        /// <item><description><b>SucceededError</b>: 28 (answered - interrupted by system exception)</description></item>
-        /// <item><description><b>SucceededSpecialInterceptVoiceAssistant</b>: 29 (answered - special case interception - voice assistant)</description></item>
-        /// <item><description><b>SucceededSpecialInterceptExtensionNumberTransfer</b>: 30 (answered - special case interception - extension number transfer)</description></item>
-        /// <item><description><b>SucceededSpecialInterceptCustomSpecialIntercept</b>: 31 (answered - special case interception - custom interception)</description></item>
-        /// <item><description><b>HighRiskSipCode</b>: 32 (not called - high risk and not called)</description></item>
+        /// <item><description><b>Executing</b>: 0 (Dialing).</description></item>
+        /// <item><description><b>Succeeded</b>: 1 (Connected).</description></item>
+        /// <item><description><b>NoAnswer</b>: 2 (Not connected - no answer).</description></item>
+        /// <item><description><b>NotExist</b>: 3 (Not connected - nonexistent number).</description></item>
+        /// <item><description><b>Busy</b>: 4 (Not connected - busy).</description></item>
+        /// <item><description><b>Cancelled</b>: 5 (Not dialed - task stopped).</description></item>
+        /// <item><description><b>Failed</b>: 6 (Failed).</description></item>
+        /// <item><description><b>NotConnected</b>: 7 (Not connected - unreachable).</description></item>
+        /// <item><description><b>PoweredOff</b>: 8 (Not connected - powered off).</description></item>
+        /// <item><description><b>OutOfService</b>: 9 (Not connected - callee out of service).</description></item>
+        /// <item><description><b>InArrears</b>: 10 (Not connected - callee has overdue payments).</description></item>
+        /// <item><description><b>EmptyNumber</b>: 11 (Not dialed - nonexistent number, not dialed).</description></item>
+        /// <item><description><b>PerDayCallCountLimit</b>: 12 (Not dialed - daily limit exceeded).</description></item>
+        /// <item><description><b>ContactBlockList</b>: 13 (Not dialed - blacklisted).</description></item>
+        /// <item><description><b>CallerNotRegistered</b>: 14 (Not dialed - caller number not registered).</description></item>
+        /// <item><description><b>Terminated</b>: 15 (Not dialed - terminated).</description></item>
+        /// <item><description><b>VerificationCancelled</b>: 16 (Not dialed - canceled due to pre-call verification failure).</description></item>
+        /// <item><description><b>OutOfServiceNoCall</b>: 17 (Not dialed - callee out of service, not dialed).</description></item>
+        /// <item><description><b>InArrearsNoCall</b>: 18 (Not dialed - callee has overdue payments, not dialed).</description></item>
+        /// <item><description><b>CallingNumberNotExist</b>: 19 (Not dialed - caller number does not exist).</description></item>
+        /// <item><description><b>SucceededFinish</b>: 20 (Connected - normal completion).</description></item>
+        /// <item><description><b>SucceededChatbotHangUpAfterNoAnswer</b>: 21 (Connected - robot hung up after intent not recognized).</description></item>
+        /// <item><description><b>SucceededChatbotHangUpAfterSilence</b>: 22 (Connected - hung up due to silence timeout).</description></item>
+        /// <item><description><b>SucceededClientHangUpAfterNoAnswer</b>: 23 (Connected - user hung up after intent not recognized).</description></item>
+        /// <item><description><b>SucceededClientHangUp</b>: 24 (Connected - user hung up without reason).</description></item>
+        /// <item><description><b>SucceededTransferByIntent</b>: 25 (Connected - transferred to a human agent due to matched intent).</description></item>
+        /// <item><description><b>SucceededTransferAfterNoAnswer</b>: 26 (Connected - transferred to a human agent after intent not recognized).</description></item>
+        /// <item><description><b>SucceededInoInterAction</b>: 27 (Connected - no interaction from the user).</description></item>
+        /// <item><description><b>SucceededError</b>: 28 (Connected - interrupted by a system exception).</description></item>
+        /// <item><description><b>SucceededSpecialInterceptVoiceAssistant</b>: 29 (Connected - special interception - voice assistant).</description></item>
+        /// <item><description><b>SucceededSpecialInterceptExtensionNumberTransfer</b>: 30 (Connected - special interception - extension number transfer).</description></item>
+        /// <item><description><b>SucceededSpecialInterceptCustomSpecialIntercept</b>: 31 (Connected - special interception - custom interception).</description></item>
+        /// <item><description><b>HighRiskSipCode</b>: 32 (Not dialed - high risk, not dialed).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

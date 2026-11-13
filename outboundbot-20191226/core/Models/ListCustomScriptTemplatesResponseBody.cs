@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListCustomScriptTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCustomScriptTemplatesResponseBodyData Data { get; set; }
         public class ListCustomScriptTemplatesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of custom scenario templates.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListCustomScriptTemplatesResponseBodyDataList> List { get; set; }
             public class ListCustomScriptTemplatesResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>The ID of the custom scenario template.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>d31794e2a51f47d2901b4094d88311d7</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string AgentProfileId { get; set; }
 
                 /// <summary>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1741338619000</para>
                 /// </summary>
@@ -42,14 +54,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The description of the custom scenario template.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>这是一个大模型机器人</para>
+                /// <para>This is a large language model bot</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The instance ID to which the template belongs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>e49ad122-15a1-443a-a102-84a78a93be79</para>
                 /// </summary>
@@ -58,14 +74,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The label description. The value is a string in JSON array format.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>[{\&quot;name\&quot;:\&quot;是否送达\&quot;,\&quot;description\&quot;:\&quot;购买的家电是否已经送达\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;是\\\&quot;,\\\&quot;否\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;预约上门时间\&quot;,\&quot;description\&quot;:\&quot;收集客户期望的上门安装时间\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</para>
+                /// <para>[{\&quot;name\&quot;:\&quot;Delivered\&quot;,\&quot;description\&quot;:\&quot;Whether the purchased home appliance has been delivered\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Yes\\\&quot;,\\\&quot;No\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;On-site service appointment time\&quot;,\&quot;description\&quot;:\&quot;Collect the customer\&quot;s expected on-site installation time\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</para>
                 /// </summary>
                 [NameInMap("LabelsJson")]
                 [Validation(Required=false)]
                 public string LabelsJson { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the model used.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>model_002</para>
                 /// </summary>
@@ -74,30 +94,38 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Model { get; set; }
 
                 /// <summary>
+                /// <para>The name of the custom scenario template.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>测试场景</para>
+                /// <para>Test scenario</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The prompt in professional mode.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>\n名称：安妮 \n身份：游戏推广员\n背景：通过电话向玩家宣传最新福利活动，确保每一位玩家都能及时掌握信息，享受游戏的乐趣。\n技能：作为游戏客服，向用户推荐限时游戏福利活动，强调福利亮点并告知参与流程。\n约束条件：你需要记住你是安妮，</para>
+                /// <para>\nName: Annie \nRole: Game Promoter\nBackground: Promote the latest benefit activities to players over the phone to ensure that every player can get the information in time and enjoy the game.\nSkills: As a game customer service representative, recommend limited-time game benefit activities to users, highlight the benefits, and inform them of the participation process.\nConstraints: You need to remember that you are Annie,</para>
                 /// </summary>
                 [NameInMap("Prompt")]
                 [Validation(Required=false)]
                 public string Prompt { get; set; }
 
                 /// <summary>
+                /// <para>The agent configuration. The value is a string in JSON format.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>{&quot;name&quot;:&quot;小x&quot;,&quot;gender&quot;:&quot;男&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;游戏推广员&quot;,&quot;communicationStyle&quot;:[&quot;亲切&quot;],&quot;goals&quot;:&quot;你好&quot;,&quot;background&quot;:&quot;不是很好&quot;,&quot;openingPrompt&quot;:&quot;你好，我是xxx&quot;}</para>
+                /// <para>{&quot;name&quot;:&quot;Xiao X&quot;,&quot;gender&quot;:&quot;Male&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;Game Promoter&quot;,&quot;communicationStyle&quot;:[&quot;Friendly&quot;],&quot;goals&quot;:&quot;Hello&quot;,&quot;background&quot;:&quot;Not very good&quot;,&quot;openingPrompt&quot;:&quot;Hello, I am xxx&quot;}</para>
                 /// </summary>
                 [NameInMap("PromptJson")]
                 [Validation(Required=false)]
                 public string PromptJson { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the scenario associated with the custom scenario template.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>43972417-0657-452a-81c2-c59d8245a9b2</para>
                 /// </summary>
@@ -108,6 +136,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
+            /// <para>The current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -116,6 +146,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries returned per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -124,6 +156,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of custom scenario templates.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>15</para>
             /// </summary>
@@ -134,6 +168,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -142,14 +178,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Not used.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>暂无使用</para>
+        /// <para>Not used</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The message returned by the API operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -158,14 +198,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Not used.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>暂无使用</para>
+        /// <para>Not used</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -174,6 +218,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

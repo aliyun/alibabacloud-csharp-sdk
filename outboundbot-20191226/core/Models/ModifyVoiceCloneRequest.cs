@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyVoiceCloneRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The status of the voice. Note: For a newly created voice, you must call the ModifyVoiceClone operation and set Status to Enabled before it can be used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cloned voice to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,8 +42,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string VoiceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the voice.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>克隆音色1</para>
+        /// <para>Cloned voice 1</para>
         /// </summary>
         [NameInMap("VoiceName")]
         [Validation(Required=false)]

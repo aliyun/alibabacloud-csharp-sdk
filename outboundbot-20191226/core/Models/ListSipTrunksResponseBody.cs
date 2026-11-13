@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The description of the SIP trunk.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test environment SIP trunk</para>
+            /// <para>SIP trunk for the test environment</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The creation timestamp, in milliseconds.</para>
+            /// <para>The creation timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1727654400000</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>The message.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

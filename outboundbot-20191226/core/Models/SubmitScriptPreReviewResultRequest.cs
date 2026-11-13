@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RejectReason { get; set; }
 
         /// <summary>
-        /// <para>The pre-review result. Valid values: PASS (approved) and REJECT (rejected). The value is not case-sensitive.</para>
+        /// <para>The pre-review result. Valid values: PASS (approved) and REJECT (rejected). The value is case-insensitive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "OutboundBot";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("outboundbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -3539,7 +3542,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a phone number and associates it with the current tenant.</para>
+        /// <para>Creates phone numbers and associates them with the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3585,7 +3588,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a phone number and associates it with the current tenant.</para>
+        /// <para>Creates phone numbers and associates them with the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3631,7 +3634,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a phone number and associates it with the current tenant.</para>
+        /// <para>Creates phone numbers and associates them with the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3649,7 +3652,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a phone number and associates it with the current tenant.</para>
+        /// <para>Creates phone numbers and associates them with the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6323,6 +6326,146 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes the message subscription configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNotificationRegistrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNotificationRegistrationResponse
+        /// </returns>
+        public DeleteNotificationRegistrationResponse DeleteNotificationRegistrationWithOptions(DeleteNotificationRegistrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNotificationRegistration",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNotificationRegistrationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the message subscription configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNotificationRegistrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNotificationRegistrationResponse
+        /// </returns>
+        public async Task<DeleteNotificationRegistrationResponse> DeleteNotificationRegistrationWithOptionsAsync(DeleteNotificationRegistrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNotificationRegistration",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNotificationRegistrationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the message subscription configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNotificationRegistrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNotificationRegistrationResponse
+        /// </returns>
+        public DeleteNotificationRegistrationResponse DeleteNotificationRegistration(DeleteNotificationRegistrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNotificationRegistrationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the message subscription configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNotificationRegistrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNotificationRegistrationResponse
+        /// </returns>
+        public async Task<DeleteNotificationRegistrationResponse> DeleteNotificationRegistrationAsync(DeleteNotificationRegistrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNotificationRegistrationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
@@ -7271,7 +7414,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the label hit statistics of a job group.</para>
+        /// <para>Retrieves the tag statistics for hit labels in a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7317,7 +7460,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the label hit statistics of a job group.</para>
+        /// <para>Retrieves the tag statistics for hit labels in a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7363,7 +7506,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the label hit statistics of a job group.</para>
+        /// <para>Retrieves the tag statistics for hit labels in a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7381,7 +7524,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the label hit statistics of a job group.</para>
+        /// <para>Retrieves the tag statistics for hit labels in a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8075,7 +8218,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the conversation data of a job.</para>
+        /// <para>Retrieves the conversation data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8125,7 +8268,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the conversation data of a job.</para>
+        /// <para>Retrieves the conversation data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8175,7 +8318,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the conversation data of a job.</para>
+        /// <para>Retrieves the conversation data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8193,7 +8336,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the conversation data of a job.</para>
+        /// <para>Retrieves the conversation data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8995,7 +9138,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews text-to-speech (TTS) audio.</para>
+        /// <para>Generates a text-to-speech (TTS) preview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9044,6 +9187,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             {
                 query["PitchRate"] = request.PitchRate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleRate))
+            {
+                query["SampleRate"] = request.SampleRate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
             {
                 query["ScriptId"] = request.ScriptId;
@@ -9089,7 +9236,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews text-to-speech (TTS) audio.</para>
+        /// <para>Generates a text-to-speech (TTS) preview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9138,6 +9285,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             {
                 query["PitchRate"] = request.PitchRate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleRate))
+            {
+                query["SampleRate"] = request.SampleRate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptId))
             {
                 query["ScriptId"] = request.ScriptId;
@@ -9183,7 +9334,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews text-to-speech (TTS) audio.</para>
+        /// <para>Generates a text-to-speech (TTS) preview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9201,7 +9352,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews text-to-speech (TTS) audio.</para>
+        /// <para>Generates a text-to-speech (TTS) preview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10209,6 +10360,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ExportScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload a hotword list file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadUrlRequest
         /// </param>
@@ -10250,6 +10406,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GenerateUploadUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload a hotword list file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadUrlRequest
         /// </param>
@@ -10291,6 +10452,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GenerateUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload a hotword list file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadUrlRequest
         /// </param>
@@ -10304,6 +10470,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GenerateUploadUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload a hotword list file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadUrlRequest
         /// </param>
@@ -10711,7 +10882,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>null.</para>
+        /// <para>Retrieves the statistics information of an annotate node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10753,7 +10924,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>null.</para>
+        /// <para>Retrieves the statistics information of an annotate node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10795,7 +10966,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>null.</para>
+        /// <para>Retrieves the statistics information of an annotate node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10813,7 +10984,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>null.</para>
+        /// <para>Retrieves the statistics information of an annotate node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12259,6 +12430,146 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetMaxAttemptsPerDayWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the message subscription configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNotificationRegistrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNotificationRegistrationResponse
+        /// </returns>
+        public GetNotificationRegistrationResponse GetNotificationRegistrationWithOptions(GetNotificationRegistrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNotificationRegistration",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNotificationRegistrationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the message subscription configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNotificationRegistrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNotificationRegistrationResponse
+        /// </returns>
+        public async Task<GetNotificationRegistrationResponse> GetNotificationRegistrationWithOptionsAsync(GetNotificationRegistrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNotificationRegistration",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNotificationRegistrationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the message subscription configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNotificationRegistrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNotificationRegistrationResponse
+        /// </returns>
+        public GetNotificationRegistrationResponse GetNotificationRegistration(GetNotificationRegistrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetNotificationRegistrationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the message subscription configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNotificationRegistrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNotificationRegistrationResponse
+        /// </returns>
+        public async Task<GetNotificationRegistrationResponse> GetNotificationRegistrationAsync(GetNotificationRegistrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetNotificationRegistrationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14479,7 +14790,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义场景模板列表</para>
+        /// <para>Queries the custom script templates of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14529,7 +14840,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义场景模板列表</para>
+        /// <para>Queries the custom script templates of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14579,7 +14890,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义场景模板列表</para>
+        /// <para>Queries the custom script templates of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14597,7 +14908,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义场景模板列表</para>
+        /// <para>Queries the custom script templates of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15263,7 +15574,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries intents in the annotation center list.</para>
+        /// <para>Queries intents in the annotation center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15337,7 +15648,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries intents in the annotation center list.</para>
+        /// <para>Queries intents in the annotation center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15411,7 +15722,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries intents in the annotation center list.</para>
+        /// <para>Queries intents in the annotation center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15429,7 +15740,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries intents in the annotation center list.</para>
+        /// <para>Queries intents in the annotation center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17227,7 +17538,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of SIP trunks.</para>
+        /// <para>Queries a list of SIP trunks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17261,7 +17572,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of SIP trunks.</para>
+        /// <para>Queries a list of SIP trunks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17295,7 +17606,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of SIP trunks.</para>
+        /// <para>Queries a list of SIP trunks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17313,7 +17624,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of SIP trunks.</para>
+        /// <para>Queries a list of SIP trunks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19947,7 +20258,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify script information.</para>
+        /// <para>Updates script information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20081,7 +20392,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify script information.</para>
+        /// <para>Updates script information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20215,7 +20526,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify script information.</para>
+        /// <para>Updates script information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20233,7 +20544,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify script information.</para>
+        /// <para>Updates script information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20743,7 +21054,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改声音克隆</para>
+        /// <para>Modifies the name or status of a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20797,7 +21108,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改声音克隆</para>
+        /// <para>Modifies the name or status of a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20851,7 +21162,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改声音克隆</para>
+        /// <para>Modifies the name or status of a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20869,7 +21180,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改声音克隆</para>
+        /// <para>Modifies the name or status of a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23467,6 +23778,226 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SaveMaxAttemptsPerDayWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置客户专属ROCKETMQ信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveNotificationRegistrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveNotificationRegistrationResponse
+        /// </returns>
+        public SaveNotificationRegistrationResponse SaveNotificationRegistrationWithOptions(SaveNotificationRegistrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
+            {
+                body["AccessKey"] = request.AccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPoint))
+            {
+                body["AccessPoint"] = request.AccessPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPointType))
+            {
+                body["AccessPointType"] = request.AccessPointType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqInstanceId))
+            {
+                body["MqInstanceId"] = request.MqInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqType))
+            {
+                body["MqType"] = request.MqType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretKey))
+            {
+                body["SecretKey"] = request.SecretKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["Topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveNotificationRegistration",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveNotificationRegistrationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置客户专属ROCKETMQ信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveNotificationRegistrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveNotificationRegistrationResponse
+        /// </returns>
+        public async Task<SaveNotificationRegistrationResponse> SaveNotificationRegistrationWithOptionsAsync(SaveNotificationRegistrationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
+            {
+                body["AccessKey"] = request.AccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPoint))
+            {
+                body["AccessPoint"] = request.AccessPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPointType))
+            {
+                body["AccessPointType"] = request.AccessPointType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqInstanceId))
+            {
+                body["MqInstanceId"] = request.MqInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MqType))
+            {
+                body["MqType"] = request.MqType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                body["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretKey))
+            {
+                body["SecretKey"] = request.SecretKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["Topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                body["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveNotificationRegistration",
+                Version = "2019-12-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveNotificationRegistrationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置客户专属ROCKETMQ信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveNotificationRegistrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveNotificationRegistrationResponse
+        /// </returns>
+        public SaveNotificationRegistrationResponse SaveNotificationRegistration(SaveNotificationRegistrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveNotificationRegistrationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置客户专属ROCKETMQ信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveNotificationRegistrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveNotificationRegistrationResponse
+        /// </returns>
+        public async Task<SaveNotificationRegistrationResponse> SaveNotificationRegistrationAsync(SaveNotificationRegistrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveNotificationRegistrationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
