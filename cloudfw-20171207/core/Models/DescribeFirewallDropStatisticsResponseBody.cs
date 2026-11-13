@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeFirewallDropStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of packets blocked by access control list (ACL) policies.</para>
+        /// <para>The number of blocks by ACL policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AclDropCnt { get; set; }
 
         /// <summary>
-        /// <para>The number of packets blocked by the intrusion prevention system (IPS).</para>
+        /// <para>The number of IPS protections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of blocked packets.</para>
+        /// <para>The total number of protections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalDropCnt { get; set; }
 
         /// <summary>
-        /// <para>The number of packets blocked by the vulnerability prevention feature.</para>
+        /// <para>The number of Vulnerability Prevention blocks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

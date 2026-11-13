@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeFirewallVSwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1562A68-99FA-5D6B-BD5B-2F959F25****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<DescribeFirewallVSwitchResponseBodyVswitchListFirewallList> FirewallList { get; set; }
             public class DescribeFirewallVSwitchResponseBodyVswitchListFirewallList : TeaModel {
                 /// <summary>
-                /// <para>The instance ID of the firewall.</para>
+                /// <para>The firewall instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vfw-tr-37145c8f5ede45e9****</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC instance.</para>
+            /// <para>The VPC-connected instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2zeez7gymz5r4pi****am</para>

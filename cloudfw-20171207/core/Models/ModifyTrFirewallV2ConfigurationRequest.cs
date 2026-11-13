@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyTrFirewallV2ConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the VPC firewall. You can call DescribeTrFirewallsV2List to obtain the ID.</para>
+        /// <para>The ID of the VPC firewall instance. You can obtain the ID by calling DescribeTrFirewallsV2List.</para>
         /// <remarks>
-        /// <para>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</para>
+        /// <para>Note: FirewallId and FirewallName are jointly required. You must specify both parameters. If either parameter is missing, the API operation returns a 400 error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the VPC firewall.</para>
+        /// <para>The name of the VPC firewall instance.</para>
         /// <remarks>
-        /// <para>Note: FirewallId and FirewallName are jointly required. Both parameters must be provided at the same time. If either parameter is missing, the operation returns a 400 error.</para>
+        /// <para>Note: FirewallId and FirewallName are jointly required. You must specify both parameters. If either parameter is missing, the API operation returns a 400 error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>

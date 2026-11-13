@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeInternetOpenDetailResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetOpenDetailResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The ID of the asset instance.</para>
+            /// <para>The asset instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp1ix9w22kv6aew9****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AssetsType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the details.</para>
+            /// <para>The detail ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1123</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The port that is exposed to the Internet.</para>
+            /// <para>The open public port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3389</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The security threat.</para>
+            /// <para>The security risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProbRisk { get; set; }
 
             /// <summary>
-            /// <para>The description of the security threat.</para>
+            /// <para>The description of the security risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PublicIp { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The ID of the region where the instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic in the last 24 hours.</para>
+            /// <para>The traffic proportion over the last 1 day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent1Day { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic in the last 30 days.</para>
+            /// <para>The traffic proportion over the last 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent30Day { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic in the last 7 days.</para>
+            /// <para>The traffic proportion over the last 7 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent7Day { get; set; }
 
             /// <summary>
-            /// <para>The reason why the protocol is not detected when the protocol is identified as Unknown.</para>
+            /// <para>The reason why the protocol is not identified when the recognized protocol is Unknown.</para>
             /// </summary>
             [NameInMap("UnknownReason")]
             [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public DescribeInternetOpenDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeInternetOpenDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

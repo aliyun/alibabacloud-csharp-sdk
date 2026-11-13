@@ -12,14 +12,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The ACL type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Internet</b></para>
-        /// </description></item>
-        /// <item><description><para><b>NAT</b></para>
-        /// </description></item>
-        /// <item><description><para><b>VPC</b></para>
-        /// </description></item>
-        /// <item><description><para><b>All</b></para>
-        /// </description></item>
+        /// <item><description><b>Internet</b>                       </description></item>
+        /// <item><description><b>NAT</b></description></item>
+        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>All</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -31,12 +27,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,11 +65,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether the application is common. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: common</para>
+        /// <item><description><para>1: Common.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: not common</para>
+        /// <item><description><para>0: Uncommon.</para>
         /// </description></item>
-        /// <item><description><para>If you omit this parameter (the default), all applications are returned.</para>
+        /// <item><description><para>Empty (default): All.</para>
         /// </description></item>
         /// </list>
         /// 

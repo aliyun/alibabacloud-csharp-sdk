@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddInstanceMembersRequest : TeaModel {
         /// <summary>
-        /// <para>The list of Cloud Firewall member accounts to add. Call DescribeInstanceRdAccounts to obtain the available MemberUid values. You can add up to 20 members at a time, subject to the instance member quota.</para>
+        /// <para>The list of Cloud Firewall member accounts to add. You can call the DescribeInstanceRdAccounts operation to obtain the MemberUid of the accounts that can be added. You can add up to 20 member accounts at a time, subject to the maximum number of members allowed for the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AddInstanceMembers</para>
+        /// <para>[{&quot;MemberUid&quot;:&quot;258039427902****&quot;,&quot;MemberDesc&quot;:&quot;renewal&quot;}]</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<AddInstanceMembersRequestMembers> Members { get; set; }
         public class AddInstanceMembersRequestMembers : TeaModel {
             /// <summary>
-            /// <para>The remarks of the Cloud Firewall member account. The value must be 1 to 256 characters in length. You can add up to 20 member accounts.</para>
+            /// <para>The description of the Cloud Firewall member account. The description must be 1 to 256 characters in length. You can add up to 20 member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>renewal</para>

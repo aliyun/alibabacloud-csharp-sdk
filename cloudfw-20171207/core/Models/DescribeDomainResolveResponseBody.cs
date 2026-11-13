@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the domain name resolution.</para>
+        /// <para>The DNS resolution results for the domain name.</para>
         /// </summary>
         [NameInMap("ResolveResult")]
         [Validation(Required=false)]
         public DescribeDomainResolveResponseBodyResolveResult ResolveResult { get; set; }
         public class DescribeDomainResolveResponseBodyResolveResult : TeaModel {
             /// <summary>
-            /// <para>The resolution result of the domain name. Multiple IP addresses are separated by commas (,).</para>
+            /// <para>The DNS resolution results for the domain name. Multiple IP addresses are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>11.1.X.X,12.1.X.X</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetOpenStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of public IP addresses exposed to the Internet.</para>
+        /// <para>The total number of open public IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? InternetIpNum { get; set; }
 
         /// <summary>
-        /// <para>The total number of ports exposed to the Internet.</para>
+        /// <para>The total number of open ports.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? InternetPortNum { get; set; }
 
         /// <summary>
-        /// <para>The number of risky public IP addresses exposed to the Internet.</para>
+        /// <para>The number of risky open public IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? InternetRiskServiceNum { get; set; }
 
         /// <summary>
-        /// <para>The total number of applications exposed to the Internet.</para>
+        /// <para>The total number of open applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? InternetServiceNum { get; set; }
 
         /// <summary>
-        /// <para>The number of public IP addresses of Server Load Balancer (SLB) instances.</para>
+        /// <para>The number of SLB public IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? InternetSlbIpNum { get; set; }
 
         /// <summary>
-        /// <para>The number of public ports of SLB instances.</para>
+        /// <para>The number of SLB public ports.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? InternetSlbIpPortNum { get; set; }
 
         /// <summary>
-        /// <para>The number of ports that are not protected by an access control list (ACL).</para>
+        /// <para>The number of ports that are not protected by access control lists (ACLs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

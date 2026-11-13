@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsFound { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7D5483BF-2262-586D-8706-BDDB8B42****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskFinishTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>189997648</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task name.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>egressgw</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskStartTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values:</para>
+        /// <para>The status of the task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>init</b></para>
         /// </description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepInfo { get; set; }
 
             /// <summary>
-            /// <para>The name of the Cloud Firewall security step.</para>
+            /// <para>Creating Cloud Firewall security.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Create Firewall</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepProgress { get; set; }
 
             /// <summary>
-            /// <para>The task step status. Valid values:</para>
+            /// <para>The status of the task step. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>init</b> </para>
             /// </description></item>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The waiting time, in minutes.</para>
+        /// <para>The waiting time. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

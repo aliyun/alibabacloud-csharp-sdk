@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDomainResolveRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name to resolve.</para>
+        /// <para>The domain name to be resolved.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The IP version of the asset that is protected by Cloud Firewall. Valid values:</para>
+        /// <para>The IP version of the asset protected by Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>4</b> (default): IPv4</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: IPv6</para>
-        /// </description></item>
+        /// <item><description><b>4</b> (default): IPv4</description></item>
+        /// <item><description><b>6</b>: IPv6</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,13 +35,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language for receiving messages.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The source IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>

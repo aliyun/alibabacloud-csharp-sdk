@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetSlbResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of data.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclId { get; set; }
 
             /// <summary>
-            /// <para>The status of access control.</para>
+            /// <para>The access control status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public DescribeInternetSlbResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeInternetSlbResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

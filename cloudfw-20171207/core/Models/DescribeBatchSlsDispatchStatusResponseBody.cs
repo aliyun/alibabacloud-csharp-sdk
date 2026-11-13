@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeBatchSlsDispatchStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of detailed information about the Logstores.</para>
+        /// <para>The list of Logstore details.</para>
         /// </summary>
         [NameInMap("InfoList")]
         [Validation(Required=false)]
         public List<DescribeBatchSlsDispatchStatusResponseBodyInfoList> InfoList { get; set; }
         public class DescribeBatchSlsDispatchStatusResponseBodyInfoList : TeaModel {
             /// <summary>
-            /// <para>The details of the log delivery configuration.</para>
+            /// <para>The log delivery configuration details.</para>
             /// </summary>
             [NameInMap("ItemList")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string DispatchName { get; set; }
 
                 /// <summary>
-                /// <para>The key for the log categorization. Valid values:</para>
+                /// <para>The log classification key. Valid values:</para>
                 /// <para><b>internet_log</b></para>
                 /// <para><b>vpc_firewall_log</b></para>
                 /// <para><b>nat_firewall_log</b></para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string DispatchValue { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether this delivery type is enabled.</para>
+                /// <para>The enablement status of the delivery type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The detailed delivery configurations for the Internet and VPCs.</para>
+                /// <para>The detailed delivery configuration for the Internet and VPC firewalls.</para>
                 /// </summary>
                 [NameInMap("FilterKeys")]
                 [Validation(Required=false)]
                 public List<string> FilterKeys { get; set; }
 
                 /// <summary>
-                /// <para>The value is fixed to log_type. You can ignore this parameter.</para>
+                /// <para>The name of the search type. This parameter is fixed as log_type and can be ignored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>log_type</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>\<c>cn\\</c> indicates the Chinese mainland. \<c>intl\\</c> indicates regions outside the Chinese mainland. \<c>global\\</c> indicates global.</para>
+            /// <para>The site. A value of cn indicates the Chinese mainland, intl indicates regions outside the Chinese mainland, and global indicates global.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>A list of Simple Log Service projects.</para>
+        /// <para>The list of log services.</para>
         /// </summary>
         [NameInMap("ItemList")]
         [Validation(Required=false)]
         public List<DescribeBatchSlsDispatchStatusResponseBodyItemList> ItemList { get; set; }
         public class DescribeBatchSlsDispatchStatusResponseBodyItemList : TeaModel {
             /// <summary>
-            /// <para>The status of the delivery configuration.</para>
+            /// <para>The delivery configuration status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success_finished</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ConfigStatus { get; set; }
 
             /// <summary>
-            /// <para>The name of the log delivery.</para>
+            /// <para>The name of the delivery type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>internet-traffic-log</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DispatchName { get; set; }
 
             /// <summary>
-            /// <para>The value of the log to be delivered.</para>
+            /// <para>The value of the log classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>internet_log</para>
@@ -167,14 +167,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The supported filter conditions.</para>
+            /// <para>The supported filter conditions for the Internet and VPC firewalls.</para>
             /// </summary>
             [NameInMap("FilterKeys")]
             [Validation(Required=false)]
             public List<string> FilterKeys { get; set; }
 
             /// <summary>
-            /// <para>The name of the search type.</para>
+            /// <para>The name of the search type. This parameter is fixed as log_type and can be ignored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>log_type</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The log version. A value of 1 indicates that there is one Logstore. A value of 2 indicates that there are two Logstores.</para>
+        /// <para>The log version. A value of 1 indicates one Logstore, and a value of 2 indicates two Logstores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

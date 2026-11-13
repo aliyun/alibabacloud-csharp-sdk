@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The security mode. Valid values:</para>
-        /// <para><b>0</b>: disabled.</para>
-        /// <para><b>1</b>: enabled.</para>
+        /// <para>The safe mode pattern. Valid values:</para>
+        /// <para><b>0</b>: shutdown</para>
+        /// <para><b>1</b>: enabled</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

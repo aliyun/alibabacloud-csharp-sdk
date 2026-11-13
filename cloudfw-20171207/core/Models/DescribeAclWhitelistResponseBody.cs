@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>Indicates whether the whitelist is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Not enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? NatDomainGroupUseDns { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7D45133B-DBC0-506B-9DF9-AB0735D3****</para>

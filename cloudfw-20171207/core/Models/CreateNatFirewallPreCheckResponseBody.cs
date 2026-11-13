@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateNatFirewallPreCheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dry run ID.</para>
+        /// <para>The precheck ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2122</para>

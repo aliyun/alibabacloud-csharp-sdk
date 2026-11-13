@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRiskEventPayloadRequest : TeaModel {
         /// <summary>
-        /// <para>The destination IP address to query. If you specify this parameter, all intrusion events with the specified destination IP address are queried.</para>
+        /// <para>The destination IP address to query. If you specify this parameter, the query returns intrusion prevention events that involve this destination IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>203.0.113.2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstIP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination VPC to query. If you specify this parameter, all intrusion events that contain the specified ID of the destination VPC are queried.</para>
+        /// <para>The destination VPC ID to query. If you specify this parameter, the query returns intrusion prevention events that involve this destination VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6jr1klwqb60dyn2****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstVpcId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a timestamp. Unit: seconds.</para>
+        /// <para>Specifies the end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the firewall. Valid values:</para>
+        /// <para>The type of Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VpcFirewall</b>: virtual private cloud (VPC) firewall</description></item>
-        /// <item><description><b>InternetFirewall</b> (default): Internet firewall</description></item>
+        /// <item><description><b>VpcFirewall</b>: virtual private cloud (VPC) firewalls.</description></item>
+        /// <item><description><b>InternetFirewall</b> (default): the Internet Border firewall.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The public IP address. If you specify this parameter, all intrusion events that contain the specified public IP address are queried.</para>
+        /// <para>The IP address of the public asset to query. If you specify this parameter, the query returns compromise detection events that involve this asset IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>203.0.113.3</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
-        /// <para>The source IP address to query. If you specify this parameter, all intrusion events from the specified source IP address are queried.</para>
+        /// <para>The source IP address to query. If you specify this parameter, the query returns intrusion prevention events that involve this source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>203.0.113.1</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcIP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source VPC to query. If you specify this parameter, all intrusion events that contain the specified ID of the source VPC are queried.</para>
+        /// <para>The source VPC ID to query. If you specify this parameter, the query returns intrusion prevention events that involve this source VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-wz9j2lqyo15udw5nt****</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcVpcId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a timestamp. Unit: seconds.</para>
+        /// <para>Specifies the start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the intrusion event.</para>
+        /// <para>The UUID of the intrusion prevention event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

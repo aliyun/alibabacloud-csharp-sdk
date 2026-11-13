@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The details of the event.</para>
+            /// <para>The event details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<DescribeFirewallVswitchResourcesResponseBodyVswitchListFirewallList> FirewallList { get; set; }
             public class DescribeFirewallVswitchResourcesResponseBodyVswitchListFirewallList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the firewall instance.</para>
+                /// <para>The firewall instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vfw-tr-37145c8f5ede45e9****</para>
@@ -118,9 +118,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The type of the route table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Custom</b>: a custom route table.</para>
+            /// <item><description><para><b>Custom</b>: custom route table</para>
             /// </description></item>
-            /// <item><description><para><b>System</b>: a system route table.</para>
+            /// <item><description><para><b>System</b>: system route table</para>
             /// </description></item>
             /// </list>
             /// 
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VswitchName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-b</para>

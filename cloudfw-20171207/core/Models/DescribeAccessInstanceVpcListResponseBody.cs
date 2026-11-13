@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeAccessInstanceVpcListResponseBodyVpcList> VpcList { get; set; }
         public class DescribeAccessInstanceVpcListResponseBodyVpcList : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the VPC is managed by Cloud Firewall.</para>
+            /// <para>Indicates whether the VPC is a firewall-managed VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public bool? FirewallVpc { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC instance.</para>
+            /// <para>The ID of the VPC-connected instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2ze1t4irqj0fljlbb****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The name of the VPC instance.</para>
+            /// <para>The name of the VPC-connected instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Cloud_Firewall_VPC</para>

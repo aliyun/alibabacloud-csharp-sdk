@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePostpayBillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The aggregated Internet traffic, in GB.</para>
+        /// <para>The aggregated Internet traffic. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public float? AggregateInternetTraffic { get; set; }
 
         /// <summary>
-        /// <para>The aggregated NAT traffic, in GB.</para>
+        /// <para>The aggregated NAT traffic. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public float? AggregateNatTraffic { get; set; }
 
         /// <summary>
-        /// <para>The aggregated sensitive data detection traffic, in GB.</para>
+        /// <para>The aggregated sensitive data detection traffic. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public float? AggregateSdlTraffic { get; set; }
 
         /// <summary>
-        /// <para>The aggregated total traffic, in GB.</para>
+        /// <para>The aggregated total traffic. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public float? AggregateTotalTraffic { get; set; }
 
         /// <summary>
-        /// <para>The aggregated VPC traffic, in GB.</para>
+        /// <para>The aggregated VPC traffic. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public float? AggregateVpcTraffic { get; set; }
 
         /// <summary>
-        /// <para>The bill list.</para>
+        /// <para>The list of bills.</para>
         /// </summary>
         [NameInMap("BillList")]
         [Validation(Required=false)]
         public List<DescribePostpayBillResponseBodyBillList> BillList { get; set; }
         public class DescribePostpayBillResponseBodyBillList : TeaModel {
             /// <summary>
-            /// <para>The end time, expressed as a second-level UNIX timestamp. The value is on the hour or on the day.</para>
+            /// <para>The end time. The time is a UNIX timestamp accurate to seconds, which represents an exact hour or day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733710015</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InternetInstanceCnt { get; set; }
 
             /// <summary>
-            /// <para>The Internet traffic, in GB.</para>
+            /// <para>The Internet traffic. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? InternetTraffic { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the bill is deducted. A value of 0 indicates that the bill is not deducted. Any value greater than 0 indicates that the bill is deducted. If the bill is deducted, it is not charged.</para>
+            /// <para>Indicates whether the fee is reduced. A value of 0 indicates that the fee is not reduced. A value greater than 0 indicates that the fee is reduced. If the fee is reduced, no bill is generated.</para>
             /// <remarks>
-            /// <para>This field is meaningful only when you query hourly data.</para>
+            /// <para>This parameter is valid only when you query hourly data.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IsDerated { get; set; }
 
             /// <summary>
-            /// <para>The log service usage duration, in T × h.</para>
+            /// <para>The usage duration of Simple Log Service. Unit: TB×h.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NatInstanceCnt { get; set; }
 
             /// <summary>
-            /// <para>The NAT traffic, in GB.</para>
+            /// <para>The NAT traffic. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? NatTraffic { get; set; }
 
             /// <summary>
-            /// <para>The data leak detection usage duration, in hours.</para>
+            /// <para>The usage duration of sensitive data leak detection. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? Sdl { get; set; }
 
             /// <summary>
-            /// <para>The sensitive data detection traffic, in GB.</para>
+            /// <para>The sensitive data detection traffic. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? SdlTraffic { get; set; }
 
             /// <summary>
-            /// <para>The start time, expressed as a second-level UNIX timestamp. The value is on the hour or on the day.</para>
+            /// <para>The start time. The time is a UNIX timestamp accurate to seconds, which represents an exact hour or day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710206070000</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The threat intelligence usage duration, in hours.</para>
+            /// <para>The usage duration of threat intelligence. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? VpcInstanceCnt { get; set; }
 
             /// <summary>
-            /// <para>The VPC traffic, in GB.</para>
+            /// <para>The VPC traffic. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>

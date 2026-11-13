@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePolicyAdvancedConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of strict mode. Valid values:</para>
+        /// <para>The enabling status of strict mode for access control policies. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b>: Strict mode is enabled.</description></item>
         /// <item><description><b>off</b>: Strict mode is disabled.</description></item>

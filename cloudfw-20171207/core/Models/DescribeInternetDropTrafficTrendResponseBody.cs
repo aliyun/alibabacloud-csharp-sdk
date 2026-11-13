@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeInternetDropTrafficTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetDropTrafficTrendResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The number of sessions dropped by access control list (ACL) rules.</para>
+            /// <para>The number of corresponding intrusion prevention events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? AclDrop { get; set; }
 
             /// <summary>
-            /// <para>The current time point. The time is in the <c>YYYY-MM-DD HH:mm:ss</c> format.</para>
+            /// <para>The current time point. The time format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-08-25 12:00:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DataTime { get; set; }
 
             /// <summary>
-            /// <para>The ratio of dropped sessions to total sessions for this data point.</para>
+            /// <para>The list of queried traffic points.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DropRatio { get; set; }
 
             /// <summary>
-            /// <para>The number of dropped sessions for the corresponding data point in the previous cycle.</para>
+            /// <para>The value range of the object: <b>[0,10000\]</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DropRing { get; set; }
 
             /// <summary>
-            /// <para>The drop ratio for the corresponding data point in the previous cycle.</para>
+            /// <para>The rate of network traffic. Unit: kbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DropRingRatio { get; set; }
 
             /// <summary>
-            /// <para>The number of dropped sessions.</para>
+            /// <para>The number of blocked sessions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DropSession { get; set; }
 
             /// <summary>
-            /// <para>The number of sessions dropped by the intrusion prevention system (IPS).</para>
+            /// <para>The number of queried IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpsDrop { get; set; }
 
             /// <summary>
-            /// <para>The corresponding time point in the previous cycle. The time is in the <c>YYYY-MM-DD HH:mm:ss</c> format.</para>
+            /// <para>The corresponding time point in the previous period. The time format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-08-25 12:00:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RingDataTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp for the corresponding data point in the previous cycle. This value is a Unix timestamp that represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</para>
+            /// <para>The dynamic packet drop time. The value is a UNIX timestamp in seconds, which indicates the number of seconds that have elapsed since January 1, 1970 (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724982259</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? Time { get; set; }
 
             /// <summary>
-            /// <para>The total number of sessions.</para>
+            /// <para>The total number of requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The peak number of dropped sessions in the specified period.</para>
+        /// <para>The maximum number of dropped sessions in the corresponding period (peak value).</para>
         /// 
         /// <b>Example:</b>
         /// <para>8090</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DropSessionMax { get; set; }
 
         /// <summary>
-        /// <para>The average drop ratio for the entire query period, expressed as a percentage.</para>
+        /// <para>The traffic multiplication mode. Valid values: - <b>0</b>: priority mode. - <b>1</b>: load balancing mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12.34</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The average drop ratio from the previous cycle, expressed as a percentage.</para>
+        /// <para>The traffic rate. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.23</para>

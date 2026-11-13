@@ -44,10 +44,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether to restore the traffic redirection configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Route rollback.</para>
-        /// </description></item>
-        /// <item><description><para>false: Route withdrawal.</para>
-        /// </description></item>
+        /// <item><description>true: Rolls back the route.</description></item>
+        /// <item><description>false: Revokes the route.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

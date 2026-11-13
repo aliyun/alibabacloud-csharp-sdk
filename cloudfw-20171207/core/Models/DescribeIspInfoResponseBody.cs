@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeIspInfoResponseBodyDataList> DataList { get; set; }
         public class DescribeIspInfoResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The ID of the ISP.</para>
+            /// <para>The ISP ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>isp-dhyw2lxfpc****</para>
+            /// <para>1000323</para>
             /// </summary>
             [NameInMap("IspId")]
             [Validation(Required=false)]
             public int? IspId { get; set; }
 
             /// <summary>
-            /// <para>The name of the ISP.</para>
+            /// <para>The ISP name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>telecom</para>

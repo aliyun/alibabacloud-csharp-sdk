@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeVpcFirewallDropTrafficTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeVpcFirewallDropTrafficTrendResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The number of sessions blocked by the access control list (ACL).</para>
+            /// <para>The number of ACL blocks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? AclDrop { get; set; }
 
             /// <summary>
-            /// <para>The data timestamp. The value is a string in the YYYY-MM-DD HH:mm:ss format.</para>
+            /// <para>The data timestamp. The value is a character string in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-08-25 12:00:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DataTime { get; set; }
 
             /// <summary>
-            /// <para>The number of blocked sessions.</para>
+            /// <para>The number of blocks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DropSession { get; set; }
 
             /// <summary>
-            /// <para>The number of sessions blocked by the intrusion prevention system (IPS).</para>
+            /// <para>The number of IPS blocks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpsDrop { get; set; }
 
             /// <summary>
-            /// <para>The data timestamp. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The data timestamp. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1659405600</para>

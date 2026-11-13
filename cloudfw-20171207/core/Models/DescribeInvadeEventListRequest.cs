@@ -40,7 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Specifies the page number to return in a paged query.</para>
+        /// <para>Settings for the paged query. Specifies the page number to return for paging.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies the end time of the query. The value is a UNIX timestamp in seconds. If this parameter is not specified, the current time is used.</para>
+        /// <para>Specifies the end time of the query. The value is a UNIX timestamp in seconds. If you do not specify this parameter, the query ends at the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656837360</para>
@@ -60,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the compromise awareness event.</para>
+        /// <para>The ID of the breach awareness event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69d189e2-ec17-4676-a2fe-02969234****</para>
@@ -70,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventKey { get; set; }
 
         /// <summary>
-        /// <para>The name of the compromise awareness event.</para>
+        /// <para>The name of the breach awareness event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>event_test</para>
@@ -80,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the compromise awareness event.</para>
+        /// <para>The UUID of the breach awareness event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fadd-dfdd-****</para>
@@ -90,7 +91,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventUuid { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the compromise awareness event is ignored. Valid values:</para>
+        /// <para>Specifies whether the breach awareness event is ignored. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Ignored.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Not ignored.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,7 +107,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IsIgnore { get; set; }
 
         /// <summary>
-        /// <para>The language type of the received message. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -120,7 +131,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
-        /// <para>Specifies the number of entries per page in a paged query.</para>
+        /// <para>Settings for the paged query. Specifies the number of entries to return on each page for paging.</para>
+        /// <para>Default value: 6. Maximum value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -133,7 +145,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The list of processing statuses.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1358090477156271</para>
+        /// <para>[0]</para>
         /// </summary>
         [NameInMap("ProcessStatusList")]
         [Validation(Required=false)]
@@ -160,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>Specifies the start time of the query. The value is a UNIX timestamp in seconds. If this parameter is not specified, the query starts from the last 30 days.</para>
+        /// <para>Specifies the start time of the query. The value is a UNIX timestamp in seconds. If you do not specify this parameter, the query starts from 30 days ago.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656750960</para>

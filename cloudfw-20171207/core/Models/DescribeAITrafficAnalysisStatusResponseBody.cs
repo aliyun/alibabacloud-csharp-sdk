@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The enabling status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>open</b></para>
-        /// </description></item>
-        /// <item><description><para><b>close</b></para>
-        /// </description></item>
+        /// <item><description><b>open</b>: Enabled.</description></item>
+        /// <item><description><b>close</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

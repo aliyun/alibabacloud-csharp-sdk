@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallV2RoutePolicyListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>95EB5F3A-67FE-5780-92BD-5ECBA772AB7E</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of firewall routing policies.</para>
+        /// <para>The list of firewall route policies.</para>
         /// </summary>
         [NameInMap("TrFirewallRoutePolicies")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The policy description.</para>
+            /// <para>The description of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Point to multipoint</para>
@@ -86,19 +86,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The policy status. Valid values:</para>
+            /// <para>The status of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>creating: being created</para>
+            /// <item><description><para>creating: The policy is being created.</para>
             /// </description></item>
-            /// <item><description><para>deleting: being deleted</para>
+            /// <item><description><para>deleting: The policy is being deleted.</para>
             /// </description></item>
-            /// <item><description><para>opening: being enabled</para>
+            /// <item><description><para>opening: The policy is being enabled.</para>
             /// </description></item>
-            /// <item><description><para>opened: enabled</para>
+            /// <item><description><para>opened: The policy is enabled.</para>
             /// </description></item>
-            /// <item><description><para>closing: being disabled</para>
+            /// <item><description><para>closing: The policy is being disabled.</para>
             /// </description></item>
-            /// <item><description><para>closed: disabled</para>
+            /// <item><description><para>closed: The policy is disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -110,13 +110,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PolicyStatus { get; set; }
 
             /// <summary>
-            /// <para>The traffic redirection scenario type for the virtual private cloud (VPC) firewall on CEN Enterprise Edition. Valid values:</para>
+            /// <para>The traffic redirection scenario type for virtual private cloud (VPC) firewalls in Cloud Enterprise Network (CEN) Enterprise Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>fullmesh</b>: multi-point interconnection</para>
+            /// <item><description><para><b>fullmesh</b>: full mesh interconnection.</para>
             /// </description></item>
-            /// <item><description><para><b>one_to_one</b>: point-to-point</para>
+            /// <item><description><para><b>one_to_one</b>: point-to-point.</para>
             /// </description></item>
-            /// <item><description><para><b>end_to_end</b>: point-to-multipoint</para>
+            /// <item><description><para><b>end_to_end</b>: point-to-multipoint.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The ID of the firewall routing policy.</para>
+            /// <para>The ID of the firewall route policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policy-7b66257c14e141fb****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetRiskListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The asset details returned.</para>
+        /// <para>The details of the returned assets.</para>
         /// </summary>
         [NameInMap("AssetList")]
         [Validation(Required=false)]
         public List<DescribeAssetRiskListResponseBodyAssetList> AssetList { get; set; }
         public class DescribeAssetRiskListResponseBodyAssetList : TeaModel {
             /// <summary>
-            /// <para>The server IP address.</para>
+            /// <para>The IP address of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>39.108.XX.XX</para>
@@ -27,13 +27,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The IP address version of the assets protected by Cloud Firewall.</para>
-            /// <para>Valid values:</para>
+            /// <para>The IP version of the asset protected by Cloud Firewall. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>4</b>: IPv4 address.</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: IPv6 address.</para>
-            /// </description></item>
+            /// <item><description><b>4</b>: IPv4 address</description></item>
+            /// <item><description><b>6</b>: IPv6 address</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The risk reason.</para>
+            /// <para>The cause of the risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>other</para>
@@ -56,9 +53,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>low</b>: low risk</description></item>
-            /// <item><description><b>middle</b>: medium risk</description></item>
-            /// <item><description><b>high</b>: high risk</description></item>
+            /// <item><description><b>low</b>: Low risk</description></item>
+            /// <item><description><b>middle</b>: Medium risk</description></item>
+            /// <item><description><b>high</b>: High risk</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>443C5781-1C03-5FCD-8EC5-FB9C0B9AC396</para>
@@ -81,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

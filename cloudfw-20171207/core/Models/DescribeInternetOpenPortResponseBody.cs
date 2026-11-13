@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The open port.</para>
+            /// <para>The open ports.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The security threat.</para>
+            /// <para>The security risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProbRisk { get; set; }
 
             /// <summary>
-            /// <para>The description of the security threat.</para>
+            /// <para>The description of the security risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desc</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The number of public IP addresses that have the port open.</para>
+            /// <para>The number of open public IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The description of the risk.</para>
+            /// <para>The risk description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic in the last 24 hours. Valid values: <b>1</b> to <b>100</b>.</para>
+            /// <para>The traffic proportion. Valid values: <b>1</b> to <b>100</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent1Day { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic in the last 30 days.</para>
+            /// <para>The traffic proportion over the last 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent30Day { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic in the last 7 days.</para>
+            /// <para>The traffic proportion over the last 7 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent7Day { get; set; }
 
             /// <summary>
-            /// <para>The reason why the protocol is not identified when the protocol is detected as Unknown.</para>
+            /// <para>The reason why the protocol is not identified when the recognized protocol is Unknown.</para>
             /// </summary>
             [NameInMap("UnknownReason")]
             [Validation(Required=false)]

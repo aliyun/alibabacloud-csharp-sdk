@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddAddressBookRequest : TeaModel {
         /// <summary>
-        /// <para>The ACK cluster connector ID. You can obtain the value from the following operation:</para>
+        /// <para>The ID of the ACK cluster connector. You can obtain the value from the following operation:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Lists ACK cluster connectors.</description></item>
+        /// <item><description><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries the list of ACK cluster connectors.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> AckNamespaces { get; set; }
 
         /// <summary>
-        /// <para>The addresses in the address book. Separate multiple addresses with commas (,). Use a space to separate an address from its description within a single address element.</para>
+        /// <para>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address element, separate the address and the description with a space.</para>
         /// <remarks>
         /// <para>This parameter is required when GroupType is set to <c>ip</c>, <c>port</c>, or <c>domain</c>.</para>
         /// </remarks>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<long?> AssetMemberUids { get; set; }
 
         /// <summary>
-        /// <para>The list of regions and resource types for the asset address book.</para>
+        /// <para>The asset address book, region, and resource type list.</para>
         /// </summary>
         [NameInMap("AssetRegionResourceTypes")]
         [Validation(Required=false)]
         public List<AddAddressBookRequestAssetRegionResourceTypes> AssetRegionResourceTypes { get; set; }
         public class AddAddressBookRequestAssetRegionResourceTypes : TeaModel {
             /// <summary>
-            /// <para>The region ID of the asset.</para>
+            /// <para>The asset region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>all</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public AddAddressBookRequestAssetRegionResourceTypesResourceTypeIpv6 Ipv6 { get; set; }
                 public class AddAddressBookRequestAssetRegionResourceTypesResourceTypeIpv6 : TeaModel {
                     /// <summary>
-                    /// <para>The asset type: AIGatewayEIPv6.</para>
+                    /// <para>The AIGatewayEIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? AiGatewayEIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: AlbIPv6.</para>
+                    /// <para>The AlbIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? AlbIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: ApigEIPv6.</para>
+                    /// <para>The ApigEIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? ApiGatewayEIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: EcsIPv6.</para>
+                    /// <para>The EcsIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? EcsIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: EniEIPv6.</para>
+                    /// <para>The EniEIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? EniEIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: GaEIPv6.</para>
+                    /// <para>The GaEIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? GaEIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: NlbIPv6.</para>
+                    /// <para>The NlbIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? NlbIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: SlbIPv6.</para>
+                    /// <para>The SlbIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether to automatically add the public IP addresses of Elastic Compute Service (ECS) instances that match the specified tags to the address book.</para>
+        /// <para>Specifies whether the address book is automatically updated to include the public IP addresses of Elastic Compute Service (ECS) instances that match new labels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>The language type of the address book description.</para>
+        /// <para>The language of the address book description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The ECS tag list.</para>
+        /// <para>The list of ECS tags.</para>
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
@@ -484,7 +484,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The logical relationship among multiple ECS tags to match.</para>
+        /// <para>The relationship between multiple ECS tags to be matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>

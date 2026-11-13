@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAckClusterPodLabelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of ACK labels.</para>
+        /// <para>The list of ACK tags.</para>
         /// </summary>
         [NameInMap("AckLabels")]
         [Validation(Required=false)]

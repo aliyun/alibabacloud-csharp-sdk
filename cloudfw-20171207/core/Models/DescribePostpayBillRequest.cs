@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePostpayBillRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time of the bill query, expressed as a second-level UNIX timestamp. The value must be later than StartTime.</para>
+        /// <para>The end time of the bill query. The time is a UNIX timestamp accurate to seconds and must be later than the start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,23 +31,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies the time interval for querying data. This is an enumeration value. This parameter is required. If this parameter is not specified, ERR_PARAMS_INVALID is returned. Valid values:</para>
+        /// <para>The aggregation interval of the bill data. Unit: seconds. This parameter is required. If you do not specify this parameter, the ERR_PARAMS_INVALID error is returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>3600: queries hourly data.</description></item>
-        /// <item><description>86400: queries daily data.</description></item>
+        /// <item><description>3600: Hourly aggregation.</description></item>
+        /// <item><description>86400: Daily aggregation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>60</para>
+        /// <para>3600</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The language. This is an enumeration value.
-        /// Default value: zh.
-        /// Valid value: en.</para>
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese.
+        /// Default value: zh.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Default value: 10.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the bill query, expressed as a second-level UNIX timestamp.</para>
+        /// <para>The start time of the bill query. The time is a UNIX timestamp accurate to seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

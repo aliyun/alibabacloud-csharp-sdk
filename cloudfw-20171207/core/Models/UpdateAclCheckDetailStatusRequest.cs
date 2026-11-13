@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The modified status.</para>
+        /// <para>The new status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ACL check task ID.</para>
+        /// <para>The ID of the ACL check task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier ID of the ACL policy in the ACL check details.</para>
+        /// <para>The UUID of the ACL policy in the ACL check detail.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

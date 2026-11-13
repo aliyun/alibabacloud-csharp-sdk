@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The update time. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</para>
+            /// <para>The update time. The value is a UNIX timestamp in seconds, which indicates the number of seconds that have elapsed since January 1, 1970 (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1579091739</para>

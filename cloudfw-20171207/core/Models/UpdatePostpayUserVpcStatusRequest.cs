@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class UpdatePostpayUserVpcStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Firewall instance.</para>
+        /// <para>The ID of the Cloud Firewall instance. This parameter is required. If you do not specify this parameter, the API returns a 400 error. You can call the DescribeUserBuyVersion operation to obtain the Cloud Firewall instance ID of the current account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cfw_elasticity_public_cn-************</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The operation type. Currently, only the activation operation is supported. Valid values:</para>
+        /// <para>The operation type. Only the enable operation is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>open: activation</description></item>
+        /// <item><description>open: Enables the module.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type.</para>
+        /// <para>The category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id_card</para>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled.</description></item>
-        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

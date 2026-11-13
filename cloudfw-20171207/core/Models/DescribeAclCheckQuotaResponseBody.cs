@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
-            /// <para>The time when the quota was last updated. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The last update time of the quota. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724982259</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallDropTrafficTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1747792853</para>
@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>asc</b>: ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><b>desc</b>: descending order. This is the default value.</para>
-        /// </description></item>
+        /// <item><description><b>asc</b>: ascending order</description></item>
+        /// <item><description><b>desc</b> (default): descending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656664560</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time point of the traffic. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The traffic time point. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1739337840</para>

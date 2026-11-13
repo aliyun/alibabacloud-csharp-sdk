@@ -52,13 +52,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> AckNamespaces { get; set; }
 
         /// <summary>
-        /// <para>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address element, separate the address and the description with a space. You must specify this parameter when GroupType is set to <b>ip</b>, <b>port</b>, or <b>domain</b>.</para>
+        /// <para>The list of addresses in the address book. Separate multiple addresses with commas (,). Separate the address and description of an address element with a space. You must configure this parameter when GroupType is set to <b>ip</b>, <b>port</b>, or <b>domain</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If GroupType is set to <b>ip</b>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</para>
+        /// <item><description><para>When GroupType is set to <b>ip</b>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</para>
         /// </description></item>
-        /// <item><description><para>If GroupType is set to <b>port</b>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</para>
+        /// <item><description><para>When GroupType is set to <b>port</b>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</para>
         /// </description></item>
-        /// <item><description><para>If GroupType is set to <b>domain</b>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</para>
+        /// <item><description><para>When GroupType is set to <b>domain</b>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetMemberUidsShrink { get; set; }
 
         /// <summary>
-        /// <para>The asset address book, region, and resource type list.</para>
+        /// <para>The asset address book, regions, and resource types.</para>
         /// </summary>
         [NameInMap("AssetRegionResourceTypes")]
         [Validation(Required=false)]
         public string AssetRegionResourceTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies if the automatic addition of the public IP addresses of Elastic Compute Service (ECS) instances that match the new labels to the address book is enabled.</para>
+        /// <para>Specifies whether the public IP addresses of Elastic Compute Service (ECS) instances that match a new tag are automatically added to the address book.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -133,9 +133,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the address book.</para>
+        /// <para>The unique ID of the address book.</para>
         /// <remarks>
-        /// <para>To obtain the value, call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation.</para>
+        /// <para>Value source: <a href="~~DescribeAddressBook~~">List address books</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -159,8 +159,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The modification mode.</para>
         /// <remarks>
-        /// <para>If GroupType is set to <b>ip</b>, <b>ipv6</b>, <b>port</b>, or <b>domain</b> and this parameter is not specified, the <b>Cover</b> mode is used by default to modify the address book.
-        /// Notice: If GroupType is set to <b>tag</b>, this parameter must be left empty.</notice></para>
+        /// <para>When GroupType is set to <b>ip</b>, <b>ipv6</b>, <b>port</b>, or <b>domain</b>, if you do not configure this parameter, the <b>Cover</b> mode is used by default to modify the address book.
+        /// <notice>When GroupType is set to <b>tag</b>, this parameter must be left empty.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

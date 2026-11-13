@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyAddressBookResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request is a successful dry run. A value of true indicates that only the dry run is performed and no actual modifications are made.</para>
+        /// <para>Indicates whether the response is a successful dry run. A value of true indicates that only the dry run was completed and no actual modifications were made.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

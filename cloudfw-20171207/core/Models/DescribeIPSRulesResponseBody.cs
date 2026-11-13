@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeIPSRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of rules that have the <c>drop</c> action.</para>
+        /// <para>The total number of rules with the block action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>976</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeIPSRulesResponseBodyRules> Rules { get; set; }
         public class DescribeIPSRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The target application.</para>
+            /// <para>The attacked application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SMB</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DefaultMode { get; set; }
 
             /// <summary>
-            /// <para>A description of the rule.</para>
+            /// <para>The rule description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -137,8 +137,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The engine mode.</para>
-            /// <para>This parameter takes effect only when <c>DefaultMode</c> is set to <c>drop</c>.</para>
+            /// <para>The supported engine mode.</para>
+            /// <para>This value is valid only when DefaultMode is set to drop (Block). In other modes, this value is meaningless.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Nmap扫描探测</para>
+            /// <para>Nmap scan detection</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The rule UUID.</para>
+            /// <para>The UUID of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d401b0cb-dc64-4bbe-bba0-3e7c744****</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RuleUuid { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp for when the rule was last updated.</para>
+            /// <para>The timestamp when the rule was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1775101028</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the rule is user-defined.</para>
+            /// <para>Specifies whether the rule is a custom rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string UserDefined { get; set; }
 
             /// <summary>
-            /// <para>The user-defined status of the rule.</para>
+            /// <para>The user status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of user-defined rules.</para>
+        /// <para>The total number of rules with custom actions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallV2RoutePolicyListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number in a paged query. Default value: 1. For more information about paging, see the corresponding parameter descriptions.</para>
+        /// <para>The page number for a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
-        /// <remarks>
-        /// <para>FirewallId is required. If this parameter is not specified, the ErrorParameters (400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId. Prerequisites: CEN Enterprise Edition with a transit router and VPC mount are configured, and the FirewallId is obtained by calling DescribeTrFirewallsV2List.</para>
-        /// </remarks>
+        /// <para>The ID of the virtual private cloud (VPC) firewall instance. This parameter is required. If this parameter is not specified, an ErrorParameters (400) error is returned. You can call the DescribeTrFirewallsV2List operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-d5ba592ac6c84aff****</para>
@@ -33,10 +30,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Default value: 10. For more information about paging, see the corresponding parameter descriptions.</para>
+        /// <para>The maximum number of entries to return per page for a paged query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the firewall routing policy.</para>
+        /// <para>The ID of the firewall route policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-7b66257c14e141fb****</para>

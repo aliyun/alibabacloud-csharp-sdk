@@ -1,3 +1,30 @@
+2026-11-13 Version: 9.5.0
+- Support API CreateApplicationCustomRules.
+- Support API CreateApplicationTemplate.
+- Support API CreateWebFilterRules.
+- Support API CreateWebFilterTemplate.
+- Support API DeleteApplicationCustomRules.
+- Support API DeleteApplicationTemplate.
+- Support API DeleteWebFilterRules.
+- Support API DeleteWebFilterTemplate.
+- Support API DescribeApplicationStatistics.
+- Support API DescribeEventLog.
+- Support API DescribeInvadeEventPayload.
+- Support API GetApplicationTemplate.
+- Support API GetFirewallFeature.
+- Support API ListApplicationCustomRules.
+- Support API ListApplicationTemplate.
+- Support API ListApplicationUpdateDynamics.
+- Support API ListApplications.
+- Support API ListWebFilterRules.
+- Support API ListWebFilterTemplates.
+- Support API UpdateApplicationCustomRules.
+- Support API UpdateApplicationTemplate.
+- Support API UpdateFirewallFeature.
+- Support API UpdateWebFilterRules.
+- Support API UpdateWebFilterTemplate.
+
+
 2026-10-09 Version: 9.4.4
 - Update API DeleteControlPolicy: add request parameters ClientToken.
 - Update API DeleteControlPolicy: add request parameters DryRun.

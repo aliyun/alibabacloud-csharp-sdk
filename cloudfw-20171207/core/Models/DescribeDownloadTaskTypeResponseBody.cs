@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task.</para>
+            /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InternetFirewallAsset</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

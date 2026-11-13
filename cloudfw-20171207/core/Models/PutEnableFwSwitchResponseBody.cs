@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutEnableFwSwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status information list for assets that are not synchronized.</para>
+        /// <para>The list of status information when assets are not synchronized.</para>
         /// </summary>
         [NameInMap("AbnormalResourceStatusList")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The message when the asset is not synchronized. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloudfirewall do not sync this ip address: Cloud Firewall did not synchronize this asset IP address.</description></item>
+            /// <item><description>cloudfirewall do not sync this ip address: Cloud Firewall does not synchronize this asset IP address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The asset IP address.</para>
+            /// <para>The IP address of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>203.0.113.0</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The status when the asset is not synchronized. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ip_not_sync: the asset is not synchronized.</description></item>
+            /// <item><description>ip_not_sync: The asset is not synchronized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether this response is a dry run success response. A value of true indicates that only the dry run was completed and no actual changes were made. This field is not returned or is set to false for actual calls.</para>
+        /// <para>Indicates whether the response is a successful dry run precheck. A value of true indicates that only the precheck is completed and no actual changes are made. This field is not returned or is set to false for actual calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

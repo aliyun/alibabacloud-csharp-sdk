@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the requester.</para>
+        /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>

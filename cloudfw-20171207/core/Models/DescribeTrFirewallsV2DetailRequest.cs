@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallsV2DetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the VPC firewall instance. This parameter is required. If this parameter is not specified, the error ErrorMissingFirewallId (-360444, firewall id is required) is returned.</para>
+        /// <para>The ID of the VPC firewall instance. This parameter is required. If this parameter is not specified, the ErrorMissingFirewallId (-360444, firewall id is required) error is returned.</para>
         /// <remarks>
-        /// <para>You can call DescribeTrFirewallsV2List to query existing FirewallId values (in the format of vfw-tr-\*). If no firewall has been created, create an Enterprise Edition transit router in the CEN console first, and then call CreateTrFirewallV2.</para>
+        /// <para>You can call DescribeTrFirewallsV2List to query existing FirewallIds (in the format of vfw-tr-*). If the firewall has not been created, you must first create an Enterprise Edition transit router in CEN and then call CreateTrFirewallV2.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>

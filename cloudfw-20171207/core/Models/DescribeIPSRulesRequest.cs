@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeIPSRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The application targeted by the attack.</para>
+        /// <para>The attacked application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMB</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AttackApp { get; set; }
 
         /// <summary>
-        /// <para>The categories of applications targeted by attacks.</para>
+        /// <para>The list of categories of the attacked applications. Specify the value in the [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;] format.</para>
         /// </summary>
         [NameInMap("AttackAppCategory")]
         [Validation(Required=false)]
         public List<string> AttackAppCategory { get; set; }
 
         /// <summary>
-        /// <para>The applications targeted by attacks.</para>
+        /// <para>The list of attacked applications.</para>
         /// </summary>
         [NameInMap("AttackApps")]
         [Validation(Required=false)]
         public List<string> AttackApps { get; set; }
 
         /// <summary>
-        /// <para>The attack type.</para>
+        /// <para>The attack application type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Web attack</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Cve { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule.</para>
+        /// <para>The enabling status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DefaultAction { get; set; }
 
         /// <summary>
-        /// <para>The type of firewall.</para>
+        /// <para>The Cloud Firewall type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VpcFirewall</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response.</para>
+        /// <para>The language of the request message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The sort order.</para>
+        /// <para>The sorting order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to retrieve only modified rules.</para>
+        /// <para>Specifies whether the rule has been modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleAction { get; set; }
 
         /// <summary>
-        /// <para>The inspection mode.</para>
+        /// <para>The supported engine mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dropStrict</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by.</para>
+        /// <para>The sorting method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UpdateTime</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.139.222.XXX</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-rnbkqx4a8er21a****</para>

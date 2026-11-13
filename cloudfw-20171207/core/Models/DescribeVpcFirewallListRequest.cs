@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallListRequest : TeaModel {
         /// <summary>
-        /// <para>The subtype of the connection. Valid values:</para>
+        /// <para>The connection subtype. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>vpc2vpc</b>: Express Connect.</para>
-        /// </description></item>
-        /// <item><description><para><b>vpcpeer</b>: peering connection.</para>
-        /// </description></item>
+        /// <item><description><b>vpc2vpc</b>: Express Connect.</description></item>
+        /// <item><description><b>vpcpeer</b>: VPC peering connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +24,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ConnectSubType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Default value: <b>1</b>.</para>
+        /// <para>The page number Settings for a paging query.</para>
+        /// <para>Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,19 +35,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The status of the VPC firewall. Valid values:</para>
+        /// <para>The status of the virtual private cloud (VPC) border firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>opened</b>: The firewall is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>closed</b>: The firewall is disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>notconfigured</b>: The firewall is not configured.</para>
-        /// </description></item>
-        /// <item><description><para><b>configured</b>: The firewall is configured.</para>
-        /// </description></item>
+        /// <item><description><b>opened</b>: Enabled.</description></item>
+        /// <item><description><b>closed</b>: Disabled.</description></item>
+        /// <item><description><b>notconfigured</b>: The virtual private cloud (VPC) border firewall is not configured.</description></item>
+        /// <item><description><b>configured</b>: The virtual private cloud (VPC) border firewall is configured.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, VPC firewalls in all states are queried.</para>
+        /// <para>If you do not specify the Settings for this parameter, virtual private cloud (VPC) border firewalls in all states are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,10 +56,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account.</para>
+        /// <para>The UID of the member accounts of the current Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -86,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number Settings of virtual private cloud (VPC) border firewalls per page for a paging query.</para>
         /// <para>Default value: <b>10</b>. Maximum value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The region ID of the VPC.</para>
         /// <remarks>
-        /// <para>For more information about the regions where Cloud Firewall is supported, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// <para>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) border firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-m5e7dbc4y****</para>
@@ -130,7 +122,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VpcFirewallId { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the VPC firewall.</para>
+        /// <para>The instance name of the virtual private cloud (VPC) border firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-vpc-firewall</para>

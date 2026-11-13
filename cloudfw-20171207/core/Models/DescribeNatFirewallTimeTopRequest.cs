@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? Interval { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of top entries to return. The default value is 200. Valid values: 1 to 500.</para>
+        /// <para>The maximum number of top entries to return. Default value: 200. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? Limit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The NAT gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-uf62zzi7000bca7zn****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the NAT Gateway.</para>
+        /// <para>The private IP address of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.100.134.XXX</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcPrivateIP { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the NAT Gateway.</para>
+        /// <para>The public IP address of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.93.47.XXX</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcPublicIP { get; set; }
 
         /// <summary>
-        /// <para>The point in time to query the traffic data. This is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The point in time for the traffic. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

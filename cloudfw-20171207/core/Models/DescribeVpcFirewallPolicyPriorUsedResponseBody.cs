@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallPolicyPriorUsedResponseBody : TeaModel {
         /// <summary>
-        /// <para>The lowest priority of the policies.</para>
+        /// <para>The minimum priority value that takes effect for the access control policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>150</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? End { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The highest priority of the policies.</para>
+        /// <para>The maximum priority value that takes effect for the access control policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

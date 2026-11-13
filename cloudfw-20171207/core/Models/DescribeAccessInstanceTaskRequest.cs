@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The synchronization node ID. You must specify at least one of AccessInstanceId and TaskId. If both are empty, the error MissingParameter.TaskIdOrAccessInstanceId (-200550) is returned.</para>
+        /// <para>The ID of the synchronization node. You must specify at least one of AccessInstanceId and TaskId. If both are left empty, the MissingParameter.TaskIdOrAccessInstanceId (-200550) error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pdi-3bc2f91695ee48bd9377</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The synchronization node type.</para>
+        /// <para>The type of the synchronization node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AckClusterConnector</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language in which messages are received.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You must specify at least one of TaskId and AccessInstanceId. If both are empty, the error MissingParameter.TaskIdOrAccessInstanceId (-200550, TaskId and AccessInstanceId cannot be empty at the same time. Provide at least one.) is returned.</para>
+        /// <para>The task ID. You must specify at least one of TaskId and AccessInstanceId. If both are left empty, the MissingParameter.TaskIdOrAccessInstanceId (-200550, TaskId and AccessInstanceId cannot be empty at the same time. Provide at least one.) error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task-c92d4544ef7b6a42</para>

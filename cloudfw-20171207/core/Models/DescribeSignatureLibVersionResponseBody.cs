@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSignatureLibVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C50C2A9-4BBB-5504-8ADA-C41A79B8C946</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeSignatureLibVersionResponseBodyVersion> Version { get; set; }
         public class DescribeSignatureLibVersionResponseBodyVersion : TeaModel {
             /// <summary>
-            /// <para>The type of the signature library.</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ips</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the signature library was updated. This value is a Unix timestamp in seconds.</para>
+            /// <para>The update time of the signature library version. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741067915</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The version number of the signature library.</para>
+            /// <para>The version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IPS-2307-02</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingAssetListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of assets.</para>
+        /// <para>The asset list.</para>
         /// </summary>
         [NameInMap("AssetList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AssetInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpsHitCnt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the NAT Gateway.</para>
+            /// <para>The NAT gateway ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-bp1utx6wj4x9qu9tl****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The name of the NAT Gateway.</para>
+            /// <para>The name of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-test</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The number of outbound domains.</para>
+            /// <para>The number of outbound domain names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutgoingDomainCnt { get; set; }
 
             /// <summary>
-            /// <para>The number of outbound destination IP addresses.</para>
+            /// <para>The number of outbound IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrivateIP { get; set; }
 
             /// <summary>
-            /// <para>The list of private IP addresses.</para>
+            /// <para>The private IP address list.</para>
             /// </summary>
             [NameInMap("PrivateIPList")]
             [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SecurityRisk { get; set; }
 
             /// <summary>
-            /// <para>The number of sessions.</para>
+            /// <para>The number of accesses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of nodes that are in an abnormal state.</para>
+        /// <para>The number of abnormal nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of quotas.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The number of unprotected assets.</para>
+        /// <para>The number of unprotected items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

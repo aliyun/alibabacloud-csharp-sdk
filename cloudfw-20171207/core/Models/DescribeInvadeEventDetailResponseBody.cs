@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInvadeEventDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the asset.</para>
+        /// <para>The asset instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-8vb2nmm070m****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the asset.</para>
+        /// <para>The asset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS_test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The description of the event.</para>
+        /// <para>The event description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventDesc { get; set; }
 
         /// <summary>
-        /// <para>The details of the event.</para>
+        /// <para>The event details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventDetail { get; set; }
 
         /// <summary>
-        /// <para>The key of the event.</para>
+        /// <para>The event key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C&amp;CActivity</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventKey { get; set; }
 
         /// <summary>
-        /// <para>The name of the event.</para>
+        /// <para>The event name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>event_test</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the threat detection event.</para>
+        /// <para>The UUID of the compromise awareness event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aa6e786c-5034-457a-8e05-1c63fab****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventUuid { get; set; }
 
         /// <summary>
-        /// <para>The time when the event first occurred. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The time when the event first occurred. The value is a UNIX timestamp accurate to seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735006706</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsIgnore { get; set; }
 
         /// <summary>
-        /// <para>The time when the event last occurred. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The time when the event last occurred. The value is a UNIX timestamp accurate to seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1740104108</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeInvadeEventDetailResponseBodyOperationList> OperationList { get; set; }
         public class DescribeInvadeEventDetailResponseBodyOperationList : TeaModel {
             /// <summary>
-            /// <para>The parameters for the operation.</para>
+            /// <para>The operation parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrivateIP { get; set; }
 
         /// <summary>
-        /// <para>The handling status of the event.</para>
+        /// <para>The processing status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the event.</para>
+        /// <para>The risk level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeInvadeEventDetailResponseBodyUnhandleOperationList> UnhandleOperationList { get; set; }
         public class DescribeInvadeEventDetailResponseBodyUnhandleOperationList : TeaModel {
             /// <summary>
-            /// <para>The parameters for the operation.</para>
+            /// <para>The operation parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

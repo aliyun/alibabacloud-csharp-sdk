@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAclCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language in which messages are received.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

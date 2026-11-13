@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallTrafficTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The average inbound network throughput. Unit: bit/s.</para>
+        /// <para>The average network throughput in the inbound direction. Unit: bit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1264110</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AvgInBps { get; set; }
 
         /// <summary>
-        /// <para>The average outbound network throughput. Unit: bit/s.</para>
+        /// <para>The average network throughput in the outbound direction. Unit: bit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68915</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AvgTotalBps { get; set; }
 
         /// <summary>
-        /// <para>The data list.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBps { get; set; }
 
             /// <summary>
-            /// <para>The total outbound network throughput. Unit: bytes.</para>
+            /// <para>The total network traffic in the outbound direction. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>230</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the traffic occurred. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the traffic was generated. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758470400</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The timestamp when the peak bandwidth occurred. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The timestamp when the peak bandwidth was reached. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768008060</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxBandwidthTime { get; set; }
 
         /// <summary>
-        /// <para>The peak inbound network throughput. Unit: bit/s.</para>
+        /// <para>The peak network throughput in the inbound direction. Unit: bit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1436</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxInBps { get; set; }
 
         /// <summary>
-        /// <para>The peak outbound network throughput. Unit: bit/s.</para>
+        /// <para>The peak network throughput in the outbound direction. Unit: bit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2128</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalBytes { get; set; }
 
         /// <summary>
-        /// <para>The total inbound network throughput. Unit: bytes.</para>
+        /// <para>The total network traffic in the inbound direction. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2659635037</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalInBytes { get; set; }
 
         /// <summary>
-        /// <para>The total outbound network throughput. Unit: bytes.</para>
+        /// <para>The total network traffic in the outbound direction. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>399762701</para>

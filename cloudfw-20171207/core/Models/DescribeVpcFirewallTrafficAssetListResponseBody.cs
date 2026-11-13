@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallTrafficAssetListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data list.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The number of IPS hits.</para>
+            /// <para>The number of Intrusion Prevention System (IPS) hits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</para>

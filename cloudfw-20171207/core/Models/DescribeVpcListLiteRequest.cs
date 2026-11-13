@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPC resides.</para>
+        /// <para>The region ID of the VPC.</para>
         /// <remarks>
-        /// <para>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// <para>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the requester.</para>
+        /// <para>The source IP address of the caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>58.34.174.194</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC.</para>
+        /// <para>The instance ID of the VPC-connected instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-8vbwbo90rq0anm6t****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the VPC.</para>
+        /// <para>The name of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-shanghai</para>

@@ -10,14 +10,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the access control policies of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The information about the access control policies of the virtual private cloud (VPC) firewalls.</para>
         /// </summary>
         [NameInMap("Policys")]
         [Validation(Required=false)]
         public List<DescribeVpcFirewallControlPolicyResponseBodyPolicys> Policys { get; set; }
         public class DescribeVpcFirewallControlPolicyResponseBodyPolicys : TeaModel {
             /// <summary>
-            /// <para>The action (settings) that Cloud Firewall performs on the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</para>
+            /// <para>The action that Cloud Firewall performs on the traffic in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>accept</b>: allows the traffic.</description></item>
+            /// <item><description><b>drop</b>: denies the traffic.</description></item>
+            /// <item><description><b>log</b>: monitors the traffic.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>accept</para>
@@ -27,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclAction { get; set; }
 
             /// <summary>
-            /// <para>The unique identity ID of the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The unique identifier of the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4037fbf7-3e39-4634-92a4-d0155247****</para>
@@ -37,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclUuid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application with traffic settings in the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The ID of the application configured for the traffic in the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10**</para>
@@ -47,7 +52,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The application type supported by the access control policy of the virtual private cloud (VPC) firewall. Use ApplicationNameList instead. Valid values:</para>
+            /// <para>The application type supported by the access control policy of the virtual private cloud (VPC) firewalls. Use ApplicationNameList instead. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HTTP</b></description></item>
+            /// <item><description><b>HTTPS</b></description></item>
+            /// <item><description><b>MySQL</b></description></item>
+            /// <item><description><b>SMTP</b></description></item>
+            /// <item><description><b>SMTPS</b></description></item>
+            /// <item><description><b>RDP</b></description></item>
+            /// <item><description><b>VNC</b></description></item>
+            /// <item><description><b>SSH</b></description></item>
+            /// <item><description><b>Redis</b></description></item>
+            /// <item><description><b>MQTT</b></description></item>
+            /// <item><description><b>MongoDB</b></description></item>
+            /// <item><description><b>Memcache</b></description></item>
+            /// <item><description><b>SSL</b></description></item>
+            /// <item><description><b>ANY</b>: all application types supported by the access control policy.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -74,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The description of the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -84,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The destination port of the traffic in the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The destination port for the traffic in the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -94,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestPort { get; set; }
 
             /// <summary>
-            /// <para>The name of the destination port address book for the traffic in the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The name of the destination port address book for the traffic in the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my_port_group</para>
@@ -104,14 +125,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestPortGroup { get; set; }
 
             /// <summary>
-            /// <para>The details of the destination port address book in the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The details of the destination port address book in the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// </summary>
             [NameInMap("DestPortGroupPorts")]
             [Validation(Required=false)]
             public List<string> DestPortGroupPorts { get; set; }
 
             /// <summary>
-            /// <para>The destination port type for the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</para>
+            /// <para>The type of the destination port for the traffic in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>port</b>: a single port.</description></item>
+            /// <item><description><b>group</b>: a port address book.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>port</para>
@@ -121,7 +146,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestPortType { get; set; }
 
             /// <summary>
-            /// <para>The destination address in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</para>
+            /// <para>The destination address in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>If <b>DestinationType</b> is <c>net</c>, Destination is the destination CIDR block.</para>
+            /// </description></item>
+            /// <item><description><para>If <b>DestinationType</b> is <c>domain</c>, Destination is the destination domain name.</para>
+            /// </description></item>
+            /// <item><description><para>If <b>DestinationType</b> is <c>group</c>, Destination is the name of the destination address book.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>192.0.XX.XX/24</para>
@@ -131,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Destination { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block information in the destination address book of the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The CIDR block information in the destination address book of the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// </summary>
             [NameInMap("DestinationGroupCidrs")]
             [Validation(Required=false)]
@@ -139,6 +172,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The type of the destination address book in the access control policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ip</b>: an IP address book that contains one or more CIDR blocks.</description></item>
+            /// <item><description><b>domain</b>: a domain name address book that contains one or more domain names.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -148,7 +185,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationGroupType { get; set; }
 
             /// <summary>
-            /// <para>The destination address type in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</para>
+            /// <para>The type of the destination address in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>net</b>: destination CIDR block.</description></item>
+            /// <item><description><b>group</b>: destination address book.</description></item>
+            /// <item><description><b>domain</b>: destination domain name.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>net</para>
@@ -159,6 +201,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The domain name resolution method of the access control policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>FQDN</b>: FQDN-based resolution.</description></item>
+            /// <item><description><b>DNS</b>: DNS-based dynamic resolution.</description></item>
+            /// <item><description><b>FQDN_AND_DNS</b>: FQDN and DNS-based dynamic resolution.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>FQDN</para>
@@ -168,7 +215,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DomainResolveType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The time must be on the hour or half hour and must be at least 30 minutes later than the start time.</para>
+            /// <para>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The time must be on the hour or half-hour, and it must be at least 30 minutes later than the start time.</para>
+            /// <remarks>
+            /// <para>If RepeatType is <c>Permanent</c>, EndTime is empty. If RepeatType is <c>None</c>, <c>Daily</c>, <c>Weekly</c>, or <c>Monthly</c>, EndTime must be specified.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1694764800</para>
@@ -178,7 +228,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The most recent time of hits. The value is a UNIX timestamp in seconds format.</para>
+            /// <para>The latest hit timestamp. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1579261141</para>
@@ -188,7 +238,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? HitLastTime { get; set; }
 
             /// <summary>
-            /// <para>The number of hits for the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The number of hits of the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -198,7 +248,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? HitTimes { get; set; }
 
             /// <summary>
-            /// <para>The UID of a member account of the current Alibaba Cloud account.</para>
+            /// <para>The UID of the member account of the current Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>258039427902****</para>
@@ -218,7 +268,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The priority of the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The priority of the access control policy of the virtual private cloud (VPC) firewalls.</para>
+            /// <para>The priority value starts from 1 and increments sequentially. A smaller value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -228,7 +279,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Order { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the traffic in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</para>
+            /// <para>The protocol type of the traffic in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>TCP</b></description></item>
+            /// <item><description><b>UDP</b></description></item>
+            /// <item><description><b>ICMP</b></description></item>
+            /// <item><description><b>ANY</b>: all protocol types.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>TCP</para>
@@ -238,7 +295,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Proto { get; set; }
 
             /// <summary>
-            /// <para>The enabled status of the access control policy. The policy is enabled by default after creation. Valid values:</para>
+            /// <para>The enabling status of the access control policy. By default, a policy is enabled after it is created. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The access control policy is enabled.</description></item>
+            /// <item><description><b>false</b>: The access control policy is disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -248,14 +309,31 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Release { get; set; }
 
             /// <summary>
-            /// <para>The collection of recurrence days for the policy validity period of the access control policy.</para>
+            /// <para>The set of recurrence days for the policy validity period of the access control policy.</para>
+            /// <list type="bullet">
+            /// <item><description>If RepeatType is <c>Permanent</c>, <c>None</c>, or <c>Daily</c>, RepeatDays is an empty set.
+            /// Example: []</description></item>
+            /// <item><description>If RepeatType is <c>Weekly</c>, RepeatDays cannot be empty.
+            /// Example: [0, 6]<remarks>
+            /// <para>When RepeatType is <c>Weekly</c>, the values in RepeatDays must be unique.</para>
+            /// </remarks>
+            /// </description></item>
+            /// <item><description>If RepeatType is <c>Monthly</c>, RepeatDays cannot be empty.
+            /// Example: [1, 31]<remarks>
+            /// <para>When RepeatType is <c>Monthly</c>, the values in RepeatDays must be unique.</para>
+            /// </remarks>
+            /// </description></item>
+            /// </list>
             /// </summary>
             [NameInMap("RepeatDays")]
             [Validation(Required=false)]
             public List<long?> RepeatDays { get; set; }
 
             /// <summary>
-            /// <para>The recurrence end time of the policy validity period. The value is in the HH:mm format using a 24-hour clock, such as 23:00.</para>
+            /// <para>The recurrence end time when the policy takes effect. The time is in the 24-hour HH:mm format, such as 23:00.</para>
+            /// <remarks>
+            /// <para>If RepeatType is <c>Permanent</c> or <c>None</c>, RepeatEndTime is empty. If RepeatType is <c>Daily</c>, <c>Weekly</c>, or <c>Monthly</c>, RepeatEndTime must be specified.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>23:30</para>
@@ -265,7 +343,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RepeatEndTime { get; set; }
 
             /// <summary>
-            /// <para>The recurrence start time of the policy validity period. The value is in the HH:mm format using a 24-hour clock, such as 08:00.</para>
+            /// <para>The recurrence start time when the policy takes effect. The time is in the 24-hour HH:mm format, such as 08:00.</para>
+            /// <remarks>
+            /// <para>If RepeatType is <c>Permanent</c> or <c>None</c>, RepeatStartTime is empty. If RepeatType is <c>Daily</c>, <c>Weekly</c>, or <c>Monthly</c>, RepeatStartTime must be specified.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>08:00</para>
@@ -276,6 +357,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The recurrence type of the policy validity period for the access control policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Permanent</b> (default): always.</description></item>
+            /// <item><description><b>None</b>: a specific single time.</description></item>
+            /// <item><description><b>Daily</b>: every day.</description></item>
+            /// <item><description><b>Weekly</b>: every week.</description></item>
+            /// <item><description><b>Monthly</b>: every month.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Permanent</para>
@@ -285,7 +373,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RepeatType { get; set; }
 
             /// <summary>
-            /// <para>The source address in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</para>
+            /// <para>The source address in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>If <b>SourceType</b> is <c>net</c>, Source is the source CIDR block.</para>
+            /// </description></item>
+            /// <item><description><para>If <b>SourceType</b> is <c>group</c>, Source is the name of the address book.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>192.0.XX.XX/24</para>
@@ -295,14 +389,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The details of the source address book in the access control policy of the virtual private cloud (VPC) firewall.</para>
+            /// <para>The details of the source address book in the access control policy of the virtual private cloud (VPC) firewalls.</para>
             /// </summary>
             [NameInMap("SourceGroupCidrs")]
             [Validation(Required=false)]
             public List<string> SourceGroupCidrs { get; set; }
 
             /// <summary>
-            /// <para>The type of the source address book in the access control policy. The only valid value is <b>ip</b>, which indicates an IP address book that contains one or more CIDR blocks.</para>
+            /// <para>The type of the source address book in the access control policy. Valid value: <b>ip</b>, which indicates an IP address book that contains one or more CIDR blocks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -312,7 +406,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SourceGroupType { get; set; }
 
             /// <summary>
-            /// <para>The source address type in the access control policy of the virtual private cloud (VPC) firewall. Valid values:</para>
+            /// <para>The type of the source address in the access control policy of the virtual private cloud (VPC) firewalls. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>net</b>: source CIDR block.</description></item>
+            /// <item><description><b>group</b>: source address book.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>net</para>
@@ -322,7 +420,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The number of access control policy specifications consumed, which is the cumulative number of specifications consumed by each policy.</para>
+            /// <para>The number of access control policy quotas consumed. This value is the sum of the quotas consumed by each policy.
+            /// The number of quotas consumed by a single policy = Number of source CIDR blocks × Number of destination addresses (CIDR blocks or domain names) × Number of applications × Number of port ranges.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -332,7 +431,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SpreadCnt { get; set; }
 
             /// <summary>
-            /// <para>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The time must be on the hour or half hour and must be at least 30 minutes earlier than the end time.</para>
+            /// <para>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The time must be on the hour or half-hour, and it must be at least 30 minutes earlier than the end time.</para>
+            /// <remarks>
+            /// <para>If RepeatType is <c>Permanent</c>, StartTime is empty. If RepeatType is <c>None</c>, <c>Daily</c>, <c>Weekly</c>, or <c>Monthly</c>, StartTime must be specified.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1694761200</para>
@@ -344,7 +446,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>
@@ -354,7 +456,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of access control policies for the virtual private cloud (VPC) firewall.</para>
+        /// <para>The total number of access control policies of the virtual private cloud (VPC) firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

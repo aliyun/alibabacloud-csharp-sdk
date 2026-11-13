@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallCenSummaryListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number for a paged query. The default value is 1.</para>
+        /// <para>The page number of the current page in a paging query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content. Valid values:</para>
+        /// <para>The language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account.</para>
+        /// <para>The UID of the member account of the current Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The type of the CEN transit router. Valid values:</para>
-        /// <para><b>Basic</b>: Basic Edition</para>
-        /// <para><b>Enterprise</b>: Enterprise Edition</para>
+        /// <para><b>Basic</b>: Basic Edition.</para>
+        /// <para><b>Enterprise</b>: Enterprise Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Basic</para>

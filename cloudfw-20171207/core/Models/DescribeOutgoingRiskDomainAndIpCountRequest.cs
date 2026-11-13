@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingRiskDomainAndIpCountRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp that is accurate to the second.</para>
+        /// <para>The end time of the query. Specify the time as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1751595213</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp that is accurate to the second.</para>
+        /// <para>The start time of the query. Specify the time as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1749434787</para>

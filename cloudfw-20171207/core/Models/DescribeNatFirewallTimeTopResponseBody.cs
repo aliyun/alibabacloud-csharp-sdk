@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallTimeTopResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of results.</para>
+        /// <para>The number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DataCount { get; set; }
 
         /// <summary>
-        /// <para>The list of data.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeNatFirewallTimeTopResponseBodyDataList> DataList { get; set; }
         public class DescribeNatFirewallTimeTopResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The inbound bandwidth. Unit: bps.</para>
+            /// <para>The inbound bandwidth. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>187</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatFirewallName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the NAT Gateway.</para>
+            /// <para>The ID of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-uf6pnry5vpawb****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The name of the NAT Gateway.</para>
+            /// <para>The name of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-test</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NewConn { get; set; }
 
             /// <summary>
-            /// <para>The outbound bandwidth. Unit: bps.</para>
+            /// <para>The outbound bandwidth. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset instance.</para>
+            /// <para>The asset instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp130nn8h6157dir****</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The total bandwidth. Unit: bps.</para>
+            /// <para>The total bandwidth. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>232</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5DDD596-1191-5F36-A504-8733045A****</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The point in time when the traffic data was collected. This is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The point in time for the traffic. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656923760</para>

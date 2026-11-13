@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAssetRegionListRequest : TeaModel {
         /// <summary>
-        /// <para>The UID of the member accounts.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The instance ID of the VPC border firewall.</para>
+        /// <para><b>Note</b>: This parameter is required. If it is not provided, the API returns ErrorFirewallId (-360133). You can call DescribeVpcFirewallList to obtain a valid instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-m5e7dbc4y****</para>

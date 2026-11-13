@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeACLProtectTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query. Specify the time as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1670397599</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the firewall border. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>internet</b> (default): Internet Border firewall, which monitors traffic between the Internet and your assets.</description></item>
-        /// <item><description><b>vpc</b>: virtual private cloud (VPC) firewalls, which monitor traffic between VPCs.</description></item>
-        /// <item><description><b>nat</b>: NAT firewalls, which monitor traffic from internal-facing assets to the Internet.</description></item>
+        /// <item><description><b>internet</b> (default): the Internet Border firewall.</description></item>
+        /// <item><description><b>vpc</b>: virtual private cloud (VPC) firewalls.</description></item>
+        /// <item><description><b>nat</b>: NAT firewalls.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The time aggregation granularity for trend data, in seconds. Valid values:</para>
+        /// <para>The time aggregation granularity of the trend data, in seconds. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>60</b>: 1-minute granularity (uses the minute-level detail table).</description></item>
         /// <item><description><b>1800</b>: 30-minute granularity.</description></item>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.95.87.130</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. Specify the time as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1677050306</para>

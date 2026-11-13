@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of risk domain names.</para>
+        /// <para>The number of risky domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? RiskDomainCount { get; set; }
 
         /// <summary>
-        /// <para>The number of risk IP addresses.</para>
+        /// <para>The number of risky IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47</para>

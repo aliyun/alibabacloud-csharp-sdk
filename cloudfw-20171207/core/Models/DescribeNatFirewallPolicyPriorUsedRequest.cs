@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallPolicyPriorUsedRequest : TeaModel {
         /// <summary>
-        /// <para>The traffic direction of the access control policy.</para>
-        /// <para>Valid value:</para>
+        /// <para>The traffic direction of the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>out</b>: outbound traffic.</description></item>
+        /// <item><description><b>out</b>: Outbound traffic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +24,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The IP version. Valid value:</para>
+        /// <para>The IP version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>4</b> (default): IPv4</description></item>
+        /// <item><description><b>4</b> (default): IPv4.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,10 +39,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The ID of the NAT gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

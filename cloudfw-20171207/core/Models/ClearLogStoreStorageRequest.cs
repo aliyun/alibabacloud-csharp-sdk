@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ClearLogStoreStorageRequest : TeaModel {
         /// <summary>
-        /// <para>The site name for which to clear logs. If only one logStore exists, you can leave this parameter empty. If two logStores exist, set this parameter to cn or intl.</para>
+        /// <para>The name of the site whose logs are to be cleared. If there is only one Logstore, you can leave this parameter empty. If there are two Logstores, you must specify cn or intl.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn</para>

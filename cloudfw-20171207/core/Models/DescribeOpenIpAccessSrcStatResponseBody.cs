@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of statistics.</para>
+        /// <para>The statistics list.</para>
         /// </summary>
         [NameInMap("StatList")]
         [Validation(Required=false)]
         public List<DescribeOpenIpAccessSrcStatResponseBodyStatList> StatList { get; set; }
         public class DescribeOpenIpAccessSrcStatResponseBodyStatList : TeaModel {
             /// <summary>
-            /// <para>The number of abnormal source IP addresses.</para>
+            /// <para>The number of abnormal IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string App { get; set; }
 
             /// <summary>
-            /// <para>The number of normal source IP addresses.</para>
+            /// <para>The number of normal IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>

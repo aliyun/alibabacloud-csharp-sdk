@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeOutgoingDestinationIPDetailResponseBodyAssetList> AssetList { get; set; }
         public class DescribeOutgoingDestinationIPDetailResponseBodyAssetList : TeaModel {
             /// <summary>
-            /// <para>The status of the access control policy.</para>
+            /// <para>The policy coverage status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FullCoverage</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclCoverage { get; set; }
 
             /// <summary>
-            /// <para>The time of the first access. This is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time of the first visit. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1744682438</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>The ISP of the destination IP address.</para>
+            /// <para>The ISP to which the destination IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>telecom</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string IspName { get; set; }
 
             /// <summary>
-            /// <para>The time of the last access. This is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time of the last visit. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1739326614</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? LastTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the region where the destination IP address is located.</para>
+            /// <para>The name of the region to which the destination IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hangzhou</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string LocationName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the NAT Gateway.</para>
+            /// <para>The NAT gateway ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-bp1utx6wj4x9qu9tl****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The name of the NAT Gateway.</para>
+            /// <para>The name of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-test</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the cloud product.</para>
+            /// <para>The instance ID of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-uf63wjhyoohc1g4z****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The type of the public IP address of the asset.</para>
+            /// <para>The public IP address type of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EcsPublicIP</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<DescribeOutgoingDestinationIPDetailResponseBodyAssetListTagList> TagList { get; set; }
             public class DescribeOutgoingDestinationIPDetailResponseBodyAssetListTagList : TeaModel {
                 /// <summary>
-                /// <para>The classification ID.</para>
+                /// <para>The category ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public int? RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The description of the tag.</para>
+                /// <para>The tag description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string TagDescribe { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the tag.</para>
+                /// <para>The tag ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FirstFlow</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string TagId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the tag.</para>
+                /// <para>The tag name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC instance.</para>
+            /// <para>The VPC instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-9dp16jgwgyvn****</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ISP of the destination IP address.</para>
+        /// <para>The ISP to which the destination IP address belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>telecom</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IspName { get; set; }
 
         /// <summary>
-        /// <para>The name of the region.</para>
+        /// <para>The region name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hangzhou</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>

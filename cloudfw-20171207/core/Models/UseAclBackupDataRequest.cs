@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class UseAclBackupDataRequest : TeaModel {
         /// <summary>
-        /// <para>The backup time. This value is a Unix timestamp in seconds. For example: 1672502400.</para>
+        /// <para>The backup time. The value is a UNIX timestamp accurate to seconds, such as 1672502400.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string BackUpTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language in which you want to receive messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

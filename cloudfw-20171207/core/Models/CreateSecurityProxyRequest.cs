@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The deployment mode of the firewall service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrimaryStandby</b>: primary/standby mode.</description></item>
-        /// <item><description><b>MultiPrimary</b>: active-active mode.</description></item>
+        /// <item><description>PrimaryStandby: primary/secondary mode</description></item>
+        /// <item><description>MultiPrimary: active-active mode</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The security protection switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: Enabled.</description></item>
-        /// <item><description><b>close</b>: Disabled.</description></item>
+        /// <item><description><b>open</b>: enable</description></item>
+        /// <item><description><b>close</b>: disable</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationCidr { get; set; }
 
             /// <summary>
-            /// <para>The next hop of the original NAT gateway.</para>
+            /// <para>The next hop address of the original NAT gateway.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NextHopId { get; set; }
 
             /// <summary>
-            /// <para>The network type of the next hop. Valid value: NatGateway.</para>
+            /// <para>The network type of the next hop. Valid values: NatGateway.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NextHopType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table to which the default route of the NAT gateway belongs.</para>
+            /// <para>The route table to which the default route of the NAT gateway belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? StrictMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The VPC-connected instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -187,11 +187,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>Specifies whether to use the automatic mode for the vSwitch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: automatic mode.</description></item>
-        /// <item><description><b>false</b>: manual mode.</description></item>
-        /// </list>
-        /// <remarks>
+        /// <item><description><b>false</b>: manual mode.<remarks>
         /// <para>Default value: true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

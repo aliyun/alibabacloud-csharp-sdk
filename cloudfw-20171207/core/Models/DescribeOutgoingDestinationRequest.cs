@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The legacy destination IP parameter.</para>
         /// <remarks>
-        /// <para>The POP gateway passes this parameter through, but the backend of this operation does not read it. Specifying this parameter has no filtering effect. To filter by IP address, use PublicIP or PrivateIP. If only DstIP is specified, the operation returns MissingParameter.IpFilter (-340415) because no valid IP filtering parameter is provided.</para>
+        /// <para>The POP gateway passes through this parameter, but the backend of this API operation does not read it. Passing this parameter does not produce any filtering effect. To filter by IP address, use PublicIP or PrivateIP. If only DstIP is provided, the MissingParameter.IpFilter (-340415) error is returned because a valid IP filter parameter is missing.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstIP { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>Specifies the end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The private IP address.</para>
         /// <remarks>
-        /// <para>At least one of PublicIP and PrivateIP must be specified.</para>
+        /// <para>You must specify at least one of PublicIP and PrivateIP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The public IP address.</para>
         /// <remarks>
-        /// <para>At least one of PublicIP and PrivateIP must be specified.</para>
+        /// <para>You must specify at least one of PublicIP and PrivateIP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
-        /// <para>The security policy for the Outbound Domain.</para>
+        /// <para>The security policy for the outbound domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pass</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>Specifies the start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

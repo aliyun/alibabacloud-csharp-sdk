@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetRiskListRequest : TeaModel {
         /// <summary>
-        /// <para>The list of IP addresses to query. Separate multiple IP addresses with commas (,). You can query up to 20 IP addresses at a time. This parameter is required in practice. If this parameter is not specified, the API returns a 400 error.</para>
+        /// <para>The list of IP addresses to query. Separate multiple IP addresses with commas (,). You can query up to 20 IP addresses at a time. This parameter is actually required. If you do not specify this parameter, the API returns a 400 error.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>IPv4 example: 47.97.XX.XX.</description></item>
@@ -23,13 +23,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> IpAddrList { get; set; }
 
         /// <summary>
-        /// <para>The IP version of the assets protected by Cloud Firewall.</para>
-        /// <para>Valid values:</para>
+        /// <para>The IP version of the asset protected by Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>4</b> (default): IPv4</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: IPv6</para>
-        /// </description></item>
+        /// <item><description><b>4</b> (default): IPv4</description></item>
+        /// <item><description><b>6</b>: IPv6</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language type of the response message. Valid values:</para>
+        /// <para>The language of the notification. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -55,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.XX.XX</para>

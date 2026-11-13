@@ -52,13 +52,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> AckNamespaces { get; set; }
 
         /// <summary>
-        /// <para>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address element, separate the address and the description with a space. You must specify this parameter when GroupType is set to <b>ip</b>, <b>port</b>, or <b>domain</b>.</para>
+        /// <para>The list of addresses in the address book. Separate multiple addresses with commas (,). Separate the address and description of an address element with a space. You must configure this parameter when GroupType is set to <b>ip</b>, <b>port</b>, or <b>domain</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If GroupType is set to <b>ip</b>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</para>
+        /// <item><description><para>When GroupType is set to <b>ip</b>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</para>
         /// </description></item>
-        /// <item><description><para>If GroupType is set to <b>port</b>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</para>
+        /// <item><description><para>When GroupType is set to <b>port</b>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</para>
         /// </description></item>
-        /// <item><description><para>If GroupType is set to <b>domain</b>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</para>
+        /// <item><description><para>When GroupType is set to <b>domain</b>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<long?> AssetMemberUids { get; set; }
 
         /// <summary>
-        /// <para>The asset address book, region, and resource type list.</para>
+        /// <para>The asset address book, regions, and resource types.</para>
         /// </summary>
         [NameInMap("AssetRegionResourceTypes")]
         [Validation(Required=false)]
         public List<ModifyAddressBookRequestAssetRegionResourceTypes> AssetRegionResourceTypes { get; set; }
         public class ModifyAddressBookRequestAssetRegionResourceTypes : TeaModel {
             /// <summary>
-            /// <para>The asset region ID.</para>
+            /// <para>The ID of the asset region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>all</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public ModifyAddressBookRequestAssetRegionResourceTypesResourceTypeIpv4 Ipv4 { get; set; }
                 public class ModifyAddressBookRequestAssetRegionResourceTypesResourceTypeIpv4 : TeaModel {
                     /// <summary>
-                    /// <para>The asset type: AIGatewayEIP.</para>
+                    /// <para>The AIGatewayEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? AiGatewayEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: AlbEIP.</para>
+                    /// <para>The AlbEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? AlbEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: ApigEIP.</para>
+                    /// <para>The ApigEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? ApiGatewayEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: BastionHostEgressIP.</para>
+                    /// <para>The BastionHostEgressIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? BastionHostEgressIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: BastionHostIP.</para>
+                    /// <para>The BastionHostIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? BastionHostIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: BastionHostIngressIP.</para>
+                    /// <para>The BastionHostIngressIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? BastionHostIngressIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: EIP.</para>
+                    /// <para>The EIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? EIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: EcsEIP.</para>
+                    /// <para>The EcsEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? EcsEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: EcsPublicIP.</para>
+                    /// <para>The EcsPublicIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? EcsPublicIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: EniEIP.</para>
+                    /// <para>The EniEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? EniEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: GaEIP.</para>
+                    /// <para>The GaEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? GaEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: HAVIP.</para>
+                    /// <para>The HAVIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? HAVIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: NatEIP.</para>
+                    /// <para>The NatEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? NatEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: NatPublicIP.</para>
+                    /// <para>The NatPublicIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? NatPublicIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: NlbEIP.</para>
+                    /// <para>The NlbEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? NlbEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: SlbEIP.</para>
+                    /// <para>The SlbEIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? SlbEIP { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: SlbPublicIP.</para>
+                    /// <para>The SlbPublicIP asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public ModifyAddressBookRequestAssetRegionResourceTypesResourceTypeIpv6 Ipv6 { get; set; }
                 public class ModifyAddressBookRequestAssetRegionResourceTypesResourceTypeIpv6 : TeaModel {
                     /// <summary>
-                    /// <para>The asset type: AIGatewayEIPv6.</para>
+                    /// <para>The AIGatewayEIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? AiGatewayEIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: AlbIPv6.</para>
+                    /// <para>The AlbIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? AlbIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: ApigEIPv6.</para>
+                    /// <para>The ApigEIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? ApiGatewayEIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: EcsIPv6.</para>
+                    /// <para>The EcsIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? EcsIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: EniEIPv6.</para>
+                    /// <para>The EniEIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? EniEIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: GaEIPv6.</para>
+                    /// <para>The GaEIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? GaEIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: NlbIPv6.</para>
+                    /// <para>The NlbIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public bool? NlbIPv6 { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type: SlbIPv6.</para>
+                    /// <para>The SlbIPv6 asset type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>Specifies if the automatic addition of the public IP addresses of Elastic Compute Service (ECS) instances that match the new labels to the address book is enabled.</para>
+        /// <para>Specifies whether the public IP addresses of Elastic Compute Service (ECS) instances that match a new tag are automatically added to the address book.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -422,9 +422,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the address book.</para>
+        /// <para>The unique ID of the address book.</para>
         /// <remarks>
-        /// <para>To obtain the value, call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation.</para>
+        /// <para>Value source: <a href="~~DescribeAddressBook~~">List address books</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -448,8 +448,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The modification mode.</para>
         /// <remarks>
-        /// <para>If GroupType is set to <b>ip</b>, <b>ipv6</b>, <b>port</b>, or <b>domain</b> and this parameter is not specified, the <b>Cover</b> mode is used by default to modify the address book.
-        /// Notice: If GroupType is set to <b>tag</b>, this parameter must be left empty.</notice></para>
+        /// <para>When GroupType is set to <b>ip</b>, <b>ipv6</b>, <b>port</b>, or <b>domain</b>, if you do not configure this parameter, the <b>Cover</b> mode is used by default to modify the address book.
+        /// <notice>When GroupType is set to <b>tag</b>, this parameter must be left empty.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

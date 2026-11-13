@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingAssetListRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the asset.</para>
+        /// <para>The region to which the asset belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Queries outbound connections routed from a private network through a NAT gateway.</para>
+        /// <para>Specifies whether to query outbound connections over the NAT private network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NatPrivate</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IPType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content.</para>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The ID of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp123456g******</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The name of the NAT Gateway.</para>
+        /// <para>The name of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-test</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatGatewayName { get; set; }
 
         /// <summary>
-        /// <para>The sorting order.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SecurityRisk { get; set; }
 
         /// <summary>
-        /// <para>The sorting basis.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InBytes</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeConfiguredDomainNamesResponseBodyDomainNames> DomainNames { get; set; }
         public class DescribeConfiguredDomainNamesResponseBodyDomainNames : TeaModel {
             /// <summary>
-            /// <para>The comment.</para>
+            /// <para>The remark.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Office network domain name</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the domain name is malicious. Valid values: <c>0</c> (not malicious) and <c>1</c> (malicious).</para>
+            /// <para>Indicates whether the domain name is malicious. Valid values: 0: Not malicious. 1: Malicious.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("IsMalicious")]
             [Validation(Required=false)]
             public bool? IsMalicious { get; set; }
 
             /// <summary>
-            /// <para>The time of the operation, specified as a Unix timestamp in seconds. Example: <c>1672502400</c>.</para>
+            /// <para>The operation time. The value is a UNIX timestamp accurate to seconds, such as 1672502400.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1534408189</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Module { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09A2D6F1-EA1B-56D9-977D-74878405****</para>

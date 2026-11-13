@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyDefaultIPSConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable Basic Policies. Valid values:</para>
+        /// <para>Specifies whether Basic Policies are enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Enable.</para>
+        /// <item><description><para><b>1</b>: Enabled.</para>
         /// </description></item>
         /// <item><description><para><b>0</b>: shutdown.</para>
         /// </description></item>
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? BasicRules { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable threat intelligence. Valid values:</para>
+        /// <para>Specifies whether threat intelligence is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Enable.</para>
+        /// <item><description><para><b>1</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: Disable.</para>
+        /// <item><description><para><b>0</b>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CtiRules { get; set; }
 
         /// <summary>
-        /// <para>The language type of the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The daily traffic limit for sensitive data detection.</para>
+        /// <para>The maximum daily traffic limit for sensitive data detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxSdl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable virtual patches. Valid values:</para>
+        /// <para>Specifies whether virtual patches are enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Enable.</para>
+        /// <item><description><para><b>1</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: Disable.</para>
+        /// <item><description><para><b>0</b>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -104,9 +104,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The IPS defense mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Block Mode.</para>
+        /// <item><description><para><b>1</b>: Block mode.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: monitor mode.</para>
+        /// <item><description><para><b>0</b>: Monitor mode.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetOpenDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the asset. Fuzzy search is supported.</para>
+        /// <para>The asset ID. Supports fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-uf6faknmuby7ezht****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the asset. Fuzzy search is supported.</para>
+        /// <para>The asset name. Supports fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance_test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset for an exact match. If you leave this parameter empty, all asset types are queried.</para>
+        /// <para>The asset type. Supports exact match. If not specified, all asset types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EcsPublicIP</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1745251200</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the content.</para>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The port for an exact match. The value must be an integer from 1 to 65535. If you leave this parameter empty, all ports are queried.</para>
+        /// <para>The port number. Supports exact match for ports from 1 to 65535. If not specified, all ports are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9100</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The public IP address for an exact match. If you leave this parameter empty, all public IP addresses are queried.</para>
+        /// <para>The public IP address. Supports exact match. If not specified, all public IP addresses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>203.0.13.XX</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The risk level. If you leave this parameter empty, all risk levels are queried.</para>
+        /// <para>The risk level. If not specified, all risk levels are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The name of the application for an exact match. If you leave this parameter empty, all applications are queried.</para>
+        /// <para>The application name. Supports exact match. If not specified, all applications are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMB</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the application for a fuzzy match. If you leave this parameter empty, all applications are queried.</para>
+        /// <para>The application name. Supports fuzzy match. If not specified, all applications are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMB</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ServiceNameFuzzy { get; set; }
 
         /// <summary>
-        /// <para>The sorting conditions.</para>
+        /// <para>The sort list.</para>
         /// </summary>
         [NameInMap("SortList")]
         [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Dir { get; set; }
 
             /// <summary>
-            /// <para>The sorting key.</para>
+            /// <para>The sort field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ServiceName</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The source IP address of the access request.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>222.212.86.7XXX</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656837360</para>

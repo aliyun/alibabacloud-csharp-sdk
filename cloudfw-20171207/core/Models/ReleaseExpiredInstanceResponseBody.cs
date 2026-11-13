@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance was released:</para>
+        /// <para>Indicates whether the release is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

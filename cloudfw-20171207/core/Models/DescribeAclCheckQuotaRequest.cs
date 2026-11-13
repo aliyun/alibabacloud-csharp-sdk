@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAclCheckQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

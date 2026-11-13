@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeACLProtectTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of inbound interceptions by Internet access control.</para>
+        /// <para>The number of inbound blocks by Internet access control.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? InterVPCProtectCnt { get; set; }
 
         /// <summary>
-        /// <para>The step size of the returned data, in seconds. This indicates the interval between consecutive data points.</para>
+        /// <para>The step size of the returned data, in seconds. This indicates the interval at which a result is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The number of outbound interceptions by Internet access control.</para>
+        /// <para>The number of outbound blocks by Internet access control.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? OutProtectCnt { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9063AB86-6FFA-5B2D-A16D-697C966DECA3</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The cumulative sum of AlertCnt across all time points within the query time range. This represents the total number of sessions that matched an ACL policy and triggered the monitor (alert) action during the entire time period.</para>
+        /// <para>The total number of AlertCnt across all time points within the queried time range. This is the total number of sessions for which the monitor (alert) action is performed after an access control policy is matched during the entire time period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalAlertCnt { get; set; }
 
         /// <summary>
-        /// <para>The cumulative sum of PassCnt across all time points within the query time range. This represents the total number of sessions that matched an ACL policy and were allowed during the entire time period.</para>
+        /// <para>The total number of PassCnt across all time points within the queried time range. This is the total number of sessions for which the allow action is performed after an access control policy is matched during the entire time period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalPassCnt { get; set; }
 
         /// <summary>
-        /// <para>The total number of Internet access control interceptions.</para>
+        /// <para>The total number of blocks by Internet access control.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalProtectCnt { get; set; }
 
         /// <summary>
-        /// <para>The list of Internet access control interception trend data.</para>
+        /// <para>The list of trend data for Internet access control blocks.</para>
         /// </summary>
         [NameInMap("TrendList")]
         [Validation(Required=false)]
         public List<DescribeACLProtectTrendResponseBodyTrendList> TrendList { get; set; }
         public class DescribeACLProtectTrendResponseBodyTrendList : TeaModel {
             /// <summary>
-            /// <para>The total number of sessions that matched an ACL policy and triggered the monitor (alert) action during the time interval.</para>
+            /// <para>The total number of sessions for which the monitor (alert) action is performed after an access control policy is matched within the time point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AlertCnt { get; set; }
 
             /// <summary>
-            /// <para>The total number of sessions that matched an ACL policy and were allowed during the time interval.</para>
+            /// <para>The total number of sessions for which the allow action is performed after an access control policy is matched within the time point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? PassCnt { get; set; }
 
             /// <summary>
-            /// <para>The number of Internet access control interceptions on the day.</para>
+            /// <para>The number of blocks by Internet access control on the day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? ProtectCnt { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of 00:00 of each day, in seconds. This indicates the date.</para>
+            /// <para>The UNIX timestamp of 00:00:00 each day, in seconds, which represents the date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1697299200</para>

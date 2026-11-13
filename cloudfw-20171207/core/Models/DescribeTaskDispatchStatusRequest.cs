@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTaskDispatchStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID, which is the unique identifier of the log configuration modification task. Obtain this value from the TaskId response parameter of the ModifySlsDispatchConfig operation.</para>
+        /// <para>The task ID. It is the unique identifier of the log configuration modification task. You can obtain the task ID from the TaskId parameter in the response of the ModifySlsDispatchConfig operation.</para>
+        /// <para><b>Note</b>: This parameter is required. If it is not provided, the server returns a 400 error and rejects the request. Make sure to specify a valid TaskId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65db4ce2418b44b3be7c3xxxxx</para>

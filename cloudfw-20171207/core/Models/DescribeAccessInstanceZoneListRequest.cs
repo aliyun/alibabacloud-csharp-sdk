@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceZoneListRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the access instance.</para>
+        /// <para>The type of the synchronization node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AckClusterConnector</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language type for receiving messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region of the access instance.</para>
+        /// <para>The region of the synchronization node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The unique ID of the access control policy.</para>
         /// <remarks>
-        /// <para>To modify an access control policy, you must provide its unique ID. You can call the <c>DescribeNatFirewallControlPolicy</c> operation to obtain this ID.</para>
+        /// <para>To modify an access control policy, you must provide the unique ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

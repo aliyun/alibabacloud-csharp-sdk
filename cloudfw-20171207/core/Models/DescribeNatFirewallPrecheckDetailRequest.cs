@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallPrecheckDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the request and response messages.</para>
+        /// <para>The language type of the request and response messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The ID of the NAT gateway. Although this parameter is marked as optional in the API definition, it is required when you call this operation. If this parameter is not specified or its value does not start with <c>ngw-</c>, the API returns a 400 error (<c>ErrorParameters</c>, error code <c>-360103</c>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp1okz6k7dge****</para>

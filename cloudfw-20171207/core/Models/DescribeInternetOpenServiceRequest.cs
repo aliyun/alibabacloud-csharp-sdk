@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1753804800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The name of the application for an exact match. If you do not specify this parameter, all applications are queried.</para>
+        /// <para>The application name for exact match. If you do not specify this parameter, all applications are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMB</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the application for a fuzzy match. If you do not specify this parameter, all applications are queried.</para>
+        /// <para>The application name for fuzzy match. If you do not specify this parameter, all applications are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMB</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ServiceNameFuzzy { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The originating IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122.200.64.XXX</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1755742107</para>

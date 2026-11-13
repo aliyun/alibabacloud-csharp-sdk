@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The operation type. Currently, only the activation operation is supported.</para>
+        /// <para>The operation type. Currently, only the activation operation is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>open: activation.</description></item>
+        /// <item><description>open: activate</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

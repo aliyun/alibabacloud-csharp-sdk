@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeBatchSlsDispatchStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language type for receiving messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

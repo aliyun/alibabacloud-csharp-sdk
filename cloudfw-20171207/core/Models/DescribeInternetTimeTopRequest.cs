@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTimeTopRequest : TeaModel {
         /// <summary>
-        /// <para>The direction of the traffic.</para>
+        /// <para>The traffic direction.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The end of the query time range, specified as a Unix timestamp in seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1733796528</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IPType { get; set; }
 
         /// <summary>
-        /// <para>The time interval in seconds.</para>
+        /// <para>The time interval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? Interval { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language for receiving messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. The value must be between 1 and 50. Default value: 50.</para>
+        /// <para>The maximum number of top entries to return. Default value: 50. Valid values: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Limit { get; set; }
 
         /// <summary>
-        /// <para>The NAT public IP address. If omitted, traffic data for all assets is returned.</para>
+        /// <para>The public IP address of the NAT gateway. If you do not specify this parameter, all asset IP addresses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.97.66.XXX</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The metric by which to sort the results.</para>
+        /// <para>The sorting method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in_bps</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The identifier for the trace source.</para>
+        /// <para>The tracing code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceCode { get; set; }
 
         /// <summary>
-        /// <para>The source IP address.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60.179.179.XXX</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcIP { get; set; }
 
         /// <summary>
-        /// <para>The start of the query time range, specified as a Unix timestamp in seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1749434787</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The traffic timestamp to query, specified as a Unix timestamp in seconds.</para>
+        /// <para>The traffic time to query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1745222880</para>

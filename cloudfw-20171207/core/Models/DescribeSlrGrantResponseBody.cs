@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSlrGrantResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the authorization is successful.</para>
+        /// <para>Indicates whether the authorization was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of the account.</para>
+        /// <para>The account type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sub</para>

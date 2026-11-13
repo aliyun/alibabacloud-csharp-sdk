@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrepayBillTotalResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bill list, aggregated by day.</para>
+        /// <para>The bill list aggregated by day.</para>
         /// </summary>
         [NameInMap("BillList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? BilledDetectionTraffic { get; set; }
 
             /// <summary>
-            /// <para>The sensitive data detection traffic of the day.</para>
+            /// <para>The sensitive data detection traffic on the day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? DailyDetectionTraffic { get; set; }
 
             /// <summary>
-            /// <para>The total elastic traffic of the day. Unit: GB.</para>
+            /// <para>The total elastic traffic on the day. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DefaultBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The elastic bandwidth value. Unit: Mbit/s.</para>
+            /// <para>The elastic bandwidth. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ElasticBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The end time of the day. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The end time of the day. The value is a UNIX timestamp accurate to seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761667200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The extended bandwidth. Unit: Mbit/s.</para>
+            /// <para>The extra bandwidth. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? InternetTrafficBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The monthly free traffic for sensitive data detection. Unit: GB.</para>
+            /// <para>The monthly free quota for sensitive data detection. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? NatTrafficBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the maximum bandwidth (Internet + VPC + NAT) of the day occurred.</para>
+            /// <para>The timestamp when the total bandwidth (Internet, VPC, and NAT) reaches the maximum value on the day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761588300</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OverflowTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the day. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The start time of the day. The value is a UNIX timestamp accurate to seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761580800</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The temporary upgrade bandwidth. Unit: Mbit/s.</para>
+            /// <para>The temporary bandwidth upgrade. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132</para>

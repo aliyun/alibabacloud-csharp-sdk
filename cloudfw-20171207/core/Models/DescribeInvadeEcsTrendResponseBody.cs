@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The end of the time range. This is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736820365</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range. This is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1742177725</para>

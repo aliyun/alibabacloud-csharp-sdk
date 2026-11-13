@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrepayBillTotalRequest : TeaModel {
         /// <summary>
-        /// <para>The bill type of the user. This parameter is required in practice. An error is returned if this parameter is not specified. Valid values:</para>
+        /// <para>The bill type. This parameter is required. If it is not specified, an error is returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>elastic_traffic: elastic traffic</description></item>
-        /// <item><description>sdl: sensitive data leak detection traffic</description></item>
+        /// <item><description>elastic_traffic: elastic traffic.</description></item>
+        /// <item><description>sdl: sensitive data leak detection traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string BillType { get; set; }
 
         /// <summary>
-        /// <para>The page number in a paged query. Default value: 1.</para>
+        /// <para>The page number for paging. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time. Specify a UNIX timestamp in seconds.</para>
+        /// <para>The end time. Use a UNIX timestamp accurate to seconds.</para>
         /// <remarks>
-        /// <para>Because billing data is aggregated at the daily granularity, the timestamp must correspond to 00:00:00 of the day in CST (UTC+8). If the timestamp is not aligned to the start of the day, no data may be returned.</para>
+        /// <para>Because billing data is aggregated on a daily basis, this timestamp must correspond to 00:00:00 of the day in the CST (UTC+8) time zone. If the time is not aligned with midnight, no data may be returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,9 +48,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language. Enumerated value.
-        /// Default value: zh.
-        /// Valid value: en.</para>
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh</description></item>
+        /// <item><description>en
+        /// Default value: zh.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,9 +73,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. Use a UNIX timestamp accurate to seconds.</para>
         /// <remarks>
-        /// <para>Because billing data is aggregated at the daily granularity, the timestamp must correspond to 00:00:00 of the day in CST (UTC+8). If the timestamp is not aligned to the start of the day, no data may be returned.</para>
+        /// <para>Because billing data is aggregated on a daily basis, this timestamp must correspond to 00:00:00 of the day in the CST (UTC+8) time zone. If the time is not aligned with midnight, no data may be returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeOutgoingRiskTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeOutgoingRiskTrendResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The number of threat domain names.</para>
+            /// <para>The number of risky domain names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RiskDomain { get; set; }
 
             /// <summary>
-            /// <para>The number of threat IP addresses.</para>
+            /// <para>The number of risky IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of threat domain names.</para>
+        /// <para>The total number of risky domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalRiskDomain { get; set; }
 
         /// <summary>
-        /// <para>The total number of threat IP addresses.</para>
+        /// <para>The total number of risky IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

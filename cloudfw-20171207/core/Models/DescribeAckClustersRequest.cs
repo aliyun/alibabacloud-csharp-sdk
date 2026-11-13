@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The specification of the ACK cluster.</para>
+        /// <para>The specifications of the ACK cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack.pro.small</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>The status of the ACK cluster connector.</para>
+        /// <para>The status of the connector instance for the ACK cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ready</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

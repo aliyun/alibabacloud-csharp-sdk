@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy group for the VPC firewall. Call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</para>
+        /// <para>The ID of the access control policy group for the VPC border firewall. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the VPC firewall protects a Cloud Enterprise Network (CEN) instance, set this parameter to the ID of the CEN instance.</para>
-        /// <para>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em></para>
+        /// <item><description><para>When a VPC border firewall protects a Cloud Enterprise Network (CEN) instance, the policy group ID is the instance ID of the CEN instance.</para>
+        /// <para>Example: cen-ervw0g12b5jbw*\<em>\</em>\*</para>
         /// </description></item>
-        /// <item><description><para>If the VPC firewall protects an Express Connect circuit, set this parameter to the ID of the VPC firewall instance.</para>
-        /// <para>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em></para>
+        /// <item><description><para>When a VPC border firewall protects an Express Connect circuit, the policy group ID is the instance ID of the VPC border firewall.</para>
+        /// <para>Example: vfw-a42bbb7b887148c9*\<em>\</em>\*</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

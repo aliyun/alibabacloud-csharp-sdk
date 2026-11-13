@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSlsAnalyzeOpenStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The enabled status of SLS. Valid values:</para>
-        /// <para><b>true</b>: enabled.</para>
-        /// <para><b>false</b>: disabled.</para>
+        /// <para>The enabling status of SLS. Valid values:</para>
+        /// <para><b>true</b>: Enabled.</para>
+        /// <para><b>false</b>: Disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

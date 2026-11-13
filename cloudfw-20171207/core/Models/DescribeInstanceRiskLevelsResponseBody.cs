@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceRiskLevelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of instance threats.</para>
+        /// <para>The list of instance risks.</para>
         /// </summary>
         [NameInMap("InstanceRisks")]
         [Validation(Required=false)]
         public List<DescribeInstanceRiskLevelsResponseBodyInstanceRisks> InstanceRisks { get; set; }
         public class DescribeInstanceRiskLevelsResponseBodyInstanceRisks : TeaModel {
             /// <summary>
-            /// <para>The list of threats for the ECS instances.</para>
+            /// <para>The list of ECS instance risks.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// <para>The threat level. Valid value:</para>
+                /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>medium</b>: medium</description></item>
+                /// <item><description><b>medium</b>: Medium</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The threat level. Valid value:</para>
+            /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>medium</b>: medium</description></item>
+            /// <item><description><b>medium</b>: Medium</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

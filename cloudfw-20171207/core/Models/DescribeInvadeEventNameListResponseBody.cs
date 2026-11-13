@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInvadeEventNameListResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of anomalous activity names.</para>
+        /// <para>The list of abnormal event names.</para>
         /// </summary>
         [NameInMap("EventNameList")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>A list of vulnerability names.</para>
+        /// <para>The list of vulnerability names.</para>
         /// </summary>
         [NameInMap("NameList")]
         [Validation(Required=false)]

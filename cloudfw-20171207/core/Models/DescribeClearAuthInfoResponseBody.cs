@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeClearAuthInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The UNIX timestamp when the authorization expires.</para>
+        /// <para>The expiration timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1755964800</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of remaining clears.</para>
+        /// <para>The number of remaining clearances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

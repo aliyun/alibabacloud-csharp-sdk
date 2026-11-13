@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of application names.</para>
+        /// <para>The list of application names.</para>
         /// </summary>
         [NameInMap("ServiceNameList")]
         [Validation(Required=false)]

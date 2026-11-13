@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallCenSummaryListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of CEN instances.</para>
+        /// <para>The list of Cloud Enterprise Network (CEN) instances.</para>
         /// </summary>
         [NameInMap("CenList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CenName { get; set; }
 
             /// <summary>
-            /// <para>The list of region IDs for the VPC border firewall.</para>
+            /// <para>The list of region IDs for the VPC firewall.</para>
             /// </summary>
             [NameInMap("RegionNoList")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

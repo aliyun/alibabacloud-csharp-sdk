@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyControlPolicyPriorityRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the access control policy.</para>
+        /// <para>The unique identifier of the access control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The priority of the access control policy.</para>
+        /// <para>The priority of the access control policy. Valid values: 1 to the number of policies in the same direction and of the same IP version. You can call DescribeControlPolicy to query the number of policies in the same direction and determine the valid upper limit. If the value exceeds the range, the ErrorParametersNewOrder (-200119) error is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

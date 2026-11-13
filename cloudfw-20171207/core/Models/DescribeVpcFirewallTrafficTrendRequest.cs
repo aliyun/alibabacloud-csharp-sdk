@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallTrafficTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the peer VPC instance.</para>
+        /// <para>The instance ID of the peer VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-j6c7mscdg4hfqanfi****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrivateIP { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

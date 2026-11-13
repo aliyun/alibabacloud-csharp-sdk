@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language in which messages are received.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC instance.</para>
+        /// <para>The VPC instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

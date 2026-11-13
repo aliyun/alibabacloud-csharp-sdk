@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The language type. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cen_firewall</b>: CEN basic edition firewall</para>
+        /// <item><description><para><b>cen_firewall</b>: CEN Basic Edition firewall.</para>
         /// </description></item>
-        /// <item><description><para><b>cen_tr_firewall</b>: CEN-TR firewall</para>
+        /// <item><description><para><b>cen_tr_firewall</b>: CEN-TR firewall.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NetworkInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required. If it is not specified, ErrorParameters is returned.</para>
+        /// <para>The region ID. This parameter is required. If this parameter is missing or invalid, ErrorRegionNoError (Region is error, please reselect) is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The transit router instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId when querying a basic edition firewall, or specify TransitRouterId when querying a transit router (TR) scenario. If neither is specified, ErrorParameters is returned.</para>
+        /// <para>The transit router instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId to query the Basic Edition firewall, and specify TransitRouterId to query the transit router (TR) firewall for forward routing. If neither parameter is specified, ErrorParameters is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-2vcn4u2g86tm72****</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The VPC-connected instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId when querying a basic edition firewall, or specify TransitRouterId when querying a forward routing (TR) scenario. If neither is specified, ErrorParameters is returned.</para>
+        /// <para>The VPC-connected instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId to query the Basic Edition firewall, and specify TransitRouterId to query the transit router (TR) firewall for forward routing. If neither parameter is specified, ErrorParameters is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zev8s8rxao33xt****</para>

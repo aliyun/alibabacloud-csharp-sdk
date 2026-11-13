@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeOutgoingDestinationResponseBodyDstList> DstList { get; set; }
         public class DescribeOutgoingDestinationResponseBodyDstList : TeaModel {
             /// <summary>
-            /// <para>The recommended ACL content.</para>
+            /// <para>The ACL recommendation details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RecommendedRelease</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclStatus { get; set; }
 
             /// <summary>
-            /// <para>The domain name business.</para>
+            /// <para>The business of the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a recommended ACL exists.</para>
+            /// <para>Indicates whether an ACL is recommended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the entry is manually marked as normal by the user.</para>
+            /// <para>Indicates whether the destination is manually marked as normal by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

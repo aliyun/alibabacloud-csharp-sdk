@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDefaultIPSConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the basic policies feature. Valid values:</para>
+        /// <para>Indicates whether Basic Policies are enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: enabled</para>
+        /// <item><description><para><b>1</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: disabled</para>
+        /// <item><description><para><b>0</b>: shutdown.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? BasicRules { get; set; }
 
         /// <summary>
-        /// <para>The status of the threat intelligence feature. Valid values:</para>
+        /// <para>Indicates whether threat intelligence is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: enabled</para>
+        /// <item><description><para><b>1</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: disabled</para>
+        /// <item><description><para><b>0</b>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CtiRules { get; set; }
 
         /// <summary>
-        /// <para>The maximum daily traffic that can be scanned for sensitive data.</para>
+        /// <para>The daily traffic limit for sensitive data detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxSdl { get; set; }
 
         /// <summary>
-        /// <para>The status of the virtual patching feature. Valid values:</para>
+        /// <para>Indicates whether virtual patches are enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: enabled</para>
+        /// <item><description><para><b>1</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: disabled</para>
+        /// <item><description><para><b>0</b>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PatchRules { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>133173B9-8010-5DF5-8B93-********</para>
@@ -78,13 +78,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The strictness level of the intrusion prevention system (IPS) rules. Valid values:</para>
+        /// <para>The IPS rules group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Loose</para>
+        /// <item><description><para><b>1</b>: Loose rule group.</para>
         /// </description></item>
-        /// <item><description><para><b>2</b>: Medium</para>
+        /// <item><description><para><b>2</b>: Medium rule group.</para>
         /// </description></item>
-        /// <item><description><para><b>3</b>: Strict</para>
+        /// <item><description><para><b>3</b>: Strict rule group.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -96,11 +96,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? RuleClass { get; set; }
 
         /// <summary>
-        /// <para>The mode of the IPS. Valid values:</para>
+        /// <para>The IPS defense mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Block Mode</para>
+        /// <item><description><para><b>1</b>: Block mode.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: Monitor Mode</para>
+        /// <item><description><para><b>0</b>: Monitor mode.</para>
         /// </description></item>
         /// </list>
         /// 

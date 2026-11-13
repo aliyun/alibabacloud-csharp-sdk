@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsFound { get; set; }
 
         /// <summary>
-        /// <para>The precheck details.</para>
+        /// <para>The details of the precheck.</para>
         /// </summary>
         [NameInMap("PrecheckDetail")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<DescribeVpcFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroups> PrecheckEntityGroups { get; set; }
             public class DescribeVpcFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroups : TeaModel {
                 /// <summary>
-                /// <para>The number of precheck rules that failed.</para>
+                /// <para>The number of rules that failed the precheck.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public int? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>The precheck instance name.</para>
+                /// <para>The name of the precheck instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The execution details of each precheck item.</para>
+                /// <para>The execution status of each precheck item.</para>
                 /// </summary>
                 [NameInMap("PrecheckEntities")]
                 [Validation(Required=false)]
                 public List<DescribeVpcFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroupsPrecheckEntities> PrecheckEntities { get; set; }
                 public class DescribeVpcFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroupsPrecheckEntities : TeaModel {
                     /// <summary>
-                    /// <para>The information about the precheck failure.</para>
+                    /// <para>The information about the failed check.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>VPC Firewall Quota Full</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public string Info { get; set; }
 
                     /// <summary>
-                    /// <para>The precheck item name.</para>
+                    /// <para>The name of the precheck item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Precheck test</para>
@@ -101,11 +101,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The status of each precheck item. Valid values:</para>
+                    /// <para>The status of the precheck item. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><para><b>running</b>: The precheck is in progress.</para>
                     /// </description></item>
-                    /// <item><description><para><b>passed</b>: The precheck passed.</para>
+                    /// <item><description><para><b>passed</b>: The precheck is passed.</para>
                     /// </description></item>
                     /// <item><description><para><b>failed</b>: The precheck failed.</para>
                     /// </description></item>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The suggested action.</para>
+                    /// <para>The troubleshooting suggestion.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>The VPC firewall quota is full. We recommend that you increase the firewall quota</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 }
 
                 /// <summary>
-                /// <para>The precheck status. Valid values:</para>
+                /// <para>The status of the precheck. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>running</b></para>
                 /// </description></item>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <list type="bullet">
             /// <item><description><para><b>running</b>: The precheck is in progress.</para>
             /// </description></item>
-            /// <item><description><para><b>passed</b>: The precheck passed.</para>
+            /// <item><description><para><b>passed</b>: The precheck is passed.</para>
             /// </description></item>
             /// <item><description><para><b>failed</b>: The precheck failed.</para>
             /// </description></item>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrecheckStatus { get; set; }
 
             /// <summary>
-            /// <para>The precheck timestamp.</para>
+            /// <para>The timestamp of the precheck.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1715136000</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrecheckTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The ID of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FB718F0-CC04-5A12-B17B-188CFC3F****</para>

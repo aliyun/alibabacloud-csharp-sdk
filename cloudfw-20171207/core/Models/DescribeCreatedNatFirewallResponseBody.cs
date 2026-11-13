@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeCreatedNatFirewallResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of the created NAT firewalls.</para>
+        /// <para>The list of created NAT firewalls.</para>
         /// </summary>
         [NameInMap("CreatedNatFirewalls")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatFirewallId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the NAT Gateway.</para>
+            /// <para>The ID of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-uf6i0zkjtz4t2sttf****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The name of the NAT Gateway.</para>
+            /// <para>The name of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-text</para>

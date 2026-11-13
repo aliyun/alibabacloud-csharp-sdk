@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSdlEventListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstIp { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp representing seconds.</para>
+        /// <para>The end time. Specify a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1756433077</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language in which messages are received.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Location { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only events detected by AI.</para>
+        /// <para>Specifies whether to query only AI events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OnlyAiEvt { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: <c>asc</c> (ascending) and <c>desc</c> (descending).</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level of the data in the event.</para>
+        /// <para>The sensitive data level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>S3</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SensitiveLevel { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TotalBytes</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcIp { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. This value is a UNIX timestamp representing seconds.</para>
+        /// <para>The start time. Specify a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1759198702</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the event.</para>
+        /// <para>The unique identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aa58cdf6-6cf8-493c-912d-97619a24****</para>

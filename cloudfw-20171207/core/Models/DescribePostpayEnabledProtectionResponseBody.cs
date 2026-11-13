@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DisabledDays { get; set; }
 
         /// <summary>
-        /// <para>The type of asset for which protection is disabled.</para>
+        /// <para>The type of protection that is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nat</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsEnabledProtection { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the protection feature is activated but currently disabled.</para>
+        /// <para>Indicates whether the protection feature is activated but disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

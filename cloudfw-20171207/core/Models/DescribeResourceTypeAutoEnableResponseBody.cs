@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeResourceTypeAutoEnableResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7447795A-39AB-52CB-8F92-128DF******</para>
@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether default traffic redirection is enabled.</para>
+        /// <para>Indicates whether traffic redirection is enabled by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;eip&quot;:true,&quot;SlbEIP&quot;:false}</para>
         /// </summary>
         [NameInMap("ResourceTypeAutoEnable")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrafficLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ACL pre-match rule ID.</para>
+        /// <para>The ID of the ACL pre-match rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-0000-0000-000000000000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The traffic direction.</para>
+        /// <para>The direction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>out</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstVpcRegionNo { get; set; }
 
         /// <summary>
-        /// <para>The end time. Specify a UNIX timestamp in seconds.</para>
+        /// <para>The end time. Specify the time in the UNIX timestamp format in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The Internet service provider (ISP).</para>
+        /// <para>The ISP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>telecom</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the received messages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Location { get; set; }
 
         /// <summary>
-        /// <para>The UID of one of the member accounts.</para>
+        /// <para>The UID of the member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128599825273****</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 20.</para>
+        /// <para>The number of entries per page. The value cannot exceed 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -275,7 +275,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query ID. If the query is too large, a query ID is returned. Use this query ID to retrieve results in subsequent requests.</para>
+        /// <para>The query ID.
+        /// If the query scope is too large, a query ID is returned. You can use the query ID for subsequent queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d158c8ed-bc57-40fd-86d3-468169d4cfe2</para>
@@ -295,7 +296,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The rule action result. Valid values:</para>
+        /// <para>The rule action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -315,7 +316,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleSource { get; set; }
 
         /// <summary>
-        /// <para>The final effective module.</para>
+        /// <para>The module that ultimately takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -325,7 +326,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleSourceFinal { get; set; }
 
         /// <summary>
-        /// <para>The tracing watermark.</para>
+        /// <para>The tracing code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -336,7 +337,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceCode { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the access source.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>139.217.234.XXX</para>
@@ -366,7 +367,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcPort { get; set; }
 
         /// <summary>
-        /// <para>The private source IP address.</para>
+        /// <para>The source private IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.100.134.XX</para>
@@ -396,7 +397,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcVpcRegionNo { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. We recommend that a single query span no more than one day.</para>
+        /// <para>The start time. Specify the time in the UNIX timestamp format in seconds. Only data within the last 7 days can be queried. A single query covers a maximum of one day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -407,7 +408,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The TLS inspection scope ID.</para>
+        /// <para>The ID of the TLS inspection scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tis-98fd64c5****</para>
@@ -417,7 +418,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TlsScopeId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) border firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-a42bbb7b887148c9****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeIpsPrivateAssocResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of details about private IP tracing for the intrusion prevention system (IPS).</para>
+        /// <para>The IPS private IP tracing list.</para>
         /// </summary>
         [NameInMap("IpsPrivateAssoc")]
         [Validation(Required=false)]
         public List<DescribeIpsPrivateAssocResponseBodyIpsPrivateAssoc> IpsPrivateAssoc { get; set; }
         public class DescribeIpsPrivateAssocResponseBodyIpsPrivateAssoc : TeaModel {
             /// <summary>
-            /// <para>The status of private IP tracing.</para>
+            /// <para>The private IP tracing status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>close</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the resource owner.</para>
+            /// <para>The Alibaba Cloud account ID to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1507956024994407</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? MemberUid { get; set; }
 
             /// <summary>
-            /// <para>A list of protected IP addresses.</para>
+            /// <para>The list of protected IP addresses.</para>
             /// </summary>
             [NameInMap("ProtectedIpList")]
             [Validation(Required=false)]
             public List<string> ProtectedIpList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cba48ec510bb640559c6f5161cde58014</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-0000000061279FB000001BBB31F9D673</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// <para>The status of the association.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>closed</para>
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>A list of unprotected IP addresses.</para>
+            /// <para>The list of unprotected IP addresses.</para>
             /// </summary>
             [NameInMap("UnprotectedIpList")]
             [Validation(Required=false)]
             public List<string> UnprotectedIpList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The VPC instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz92dxepli2pgnut796tf</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The name of the VPC.</para>
+            /// <para>The VPC instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-uf62vdtifj7kffpxrydqd</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2841452-CB8D-4F7D-B247-38E1CF7334F8</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of assets that have private IP tracing for the IPS enabled.</para>
+        /// <para>The total number of instances for which IPS private IP tracing is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

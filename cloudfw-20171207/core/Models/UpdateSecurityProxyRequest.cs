@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class UpdateSecurityProxyRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
         /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
+        /// <item><description><para><b>en</b>: English</para>
         /// </description></item>
         /// </list>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ProxyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</para>
+        /// <para>The name of the NAT firewall. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether to enable strict mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: strict mode.</description></item>
-        /// <item><description>0: loose mode.</description></item>
+        /// <item><description>1: strict mode</description></item>
+        /// <item><description>0: loose mode</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

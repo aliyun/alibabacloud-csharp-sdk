@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTimeTopResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? DataCount { get; set; }
 
         /// <summary>
-        /// <para>The list of data entries.</para>
+        /// <para>The returned data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeInternetTimeTopResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetTimeTopResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The public IP address.</para>
+            /// <para>The IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>183.60.164.XXX</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NewConn { get; set; }
 
             /// <summary>
-            /// <para>The outbound traffic. Unit: bit/s.</para>
+            /// <para>The outbound bandwidth. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset instance.</para>
+            /// <para>The instance ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-bp14ue2rgktunncq****</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset.</para>
+            /// <para>The name of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalPps { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC) instance.</para>
+            /// <para>The instance ID of the VPC-connected instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz9o0uzfjuj81fx7m****</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F2D5C04-731F-50B0-ADE1-01637B3C****</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of the traffic data. Unit: seconds.</para>
+        /// <para>The traffic time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1734399660</para>

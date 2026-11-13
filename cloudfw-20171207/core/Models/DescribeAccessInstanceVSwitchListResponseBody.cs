@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of zones.</para>
+        /// <para>The zones.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<DescribeAccessInstanceVSwitchListResponseBodyZones> Zones { get; set; }
         public class DescribeAccessInstanceVSwitchListResponseBodyZones : TeaModel {
             /// <summary>
-            /// <para>The list of vSwitches.</para>
+            /// <para>The vSwitches.</para>
             /// </summary>
             [NameInMap("VSwitchList")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the vSwitch is in a VPC that is managed by Cloud Firewall.</para>
+                /// <para>Indicates whether the VPC is managed by a firewall.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public bool? FirewallVSwitch { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-qzeaol304m***</para>

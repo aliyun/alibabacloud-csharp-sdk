@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAclAppsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of ACL applications.</para>
+        /// <para>The list of access control applications.</para>
         /// </summary>
         [NameInMap("AclApps")]
         [Validation(Required=false)]
@@ -30,20 +30,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>HTTP</para>
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application is common. Valid values:</para>
+            /// <para>Specifies whether the application is common. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: common</para>
+            /// <item><description><para>1: Common.</para>
             /// </description></item>
-            /// <item><description><para><b>0</b>: not common</para>
+            /// <item><description><para>0: Uncommon.</para>
             /// </description></item>
-            /// <item><description></description></item>
+            /// <item><description><para>Empty (default): All.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,21 +55,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Popular { get; set; }
 
             /// <summary>
-            /// <para>The protocols supported by the application.</para>
+            /// <para>The list of protocol types.</para>
             /// </summary>
             [NameInMap("Protocols")]
             [Validation(Required=false)]
             public List<string> Protocols { get; set; }
 
             /// <summary>
-            /// <para>The risk level. Valid values:</para>
+            /// <para>The risk assessment level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Low</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Medium</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: High</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Low-risk.</description></item>
+            /// <item><description><b>2</b>: Medium-risk.</description></item>
+            /// <item><description><b>3</b>: High-risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,11 +77,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application supports <c>FQDN</c>. Valid values:</para>
+            /// <para>Specifies whether <b>FQDN</b> is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: No</para>
+            /// <item><description><para><b>0</b>: Not supported.</para>
             /// </description></item>
-            /// <item><description><para><b>1</b>: Yes</para>
+            /// <item><description><para><b>1</b>: Supported.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -107,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

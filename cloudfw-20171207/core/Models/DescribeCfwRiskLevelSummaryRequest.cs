@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeCfwRiskLevelSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The instance type. Valid value:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ecs</b></description></item>
         /// </list>
@@ -23,13 +23,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
-        /// <para>Valid values:</para>
+        /// <para>The language in which messages are received. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,9 +37,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where Cloud Firewall is deployed.</para>
+        /// <para>The region ID of Cloud Firewall.</para>
         /// <remarks>
-        /// <para>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// <para>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

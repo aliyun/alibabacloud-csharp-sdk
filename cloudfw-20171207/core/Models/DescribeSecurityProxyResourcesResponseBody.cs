@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The UID of the member account.</para>
+                /// <para>The UID of the member accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>157862808111****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public List<DescribeSecurityProxyResourcesResponseBodyResourceListVpcListNatGateways> NatGateways { get; set; }
                 public class DescribeSecurityProxyResourcesResponseBodyResourceListVpcListNatGateways : TeaModel {
                     /// <summary>
-                    /// <para>The status of the NAT Gateway.</para>
+                    /// <para>The status of the NAT gateway.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Available</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public string Detail { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the NAT Gateway.</para>
+                    /// <para>The NAT gateway ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ngw-bp1bm0k2t8i6ooxu****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public string NatGatewayId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the NAT Gateway.</para>
+                    /// <para>The name of the NAT gateway.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ngw-test</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                         public string DestinationCidr { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the next hop.</para>
+                        /// <para>The next hop instance ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ngw-2zey0w2u02u1x584m****</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     }
 
                     /// <summary>
-                    /// <para>The status of the NAT Gateway.</para>
+                    /// <para>The status of the NAT gateway.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Available</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the VPC.</para>
+                /// <para>The VPC-connected instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-8vbuzirdl3w1r7exw****</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the VPC.</para>
+                /// <para>The name of the VPC-connected instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-wz94a4q37rgl7g****</para>

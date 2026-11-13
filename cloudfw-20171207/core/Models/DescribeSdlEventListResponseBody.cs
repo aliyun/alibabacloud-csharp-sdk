@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of data leakage events.</para>
+        /// <para>The list of data leak events.</para>
         /// </summary>
         [NameInMap("SdlEventDetailList")]
         [Validation(Required=false)]
         public List<DescribeSdlEventListResponseBodySdlEventDetailList> SdlEventDetailList { get; set; }
         public class DescribeSdlEventListResponseBodySdlEventDetailList : TeaModel {
             /// <summary>
-            /// <para>The asset name.</para>
+            /// <para>The name of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,14 +57,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AssetType { get; set; }
 
             /// <summary>
-            /// <para>The intelligence tag category. Valid values:</para>
+            /// <para>The categorization of intelligence labels. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Suspicious</b>: suspicious</para>
-            /// </description></item>
-            /// <item><description><para><b>Malicious</b>: malicious</para>
-            /// </description></item>
-            /// <item><description><para><b>Trusted</b>: trusted</para>
-            /// </description></item>
+            /// <item><description><b>Suspicious</b>: Suspicious.</description></item>
+            /// <item><description><b>Malicious</b>: Malicious.</description></item>
+            /// <item><description><b>Trusted</b>: Trusted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryClassId { get; set; }
 
             /// <summary>
-            /// <para>The category name.</para>
+            /// <para>The name of the category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Trusted</para>
@@ -85,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The city ID.</para>
+            /// <para>The ID of the city.</para>
             /// 
             /// <b>Example:</b>
             /// <para>000</para>
@@ -95,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CityId { get; set; }
 
             /// <summary>
-            /// <para>The country ID.</para>
+            /// <para>The ID of the country.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -115,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DstIp { get; set; }
 
             /// <summary>
-            /// <para>The destination port.</para>
+            /// <para>The destination ports.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -135,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? EventCnt { get; set; }
 
             /// <summary>
-            /// <para>The event\&quot;s risk level.</para>
+            /// <para>The risk level of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -145,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EventLevel { get; set; }
 
             /// <summary>
-            /// <para>The event name.</para>
+            /// <para>The name of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sensitive ID card data leakage</para>
@@ -155,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The first time the event occurred, as a Unix timestamp in seconds.</para>
+            /// <para>The time when the event first occurred. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735697768</para>
@@ -165,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>The last time the event occurred, as a Unix timestamp in seconds.</para>
+            /// <para>The time when the event last occurred. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1738636157</para>
@@ -175,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? LastTime { get; set; }
 
             /// <summary>
-            /// <para>The location of the destination IP address.</para>
+            /// <para>The name of the region to which the destination IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Yuhang District, Hangzhou City, Zhejiang Province</para>
@@ -185,7 +182,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string LocationName { get; set; }
 
             /// <summary>
-            /// <para>The payload of the intrusion prevention event.</para>
+            /// <para>The attack payload of the intrusion prevention event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3082002f02010004067075626c6963a082002002044c33a756020100020100308200103082000c06082b060102010105000500</para>
@@ -195,7 +192,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Payload { get; set; }
 
             /// <summary>
-            /// <para>The protocol.</para>
+            /// <para>The protocols.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TCP</para>
@@ -235,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? ResourceIdType { get; set; }
 
             /// <summary>
-            /// <para>The number of sensitive data items.</para>
+            /// <para>The amount of sensitive data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -245,7 +242,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SensitiveDataCnt { get; set; }
 
             /// <summary>
-            /// <para>An array of sensitive data.</para>
+            /// <para>The list of sensitive data.</para>
             /// </summary>
             [NameInMap("SensitiveDataList")]
             [Validation(Required=false)]
@@ -262,7 +259,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SensitiveLevel { get; set; }
 
             /// <summary>
-            /// <para>The sensitive data type.</para>
+            /// <para>The type of sensitive data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Identity Card</para>
@@ -282,7 +279,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcIp { get; set; }
 
             /// <summary>
-            /// <para>The source port.</para>
+            /// <para>The source ports.</para>
             /// 
             /// <b>Example:</b>
             /// <para>443</para>
@@ -292,7 +289,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcPortList { get; set; }
 
             /// <summary>
-            /// <para>The traffic volume in bytes.</para>
+            /// <para>The traffic volume.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -302,7 +299,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TrafficBytes { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier for the event.</para>
+            /// <para>The UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b91035dc-8be4-411d-bec5-e6320af9****</para>

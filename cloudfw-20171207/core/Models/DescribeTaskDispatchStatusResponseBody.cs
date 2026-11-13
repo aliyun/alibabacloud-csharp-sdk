@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTaskDispatchStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>71209DFE-XXX-XXX-52B4A4E9DA3B</para>
@@ -20,14 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution status of the task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PENDING: pending execution.</description></item>
-        /// <item><description>RUNNING: running.</description></item>
-        /// <item><description>SUCCESS: succeeded.</description></item>
-        /// <item><description>FAILED: failed.</description></item>
-        /// <item><description>CANCELLED: cancelled.</description></item>
-        /// </list>
+        /// <para>The task status. Valid values: PENDING (pending execution), RUNNING (running), SUCCESS (successful), FAILED (failed), and CANCELLED (canceled).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>

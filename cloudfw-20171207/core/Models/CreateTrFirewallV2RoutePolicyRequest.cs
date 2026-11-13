@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The list of secondary traffic redirection instances.</para>
         /// <remarks>
-        /// <para>DestCandidateList is required. If this parameter is not specified, ErrorParameters(400) is returned.</para>
+        /// <para>DestCandidateList is required. If this parameter is not specified, an ErrorParameters(400) error is returned.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("DestCandidateList")]
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewalls at the border.</para>
         /// <remarks>
-        /// <para>FirewallId is required. If this parameter is not specified, ErrorParameters(400) is returned. You can call DescribeTrFirewallsV2List to obtain instance ID.</para>
+        /// <para>FirewallId is required. If this parameter is not specified, an ErrorParameters(400) error is returned. You can call the DescribeTrFirewallsV2List operation to obtain instance ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language in which you want to receive messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The description of the traffic redirection scenario.</para>
+        /// <para>The description of the traffic redirection policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Singapore Point to Multipoint</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PolicyDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the traffic redirection scenario.</para>
+        /// <para>The name of the traffic redirection policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Singapore Point to Multipoint</para>
@@ -89,15 +89,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The traffic redirection scenario type for the virtual private cloud (VPC) firewall for a CEN Enterprise Edition transit router. Valid values:</para>
+        /// <para>The type of the traffic redirection scenario for virtual private cloud (VPC) firewalls at the border in the Enterprise Edition Cloud Enterprise Network (CEN). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>fullmesh</b>: multi-point interconnection</para>
+        /// <item><description><para><b>fullmesh</b>: Multi-point interconnection.</para>
         /// </description></item>
-        /// <item><description><para><b>one_to_one</b>: point-to-point</para>
+        /// <item><description><para><b>one_to_one</b>: Point-to-point.</para>
         /// </description></item>
-        /// <item><description><para><b>end_to_end</b>: point-to-multipoint</para>
+        /// <item><description><para><b>end_to_end</b>: Point-to-multipoint.</para>
         /// <remarks>
-        /// <para>PolicyType is required. If this parameter is not specified, ErrorParameters(400) is returned.</para>
+        /// <para>PolicyType is required. If this parameter is not specified, an ErrorParameters(400) error is returned.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The list of primary traffic redirection instances.</para>
         /// <remarks>
-        /// <para>SrcCandidateList is required. If this parameter is not specified, ErrorParameters(400) is returned.</para>
+        /// <para>SrcCandidateList is required. If this parameter is not specified, an ErrorParameters(400) error is returned.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SrcCandidateList")]

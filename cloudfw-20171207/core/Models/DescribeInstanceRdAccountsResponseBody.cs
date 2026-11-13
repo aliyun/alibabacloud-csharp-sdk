@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the member account.</para>
+            /// <para>The name of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06D1EC07-C9EB-58AC-A750-C87C9A0****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceVpcListRequest : TeaModel {
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account that owns the resource.</para>
+        /// <para>The Alibaba Cloud UID of the resource owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC instance.</para>
+        /// <para>The ID of the VPC-connected instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-j6cvhdscntzuvr0x****</para>

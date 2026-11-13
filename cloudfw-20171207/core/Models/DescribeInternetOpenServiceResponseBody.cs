@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetOpenServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of data.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<string> PortList { get; set; }
 
             /// <summary>
-            /// <para>The security threat.</para>
+            /// <para>The security risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProbRisk { get; set; }
 
             /// <summary>
-            /// <para>The description of the security threat.</para>
+            /// <para>The description of the security risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The number of exposed public IP addresses.</para>
+            /// <para>The number of open public IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? PublicIpNum { get; set; }
 
             /// <summary>
-            /// <para>The risk level.</para>
+            /// <para>The risk level. Valid values: -1: Evaluating. 0: None. 1: Low. 2: Medium. 3: High. If you do not specify this parameter, all risk levels are queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The description of the risk.</para>
+            /// <para>The risk description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The traffic percentage over the last 24 hours.</para>
+            /// <para>The traffic proportion in the last 1 day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent1Day { get; set; }
 
             /// <summary>
-            /// <para>The traffic percentage over the last 30 days.</para>
+            /// <para>The traffic proportion in the last 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent30Day { get; set; }
 
             /// <summary>
-            /// <para>The traffic percentage over the last 7 days.</para>
+            /// <para>The traffic proportion in the last 7 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>77</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent7Day { get; set; }
 
             /// <summary>
-            /// <para>The reason why the protocol is not identified if the detected protocol is \<c>Unknown\\</c>.</para>
+            /// <para>The reason why the protocol is not identified when the protocol is recognized as Unknown.</para>
             /// </summary>
             [NameInMap("UnknownReason")]
             [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The paging information.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

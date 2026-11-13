@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class EnableSdlProtectedAssetRequest : TeaModel {
         /// <summary>
-        /// <para>The list of IP assets. At least one IP address is required to enable protection.</para>
+        /// <para>The list of IP addresses of the assets. At least one IP address is required to enable protection.</para>
         /// </summary>
         [NameInMap("IpList")]
         [Validation(Required=false)]

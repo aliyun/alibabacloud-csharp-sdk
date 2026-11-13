@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeLocationInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of regions in China.</para>
+        /// <para>The number of regions in the Chinese mainland.</para>
         /// 
         /// <b>Example:</b>
         /// <para>340</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CnCount { get; set; }
 
         /// <summary>
-        /// <para>The list of regions in China.</para>
+        /// <para>The list of regions in the Chinese mainland.</para>
         /// </summary>
         [NameInMap("CnList")]
         [Validation(Required=false)]
         public List<DescribeLocationInfoResponseBodyCnList> CnList { get; set; }
         public class DescribeLocationInfoResponseBodyCnList : TeaModel {
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3301</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string LocId { get; set; }
 
             /// <summary>
-            /// <para>The name of the region.</para>
+            /// <para>The region name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hangzhou City</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The information about provinces and cities in China.</para>
+        /// <para>The province and city information in the Chinese mainland.</para>
         /// </summary>
         [NameInMap("CnProvinceList")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<DescribeLocationInfoResponseBodyCnProvinceListCities> Cities { get; set; }
             public class DescribeLocationInfoResponseBodyCnProvinceListCities : TeaModel {
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string LocId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the region.</para>
+                /// <para>The region name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hangzhou</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The name of the province.</para>
+            /// <para>The province name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zhejiang</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The number of regions outside China.</para>
+        /// <para>The number of regions outside the Chinese mainland.</para>
         /// 
         /// <b>Example:</b>
         /// <para>238</para>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OverseasCount { get; set; }
 
         /// <summary>
-        /// <para>The list of regions outside China.</para>
+        /// <para>The list of regions outside the Chinese mainland.</para>
         /// </summary>
         [NameInMap("OverseasList")]
         [Validation(Required=false)]
         public List<DescribeLocationInfoResponseBodyOverseasList> OverseasList { get; set; }
         public class DescribeLocationInfoResponseBodyOverseasList : TeaModel {
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>US</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string LocId { get; set; }
 
             /// <summary>
-            /// <para>The name of the region.</para>
+            /// <para>The region name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>United States</para>

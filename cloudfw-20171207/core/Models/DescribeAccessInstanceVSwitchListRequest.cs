@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceVSwitchListRequest : TeaModel {
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account to which the resource belongs.</para>
+        /// <para>The Alibaba Cloud UID to which the resource belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-qzeaol304m***</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The ID of the VPC-connected instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6b5lyul0x******</para>

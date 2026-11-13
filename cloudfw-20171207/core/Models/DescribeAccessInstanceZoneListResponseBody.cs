@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeAccessInstanceZoneListResponseBodyZones> Zones { get; set; }
         public class DescribeAccessInstanceZoneListResponseBodyZones : TeaModel {
             /// <summary>
-            /// <para>The name of the zone in the local language.</para>
+            /// <para>The local name of the zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Beijing Area G</para>

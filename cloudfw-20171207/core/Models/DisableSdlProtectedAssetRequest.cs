@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> IpList { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language type for receiving messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

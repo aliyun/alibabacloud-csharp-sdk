@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeConfiguredDestinationIPResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of destinations.</para>
+        /// <para>The list of destinations returned.</para>
         /// </summary>
         [NameInMap("Destinations")]
         [Validation(Required=false)]
         public List<DescribeConfiguredDestinationIPResponseBodyDestinations> Destinations { get; set; }
         public class DescribeConfiguredDestinationIPResponseBodyDestinations : TeaModel {
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationIP { get; set; }
 
             /// <summary>
-            /// <para>The ISP of the destination.</para>
+            /// <para>The destination ISP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>telecom</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationRegion { get; set; }
 
             /// <summary>
-            /// <para>The time of the operation. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The operation time. The value is a UNIX timestamp accurate to seconds, such as 1672502400.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1534408189</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0AE91F8-E6C5-50D4-983F-FC53672****</para>

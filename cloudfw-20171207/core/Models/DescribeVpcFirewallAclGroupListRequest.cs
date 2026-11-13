@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAclGroupListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number of the current page returned for a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The configuration status of the VPC boundary firewall. Valid values:</para>
+        /// <para>The configuration status of the VPC firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>configured</b>: The VPC boundary firewall is configured.</para>
-        /// </description></item>
-        /// <item><description><para>If you omit this parameter, the operation queries the access control policies for all VPC boundary firewalls.</para>
-        /// </description></item>
+        /// <item><description><b>configured</b>: The virtual private cloud (VPC) firewalls at the border are configured (that is, the firewalls are created).</description></item>
+        /// <item><description>Empty: queries the access control policy of all virtual private cloud (VPC) firewalls at the border.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallConfigureStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC boundary firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewalls at the border.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-5b202e7f0be64611****</para>
@@ -46,12 +44,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 50.</para>
+        /// <para>The maximum number of entries to return on each page for a paged query. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

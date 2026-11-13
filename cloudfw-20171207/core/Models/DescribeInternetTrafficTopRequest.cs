@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTrafficTopRequest : TeaModel {
         /// <summary>
-        /// <para>The type of traffic data.</para>
+        /// <para>The traffic data type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The end time. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time. Use a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of top entries to return. The default value is 50. Valid values: 1 to 50.</para>
+        /// <para>The maximum number of top entries. Default value: 50. Valid values: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Limit { get; set; }
 
         /// <summary>
-        /// <para>The action of the rule.</para>
+        /// <para>The rule defense result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleResult { get; set; }
 
         /// <summary>
-        /// <para>The source of the rule.</para>
+        /// <para>The rule source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleSource { get; set; }
 
         /// <summary>
-        /// <para>The name of the country to display.</para>
+        /// <para>Specifies whether to display the country name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>China</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ShowCountryName { get; set; }
 
         /// <summary>
-        /// <para>The sorting method.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in_bytes</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The tracing code for the source.</para>
+        /// <para>The tracing code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time. Use a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

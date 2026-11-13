@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>No recommended intelligent policies are available.</para>
+            /// <para>当前无智能策略推荐</para>
             /// </summary>
             [NameInMap("AclRecommendDetail")]
             [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The risk reason.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Previous traffic is all malicious traffic.</para>
+            /// <para>历史流量均为黑流量</para>
             /// </summary>
             [NameInMap("RiskReason")]
             [Validation(Required=false)]

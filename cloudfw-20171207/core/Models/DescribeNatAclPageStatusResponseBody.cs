@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatAclPageStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the exception.</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proxy_not_exist</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Detail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a separate page is supported for NAT ACL.</para>
+        /// <para>Indicates whether the dedicated page for NAT ACLs is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

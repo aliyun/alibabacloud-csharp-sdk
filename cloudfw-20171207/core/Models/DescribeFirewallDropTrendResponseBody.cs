@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeFirewallDropTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data list.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -37,8 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NatDropSession { get; set; }
 
             /// <summary>
-            /// <para>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</para>
-            /// <para>If the data at this point in time has not been processed, the values of all other fields are -1.</para>
+            /// <para>The time when the traffic occurred. The value is a UNIX timestamp in seconds. If the data for this time point is not processed, the values of other fields are -1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758474000</para>
@@ -70,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of total blocked sessions.</para>
+        /// <para>The maximum number of blocked sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -80,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxDropSession { get; set; }
 
         /// <summary>
-        /// <para>The time when the maximum number of total blocked sessions occurred. The value is a UNIX timestamp in seconds, such as 1672502400.</para>
+        /// <para>The time when the maximum number of blocked sessions occurred. The value is a UNIX timestamp in seconds, such as 1672502400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656837360</para>

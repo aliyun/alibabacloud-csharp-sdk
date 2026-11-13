@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public DescribeAclChecksResponseBodyCheckRecords CheckRecords { get; set; }
         public class DescribeAclChecksResponseBodyCheckRecords : TeaModel {
             /// <summary>
-            /// <para>The type of ACL check.</para>
+            /// <para>The ACL check type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Internet</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CheckStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of ACL check.</para>
+                /// <para>The ACL check type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AddressBookGather</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CheckType { get; set; }
 
                 /// <summary>
-                /// <para>The UNIX timestamp of the last check, in seconds.</para>
+                /// <para>The timestamp of the latest check. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724982259</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetSlbRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SLB instance. Fuzzy search is supported.</para>
+        /// <para>The ID of the SLB instance. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-2ze8v2x5kd9qyvp2****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the SLB instance. Fuzzy search is supported.</para>
+        /// <para>The name of the SLB instance. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The public IP address. Fuzzy search is supported. If you do not specify this parameter, all public IP addresses are queried.</para>
+        /// <para>The public IP address. Fuzzy match is supported. If you do not specify this parameter, all public IP addresses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.108.60.XXX</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The originating IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>112.64.233.XXX</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The tag. If you do not specify this parameter, all tags are searched.</para>
+        /// <para>The tag. If you do not specify this parameter, all tags are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

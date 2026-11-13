@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTrafficTopResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of traffic data entries.</para>
+        /// <para>The number of traffic data records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeInternetTrafficTopResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetTrafficTopResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The name of the country.</para>
+            /// <para>The country name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>US</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DataValue { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the data is subscribed.</para>
+            /// <para>Indicates whether the item is subscribed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The type of traffic data.</para>
+        /// <para>The traffic data type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in_src_ip</para>

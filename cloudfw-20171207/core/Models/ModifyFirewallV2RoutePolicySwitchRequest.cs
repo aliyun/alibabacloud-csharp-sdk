@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyFirewallV2RoutePolicySwitchRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the VPC boundary firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewalls.</para>
+        /// <para><b>Note</b>: This parameter is actually required. If it is not provided, the operation returns ErrorParameters (-360103).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-5b202e7f0be64611****</para>
@@ -20,12 +21,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +51,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ShouldRecover { get; set; }
 
         /// <summary>
-        /// <para>The ID of the routing policy for the firewall.</para>
+        /// <para>The ID of the firewall route policy.</para>
+        /// <para><b>Note</b>: This parameter is actually required. If it is not provided or the policy does not exist, the operation returns ErrorTrFirewallPolicyNotFound (-361043). You can call DescribeTrFirewallV2RoutePolicyList to query valid route policy IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-93684cc5caa44b2e****</para>
@@ -62,13 +62,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TrFirewallRoutePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The status of the policy. Valid values:</para>
+        /// <para>The status of the policy switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>open: Enables the policy.</para>
+        /// <item><description><para>open: Enabled.</para>
         /// </description></item>
-        /// <item><description><para>close: Disables the policy.</para>
+        /// <item><description><para>close: Disabled.</para>
         /// </description></item>
         /// </list>
+        /// <para><b>Note</b>: This parameter is actually required. If it is not provided or the value is not within the preceding range, the operation returns ErrorParameters (-360103).</para>
         /// 
         /// <b>Example:</b>
         /// <para>open</para>

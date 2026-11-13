@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeLogStoreInfoResponseBodyInfoList> InfoList { get; set; }
         public class DescribeLogStoreInfoResponseBodyInfoList : TeaModel {
             /// <summary>
-            /// <para>The name of the SLS Logstore.</para>
+            /// <para>The name of the Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx-logstore</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string LogStoreName { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of shards supported for scaling.</para>
+            /// <para>The maximum number of shards supported for elastic scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity threshold, in bytes.</para>
+            /// <para>The storage capacity threshold. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The number of shards in use.</para>
+            /// <para>The number of shards currently in use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Shard { get; set; }
 
             /// <summary>
-            /// <para>The location of the Logstore. Valid values: \<c>cn\\</c> for the Chinese mainland and \<c>intl\\</c> for regions outside the Chinese mainland.</para>
+            /// <para>The site to which the Logstore belongs. Valid values: cn: the Chinese mainland. intl: outside the Chinese mainland.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Site { get; set; }
 
             /// <summary>
-            /// <para>The storage duration of logs, in days.</para>
+            /// <para>The storage duration of logs. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Ttl { get; set; }
 
             /// <summary>
-            /// <para>The amount of stored logs, in bytes.</para>
+            /// <para>The volume of stored logs. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21852955752</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The number of times the log storage mode can be changed.</para>
+        /// <para>The number of times the user can switch the log mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? LogModifyQuota { get; set; }
 
         /// <summary>
-        /// <para>The name of the SLS Logstore.</para>
+        /// <para>The name of the Simple Log Service Logstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx-logstore</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string LogStoreName { get; set; }
 
         /// <summary>
-        /// <para>The log version. 1: indicates one Logstore. 2: indicates two Logstores.</para>
+        /// <para>The log version. Valid values: 1: one Logstore. 2: two Logstores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The available log storage capacity, in bytes.</para>
+        /// <para>The available log storage capacity. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000000</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? Quota { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where logs are delivered.</para>
+        /// <para>The region ID for log delivery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C6C3B72B********E95FB0A161</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The total purchased log storage capacity, in bytes.</para>
+        /// <para>The total log storage capacity purchased by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000000</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalQuota { get; set; }
 
         /// <summary>
-        /// <para>The storage duration of logs, in days.</para>
+        /// <para>The storage duration of logs. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -209,9 +209,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? Ttl { get; set; }
 
         /// <summary>
-        /// <para>The used storage capacity, in bytes.</para>
+        /// <para>The used storage capacity. Unit: bytes.</para>
         /// <remarks>
-        /// <para>Statistics from Simple Log Service may be delayed by up to two hours.</para>
+        /// <para>The statistics of Simple Log Service have a delay of about two hours.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

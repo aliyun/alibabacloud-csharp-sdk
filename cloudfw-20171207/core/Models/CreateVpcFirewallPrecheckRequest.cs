@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateVpcFirewallPrecheckRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-iv8m2lj2fqg1xt****</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account of Cloud Firewall.</para>
+        /// <para>The UID of the Cloud Firewall member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128599825273****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router instance.</para>
+        /// <para>The transit router instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-t4n16htuv1jalj9cq****</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC instance.</para>
+        /// <para>The VPC-connected instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp132e2wpu9o6qth****</para>

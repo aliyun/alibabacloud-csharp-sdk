@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud firewall. Valid values:</para>
+        /// <para>The Cloud Firewall type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>internet</b></description></item>
         /// <item><description><b>vpc</b></description></item>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The primary DNS server.</para>
         /// <remarks>
-        /// <para>When PrivateDnsType is set to Custom, you must specify PrimaryDns and StandbyDns.</para>
+        /// <para>If PrivateDnsType is set to Custom, you must provide PrimaryDns and StandbyDns.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrimaryDns { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, an error is returned. The region must also be in the supported list.</para>
+        /// <para>The ID of the primary vSwitch. This parameter is required. If this parameter is not specified, the error code -200103 is returned. The region and zone of the primary and secondary vSwitches specified by PrimaryVSwitchId and StandbyVSwitchId must support private DNS firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6b0dkyryer8******</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrimaryVSwitchIp { get; set; }
 
         /// <summary>
-        /// <para>The type of private DNS. When PrivateDnsType is set to Custom, Port and IpProtocol are required. When PrivateDnsType is set to PrivateZone, the backend automatically sets the port to 53 and uses the default protocol. Valid values:</para>
+        /// <para>The private DNS type. If PrivateDnsType is set to Custom, Port and IpProtocol are conditionally required. If PrivateDnsType is set to PrivateZone, the backend automatically populates the values with 53 and the default protocol. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PrivateZone</b></description></item>
         /// <item><description><b>Custom</b> (default)</description></item>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The secondary DNS server.</para>
         /// <remarks>
-        /// <para>When PrivateDnsType is set to Custom, you must specify PrimaryDns and StandbyDns.</para>
+        /// <para>If PrivateDnsType is set to Custom, you must provide PrimaryDns and StandbyDns.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StandbyDns { get; set; }
 
         /// <summary>
-        /// <para>The ID of the secondary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, error code -200534 is returned. The region must also be in the supported list.</para>
+        /// <para>The ID of the secondary vSwitch. The zones of the primary and secondary vSwitches specified by PrimaryVSwitchId and StandbyVSwitchId must support private DNS. Otherwise, the error code -200534 is returned. The region must also be in the supported list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-8vb6jk75wfcwn******</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StandbyVSwitchIp { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC-connected instance.</para>
+        /// <para>The VPC-connected instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

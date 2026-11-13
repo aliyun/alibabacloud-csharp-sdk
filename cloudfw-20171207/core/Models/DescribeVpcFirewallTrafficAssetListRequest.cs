@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The end time. This value is a UNIX timestamp in seconds.</para>
+        /// <para>The end time. The value is a UNIX timestamp accurate to seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IP { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to collect only the traffic that accesses AI services. This parameter is required. Set this parameter to &quot;true&quot;. Otherwise, a parameter error is returned.</para>
+        /// <para>Specifies whether to query only the traffic that accesses AI services. This parameter is required. You must set this parameter to &quot;true&quot;. Otherwise, a parameter error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IsAITraffic { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,12 +75,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Valid values:</para>
+        /// <para>The field by which to sort the results. Default value: TotalBytes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>TotalBytes: sorts by total traffic.</description></item>
-        /// <item><description>SessionCount: sorts by session count.</description></item>
+        /// <item><description><b>TotalBytes</b>: sorts the results by total traffic.</description></item>
+        /// <item><description><b>SessionCount</b>: sorts the results by the number of sessions.</description></item>
         /// </list>
-        /// <para>Default value: TotalBytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SessionCount</para>
@@ -90,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -100,7 +99,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: asc, desc.</para>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>asc</b>: ascending order.</description></item>
+        /// <item><description><b>desc</b>: descending order.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -110,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The start time. This value is a UNIX timestamp in seconds.</para>
+        /// <para>The start time. The value is a UNIX timestamp accurate to seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

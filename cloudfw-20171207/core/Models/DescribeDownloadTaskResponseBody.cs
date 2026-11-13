@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeDownloadTaskResponseBodyTasks> Tasks { get; set; }
         public class DescribeDownloadTaskResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. This is a UNIX timestamp in seconds.</para>
+            /// <para>The time when the task was created. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706595827</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the task expires. This is a UNIX timestamp in seconds.</para>
+            /// <para>The time when the task expires. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1714371828</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string FileSize { get; set; }
 
             /// <summary>
-            /// <para>The URL of the Object Storage Service (OSS) file.</para>
+            /// <para>The URL of the OSS file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cfw-table-download-cn.oss-cn-hangzhou.aliyuncs.com/%E4%BA%92%E8%81%94%E7%BD%91%E8%BE%B9%E7%95%8C%E9%98%B2%E7%81%AB%E5%A2%99%E8%B5%84%E4%BA%A7-IPv4_1069.csv?Expires=1708583913&OSSAccessKeyId=****&Signature=******%3D">https://cfw-table-download-cn.oss-cn-hangzhou.aliyuncs.com/%E4%BA%92%E8%81%94%E7%BD%91%E8%BE%B9%E7%95%8C%E9%98%B2%E7%81%AB%E5%A2%99%E8%B5%84%E4%BA%A7-IPv4_1069.csv?Expires=1708583913&amp;OSSAccessKeyId=****&amp;Signature=******%3D</a></para>
@@ -69,14 +69,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>finish</b>: The task is complete.</para>
-            /// </description></item>
-            /// <item><description><para><b>start</b>: The task has started.</para>
-            /// </description></item>
-            /// <item><description><para><b>error</b>: The task failed.</para>
-            /// </description></item>
-            /// <item><description><para><b>expire</b>: The task has expired. The task file is no longer valid and cannot be downloaded.</para>
-            /// </description></item>
+            /// <item><description><b>finish</b>: The task is completed.</description></item>
+            /// <item><description><b>start</b>: The task is started.</description></item>
+            /// <item><description><b>error</b>: The task failed.</description></item>
+            /// <item><description><b>expire</b>: The task has expired. The task file is invalid and cannot be downloaded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>

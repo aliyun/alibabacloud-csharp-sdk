@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRegionResourceTypeAutoEnableResponseBody : TeaModel {
         /// <summary>
-        /// <para>The traffic redirection settings for asset types in each region.</para>
+        /// <para>The traffic redirection switch for asset types in a region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;cn-shenzhen&quot;:{&quot;SlbEIP&quot;:false,&quot;EIP&quot;:true}}</para>
         /// </summary>
         [NameInMap("RegionResourceAutoEnable")]
         [Validation(Required=false)]
         public Dictionary<string, Dictionary<string, object>> RegionResourceAutoEnable { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2841452-CB8D-4F7D-B247-38E1CF7334F8</para>
