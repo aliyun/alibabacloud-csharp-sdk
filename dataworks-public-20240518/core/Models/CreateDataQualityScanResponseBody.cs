@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityScanResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returns the ID of the created data source sharing rule, which uniquely identifies the rule.</para>
+        /// <para>The ID of the created data source sharing rule, which is the unique identifier of the data source sharing rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676303114031776</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>

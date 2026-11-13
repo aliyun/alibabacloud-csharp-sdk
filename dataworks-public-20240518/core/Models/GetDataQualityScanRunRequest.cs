@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityScanRunRequest : TeaModel {
         /// <summary>
-        /// <para>The data quality monitoring run record ID.</para>
+        /// <para>The ID of the data quality monitor run record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1006059507</para>

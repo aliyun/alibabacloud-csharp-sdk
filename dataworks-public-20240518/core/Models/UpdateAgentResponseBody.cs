@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public UpdateAgentResponseBodyAgent Agent { get; set; }
         public class UpdateAgentResponseBodyAgent : TeaModel {
             /// <summary>
-            /// <para>The version of the updated agent definition.</para>
+            /// <para>The updated agent definition version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The suite description of the bound version.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Collection of data analytics expert capabilities</para>
+                /// <para>Data analytics expert capability collection</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The creation time of the agent. It is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the agent was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780555634000</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last modified time of the agent. It is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the agent was last modified. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780555634000</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the official skill.</para>
+                /// <para>The official skill ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataworks-semantic</para>

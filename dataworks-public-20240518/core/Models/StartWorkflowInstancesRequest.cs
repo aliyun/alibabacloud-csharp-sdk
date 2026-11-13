@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StartWorkflowInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>

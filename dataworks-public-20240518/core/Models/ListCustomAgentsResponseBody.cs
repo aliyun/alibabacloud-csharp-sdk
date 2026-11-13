@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListCustomAgentsResponseBodyPagingInfoAgents> Agents { get; set; }
             public class ListCustomAgentsResponseBodyPagingInfoAgents : TeaModel {
                 /// <summary>
-                /// <para><b>The creator ID.</b></para>
+                /// <para><b>The ID of the creator.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para><b>The display name.</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>My Assistant</para>
+                /// <para>My assistant</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para><b>The creation time (UNIX timestamp in milliseconds).</b></para>
+                /// <para><b>The creation time (millisecond timestamp).</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1780555634000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para><b>The last modification time (UNIX timestamp in milliseconds).</b></para>
+                /// <para><b>The last modified time (millisecond timestamp).</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1780555634000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? GmtModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para><b>The last modifier ID.</b></para>
+                /// <para><b>The ID of the last modifier.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ModifierId { get; set; }
 
                 /// <summary>
-                /// <para><b>The agent name.</b></para>
+                /// <para><b>The name of the agent.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned in this response.</para>
+            /// <para>The maximum number of entries returned for this request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries that meet the query conditions.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

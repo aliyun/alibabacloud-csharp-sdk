@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The image publish execution ID, which is used as an idempotence identifier.</para>
+        /// <para>The ID of the image publishing execution, which is used as an idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>582d4896-d224-413b-b883-239eeebe0bc5</para>

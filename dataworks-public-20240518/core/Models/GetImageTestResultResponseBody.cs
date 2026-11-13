@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetImageTestResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? OperateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the process.</para>
+            /// <para>The process ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>582d4896-d224-413b-b883-239eeebe0bc5</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ProcessId { get; set; }
 
             /// <summary>
-            /// <para>The publishing status of the image. Valid values:</para>
+            /// <para>The image publishing status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Untest: Not tested.</description></item>
             /// <item><description>Testing: Testing.</description></item>
@@ -102,17 +102,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PublishStage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Serverless_res_group_****</para>
+            /// <para>123456789</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public long? ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The status of the test process. Valid values:</para>
+            /// <para>The test process status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>running: Running.</description></item>
             /// <item><description>completed: Completed.</description></item>

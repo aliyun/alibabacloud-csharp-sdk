@@ -13,9 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The connection configuration of the MCP server.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Transport&quot;:&quot;SSE&quot;,&quot;Url&quot;:&quot;<a href="https://example.com/mcp/sse%22,%22CustomHeaders%22:%7B%7D%7D">https://example.com/mcp/sse&quot;,&quot;CustomHeaders&quot;:{}}</a></para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -54,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The name of the MCP server. It must be unique at the tenant level. It must start with a lowercase letter and can contain only lowercase letters (<c>a-z</c>), digits (<c>0-9</c>), underscores (<c>_</c>), and hyphens (<c>-</c>).</para>
+        /// <para>The name of the MCP server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,21 +73,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. Specify the corresponding fields based on the value of Visibility.</para>
+        /// <para>The visibility scope. Specify the corresponding field based on the value of Visibility.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]
         public CreateMcpServerRequestVisibilityScope VisibilityScope { get; set; }
         public class CreateMcpServerRequestVisibilityScope : TeaModel {
             /// <summary>
-            /// <para>The list of visible project IDs. This parameter takes effect when Visibility is set to <c>PROJECT</c>.</para>
+            /// <para>The IDs of the projects in which the MCP server is visible. This parameter takes effect only when Visibility is set to <c>PROJECT</c>.</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]
             public List<string> ProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of visible user IDs. This parameter takes effect when Visibility is set to <c>USER</c>.</para>
+            /// <para>The IDs of the users who can see the MCP server. This parameter takes effect only when Visibility is set to <c>USER</c>.</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]

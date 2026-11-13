@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The instances.</para>
+        /// <para>The list of node instances.</para>
         /// </summary>
         [NameInMap("TaskInstances")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The node instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</para>
+            /// <para>The runtime priority of the instance. Valid values: 1, 3, 5, 7, and 8.</para>
             /// <para>A larger value indicates a higher priority. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The resource group information. Set this parameter to the ID of a resource group for scheduling.</para>
+            /// <para>The resource group information. Specify the identifier of the scheduling resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>

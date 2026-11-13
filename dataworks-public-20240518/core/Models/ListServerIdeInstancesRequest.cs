@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The account ID of the user that owns the instance.</para>
+        /// <para>The account ID of the user who owns the instance. This parameter is used to filter instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20933221576142****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RelatedUserId { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks resource group identifier. You can use the numeric ID of the resource group or the full identifier in the Serverless_res_group_{tenantId}_{resgId} format.</para>
+        /// <para>The identifier of the DataWorks resource group. You can specify the numeric ID of the resource group or the full identifier in the Serverless_res_group_{tenantId}_{resgId} format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Serverless_res_group_123456789012345_9876543210****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The instance subtype. Valid values:</para>
+        /// <para>The subtype of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PERSONAL_DEV: personal development environment</description></item>
         /// <item><description>DATA_AGENT: Data Agent</description></item>

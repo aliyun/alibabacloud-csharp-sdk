@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListServerIdeInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned in the current response.</para>
+        /// <para>The maximum number of entries used for this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListServerIdeInstancesResponseBodyPagingInfoInstancesCredentialConfig CredentialConfig { get; set; }
                 public class ListServerIdeInstancesResponseBodyPagingInfoInstancesCredentialConfig : TeaModel {
                     /// <summary>
-                    /// <para>The environment variable role key.</para>
+                    /// <para>The environment variable key for the role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string AliyunEnvRoleKey { get; set; }
 
                     /// <summary>
-                    /// <para>The credential configurations.</para>
+                    /// <para>The list of credential configurations.</para>
                     /// </summary>
                     [NameInMap("Configs")]
                     [Validation(Required=false)]
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The roles in the credential configuration.</para>
+                        /// <para>The list of roles in the credential configuration.</para>
                         /// </summary>
                         [NameInMap("Roles")]
                         [Validation(Required=false)]
                         public List<ListServerIdeInstancesResponseBodyPagingInfoInstancesCredentialConfigConfigsRoles> Roles { get; set; }
                         public class ListServerIdeInstancesResponseBodyPagingInfoInstancesCredentialConfigConfigsRoles : TeaModel {
                             /// <summary>
-                            /// <para>The Alibaba Cloud account ID of the entity to which the assumed role belongs.</para>
+                            /// <para>The Alibaba Cloud account ID of the principal to which the assumed role belongs.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>123456789012****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public ListServerIdeInstancesResponseBodyPagingInfoInstancesCredentialConfigConfigsRolesUserInfo UserInfo { get; set; }
                             public class ListServerIdeInstancesResponseBodyPagingInfoInstancesCredentialConfigConfigsRolesUserInfo : TeaModel {
                                 /// <summary>
-                                /// <para>The temporary AccessKey ID used for credential injection.</para>
+                                /// <para>The temporary access key ID used for credential injection.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>STS.N*********7</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The credential configuration type. Valid values:</para>
+                        /// <para>The type of the credential configuration. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>Role: single role assumption</description></item>
                         /// <item><description>RoleChain: role chain assumption</description></item>
@@ -230,14 +230,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Cu { get; set; }
 
                 /// <summary>
-                /// <para>The datasets mounted to the instance.</para>
+                /// <para>The list of datasets mounted to the instance.</para>
                 /// </summary>
                 [NameInMap("Datasets")]
                 [Validation(Required=false)]
                 public List<ListServerIdeInstancesResponseBodyPagingInfoInstancesDatasets> Datasets { get; set; }
                 public class ListServerIdeInstancesResponseBodyPagingInfoInstancesDatasets : TeaModel {
                     /// <summary>
-                    /// <para>The custom mount attributes of the dataset. The content is passed as mount options.</para>
+                    /// <para>The custom mount properties of the dataset. The content is passed as mount options.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;fs.oss.download.thread.concurrency&quot;:&quot;10&quot;}</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ExtOptions { get; set; }
 
                     /// <summary>
-                    /// <para>The dataset identifier.</para>
+                    /// <para>The identifier of the dataset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>d-vsqjvs****rp5l206u</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Uri { get; set; }
 
                     /// <summary>
-                    /// <para>The dataset version number.</para>
+                    /// <para>The version number of the dataset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The account ID of the user that owns the instance.</para>
+                /// <para>The account ID of the user who owns the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20933221576142****</para>
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The DataWorks workspace ID.</para>
+                /// <para>The ID of the DataWorks workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -504,7 +504,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The NAT gateway ID.</para>
+                        /// <para>The ID of the NAT gateway.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ngw-bp1****</para>
@@ -526,7 +526,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The security group ID.</para>
+                    /// <para>The ID of the security group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sg-bp1****</para>
@@ -536,7 +536,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch ID.</para>
+                    /// <para>The ID of the vSwitch.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-bp1****</para>
@@ -546,7 +546,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC ID.</para>
+                    /// <para>The ID of the VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1****</para>
@@ -570,7 +570,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -592,7 +592,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E7D55162-4489-1619-AAF5-3F97D5FCA948</para>

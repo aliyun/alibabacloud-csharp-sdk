@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMyApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data part of the paginated result.</para>
+        /// <para>The data in the paginated results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListMyApplicationsResponseBodyData Data { get; set; }
         public class ListMyApplicationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of application order details.</para>
+            /// <para>The list of request details.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListMyApplicationsResponseBodyDataData> Data { get; set; }
             public class ListMyApplicationsResponseBodyDataData : TeaModel {
                 /// <summary>
-                /// <para>The time when the application was initiated.</para>
+                /// <para>The time when the request was submitted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1779695088000</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ApplicationTime { get; set; }
 
                 /// <summary>
-                /// <para>The application content.</para>
+                /// <para>The request details.</para>
                 /// </summary>
                 [NameInMap("Contents")]
                 [Validation(Required=false)]
                 public List<ListMyApplicationsResponseBodyDataDataContents> Contents { get; set; }
                 public class ListMyApplicationsResponseBodyDataDataContents : TeaModel {
                     /// <summary>
-                    /// <para>The resource operation permissions requested in the application.</para>
+                    /// <para>The permissions requested for the resource operations.</para>
                     /// </summary>
                     [NameInMap("AccessTypes")]
                     [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string DefSchema { get; set; }
 
                     /// <summary>
-                    /// <para>The permission expiration date (millisecond timestamp).</para>
+                    /// <para>The expiration time of the permissions in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1782354014507</para>
@@ -88,29 +88,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? ExpirationTime { get; set; }
 
                     /// <summary>
-                    /// <para>The resource operation permissions that were finally approved.</para>
+                    /// <para>The final approved resource operation permissions.</para>
                     /// </summary>
                     [NameInMap("FinalAccessTypes")]
                     [Validation(Required=false)]
                     public List<string> FinalAccessTypes { get; set; }
 
                     /// <summary>
-                    /// <para><b>The authorization target.</b></para>
+                    /// <para><b>Grantee</b></para>
                     /// </summary>
                     [NameInMap("Grantee")]
                     [Validation(Required=false)]
                     public ListMyApplicationsResponseBodyDataDataContentsGrantee Grantee { get; set; }
                     public class ListMyApplicationsResponseBodyDataDataContentsGrantee : TeaModel {
                         /// <summary>
-                        /// <para>The principal ID for authorization:</para>
+                        /// <para>The principal ID:</para>
                         /// <list type="bullet">
-                        /// <item><description>RamUser: DataWorks UserId.</description></item>
-                        /// <item><description>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;.</description></item>
-                        /// <item><description>DataworksTenantMember: DataWorks UserId.</description></item>
-                        /// <item><description>DataworksTenantRole: DataWorks tenant roleCode.</description></item>
-                        /// <item><description>DataworksProjectRole: DataWorks workspace roleCode.</description></item>
-                        /// <item><description>DataworksProjectMember: DataWorks UserId.</description></item>
-                        /// <item><description>DlfRole: DlfNext role name.</description></item>
+                        /// <item><description>RamUser: DataWorks user ID</description></item>
+                        /// <item><description>RamRole: DataWorks user ID starting with &quot;ROLE_&quot;</description></item>
+                        /// <item><description>DataworksTenantMember: DataWorks user ID</description></item>
+                        /// <item><description>DataworksTenantRole: DataWorks tenant role code</description></item>
+                        /// <item><description>DataworksProjectRole: DataWorks workspace role code</description></item>
+                        /// <item><description>DataworksProjectMember: DataWorks user ID</description></item>
+                        /// <item><description>DlfRole: DlfNext role name</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string PrincipalId { get; set; }
 
                         /// <summary>
-                        /// <para>The principal type for authorization:</para>
+                        /// <para>The principal type. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>RamRole</description></item>
                         /// <item><description>RamUser</description></item>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The approval process instance ID of the initiated application.</para>
+                    /// <para>The ID of the approval process instance for the request.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>777799223</para>
@@ -162,14 +162,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ProcessInstanceId { get; set; }
 
                     /// <summary>
-                    /// <para><b>The resource declaration.</b></para>
+                    /// <para><b>Resource declaration</b></para>
                     /// </summary>
                     [NameInMap("Resource")]
                     [Validation(Required=false)]
                     public ListMyApplicationsResponseBodyDataDataContentsResource Resource { get; set; }
                     public class ListMyApplicationsResponseBodyDataDataContentsResource : TeaModel {
                         /// <summary>
-                        /// <para><b>The ResourceSchema.name on which the resource parsing depends.</b></para>
+                        /// <para><b>The ResourceSchema.name that the resource parsing depends on</b></para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MaxCompute</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string DefSchema { get; set; }
 
                         /// <summary>
-                        /// <para><b>The ResourceSchema.version on which the resource parsing depends.</b></para>
+                        /// <para><b>The ResourceSchema.version that the resource parsing depends on</b></para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>v1.0.0</para>
@@ -189,7 +189,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string DefVersion { get; set; }
 
                         /// <summary>
-                        /// <para><b>The resource metadata, whose content is constrained by ResourceSchema.</b></para>
+                        /// <para><b>The resource metadata. The data content is constrained by ResourceSchema.</b></para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>{&quot;schema&quot;: &quot;default&quot;, &quot;threeTierModel&quot;: false, &quot;project&quot;: &quot;sync_dtestn&quot;, &quot;workspace&quot;: &quot;4477656&quot;, &quot;table&quot;: &quot;order&quot;, &quot;tenant&quot;: &quot;524257424864736&quot;}</para>
                         /// </summary>
                         [NameInMap("MetaData")]
                         [Validation(Required=false)]
@@ -198,7 +201,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The minimum permission resource type.</para>
+                    /// <para>The least privilege resource type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>table</para>
@@ -208,15 +211,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ResourceName { get; set; }
 
                     /// <summary>
-                    /// <para>The approval status. Valid values:</para>
+                    /// <para>Filters by approval status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>WaitApproval: pending approval.</description></item>
-                    /// <item><description>Confirmed: pending authorization.</description></item>
-                    /// <item><description>RejectApproval: approval rejected.</description></item>
-                    /// <item><description>AuthorizeSucceed: authorization succeeded.</description></item>
-                    /// <item><description>AuthorizeFailed: authorization failed.</description></item>
-                    /// <item><description>Deleted: deleted.</description></item>
-                    /// <item><description>Canceled: withdrawn.</description></item>
+                    /// <item><description>WaitApproval: pending approval</description></item>
+                    /// <item><description>Confirmed: pending authorization</description></item>
+                    /// <item><description>RejectApproval: approval rejected</description></item>
+                    /// <item><description>AuthorizeSucceed: authorization succeeded</description></item>
+                    /// <item><description>AuthorizeFailed: authorization failed</description></item>
+                    /// <item><description>Deleted: deleted</description></item>
+                    /// <item><description>Canceled: withdrawn</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -269,25 +272,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ProcessInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the application.</para>
+                /// <para>The reason for the request.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Business requirement</para>
+                /// <para>Business requirements</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// <para>The approval status. Valid values:</para>
+                /// <para>Filters by approval status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>WaitApproval: pending approval.</description></item>
-                /// <item><description>Confirmed: pending authorization.</description></item>
-                /// <item><description>RejectApproval: approval rejected.</description></item>
-                /// <item><description>AuthorizeSucceed: authorization succeeded.</description></item>
-                /// <item><description>AuthorizeFailed: authorization failed.</description></item>
-                /// <item><description>Deleted: deleted.</description></item>
-                /// <item><description>Canceled: withdrawn.</description></item>
+                /// <item><description>WaitApproval: pending approval</description></item>
+                /// <item><description>Confirmed: pending authorization</description></item>
+                /// <item><description>RejectApproval: approval rejected</description></item>
+                /// <item><description>AuthorizeSucceed: authorization succeeded</description></item>
+                /// <item><description>AuthorizeFailed: authorization failed</description></item>
+                /// <item><description>Deleted: deleted</description></item>
+                /// <item><description>Canceled: withdrawn</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -310,7 +313,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? HasMore { get; set; }
 
             /// <summary>
-            /// <para>The pagination cursor.</para>
+            /// <para>The pagination token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJpZCI6NDU2fQ==</para>
@@ -332,7 +335,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a UUID.</para>
+        /// <para>The API request ID generated by using a UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc5df3a17****903790e8e8a</para>

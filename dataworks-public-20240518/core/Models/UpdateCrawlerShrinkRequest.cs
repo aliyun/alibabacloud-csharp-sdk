@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The extension configurations for the crawler type. Only the specified configuration items are updated. Unspecified configuration items remain unchanged. The supported keys and values are determined by the SupportedOptionKeys returned by GetCrawlerTypeCapabilities.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;CollectRecyclebin&quot;:&quot;false&quot;}</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]

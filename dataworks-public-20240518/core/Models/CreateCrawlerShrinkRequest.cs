@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateCrawlerShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data source associated with the crawler. The data source must be bound to a DataWorks workspace, and the data source type must match the Type value.</para>
+        /// <para>The ID of the data source associated with the crawler. The data source must be bound to a DataWorks workspace, and the data source type must match the Type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The extended configuration for the crawler type. The key names, value types, required fields, default values, and valid values are determined by the SupportedOptionKeys value returned by GetCrawlerTypeCapabilities.</para>
+        /// <para>The extended configuration for the crawler type. The key names, value types, required status, default values, and valid values are subject to the SupportedOptionKeys value returned by GetCrawlerTypeCapabilities.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ScopeShrink { get; set; }
 
         /// <summary>
-        /// <para>The crawler type. Call GetCrawlerTypeCapabilities to query the valid values supported in the current region.</para>
+        /// <para>The type of the crawler. You can call GetCrawlerTypeCapabilities to query the valid values supported in the current region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The compute engine used at runtime. If not specified, the data source defined in the Spec is used.</para>
+        /// <para>The compute engine used when the data quality monitor runs. This parameter is optional. If it is not specified, the data source connection specified in the Spec is used.</para>
         /// </summary>
         [NameInMap("ComputeResource")]
         [Validation(Required=false)]
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The Hook configurations after the data quality monitoring run ends.</para>
+        /// <para>The configuration for hooks that run after the data quality monitor finishes.</para>
         /// </summary>
         [NameInMap("Hooks")]
         [Validation(Required=false)]
         public string HooksShrink { get; set; }
 
         /// <summary>
-        /// <para>The data quality monitoring name.</para>
+        /// <para>The name of the data quality monitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>data_quality_scan_001</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who owns of the data quality monitor.</para>
+        /// <para>The user ID of the owner of the data quality monitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>95279527****</para>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The definition of execution parameters for the data quality monitoring.</para>
+        /// <para>The execution parameter definitions of the data quality monitor.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID. This parameter specifies the DataWorks workspace for the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The resource group used during execution of the data quality monitoring.</para>
+        /// <para>The resource group used when the data quality monitor runs.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]
         public string RuntimeResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>Spec code for the content of the data quality monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</para>
+        /// <para>The Spec code that defines the data quality monitor. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality spec configuration guide</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The trigger configurations of the data quality monitoring task.</para>
+        /// <para>The trigger settings of the data quality monitor.</para>
         /// </summary>
         [NameInMap("Trigger")]
         [Validation(Required=false)]

@@ -10,17 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class SetSuccessTaskInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>22C97E95-F023-56B5-8852-B1A77A17XXXX</para>
+        /// <para>22C97E95-F023-56B5-8852-B1A77A17****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the batch operation, which is in the MAP structure. The instance ID serves as a key, and the result serves as a value.</para>
+        /// <para>The results of the batch operation. The data structure is a map where the key is the task instance ID and the value is the result information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</para>
         /// </summary>
         [NameInMap("SuccessInfo")]
         [Validation(Required=false)]

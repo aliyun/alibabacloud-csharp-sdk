@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateSemanticJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The saved semantic job definition. Use Data.Name to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</para>
+        /// <para>The saved semantic task definition. Use <c>Data.Name</c> to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSemanticJobResponseBodyData Data { get; set; }
         public class CreateSemanticJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The job creator identifier, equivalent to UserId, used to display creation ownership.</para>
+            /// <para>The identifier of the task creator, which has the same value as <c>UserId</c> and identifies who created the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-demo</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the job definition, expressed as a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the task definition was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700000000000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the job definition, expressed as a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the task definition was last modified. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700000000000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The internal unique ID of the job definition, which identifies the job created by this call.</para>
+            /// <para>The internal unique ID of the task definition, which is used to identify the created task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The saved job name. Use this value for subsequent operations such as running, deleting, querying run records, and downloading results.</para>
+            /// <para>The saved task name. This value is used for subsequent operations such as running, deleting, querying run records, and downloading results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>semantic-job-demo</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The DataWorks workspace ID to which the job belongs. Use this value as the ProjectId for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</para>
+            /// <para>The ID of the DataWorks workspace to which the task belongs. This ID is used as the <c>ProjectId</c> for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -77,21 +77,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The list of associated uploaded file IDs. For singleTableFile, the single file in this list is read at runtime.</para>
+            /// <para>The list of IDs of associated uploaded files. If the source type is <c>singleTableFile</c>, the task reads the only file in the list at runtime.</para>
             /// </summary>
             [NameInMap("ReferenceFileIds")]
             [Validation(Required=false)]
             public List<string> ReferenceFileIds { get; set; }
 
             /// <summary>
-            /// <para>The list of associated external reference file URIs. For singleTableFile, the single file in this list is read at runtime.</para>
+            /// <para>The list of URIs of associated external reference files. If the source type is <c>singleTableFile</c>, the task reads the only file in the list at runtime.</para>
             /// </summary>
             [NameInMap("ReferenceFileUris")]
             [Validation(Required=false)]
             public List<string> ReferenceFileUris { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group that is used when running this job.</para>
+            /// <para>The identifier of the resource group to be used when running this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-demo</para>
@@ -101,14 +101,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The saved input datasource config, corresponding to the Source in the creation request. The data scope to be analyzed is determined based on this configuration at runtime.</para>
+            /// <para>The saved input data source configuration, which corresponds to <c>Source</c> in the creation request. The data scope to be analyzed is selected based on this config during runtime.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;type&quot;:&quot;maxcompute&quot;,&quot;domain&quot;:&quot;sales&quot;,&quot;pinnedScopeInfo&quot;:[{&quot;type&quot;:&quot;project&quot;,&quot;name&quot;:&quot;mc_project&quot;}]}</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public Dictionary<string, object> Source { get; set; }
 
             /// <summary>
-            /// <para>The saved Source.type data source type, used to quickly identify the job input type.</para>
+            /// <para>The saved <c>Source.type</c> data source type, which is used to quickly identify the task input type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>maxcompute</para>
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the user who created the job.</para>
+            /// <para>The identifier of the user who created the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-demo</para>
@@ -130,7 +133,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676271D6-53B4-57BE-89FA-72F7AE1418DF</para>
@@ -140,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

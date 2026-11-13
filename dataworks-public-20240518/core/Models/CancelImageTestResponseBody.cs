@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CancelImageTestResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API request result.</para>
+        /// <para>The result of the API request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>{&quot;ProcessId&quot;: &quot;582d4896-d224-413b-b883-239eeebe0bc5&quot;, &quot;Success&quot;: true}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CancelImageTestResponseBodyData Data { get; set; }
         public class CancelImageTestResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The execution ID of the canceled image test.</para>
+            /// <para>The ID of the canceled image test execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>582d4896-d224-413b-b883-239eeebe0bc5</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

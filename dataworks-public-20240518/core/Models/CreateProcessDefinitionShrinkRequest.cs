@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ApprovalNodesShrink { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. We recommend that you use a UUID.</para>
+        /// <para>The client token that is used to ensure idempotence. We recommend using a UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the process definition.</para>
+        /// <para>The description of the flow definition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,18 +39,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the process definition.</para>
+        /// <para>Specifies whether to enable the flow definition.</para>
         /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The name of the process definition.</para>
+        /// <para>The name of the flow definition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>My Approval Policy</para>
+        /// <para>My approval policy</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SubType { get; set; }
 
         /// <summary>
-        /// <para>The type of the process definition. Valid values:</para>
+        /// <para>The type of the flow definition. Valid values:</para>
         /// <ol>
         /// <item><description>MaxCompute</description></item>
         /// <item><description>DataService</description></item>

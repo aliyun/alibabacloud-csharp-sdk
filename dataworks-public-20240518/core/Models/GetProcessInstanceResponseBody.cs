@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The description of the approval policy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>流程定义描述</para>
+                /// <para>Process definition description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The approval comment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>同意</para>
+                /// <para>Approved</para>
                 /// </summary>
                 [NameInMap("ApprovalComment")]
                 [Validation(Required=false)]
@@ -474,7 +474,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The name of the actual approver.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>李四</para>
+                /// <para>Li Si</para>
                 /// </summary>
                 [NameInMap("AssigneeName")]
                 [Validation(Required=false)]
@@ -539,7 +539,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <para>The name of the approver.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>李四</para>
+                    /// <para>Li Si</para>
                     /// </summary>
                     [NameInMap("MemberName")]
                     [Validation(Required=false)]
@@ -584,7 +584,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The reason for the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>业务需要</para>
+            /// <para>Business need</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -622,7 +622,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The name of the process instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>MaxCompute表权限申请</para>
+            /// <para>MaxCompute table access request</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

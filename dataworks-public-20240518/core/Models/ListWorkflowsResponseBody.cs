@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The creation time.</para>
-                /// <para>The value is a 13-digit timestamp, such as <c>1710239005403</c>.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -95,7 +95,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The project environment.</para>
+                /// <para>The project environment. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Prod: Production.</description></item>
+                /// <item><description>Dev: Development.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prod</para>
@@ -116,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The modification time.</para>
-                /// <para>The value is a 13-digit timestamp, such as <c>1710239005403</c>.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -233,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The running mode upon triggering. This parameter takes effect only when Type is set to Scheduler. Valid values:</para>
+                    /// <para>The running mode when the workflow is triggered. This parameter takes effect only when Type is set to Scheduler. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>Pause: Paused.</description></item>
                     /// <item><description>Skip: Dry run.</description></item>
@@ -248,8 +252,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Recurrence { get; set; }
 
                     /// <summary>
-                    /// <para>The effective period of the epoch trigger. This parameter takes effect only when Type is set to Scheduler.</para>
-                    /// <para>The format is <c>yyyy-MM-dd HH:mm:ss</c>, such as <c>1970-01-01 00:00:00</c>. The example does not include a time zone identity.</para>
+                    /// <para>The effective time of the periodic trigger. This parameter takes effect only when Type is set to Scheduler.</para>
+                    /// <para>The format is <c>yyyy-MM-dd HH:mm:ss</c>, such as <c>1970-01-01 00:00:00</c>. The example does not include a time zone identifier.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1970-01-01 00:00:00</para>

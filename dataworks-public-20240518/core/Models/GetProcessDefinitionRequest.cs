@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetProcessDefinitionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the process definition.</para>
+        /// <para>The process definition ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

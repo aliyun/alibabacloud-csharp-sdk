@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9252F32F-D855-549E-8898-61CF5A733050</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

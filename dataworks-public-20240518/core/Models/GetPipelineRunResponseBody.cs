@@ -116,6 +116,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The detailed information about the stage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;checkerList&quot;: [{&quot;code&quot;: &quot;BuildPackageChecker&quot;, &quot;name&quot;: &quot;Build_Package_Checker&quot;}, {&quot;code&quot;: &quot;NodeParentDependency&quot;, &quot;name&quot;: &quot;Downstream_Dependency_Checker&quot;}, {&quot;code&quot;: &quot;NodeInProcess&quot;, &quot;name&quot;: &quot;Decommissioning_Process_Checker&quot;}]}</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]

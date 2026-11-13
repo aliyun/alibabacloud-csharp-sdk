@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListSemanticJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paginated result of job definitions. Use the Name field of a list item to run, delete, query run records, or download results. Use the ProjectId field to query run details, logs, or stop a run.</para>
+        /// <para>The paged results of job definitions. Use the Name of a list item to run or delete a job, query its run records, or download its results. Use the ProjectId to query run details and logs, or stop a run.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListSemanticJobsResponseBodyData Data { get; set; }
         public class ListSemanticJobsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number returned, starting from 1.</para>
+            /// <para>The page number of the returned page. Pages start from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of job definitions per page returned.</para>
+            /// <para>The number of job definitions returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListSemanticJobsResponseBodyDataSemanticJobs> SemanticJobs { get; set; }
             public class ListSemanticJobsResponseBodyDataSemanticJobs : TeaModel {
                 /// <summary>
-                /// <para>The user identifier of the semantic job creator.</para>
+                /// <para>The user identifier of the creator of the semantic job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-demo</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>The creation time, expressed as a UNIX timestamp in milliseconds.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1700000000000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time, expressed as a UNIX timestamp in milliseconds.</para>
+                /// <para>The last modification time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1700000000000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The job name. Used for RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</para>
+                /// <para>The job name. This name is used in RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>semantic-job-demo</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The workspace ID to which the job belongs. Used for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</para>
+                /// <para>The ID of the workspace to which the job belongs. This ID is used in GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -104,21 +104,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The list of uploaded file IDs associated with the job.</para>
+                /// <para>The list of IDs of the uploaded files associated with the job.</para>
                 /// </summary>
                 [NameInMap("ReferenceFileIds")]
                 [Validation(Required=false)]
                 public List<string> ReferenceFileIds { get; set; }
 
                 /// <summary>
-                /// <para>The list of external reference file URIs associated with the job.</para>
+                /// <para>The list of URIs of the external reference files associated with the job.</para>
                 /// </summary>
                 [NameInMap("ReferenceFileUris")]
                 [Validation(Required=false)]
                 public List<string> ReferenceFileUris { get; set; }
 
                 /// <summary>
-                /// <para>The resource group identifier used when running this job.</para>
+                /// <para>The identifier of the resource group used to run the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-demo</para>
@@ -128,14 +128,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The input datasource config saved with the node. This configuration determines the analysis scope at runtime.</para>
+                /// <para>The input data source configuration saved for the job. The job uses this configuration to determine the analysis scope at runtime.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;type&quot;:&quot;maxcompute&quot;,&quot;domain&quot;:&quot;sales&quot;,&quot;pinnedScopeInfo&quot;:[{&quot;type&quot;:&quot;project&quot;,&quot;name&quot;:&quot;mc_project&quot;}]}</para>
                 /// </summary>
                 [NameInMap("Source")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Source { get; set; }
 
                 /// <summary>
-                /// <para>The Source.type data source type saved with the job.</para>
+                /// <para>The data source type saved in the Source.type field of the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>maxcompute</para>
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The user identifier of the semantic job creator.</para>
+                /// <para>The user identifier of the creator of the semantic job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-demo</para>
@@ -157,7 +160,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The total number of job definitions that meet the conditions in the current tenant.</para>
+            /// <para>The total number of job definitions that meet the query conditions in the current tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -169,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Used for locating logs and troubleshooting issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676271D6-53B4-57BE-89FA-72F7AE1418DF</para>
@@ -179,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

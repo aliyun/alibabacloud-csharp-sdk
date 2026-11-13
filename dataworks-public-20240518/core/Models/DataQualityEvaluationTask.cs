@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DataQualityEvaluationTask : TeaModel {
         /// <summary>
-        /// <para>The ID of the data source that is used for task running.</para>
+        /// <para>The ID of the data source used to execute the data quality check task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>201</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the task. The description can be up to 65,535 characters in length.</para>
+        /// <para>The description of the data quality check task. The description can be up to 65,535 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a daily run data quality evaluation plan.</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The callback settings during the lifecycle of the data quality evaluation task instance. Currently, only one hook that blocks a scheduled task is supported.</para>
+        /// <para>The callback settings for the lifecycle of the data quality check task instance. Currently, only one hook that blocks the scheduled task is supported.</para>
         /// </summary>
         [NameInMap("Hooks")]
         [Validation(Required=false)]
         public List<DataQualityEvaluationTaskHooks> Hooks { get; set; }
         public class DataQualityEvaluationTaskHooks : TeaModel {
             /// <summary>
-            /// <para>The trigger configuration of the callback event.</para>
+            /// <para>The trigger condition of the hook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</para>
@@ -47,7 +47,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The subsequent action type. BlockTaskInstance: blocks execution of a DataWorks task instance.</para>
+            /// <para>The type of the subsequent action. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>BlockTaskInstance: Blocks the execution of the DataWorks task instance.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>BlockTaskInstance</para>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the data quality monitoring task.</para>
+        /// <para>The ID of the data quality check task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>
@@ -69,24 +72,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, English letters, Chinese characters, and half-width or full-width punctuation marks.</para>
+        /// <para>The name of the data quality check task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks, and can be up to 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Data quality evaluation task</para>
+        /// <para>Quality check task</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configurations for alert notifications.</para>
+        /// <para>The notification subscription configuration of the data quality check task.</para>
         /// </summary>
         [NameInMap("Notifications")]
         [Validation(Required=false)]
         public List<DataQualityEvaluationTaskNotifications> Notifications { get; set; }
         public class DataQualityEvaluationTaskNotifications : TeaModel {
             /// <summary>
-            /// <para>The trigger condition of the alert notification.</para>
+            /// <para>The trigger condition of the alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>${blockType} == &quot;Strong&quot;</para>
@@ -96,24 +99,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The configurations for alert notifications.</para>
+            /// <para>The specific notification settings.</para>
             /// </summary>
             [NameInMap("Notifications")]
             [Validation(Required=false)]
             public List<DataQualityEvaluationTaskNotificationsNotifications> Notifications { get; set; }
             public class DataQualityEvaluationTaskNotificationsNotifications : TeaModel {
                 /// <summary>
-                /// <para>The alert notification methods.</para>
+                /// <para>The notification method.</para>
                 /// </summary>
                 [NameInMap("NotificationChannels")]
                 [Validation(Required=false)]
                 public List<DataQualityEvaluationTaskNotificationsNotificationsNotificationChannels> NotificationChannels { get; set; }
                 public class DataQualityEvaluationTaskNotificationsNotificationsNotificationChannels : TeaModel {
                     /// <summary>
-                    /// <para>The alert notification method.</para>
+                    /// <para>The notification method.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Mail</para>
+                    /// <para>[&quot;Mail&quot;]</para>
                     /// </summary>
                     [NameInMap("Channels")]
                     [Validation(Required=false)]
@@ -122,14 +125,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The alert recipients.</para>
+                /// <para>The settings of the alert recipients.</para>
                 /// </summary>
                 [NameInMap("NotificationReceivers")]
                 [Validation(Required=false)]
                 public List<DataQualityEvaluationTaskNotificationsNotificationsNotificationReceivers> NotificationReceivers { get; set; }
                 public class DataQualityEvaluationTaskNotificationsNotificationsNotificationReceivers : TeaModel {
                     /// <summary>
-                    /// <para>The extended information in the JSON format. For example, the DingTalk chatbot can remind all members in a DingTalk group by using the at sign (@).</para>
+                    /// <para>The extension information in JSON format. For example, DingTalk chatbots support mentioning all members.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;atAll&quot;:&quot;true&quot;}</para>
@@ -149,7 +152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ReceiverType { get; set; }
 
                     /// <summary>
-                    /// <para>The alert recipients.</para>
+                    /// <para>The alert recipient values.</para>
                     /// </summary>
                     [NameInMap("ReceiverValues")]
                     [Validation(Required=false)]
@@ -162,7 +165,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -172,7 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The settings used when accessing the data source. Currently, only the EMR YARN queue and the SQL engine used to collect EMR tables can be specified. Supported SQL engines: SPARK_SQL, KYUUBI, PRESTO_SQL, and HIVE_SQL.</para>
+        /// <para>The runtime configuration for using the data source. Currently, you can only specify the YARN queue for EMR and set the SQL engine to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL when collecting EMR tables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</para>
@@ -182,14 +185,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RuntimeConf { get; set; }
 
         /// <summary>
-        /// <para>The monitored object of the task.</para>
+        /// <para>The monitored object of the data quality check task.</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public DataQualityEvaluationTaskTarget Target { get; set; }
         public class DataQualityEvaluationTaskTarget : TeaModel {
             /// <summary>
-            /// <para>The type of the database to which the table belongs. Valid values:</para>
+            /// <para>The database type of the table dataset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>maxcompute</description></item>
             /// <item><description>emr</description></item>
@@ -208,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DatabaseType { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the partitioned table.</para>
+            /// <para>The partition settings of the partitioned table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds=$[yyyymmdd-1]</para>
@@ -218,7 +221,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PartitionSpec { get; set; }
 
             /// <summary>
-            /// <para>The ID of the table in Data Map.</para>
+            /// <para>The unique ID of the table in Data Map.</para>
             /// 
             /// <b>Example:</b>
             /// <para>odps.unit_test.tb_unit_test</para>
@@ -228,7 +231,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string TableGuid { get; set; }
 
             /// <summary>
-            /// <para>The type of the monitored object. Valid values:</para>
+            /// <para>The monitored object type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Table</description></item>
             /// </list>
@@ -243,7 +246,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The DataWorks tenant ID.</para>
+        /// <para>The ID of the DataWorks tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -253,23 +256,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? TenantId { get; set; }
 
         /// <summary>
-        /// <para>The trigger configuration of the task.</para>
+        /// <para>The trigger configuration of the data quality check task.</para>
         /// </summary>
         [NameInMap("Trigger")]
         [Validation(Required=false)]
         public DataQualityEvaluationTaskTrigger Trigger { get; set; }
         public class DataQualityEvaluationTaskTrigger : TeaModel {
             /// <summary>
-            /// <para>Specifies the scheduled nodes whose instances can trigger the quality evaluation task after running successfully. This setting takes effect when type is ByScheduledTaskInstance.</para>
+            /// <para>The IDs of the scheduled nodes whose successful instance execution triggers the data quality check task. This parameter takes effect only when Type is set to ByScheduledTaskInstance.</para>
             /// </summary>
             [NameInMap("TaskIds")]
             [Validation(Required=false)]
             public List<long?> TaskIds { get; set; }
 
             /// <summary>
-            /// <para>The trigger condition of the task. Valid values:</para>
+            /// <para>The event that triggers the execution of the data quality check task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ByScheduledTaskInstance. The value indicates that the task is triggered when the instance of an auto triggered node is successfully run.</description></item>
+            /// <item><description>ByScheduledTaskInstance: A scheduled instance completes successfully.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

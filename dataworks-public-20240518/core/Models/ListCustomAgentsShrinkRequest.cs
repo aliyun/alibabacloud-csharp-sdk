@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Do not specify this parameter for the first query. For subsequent queries, specify the <c>NextToken</c> value returned from the previous query to retrieve the next page.</para>
+        /// <para>The pagination token. Omit this parameter for the first query. For subsequent queries, specify the <c>NextToken</c> value returned from the previous query to retrieve the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The search keyword used to perform a fuzzy match on agent names.</para>
+        /// <para>The search keyword for fuzzy matching by agent name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>analysis</para>

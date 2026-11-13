@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// </list>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>chat，cli</para>
+                    /// <para>chat</para>
                     /// </summary>
                     [NameInMap("ExecutionLane")]
                     [Validation(Required=false)]

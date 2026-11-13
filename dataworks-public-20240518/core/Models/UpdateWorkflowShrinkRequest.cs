@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateWorkflowShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client unique code of the workflow, used for asynchronous operations and idempotence. If not specified during creation, the system automatically generates one, and the code is uniquely bound to the resource ID. If this parameter is specified during update or deletion, it must be consistent with the client unique code used during creation.</para>
+        /// <para>The client unique code of the workflow, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating a workflow, the system automatically generates one and uniquely binds it to the resource ID. If you specify this parameter when updating or deleting a resource, it must be the same as the client unique code used during creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Workflow_0bc5213917368545132902xxxxxxxx</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project environment. Valid values:</para>
+        /// <para>The project environment.</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production</description></item>
-        /// <item><description>Dev: development</description></item>
+        /// <item><description>Prod: Production.</description></item>
+        /// <item><description>Dev: Development.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T+1: Instances are generated the next day.</description></item>
-        /// <item><description>Immediately: Instances are generated immediately. Periodic instances are generated only if the scheduled time of the workflow is at least 10 minutes after the workflow is deployed. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and deploy workflows during this period, but instances are not regenerated after submission.</description></item>
+        /// <item><description>T+1: Generates the instance on the next day.</description></item>
+        /// <item><description>Immediately: Generates the instance immediately. Note: Periodic instances are generated normally only if the scheduled time of the workflow is at least 10 minutes after the workflow publish time. Real-time instance generation is not supported during the full instance generation period (22:00 to 24:00). You can submit and publish workflows during this period, but instances are not regenerated after submission.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,14 +122,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The node list.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public string TasksShrink { get; set; }
 
         /// <summary>
-        /// <para>The trigger configuration.</para>
+        /// <para>The trigger method.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Trigger")]

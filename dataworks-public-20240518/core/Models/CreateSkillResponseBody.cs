@@ -27,12 +27,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateSkillResponseBodySkill Skill { get; set; }
         public class CreateSkillResponseBodySkill : TeaModel {
             /// <summary>
-            /// <para>The content of the SKILL.md file.</para>
+            /// <para>The body of the SKILL.md file.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <hr>
+            /// <h2>name: example-skill
+            /// description: Sample skill.</h2>
+            /// <h1>Sample skill</h1>
+            /// <para>Summarize the text provided by the user</para>
             /// </summary>
             [NameInMap("Body")]
             [Validation(Required=false)]
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreatorId { get; set; }
 
             /// <summary>
-            /// <para>The skill description.</para>
+            /// <para>The description of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Data analytics skill</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ModifierId { get; set; }
 
             /// <summary>
-            /// <para>The skill name.</para>
+            /// <para>The name of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-skill</para>
@@ -118,14 +120,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public CreateSkillResponseBodySkillVisibilityScope VisibilityScope { get; set; }
             public class CreateSkillResponseBodySkillVisibilityScope : TeaModel {
                 /// <summary>
-                /// <para>The IDs of the visible projects.</para>
+                /// <para>The IDs of the projects in which the skill is visible.</para>
                 /// </summary>
                 [NameInMap("ProjectIds")]
                 [Validation(Required=false)]
                 public List<string> ProjectIds { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the visible users. This field is returned only when Visibility is set to USER.</para>
+                /// <para>The IDs of the users who can see the skill. This field takes effect when Visibility is set to USER.</para>
                 /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]

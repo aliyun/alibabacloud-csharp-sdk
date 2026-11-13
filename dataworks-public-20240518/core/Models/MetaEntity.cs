@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class MetaEntity : TeaModel {
         /// <summary>
-        /// <para>Entity attributes. Complex values are represented as JSON strings.</para>
+        /// <para>The entity properties. Complex values are represented as JSON strings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;: &quot;v1&quot;}</para>
         /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
-        /// <para>Comment</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>Creation time as a millisecond-level timestamp</para>
+        /// <para>The creation time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1780553640613</para>
@@ -37,14 +40,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Custom attribute values. The key is the custom attribute identifier. The value is a list of attribute values.</para>
+        /// <para>The custom attribute values. The key is the custom attribute identifier, and the value is a list of attribute values.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;owner_name&quot;:[&quot;Zhang San&quot;]}</para>
         /// </summary>
         [NameInMap("CustomAttributes")]
         [Validation(Required=false)]
         public Dictionary<string, List<string>> CustomAttributes { get; set; }
 
         /// <summary>
-        /// <para>Entity type</para>
+        /// <para>The entity type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_entity-customer_api</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>Entity ID</para>
+        /// <para>The entity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_entity-customer_api:api_001</para>
@@ -64,17 +70,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Attribute definition of the custom entity.</para>
-        /// <remarks>
-        /// <para>Notice: For historical reasons, this property is not returned and its value is empty. We recommend that you use the GetMetaEntityDef API to obtain the entity type definition.</para>
-        /// </remarks>
+        /// <para>The property definition of the custom entity. <notice>This legacy property is not populated. To retrieve the entity type definition, call GetMetaEntityDef.</notice></para>
         /// </summary>
         [NameInMap("MetaEntityDef")]
         [Validation(Required=false)]
         public MetaEntityDef MetaEntityDef { get; set; }
 
         /// <summary>
-        /// <para>Modification time as a millisecond-level timestamp</para>
+        /// <para>The modification time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1763380628000</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>Entity name</para>
+        /// <para>The entity name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api_001</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Owner ID. The default value is the Alibaba Cloud UID of the creator.</para>
+        /// <para>The owner ID. Default value: the Alibaba Cloud UID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>207924799988354</para>

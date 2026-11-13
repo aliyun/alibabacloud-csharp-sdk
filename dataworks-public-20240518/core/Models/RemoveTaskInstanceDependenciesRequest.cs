@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class RemoveTaskInstanceDependenciesRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The node instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ancestor instances of the instance</para>
+        /// <para>The list of upstream node instance IDs.</para>
         /// </summary>
         [NameInMap("UpstreamTaskInstanceIds")]
         [Validation(Required=false)]

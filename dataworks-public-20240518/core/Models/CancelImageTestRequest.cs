@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The execution ID of the image test to cancel.</para>
+        /// <para>The ID of the image test execution to cancel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>582d4896-d224-413b-b883-239eeebe0bc5</para>

@@ -13,16 +13,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The connection configuration of the MCP server.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Transport&quot;:&quot;SSE&quot;,&quot;Url&quot;:&quot;<a href="https://example.com/mcp/sse%22,%22CustomHeaders%22:%7B%7D%7D">https://example.com/mcp/sse&quot;,&quot;CustomHeaders&quot;:{}}</a></para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string ConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the MCP server. It must be unique at the tenant level. It must start with a lowercase letter and can contain only lowercase letters (<c>a-z</c>), digits (<c>0-9</c>), underscores (<c>_</c>), and hyphens (<c>-</c>).</para>
+        /// <para>The name of the MCP server. The name must be unique at the tenant level. It must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. Specify the corresponding fields based on the value of Visibility.</para>
+        /// <para>The visibility scope. Specify the corresponding field based on the value of Visibility.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The API request result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>{&quot;ProcessId&quot;: &quot;582d4896-d224-413b-b883-239eeebe0bc5&quot;, &quot;Success&quot;: true}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ProcessId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the build was successfully triggered.</para>
+            /// <para>Indicates whether the image build was triggered successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID, used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>

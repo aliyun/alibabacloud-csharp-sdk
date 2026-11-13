@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class RerunTaskInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The list of node instance IDs.</para>
+        /// <para>The list of task instance IDs.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public List<long?> Ids { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to rerun instances with the latest configuration.</para>
+        /// <para>Specifies whether to rerun the task instance with the latest configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

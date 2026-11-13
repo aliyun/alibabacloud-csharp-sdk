@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result information of the batch operation. The structure is a map, where the key is the task instance ID and the value is the result information.</para>
+        /// <para>The result information of the batch operation. The structure is a map where the key is the task instance ID and the value is the result information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</para>
         /// </summary>
         [NameInMap("SuccessInfo")]
         [Validation(Required=false)]

@@ -21,20 +21,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The compute engine used at runtime. If not specified, the data source defined in the Spec is used.</para>
+        /// <para>The compute engine used when the data quality monitor runs. This parameter is optional. If it is not specified, the data source connection specified in the Spec is used.</para>
         /// </summary>
         [NameInMap("ComputeResource")]
         [Validation(Required=false)]
         public CreateDataQualityScanRequestComputeResource ComputeResource { get; set; }
         public class CreateDataQualityScanRequestComputeResource : TeaModel {
             /// <summary>
-            /// <para>The workspace environment to which the compute engine belongs.</para>
-            /// <para>Valid values:</para>
+            /// <para>The workspace environment to which the compute engine belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Prod: production environment .</para>
-            /// </description></item>
-            /// <item><description><para>Dev: development environment.</para>
-            /// </description></item>
+            /// <item><description>Prod: production environment</description></item>
+            /// <item><description>Dev: development environment</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The name of the compute engine, which is a unique identifier.</para>
+            /// <para>The name of the compute engine, which serves as a unique identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>emr_first</para>
@@ -55,22 +52,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>More settings for data quality monitoring at runtime.</para>
+            /// <para>The additional settings for the data quality monitor at runtime.</para>
             /// </summary>
             [NameInMap("Runtime")]
             [Validation(Required=false)]
             public CreateDataQualityScanRequestComputeResourceRuntime Runtime { get; set; }
             public class CreateDataQualityScanRequestComputeResourceRuntime : TeaModel {
                 /// <summary>
-                /// <para>The type of the compute engine. Only EMR compute engines support these settings.</para>
-                /// <para>Valid values:</para>
+                /// <para>The type of the engine used. Only the E-MapReduce (EMR) compute engine supports this setting. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Hive: Hive SQL</para>
-                /// </description></item>
-                /// <item><description><para>Spark: Spark SQL</para>
-                /// </description></item>
-                /// <item><description><para>Kyuubi</para>
-                /// </description></item>
+                /// <item><description>Hive: Hive SQL</description></item>
+                /// <item><description>Spark: Spark SQL</description></item>
+                /// <item><description>Kyuubi</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -81,20 +74,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>Additional Hive engine parameters. Currently, only the mapreduce.job.queuename parameter is supported.</para>
+                /// <para>The additional parameter settings when the Hive engine is used. Currently, only the queue can be set by using mapreduce.job.queuename.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>mapreduce.job.queuename=dq_queue</para>
+                /// <para>{&quot;mapreduce.job.queuename&quot;: &quot;dq_queue&quot;}</para>
                 /// </summary>
                 [NameInMap("HiveConf")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> HiveConf { get; set; }
 
                 /// <summary>
-                /// <para>Additional Spark engine parameters. Currently, only the spark.yarn.queue parameter is supported.</para>
+                /// <para>The additional parameter settings when the Spark engine is used. Currently, only the queue can be set by using spark.yarn.queue.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>spark.yarn.queue=dq_queue</para>
+                /// <para>{&quot;spark.yarn.queue&quot;: &quot;dq_queue&quot;}</para>
                 /// </summary>
                 [NameInMap("SparkConf")]
                 [Validation(Required=false)]
@@ -115,15 +108,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The Hook configurations after the data quality monitoring run ends.</para>
+        /// <para>The configuration for hooks that run after the data quality monitor finishes.</para>
         /// </summary>
         [NameInMap("Hooks")]
         [Validation(Required=false)]
         public List<CreateDataQualityScanRequestHooks> Hooks { get; set; }
         public class CreateDataQualityScanRequestHooks : TeaModel {
             /// <summary>
-            /// <para>The Hook trigger condition. The hook will run if the condition is met. Currently, only one type of expression syntax is supported:</para>
-            /// <para>You can specify multiple combinations of rule severity levels and validation statuses using an expression such as <c>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</c>. This expression means the condition is met if any executed rule has a result of Fail with severity Normal, Error with severity High, or Warn with severity High. In the condition expression, the values of severity and status are predefined enums. The values of severity must match those defined in the Spec, and the values of status must match those in DataQualityResult.</para>
+            /// <para>The condition that triggers the hook. When this condition is met, the hook is triggered. Currently, only one expression syntax is supported:</para>
+            /// <para>Specify multiple groups of rule severity levels and rule check statuses. For example, <c>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</c> indicates that among the executed rules, if the check result of a rule with the severity of Normal is Fail, the check result of a rule with the severity of High is Error, or the check result of a rule with the severity of High is Warn, the condition is met. The enumerations of severity in the conditional expression are consistent with those in the spec, and the enumerations of status are consistent with those in DataQualityResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>results.any { r -&gt; r.status == \&quot;Fail\&quot; &amp;&amp; r.rule.severity == \&quot;Normal\&quot; || r.status == \&quot;Error\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; || r.status == \&quot;Warn\&quot; &amp;&amp; r.rule.severity == \&quot;High\&quot; }</para>
@@ -133,10 +126,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The type of the Hook.</para>
-            /// <para>Valid values:</para>
+            /// <para>The type of the hook. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>BlockTaskInstance: Blocks the scheduling of the task instance.</description></item>
+            /// <item><description>BlockTaskInstance: blocks task instance scheduling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The data quality monitoring name.</para>
+        /// <para>The name of the data quality monitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>data_quality_scan_001</para>
@@ -159,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who owns of the data quality monitor.</para>
+        /// <para>The user ID of the owner of the data quality monitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>95279527****</para>
@@ -169,14 +161,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The definition of execution parameters for the data quality monitoring.</para>
+        /// <para>The execution parameter definitions of the data quality monitor.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<CreateDataQualityScanRequestParameters> Parameters { get; set; }
         public class CreateDataQualityScanRequestParameters : TeaModel {
             /// <summary>
-            /// <para>The parameter name.</para>
+            /// <para>The name of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>triggerTime</para>
@@ -186,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter values.</para>
+            /// <para>The value of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>$[yyyymmdd-1]</para>
@@ -198,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID. This parameter is required to specify the target DataWorks workspace for this API operation.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID. This parameter specifies the DataWorks workspace for the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -208,14 +200,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The resource group used during execution of the data quality monitoring.</para>
+        /// <para>The resource group used when the data quality monitor runs.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]
         public CreateDataQualityScanRequestRuntimeResource RuntimeResource { get; set; }
         public class CreateDataQualityScanRequestRuntimeResource : TeaModel {
             /// <summary>
-            /// <para>The number of CUs configured for task running.</para>
+            /// <para>The compute unit (CU) consumption of the runtime configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -225,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public float? Cu { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0525242e-d0ee-4bda-bc73-765d82f6a34a</para>
@@ -235,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image configured for task running.</para>
+            /// <para>The image ID of the runtime configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-xxxxxx</para>
@@ -247,7 +239,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>Spec code for the content of the data quality monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</para>
+        /// <para>The Spec code that defines the data quality monitor. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality spec configuration guide</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -282,27 +274,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The trigger configurations of the data quality monitoring task.</para>
+        /// <para>The trigger settings of the data quality monitor.</para>
         /// </summary>
         [NameInMap("Trigger")]
         [Validation(Required=false)]
         public CreateDataQualityScanRequestTrigger Trigger { get; set; }
         public class CreateDataQualityScanRequestTrigger : TeaModel {
             /// <summary>
-            /// <para>If the trigger mode is set to BySchedule, the scheduling task ID must be specified.</para>
+            /// <para>The IDs of the scheduled tasks that trigger the data quality monitor when the trigger method is set to BySchedule.</para>
             /// </summary>
             [NameInMap("TaskIds")]
             [Validation(Required=false)]
             public List<long?> TaskIds { get; set; }
 
             /// <summary>
-            /// <para>The trigger mode of the monitoring task.</para>
-            /// <para>Valid values:</para>
+            /// <para>The trigger method of the data quality monitor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ByManual: Manual trigger. This is the default setting.</para>
-            /// </description></item>
-            /// <item><description><para>BySchedule: Triggered by a scheduled task instance.</para>
-            /// </description></item>
+            /// <item><description>ByManual: manual trigger. This is the default value.</description></item>
+            /// <item><description>BySchedule: scheduled task instance trigger.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

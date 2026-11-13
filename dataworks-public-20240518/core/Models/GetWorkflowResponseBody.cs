@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetWorkflowResponseBodyWorkflow Workflow { get; set; }
         public class GetWorkflowResponseBodyWorkflow : TeaModel {
             /// <summary>
-            /// <para>The client unique code of the workflow, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating the workflow, the system automatically generates a code and uniquely binds it to the resource ID. If you specify this parameter when updating or deleting the resource, it must be the same as the client unique code used during creation.</para>
+            /// <para>The client unique code of the workflow, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating the workflow, the system automatically generates one and uniquely binds the code to the resource ID. If you specify this parameter when updating or deleting the resource, it must be the same as the client unique code used during creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Workflow_0bc5213917368545132902xxxxxxxx</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The dependency type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes</description></item>
-                /// <item><description>CrossCycleDependsOnSelf: cross-cycle dependency on the node itself</description></item>
-                /// <item><description>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</description></item>
-                /// <item><description>Normal: same-cycle dependency</description></item>
+                /// <item><description>CrossCycleDependsOnChildren: cross-cycle dependency on first-level child nodes.</description></item>
+                /// <item><description>CrossCycleDependsOnSelf: cross-cycle dependency on the node itself.</description></item>
+                /// <item><description>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes.</description></item>
+                /// <item><description>Normal: same-cycle dependency.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -115,8 +115,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The project environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Prod: Production environment.</description></item>
-            /// <item><description>Dev: Development environment.</description></item>
+            /// <item><description>Prod: production.</description></item>
+            /// <item><description>Dev: development.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The modification time.</para>
             /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The account ID of the user who updated the workflow.</para>
+            /// <para>The account ID of the user who modified the workflow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? BaselineId { get; set; }
 
                 /// <summary>
-                /// <para>The client unique code of the task, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating the task, the system automatically generates a code and uniquely binds it to the resource ID. If you specify this parameter when updating or deleting the resource, it must be the same as the client unique code used during creation.</para>
+                /// <para>The client unique code of the task, which is used to implement asynchronous and idempotent operations. If you do not specify this parameter when creating the task, the system automatically generates one and uniquely binds the code to the resource ID. If you specify this parameter when updating or deleting the resource, it must be the same as the client unique code used during creation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Task_0bc5213917368545132902xxxxxxxx</para>
@@ -334,8 +334,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The project environment. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Prod: Production environment.</description></item>
-                /// <item><description>Dev: Development environment.</description></item>
+                /// <item><description>Prod: production.</description></item>
+                /// <item><description>Dev: development.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The modification time.</para>
                 /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The account ID of the user who updated the task.</para>
+                /// <para>The account ID of the user who modified the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -427,11 +427,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? RerunInterval { get; set; }
 
                 /// <summary>
-                /// <para>The configuration that specifies whether the task can be rerun. Valid values:</para>
+                /// <para>Specifies whether the task can be rerun. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>AllDenied: The task cannot be rerun regardless of whether it succeeds or fails.</description></item>
                 /// <item><description>FailureAllowed: The task can be rerun only when it fails.</description></item>
-                /// <item><description>AllAllowed: The task can be rerun regardless of whether it succeeds or fails.</description></item>
+                /// <item><description>AllAllowed: The task can be rerun after either success or failure.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string RerunMode { get; set; }
 
                 /// <summary>
-                /// <para>The number of retries. This parameter takes effect only when the task is configured to be rerunnable.</para>
+                /// <para>The number of retries. This parameter takes effect only when the task is configured to allow reruns.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public GetWorkflowResponseBodyWorkflowTasksRuntimeResource RuntimeResource { get; set; }
                 public class GetWorkflowResponseBodyWorkflowTasksRuntimeResource : TeaModel {
                     /// <summary>
-                    /// <para>The CU consumption configured for task execution.</para>
+                    /// <para>The number of compute units (CUs) consumed during task execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.25</para>
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// <para>The identifier of the resource group for scheduling configured for task execution.</para>
+                    /// <para>The identifier of the scheduling resource group configured for task execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -501,11 +501,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Timeout { get; set; }
 
                 /// <summary>
-                /// <para>The running mode when the trigger is fired. Valid values:</para>
+                /// <para>The running mode when the task is triggered. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Pause: paused</description></item>
-                /// <item><description>Skip: dry run</description></item>
-                /// <item><description>Normal: normal execution</description></item>
+                /// <item><description>Pause: paused.</description></item>
+                /// <item><description>Skip: dry run.</description></item>
+                /// <item><description>Normal: normal running.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The trigger configuration.</para>
+            /// <para>The trigger method.</para>
             /// </summary>
             [NameInMap("Trigger")]
             [Validation(Required=false)]
@@ -566,11 +566,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The running mode when the trigger is fired. This parameter takes effect only when Type is set to Scheduler. Valid values:</para>
+                /// <para>The running mode when the workflow is triggered. This parameter takes effect only when Type is set to Scheduler. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Pause: paused</description></item>
-                /// <item><description>Skip: dry run</description></item>
-                /// <item><description>Normal: normal execution</description></item>
+                /// <item><description>Pause: paused.</description></item>
+                /// <item><description>Skip: dry run.</description></item>
+                /// <item><description>Normal: normal running.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -581,7 +581,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Recurrence { get; set; }
 
                 /// <summary>
-                /// <para>The time when periodic triggering takes effect. This parameter takes effect only when Type is set to Scheduler.</para>
+                /// <para>The start time for periodic triggers. This parameter takes effect only when Type is set to Scheduler.</para>
                 /// <para>The format is <c>yyyy-MM-dd HH:mm:ss</c>, such as <c>1970-01-01 00:00:00</c>. The example does not include a time zone identifier.</para>
                 /// 
                 /// <b>Example:</b>
@@ -592,10 +592,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The type of the trigger method. Valid values:</para>
+                /// <para>The trigger type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduler: triggered by a scheduling cycle</description></item>
-                /// <item><description>Manual: triggered manually</description></item>
+                /// <item><description>Scheduler: triggered by a scheduling period.</description></item>
+                /// <item><description>Manual: manually triggered.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

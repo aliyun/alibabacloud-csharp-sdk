@@ -769,22 +769,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Commits an access permissions request for specific resources.</para>
+        /// <para>Submits an application for access permissions to specific resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Reason</b>: The reason for the request. This parameter is required.</description></item>
-        /// <item><description><b>ApplyContents</b>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</description></item>
-        /// <item><description><b>Resource</b>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</description></item>
+        /// <item><description><b>Reason</b>: The reason for the application. This parameter is required.</description></item>
+        /// <item><description><b>ApplyContents</b>: The list of resource permission applications. Each item includes the resource description (Resource), grantee description (Grantee), access types (AccessTypes), and expiration time (ExpirationTime). The maximum number of items per request is 400.</description></item>
+        /// <item><description><b>Resource</b>: The resource description. You must specify the ResourceSchema.name and version on which resource parsing depends, as well as the resource metadata (MetaData).</description></item>
         /// <item><description><b>Grantee</b>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</description></item>
-        /// <item><description><b>AccessTypes</b>: The list of access types. Multiple access type combinations are supported.</description></item>
-        /// <item><description><b>ExpirationTime</b>: The permission expiration time, provided as a millisecond-level timestamp.</description></item>
-        /// <item><description><b>AuthMethod</b>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</description></item>
+        /// <item><description><b>AccessTypes</b>: The list of permission types. Multiple permission combinations are supported.</description></item>
+        /// <item><description><b>ExpirationTime</b>: The expiration time of the permissions, provided as a millisecond timestamp.</description></item>
+        /// <item><description><b>AuthMethod</b>: The authorization method. This parameter is optional. By default, the built-in default authorization method is used.</description></item>
         /// <item><description><b>ClientToken</b>: The client token used to prevent duplicate requests. This parameter is optional.
-        /// Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</description></item>
+        /// Make sure that all required fields are correctly filled in and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -841,22 +841,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Commits an access permissions request for specific resources.</para>
+        /// <para>Submits an application for access permissions to specific resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Reason</b>: The reason for the request. This parameter is required.</description></item>
-        /// <item><description><b>ApplyContents</b>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</description></item>
-        /// <item><description><b>Resource</b>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</description></item>
+        /// <item><description><b>Reason</b>: The reason for the application. This parameter is required.</description></item>
+        /// <item><description><b>ApplyContents</b>: The list of resource permission applications. Each item includes the resource description (Resource), grantee description (Grantee), access types (AccessTypes), and expiration time (ExpirationTime). The maximum number of items per request is 400.</description></item>
+        /// <item><description><b>Resource</b>: The resource description. You must specify the ResourceSchema.name and version on which resource parsing depends, as well as the resource metadata (MetaData).</description></item>
         /// <item><description><b>Grantee</b>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</description></item>
-        /// <item><description><b>AccessTypes</b>: The list of access types. Multiple access type combinations are supported.</description></item>
-        /// <item><description><b>ExpirationTime</b>: The permission expiration time, provided as a millisecond-level timestamp.</description></item>
-        /// <item><description><b>AuthMethod</b>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</description></item>
+        /// <item><description><b>AccessTypes</b>: The list of permission types. Multiple permission combinations are supported.</description></item>
+        /// <item><description><b>ExpirationTime</b>: The expiration time of the permissions, provided as a millisecond timestamp.</description></item>
+        /// <item><description><b>AuthMethod</b>: The authorization method. This parameter is optional. By default, the built-in default authorization method is used.</description></item>
         /// <item><description><b>ClientToken</b>: The client token used to prevent duplicate requests. This parameter is optional.
-        /// Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</description></item>
+        /// Make sure that all required fields are correctly filled in and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -913,22 +913,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Commits an access permissions request for specific resources.</para>
+        /// <para>Submits an application for access permissions to specific resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Reason</b>: The reason for the request. This parameter is required.</description></item>
-        /// <item><description><b>ApplyContents</b>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</description></item>
-        /// <item><description><b>Resource</b>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</description></item>
+        /// <item><description><b>Reason</b>: The reason for the application. This parameter is required.</description></item>
+        /// <item><description><b>ApplyContents</b>: The list of resource permission applications. Each item includes the resource description (Resource), grantee description (Grantee), access types (AccessTypes), and expiration time (ExpirationTime). The maximum number of items per request is 400.</description></item>
+        /// <item><description><b>Resource</b>: The resource description. You must specify the ResourceSchema.name and version on which resource parsing depends, as well as the resource metadata (MetaData).</description></item>
         /// <item><description><b>Grantee</b>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</description></item>
-        /// <item><description><b>AccessTypes</b>: The list of access types. Multiple access type combinations are supported.</description></item>
-        /// <item><description><b>ExpirationTime</b>: The permission expiration time, provided as a millisecond-level timestamp.</description></item>
-        /// <item><description><b>AuthMethod</b>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</description></item>
+        /// <item><description><b>AccessTypes</b>: The list of permission types. Multiple permission combinations are supported.</description></item>
+        /// <item><description><b>ExpirationTime</b>: The expiration time of the permissions, provided as a millisecond timestamp.</description></item>
+        /// <item><description><b>AuthMethod</b>: The authorization method. This parameter is optional. By default, the built-in default authorization method is used.</description></item>
         /// <item><description><b>ClientToken</b>: The client token used to prevent duplicate requests. This parameter is optional.
-        /// Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</description></item>
+        /// Make sure that all required fields are correctly filled in and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -947,22 +947,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Commits an access permissions request for specific resources.</para>
+        /// <para>Submits an application for access permissions to specific resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Reason</b>: The reason for the request. This parameter is required.</description></item>
-        /// <item><description><b>ApplyContents</b>: Contains multiple resource permission request entries. Each entry includes a resource description (Resource), a grantee description (Grantee), access types (AccessTypes), and a permission expiration time (ExpirationTime). A maximum of 400 entries can be submitted in a single request.</description></item>
-        /// <item><description><b>Resource</b>: The resource description. You must specify the ResourceSchema.name and version on which the resource parsing depends, as well as the resource metadata (MetaData).</description></item>
+        /// <item><description><b>Reason</b>: The reason for the application. This parameter is required.</description></item>
+        /// <item><description><b>ApplyContents</b>: The list of resource permission applications. Each item includes the resource description (Resource), grantee description (Grantee), access types (AccessTypes), and expiration time (ExpirationTime). The maximum number of items per request is 400.</description></item>
+        /// <item><description><b>Resource</b>: The resource description. You must specify the ResourceSchema.name and version on which resource parsing depends, as well as the resource metadata (MetaData).</description></item>
         /// <item><description><b>Grantee</b>: The grantee description. You must specify the principal type (PrincipalType) and principal ID (PrincipalId).</description></item>
-        /// <item><description><b>AccessTypes</b>: The list of access types. Multiple access type combinations are supported.</description></item>
-        /// <item><description><b>ExpirationTime</b>: The permission expiration time, provided as a millisecond-level timestamp.</description></item>
-        /// <item><description><b>AuthMethod</b>: Optional. Specifies the authorization method. The system uses the built-in default authorization method if this parameter is not specified.</description></item>
+        /// <item><description><b>AccessTypes</b>: The list of permission types. Multiple permission combinations are supported.</description></item>
+        /// <item><description><b>ExpirationTime</b>: The expiration time of the permissions, provided as a millisecond timestamp.</description></item>
+        /// <item><description><b>AuthMethod</b>: The authorization method. This parameter is optional. By default, the built-in default authorization method is used.</description></item>
         /// <item><description><b>ClientToken</b>: The client token used to prevent duplicate requests. This parameter is optional.
-        /// Make sure that all required fields are correctly specified and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</description></item>
+        /// Make sure that all required fields are correctly filled in and meet the corresponding constraints. For example, the DefVersion and MetaData in Resource must match the selected DefSchema.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2177,12 +2177,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates multiple nodes in batches by using incremental updates.</para>
+        /// <para>Applies incremental updates to multiple tasks in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>DataWorks Basic Edition or later is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2234,12 +2234,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates multiple nodes in batches by using incremental updates.</para>
+        /// <para>Applies incremental updates to multiple tasks in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>DataWorks Basic Edition or later is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2291,12 +2291,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates multiple nodes in batches by using incremental updates.</para>
+        /// <para>Applies incremental updates to multiple tasks in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>DataWorks Basic Edition or later is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2314,12 +2314,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates multiple nodes in batches by using incremental updates.</para>
+        /// <para>Applies incremental updates to multiple tasks in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>DataWorks Basic Edition or later is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2343,7 +2343,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or higher is required.</description></item>
         /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2405,7 +2405,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or higher is required.</description></item>
         /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2467,7 +2467,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or higher is required.</description></item>
         /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2493,7 +2493,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or higher is required.</description></item>
         /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2703,7 +2703,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2757,7 +2757,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2811,7 +2811,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2837,7 +2837,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -4651,17 +4651,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Creates a metadata crawler for a specified data source and configures the collection scope, resource group, scheduling method, and extended configurations.</para>
-        /// <h2>Recommended workflow</h2>
+        /// <para>Create a metadata crawler for a specified data source, and configure the collection scope, resource group, scheduling method, and extended configurations.</para>
+        /// <h2>Recommended procedure</h2>
         /// <ol>
-        /// <item><description>Call <c>GetCrawlerTypeCapabilities</c> to query the crawler types and their configuration capabilities supported in the current region.</description></item>
-        /// <item><description>Create a crawler by using a data source that matches the <c>Type</c> value. Before creating a crawler, ensure that the data source and the selected resource group pass the connectivity test by calling the <c>TestDataSourceConnectivity</c> API to avoid creating an invalid crawler.</description></item>
-        /// <item><description>After the crawler is created, call <c>RunCrawler</c> to manually run it, or configure periodic scheduling for automatic execution.</description></item>
+        /// <item><description>Call GetCrawlerTypeCapabilities to query the crawler types supported in the current region and their configuration capabilities.</description></item>
+        /// <item><description>Create a crawler by using a data source that matches the Type. Before you create the crawler, make sure that the data source and the selected resource group pass the connectivity test by calling the TestDataSourceConnectivity API. This prevents you from creating an invalid crawler.</description></item>
+        /// <item><description>After the crawler is created, call RunCrawler to manually run the crawler, or configure periodic scheduling to automatically run the crawler.</description></item>
         /// </ol>
         /// <h2>Edition requirements</h2>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// <h2>Precautions</h2>
-        /// <para>A successful creation only indicates that the crawler configuration has been generated. Metadata collection is not immediately executed.</para>
+        /// <para>A successful creation only indicates that the crawler configuration is generated. The metadata collection is not immediately executed.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4751,17 +4751,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Creates a metadata crawler for a specified data source and configures the collection scope, resource group, scheduling method, and extended configurations.</para>
-        /// <h2>Recommended workflow</h2>
+        /// <para>Create a metadata crawler for a specified data source, and configure the collection scope, resource group, scheduling method, and extended configurations.</para>
+        /// <h2>Recommended procedure</h2>
         /// <ol>
-        /// <item><description>Call <c>GetCrawlerTypeCapabilities</c> to query the crawler types and their configuration capabilities supported in the current region.</description></item>
-        /// <item><description>Create a crawler by using a data source that matches the <c>Type</c> value. Before creating a crawler, ensure that the data source and the selected resource group pass the connectivity test by calling the <c>TestDataSourceConnectivity</c> API to avoid creating an invalid crawler.</description></item>
-        /// <item><description>After the crawler is created, call <c>RunCrawler</c> to manually run it, or configure periodic scheduling for automatic execution.</description></item>
+        /// <item><description>Call GetCrawlerTypeCapabilities to query the crawler types supported in the current region and their configuration capabilities.</description></item>
+        /// <item><description>Create a crawler by using a data source that matches the Type. Before you create the crawler, make sure that the data source and the selected resource group pass the connectivity test by calling the TestDataSourceConnectivity API. This prevents you from creating an invalid crawler.</description></item>
+        /// <item><description>After the crawler is created, call RunCrawler to manually run the crawler, or configure periodic scheduling to automatically run the crawler.</description></item>
         /// </ol>
         /// <h2>Edition requirements</h2>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// <h2>Precautions</h2>
-        /// <para>A successful creation only indicates that the crawler configuration has been generated. Metadata collection is not immediately executed.</para>
+        /// <para>A successful creation only indicates that the crawler configuration is generated. The metadata collection is not immediately executed.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4851,17 +4851,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Creates a metadata crawler for a specified data source and configures the collection scope, resource group, scheduling method, and extended configurations.</para>
-        /// <h2>Recommended workflow</h2>
+        /// <para>Create a metadata crawler for a specified data source, and configure the collection scope, resource group, scheduling method, and extended configurations.</para>
+        /// <h2>Recommended procedure</h2>
         /// <ol>
-        /// <item><description>Call <c>GetCrawlerTypeCapabilities</c> to query the crawler types and their configuration capabilities supported in the current region.</description></item>
-        /// <item><description>Create a crawler by using a data source that matches the <c>Type</c> value. Before creating a crawler, ensure that the data source and the selected resource group pass the connectivity test by calling the <c>TestDataSourceConnectivity</c> API to avoid creating an invalid crawler.</description></item>
-        /// <item><description>After the crawler is created, call <c>RunCrawler</c> to manually run it, or configure periodic scheduling for automatic execution.</description></item>
+        /// <item><description>Call GetCrawlerTypeCapabilities to query the crawler types supported in the current region and their configuration capabilities.</description></item>
+        /// <item><description>Create a crawler by using a data source that matches the Type. Before you create the crawler, make sure that the data source and the selected resource group pass the connectivity test by calling the TestDataSourceConnectivity API. This prevents you from creating an invalid crawler.</description></item>
+        /// <item><description>After the crawler is created, call RunCrawler to manually run the crawler, or configure periodic scheduling to automatically run the crawler.</description></item>
         /// </ol>
         /// <h2>Edition requirements</h2>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// <h2>Precautions</h2>
-        /// <para>A successful creation only indicates that the crawler configuration has been generated. Metadata collection is not immediately executed.</para>
+        /// <para>A successful creation only indicates that the crawler configuration is generated. The metadata collection is not immediately executed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4885,17 +4885,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Creates a metadata crawler for a specified data source and configures the collection scope, resource group, scheduling method, and extended configurations.</para>
-        /// <h2>Recommended workflow</h2>
+        /// <para>Create a metadata crawler for a specified data source, and configure the collection scope, resource group, scheduling method, and extended configurations.</para>
+        /// <h2>Recommended procedure</h2>
         /// <ol>
-        /// <item><description>Call <c>GetCrawlerTypeCapabilities</c> to query the crawler types and their configuration capabilities supported in the current region.</description></item>
-        /// <item><description>Create a crawler by using a data source that matches the <c>Type</c> value. Before creating a crawler, ensure that the data source and the selected resource group pass the connectivity test by calling the <c>TestDataSourceConnectivity</c> API to avoid creating an invalid crawler.</description></item>
-        /// <item><description>After the crawler is created, call <c>RunCrawler</c> to manually run it, or configure periodic scheduling for automatic execution.</description></item>
+        /// <item><description>Call GetCrawlerTypeCapabilities to query the crawler types supported in the current region and their configuration capabilities.</description></item>
+        /// <item><description>Create a crawler by using a data source that matches the Type. Before you create the crawler, make sure that the data source and the selected resource group pass the connectivity test by calling the TestDataSourceConnectivity API. This prevents you from creating an invalid crawler.</description></item>
+        /// <item><description>After the crawler is created, call RunCrawler to manually run the crawler, or configure periodic scheduling to automatically run the crawler.</description></item>
         /// </ol>
         /// <h2>Edition requirements</h2>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// <h2>Precautions</h2>
-        /// <para>A successful creation only indicates that the crawler configuration has been generated. Metadata collection is not immediately executed.</para>
+        /// <para>A successful creation only indicates that the crawler configuration is generated. The metadata collection is not immediately executed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7130,7 +7130,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7239,7 +7239,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7348,7 +7348,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7371,7 +7371,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8121,7 +8121,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset. You can create a dataset only in a workspace that you have joined. Only DataWorks datasets are supported. The maximum number of datasets per tenant is 2000.</para>
+        /// <para>Creates a dataset. Datasets can only be created in workspaces that you have joined. Currently, only DataWorks datasets are supported. The maximum number of datasets per tenant is 2,000.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8193,7 +8193,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset. You can create a dataset only in a workspace that you have joined. Only DataWorks datasets are supported. The maximum number of datasets per tenant is 2000.</para>
+        /// <para>Creates a dataset. Datasets can only be created in workspaces that you have joined. Currently, only DataWorks datasets are supported. The maximum number of datasets per tenant is 2,000.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8265,7 +8265,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset. You can create a dataset only in a workspace that you have joined. Only DataWorks datasets are supported. The maximum number of datasets per tenant is 2000.</para>
+        /// <para>Creates a dataset. Datasets can only be created in workspaces that you have joined. Currently, only DataWorks datasets are supported. The maximum number of datasets per tenant is 2,000.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8283,7 +8283,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset. You can create a dataset only in a workspace that you have joined. Only DataWorks datasets are supported. The maximum number of datasets per tenant is 2000.</para>
+        /// <para>Creates a dataset. Datasets can only be created in workspaces that you have joined. Currently, only DataWorks datasets are supported. The maximum number of datasets per tenant is 2,000.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8301,7 +8301,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset version. Currently, only DataWorks datasets are supported. The maximum number of versions is 20.</para>
+        /// <para>Creates a dataset version. Currently, only DataWorks datasets are supported, and the maximum number of versions is 20.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8365,7 +8365,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset version. Currently, only DataWorks datasets are supported. The maximum number of versions is 20.</para>
+        /// <para>Creates a dataset version. Currently, only DataWorks datasets are supported, and the maximum number of versions is 20.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8429,7 +8429,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset version. Currently, only DataWorks datasets are supported. The maximum number of versions is 20.</para>
+        /// <para>Creates a dataset version. Currently, only DataWorks datasets are supported, and the maximum number of versions is 20.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8447,7 +8447,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset version. Currently, only DataWorks datasets are supported. The maximum number of versions is 20.</para>
+        /// <para>Creates a dataset version. Currently, only DataWorks datasets are supported, and the maximum number of versions is 20.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9784,10 +9784,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>After you submit the request, the system verifies the availability of the MCP server based on the connection information you provided.</description></item>
-        /// <item><description>If the connection to the MCP server is unavailable, the API returns an error message.</description></item>
-        /// <item><description>The <c>Name</c> field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). The name must be unique within the current account.</description></item>
-        /// <item><description>The <c>Visibility</c> field defines the visibility level of the MCP server. Valid values: <c>TENANT</c> (visible within the account), <c>PROJECT</c> (visible to specified projects), and <c>USER</c> (visible to specified users). Specify the <c>VisibilityScope</c> parameter to further define the visibility scope based on the selected value.</description></item>
+        /// <item><description>After submission, the system verifies the availability of the MCP server based on the provided connection information.</description></item>
+        /// <item><description>If the MCP server connection is unavailable, the API returns the corresponding error message.</description></item>
+        /// <item><description>The Name field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). It must be unique within the current account.</description></item>
+        /// <item><description>The Visibility field defines the visibility level of the MCP server. Valid values: <c>TENANT</c> (visible within the account), <c>PROJECT</c> (visible to specified projects), and <c>USER</c> (visible to specified users). Depending on the selected value, you must provide the corresponding VisibilityScope parameter to further specify the visibility scope.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9859,10 +9859,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>After you submit the request, the system verifies the availability of the MCP server based on the connection information you provided.</description></item>
-        /// <item><description>If the connection to the MCP server is unavailable, the API returns an error message.</description></item>
-        /// <item><description>The <c>Name</c> field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). The name must be unique within the current account.</description></item>
-        /// <item><description>The <c>Visibility</c> field defines the visibility level of the MCP server. Valid values: <c>TENANT</c> (visible within the account), <c>PROJECT</c> (visible to specified projects), and <c>USER</c> (visible to specified users). Specify the <c>VisibilityScope</c> parameter to further define the visibility scope based on the selected value.</description></item>
+        /// <item><description>After submission, the system verifies the availability of the MCP server based on the provided connection information.</description></item>
+        /// <item><description>If the MCP server connection is unavailable, the API returns the corresponding error message.</description></item>
+        /// <item><description>The Name field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). It must be unique within the current account.</description></item>
+        /// <item><description>The Visibility field defines the visibility level of the MCP server. Valid values: <c>TENANT</c> (visible within the account), <c>PROJECT</c> (visible to specified projects), and <c>USER</c> (visible to specified users). Depending on the selected value, you must provide the corresponding VisibilityScope parameter to further specify the visibility scope.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9934,10 +9934,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>After you submit the request, the system verifies the availability of the MCP server based on the connection information you provided.</description></item>
-        /// <item><description>If the connection to the MCP server is unavailable, the API returns an error message.</description></item>
-        /// <item><description>The <c>Name</c> field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). The name must be unique within the current account.</description></item>
-        /// <item><description>The <c>Visibility</c> field defines the visibility level of the MCP server. Valid values: <c>TENANT</c> (visible within the account), <c>PROJECT</c> (visible to specified projects), and <c>USER</c> (visible to specified users). Specify the <c>VisibilityScope</c> parameter to further define the visibility scope based on the selected value.</description></item>
+        /// <item><description>After submission, the system verifies the availability of the MCP server based on the provided connection information.</description></item>
+        /// <item><description>If the MCP server connection is unavailable, the API returns the corresponding error message.</description></item>
+        /// <item><description>The Name field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). It must be unique within the current account.</description></item>
+        /// <item><description>The Visibility field defines the visibility level of the MCP server. Valid values: <c>TENANT</c> (visible within the account), <c>PROJECT</c> (visible to specified projects), and <c>USER</c> (visible to specified users). Depending on the selected value, you must provide the corresponding VisibilityScope parameter to further specify the visibility scope.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9963,10 +9963,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>After you submit the request, the system verifies the availability of the MCP server based on the connection information you provided.</description></item>
-        /// <item><description>If the connection to the MCP server is unavailable, the API returns an error message.</description></item>
-        /// <item><description>The <c>Name</c> field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). The name must be unique within the current account.</description></item>
-        /// <item><description>The <c>Visibility</c> field defines the visibility level of the MCP server. Valid values: <c>TENANT</c> (visible within the account), <c>PROJECT</c> (visible to specified projects), and <c>USER</c> (visible to specified users). Specify the <c>VisibilityScope</c> parameter to further define the visibility scope based on the selected value.</description></item>
+        /// <item><description>After submission, the system verifies the availability of the MCP server based on the provided connection information.</description></item>
+        /// <item><description>If the MCP server connection is unavailable, the API returns the corresponding error message.</description></item>
+        /// <item><description>The Name field must start with a lowercase letter and can contain only lowercase letters, digits, underscores (_), and hyphens (-). It must be unique within the current account.</description></item>
+        /// <item><description>The Visibility field defines the visibility level of the MCP server. Valid values: <c>TENANT</c> (visible within the account), <c>PROJECT</c> (visible to specified projects), and <c>USER</c> (visible to specified users). Depending on the selected value, you must provide the corresponding VisibilityScope parameter to further specify the visibility scope.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11081,19 +11081,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new approval process definition, supporting custom configuration of approval rules and notification services.</para>
+        /// <para>Creates an approval flow definition with custom approval rules and notification services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</description></item>
-        /// <item><description>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</description></item>
-        /// <item><description>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</description></item>
-        /// <item><description>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</description></item>
-        /// <item><description>You can choose whether to immediately enable the newly created approval process definition.</description></item>
-        /// <item><description>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</description></item>
+        /// <item><description>This API allows you to create an approval flow definition, including setting basic information such as the policy name, description, type, and subtype.</description></item>
+        /// <item><description>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval flow is triggered.</description></item>
+        /// <item><description>You can configure multiple notification services (NotificationServices) to send notifications to relevant personnel at different stages of the approval flow.</description></item>
+        /// <item><description>The list of approval nodes (ApprovalNodes) defines the nodes that the approval process must pass through and the approver information.</description></item>
+        /// <item><description>You can choose whether to immediately enable the newly created approval flow definition.</description></item>
+        /// <item><description>Note: Some fields, such as Type, have specific value limits. Refer to the constraint description section in the documentation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11182,19 +11182,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new approval process definition, supporting custom configuration of approval rules and notification services.</para>
+        /// <para>Creates an approval flow definition with custom approval rules and notification services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</description></item>
-        /// <item><description>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</description></item>
-        /// <item><description>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</description></item>
-        /// <item><description>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</description></item>
-        /// <item><description>You can choose whether to immediately enable the newly created approval process definition.</description></item>
-        /// <item><description>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</description></item>
+        /// <item><description>This API allows you to create an approval flow definition, including setting basic information such as the policy name, description, type, and subtype.</description></item>
+        /// <item><description>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval flow is triggered.</description></item>
+        /// <item><description>You can configure multiple notification services (NotificationServices) to send notifications to relevant personnel at different stages of the approval flow.</description></item>
+        /// <item><description>The list of approval nodes (ApprovalNodes) defines the nodes that the approval process must pass through and the approver information.</description></item>
+        /// <item><description>You can choose whether to immediately enable the newly created approval flow definition.</description></item>
+        /// <item><description>Note: Some fields, such as Type, have specific value limits. Refer to the constraint description section in the documentation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11283,19 +11283,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new approval process definition, supporting custom configuration of approval rules and notification services.</para>
+        /// <para>Creates an approval flow definition with custom approval rules and notification services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</description></item>
-        /// <item><description>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</description></item>
-        /// <item><description>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</description></item>
-        /// <item><description>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</description></item>
-        /// <item><description>You can choose whether to immediately enable the newly created approval process definition.</description></item>
-        /// <item><description>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</description></item>
+        /// <item><description>This API allows you to create an approval flow definition, including setting basic information such as the policy name, description, type, and subtype.</description></item>
+        /// <item><description>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval flow is triggered.</description></item>
+        /// <item><description>You can configure multiple notification services (NotificationServices) to send notifications to relevant personnel at different stages of the approval flow.</description></item>
+        /// <item><description>The list of approval nodes (ApprovalNodes) defines the nodes that the approval process must pass through and the approver information.</description></item>
+        /// <item><description>You can choose whether to immediately enable the newly created approval flow definition.</description></item>
+        /// <item><description>Note: Some fields, such as Type, have specific value limits. Refer to the constraint description section in the documentation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11314,19 +11314,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new approval process definition, supporting custom configuration of approval rules and notification services.</para>
+        /// <para>Creates an approval flow definition with custom approval rules and notification services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation allows you to create a new approval process definition, including setting basic information such as the approval policy name, description, type, and subtype.</description></item>
-        /// <item><description>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval process is triggered.</description></item>
-        /// <item><description>Multiple notification services (NotificationServices) can be configured to send notifications to relevant personnel at different stages of the approval process.</description></item>
-        /// <item><description>The approval node list (ApprovalNodes) defines the nodes that must be traversed during the approval process and the approver information for each node.</description></item>
-        /// <item><description>You can choose whether to immediately enable the newly created approval process definition.</description></item>
-        /// <item><description>Note: Certain fields such as Type have specific value constraints. Refer to the constraint descriptions in the documentation.</description></item>
+        /// <item><description>This API allows you to create an approval flow definition, including setting basic information such as the policy name, description, type, and subtype.</description></item>
+        /// <item><description>You can define a list of condition rules (RuleConditions) to specify the conditions under which the approval flow is triggered.</description></item>
+        /// <item><description>You can configure multiple notification services (NotificationServices) to send notifications to relevant personnel at different stages of the approval flow.</description></item>
+        /// <item><description>The list of approval nodes (ApprovalNodes) defines the nodes that the approval process must pass through and the approver information.</description></item>
+        /// <item><description>You can choose whether to immediately enable the newly created approval flow definition.</description></item>
+        /// <item><description>Note: Some fields, such as Type, have specific value limits. Refer to the constraint description section in the documentation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13305,21 +13305,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the attachment upload first. After the definition is created, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</para>
-        /// <h2>Recommended workflow</h2>
+        /// <para>Creates and saves a reusable semantic task definition. This API operation only saves the configurations of the data source, resource group, and reference files, and does not execute the task immediately.</para>
+        /// <h2>Recommended procedure</h2>
         /// <ol>
-        /// <item><description>When <c>Source.type=singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
-        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the job.</description></item>
-        /// <item><description>Use <c>Data.Name</c> from the response to call <c>RunSemanticJob</c>. After the job is complete, use <c>DownloadSemanticResults</c> to retrieve the output.</description></item>
+        /// <item><description>If <c>Source.type</c> is set to <c>singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
+        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the task.</description></item>
+        /// <item><description>Call <c>RunSemanticJob</c> by using <c>Data.Name</c> in the response. After the task is completed, call <c>DownloadSemanticResults</c> to obtain the output.</description></item>
         /// </ol>
-        /// <h2>Before you begin</h2>
-        /// <para><c>Name</c> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
+        /// <h2>Precautions</h2>
+        /// <para><c>Name</c> must be unique within the current tenant. The rules for the number of reference files differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13395,21 +13395,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the attachment upload first. After the definition is created, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</para>
-        /// <h2>Recommended workflow</h2>
+        /// <para>Creates and saves a reusable semantic task definition. This API operation only saves the configurations of the data source, resource group, and reference files, and does not execute the task immediately.</para>
+        /// <h2>Recommended procedure</h2>
         /// <ol>
-        /// <item><description>When <c>Source.type=singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
-        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the job.</description></item>
-        /// <item><description>Use <c>Data.Name</c> from the response to call <c>RunSemanticJob</c>. After the job is complete, use <c>DownloadSemanticResults</c> to retrieve the output.</description></item>
+        /// <item><description>If <c>Source.type</c> is set to <c>singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
+        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the task.</description></item>
+        /// <item><description>Call <c>RunSemanticJob</c> by using <c>Data.Name</c> in the response. After the task is completed, call <c>DownloadSemanticResults</c> to obtain the output.</description></item>
         /// </ol>
-        /// <h2>Before you begin</h2>
-        /// <para><c>Name</c> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
+        /// <h2>Precautions</h2>
+        /// <para><c>Name</c> must be unique within the current tenant. The rules for the number of reference files differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13485,21 +13485,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the attachment upload first. After the definition is created, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</para>
-        /// <h2>Recommended workflow</h2>
+        /// <para>Creates and saves a reusable semantic task definition. This API operation only saves the configurations of the data source, resource group, and reference files, and does not execute the task immediately.</para>
+        /// <h2>Recommended procedure</h2>
         /// <ol>
-        /// <item><description>When <c>Source.type=singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
-        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the job.</description></item>
-        /// <item><description>Use <c>Data.Name</c> from the response to call <c>RunSemanticJob</c>. After the job is complete, use <c>DownloadSemanticResults</c> to retrieve the output.</description></item>
+        /// <item><description>If <c>Source.type</c> is set to <c>singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
+        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the task.</description></item>
+        /// <item><description>Call <c>RunSemanticJob</c> by using <c>Data.Name</c> in the response. After the task is completed, call <c>DownloadSemanticResults</c> to obtain the output.</description></item>
         /// </ol>
-        /// <h2>Before you begin</h2>
-        /// <para><c>Name</c> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
+        /// <h2>Precautions</h2>
+        /// <para><c>Name</c> must be unique within the current tenant. The rules for the number of reference files differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13517,21 +13517,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the attachment upload first. After the definition is created, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</para>
-        /// <h2>Recommended workflow</h2>
+        /// <para>Creates and saves a reusable semantic task definition. This API operation only saves the configurations of the data source, resource group, and reference files, and does not execute the task immediately.</para>
+        /// <h2>Recommended procedure</h2>
         /// <ol>
-        /// <item><description>When <c>Source.type=singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
-        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the job.</description></item>
-        /// <item><description>Use <c>Data.Name</c> from the response to call <c>RunSemanticJob</c>. After the job is complete, use <c>DownloadSemanticResults</c> to retrieve the output.</description></item>
+        /// <item><description>If <c>Source.type</c> is set to <c>singleTableFile</c>, call <c>UploadSemanticFile</c> first, use the returned <c>Data.UploadUrl</c> to complete the PUT upload, and then specify <c>Data.FileId</c> in <c>ReferenceFileIds</c>. Alternatively, you can provide a single accessible URI.</description></item>
+        /// <item><description>Configure <c>Source</c>, <c>ProjectId</c>, and <c>ResourceGroupId</c>, and then call this operation to save the task.</description></item>
+        /// <item><description>Call <c>RunSemanticJob</c> by using <c>Data.Name</c> in the response. After the task is completed, call <c>DownloadSemanticResults</c> to obtain the output.</description></item>
         /// </ol>
-        /// <h2>Before you begin</h2>
-        /// <para><c>Name</c> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
+        /// <h2>Precautions</h2>
+        /// <para><c>Name</c> must be unique within the current tenant. The rules for the number of reference files differ between single-file sources and other sources. For details, refer to the descriptions of the <c>ReferenceFileIds</c> and <c>ReferenceFileUris</c> fields.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13813,8 +13813,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>You must specify either the SkillMdOverride or BundleUrl parameter.</description></item>
-        /// <item><description>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible to the entire tenant, specific projects, or specific users.</description></item>
-        /// <item><description>If you set Visibility to PROJECT, you must use VisibilityScope.ProjectIds to specify the IDs of the visible projects. If you set Visibility to USER, you must use VisibilityScope.UserIds to specify the IDs of the visible users.</description></item>
+        /// <item><description>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible within the account, visible to specified projects, or visible to specified users, respectively.</description></item>
+        /// <item><description>If Visibility is set to PROJECT, you must specify the IDs of the projects in which the skill is visible by using VisibilityScope.ProjectIds. If Visibility is set to USER, you must specify the IDs of the users who can see the skill by using VisibilityScope.UserIds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13903,8 +13903,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>You must specify either the SkillMdOverride or BundleUrl parameter.</description></item>
-        /// <item><description>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible to the entire tenant, specific projects, or specific users.</description></item>
-        /// <item><description>If you set Visibility to PROJECT, you must use VisibilityScope.ProjectIds to specify the IDs of the visible projects. If you set Visibility to USER, you must use VisibilityScope.UserIds to specify the IDs of the visible users.</description></item>
+        /// <item><description>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible within the account, visible to specified projects, or visible to specified users, respectively.</description></item>
+        /// <item><description>If Visibility is set to PROJECT, you must specify the IDs of the projects in which the skill is visible by using VisibilityScope.ProjectIds. If Visibility is set to USER, you must specify the IDs of the users who can see the skill by using VisibilityScope.UserIds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13993,8 +13993,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>You must specify either the SkillMdOverride or BundleUrl parameter.</description></item>
-        /// <item><description>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible to the entire tenant, specific projects, or specific users.</description></item>
-        /// <item><description>If you set Visibility to PROJECT, you must use VisibilityScope.ProjectIds to specify the IDs of the visible projects. If you set Visibility to USER, you must use VisibilityScope.UserIds to specify the IDs of the visible users.</description></item>
+        /// <item><description>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible within the account, visible to specified projects, or visible to specified users, respectively.</description></item>
+        /// <item><description>If Visibility is set to PROJECT, you must specify the IDs of the projects in which the skill is visible by using VisibilityScope.ProjectIds. If Visibility is set to USER, you must specify the IDs of the users who can see the skill by using VisibilityScope.UserIds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14021,8 +14021,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>You must specify either the SkillMdOverride or BundleUrl parameter.</description></item>
-        /// <item><description>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible to the entire tenant, specific projects, or specific users.</description></item>
-        /// <item><description>If you set Visibility to PROJECT, you must use VisibilityScope.ProjectIds to specify the IDs of the visible projects. If you set Visibility to USER, you must use VisibilityScope.UserIds to specify the IDs of the visible users.</description></item>
+        /// <item><description>You can set Visibility to TENANT, PROJECT, or USER, which indicates that the skill is visible within the account, visible to specified projects, or visible to specified users, respectively.</description></item>
+        /// <item><description>If Visibility is set to PROJECT, you must specify the IDs of the projects in which the skill is visible by using VisibilityScope.ProjectIds. If Visibility is set to USER, you must specify the IDs of the users who can see the skill by using VisibilityScope.UserIds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14417,12 +14417,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</para>
+        /// <para>Creates a workflow instance from the specified configuration, for example, a data backfill workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14526,12 +14526,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</para>
+        /// <para>Creates a workflow instance from the specified configuration, for example, a data backfill workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14635,12 +14635,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</para>
+        /// <para>Creates a workflow instance from the specified configuration, for example, a data backfill workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14658,12 +14658,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</para>
+        /// <para>Creates a workflow instance from the specified configuration, for example, a data backfill workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21398,7 +21398,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21449,7 +21449,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21500,7 +21500,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21523,7 +21523,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24945,17 +24945,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the content of resource permission applications under the specified process instance ID.</para>
+        /// <para>Retrieves the details of a resource access request for the specified process instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to query the details of resource permission applications based on the provided <c>ProcessInstanceId</c>.</description></item>
-        /// <item><description>A valid <c>ProcessInstanceId</c> parameter must be provided in the request.</description></item>
-        /// <item><description>The response includes the basic information, status, and the list of specific application contents.</description></item>
-        /// <item><description>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</description></item>
+        /// <item><description>Specify a valid <c>ProcessInstanceId</c> to retrieve the corresponding resource access request.</description></item>
+        /// <item><description>The response includes the basic details and status of the request, along with its items.</description></item>
+        /// <item><description>Each item includes information about the resource, the grantee, and the requested operation permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24998,17 +24997,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the content of resource permission applications under the specified process instance ID.</para>
+        /// <para>Retrieves the details of a resource access request for the specified process instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to query the details of resource permission applications based on the provided <c>ProcessInstanceId</c>.</description></item>
-        /// <item><description>A valid <c>ProcessInstanceId</c> parameter must be provided in the request.</description></item>
-        /// <item><description>The response includes the basic information, status, and the list of specific application contents.</description></item>
-        /// <item><description>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</description></item>
+        /// <item><description>Specify a valid <c>ProcessInstanceId</c> to retrieve the corresponding resource access request.</description></item>
+        /// <item><description>The response includes the basic details and status of the request, along with its items.</description></item>
+        /// <item><description>Each item includes information about the resource, the grantee, and the requested operation permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25051,17 +25049,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the content of resource permission applications under the specified process instance ID.</para>
+        /// <para>Retrieves the details of a resource access request for the specified process instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to query the details of resource permission applications based on the provided <c>ProcessInstanceId</c>.</description></item>
-        /// <item><description>A valid <c>ProcessInstanceId</c> parameter must be provided in the request.</description></item>
-        /// <item><description>The response includes the basic information, status, and the list of specific application contents.</description></item>
-        /// <item><description>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</description></item>
+        /// <item><description>Specify a valid <c>ProcessInstanceId</c> to retrieve the corresponding resource access request.</description></item>
+        /// <item><description>The response includes the basic details and status of the request, along with its items.</description></item>
+        /// <item><description>Each item includes information about the resource, the grantee, and the requested operation permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25080,17 +25077,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the content of resource permission applications under the specified process instance ID.</para>
+        /// <para>Retrieves the details of a resource access request for the specified process instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to query the details of resource permission applications based on the provided <c>ProcessInstanceId</c>.</description></item>
-        /// <item><description>A valid <c>ProcessInstanceId</c> parameter must be provided in the request.</description></item>
-        /// <item><description>The response includes the basic information, status, and the list of specific application contents.</description></item>
-        /// <item><description>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</description></item>
+        /// <item><description>Specify a valid <c>ProcessInstanceId</c> to retrieve the corresponding resource access request.</description></item>
+        /// <item><description>The response includes the basic details and status of the request, along with its items.</description></item>
+        /// <item><description>Each item includes information about the resource, the grantee, and the requested operation permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26566,12 +26562,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Queries the configuration, availability status, and latest run information of a specified metadata crawler.</para>
         /// <h2>Recommended workflow</h2>
         /// <ol>
-        /// <item><description>Call <c>ListCrawlers</c> to query crawler IDs.</description></item>
-        /// <item><description>Call this operation to retrieve crawler details.</description></item>
-        /// <item><description>To query the complete run history, call <c>ListCrawlerRuns</c>.</description></item>
+        /// <item><description>Call ListCrawlers to query the crawler ID.</description></item>
+        /// <item><description>Call this operation to obtain the crawler details.</description></item>
+        /// <item><description>To query the complete run history, call ListCrawlerRuns.</description></item>
         /// </ol>
         /// <h2>Edition requirements</h2>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
         /// <h2>Precautions</h2>
         /// <para>If the crawler has not been run, the latest run status and task instance ID may be empty.</para>
         /// </description>
@@ -26624,12 +26620,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Queries the configuration, availability status, and latest run information of a specified metadata crawler.</para>
         /// <h2>Recommended workflow</h2>
         /// <ol>
-        /// <item><description>Call <c>ListCrawlers</c> to query crawler IDs.</description></item>
-        /// <item><description>Call this operation to retrieve crawler details.</description></item>
-        /// <item><description>To query the complete run history, call <c>ListCrawlerRuns</c>.</description></item>
+        /// <item><description>Call ListCrawlers to query the crawler ID.</description></item>
+        /// <item><description>Call this operation to obtain the crawler details.</description></item>
+        /// <item><description>To query the complete run history, call ListCrawlerRuns.</description></item>
         /// </ol>
         /// <h2>Edition requirements</h2>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
         /// <h2>Precautions</h2>
         /// <para>If the crawler has not been run, the latest run status and task instance ID may be empty.</para>
         /// </description>
@@ -26682,12 +26678,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Queries the configuration, availability status, and latest run information of a specified metadata crawler.</para>
         /// <h2>Recommended workflow</h2>
         /// <ol>
-        /// <item><description>Call <c>ListCrawlers</c> to query crawler IDs.</description></item>
-        /// <item><description>Call this operation to retrieve crawler details.</description></item>
-        /// <item><description>To query the complete run history, call <c>ListCrawlerRuns</c>.</description></item>
+        /// <item><description>Call ListCrawlers to query the crawler ID.</description></item>
+        /// <item><description>Call this operation to obtain the crawler details.</description></item>
+        /// <item><description>To query the complete run history, call ListCrawlerRuns.</description></item>
         /// </ol>
         /// <h2>Edition requirements</h2>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
         /// <h2>Precautions</h2>
         /// <para>If the crawler has not been run, the latest run status and task instance ID may be empty.</para>
         /// </description>
@@ -26716,12 +26712,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Queries the configuration, availability status, and latest run information of a specified metadata crawler.</para>
         /// <h2>Recommended workflow</h2>
         /// <ol>
-        /// <item><description>Call <c>ListCrawlers</c> to query crawler IDs.</description></item>
-        /// <item><description>Call this operation to retrieve crawler details.</description></item>
-        /// <item><description>To query the complete run history, call <c>ListCrawlerRuns</c>.</description></item>
+        /// <item><description>Call ListCrawlers to query the crawler ID.</description></item>
+        /// <item><description>Call this operation to obtain the crawler details.</description></item>
+        /// <item><description>To query the complete run history, call ListCrawlerRuns.</description></item>
         /// </ol>
         /// <h2>Edition requirements</h2>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
         /// <h2>Precautions</h2>
         /// <para>If the crawler has not been run, the latest run status and task instance ID may be empty.</para>
         /// </description>
@@ -28453,12 +28449,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run details of a data quality scan task by its ID.</para>
+        /// <para>Creates a data quality monitoring run instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>DataWorks Basic Edition or higher is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28500,12 +28496,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run details of a data quality scan task by its ID.</para>
+        /// <para>Creates a data quality monitoring run instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>DataWorks Basic Edition or higher is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28547,12 +28543,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run details of a data quality scan task by its ID.</para>
+        /// <para>Creates a data quality monitoring run instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>DataWorks Basic Edition or higher is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28570,12 +28566,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the run details of a data quality scan task by its ID.</para>
+        /// <para>Creates a data quality monitoring run instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>DataWorks Basic Edition or higher is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30385,14 +30381,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an image test result.</para>
+        /// <para>Retrieves the details of the image test result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or later is required.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
+        /// <item><description>DataWorks Basic Edition or higher is required.</description></item>
+        /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -30439,14 +30435,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an image test result.</para>
+        /// <para>Retrieves the details of the image test result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or later is required.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
+        /// <item><description>DataWorks Basic Edition or higher is required.</description></item>
+        /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -30493,14 +30489,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an image test result.</para>
+        /// <para>Retrieves the details of the image test result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or later is required.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
+        /// <item><description>DataWorks Basic Edition or higher is required.</description></item>
+        /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -30519,14 +30515,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an image test result.</para>
+        /// <para>Retrieves the details of the image test result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or later is required.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
+        /// <item><description>DataWorks Basic Edition or higher is required.</description></item>
+        /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -30653,6 +30649,318 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetJobStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a specified knowledge base and the current caller’s access role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseResponse
+        /// </returns>
+        public GetKnowledgeBaseResponse GetKnowledgeBaseWithOptions(GetKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBase",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a specified knowledge base and the current caller’s access role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseResponse> GetKnowledgeBaseWithOptionsAsync(GetKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBase",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a specified knowledge base and the current caller’s access role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseResponse
+        /// </returns>
+        public GetKnowledgeBaseResponse GetKnowledgeBase(GetKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a specified knowledge base and the current caller’s access role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a knowledge base. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseResponse> GetKnowledgeBaseAsync(GetKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current details of a single knowledge point, supporting local graphs, topic pages, and knowledge content.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the current details of a knowledge point. GRAPH returns a one-hop local graph centered on the specified node. WIKI and KNOWLEDGE_CONTENT return readable content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgePointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgePointResponse
+        /// </returns>
+        public GetKnowledgePointResponse GetKnowledgePointWithOptions(GetKnowledgePointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgePoint",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgePointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current details of a single knowledge point, supporting local graphs, topic pages, and knowledge content.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the current details of a knowledge point. GRAPH returns a one-hop local graph centered on the specified node. WIKI and KNOWLEDGE_CONTENT return readable content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgePointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgePointResponse
+        /// </returns>
+        public async Task<GetKnowledgePointResponse> GetKnowledgePointWithOptionsAsync(GetKnowledgePointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgePoint",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgePointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current details of a single knowledge point, supporting local graphs, topic pages, and knowledge content.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the current details of a knowledge point. GRAPH returns a one-hop local graph centered on the specified node. WIKI and KNOWLEDGE_CONTENT return readable content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgePointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgePointResponse
+        /// </returns>
+        public GetKnowledgePointResponse GetKnowledgePoint(GetKnowledgePointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKnowledgePointWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current details of a single knowledge point, supporting local graphs, topic pages, and knowledge content.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the current details of a knowledge point. GRAPH returns a one-hop local graph centered on the specified node. WIKI and KNOWLEDGE_CONTENT return readable content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgePointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgePointResponse
+        /// </returns>
+        public async Task<GetKnowledgePointResponse> GetKnowledgePointAsync(GetKnowledgePointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKnowledgePointWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32009,17 +32317,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the approval policy for a given process definition ID.</para>
+        /// <para>Retrieves the details of an approval policy based on the specified process definition ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the details of a specific approval process definition using the <c>ID</c> parameter.</description></item>
-        /// <item><description>The <c>ID</c> parameter is required and must be a valid process definition ID.</description></item>
-        /// <item><description>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</description></item>
-        /// <item><description>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</description></item>
+        /// <item><description>This operation queries all information about a specific approval process definition by using the specified <c>Id</c> parameter.</description></item>
+        /// <item><description><c>Id</c> is required and must be a valid process definition ID.</description></item>
+        /// <item><description>The returned information includes but is not limited to the basic attributes, rule conditions, notification service configurations, and approval nodes of the process definition.</description></item>
+        /// <item><description>If the request is successful, the data containing the complete process definition object is returned. If the request fails, the corresponding error code and message are provided to help troubleshoot the issue.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32062,17 +32370,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the approval policy for a given process definition ID.</para>
+        /// <para>Retrieves the details of an approval policy based on the specified process definition ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the details of a specific approval process definition using the <c>ID</c> parameter.</description></item>
-        /// <item><description>The <c>ID</c> parameter is required and must be a valid process definition ID.</description></item>
-        /// <item><description>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</description></item>
-        /// <item><description>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</description></item>
+        /// <item><description>This operation queries all information about a specific approval process definition by using the specified <c>Id</c> parameter.</description></item>
+        /// <item><description><c>Id</c> is required and must be a valid process definition ID.</description></item>
+        /// <item><description>The returned information includes but is not limited to the basic attributes, rule conditions, notification service configurations, and approval nodes of the process definition.</description></item>
+        /// <item><description>If the request is successful, the data containing the complete process definition object is returned. If the request fails, the corresponding error code and message are provided to help troubleshoot the issue.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32115,17 +32423,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the approval policy for a given process definition ID.</para>
+        /// <para>Retrieves the details of an approval policy based on the specified process definition ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the details of a specific approval process definition using the <c>ID</c> parameter.</description></item>
-        /// <item><description>The <c>ID</c> parameter is required and must be a valid process definition ID.</description></item>
-        /// <item><description>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</description></item>
-        /// <item><description>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</description></item>
+        /// <item><description>This operation queries all information about a specific approval process definition by using the specified <c>Id</c> parameter.</description></item>
+        /// <item><description><c>Id</c> is required and must be a valid process definition ID.</description></item>
+        /// <item><description>The returned information includes but is not limited to the basic attributes, rule conditions, notification service configurations, and approval nodes of the process definition.</description></item>
+        /// <item><description>If the request is successful, the data containing the complete process definition object is returned. If the request fails, the corresponding error code and message are provided to help troubleshoot the issue.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32144,17 +32452,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the approval policy for a given process definition ID.</para>
+        /// <para>Retrieves the details of an approval policy based on the specified process definition ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the details of a specific approval process definition using the <c>ID</c> parameter.</description></item>
-        /// <item><description>The <c>ID</c> parameter is required and must be a valid process definition ID.</description></item>
-        /// <item><description>The response includes the basic properties of the approval process definition, rule conditions, notification service configurations, and approval nodes.</description></item>
-        /// <item><description>A successful request returns the complete process definition object. A failed request returns an error code and message for troubleshooting.</description></item>
+        /// <item><description>This operation queries all information about a specific approval process definition by using the specified <c>Id</c> parameter.</description></item>
+        /// <item><description><c>Id</c> is required and must be a valid process definition ID.</description></item>
+        /// <item><description>The returned information includes but is not limited to the basic attributes, rule conditions, notification service configurations, and approval nodes of the process definition.</description></item>
+        /// <item><description>If the request is successful, the data containing the complete process definition object is returned. If the request fails, the corresponding error code and message are provided to help troubleshoot the issue.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35018,7 +35326,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature requires DataWorks Basic Edition or a higher edition.</para>
+        /// <para>DataWorks Basic Edition or higher is required to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35061,7 +35369,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature requires DataWorks Basic Edition or a higher edition.</para>
+        /// <para>DataWorks Basic Edition or higher is required to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35104,7 +35412,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature requires DataWorks Basic Edition or a higher edition.</para>
+        /// <para>DataWorks Basic Edition or higher is required to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35127,7 +35435,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature requires DataWorks Basic Edition or a higher edition.</para>
+        /// <para>DataWorks Basic Edition or higher is required to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39785,16 +40093,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists custom agents with pagination.</para>
+        /// <para>Returns a paginated list of custom agents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Search keyword</b>: Use the <c>Q</c> parameter to perform a fuzzy match on agent names.</description></item>
-        /// <item><description><b>Visibility level filter</b>: Use the <c>Visibility</c> parameter to filter results by visibility level, such as <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>.</description></item>
-        /// <item><description><b>Paging information</b>: Use the <c>MaxResults</c> and <c>NextToken</c> parameters to implement a paged query. The <c>NextToken</c> parameter is used to retrieve the next page of data.</description></item>
+        /// <item><description><b>Search keyword</b>: You can use the <c>Q</c> parameter to perform a fuzzy match by agent name.</description></item>
+        /// <item><description><b>Visibility level filter</b>: You can use the <c>Visibility</c> parameter to filter results by visibility level, such as <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>.</description></item>
+        /// <item><description><b>Paging information</b>: You can use the <c>MaxResults</c> and <c>NextToken</c> parameters to implement a paged query. The <c>NextToken</c> parameter is used to retrieve the next page of data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39857,16 +40165,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists custom agents with pagination.</para>
+        /// <para>Returns a paginated list of custom agents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Search keyword</b>: Use the <c>Q</c> parameter to perform a fuzzy match on agent names.</description></item>
-        /// <item><description><b>Visibility level filter</b>: Use the <c>Visibility</c> parameter to filter results by visibility level, such as <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>.</description></item>
-        /// <item><description><b>Paging information</b>: Use the <c>MaxResults</c> and <c>NextToken</c> parameters to implement a paged query. The <c>NextToken</c> parameter is used to retrieve the next page of data.</description></item>
+        /// <item><description><b>Search keyword</b>: You can use the <c>Q</c> parameter to perform a fuzzy match by agent name.</description></item>
+        /// <item><description><b>Visibility level filter</b>: You can use the <c>Visibility</c> parameter to filter results by visibility level, such as <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>.</description></item>
+        /// <item><description><b>Paging information</b>: You can use the <c>MaxResults</c> and <c>NextToken</c> parameters to implement a paged query. The <c>NextToken</c> parameter is used to retrieve the next page of data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39929,16 +40237,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists custom agents with pagination.</para>
+        /// <para>Returns a paginated list of custom agents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Search keyword</b>: Use the <c>Q</c> parameter to perform a fuzzy match on agent names.</description></item>
-        /// <item><description><b>Visibility level filter</b>: Use the <c>Visibility</c> parameter to filter results by visibility level, such as <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>.</description></item>
-        /// <item><description><b>Paging information</b>: Use the <c>MaxResults</c> and <c>NextToken</c> parameters to implement a paged query. The <c>NextToken</c> parameter is used to retrieve the next page of data.</description></item>
+        /// <item><description><b>Search keyword</b>: You can use the <c>Q</c> parameter to perform a fuzzy match by agent name.</description></item>
+        /// <item><description><b>Visibility level filter</b>: You can use the <c>Visibility</c> parameter to filter results by visibility level, such as <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>.</description></item>
+        /// <item><description><b>Paging information</b>: You can use the <c>MaxResults</c> and <c>NextToken</c> parameters to implement a paged query. The <c>NextToken</c> parameter is used to retrieve the next page of data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39957,16 +40265,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists custom agents with pagination.</para>
+        /// <para>Returns a paginated list of custom agents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Search keyword</b>: Use the <c>Q</c> parameter to perform a fuzzy match on agent names.</description></item>
-        /// <item><description><b>Visibility level filter</b>: Use the <c>Visibility</c> parameter to filter results by visibility level, such as <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>.</description></item>
-        /// <item><description><b>Paging information</b>: Use the <c>MaxResults</c> and <c>NextToken</c> parameters to implement a paged query. The <c>NextToken</c> parameter is used to retrieve the next page of data.</description></item>
+        /// <item><description><b>Search keyword</b>: You can use the <c>Q</c> parameter to perform a fuzzy match by agent name.</description></item>
+        /// <item><description><b>Visibility level filter</b>: You can use the <c>Visibility</c> parameter to filter results by visibility level, such as <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>.</description></item>
+        /// <item><description><b>Paging information</b>: You can use the <c>MaxResults</c> and <c>NextToken</c> parameters to implement a paged query. The <c>NextToken</c> parameter is used to retrieve the next page of data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41597,12 +41905,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of data quality results by using paging.</para>
+        /// <para>Lists data quality check results with pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41646,12 +41954,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of data quality results by using paging.</para>
+        /// <para>Lists data quality check results with pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41695,12 +42003,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of data quality results by using paging.</para>
+        /// <para>Lists data quality check results with pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41724,12 +42032,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of data quality results by using paging.</para>
+        /// <para>Lists data quality check results with pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45729,6 +46037,318 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the knowledge bases that the current caller has permission to view in a specified region by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists knowledge bases. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBasesResponse
+        /// </returns>
+        public ListKnowledgeBasesResponse ListKnowledgeBasesWithOptions(ListKnowledgeBasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBases",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the knowledge bases that the current caller has permission to view in a specified region by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists knowledge bases. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBasesResponse
+        /// </returns>
+        public async Task<ListKnowledgeBasesResponse> ListKnowledgeBasesWithOptionsAsync(ListKnowledgeBasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBases",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the knowledge bases that the current caller has permission to view in a specified region by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists knowledge bases. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBasesResponse
+        /// </returns>
+        public ListKnowledgeBasesResponse ListKnowledgeBases(ListKnowledgeBasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeBasesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the knowledge bases that the current caller has permission to view in a specified region by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists knowledge bases. The tenant and caller identities are determined by the POP authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBasesResponse
+        /// </returns>
+        public async Task<ListKnowledgeBasesResponse> ListKnowledgeBasesAsync(ListKnowledgeBasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeBasesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge points in a knowledge base by type with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the currently visible knowledge points in a knowledge base in a paginated manner. You can filter the knowledge points by type, such as GRAPH, WIKI, and KNOWLEDGE_CONTENT.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgePointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgePointsResponse
+        /// </returns>
+        public ListKnowledgePointsResponse ListKnowledgePointsWithOptions(ListKnowledgePointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgePoints",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgePointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge points in a knowledge base by type with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the currently visible knowledge points in a knowledge base in a paginated manner. You can filter the knowledge points by type, such as GRAPH, WIKI, and KNOWLEDGE_CONTENT.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgePointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgePointsResponse
+        /// </returns>
+        public async Task<ListKnowledgePointsResponse> ListKnowledgePointsWithOptionsAsync(ListKnowledgePointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                body["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgePoints",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgePointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge points in a knowledge base by type with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the currently visible knowledge points in a knowledge base in a paginated manner. You can filter the knowledge points by type, such as GRAPH, WIKI, and KNOWLEDGE_CONTENT.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgePointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgePointsResponse
+        /// </returns>
+        public ListKnowledgePointsResponse ListKnowledgePoints(ListKnowledgePointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgePointsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists knowledge points in a knowledge base by type with pagination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the currently visible knowledge points in a knowledge base in a paginated manner. You can filter the knowledge points by type, such as GRAPH, WIKI, and KNOWLEDGE_CONTENT.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgePointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgePointsResponse
+        /// </returns>
+        public async Task<ListKnowledgePointsResponse> ListKnowledgePointsAsync(ListKnowledgePointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgePointsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of data lineage relationships between two given entities (such as tables, fields, or OSS files) in DataWorks Data Map.</para>
         /// </summary>
         /// 
@@ -46733,19 +47353,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all resource access permission application orders initiated by the current user.</para>
+        /// <para>Lists all requests for resource access permissions submitted by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports paginated queries, controlled by the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
-        /// <item><description><c>DefSchema</c> is a required parameter that specifies the resource type.</description></item>
-        /// <item><description>The <c>ResourceType</c> list can contain multiple resource types for more precise filtering of application orders.</description></item>
-        /// <item><description>You can set <c>StartTime</c> and <c>EndTime</c> to limit the time range of the query.</description></item>
-        /// <item><description><c>Statuses</c> allows you to filter application orders by specific statuses, such as pending approval and authorized.</description></item>
-        /// <item><description>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <c>Resource</c> and <c>Grantee</c> fields.</description></item>
+        /// <item><description>Use <c>NextToken</c> and <c>PageSize</c> to paginate the results.</description></item>
+        /// <item><description><c>DefSchema</c> is required and specifies the resource type.</description></item>
+        /// <item><description>Specify multiple resource types in <c>ResourceType</c> to narrow the results.</description></item>
+        /// <item><description>Use <c>StartTime</c> and <c>EndTime</c> to restrict the query to a time range.</description></item>
+        /// <item><description>Use <c>Statuses</c> to filter requests by status, such as pending approval or authorization succeeded.</description></item>
+        /// <item><description>To filter by specific resources or grantees, specify the details in <c>Resource</c> and <c>Grantee</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46830,19 +47450,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all resource access permission application orders initiated by the current user.</para>
+        /// <para>Lists all requests for resource access permissions submitted by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports paginated queries, controlled by the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
-        /// <item><description><c>DefSchema</c> is a required parameter that specifies the resource type.</description></item>
-        /// <item><description>The <c>ResourceType</c> list can contain multiple resource types for more precise filtering of application orders.</description></item>
-        /// <item><description>You can set <c>StartTime</c> and <c>EndTime</c> to limit the time range of the query.</description></item>
-        /// <item><description><c>Statuses</c> allows you to filter application orders by specific statuses, such as pending approval and authorized.</description></item>
-        /// <item><description>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <c>Resource</c> and <c>Grantee</c> fields.</description></item>
+        /// <item><description>Use <c>NextToken</c> and <c>PageSize</c> to paginate the results.</description></item>
+        /// <item><description><c>DefSchema</c> is required and specifies the resource type.</description></item>
+        /// <item><description>Specify multiple resource types in <c>ResourceType</c> to narrow the results.</description></item>
+        /// <item><description>Use <c>StartTime</c> and <c>EndTime</c> to restrict the query to a time range.</description></item>
+        /// <item><description>Use <c>Statuses</c> to filter requests by status, such as pending approval or authorization succeeded.</description></item>
+        /// <item><description>To filter by specific resources or grantees, specify the details in <c>Resource</c> and <c>Grantee</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46927,19 +47547,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all resource access permission application orders initiated by the current user.</para>
+        /// <para>Lists all requests for resource access permissions submitted by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports paginated queries, controlled by the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
-        /// <item><description><c>DefSchema</c> is a required parameter that specifies the resource type.</description></item>
-        /// <item><description>The <c>ResourceType</c> list can contain multiple resource types for more precise filtering of application orders.</description></item>
-        /// <item><description>You can set <c>StartTime</c> and <c>EndTime</c> to limit the time range of the query.</description></item>
-        /// <item><description><c>Statuses</c> allows you to filter application orders by specific statuses, such as pending approval and authorized.</description></item>
-        /// <item><description>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <c>Resource</c> and <c>Grantee</c> fields.</description></item>
+        /// <item><description>Use <c>NextToken</c> and <c>PageSize</c> to paginate the results.</description></item>
+        /// <item><description><c>DefSchema</c> is required and specifies the resource type.</description></item>
+        /// <item><description>Specify multiple resource types in <c>ResourceType</c> to narrow the results.</description></item>
+        /// <item><description>Use <c>StartTime</c> and <c>EndTime</c> to restrict the query to a time range.</description></item>
+        /// <item><description>Use <c>Statuses</c> to filter requests by status, such as pending approval or authorization succeeded.</description></item>
+        /// <item><description>To filter by specific resources or grantees, specify the details in <c>Resource</c> and <c>Grantee</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46958,19 +47578,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all resource access permission application orders initiated by the current user.</para>
+        /// <para>Lists all requests for resource access permissions submitted by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports paginated queries, controlled by the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
-        /// <item><description><c>DefSchema</c> is a required parameter that specifies the resource type.</description></item>
-        /// <item><description>The <c>ResourceType</c> list can contain multiple resource types for more precise filtering of application orders.</description></item>
-        /// <item><description>You can set <c>StartTime</c> and <c>EndTime</c> to limit the time range of the query.</description></item>
-        /// <item><description><c>Statuses</c> allows you to filter application orders by specific statuses, such as pending approval and authorized.</description></item>
-        /// <item><description>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <c>Resource</c> and <c>Grantee</c> fields.</description></item>
+        /// <item><description>Use <c>NextToken</c> and <c>PageSize</c> to paginate the results.</description></item>
+        /// <item><description><c>DefSchema</c> is required and specifies the resource type.</description></item>
+        /// <item><description>Specify multiple resource types in <c>ResourceType</c> to narrow the results.</description></item>
+        /// <item><description>Use <c>StartTime</c> and <c>EndTime</c> to restrict the query to a time range.</description></item>
+        /// <item><description>Use <c>Statuses</c> to filter requests by status, such as pending approval or authorization succeeded.</description></item>
+        /// <item><description>To filter by specific resources or grantees, specify the details in <c>Resource</c> and <c>Grantee</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46989,18 +47609,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query all permission application orders where the current user is an approver or stakeholder.</para>
+        /// <para>Lists all permission requests for which the current user is an approver or a related party.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</description></item>
-        /// <item><description>You can use the <c>Statuses</c> parameter to filter application orders by specific status.</description></item>
-        /// <item><description><c>NextToken</c> is used for paginated requests. It can be omitted or set to <c>null</c> for the first request. For subsequent requests, pass the <c>NextToken</c> value from the previous response.</description></item>
-        /// <item><description><c>PageSize</c> defaults to 10, with a maximum of 200.</description></item>
-        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required fields. Other parameters can be filled in as needed.</description></item>
+        /// <item><description>This operation lists permission requests for which the current user is an approver, including requests pending approval and requests that have already been reviewed.</description></item>
+        /// <item><description>Use <c>Statuses</c> to filter requests by status.</description></item>
+        /// <item><description>For the first page, omit <c>NextToken</c> or set it to <c>null</c>. For subsequent pages, pass the <c>NextToken</c> value returned in the previous response.</description></item>
+        /// <item><description><c>PageSize</c> defaults to 10 and supports a maximum of 200.</description></item>
+        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required. Other parameters are optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47101,18 +47721,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query all permission application orders where the current user is an approver or stakeholder.</para>
+        /// <para>Lists all permission requests for which the current user is an approver or a related party.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</description></item>
-        /// <item><description>You can use the <c>Statuses</c> parameter to filter application orders by specific status.</description></item>
-        /// <item><description><c>NextToken</c> is used for paginated requests. It can be omitted or set to <c>null</c> for the first request. For subsequent requests, pass the <c>NextToken</c> value from the previous response.</description></item>
-        /// <item><description><c>PageSize</c> defaults to 10, with a maximum of 200.</description></item>
-        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required fields. Other parameters can be filled in as needed.</description></item>
+        /// <item><description>This operation lists permission requests for which the current user is an approver, including requests pending approval and requests that have already been reviewed.</description></item>
+        /// <item><description>Use <c>Statuses</c> to filter requests by status.</description></item>
+        /// <item><description>For the first page, omit <c>NextToken</c> or set it to <c>null</c>. For subsequent pages, pass the <c>NextToken</c> value returned in the previous response.</description></item>
+        /// <item><description><c>PageSize</c> defaults to 10 and supports a maximum of 200.</description></item>
+        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required. Other parameters are optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47213,18 +47833,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query all permission application orders where the current user is an approver or stakeholder.</para>
+        /// <para>Lists all permission requests for which the current user is an approver or a related party.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</description></item>
-        /// <item><description>You can use the <c>Statuses</c> parameter to filter application orders by specific status.</description></item>
-        /// <item><description><c>NextToken</c> is used for paginated requests. It can be omitted or set to <c>null</c> for the first request. For subsequent requests, pass the <c>NextToken</c> value from the previous response.</description></item>
-        /// <item><description><c>PageSize</c> defaults to 10, with a maximum of 200.</description></item>
-        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required fields. Other parameters can be filled in as needed.</description></item>
+        /// <item><description>This operation lists permission requests for which the current user is an approver, including requests pending approval and requests that have already been reviewed.</description></item>
+        /// <item><description>Use <c>Statuses</c> to filter requests by status.</description></item>
+        /// <item><description>For the first page, omit <c>NextToken</c> or set it to <c>null</c>. For subsequent pages, pass the <c>NextToken</c> value returned in the previous response.</description></item>
+        /// <item><description><c>PageSize</c> defaults to 10 and supports a maximum of 200.</description></item>
+        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required. Other parameters are optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47243,18 +47863,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query all permission application orders where the current user is an approver or stakeholder.</para>
+        /// <para>Lists all permission requests for which the current user is an approver or a related party.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</description></item>
-        /// <item><description>You can use the <c>Statuses</c> parameter to filter application orders by specific status.</description></item>
-        /// <item><description><c>NextToken</c> is used for paginated requests. It can be omitted or set to <c>null</c> for the first request. For subsequent requests, pass the <c>NextToken</c> value from the previous response.</description></item>
-        /// <item><description><c>PageSize</c> defaults to 10, with a maximum of 200.</description></item>
-        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required fields. Other parameters can be filled in as needed.</description></item>
+        /// <item><description>This operation lists permission requests for which the current user is an approver, including requests pending approval and requests that have already been reviewed.</description></item>
+        /// <item><description>Use <c>Statuses</c> to filter requests by status.</description></item>
+        /// <item><description>For the first page, omit <c>NextToken</c> or set it to <c>null</c>. For subsequent pages, pass the <c>NextToken</c> value returned in the previous response.</description></item>
+        /// <item><description><c>PageSize</c> defaults to 10 and supports a maximum of 200.</description></item>
+        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required. Other parameters are optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48165,32 +48785,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of pending permission request orders for which the current user is the approver.</para>
+        /// <para>Queries the pending permission requests for which the current user is the approver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation queries all pending permission requests for which the current logged-on user is the approver. You can filter the applications by using various conditions, such as resource type, time range, and approval status, to accurately locate specific applications.</para>
         /// <list type="bullet">
-        /// <item><description><b>ResourceType</b>: Specifies the resource type (such as table), which can have multiple values.</description></item>
-        /// <item><description><b>Resource</b>: Provides specific resource search conditions, such as the project, database, or table name.</description></item>
-        /// <item><description><b>StartTime and EndTime</b>: Define the time range during which the request was submitted.</description></item>
-        /// <item><description><b>Statuses</b>: Allows filtering results by approval status, for example, to view only pending approval requests.</description></item>
-        /// <item><description><b>Grantee</b>: Filters request orders based on the authorization principal information.</description></item>
-        /// <item><description><b>AccessTypes</b>: Filters based on the specific permission types requested (such as read or update).</description></item>
-        /// <item><description><b>PageSize and NextToken</b>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
-        /// Notes:</description></item>
-        /// <item><description>If no filtering conditions are provided, all matching records are returned by default.</description></item>
-        /// <item><description>The <c>NextToken</c> parameter can be empty or omitted for the first call. Subsequent page requests must use the <c>NextToken</c> value provided in the previous response.</description></item>
+        /// <item><description><b>ResourceType</b>: specifies the resource types, such as tables. Multiple values are supported.</description></item>
+        /// <item><description><b>Resource</b>: specifies the exact resource search conditions, such as the project, database, or table name.</description></item>
+        /// <item><description><b>StartTime and EndTime</b>: define the time range when the applications were initiated.</description></item>
+        /// <item><description><b>Statuses</b>: filters the results by approval status, such as viewing only the pending approval status.</description></item>
+        /// <item><description><b>Grantee</b>: filters the applications based on the grantee information.</description></item>
+        /// <item><description><b>AccessTypes</b>: filters the applications based on the specific permission types requested, such as read or update.</description></item>
+        /// <item><description><b>PageSize and NextToken</b>: are used for pagination control. PageSize specifies the number of entries to return per page, and NextToken specifies the cursor required to retrieve the next page.
+        /// Precautions:</description></item>
+        /// <item><description>If no filter conditions are provided, all matching records are returned by default.</description></item>
+        /// <item><description>The <c>NextToken</c> parameter can be left empty or omitted in the first call. For subsequent page requests, you must use the <c>NextToken</c> value provided in the previous response.</description></item>
         /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</description></item>
-        /// <item><description>When there is no more data to return, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> will be empty or absent.</description></item>
+        /// <item><description>When no more data is available, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> is empty or does not exist.</description></item>
         /// </list>
-        /// <h2>Response Description</h2>
-        /// <para>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</para>
+        /// <h2>Response description</h2>
+        /// <para>After a successful API call, the response body contains the paginated results and the details of each application, such as the application time, resource description, grantee, and requested permissions. In addition, the status of the approval process and other related metadata are provided.</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: The paginated result set, including page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
-        /// <item><description><b>ApplicationQueryResponse</b>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</description></item>
+        /// <item><description><b>Data</b>: the paginated result set, which includes information such as the page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
+        /// <item><description><b>ApplicationQueryResponse</b>: the specific content of each application, including the application reason, initiation time, status, and the detailed list of application contents.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48283,32 +48903,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of pending permission request orders for which the current user is the approver.</para>
+        /// <para>Queries the pending permission requests for which the current user is the approver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation queries all pending permission requests for which the current logged-on user is the approver. You can filter the applications by using various conditions, such as resource type, time range, and approval status, to accurately locate specific applications.</para>
         /// <list type="bullet">
-        /// <item><description><b>ResourceType</b>: Specifies the resource type (such as table), which can have multiple values.</description></item>
-        /// <item><description><b>Resource</b>: Provides specific resource search conditions, such as the project, database, or table name.</description></item>
-        /// <item><description><b>StartTime and EndTime</b>: Define the time range during which the request was submitted.</description></item>
-        /// <item><description><b>Statuses</b>: Allows filtering results by approval status, for example, to view only pending approval requests.</description></item>
-        /// <item><description><b>Grantee</b>: Filters request orders based on the authorization principal information.</description></item>
-        /// <item><description><b>AccessTypes</b>: Filters based on the specific permission types requested (such as read or update).</description></item>
-        /// <item><description><b>PageSize and NextToken</b>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
-        /// Notes:</description></item>
-        /// <item><description>If no filtering conditions are provided, all matching records are returned by default.</description></item>
-        /// <item><description>The <c>NextToken</c> parameter can be empty or omitted for the first call. Subsequent page requests must use the <c>NextToken</c> value provided in the previous response.</description></item>
+        /// <item><description><b>ResourceType</b>: specifies the resource types, such as tables. Multiple values are supported.</description></item>
+        /// <item><description><b>Resource</b>: specifies the exact resource search conditions, such as the project, database, or table name.</description></item>
+        /// <item><description><b>StartTime and EndTime</b>: define the time range when the applications were initiated.</description></item>
+        /// <item><description><b>Statuses</b>: filters the results by approval status, such as viewing only the pending approval status.</description></item>
+        /// <item><description><b>Grantee</b>: filters the applications based on the grantee information.</description></item>
+        /// <item><description><b>AccessTypes</b>: filters the applications based on the specific permission types requested, such as read or update.</description></item>
+        /// <item><description><b>PageSize and NextToken</b>: are used for pagination control. PageSize specifies the number of entries to return per page, and NextToken specifies the cursor required to retrieve the next page.
+        /// Precautions:</description></item>
+        /// <item><description>If no filter conditions are provided, all matching records are returned by default.</description></item>
+        /// <item><description>The <c>NextToken</c> parameter can be left empty or omitted in the first call. For subsequent page requests, you must use the <c>NextToken</c> value provided in the previous response.</description></item>
         /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</description></item>
-        /// <item><description>When there is no more data to return, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> will be empty or absent.</description></item>
+        /// <item><description>When no more data is available, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> is empty or does not exist.</description></item>
         /// </list>
-        /// <h2>Response Description</h2>
-        /// <para>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</para>
+        /// <h2>Response description</h2>
+        /// <para>After a successful API call, the response body contains the paginated results and the details of each application, such as the application time, resource description, grantee, and requested permissions. In addition, the status of the approval process and other related metadata are provided.</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: The paginated result set, including page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
-        /// <item><description><b>ApplicationQueryResponse</b>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</description></item>
+        /// <item><description><b>Data</b>: the paginated result set, which includes information such as the page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
+        /// <item><description><b>ApplicationQueryResponse</b>: the specific content of each application, including the application reason, initiation time, status, and the detailed list of application contents.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48401,32 +49021,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of pending permission request orders for which the current user is the approver.</para>
+        /// <para>Queries the pending permission requests for which the current user is the approver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation queries all pending permission requests for which the current logged-on user is the approver. You can filter the applications by using various conditions, such as resource type, time range, and approval status, to accurately locate specific applications.</para>
         /// <list type="bullet">
-        /// <item><description><b>ResourceType</b>: Specifies the resource type (such as table), which can have multiple values.</description></item>
-        /// <item><description><b>Resource</b>: Provides specific resource search conditions, such as the project, database, or table name.</description></item>
-        /// <item><description><b>StartTime and EndTime</b>: Define the time range during which the request was submitted.</description></item>
-        /// <item><description><b>Statuses</b>: Allows filtering results by approval status, for example, to view only pending approval requests.</description></item>
-        /// <item><description><b>Grantee</b>: Filters request orders based on the authorization principal information.</description></item>
-        /// <item><description><b>AccessTypes</b>: Filters based on the specific permission types requested (such as read or update).</description></item>
-        /// <item><description><b>PageSize and NextToken</b>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
-        /// Notes:</description></item>
-        /// <item><description>If no filtering conditions are provided, all matching records are returned by default.</description></item>
-        /// <item><description>The <c>NextToken</c> parameter can be empty or omitted for the first call. Subsequent page requests must use the <c>NextToken</c> value provided in the previous response.</description></item>
+        /// <item><description><b>ResourceType</b>: specifies the resource types, such as tables. Multiple values are supported.</description></item>
+        /// <item><description><b>Resource</b>: specifies the exact resource search conditions, such as the project, database, or table name.</description></item>
+        /// <item><description><b>StartTime and EndTime</b>: define the time range when the applications were initiated.</description></item>
+        /// <item><description><b>Statuses</b>: filters the results by approval status, such as viewing only the pending approval status.</description></item>
+        /// <item><description><b>Grantee</b>: filters the applications based on the grantee information.</description></item>
+        /// <item><description><b>AccessTypes</b>: filters the applications based on the specific permission types requested, such as read or update.</description></item>
+        /// <item><description><b>PageSize and NextToken</b>: are used for pagination control. PageSize specifies the number of entries to return per page, and NextToken specifies the cursor required to retrieve the next page.
+        /// Precautions:</description></item>
+        /// <item><description>If no filter conditions are provided, all matching records are returned by default.</description></item>
+        /// <item><description>The <c>NextToken</c> parameter can be left empty or omitted in the first call. For subsequent page requests, you must use the <c>NextToken</c> value provided in the previous response.</description></item>
         /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</description></item>
-        /// <item><description>When there is no more data to return, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> will be empty or absent.</description></item>
+        /// <item><description>When no more data is available, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> is empty or does not exist.</description></item>
         /// </list>
-        /// <h2>Response Description</h2>
-        /// <para>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</para>
+        /// <h2>Response description</h2>
+        /// <para>After a successful API call, the response body contains the paginated results and the details of each application, such as the application time, resource description, grantee, and requested permissions. In addition, the status of the approval process and other related metadata are provided.</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: The paginated result set, including page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
-        /// <item><description><b>ApplicationQueryResponse</b>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</description></item>
+        /// <item><description><b>Data</b>: the paginated result set, which includes information such as the page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
+        /// <item><description><b>ApplicationQueryResponse</b>: the specific content of each application, including the application reason, initiation time, status, and the detailed list of application contents.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48445,32 +49065,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of pending permission request orders for which the current user is the approver.</para>
+        /// <para>Queries the pending permission requests for which the current user is the approver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation queries all pending permission requests for which the current logged-on user is the approver. You can filter the applications by using various conditions, such as resource type, time range, and approval status, to accurately locate specific applications.</para>
         /// <list type="bullet">
-        /// <item><description><b>ResourceType</b>: Specifies the resource type (such as table), which can have multiple values.</description></item>
-        /// <item><description><b>Resource</b>: Provides specific resource search conditions, such as the project, database, or table name.</description></item>
-        /// <item><description><b>StartTime and EndTime</b>: Define the time range during which the request was submitted.</description></item>
-        /// <item><description><b>Statuses</b>: Allows filtering results by approval status, for example, to view only pending approval requests.</description></item>
-        /// <item><description><b>Grantee</b>: Filters request orders based on the authorization principal information.</description></item>
-        /// <item><description><b>AccessTypes</b>: Filters based on the specific permission types requested (such as read or update).</description></item>
-        /// <item><description><b>PageSize and NextToken</b>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
-        /// Notes:</description></item>
-        /// <item><description>If no filtering conditions are provided, all matching records are returned by default.</description></item>
-        /// <item><description>The <c>NextToken</c> parameter can be empty or omitted for the first call. Subsequent page requests must use the <c>NextToken</c> value provided in the previous response.</description></item>
+        /// <item><description><b>ResourceType</b>: specifies the resource types, such as tables. Multiple values are supported.</description></item>
+        /// <item><description><b>Resource</b>: specifies the exact resource search conditions, such as the project, database, or table name.</description></item>
+        /// <item><description><b>StartTime and EndTime</b>: define the time range when the applications were initiated.</description></item>
+        /// <item><description><b>Statuses</b>: filters the results by approval status, such as viewing only the pending approval status.</description></item>
+        /// <item><description><b>Grantee</b>: filters the applications based on the grantee information.</description></item>
+        /// <item><description><b>AccessTypes</b>: filters the applications based on the specific permission types requested, such as read or update.</description></item>
+        /// <item><description><b>PageSize and NextToken</b>: are used for pagination control. PageSize specifies the number of entries to return per page, and NextToken specifies the cursor required to retrieve the next page.
+        /// Precautions:</description></item>
+        /// <item><description>If no filter conditions are provided, all matching records are returned by default.</description></item>
+        /// <item><description>The <c>NextToken</c> parameter can be left empty or omitted in the first call. For subsequent page requests, you must use the <c>NextToken</c> value provided in the previous response.</description></item>
         /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</description></item>
-        /// <item><description>When there is no more data to return, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> will be empty or absent.</description></item>
+        /// <item><description>When no more data is available, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> is empty or does not exist.</description></item>
         /// </list>
-        /// <h2>Response Description</h2>
-        /// <para>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</para>
+        /// <h2>Response description</h2>
+        /// <para>After a successful API call, the response body contains the paginated results and the details of each application, such as the application time, resource description, grantee, and requested permissions. In addition, the status of the approval process and other related metadata are provided.</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: The paginated result set, including page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
-        /// <item><description><b>ApplicationQueryResponse</b>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</description></item>
+        /// <item><description><b>Data</b>: the paginated result set, which includes information such as the page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
+        /// <item><description><b>ApplicationQueryResponse</b>: the specific content of each application, including the application reason, initiation time, status, and the detailed list of application contents.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48601,14 +49221,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a paginated list of deployment processes. You can also filter this list based on specific criteria.</para>
+        /// <para>Retrieves a paginated list of deployment pipelines. You can also filter the results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</para>
+        /// <para>Notice: This operation may not be available in earlier versions of the SDK. In this case, use the ListDeployments operation, which uses the same parameters as described in this document.</notice></para>
         /// </remarks>
         /// </description>
         /// 
@@ -48647,14 +49266,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a paginated list of deployment processes. You can also filter this list based on specific criteria.</para>
+        /// <para>Retrieves a paginated list of deployment pipelines. You can also filter the results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</para>
+        /// <para>Notice: This operation may not be available in earlier versions of the SDK. In this case, use the ListDeployments operation, which uses the same parameters as described in this document.</notice></para>
         /// </remarks>
         /// </description>
         /// 
@@ -48693,14 +49311,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a paginated list of deployment processes. You can also filter this list based on specific criteria.</para>
+        /// <para>Retrieves a paginated list of deployment pipelines. You can also filter the results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</para>
+        /// <para>Notice: This operation may not be available in earlier versions of the SDK. In this case, use the ListDeployments operation, which uses the same parameters as described in this document.</notice></para>
         /// </remarks>
         /// </description>
         /// 
@@ -48719,14 +49336,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a paginated list of deployment processes. You can also filter this list based on specific criteria.</para>
+        /// <para>Retrieves a paginated list of deployment pipelines. You can also filter the results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// Earlier SDK versions may not include this interface. If so, use the ListDeployments interface. It accepts the same parameters.</para>
+        /// <para>Notice: This operation may not be available in earlier versions of the SDK. In this case, use the ListDeployments operation, which uses the same parameters as described in this document.</notice></para>
         /// </remarks>
         /// </description>
         /// 
@@ -50077,7 +50693,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of resource files and filters resources.</para>
+        /// <para>Lists resource files with pagination and optional filters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50115,7 +50731,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of resource files and filters resources.</para>
+        /// <para>Lists resource files with pagination and optional filters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50153,7 +50769,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of resource files and filters resources.</para>
+        /// <para>Lists resource files with pagination and optional filters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50171,7 +50787,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of resource files and filters resources.</para>
+        /// <para>Lists resource files with pagination and optional filters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50853,21 +51469,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// <para>Lists semantic job definitions for the current tenant with pagination. Use Name to run or delete a job, ProjectId to query run details, and Source to verify the input scope.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</para>
-        /// <h2>Invoke flow</h2>
+        /// <para>List saved semantic job definitions for the current tenant to display available jobs, select a job to run, or find the workspace that owns a job.</para>
+        /// <h2>Workflow</h2>
         /// <ol>
-        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read <c>Data.SemanticJobs</c> with paging.</description></item>
-        /// <item><description>Use the <c>Name</c> field of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
-        /// <item><description>Use the <c>ProjectId</c> field of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to page through <c>Data.SemanticJobs</c>.</description></item>
+        /// <item><description>Use the <c>Name</c> of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
         /// </ol>
-        /// <h2>Notes</h2>
-        /// <para>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <c>ListSemanticJobRuns</c>.</para>
+        /// <h2>Precautions</h2>
+        /// <para>This operation returns job definitions. For current run status, call <c>ListSemanticJobRuns</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50913,21 +51529,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// <para>Lists semantic job definitions for the current tenant with pagination. Use Name to run or delete a job, ProjectId to query run details, and Source to verify the input scope.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</para>
-        /// <h2>Invoke flow</h2>
+        /// <para>List saved semantic job definitions for the current tenant to display available jobs, select a job to run, or find the workspace that owns a job.</para>
+        /// <h2>Workflow</h2>
         /// <ol>
-        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read <c>Data.SemanticJobs</c> with paging.</description></item>
-        /// <item><description>Use the <c>Name</c> field of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
-        /// <item><description>Use the <c>ProjectId</c> field of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to page through <c>Data.SemanticJobs</c>.</description></item>
+        /// <item><description>Use the <c>Name</c> of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
         /// </ol>
-        /// <h2>Notes</h2>
-        /// <para>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <c>ListSemanticJobRuns</c>.</para>
+        /// <h2>Precautions</h2>
+        /// <para>This operation returns job definitions. For current run status, call <c>ListSemanticJobRuns</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50973,21 +51589,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// <para>Lists semantic job definitions for the current tenant with pagination. Use Name to run or delete a job, ProjectId to query run details, and Source to verify the input scope.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</para>
-        /// <h2>Invoke flow</h2>
+        /// <para>List saved semantic job definitions for the current tenant to display available jobs, select a job to run, or find the workspace that owns a job.</para>
+        /// <h2>Workflow</h2>
         /// <ol>
-        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read <c>Data.SemanticJobs</c> with paging.</description></item>
-        /// <item><description>Use the <c>Name</c> field of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
-        /// <item><description>Use the <c>ProjectId</c> field of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to page through <c>Data.SemanticJobs</c>.</description></item>
+        /// <item><description>Use the <c>Name</c> of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
         /// </ol>
-        /// <h2>Notes</h2>
-        /// <para>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <c>ListSemanticJobRuns</c>.</para>
+        /// <h2>Precautions</h2>
+        /// <para>This operation returns job definitions. For current run status, call <c>ListSemanticJobRuns</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51005,21 +51621,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// <para>Lists semantic job definitions for the current tenant with pagination. Use Name to run or delete a job, ProjectId to query run details, and Source to verify the input scope.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</para>
-        /// <h2>Invoke flow</h2>
+        /// <para>List saved semantic job definitions for the current tenant to display available jobs, select a job to run, or find the workspace that owns a job.</para>
+        /// <h2>Workflow</h2>
         /// <ol>
-        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to read <c>Data.SemanticJobs</c> with paging.</description></item>
-        /// <item><description>Use the <c>Name</c> field of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
-        /// <item><description>Use the <c>ProjectId</c> field of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
+        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> to page through <c>Data.SemanticJobs</c>.</description></item>
+        /// <item><description>Use the <c>Name</c> of a list item to invoke <c>RunSemanticJob</c>, <c>DeleteSemanticJob</c>, or <c>ListSemanticJobRuns</c>.</description></item>
+        /// <item><description>Use the <c>ProjectId</c> of a list item together with <c>ExecutorJobId</c> to invoke the details, log, and stop operations.</description></item>
         /// </ol>
-        /// <h2>Notes</h2>
-        /// <para>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <c>ListSemanticJobRuns</c>.</para>
+        /// <h2>Precautions</h2>
+        /// <para>This operation returns job definitions. For current run status, call <c>ListSemanticJobRuns</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51381,12 +51997,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of personal development environment instances. When you invoke this operation, use the DataWorks endpoint that corresponds to the region of the target workspace.</para>
+        /// <para>Lists personal development environment instances with pagination. Use the DataWorks endpoint for the region of the target workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query of personal development environment (ServerIDE) instances. You can filter the instances by workspace, resource group, keyword, owner, and instance subtype.</para>
+        /// <para>Lists personal development environment (ServerIDE) instances with pagination. You can filter by workspace, resource group, keyword, owner, and instance subtype.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51460,12 +52076,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of personal development environment instances. When you invoke this operation, use the DataWorks endpoint that corresponds to the region of the target workspace.</para>
+        /// <para>Lists personal development environment instances with pagination. Use the DataWorks endpoint for the region of the target workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query of personal development environment (ServerIDE) instances. You can filter the instances by workspace, resource group, keyword, owner, and instance subtype.</para>
+        /// <para>Lists personal development environment (ServerIDE) instances with pagination. You can filter by workspace, resource group, keyword, owner, and instance subtype.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51539,12 +52155,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of personal development environment instances. When you invoke this operation, use the DataWorks endpoint that corresponds to the region of the target workspace.</para>
+        /// <para>Lists personal development environment instances with pagination. Use the DataWorks endpoint for the region of the target workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query of personal development environment (ServerIDE) instances. You can filter the instances by workspace, resource group, keyword, owner, and instance subtype.</para>
+        /// <para>Lists personal development environment (ServerIDE) instances with pagination. You can filter by workspace, resource group, keyword, owner, and instance subtype.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51562,12 +52178,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of personal development environment instances. When you invoke this operation, use the DataWorks endpoint that corresponds to the region of the target workspace.</para>
+        /// <para>Lists personal development environment instances with pagination. Use the DataWorks endpoint for the region of the target workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query of personal development environment (ServerIDE) instances. You can filter the instances by workspace, resource group, keyword, owner, and instance subtype.</para>
+        /// <para>Lists personal development environment (ServerIDE) instances with pagination. You can filter by workspace, resource group, keyword, owner, and instance subtype.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51585,18 +52201,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to list skills under the current account.</para>
+        /// <para>Returns a paginated list of skills for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API performs a paging query to list the skills under the current account. It supports filtering by conditions such as search keywords and visibility levels.</para>
+        /// <para>This operation returns a paginated list of skills for the current account. You can filter the results by search keywords and visibility levels.</para>
         /// <list type="bullet">
-        /// <item><description><b>Q</b>: Optional. Used for fuzzy match by skill name.</description></item>
-        /// <item><description><b>Visibility</b>: Optional. Used to filter by visibility level. Multiple values can be passed.</description></item>
-        /// <item><description><b>MaxResults</b>: Optional. Specifies the maximum number of entries to return in this request.</description></item>
-        /// <item><description><b>NextToken</b>: Optional. Used to obtain the next page of data during paging. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page of data.</description></item>
+        /// <item><description><b>Q</b>: Optional. The search keyword used for fuzzy match by skill name.</description></item>
+        /// <item><description><b>Visibility</b>: Optional. The visibility levels used to filter the results. You can specify multiple values.</description></item>
+        /// <item><description><b>MaxResults</b>: Optional. The maximum number of entries to return in the current request.</description></item>
+        /// <item><description><b>NextToken</b>: Optional. The paging token used to retrieve the next page of results. Do not specify this parameter in the first request. In subsequent requests, specify the NextToken value returned in the previous response to retrieve the next page.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51659,18 +52275,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to list skills under the current account.</para>
+        /// <para>Returns a paginated list of skills for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API performs a paging query to list the skills under the current account. It supports filtering by conditions such as search keywords and visibility levels.</para>
+        /// <para>This operation returns a paginated list of skills for the current account. You can filter the results by search keywords and visibility levels.</para>
         /// <list type="bullet">
-        /// <item><description><b>Q</b>: Optional. Used for fuzzy match by skill name.</description></item>
-        /// <item><description><b>Visibility</b>: Optional. Used to filter by visibility level. Multiple values can be passed.</description></item>
-        /// <item><description><b>MaxResults</b>: Optional. Specifies the maximum number of entries to return in this request.</description></item>
-        /// <item><description><b>NextToken</b>: Optional. Used to obtain the next page of data during paging. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page of data.</description></item>
+        /// <item><description><b>Q</b>: Optional. The search keyword used for fuzzy match by skill name.</description></item>
+        /// <item><description><b>Visibility</b>: Optional. The visibility levels used to filter the results. You can specify multiple values.</description></item>
+        /// <item><description><b>MaxResults</b>: Optional. The maximum number of entries to return in the current request.</description></item>
+        /// <item><description><b>NextToken</b>: Optional. The paging token used to retrieve the next page of results. Do not specify this parameter in the first request. In subsequent requests, specify the NextToken value returned in the previous response to retrieve the next page.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51733,18 +52349,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to list skills under the current account.</para>
+        /// <para>Returns a paginated list of skills for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API performs a paging query to list the skills under the current account. It supports filtering by conditions such as search keywords and visibility levels.</para>
+        /// <para>This operation returns a paginated list of skills for the current account. You can filter the results by search keywords and visibility levels.</para>
         /// <list type="bullet">
-        /// <item><description><b>Q</b>: Optional. Used for fuzzy match by skill name.</description></item>
-        /// <item><description><b>Visibility</b>: Optional. Used to filter by visibility level. Multiple values can be passed.</description></item>
-        /// <item><description><b>MaxResults</b>: Optional. Specifies the maximum number of entries to return in this request.</description></item>
-        /// <item><description><b>NextToken</b>: Optional. Used to obtain the next page of data during paging. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page of data.</description></item>
+        /// <item><description><b>Q</b>: Optional. The search keyword used for fuzzy match by skill name.</description></item>
+        /// <item><description><b>Visibility</b>: Optional. The visibility levels used to filter the results. You can specify multiple values.</description></item>
+        /// <item><description><b>MaxResults</b>: Optional. The maximum number of entries to return in the current request.</description></item>
+        /// <item><description><b>NextToken</b>: Optional. The paging token used to retrieve the next page of results. Do not specify this parameter in the first request. In subsequent requests, specify the NextToken value returned in the previous response to retrieve the next page.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51763,18 +52379,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to list skills under the current account.</para>
+        /// <para>Returns a paginated list of skills for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API performs a paging query to list the skills under the current account. It supports filtering by conditions such as search keywords and visibility levels.</para>
+        /// <para>This operation returns a paginated list of skills for the current account. You can filter the results by search keywords and visibility levels.</para>
         /// <list type="bullet">
-        /// <item><description><b>Q</b>: Optional. Used for fuzzy match by skill name.</description></item>
-        /// <item><description><b>Visibility</b>: Optional. Used to filter by visibility level. Multiple values can be passed.</description></item>
-        /// <item><description><b>MaxResults</b>: Optional. Specifies the maximum number of entries to return in this request.</description></item>
-        /// <item><description><b>NextToken</b>: Optional. Used to obtain the next page of data during paging. Do not pass this parameter for the first query. For subsequent queries, pass the NextToken returned in the previous response to obtain the next page of data.</description></item>
+        /// <item><description><b>Q</b>: Optional. The search keyword used for fuzzy match by skill name.</description></item>
+        /// <item><description><b>Visibility</b>: Optional. The visibility levels used to filter the results. You can specify multiple values.</description></item>
+        /// <item><description><b>MaxResults</b>: Optional. The maximum number of entries to return in the current request.</description></item>
+        /// <item><description><b>NextToken</b>: Optional. The paging token used to retrieve the next page of results. Do not specify this parameter in the first request. In subsequent requests, specify the NextToken value returned in the previous response to retrieve the next page.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -52233,7 +52849,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paged list of task instances. You can also perform a filtered query based on conditions.</para>
+        /// <para>Queries a paginated list of task instances. You can also perform a filtered query based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -52374,7 +52990,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paged list of task instances. You can also perform a filtered query based on conditions.</para>
+        /// <para>Queries a paginated list of task instances. You can also perform a filtered query based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -52515,7 +53131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paged list of task instances. You can also perform a filtered query based on conditions.</para>
+        /// <para>Queries a paginated list of task instances. You can also perform a filtered query based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -52538,7 +53154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paged list of task instances. You can also perform a filtered query based on conditions.</para>
+        /// <para>Queries a paginated list of task instances. You can also perform a filtered query based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -52697,12 +53313,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</para>
+        /// <para>Queries a paginated list of tasks. You can also filter the results by specifying conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -52798,12 +53414,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</para>
+        /// <para>Queries a paginated list of tasks. You can also filter the results by specifying conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -52899,12 +53515,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</para>
+        /// <para>Queries a paginated list of tasks. You can also filter the results by specifying conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52922,12 +53538,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tasks by page. You can also specify filter conditions to query tasks.</para>
+        /// <para>Queries a paginated list of tasks. You can also filter the results by specifying conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -53585,12 +54201,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of workflows with paging, and supports filtered query by conditions.</para>
+        /// <para>Retrieves a paginated list of workflows with optional filters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -53678,12 +54294,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of workflows with paging, and supports filtered query by conditions.</para>
+        /// <para>Retrieves a paginated list of workflows with optional filters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -53771,12 +54387,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of workflows with paging, and supports filtered query by conditions.</para>
+        /// <para>Retrieves a paginated list of workflows with optional filters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -53794,12 +54410,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of workflows with paging, and supports filtered query by conditions.</para>
+        /// <para>Retrieves a paginated list of workflows with optional filters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -55135,8 +55751,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or later to use this operation.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -55189,8 +55805,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or later to use this operation.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -55243,8 +55859,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or later to use this operation.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -55269,8 +55885,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks has been created before you call this operation.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or later to use this operation.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -55449,12 +56065,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies of an instance at a time.</para>
+        /// <para>Removes multiple upstream dependencies of a node instance in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -55512,12 +56128,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies of an instance at a time.</para>
+        /// <para>Removes multiple upstream dependencies of a node instance in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -55575,12 +56191,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies of an instance at a time.</para>
+        /// <para>Removes multiple upstream dependencies of a node instance in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -55598,12 +56214,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes multiple upstream dependencies of an instance at a time.</para>
+        /// <para>Removes multiple upstream dependencies of a node instance in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56333,12 +56949,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns multiple node instances in a batch.</para>
+        /// <para>Reruns multiple task instances in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
+        /// <para>Requires DataWorks Basic Edition or higher.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -56394,12 +57010,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns multiple node instances in a batch.</para>
+        /// <para>Reruns multiple task instances in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
+        /// <para>Requires DataWorks Basic Edition or higher.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -56455,12 +57071,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns multiple node instances in a batch.</para>
+        /// <para>Reruns multiple task instances in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
+        /// <para>Requires DataWorks Basic Edition or higher.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56478,12 +57094,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns multiple node instances in a batch.</para>
+        /// <para>Reruns multiple task instances in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
+        /// <para>Requires DataWorks Basic Edition or higher.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56721,7 +57337,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes multiple suspended instances at a time.</para>
+        /// <para>Resumes multiple paused task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56778,7 +57394,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes multiple suspended instances at a time.</para>
+        /// <para>Resumes multiple paused task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56835,7 +57451,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes multiple suspended instances at a time.</para>
+        /// <para>Resumes multiple paused task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56858,7 +57474,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes multiple suspended instances at a time.</para>
+        /// <para>Resumes multiple paused task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -56877,6 +57493,190 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResumeTaskInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches one or more authorized knowledge bases for knowledge points and returns summaries, relationship paths, and candidates for ambiguous references.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Searches one or more knowledge bases that the caller is authorized to access and returns knowledge point summaries, relationship paths, and candidates for ambiguous references.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RetrieveKnowledgePointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveKnowledgePointsResponse
+        /// </returns>
+        public RetrieveKnowledgePointsResponse RetrieveKnowledgePointsWithOptions(RetrieveKnowledgePointsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RetrieveKnowledgePointsShrinkRequest request = new RetrieveKnowledgePointsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FocusObjects))
+            {
+                request.FocusObjectsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FocusObjects, "FocusObjects", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeBaseIds))
+            {
+                request.KnowledgeBaseIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeBaseIds, "KnowledgeBaseIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FocusObjectsShrink))
+            {
+                body["FocusObjects"] = request.FocusObjectsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseIdsShrink))
+            {
+                body["KnowledgeBaseIds"] = request.KnowledgeBaseIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetrieveKnowledgePoints",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetrieveKnowledgePointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches one or more authorized knowledge bases for knowledge points and returns summaries, relationship paths, and candidates for ambiguous references.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Searches one or more knowledge bases that the caller is authorized to access and returns knowledge point summaries, relationship paths, and candidates for ambiguous references.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RetrieveKnowledgePointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveKnowledgePointsResponse
+        /// </returns>
+        public async Task<RetrieveKnowledgePointsResponse> RetrieveKnowledgePointsWithOptionsAsync(RetrieveKnowledgePointsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RetrieveKnowledgePointsShrinkRequest request = new RetrieveKnowledgePointsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FocusObjects))
+            {
+                request.FocusObjectsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FocusObjects, "FocusObjects", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeBaseIds))
+            {
+                request.KnowledgeBaseIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeBaseIds, "KnowledgeBaseIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FocusObjectsShrink))
+            {
+                body["FocusObjects"] = request.FocusObjectsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseIdsShrink))
+            {
+                body["KnowledgeBaseIds"] = request.KnowledgeBaseIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetrieveKnowledgePoints",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetrieveKnowledgePointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches one or more authorized knowledge bases for knowledge points and returns summaries, relationship paths, and candidates for ambiguous references.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Searches one or more knowledge bases that the caller is authorized to access and returns knowledge point summaries, relationship paths, and candidates for ambiguous references.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetrieveKnowledgePointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveKnowledgePointsResponse
+        /// </returns>
+        public RetrieveKnowledgePointsResponse RetrieveKnowledgePoints(RetrieveKnowledgePointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RetrieveKnowledgePointsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches one or more authorized knowledge bases for knowledge points and returns summaries, relationship paths, and candidates for ambiguous references.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Searches one or more knowledge bases that the caller is authorized to access and returns knowledge point summaries, relationship paths, and candidates for ambiguous references.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RetrieveKnowledgePointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetrieveKnowledgePointsResponse
+        /// </returns>
+        public async Task<RetrieveKnowledgePointsResponse> RetrieveKnowledgePointsAsync(RetrieveKnowledgePointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RetrieveKnowledgePointsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -57897,12 +58697,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the statuses of multiple instances to successful at a time.</para>
+        /// <para>Marks multiple task instances as successful.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -57954,12 +58754,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the statuses of multiple instances to successful at a time.</para>
+        /// <para>Marks multiple task instances as successful.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58011,12 +58811,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the statuses of multiple instances to successful at a time.</para>
+        /// <para>Marks multiple task instances as successful.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58034,12 +58834,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the statuses of multiple instances to successful at a time.</para>
+        /// <para>Marks multiple task instances as successful.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58341,12 +59141,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts multiple workflow instances in a batch.</para>
+        /// <para>Starts multiple workflow instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58398,12 +59198,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts multiple workflow instances in a batch.</para>
+        /// <para>Starts multiple workflow instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58455,12 +59255,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts multiple workflow instances in a batch.</para>
+        /// <para>Starts multiple workflow instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58478,12 +59278,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts multiple workflow instances in a batch.</para>
+        /// <para>Starts multiple workflow instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59130,12 +59930,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.
         /// Instance termination mechanism and precautions:</para>
         /// <ol>
-        /// <item><description>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
-        /// <item><description>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</description></item>
-        /// <item><description>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</description></item>
+        /// <item><description>Instance termination is an asynchronous operation. Sending a termination request does not mean that the instance stops immediately. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, you must also verify the actual status of the remote job.</description></item>
+        /// <item><description>The DataWorks instance status may not be consistent with the remote job status. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, the DataWorks instance may be marked as failed while the remote job is still running. Therefore, you cannot determine that the remote job has terminated based only on the DataWorks instance status. Go to the corresponding computing platform to check the status and manually terminate the job if necessary to prevent the job from continuing to run or consuming additional resources.</description></item>
+        /// <item><description>Pay special attention to MaxCompute tasks that run in public scheduling resource groups. DataWorks public scheduling resource groups will be taken offline soon. Due to component version and compatibility limitations, the termination commands for some MaxCompute tasks may not take effect on the remote end. In this case, go to MaxCompute to query the actual status of the corresponding instance. If it is still running, execute the kill operation in MaxCompute and confirm again that it has terminated.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -59193,12 +59993,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.
         /// Instance termination mechanism and precautions:</para>
         /// <ol>
-        /// <item><description>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
-        /// <item><description>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</description></item>
-        /// <item><description>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</description></item>
+        /// <item><description>Instance termination is an asynchronous operation. Sending a termination request does not mean that the instance stops immediately. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, you must also verify the actual status of the remote job.</description></item>
+        /// <item><description>The DataWorks instance status may not be consistent with the remote job status. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, the DataWorks instance may be marked as failed while the remote job is still running. Therefore, you cannot determine that the remote job has terminated based only on the DataWorks instance status. Go to the corresponding computing platform to check the status and manually terminate the job if necessary to prevent the job from continuing to run or consuming additional resources.</description></item>
+        /// <item><description>Pay special attention to MaxCompute tasks that run in public scheduling resource groups. DataWorks public scheduling resource groups will be taken offline soon. Due to component version and compatibility limitations, the termination commands for some MaxCompute tasks may not take effect on the remote end. In this case, go to MaxCompute to query the actual status of the corresponding instance. If it is still running, execute the kill operation in MaxCompute and confirm again that it has terminated.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -59256,12 +60056,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.
         /// Instance termination mechanism and precautions:</para>
         /// <ol>
-        /// <item><description>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
-        /// <item><description>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</description></item>
-        /// <item><description>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</description></item>
+        /// <item><description>Instance termination is an asynchronous operation. Sending a termination request does not mean that the instance stops immediately. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, you must also verify the actual status of the remote job.</description></item>
+        /// <item><description>The DataWorks instance status may not be consistent with the remote job status. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, the DataWorks instance may be marked as failed while the remote job is still running. Therefore, you cannot determine that the remote job has terminated based only on the DataWorks instance status. Go to the corresponding computing platform to check the status and manually terminate the job if necessary to prevent the job from continuing to run or consuming additional resources.</description></item>
+        /// <item><description>Pay special attention to MaxCompute tasks that run in public scheduling resource groups. DataWorks public scheduling resource groups will be taken offline soon. Due to component version and compatibility limitations, the termination commands for some MaxCompute tasks may not take effect on the remote end. In this case, go to MaxCompute to query the actual status of the corresponding instance. If it is still running, execute the kill operation in MaxCompute and confirm again that it has terminated.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -59285,12 +60085,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.
         /// Instance termination mechanism and precautions:</para>
         /// <ol>
-        /// <item><description>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
-        /// <item><description>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</description></item>
-        /// <item><description>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</description></item>
+        /// <item><description>Instance termination is an asynchronous operation. Sending a termination request does not mean that the instance stops immediately. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, you must also verify the actual status of the remote job.</description></item>
+        /// <item><description>The DataWorks instance status may not be consistent with the remote job status. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, the DataWorks instance may be marked as failed while the remote job is still running. Therefore, you cannot determine that the remote job has terminated based only on the DataWorks instance status. Go to the corresponding computing platform to check the status and manually terminate the job if necessary to prevent the job from continuing to run or consuming additional resources.</description></item>
+        /// <item><description>Pay special attention to MaxCompute tasks that run in public scheduling resource groups. DataWorks public scheduling resource groups will be taken offline soon. Due to component version and compatibility limitations, the termination commands for some MaxCompute tasks may not take effect on the remote end. In this case, go to MaxCompute to query the actual status of the corresponding instance. If it is still running, execute the kill operation in MaxCompute and confirm again that it has terminated.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -59314,7 +60114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -59371,7 +60171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -59428,7 +60228,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59451,7 +60251,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59774,7 +60574,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -59831,7 +60631,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -59888,7 +60688,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59911,7 +60711,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -60653,16 +61453,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</para>
+        /// <para>Updates the definition of a specified agent and increments the definition version, with the option to publish immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
-        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
-        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
-        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
-        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</para>
+        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and is not used for renaming. Call GetAgent first to read the current AgentVersion, and explicitly pass ExpectedVersion during the update. If a conflict occurs, re-read the version and verify the differences instead of blindly overwriting.
+        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. Tools already includes Kind and the corresponding tool configurations, using the same structure as CreateAgent. Specifying only Name is not a valid tool configuration.
+        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId, without mixing in name, version, or artifact fields. The integer Version and VersionSelector for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved before requesting publication. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version before deciding whether to retry, to avoid generating duplicate versions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -60786,16 +61586,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</para>
+        /// <para>Updates the definition of a specified agent and increments the definition version, with the option to publish immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
-        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
-        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
-        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
-        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</para>
+        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and is not used for renaming. Call GetAgent first to read the current AgentVersion, and explicitly pass ExpectedVersion during the update. If a conflict occurs, re-read the version and verify the differences instead of blindly overwriting.
+        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. Tools already includes Kind and the corresponding tool configurations, using the same structure as CreateAgent. Specifying only Name is not a valid tool configuration.
+        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId, without mixing in name, version, or artifact fields. The integer Version and VersionSelector for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved before requesting publication. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version before deciding whether to retry, to avoid generating duplicate versions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -60919,16 +61719,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</para>
+        /// <para>Updates the definition of a specified agent and increments the definition version, with the option to publish immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
-        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
-        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
-        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
-        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</para>
+        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and is not used for renaming. Call GetAgent first to read the current AgentVersion, and explicitly pass ExpectedVersion during the update. If a conflict occurs, re-read the version and verify the differences instead of blindly overwriting.
+        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. Tools already includes Kind and the corresponding tool configurations, using the same structure as CreateAgent. Specifying only Name is not a valid tool configuration.
+        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId, without mixing in name, version, or artifact fields. The integer Version and VersionSelector for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved before requesting publication. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version before deciding whether to retry, to avoid generating duplicate versions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -60946,16 +61746,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</para>
+        /// <para>Updates the definition of a specified agent and increments the definition version, with the option to publish immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
-        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
-        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
-        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
-        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</para>
+        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and is not used for renaming. Call GetAgent first to read the current AgentVersion, and explicitly pass ExpectedVersion during the update. If a conflict occurs, re-read the version and verify the differences instead of blindly overwriting.
+        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. Tools already includes Kind and the corresponding tool configurations, using the same structure as CreateAgent. Specifying only Name is not a valid tool configuration.
+        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId, without mixing in name, version, or artifact fields. The integer Version and VersionSelector for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved before requesting publication. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version before deciding whether to retry, to avoid generating duplicate versions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -63437,12 +64237,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a label.</para>
+        /// <para>Updates a tag.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -63506,12 +64306,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a label.</para>
+        /// <para>Updates a tag.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -63575,12 +64375,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a label.</para>
+        /// <para>Updates a tag.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -63598,12 +64398,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a label.</para>
+        /// <para>Updates a tag.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -67650,12 +68450,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</description></item>
-        /// <item><description>The required <c>Id</c> parameter identifies the approval process definition to update.</description></item>
+        /// <item><description>This operation allows you to modify an existing approval process definition, including the name, description, rule conditions, notification services, and approval nodes.</description></item>
+        /// <item><description><c>Id</c> is a required parameter used to specify the approval process definition to be updated.</description></item>
         /// <item><description>To overwrite the existing configuration, set the <c>Overwrite</c> parameter to <c>true</c>.</description></item>
-        /// <item><description>The optional <c>ClientToken</c> parameter ensures request idempotency.</description></item>
+        /// <item><description><c>ClientToken</c> is optional and used to ensure the idempotency of the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -67741,12 +68541,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</description></item>
-        /// <item><description>The required <c>Id</c> parameter identifies the approval process definition to update.</description></item>
+        /// <item><description>This operation allows you to modify an existing approval process definition, including the name, description, rule conditions, notification services, and approval nodes.</description></item>
+        /// <item><description><c>Id</c> is a required parameter used to specify the approval process definition to be updated.</description></item>
         /// <item><description>To overwrite the existing configuration, set the <c>Overwrite</c> parameter to <c>true</c>.</description></item>
-        /// <item><description>The optional <c>ClientToken</c> parameter ensures request idempotency.</description></item>
+        /// <item><description><c>ClientToken</c> is optional and used to ensure the idempotency of the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -67832,12 +68632,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</description></item>
-        /// <item><description>The required <c>Id</c> parameter identifies the approval process definition to update.</description></item>
+        /// <item><description>This operation allows you to modify an existing approval process definition, including the name, description, rule conditions, notification services, and approval nodes.</description></item>
+        /// <item><description><c>Id</c> is a required parameter used to specify the approval process definition to be updated.</description></item>
         /// <item><description>To overwrite the existing configuration, set the <c>Overwrite</c> parameter to <c>true</c>.</description></item>
-        /// <item><description>The optional <c>ClientToken</c> parameter ensures request idempotency.</description></item>
+        /// <item><description><c>ClientToken</c> is optional and used to ensure the idempotency of the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -67861,12 +68661,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use this API to modify an existing approval process definition, including its name, description, rule conditions, notification service, and approval nodes.</description></item>
-        /// <item><description>The required <c>Id</c> parameter identifies the approval process definition to update.</description></item>
+        /// <item><description>This operation allows you to modify an existing approval process definition, including the name, description, rule conditions, notification services, and approval nodes.</description></item>
+        /// <item><description><c>Id</c> is a required parameter used to specify the approval process definition to be updated.</description></item>
         /// <item><description>To overwrite the existing configuration, set the <c>Overwrite</c> parameter to <c>true</c>.</description></item>
-        /// <item><description>The optional <c>ClientToken</c> parameter ensures request idempotency.</description></item>
+        /// <item><description><c>ClientToken</c> is optional and used to ensure the idempotency of the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -70449,12 +71249,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the properties of multiple task instances in batch, including priority, resource group, data source, and more.</para>
+        /// <para>Modifies the properties of multiple node instances, including the priority, scheduling resource group, and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -70506,12 +71306,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the properties of multiple task instances in batch, including priority, resource group, data source, and more.</para>
+        /// <para>Modifies the properties of multiple node instances, including the priority, scheduling resource group, and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -70563,12 +71363,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the properties of multiple task instances in batch, including priority, resource group, data source, and more.</para>
+        /// <para>Modifies the properties of multiple node instances, including the priority, scheduling resource group, and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -70586,12 +71386,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the properties of multiple task instances in batch, including priority, resource group, data source, and more.</para>
+        /// <para>Modifies the properties of multiple node instances, including the priority, scheduling resource group, and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or higher to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -70817,12 +71617,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to Data Studio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</para>
+        /// <para>Performs a full update of the specified workflow. The owner, data source, scheduling resource group, description, and trigger run mode (normal, dry run, or paused) can be synchronized to Data Studio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a more advanced edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -70934,12 +71734,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to Data Studio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</para>
+        /// <para>Performs a full update of the specified workflow. The owner, data source, scheduling resource group, description, and trigger run mode (normal, dry run, or paused) can be synchronized to Data Studio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a more advanced edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -71051,12 +71851,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to Data Studio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</para>
+        /// <para>Performs a full update of the specified workflow. The owner, data source, scheduling resource group, description, and trigger run mode (normal, dry run, or paused) can be synchronized to Data Studio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a more advanced edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -71074,12 +71874,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to Data Studio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</para>
+        /// <para>Performs a full update of the specified workflow. The owner, data source, scheduling resource group, description, and trigger run mode (normal, dry run, or paused) can be synchronized to Data Studio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a more advanced edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -71261,6 +72061,174 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateWorkflowDefinitionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传 Agent 会话附件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将文件通过 OSS 上传到当前账号有权访问的 Agent 会话。先用 prepare 获取 5 分钟公网 PUT 签名，上传原始字节后用 complete 确认，由会话 runtime 下载、校验并写入工作目录。UploadMode 必填，不接受 ContentBase64。须同时检查 POP/BFF 外层错误与 JsonRpcResponse.Error。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UploadAgentSessionFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentSessionFileResponse
+        /// </returns>
+        public UploadAgentSessionFileResponse UploadAgentSessionFileWithOptions(UploadAgentSessionFileRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadAgentSessionFileShrinkRequest request = new UploadAgentSessionFileShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Params))
+            {
+                request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "Params", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Jsonrpc))
+            {
+                body["Jsonrpc"] = request.Jsonrpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsShrink))
+            {
+                body["Params"] = request.ParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadAgentSessionFile",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadAgentSessionFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传 Agent 会话附件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将文件通过 OSS 上传到当前账号有权访问的 Agent 会话。先用 prepare 获取 5 分钟公网 PUT 签名，上传原始字节后用 complete 确认，由会话 runtime 下载、校验并写入工作目录。UploadMode 必填，不接受 ContentBase64。须同时检查 POP/BFF 外层错误与 JsonRpcResponse.Error。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UploadAgentSessionFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentSessionFileResponse
+        /// </returns>
+        public async Task<UploadAgentSessionFileResponse> UploadAgentSessionFileWithOptionsAsync(UploadAgentSessionFileRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadAgentSessionFileShrinkRequest request = new UploadAgentSessionFileShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Params))
+            {
+                request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "Params", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Jsonrpc))
+            {
+                body["Jsonrpc"] = request.Jsonrpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsShrink))
+            {
+                body["Params"] = request.ParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadAgentSessionFile",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadAgentSessionFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传 Agent 会话附件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将文件通过 OSS 上传到当前账号有权访问的 Agent 会话。先用 prepare 获取 5 分钟公网 PUT 签名，上传原始字节后用 complete 确认，由会话 runtime 下载、校验并写入工作目录。UploadMode 必填，不接受 ContentBase64。须同时检查 POP/BFF 外层错误与 JsonRpcResponse.Error。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadAgentSessionFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentSessionFileResponse
+        /// </returns>
+        public UploadAgentSessionFileResponse UploadAgentSessionFile(UploadAgentSessionFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UploadAgentSessionFileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传 Agent 会话附件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将文件通过 OSS 上传到当前账号有权访问的 Agent 会话。先用 prepare 获取 5 分钟公网 PUT 签名，上传原始字节后用 complete 确认，由会话 runtime 下载、校验并写入工作目录。UploadMode 必填，不接受 ContentBase64。须同时检查 POP/BFF 外层错误与 JsonRpcResponse.Error。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadAgentSessionFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentSessionFileResponse
+        /// </returns>
+        public async Task<UploadAgentSessionFileResponse> UploadAgentSessionFileAsync(UploadAgentSessionFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UploadAgentSessionFileWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

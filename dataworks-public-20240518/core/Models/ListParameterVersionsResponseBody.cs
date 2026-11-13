@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The parameter description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>这是一个测试参数</para>
+                /// <para>This is a test parameter.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

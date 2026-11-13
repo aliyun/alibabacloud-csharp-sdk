@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The agent definition version used for concurrency control. We recommend that you explicitly specify the AgentVersion just obtained from GetAgent for each call. The update is rejected if the version does not match the current version on the server. To ensure compatibility with different deployment versions, do not rely on the server-side processing when this parameter is omitted.</para>
+        /// <para>The agent definition version used for concurrency control. We recommend explicitly specifying the AgentVersion you just obtained from GetAgent for each call. The update is rejected if the version does not match the current version on the server. To ensure compatibility with different deployment versions, do not rely on the server-side processing when this parameter is omitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? ExpectedVersion { get; set; }
 
         /// <summary>
-        /// <para>The list of expert suite references. If omitted, existing references are retained. An explicit empty array clears the references. For official suites, specify only Source=OFFICIAL and SuiteId. Version, VersionSelector, or client artifact fields are not accepted. For custom suites, use SuiteId, and you can explicitly specify an existing integer Version.</para>
+        /// <para>The list of expert suite references. If omitted, the existing references are retained. An explicit empty array clears the references. For official suites, specify only Source=OFFICIAL and SuiteId. Version, VersionSelector, or client artifact fields are not accepted. For custom suites, use SuiteId, and you can explicitly specify an existing integer Version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:3}]</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<UpdateAgentRequestExpertSuites> ExpertSuites { get; set; }
         public class UpdateAgentRequestExpertSuites : TeaModel {
             /// <summary>
-            /// <para>The source of the expert suite. OFFICIAL: official suite. DB or omitted: custom suite. Both types of references use SuiteId. Version fields apply only to custom resources.</para>
+            /// <para>The source of the expert suite. OFFICIAL: official suite. DB or omitted: custom suite. Both types of references use SuiteId, and the version fields apply only to custom resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OFFICIAL</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Version { get; set; }
 
             /// <summary>
-            /// <para>The semantic version selection expression of the custom expert suite, such as ^1.2.3. Use this parameter only when the custom resource version selection capability is deployed on the target server. This parameter is mutually exclusive with Version. This field is not accepted when Source is set to OFFICIAL. To ensure compatibility with servers whose version capabilities are unconfirmed, use an existing integer Version.</para>
+            /// <para>The semantic version selection expression of the custom expert suite, such as ^1.2.3. Use this parameter only when the target server has deployed the custom resource version selection capability. This parameter is mutually exclusive with Version. This field is not accepted when Source is set to OFFICIAL. To ensure compatibility with servers of unconfirmed versions, use an existing integer Version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>^1.2.3</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The extended metadata. If omitted, existing metadata is retained. If passed, business metadata is updated, and the server retains protected system metadata.</para>
+        /// <para>The extended metadata. If omitted, the existing metadata is retained. If provided, the business metadata is updated, and the server retains the protected system metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public Dictionary<string, object> Model { get; set; }
 
         /// <summary>
-        /// <para>The name of the agent to be updated. Use the Name returned by GetAgent. This field is used to locate the target agent and cannot be used to rename the agent.</para>
+        /// <para>The name of the agent to be updated. Use the Name returned by GetAgent. This field is used to locate the target agent and is not used for renaming.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to publish the agent immediately after the update. Valid values: true: saves a new draft version first and then requests publishing. false or omitted: saves only the definition. Saving and publishing are not atomic operations. If the operation fails, call GetAgent to read the current version back before retrying, to avoid blindly repeating the update.</para>
+        /// <para>Specifies whether to publish the agent immediately after the update. If this parameter is set to true, the operation saves a new draft version before requesting publication. If this parameter is set to false or omitted, it saves only the definition. Saving and publishing are not atomic operations. If the operation fails, call GetAgent to read the current version before retrying to avoid blindly repeating the update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Version { get; set; }
 
             /// <summary>
-            /// <para>The semantic version selection expression of the custom skill, such as ^1.2.3. Use this parameter only when the custom resource version selection capability is deployed on the target server. This parameter is mutually exclusive with Version. This field is not accepted when Source is set to OFFICIAL. To ensure compatibility with servers whose version capabilities are unconfirmed, use an existing integer Version.</para>
+            /// <para>The semantic version selection expression of the custom skill, such as ^1.2.3. Use this parameter only when the target server has deployed the custom resource version selection capability. This parameter is mutually exclusive with Version. This field is not accepted when Source is set to OFFICIAL. To ensure compatibility with servers of unconfirmed versions, use an existing integer Version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>^1.2.3</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The list of tool references. Omit this parameter if no modification is required. The current new backend retains existing tools even if an empty array is passed. A non-empty array replaces the references. Each item must include Kind and the corresponding configuration, and cannot include only Name. Replace the MCP service and tool names in the example with actual values available to the current identity.</para>
+        /// <para>The list of tool references. Omit this parameter if no modification is required. The current new backend retains existing tools even for an empty array. A non-empty array replaces the references. Each item must include Kind and the corresponding configuration, and cannot include only Name. Replace the MCP service and tool names in the example with actual values available to the current identity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Kind&quot;:&quot;MCP_TOOLSET&quot;,&quot;McpServerName&quot;:&quot;mcp-a&quot;,&quot;McpItems&quot;:[&quot;only-this-tool&quot;]}]</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The list of selected MCP tool names. If this parameter is omitted or an empty array is passed, tools are not filtered by name. Each item must be the name of a tool that actually exists in the target service.</para>
+            /// <para>The list of selected MCP tool names. If this parameter is omitted or an empty array is provided, no filtering by tool name is performed. Each item must be an actual tool name in the target service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;only-this-tool&quot;]</para>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The visibility level. Valid values: <br><c>TENANT</c>: visible within the account. <br><c>PROJECT</c>: visible to specified projects. <br><c>USER</c>: visible to specified users.</para>
+        /// <para>The visibility level.<br>TENANT: visible within the account.<br>PROJECT: visible to specified projects.<br>USER: visible to specified users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TENANT</para>
@@ -301,14 +301,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. The corresponding field is used based on the Visibility parameter.</para>
+        /// <para>The visibility scope. The corresponding field is used based on the Visibility value.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]
         public UpdateAgentRequestVisibilityScope VisibilityScope { get; set; }
         public class UpdateAgentRequestVisibilityScope : TeaModel {
             /// <summary>
-            /// <para>The list of visible project IDs. This parameter takes effect when Visibility is set to <c>PROJECT</c>.</para>
+            /// <para>The list of visible project IDs. This parameter takes effect when Visibility is set to PROJECT.</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]

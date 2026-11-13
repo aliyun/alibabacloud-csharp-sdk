@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListSkillsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListSkillsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The maximum number of entries returned in this request.</para>
+            /// <para>The maximum number of entries returned in the current response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token for the next page. An empty value indicates that the last page has been reached.</para>
+            /// <para>The token for the next page. An empty value indicates that the last page is reached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The creation time.</para>
-                /// <para>The format is a 13-digit number, such as <c>1780555634000</c>.</para>
+                /// <para>The value is a 13-digit number, such as <c>1780555634000</c>.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The total number of matching entries.</para>
+            /// <para>The total number of entries that meet the specified conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

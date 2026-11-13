@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string BizdateTo { get; set; }
 
         /// <summary>
-        /// <para>The earliest time when the data quality evaluation result was generated.</para>
+        /// <para>The earliest time when the data quality check results were generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTimeFrom { get; set; }
 
         /// <summary>
-        /// <para>The latest time when the data quality evaluation result was generated.</para>
+        /// <para>The latest time when the data quality check results were generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityRuleId { get; set; }
 
         /// <summary>
-        /// <para>The page number for the paging query. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size for the paging query. Default value: 10.</para>
+        /// <para>The number of results per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

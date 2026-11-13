@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListWorkflowsRequest : TeaModel {
         /// <summary>
-        /// <para>The project environment.</para>
+        /// <para>The project environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Prod: Production.</description></item>
+        /// <item><description>Dev: Development.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Prod</para>
@@ -27,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<long?> Ids { get; set; }
 
         /// <summary>
-        /// <para>The name. Fuzzy match is supported.</para>
+        /// <para>The workflow name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Workflow1</para>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The sort field. You can sort by fields such as modification time and creation time. The format is \&quot;SortField+SortOrder(Desc/Asc)\&quot;, where Asc can be omitted. Valid values for the sort field:</para>
+        /// <para>The sort field. You can sort workflows by fields such as modification time and creation time. The format is \&quot;SortField+SortOrder(Desc/Asc)\&quot;. You can omit Asc. Valid values for the sort field:</para>
         /// <list type="bullet">
         /// <item><description>ModifyTime (Desc/Asc)</description></item>
         /// <item><description>CreateTime (Desc/Asc)</description></item>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. If a workflow matches any of the specified tags, it is returned in the result.</para>
+        /// <para>The list of tags. If you specify multiple tags, workflows that match at least one of the tags are returned.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

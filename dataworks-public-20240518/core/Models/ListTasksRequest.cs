@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The list of task IDs. You can query multiple tasks at a time by specifying task IDs.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public List<long?> Ids { get; set; }
 
         /// <summary>
-        /// <para>The name of the task. Fuzzy match is supported.</para>
+        /// <para>The name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL node</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,14 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The workspace environment.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Prod</para>
-        /// </description></item>
-        /// <item><description><para>Dev</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The project environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Prod</para>
@@ -74,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The information about the resource group. Set this parameter to the ID of a resource group for scheduling.</para>
+        /// <para>The resource group information. Specify the identifier of the scheduling resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -95,16 +88,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RuntimeResource { get; set; }
 
         /// <summary>
-        /// <para>The field that is used to sort tasks. This parameter is configured in the format of &quot;Sorting field Sorting order&quot;. You can set the sorting order to Desc or Asc. If you do not specify the sorting order, Asc is used by default. Valid values:</para>
+        /// <para>The sort field. You can sort by fields such as modification time and creation time. The format is &quot;Sort field + Sort order (Desc/Asc)&quot;. Asc can be omitted. Valid values for the sort field:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ModifyTime (Desc/Asc)</c></para>
-        /// </description></item>
-        /// <item><description><para><c>CreateTime (Desc/Asc)</c></para>
-        /// </description></item>
-        /// <item><description><para><c>Id (Desc/Asc)</c></para>
-        /// <para>Default value: <c>Id Desc</c>.</para>
-        /// </description></item>
+        /// <item><description><c>ModifyTime (Desc/Asc)</c></description></item>
+        /// <item><description><c>CreateTime (Desc/Asc)</c></description></item>
+        /// <item><description><c>Id (Desc/Asc)</c></description></item>
         /// </list>
+        /// <para>Default value: <c>Id Desc</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Id Desc</para>
@@ -114,48 +104,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type. Examples:</para>
         /// <list type="bullet">
-        /// <item><description><para>ODPS_SQL</para>
-        /// </description></item>
-        /// <item><description><para>SPARK</para>
-        /// </description></item>
-        /// <item><description><para>PY_ODPS</para>
-        /// </description></item>
-        /// <item><description><para>PY_ODPS3</para>
-        /// </description></item>
-        /// <item><description><para>ODPS_SCRIPT</para>
-        /// </description></item>
-        /// <item><description><para>ODPS_MR</para>
-        /// </description></item>
-        /// <item><description><para>COMPONENT_SQL</para>
-        /// </description></item>
-        /// <item><description><para>EMR_HIVE</para>
-        /// </description></item>
-        /// <item><description><para>EMR_MR</para>
-        /// </description></item>
-        /// <item><description><para>EMR_SPARK_SQL</para>
-        /// </description></item>
-        /// <item><description><para>EMR_SPARK</para>
-        /// </description></item>
-        /// <item><description><para>EMR_SHELL</para>
-        /// </description></item>
-        /// <item><description><para>EMR_PRESTO</para>
-        /// </description></item>
-        /// <item><description><para>EMR_IMPALA</para>
-        /// </description></item>
-        /// <item><description><para>SPARK_STREAMING</para>
-        /// </description></item>
-        /// <item><description><para>EMR_KYUUBI</para>
-        /// </description></item>
-        /// <item><description><para>EMR_TRINO</para>
-        /// </description></item>
-        /// <item><description><para>HOLOGRES_SQL</para>
-        /// </description></item>
-        /// <item><description><para>HOLOGRES_SYNC_DDL</para>
-        /// </description></item>
-        /// <item><description><para>HOLOGRES_SYNC_DATA</para>
-        /// </description></item>
+        /// <item><description>ODPS_SQL</description></item>
+        /// <item><description>SPARK</description></item>
+        /// <item><description>PY_ODPS</description></item>
+        /// <item><description>PY_ODPS3</description></item>
+        /// <item><description>ODPS_SCRIPT</description></item>
+        /// <item><description>ODPS_MR</description></item>
+        /// <item><description>COMPONENT_SQL</description></item>
+        /// <item><description>EMR_HIVE</description></item>
+        /// <item><description>EMR_MR</description></item>
+        /// <item><description>EMR_SPARK_SQL</description></item>
+        /// <item><description>EMR_SPARK</description></item>
+        /// <item><description>EMR_SHELL</description></item>
+        /// <item><description>EMR_PRESTO</description></item>
+        /// <item><description>EMR_IMPALA</description></item>
+        /// <item><description>SPARK_STREAMING</description></item>
+        /// <item><description>EMR_KYUUBI</description></item>
+        /// <item><description>EMR_TRINO</description></item>
+        /// <item><description>HOLOGRES_SQL</description></item>
+        /// <item><description>HOLOGRES_SYNC_DDL</description></item>
+        /// <item><description>HOLOGRES_SYNC_DATA</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,16 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The run mode when triggered. Valid only if TriggerType is Scheduler.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Pause</para>
-        /// </description></item>
-        /// <item><description><para>Skip</para>
-        /// </description></item>
-        /// <item><description><para>Normal</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The running mode upon triggering. This parameter takes effect only when TriggerType is set to Scheduler.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -186,13 +147,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The trigger type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Scheduler: Triggered by schedule.</para>
-        /// </description></item>
-        /// <item><description><para>Manual: Triggered manually.</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Scheduler</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDatasetRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the dataset. The value can be up to 1024 characters in length.</para>
+        /// <para>The description of the dataset. It cannot exceed 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -22,13 +22,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>COMMON: general-purpose (default).</description></item>
-        /// <item><description>PIC: image.</description></item>
-        /// <item><description>TEXT: text.</description></item>
-        /// <item><description>TABLE: table.</description></item>
-        /// <item><description>VIDEO: video.</description></item>
-        /// <item><description>AUDIO: audio.</description></item>
-        /// <item><description>INDEX: index.</description></item>
+        /// <item><description>COMMON: General (default).</description></item>
+        /// <item><description>PIC: Image.</description></item>
+        /// <item><description>TEXT: Text.</description></item>
+        /// <item><description>TABLE: Table.</description></item>
+        /// <item><description>VIDEO: Video.</description></item>
+        /// <item><description>AUDIO: Audio.</description></item>
+        /// <item><description>INDEX: Index.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateDatasetRequestInitVersion InitVersion { get; set; }
         public class CreateDatasetRequestInitVersion : TeaModel {
             /// <summary>
-            /// <para>The description. The value can be up to 1024 characters in length.</para>
+            /// <para>The description. It cannot exceed 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Initial Version</para>
@@ -57,25 +57,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The storage import configuration of the dataset. The required configuration varies depending on the storage type.</para>
+            /// <para>The storage import configuration for the dataset. The required configuration information varies based on the storage type.</para>
             /// <details>
             /// <summary>NAS</summary>
-            /// The values can be obtained from the response of the File Storage NAS API DescribeFileSystems operation.
+            /// For the values, refer to the response of the DescribeFileSystems API operation.
             /// 
             /// <pre><code class="language-JSON">{
-            ///   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // File system ID
-            ///   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // Storage specification of the file system
-            ///   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // VPC ID of the mount target
+            ///   &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The ID of the file system.
+            ///   &quot;fileSystemStorageType&quot;: &quot;Performance&quot;, // The storage specification of the file system.
+            ///   &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount target.
             /// }
             /// </c></pre>
             /// </details>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;fileSystemId&quot;:&quot;3b6XXX89c9&quot;,&quot;fileSystemStorageType&quot;:&quot;Performance&quot;,&quot;vpcId&quot;:&quot;vpc-uf66oxxxrqge1t2gson7s&quot;}</para>
             /// </summary>
             [NameInMap("ImportInfo")]
             [Validation(Required=false)]
             public Dictionary<string, string> ImportInfo { get; set; }
 
             /// <summary>
-            /// <para>The mount path. The value must start with /mnt/. Default value: /mnt/data.</para>
+            /// <para>The mount path. It must start with /mnt/. Default value: /mnt/data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/mnt/data</para>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The name of the dataset. The value must be a non-empty string that is up to 128 characters in length.</para>
+        /// <para>The name of the dataset. It must be a non-empty string and cannot exceed 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The origin of the dataset. Only DataWorks is supported.</para>
+        /// <para>The source of the dataset. Currently, only DataWorks is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DataWorks</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace.</para>
+        /// <para>The DataWorks workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,8 +136,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>OSS: Object Storage Service.</description></item>
-        /// <item><description>NAS: general-purpose NAS file storage.</description></item>
-        /// <item><description>EXTREMENAS: extreme NAS file storage.</description></item>
+        /// <item><description>NAS: General-purpose NAS file storage.</description></item>
+        /// <item><description>EXTREMENAS: Extreme NAS file storage.</description></item>
         /// <item><description>DLF_LANCE: Data Lake Formation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -11,8 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class ListPendingApprovalsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Filters by requested permissions.</para>
-        /// <para>Note: Different resource levels support different permission types. All are uniformly constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</para>
-        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></para>
+        /// <para>Note: The permission types supported for application vary across resource levels and are uniformly constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</para>
+        /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></para>
         /// </summary>
         [NameInMap("AccessTypes")]
         [Validation(Required=false)]
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>Filters by resource type.</para>
-        /// <para>Note: The supported resource types for requests are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
-        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></para>
+        /// <para>Note: The resource types for which permissions can be requested are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
+        /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DefSchema { get; set; }
 
         /// <summary>
-        /// <para>End time of the application period (millisecond timestamp).</para>
+        /// <para>The end of the time range for request submission, as a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1779724799999</para>
@@ -42,16 +42,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Filters by authorization principal.</para>
-        /// <para>Note: The supported authorization principal types are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</para>
-        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></para>
+        /// <para>Filters by authorization principal. </para>
+        /// <para>Note: The authorization principal types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</para>
+        /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></para>
         /// </summary>
         [NameInMap("Grantee")]
         [Validation(Required=false)]
         public string GranteeShrink { get; set; }
 
         /// <summary>
-        /// <para>Cursor.</para>
+        /// <para>The cursor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJpZCI6MTIzfQ==</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Page size (default: 10, maximum: 200).</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -71,17 +71,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters by resource with exact or generalized matching. Resource descriptions are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</para>
-        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></para>
+        /// <para>Filters by exact or generalized resource. The resource description is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</para>
+        /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string ResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>Filters by minimum permission resource type.</para>
-        /// <para>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</para>
-        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Documentation</a></para>
+        /// <para>Filters by least privilege resource type.</para>
+        /// <para>Note: The least privilege resource types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</para>
+        /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for the international site</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceTypeShrink { get; set; }
 
         /// <summary>
-        /// <para>Start time of the application period (millisecond timestamp).</para>
+        /// <para>The start of the time range for request submission, as a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1771948800000</para>

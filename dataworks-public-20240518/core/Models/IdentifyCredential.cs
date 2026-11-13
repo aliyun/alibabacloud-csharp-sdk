@@ -40,19 +40,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The data source password.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>ExamplePass***2026</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The user role for the data source. Valid values are:</para>
+            /// <para>The data source user type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Admin</c></para>
-            /// </description></item>
-            /// <item><description><para><c>RegularUser</c></para>
-            /// </description></item>
+            /// <item><description>Admin: administrator.</description></item>
+            /// <item><description>RegularUser: regular user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,14 +61,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The data source type. Supported values are:</para>
+            /// <para>The data source type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>hive</c></para>
-            /// </description></item>
-            /// <item><description><para><c>lindorm_for_engine</c></para>
-            /// </description></item>
-            /// <item><description><para><c>starrocks</c></para>
-            /// </description></item>
+            /// <item><description>hive</description></item>
+            /// <item><description>lindorm_for_engine</description></item>
+            /// <item><description>starrocks</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The data source user name.</para>
+            /// <para>The data source username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tom</para>
@@ -93,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The project ID. This parameter is optional.</para>
+        /// <para>The workspace ID. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -103,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The user UID. If the <c>UserType</c> is <c>Role</c>, you must prefix this value with <c>ROLE_</c>.</para>
+        /// <para>The user ID. For a role, add the ROLE_ prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ROLE_300888674340307309</para>
@@ -113,14 +108,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The user type. Supported values are:</para>
+        /// <para>The user type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>primary account: <c>PrimaryAccount</c></para>
-        /// </description></item>
-        /// <item><description><para>subaccount: <c>SubAccount</c></para>
-        /// </description></item>
-        /// <item><description><para>role: <c>Role</c></para>
-        /// </description></item>
+        /// <item><description>PrimaryAccount: Alibaba Cloud account.</description></item>
+        /// <item><description>SubAccount: RAM user.</description></item>
+        /// <item><description>Role: role.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

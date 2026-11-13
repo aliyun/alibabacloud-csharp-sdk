@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityScanRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>Data quality monitoring running records.</para>
+        /// <para>The run record of the data quality monitor.</para>
         /// </summary>
         [NameInMap("DataQualityScanRun")]
         [Validation(Required=false)]
         public GetDataQualityScanRunResponseBodyDataQualityScanRun DataQualityScanRun { get; set; }
         public class GetDataQualityScanRunResponseBodyDataQualityScanRun : TeaModel {
             /// <summary>
-            /// <para>The time when the data quality monitor starts running.</para>
+            /// <para>The time when the data quality monitoring run started.</para>
+            /// <para>The value is a 13-digit number, such as <c>1706247622000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706247622000</para>
@@ -27,7 +28,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the data quality monitor stops.</para>
+            /// <para>The time when the data quality monitoring run ended.</para>
+            /// <para>The value is a 13-digit number, such as <c>1706247622000</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706247622000</para>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The running record ID.</para>
+            /// <para>The ID of the run record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1016440997</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The parameter settings used during the actual running.</para>
+            /// <para>The parameter settings used during the actual run.</para>
             /// </summary>
             [NameInMap("Parameters")]
             [Validation(Required=false)]
@@ -76,14 +78,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The validation results of each rule.</para>
+            /// <para>The check results for individual rules.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<GetDataQualityScanRunResponseBodyDataQualityScanRunResults> Results { get; set; }
             public class GetDataQualityScanRunResponseBodyDataQualityScanRunResults : TeaModel {
                 /// <summary>
-                /// <para>The time when the validation result is generated.</para>
+                /// <para>The time when the check result was generated.</para>
+                /// <para>The value is a 13-digit number, such as <c>1725506795000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1725506795000</para>
@@ -93,14 +96,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The information about the data quality check.</para>
+                /// <para>The details of the current check.</para>
                 /// </summary>
                 [NameInMap("Details")]
                 [Validation(Required=false)]
                 public List<GetDataQualityScanRunResponseBodyDataQualityScanRunResultsDetails> Details { get; set; }
                 public class GetDataQualityScanRunResponseBodyDataQualityScanRunResultsDetails : TeaModel {
                     /// <summary>
-                    /// <para>The final value used for comparison with the threshold.</para>
+                    /// <para>The final value used to compare with the threshold.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100.0</para>
@@ -110,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string CheckValue { get; set; }
 
                     /// <summary>
-                    /// <para>The reference sample used as the baseline for calculating the CheckedValue.</para>
+                    /// <para>The baseline value from the referenced sample used to calculate CheckedValue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0</para>
@@ -120,16 +123,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ReferenceValue { get; set; }
 
                     /// <summary>
-                    /// <para>The final comparison result status.</para>
+                    /// <para>The status of the final comparison result. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Pass</para>
-                    /// </description></item>
-                    /// <item><description><para>Error</para>
-                    /// </description></item>
-                    /// <item><description><para>Warn</para>
-                    /// </description></item>
-                    /// <item><description><para>Fail</para>
-                    /// </description></item>
+                    /// <item><description>Pass</description></item>
+                    /// <item><description>Error</description></item>
+                    /// <item><description>Warn</description></item>
+                    /// <item><description>Fail</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -142,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The snapshot of the rule Spec at the start of the validation.</para>
+                /// <para>The snapshot of the rule spec at the start of the check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -158,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The sample value used in the validation.</para>
+                /// <para>The sample value used for the current check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -170,18 +169,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Sample { get; set; }
 
                 /// <summary>
-                /// <para>The validation result status.</para>
+                /// <para>The status of the check result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Pass</para>
-                /// </description></item>
-                /// <item><description><para>Running</para>
-                /// </description></item>
-                /// <item><description><para>Error</para>
-                /// </description></item>
-                /// <item><description><para>Warn</para>
-                /// </description></item>
-                /// <item><description><para>Fail</para>
-                /// </description></item>
+                /// <item><description>Pass</description></item>
+                /// <item><description>Running</description></item>
+                /// <item><description>Error</description></item>
+                /// <item><description>Warn</description></item>
+                /// <item><description>Fail</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -194,26 +188,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The snapshot of the data quality monitor configuration at the start of the validation.</para>
+            /// <para>The snapshot of the data quality monitoring configuration at the start of the check.</para>
             /// </summary>
             [NameInMap("Scan")]
             [Validation(Required=false)]
             public GetDataQualityScanRunResponseBodyDataQualityScanRunScan Scan { get; set; }
             public class GetDataQualityScanRunResponseBodyDataQualityScanRunScan : TeaModel {
                 /// <summary>
-                /// <para>The computing resource settings of the data quality monitor.</para>
+                /// <para>The compute resource settings of the data quality monitoring task.</para>
                 /// </summary>
                 [NameInMap("ComputeResource")]
                 [Validation(Required=false)]
                 public GetDataQualityScanRunResponseBodyDataQualityScanRunScanComputeResource ComputeResource { get; set; }
                 public class GetDataQualityScanRunResponseBodyDataQualityScanRunScanComputeResource : TeaModel {
                     /// <summary>
-                    /// <para>The workspace environment to which the compute engine belongs.</para>
+                    /// <para>The workspace environment to which the compute engine belongs. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Prod</para>
-                    /// </description></item>
-                    /// <item><description><para>Dev</para>
-                    /// </description></item>
+                    /// <item><description>Prod</description></item>
+                    /// <item><description>Dev</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -224,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string EnvType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the computing resource, which corresponds to the Name attribute in the ComputeResource data structure of the computing resource API.</para>
+                    /// <para>The name of the compute resource. This corresponds to the Name property in the ComputeResource data structure of the compute resource API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>emr_cluster_001</para>
@@ -234,21 +226,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The additional runtime settings of the data quality monitor.</para>
+                    /// <para>The additional runtime settings for the data quality monitoring task.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public GetDataQualityScanRunResponseBodyDataQualityScanRunScanComputeResourceRuntime Runtime { get; set; }
                     public class GetDataQualityScanRunResponseBodyDataQualityScanRunScanComputeResourceRuntime : TeaModel {
                         /// <summary>
-                        /// <para>The type of the compute engine. Only EMR compute engines support these settings.</para>
+                        /// <para>The type of the engine used. Only the E-MapReduce (EMR) compute engine supports this setting. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>Hive</para>
-                        /// </description></item>
-                        /// <item><description><para>Spark</para>
-                        /// </description></item>
-                        /// <item><description><para>Kyuubi</para>
-                        /// </description></item>
+                        /// <item><description>Hive</description></item>
+                        /// <item><description>Spark</description></item>
+                        /// <item><description>Kyuubi</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -259,20 +248,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Engine { get; set; }
 
                         /// <summary>
-                        /// <para>Additional parameters for the Hive engine. Currently, only mapreduce.job.queuename is supported to specify the queue.</para>
+                        /// <para>The additional parameter settings when the Hive engine is used. Currently, only the queue can be configured by using mapreduce.job.queuename.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>mapreduce.job.queuename=dq_queue</para>
+                        /// <para>{&quot;mapreduce.job.queuename&quot;: &quot;dq_queue&quot;}</para>
                         /// </summary>
                         [NameInMap("HiveConf")]
                         [Validation(Required=false)]
                         public Dictionary<string, object> HiveConf { get; set; }
 
                         /// <summary>
-                        /// <para>Additional parameters for the Spark engine. Currently, only spark.yarn.queue is supported to specify the queue.</para>
+                        /// <para>The additional parameter settings when the Spark engine is used. Currently, only the queue can be configured by using spark.yarn.queue.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>spark.yarn.queue=dq_queue</para>
+                        /// <para>{&quot;spark.yarn.queue&quot;: &quot;dq_queue&quot;}</para>
                         /// </summary>
                         [NameInMap("SparkConf")]
                         [Validation(Required=false)]
@@ -283,7 +272,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The creation time of the data quality monitor.</para>
+                /// <para>The time when the data quality monitoring task was created.</para>
+                /// <para>The value is a 13-digit number, such as <c>1706247622000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1706247622000</para>
@@ -293,7 +283,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator of the data quality monitor.</para>
+                /// <para>The user who created the data quality monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7892346529452</para>
@@ -303,7 +293,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The description of the data quality validation task. Maximum length: 65,535 characters.</para>
+                /// <para>The description of the data quality check task. The description can be up to 65,535 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This is a hourly run data quality evaluation plan.</para>
@@ -313,16 +303,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The hook configurations after the data quality monitor stops.</para>
+                /// <para>The configuration for hooks that run after the data quality monitor finishes.</para>
                 /// </summary>
                 [NameInMap("Hooks")]
                 [Validation(Required=false)]
                 public List<GetDataQualityScanRunResponseBodyDataQualityScanRunScanHooks> Hooks { get; set; }
                 public class GetDataQualityScanRunResponseBodyDataQualityScanRunScanHooks : TeaModel {
                     /// <summary>
-                    /// <para>The hook trigger condition. Currently, only one type of expression syntax is supported:</para>
+                    /// <para>The condition that triggers the hook. Currently, only one expression syntax is supported:</para>
                     /// <list type="bullet">
-                    /// <item><description>Specify combinations of severity levels and validation statuses for multiple rules, such as <c>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</c>. This means the hook is triggered if any executed rule has Fail with Normal severity, Error with High severity, or Warn with High severity. In the conditional expression, the severity value matches that in the Spec code, and the status value matches that in DataQualityResult.</description></item>
+                    /// <item><description>Specify multiple groups of rule severity types and rule check statuses. For example, <c>results.any { r -&gt; r.status == \\&quot;Fail\\&quot; &amp;&amp; r.rule.severity == \\&quot;Normal\\&quot; || r.status == \\&quot;Error\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; || r.status == \\&quot;Warn\\&quot; &amp;&amp; r.rule.severity == \\&quot;High\\&quot; }</c> indicates that the condition is met if the check result of a rule with the severity of Normal is Fail, the check result of a rule with the severity of High is Error, or the check result of a rule with the severity of High is Warn among the executed rules. The enum values of severity in the conditional expression are the same as those in the spec, and the enum values of status are the same as those in DataQualityResult.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -333,7 +323,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Condition { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the hook.</para>
+                    /// <para>The hook type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>BlockTaskInstance</description></item>
                     /// </list>
@@ -348,7 +338,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The data quality monitor ID.</para>
+                /// <para>The ID of the data quality monitor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>21077</para>
@@ -358,7 +348,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The last update time of the data quality monitor.</para>
+                /// <para>The time when the data quality monitoring task was updated.</para>
+                /// <para>The value is a 13-digit number, such as <c>1706247622000</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1706247622000</para>
@@ -368,7 +359,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The last updater of the data quality monitor.</para>
+                /// <para>The user who last updated the data quality monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7892346529452</para>
@@ -378,7 +369,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ModifyUser { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data quality validation task. It can contain digits, letters, Chinese characters, and both half-width and full-width punctuation marks, with a maximum length of 255 characters.</para>
+                /// <para>The name of the data quality check task. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks, and can be up to 255 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hourly partition quality monitoring</para>
@@ -388,7 +379,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the data quality monitor.</para>
+                /// <para>The owner of the data quality monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7892346529452</para>
@@ -398,7 +389,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The parameter settings of the data quality monitor.</para>
+                /// <para>The parameter settings of the data quality monitoring task.</para>
                 /// </summary>
                 [NameInMap("Parameters")]
                 [Validation(Required=false)]
@@ -437,14 +428,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The resource group used for running the data quality monitor.</para>
+                /// <para>The resource group used when the data quality monitoring task runs.</para>
                 /// </summary>
                 [NameInMap("RuntimeResource")]
                 [Validation(Required=false)]
                 public GetDataQualityScanRunResponseBodyDataQualityScanRunScanRuntimeResource RuntimeResource { get; set; }
                 public class GetDataQualityScanRunResponseBodyDataQualityScanRunScanRuntimeResource : TeaModel {
                     /// <summary>
-                    /// <para>Reserved CUs for the resource group.</para>
+                    /// <para>The reserved compute units (CUs) of the resource group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -454,7 +445,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public float? Cu { get; set; }
 
                     /// <summary>
-                    /// <para>The resource group ID.</para>
+                    /// <para>The ID of the resource group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>60597</para>
@@ -464,7 +455,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The image ID of the run configuration.</para>
+                    /// <para>The ID of the image used for the run configuration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>i-xxxx</para>
@@ -476,7 +467,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The data quality monitor Spec. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration description</a>.</para>
+                /// <para>The spec of the data quality monitoring task. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality spec configuration guide</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -511,26 +502,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The trigger configurations of the data quality monitor.</para>
+                /// <para>The trigger configuration of the data quality monitoring task.</para>
                 /// </summary>
                 [NameInMap("Trigger")]
                 [Validation(Required=false)]
                 public GetDataQualityScanRunResponseBodyDataQualityScanRunScanTrigger Trigger { get; set; }
                 public class GetDataQualityScanRunResponseBodyDataQualityScanRunScanTrigger : TeaModel {
                     /// <summary>
-                    /// <para>If the trigger mode is set to BySchedule, the scheduling task ID must be specified.</para>
+                    /// <para>The IDs of the scheduling tasks that trigger the data quality monitoring task when the trigger method is set to BySchedule.</para>
                     /// </summary>
                     [NameInMap("TaskIds")]
                     [Validation(Required=false)]
                     public List<long?> TaskIds { get; set; }
 
                     /// <summary>
-                    /// <para>The trigger method of the data quality monitor.</para>
+                    /// <para>The trigger method of the data quality monitoring task. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>ByManual</para>
-                    /// </description></item>
-                    /// <item><description><para>BySchedule</para>
-                    /// </description></item>
+                    /// <item><description>ByManual</description></item>
+                    /// <item><description>BySchedule</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -545,18 +534,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The current running status.</para>
+            /// <para>The current run status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pass</para>
-            /// </description></item>
-            /// <item><description><para>Running</para>
-            /// </description></item>
-            /// <item><description><para>Error</para>
-            /// </description></item>
-            /// <item><description><para>Warn</para>
-            /// </description></item>
-            /// <item><description><para>Fail</para>
-            /// </description></item>
+            /// <item><description>Pass</description></item>
+            /// <item><description>Running</description></item>
+            /// <item><description>Error</description></item>
+            /// <item><description>Warn</description></item>
+            /// <item><description>Fail</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

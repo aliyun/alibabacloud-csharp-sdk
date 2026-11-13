@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StartWorkflowInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The ID of the request. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17****</para>
@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result information of the batch operation. The structure is a map in which the key is the workflow instance ID and the value is the result information.</para>
+        /// <para>The results of the batch operation. The data structure is a map where the key is the workflow instance ID and the value is the result information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;10001&quot;: {&quot;Success&quot;: false, &quot;Message&quot;: &quot;The instance does not exist.&quot;}}</para>
         /// </summary>
         [NameInMap("SuccessInfo")]
         [Validation(Required=false)]

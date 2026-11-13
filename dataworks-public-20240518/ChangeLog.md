@@ -1,3 +1,12 @@
+2026-11-13 Version: 7.1.0
+- Support API GetKnowledgeBase.
+- Support API GetKnowledgePoint.
+- Support API ListKnowledgeBases.
+- Support API ListKnowledgePoints.
+- Support API RetrieveKnowledgePoints.
+- Support API UploadAgentSessionFile.
+
+
 2026-11-06 Version: 7.0.0
 - Support API ArchiveAgentSession.
 - Support API CreateCodeReview.

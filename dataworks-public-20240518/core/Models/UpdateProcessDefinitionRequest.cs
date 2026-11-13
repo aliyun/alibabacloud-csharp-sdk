@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateProcessDefinitionRequest : TeaModel {
         /// <summary>
-        /// <para>A list of approval nodes. This parameter does not apply to system policies.</para>
+        /// <para>The list of approval nodes. Note: System policies do not take effect.</para>
         /// </summary>
         [NameInMap("ApprovalNodes")]
         [Validation(Required=false)]
         public List<UpdateProcessDefinitionRequestApprovalNodes> ApprovalNodes { get; set; }
         public class UpdateProcessDefinitionRequestApprovalNodes : TeaModel {
             /// <summary>
-            /// <para>The approver type for the node. Valid values:</para>
+            /// <para>The type of approver for the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>DataWorksProjectRole</c>: A workspace role.</description></item>
-            /// <item><description><c>DataWorksProjectMember</c>: A workspace member.</description></item>
-            /// <item><description><c>TableAdministrator</c>: A table owner.</description></item>
-            /// <item><description><c>TableOrProjectAdministrator</c>: The administrator of the table or workspace.</description></item>
-            /// <item><description><c>AliyunResourceOwner</c>: An Alibaba Cloud account.</description></item>
-            /// <item><description><c>MaxComputeRole</c>: A MaxCompute administrator.</description></item>
-            /// <item><description><c>DLFAdmin</c>: A DlfLegacy administrator.</description></item>
-            /// <item><description><c>DLFNextAdmin</c>: A DLFNext administrator.</description></item>
-            /// <item><description><c>TenantRole</c>: A tenant role.</description></item>
-            /// <item><description><c>EmrAdministrator</c>: An EMR administrator.</description></item>
-            /// <item><description><c>LindormAdministrator</c>: A Lindorm administrator.</description></item>
-            /// <item><description><c>AliyunRamUser</c>: A RAM user.</description></item>
+            /// <item><description>DataWorksProjectRole: Workspace role</description></item>
+            /// <item><description>DataWorksProjectMember: Workspace member</description></item>
+            /// <item><description>TableAdministrator: Table owner</description></item>
+            /// <item><description>TableOrProjectAdministrator: Table or workspace administrator</description></item>
+            /// <item><description>AliyunResourceOwner: Alibaba Cloud account</description></item>
+            /// <item><description>MaxComputeRole: MaxCompute administrator</description></item>
+            /// <item><description>DLFAdmin: DLF legacy administrator</description></item>
+            /// <item><description>DLFNextAdmin: DLFNext administrator</description></item>
+            /// <item><description>TenantRole: Tenant role</description></item>
+            /// <item><description>EmrAdministrator: EMR administrator</description></item>
+            /// <item><description>LindormAdministrator: Lindorm administrator</description></item>
+            /// <item><description>AliyunRamUser: RAM user</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,18 +41,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>Specifies the approvers. The required value depends on the <c>AccountType</c>:</para>
+            /// <para>The assignees. The semantics vary based on the AccountType:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>AccountType</c> is <c>DataWorksProjectMember</c>, this parameter specifies the user IDs of workspace members.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>AccountType</c> is <c>DataWorksProjectRole</c>, this parameter specifies the codes of workspace roles.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>AccountType</c> is <c>MaxComputeRole</c>, this parameter specifies the MaxCompute roles.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>AccountType</c> is <c>TenantRole</c>, this parameter specifies the codes of tenant roles.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>AccountType</c> is <c>AliyunRamUser</c>, this parameter specifies the user IDs of RAM users.</para>
-            /// </description></item>
+            /// <item><description>DataWorksProjectMember: Specifies the user ID of the workspace member.</description></item>
+            /// <item><description>DataWorksProjectRole: Specifies the code of the workspace role.</description></item>
+            /// <item><description>MaxComputeRole: Specifies the MaxCompute role.</description></item>
+            /// <item><description>TenantRole: Specifies the code of the tenant role.</description></item>
+            /// <item><description>AliyunRamUser: Specifies the RAM user ID.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,13 +58,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Assignees { get; set; }
 
             /// <summary>
-            /// <para>Additional properties that are required for specific <c>AccountType</c> values:</para>
+            /// <para>The extension properties. Different additional declarations are required based on the AccountType:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>AccountType</c> is <c>DataWorksProjectMember</c>: The key is <c>projectId</c> and the value is the user ID of a workspace member. Use commas (,) to separate multiple user IDs.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>AccountType</c> is <c>MaxComputeRole</c>: The key is the MaxCompute project name and the value is the role name in MaxCompute. Use commas (,) to separate multiple role names.</para>
-            /// </description></item>
+            /// <item><description><c>DataWorksProjectMember</c>: The key is projectId, and the value is the user ID of the workspace member. Separate multiple values with commas.</description></item>
+            /// <item><description><c>MaxComputeRole</c>: The key is the MaxCompute project, and the value is the role name in MaxCompute. Separate multiple values with commas.</description></item>
             /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;449656&quot;: &quot;role_project_admin,role_project_pe&quot;}</para>
             /// </summary>
             [NameInMap("ExtensionProperties")]
             [Validation(Required=false)]
@@ -88,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>An idempotent parameter. It ensures that retried requests do not result in duplicate operations.</para>
+        /// <para>The idempotency token. Used to prevent duplicate operations caused by multiple calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AFAE64E-D1BE-432B-A9****</para>
@@ -98,17 +94,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the process definition.</para>
+        /// <para>The description of the approval process definition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MaxCompute table approval policy for the lwt_ide_simple project</para>
+        /// <para>Approval policy for MaxCompute tables in the lwt_ide_simple project</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the process definition.</para>
+        /// <para>The ID of the approval process definition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the process definition.</para>
+        /// <para>The name of the approval process definition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MaxCompute table approval</para>
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The notification service configurations.</para>
+        /// <para>The notification service declaration.</para>
         /// </summary>
         [NameInMap("NotificationServices")]
         [Validation(Required=false)]
@@ -138,14 +134,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The notification channel. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Mail</para>
-            /// </description></item>
-            /// <item><description><para>Sms</para>
-            /// </description></item>
-            /// <item><description><para>DingRobot</para>
-            /// </description></item>
-            /// <item><description><para>Weixin</para>
-            /// </description></item>
+            /// <item><description>Mail</description></item>
+            /// <item><description>Sms</description></item>
+            /// <item><description>DingRobot</description></item>
+            /// <item><description>Weixin</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>Additional information in JSON format. For example, use {&quot;atAll&quot;:&quot;true&quot;} to specify whether to notify all members.</para>
+            /// <para>The extended information in JSON format. For example, <c>{&quot;atAll&quot;:&quot;true&quot;}</c> specifies whether to mention all users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;atAll&quot;:&quot;true&quot;}</para>
@@ -166,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Extension { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL. This parameter is required when <c>Channel</c> is set to <c>DingRobot</c> or <c>Weixin</c>.</para>
+            /// <para>The Webhook URL. This parameter is required when the channel is DingRobot or Weixin.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://dingtalk.com">https://dingtalk.com</a></para>
@@ -178,14 +170,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>A list of rule conditions. This parameter does not apply to system policies.</para>
+        /// <para>The list of conditional rules. Note: System policies do not take effect.</para>
         /// </summary>
         [NameInMap("RuleConditions")]
         [Validation(Required=false)]
         public List<UpdateProcessDefinitionRequestRuleConditions> RuleConditions { get; set; }
         public class UpdateProcessDefinitionRequestRuleConditions : TeaModel {
             /// <summary>
-            /// <para>The conditional expression. Format: ((#type==\&quot;typeValue\&quot;)). For example: ((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;)).</para>
+            /// <para>The conditional expression, such as <c>((#type==\\&quot;typeValue\\&quot;))</c> or <c>((#odpsProject==\\&quot;PX_BEIJING_TEST\\&quot;))</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>((#odpsProject==\&quot;PX_BEIJING_TEST\&quot;))</para>
@@ -195,12 +187,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Expression { get; set; }
 
             /// <summary>
-            /// <para>The phase in which the rule takes effect. Valid values:</para>
+            /// <para>The stage where the rule takes effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Deployment</b>: Determines whether the approval policy applies when an application is submitted.</para>
-            /// </description></item>
-            /// <item><description><para><b>Running</b>: Determines whether to skip the approval during the approval process. This phase is supported only for MaxCompute.</para>
-            /// </description></item>
+            /// <item><description><b>Deployment</b>: Used to determine whether the approval policy is matched when the application is submitted.</description></item>
+            /// <item><description><b>Running</b>: Used to determine whether to skip approval while the approval process runs. [Supported only for MaxCompute]</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -211,18 +201,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The type of the condition. Valid values:</para>
+            /// <para>The condition type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>odpsProject</c></para>
-            /// </description></item>
-            /// <item><description><para><c>hologresInstanceId</c></para>
-            /// </description></item>
-            /// <item><description><para><c>sensibleLevel</c></para>
-            /// </description></item>
-            /// <item><description><para><c>tableGuid</c></para>
-            /// </description></item>
-            /// <item><description><para><c>projectId</c></para>
-            /// </description></item>
+            /// <item><description><c>odpsProject</c> </description></item>
+            /// <item><description><c>hologresInstanceId</c></description></item>
+            /// <item><description><c>sensibleLevel</c> </description></item>
+            /// <item><description><c>tableGuid</c> </description></item>
+            /// <item><description><c>projectId</c></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

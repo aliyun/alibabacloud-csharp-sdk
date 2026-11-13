@@ -11,8 +11,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class ListMyApplicationsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Filters by resource type.</para>
-        /// <para>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
-        /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></para>
+        /// <para>Note: The resource types supported by the system are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
+        /// <para>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DefSchema { get; set; }
 
         /// <summary>
-        /// <para>The end time of the application period (millisecond timestamp).</para>
+        /// <para>The end of the request submission time range, as a timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The pagination cursor.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJpZCI6MTIzfQ==</para>
@@ -54,17 +54,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters by resource with exact or generalized matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</para>
-        /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></para>
+        /// <para>Filters by exact or generalized resource. The resource description is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</para>
+        /// <para>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a>.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string ResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>Filters by minimum permission resource type.</para>
-        /// <para>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</para>
-        /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></para>
+        /// <para>Filters by least privilege resource type.</para>
+        /// <para>Note: The least privilege resource types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</para>
+        /// <para>For more information, see <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for Alibaba Cloud International site</a>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceType")]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceTypeShrink { get; set; }
 
         /// <summary>
-        /// <para>The start time of the application period (millisecond timestamp).</para>
+        /// <para>The start of the request submission time range, as a timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,13 +85,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Filters by approval status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WaitApproval: pending approval.</description></item>
-        /// <item><description>Confirmed: pending authorization.</description></item>
-        /// <item><description>RejectApproval: approval rejected.</description></item>
-        /// <item><description>AuthorizeSucceed: authorization succeeded.</description></item>
-        /// <item><description>AuthorizeFailed: authorization failed.</description></item>
-        /// <item><description>Deleted: deleted.</description></item>
-        /// <item><description>Canceled: withdrawn.</description></item>
+        /// <item><description>WaitApproval: pending approval</description></item>
+        /// <item><description>Confirmed: pending authorization</description></item>
+        /// <item><description>RejectApproval: approval rejected</description></item>
+        /// <item><description>AuthorizeSucceed: authorization succeeded</description></item>
+        /// <item><description>AuthorizeFailed: authorization failed</description></item>
+        /// <item><description>Deleted: deleted</description></item>
+        /// <item><description>Canceled: withdrawn</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

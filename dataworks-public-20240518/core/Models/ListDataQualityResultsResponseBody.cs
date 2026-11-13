@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityResultsResponseBody : TeaModel {
         /// <summary>
-        /// <para>数据质量校验结果分页查询结果。</para>
+        /// <para>The paginated data quality check results.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListDataQualityResultsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDataQualityResultsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>质量校验结果列表。</para>
+            /// <para>The list of data quality check results.</para>
             /// </summary>
             [NameInMap("DataQualityResults")]
             [Validation(Required=false)]
             public List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResults> DataQualityResults { get; set; }
             public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResults : TeaModel {
                 /// <summary>
-                /// <para>校验结果生成时间。</para>
+                /// <para>The time when the check result was generated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1708284916414</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>本次校验的详情。</para>
+                /// <para>The details of this check.</para>
                 /// </summary>
                 [NameInMap("Details")]
                 [Validation(Required=false)]
                 public List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsDetails> Details { get; set; }
                 public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsDetails : TeaModel {
                     /// <summary>
-                    /// <para>最终用来与阈值比较的值。</para>
+                    /// <para>The final value used for comparison with the threshold.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100.0</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string CheckedValue { get; set; }
 
                     /// <summary>
-                    /// <para>使用引用的样本，用来参与CheckedValue计算的基准值。</para>
+                    /// <para>The referenced sample value used as the baseline for calculating the checked value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ReferencedValue { get; set; }
 
                     /// <summary>
-                    /// <para>最终的比较结果状态：</para>
+                    /// <para>The final comparison result status. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>Error</description></item>
                     /// <item><description>Passed</description></item>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>校验结果ID。</para>
+                /// <para>The check result ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16033</para>
@@ -89,21 +89,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>校验开始时，规则配置快照。</para>
+                /// <para>The snapshot of the rule configuration at the start of the check.</para>
                 /// </summary>
                 [NameInMap("Rule")]
                 [Validation(Required=false)]
                 public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRule Rule { get; set; }
                 public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRule : TeaModel {
                     /// <summary>
-                    /// <para>样本校验设置。</para>
+                    /// <para>The sample check settings.</para>
                     /// </summary>
                     [NameInMap("CheckingConfig")]
                     [Validation(Required=false)]
                     public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfig CheckingConfig { get; set; }
                     public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfig : TeaModel {
                         /// <summary>
-                        /// <para>有些类型的阈值需要查询出一些参考样本，然后对参考样本的值进行汇总得出进行比较的阈值，这里使用一个表达式来表示参考样本的查询方式。</para>
+                        /// <para>The expression used to query reference samples for certain types of thresholds. The values of the reference samples are aggregated to obtain the threshold for comparison.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</para>
@@ -113,28 +113,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string ReferencedSamplesFilter { get; set; }
 
                         /// <summary>
-                        /// <para>阈值设置。</para>
+                        /// <para>The threshold settings.</para>
                         /// </summary>
                         [NameInMap("Thresholds")]
                         [Validation(Required=false)]
                         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds Thresholds { get; set; }
                         public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds : TeaModel {
                             /// <summary>
-                            /// <para>严重警告的阈值设置。</para>
+                            /// <para>The threshold settings for critical warnings.</para>
                             /// </summary>
                             [NameInMap("Critical")]
                             [Validation(Required=false)]
                             public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical Critical { get; set; }
                             public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical : TeaModel {
                                 /// <summary>
-                                /// <para>阈值表达式。</para>
-                                /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                                /// <para>The threshold expression.</para>
+                                /// <para>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</para>
                                 /// <list type="bullet">
-                                /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                                /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                                /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                                /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                                /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                                /// <item><description>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                                 /// </list>
-                                /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value。</para>
+                                /// <para>For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>$checkValue &gt; 0.01</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                                 public string Expression { get; set; }
 
                                 /// <summary>
-                                /// <para>比较符：</para>
+                                /// <para>The comparison operator. Valid values:</para>
                                 /// <list type="bullet">
                                 /// <item><description>\&gt;</description></item>
                                 /// <item><description>\&gt;=</description></item>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                                 public string Operator { get; set; }
 
                                 /// <summary>
-                                /// <para>阈值数值。</para>
+                                /// <para>The threshold value.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>100.0</para>
@@ -175,21 +175,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             }
 
                             /// <summary>
-                            /// <para>期望的阈值设置。</para>
+                            /// <para>The expected threshold settings.</para>
                             /// </summary>
                             [NameInMap("Expected")]
                             [Validation(Required=false)]
                             public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected Expected { get; set; }
                             public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected : TeaModel {
                                 /// <summary>
-                                /// <para>阈值表达式。</para>
-                                /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                                /// <para>The threshold expression.</para>
+                                /// <para>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</para>
                                 /// <list type="bullet">
-                                /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                                /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                                /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                                /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                                /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                                /// <item><description>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                                 /// </list>
-                                /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value。</para>
+                                /// <para>For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>$checkValue &gt; 0.01</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                                 public string Expression { get; set; }
 
                                 /// <summary>
-                                /// <para>比较符：</para>
+                                /// <para>The comparison operator. Valid values:</para>
                                 /// <list type="bullet">
                                 /// <item><description>\&gt;</description></item>
                                 /// <item><description>\&gt;=</description></item>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                                 public string Operator { get; set; }
 
                                 /// <summary>
-                                /// <para>阈值数值。</para>
+                                /// <para>The threshold value.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>100.0</para>
@@ -230,21 +230,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             }
 
                             /// <summary>
-                            /// <para>普通警告的阈值设置。</para>
+                            /// <para>The threshold settings for common warnings.</para>
                             /// </summary>
                             [NameInMap("Warned")]
                             [Validation(Required=false)]
                             public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned Warned { get; set; }
                             public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned : TeaModel {
                                 /// <summary>
-                                /// <para>阈值表达式。</para>
-                                /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                                /// <para>The threshold expression.</para>
+                                /// <para>For fluctuation rules, you must use an expression to represent the fluctuation threshold. Examples:</para>
                                 /// <list type="bullet">
-                                /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                                /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                                /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                                /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                                /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                                /// <item><description>Absolute value of fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                                 /// </list>
-                                /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value。</para>
+                                /// <para>For fixed value rules, you can also use an expression to configure the threshold. If both are configured, the expression takes precedence over Operator and Value.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>$checkValue &gt; 0.01</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                                 public string Expression { get; set; }
 
                                 /// <summary>
-                                /// <para>比较符：</para>
+                                /// <para>The comparison operator. Valid values:</para>
                                 /// <list type="bullet">
                                 /// <item><description>\&gt;</description></item>
                                 /// <item><description>\&gt;=</description></item>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                                 public string Operator { get; set; }
 
                                 /// <summary>
-                                /// <para>阈值数值。</para>
+                                /// <para>The threshold value.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>100.0</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>阈值计算方式：</para>
+                        /// <para>The threshold calculation method. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>Fixed</description></item>
                         /// <item><description>Fluctation</description></item>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>规则描述信息，最长500个字符。</para>
+                    /// <para>The description of the rule. It can be up to 500 characters in length.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>this is a odps _sql task</para>
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>规则是否启用。</para>
+                    /// <para>Specifies whether the rule is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -327,14 +327,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>质量规则校验问题处理器。</para>
+                    /// <para>The error handlers for data quality rule checks.</para>
                     /// </summary>
                     [NameInMap("ErrorHandlers")]
                     [Validation(Required=false)]
                     public List<ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleErrorHandlers> ErrorHandlers { get; set; }
                     public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleErrorHandlers : TeaModel {
                         /// <summary>
-                        /// <para>如果是自定义SQL规则，需要用户指定SQL来过滤问题数据。</para>
+                        /// <para>The SQL statement specified by the user to filter error data for custom SQL rules.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>SELECT * FROM tb_api_log WHERE id IS NULL</para>
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string ErrorDataFilter { get; set; }
 
                         /// <summary>
-                        /// <para>处理器类型。</para>
+                        /// <para>The handler type. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>SaveErrorData</description></item>
                         /// </list>
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>规则ID。</para>
+                    /// <para>The rule ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100001</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>规则名称，数字、英文字母、汉字、半角全角标点符号组合，最长255个字符。</para>
+                    /// <para>The rule name. The name can contain digits, letters, Chinese characters, and half-width or full-width punctuation marks. It can be up to 255 characters in length.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>The table cannot be empty.</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>DataWorks项目空间ID。</para>
+                    /// <para>The DataWorks workspace ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -389,30 +389,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? ProjectId { get; set; }
 
                     /// <summary>
-                    /// <para>样本采集所需的设置。</para>
+                    /// <para>The settings required for sample collection.</para>
                     /// </summary>
                     [NameInMap("SamplingConfig")]
                     [Validation(Required=false)]
                     public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleSamplingConfig SamplingConfig { get; set; }
                     public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleSamplingConfig : TeaModel {
                         /// <summary>
-                        /// <para>采样的指标名称：</para>
+                        /// <para>The name of the sampling metric. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Count：表行数</description></item>
-                        /// <item><description>Min：字段最小值</description></item>
-                        /// <item><description>Max：字段最大值</description></item>
-                        /// <item><description>Avg：字段均值</description></item>
-                        /// <item><description>DistinctCount：字段唯一值个数</description></item>
-                        /// <item><description>DistinctPercent：字段唯一值个数与数据行数占比</description></item>
-                        /// <item><description>DuplicatedCount：字段重复值个数</description></item>
-                        /// <item><description>DuplicatedPercent：字段重复值个数与数据行数占比</description></item>
-                        /// <item><description>TableSize：表大小</description></item>
-                        /// <item><description>NullValueCount：字段为空的行数</description></item>
-                        /// <item><description>NullValuePercent：字段为空的比例</description></item>
-                        /// <item><description>GroupCount：按字段值聚合后每个值与对应的数据行数</description></item>
-                        /// <item><description>CountNotIn：枚举值不匹配行数</description></item>
-                        /// <item><description>CountDistinctNotIn：枚举值不匹配唯一值个数</description></item>
-                        /// <item><description>UserDefinedSql：通过自定义SQL做样本采集</description></item>
+                        /// <item><description>Count: The number of rows in the table.</description></item>
+                        /// <item><description>Min: The minimum value of the field.</description></item>
+                        /// <item><description>Max: The maximum value of the field.</description></item>
+                        /// <item><description>Avg: The average value of the field.</description></item>
+                        /// <item><description>DistinctCount: The number of unique values in the field.</description></item>
+                        /// <item><description>DistinctPercent: The ratio of unique values to the total number of rows in the field.</description></item>
+                        /// <item><description>DuplicatedCount: The number of duplicate values in the field.</description></item>
+                        /// <item><description>DuplicatedPercent: The ratio of duplicate values to the total number of rows in the field.</description></item>
+                        /// <item><description>TableSize: The table size.</description></item>
+                        /// <item><description>NullValueCount: The number of rows with null values in the field.</description></item>
+                        /// <item><description>NullValuePercent: The ratio of null values in the field.</description></item>
+                        /// <item><description>GroupCount: The number of rows corresponding to each value after aggregation by field value.</description></item>
+                        /// <item><description>CountNotIn: The number of rows that do not match the enumerated values.</description></item>
+                        /// <item><description>CountDistinctNotIn: The number of unique values that do not match the enumerated values.</description></item>
+                        /// <item><description>UserDefinedSql: Sample collection through custom SQL.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Metric { get; set; }
 
                         /// <summary>
-                        /// <para>样本采集时，所需的参数。</para>
+                        /// <para>The parameters required for sample collection.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{ &quot;columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] }</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string MetricParameters { get; set; }
 
                         /// <summary>
-                        /// <para>采样时，对不关注的数据进行二次过滤的条件，最多16777215个字符。</para>
+                        /// <para>The conditions used to filter out unneeded data during sampling. It can be up to 16,777,215 characters in length.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>id IS NULL</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string SamplingFilter { get; set; }
 
                         /// <summary>
-                        /// <para>具体执行采样语句前，插入执行的一些运行时参数设置语句，最长1000个字符。目前只支持MaxCompute。</para>
+                        /// <para>The runtime parameter setting statements inserted before the sampling statement is executed. It can be up to 1,000 characters in length. Only MaxCompute is supported.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>SET odps.sql.udf.timeout=600s;</para>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>规则对于业务的等级（对应页面上的强弱规则）：</para>
+                    /// <para>The severity level of the rule for the business, which corresponds to strong and weak rules on the page. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>High</description></item>
                     /// <item><description>Normal</description></item>
@@ -469,14 +469,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Severity { get; set; }
 
                     /// <summary>
-                    /// <para>规则所监控的对象。</para>
+                    /// <para>The object monitored by the rule.</para>
                     /// </summary>
                     [NameInMap("Target")]
                     [Validation(Required=false)]
                     public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget Target { get; set; }
                     public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleTarget : TeaModel {
                         /// <summary>
-                        /// <para>表类型的数据集，表所属的数据库类型：</para>
+                        /// <para>The database type of the table dataset. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>maxcompute</description></item>
                         /// <item><description>emr</description></item>
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string DatabaseType { get; set; }
 
                         /// <summary>
-                        /// <para>表在数据地图中的唯一ID。</para>
+                        /// <para>The unique ID of the table in DataWorks Data Map.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>odps.unit_test.tb_unit_test</para>
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string TableGuid { get; set; }
 
                         /// <summary>
-                        /// <para>监控对象类型：</para>
+                        /// <para>The type of the monitored object. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>Table</description></item>
                         /// </list>
@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>创建规则时所引用的规则模板Code。</para>
+                    /// <para>The code of the rule template referenced when the rule was created.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SYSTEM:user_defined_sql</para>
@@ -532,7 +532,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>本次校验所使用的样本值。</para>
+                /// <para>The sample value used for this check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[
@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Sample { get; set; }
 
                 /// <summary>
-                /// <para>校验结果状态：</para>
+                /// <para>The status of the check result. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Running</description></item>
                 /// <item><description>Error</description></item>
@@ -567,7 +567,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>校验任务实例ID。</para>
+                /// <para>The ID of the data quality evaluation task instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200001</para>
@@ -579,7 +579,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>页码。</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>页大小。</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -599,7 +599,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>总条数。</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>219</para>
@@ -611,7 +611,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>API请求ID。</para>
+        /// <para>The API request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>691CA452-D37A-****</para>

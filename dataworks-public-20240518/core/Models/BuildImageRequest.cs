@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class BuildImageRequest : TeaModel {
         /// <summary>
-        /// <para>The compute units (CUs) for the build.</para>
+        /// <para>The number of compute units (CUs) for the image build.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Specifies the image build execution ID, which is used as an idempotence token.</para>
+        /// <para>The image build execution ID, used as an idempotence token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>582d4896-d224-413b-b883-239eeebe0bc5</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProcessId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the resource group.</para>
+        /// <para>The unique identifier of the general-purpose resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
