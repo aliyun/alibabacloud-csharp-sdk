@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of GPU models.</para>
+        /// <para>The list of GPU instance types.</para>
         /// </summary>
         [NameInMap("gpuSpec")]
         [Validation(Required=false)]
         public List<string> GpuSpec { get; set; }
 
         /// <summary>
-        /// <para>The Ray cluster instance ID.</para>
+        /// <para>The instance ID of the Ray cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ray-k7nm8ahl5te4tg91-ey7blpbg</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
-        /// <item><description>Pre: subscription</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
+        /// <item><description>Pre: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether resource prefetch is enabled.</para>
+        /// <para>Specifies whether resource prefetch is enabled.</para>
         /// </summary>
         [NameInMap("preheat")]
         [Validation(Required=false)]
         public bool? Preheat { get; set; }
 
         /// <summary>
-        /// <para>The queue type. Valid values: CPU and GPU.</para>
+        /// <para>The queue type, such as CPU or GPU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPU</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateWorkspaceQueueRequestResourceSpec ResourceSpec { get; set; }
         public class CreateWorkspaceQueueRequestResourceSpec : TeaModel {
             /// <summary>
-            /// <para>The maximum workspace resource capacity.</para>
+            /// <para>The resource limit of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? Gpu { get; set; }
 
             /// <summary>
-            /// <para>The number of GPU machines. This parameter is valid only for subscription instances.</para>
+            /// <para>The number of GPU machines. This parameter is valid only when the billing method is set to subscription.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w-975bcfda9625****</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The workspace queue name.</para>
+        /// <para>The name of the workspace queue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>

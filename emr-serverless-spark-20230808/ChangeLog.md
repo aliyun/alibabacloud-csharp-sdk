@@ -1,3 +1,7 @@
+2026-11-13 Version: 2.3.1
+- Update API ListReleaseVersions: add response parameters Body.releaseVersions.$.flameGraphEnabled.
+
+
 2026-10-20 Version: 2.3.0
 - Support API GetWorkspace.
 

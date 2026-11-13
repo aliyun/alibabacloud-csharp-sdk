@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The ID of the session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w-******</para>

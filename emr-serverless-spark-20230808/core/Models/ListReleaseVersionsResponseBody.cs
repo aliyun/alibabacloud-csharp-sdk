@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of versions.</para>
+        /// <para>The list of release versions.</para>
         /// </summary>
         [NameInMap("releaseVersions")]
         [Validation(Required=false)]
@@ -64,6 +64,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the release version supports flame graphs. This is determined by checking if the fenix version metadata contains flame-graph.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("flameGraphEnabled")]
+            [Validation(Required=false)]
+            public bool? FlameGraphEnabled { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether Fusion engine acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string IaasType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the version is a custom image.</para>
+            /// <para>Indicates whether the image is a custom image.</para>
             /// </summary>
             [NameInMap("isCustom")]
             [Validation(Required=false)]
@@ -131,7 +141,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The version type.</para>
+            /// <para>The release type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stable</para>

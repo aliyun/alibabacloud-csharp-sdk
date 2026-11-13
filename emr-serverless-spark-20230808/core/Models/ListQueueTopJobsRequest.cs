@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of jobs to return. The maximum value is 10.</para>
+        /// <para>The maximum number of jobs to return. Maximum value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. This parameter is required if you set <c>paymentType</c> to <c>Pre</c>.</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter is required when the paymentType parameter is set to Pre.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal duration. This parameter is required if <c>autoRenew</c> is set to <c>true</c>.</para>
+        /// <para>The auto-renewal period. This parameter is required when the paymentType parameter is set to Pre.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The unit of the auto-renewal duration. This parameter is required if <c>autoRenew</c> is set to <c>true</c>.</para>
+        /// <para>The auto-renewal epoch. This parameter is required when the paymentType parameter is set to Pre.</para>
         /// 
         /// <b>Example:</b>
         /// <para>month</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string AutoRenewPeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically start a session cluster when the workspace is created.</para>
+        /// <para>Specifies whether to automatically start a session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? AutoStartSessionCluster { get; set; }
 
         /// <summary>
-        /// <para>A token that ensures the idempotency of the request.</para>
+        /// <para>The client token for idempotence verification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8e6aae2810c8f67229ca70bb31cd****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The DLF Catalog ID.</para>
+        /// <para>The DLF catalog information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123xxxxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DlfCatalogId { get; set; }
 
         /// <summary>
-        /// <para>The DLF type.</para>
+        /// <para>The DLF binding type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlf1.0</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DlfType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter is required if you set <c>paymentType</c> to <c>Pre</c>.</para>
+        /// <para>The number of subscription periods. This parameter is required when the paymentType parameter is set to Pre.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12452</para>
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Duration { get; set; }
 
         /// <summary>
-        /// <para>The specifications for the GPU resources.</para>
+        /// <para>The list of GPU instance types.</para>
         /// </summary>
         [NameInMap("gpuSpec")]
         [Validation(Required=false)]
         public List<string> GpuSpec { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket for the workspace. The path must be in the <c>oss://&lt;bucket-name&gt;/</c> format.</para>
+        /// <para>The OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket/</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string OssBucket { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter is required if you set <c>paymentType</c> to <c>Pre</c>.</para>
+        /// <para>The subscription period unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -117,12 +117,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PayAsYouGo</c>: pay-as-you-go</para>
-        /// </description></item>
-        /// <item><description><para><c>Pre</c>: subscription</para>
-        /// </description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// <item><description>Pre: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,7 +131,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role used to run Spark jobs.</para>
+        /// <para>The name of the RAM role used to execute Spark jobs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunEMRSparkJobRunDefaultRole</para>
@@ -153,7 +151,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ReleaseType { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwpi66knkxny</para>
@@ -170,7 +168,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateWorkspaceRequestResourceSpec ResourceSpec { get; set; }
         public class CreateWorkspaceRequestResourceSpec : TeaModel {
             /// <summary>
-            /// <para>The resource quota for the workspace.</para>
+            /// <para>The resource limit of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -180,7 +178,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Cu { get; set; }
 
             /// <summary>
-            /// <para>The GPU resource quota for the workspace.</para>
+            /// <para>The number of GPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -192,7 +190,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The tags to add to the workspace.</para>
+        /// <para>The list of tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -224,7 +222,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

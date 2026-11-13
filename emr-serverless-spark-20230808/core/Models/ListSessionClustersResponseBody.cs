@@ -135,6 +135,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <para>The token used to connect to the session cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>session-connection-****</para>
             /// </summary>
             [NameInMap("connectionToken")]
             [Validation(Required=false)]

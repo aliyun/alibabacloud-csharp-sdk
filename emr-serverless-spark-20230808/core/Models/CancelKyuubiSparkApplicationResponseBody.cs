@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful.</para>
+            /// <para>Indicates whether the request is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The request was successful.</para>
+            /// <item><description><para>true: Successful.</para>
             /// </description></item>
-            /// <item><description><para>false: The request failed.</para>
+            /// <item><description><para>false: Failed.</para>
             /// </description></item>
             /// </list>
             /// </summary>

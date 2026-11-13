@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class UpdateProcessDefinitionWithScheduleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code from the API backend.</para>
+        /// <para>The return code of the API backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1400009</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateProcessDefinitionWithScheduleResponseBodyData Data { get; set; }
         public class UpdateProcessDefinitionWithScheduleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The email address for alert notifications.</para>
+            /// <para>The alert email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>The workflow definition ID.</para>
+            /// <para>The ID of the workflow definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12***********</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the workflow definition. The time is in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The creation time of the workflow definition. The time is in UTC and follows the ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-05T02:03:19Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The cron expression for scheduling.</para>
+            /// <para>The cron expression for the schedule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 0 * * ?</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Crontab { get; set; }
 
             /// <summary>
-            /// <para>The node definition description.</para>
+            /// <para>The task definition description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task time range. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The end time of the task time range. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710432000000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The execution policy.</para>
+            /// <para>The execution strategy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SERIAL</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseState { get; set; }
 
             /// <summary>
-            /// <para>The start time of the scheduling.</para>
+            /// <para>The start time of the schedule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string TimezoneId { get; set; }
 
             /// <summary>
-            /// <para>The update time of the workflow definition. The time is in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The update time of the workflow definition. The time is in UTC and follows the ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-05T06:24:27Z</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed description corresponding to the request code.</para>
+        /// <para>The detailed description for the request code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>

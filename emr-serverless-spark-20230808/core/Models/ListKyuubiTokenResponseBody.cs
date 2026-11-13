@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<ListKyuubiTokenResponseBodyDataTokens> Tokens { get; set; }
             public class ListKyuubiTokenResponseBodyDataTokens : TeaModel {
                 /// <summary>
-                /// <para>The list of RAM user names of authorized users.</para>
+                /// <para>The list of names of Resource Access Management (RAM) users of authorized users.</para>
                 /// </summary>
                 [NameInMap("accountNames")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The last usage time. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The last used time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1760366232121</para>
@@ -87,6 +87,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The list of Spark roles associated with the token.</para>
+                /// </summary>
                 [NameInMap("sparkRole")]
                 [Validation(Required=false)]
                 public List<string> SparkRole { get; set; }

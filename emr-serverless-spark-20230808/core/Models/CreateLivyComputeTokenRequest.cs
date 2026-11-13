@@ -17,12 +17,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateLivyComputeTokenRequestAutoExpireConfiguration AutoExpireConfiguration { get; set; }
         public class CreateLivyComputeTokenRequestAutoExpireConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the token automatically expires.</para>
+            /// <para>Specifies whether the token automatically expires. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Yes.</para>
-            /// </description></item>
-            /// <item><description><para>false: No.</para>
-            /// </description></item>
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The expiration period in days.</para>
+            /// <para>The expiration time in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -55,7 +53,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The token content. The length must be 16 or more characters.</para>
+        /// <para>The token content. The length must be greater than or equal to 16.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gs3fy75w4o7hqe5s</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public ListQueueTopJobsResponseBodyQueueTopJobs QueueTopJobs { get; set; }
         public class ListQueueTopJobsResponseBodyQueueTopJobs : TeaModel {
             /// <summary>
-            /// <para>The list of jobs.</para>
+            /// <para>The job list.</para>
             /// </summary>
             [NameInMap("jobs")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string CpuCores { get; set; }
 
                 /// <summary>
-                /// <para>The number of CUs consumed by the job.</para>
+                /// <para>The CUs consumed by the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string JobType { get; set; }
 
                 /// <summary>
-                /// <para>The amount of memory requested by the job.</para>
+                /// <para>The memory requested by the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The name of the queue.</para>
+            /// <para>The queue name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev_queue</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The total number of CUs consumed by the queue.</para>
+            /// <para>The total CUs consumed by the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>

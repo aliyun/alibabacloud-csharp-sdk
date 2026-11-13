@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateSqlStatementRequest : TeaModel {
         /// <summary>
-        /// <para>The SQL code. You can specify one or more SQL statements to execute.</para>
+        /// <para>The SQL code. You can pass one or more SQL statements for execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SHOW TABLES</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DefaultDatabase { get; set; }
 
         /// <summary>
-        /// <para>The limit value. Valid values: 1 to 10000.</para>
+        /// <para>The LIMIT value. Valid values: 1 to 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The SQL session ID. Create the session in the session management module of the EMR Serverless Spark workspace.</para>
+        /// <para>The SQL session ID. You must create the session in the session management module of the EMR Serverless Spark workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sc-dfahdfjafhajd****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SqlComputeId { get; set; }
 
         /// <summary>
-        /// <para>The data development node ID.</para>
+        /// <para>The data development task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TSK-d87******************</para>

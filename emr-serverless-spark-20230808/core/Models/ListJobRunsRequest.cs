@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ApplicationConfigs { get; set; }
 
         /// <summary>
-        /// <para>The UID of the user who created the job.</para>
+        /// <para>The UID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>150976534701****</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to aggregate and return statistical results by job run state.</para>
+        /// <para>Specifies whether to aggregate and return statistical results by job state.</para>
         /// </summary>
         [NameInMap("groupByState")]
         [Validation(Required=false)]
         public bool? GroupByState { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the job run is a workflow job.</para>
+        /// <para>Specifies whether the job is a workflow job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string IsWorkflow { get; set; }
 
         /// <summary>
-        /// <para>The ID of the streaming job deployment.</para>
+        /// <para>The job ID of the streaming job deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jd-b6d003f1930f****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobRunId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in a single call. The maximum value is 100.</para>
+        /// <para>The maximum number of records to return in a single request. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that specifies the starting position for the query.</para>
+        /// <para>The pagination token that marks the starting position for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource queue in which the Spark job runs.</para>
+        /// <para>The name of the resource queue where the Spark job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>

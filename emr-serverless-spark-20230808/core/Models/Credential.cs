@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class Credential : TeaModel {
         /// <summary>
+        /// <para>sts ak</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("accessId")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string AccessId { get; set; }
 
         /// <summary>
+        /// <para>The OSS path.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("dir")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Dir { get; set; }
 
         /// <summary>
+        /// <para>The timeout period.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("expire")]
@@ -31,6 +34,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Expire { get; set; }
 
         /// <summary>
+        /// <para>The OSS domain name.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("host")]
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Host { get; set; }
 
         /// <summary>
+        /// <para>The OSS access policy.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("policy")]
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Policy { get; set; }
 
         /// <summary>
+        /// <para>sts token</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("securityToken")]
@@ -52,6 +58,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The OSS access signature.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("signature")]

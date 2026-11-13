@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class UpdateWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The resource limit of the workspace.</para>
+        /// <para>The resource limit for the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> GpuSpec { get; set; }
 
         /// <summary>
-        /// <para>The GPU subscription information.</para>
+        /// <para>The GPU subscription.</para>
         /// </summary>
         [NameInMap("gpuSubscription")]
         [Validation(Required=false)]
@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <para>The number of subscription periods.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("duration")]
             [Validation(Required=false)]
@@ -69,6 +72,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <para>The ID of the GPU quota instance to be upgraded. This parameter is required when the operation parameter is set to UPGRADE.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>w-xxxxxx-quota-gpu-xxxx</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The workspace IP address whitelist.</para>
+        /// <para>The IP address whitelist of the workspace.</para>
         /// </summary>
         [NameInMap("ipWhiteList")]
         [Validation(Required=false)]
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal cycle. This parameter is required for the subscription billing method.</para>
+            /// <para>The auto-renewal epoch. This parameter is required for the subscription billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MONTH</para>
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The client token for idempotency verification.</para>
+            /// <para>The client token used to ensure the idempotence of the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-token-asxkxxxxxxx</para>

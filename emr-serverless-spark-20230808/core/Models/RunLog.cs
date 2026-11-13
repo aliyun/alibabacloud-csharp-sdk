@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class RunLog : TeaModel {
         /// <summary>
-        /// <para>The path of the startup file.</para>
+        /// <para>The path to the startup file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/path/to/startup</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DriverStartup { get; set; }
 
         /// <summary>
-        /// <para>The path of the stderr file.</para>
+        /// <para>The path to the stderr file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/path/to/stderr</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DriverStdError { get; set; }
 
         /// <summary>
-        /// <para>The path of the stdout file.</para>
+        /// <para>The path to the stdout file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/path/to/stdout</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DriverStdOut { get; set; }
 
         /// <summary>
-        /// <para>The path of the syslog file.</para>
+        /// <para>The path to the syslog file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/path/to/syslog</para>

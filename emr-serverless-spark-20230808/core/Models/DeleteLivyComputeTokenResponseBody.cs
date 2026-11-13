@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class DeleteLivyComputeTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. For error details, see the message parameter.</para>
+        /// <para>The response code. A value of 1000000 indicates that the request was successful. Any other value indicates that the request failed. For details about the error, see the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000</para>

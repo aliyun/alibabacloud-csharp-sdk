@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class UpdateProcessDefinitionWithScheduleRequest : TeaModel {
         /// <summary>
-        /// <para>The alert email address.</para>
+        /// <para>The email address for alert notifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The execution policy.</para>
+        /// <para>The execution strategy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,22 +40,49 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string ExecutionType { get; set; }
 
+        /// <summary>
+        /// <para>The list of global parameters for the workflow.</para>
+        /// </summary>
         [NameInMap("globalParams")]
         [Validation(Required=false)]
         public List<UpdateProcessDefinitionWithScheduleRequestGlobalParams> GlobalParams { get; set; }
         public class UpdateProcessDefinitionWithScheduleRequestGlobalParams : TeaModel {
+            /// <summary>
+            /// <para>The parameter direction. Valid values: IN (input) and OUT (output).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IN</para>
+            /// </summary>
             [NameInMap("direct")]
             [Validation(Required=false)]
             public string Direct { get; set; }
 
+            /// <summary>
+            /// <para>The parameter name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testGlobalParam</para>
+            /// </summary>
             [NameInMap("prop")]
             [Validation(Required=false)]
             public string Prop { get; set; }
 
+            /// <summary>
+            /// <para>The data type of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VARCHAR</para>
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <para>The parameter value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testGlobalParam</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -145,14 +172,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RunAs { get; set; }
 
         /// <summary>
-        /// <para>The scheduling structure.</para>
+        /// <para>The schedule structure.</para>
         /// </summary>
         [NameInMap("schedule")]
         [Validation(Required=false)]
         public UpdateProcessDefinitionWithScheduleRequestSchedule Schedule { get; set; }
         public class UpdateProcessDefinitionWithScheduleRequestSchedule : TeaModel {
             /// <summary>
-            /// <para>The cron expression for scheduling.</para>
+            /// <para>The cron expression for the schedule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 0 * * ?</para>
@@ -195,13 +222,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <para>The tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The JSON array of node definitions, which contains the description information of all nodes in the workflow.</para>
+        /// <para>The JSON array of task definitions, which contains the description of all tasks in the workflow.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("taskDefinitionJson")]
@@ -209,7 +239,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJson> TaskDefinitionJson { get; set; }
         public class UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJson : TeaModel {
             /// <summary>
-            /// <para>The alert email address.</para>
+            /// <para>The email address for alert notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></para>
@@ -219,7 +249,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AlertEmailAddress { get; set; }
 
             /// <summary>
-            /// <para>The node definition ID.</para>
+            /// <para>The task definition ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -230,7 +260,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? Code { get; set; }
 
             /// <summary>
-            /// <para>The node definition description.</para>
+            /// <para>The task definition description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ods transform task</para>
@@ -240,7 +270,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable alerts for node failures.</para>
+            /// <para>Specifies whether to enable alerts for task failures.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -250,7 +280,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? FailAlertEnable { get; set; }
 
             /// <summary>
-            /// <para>The number of retries after a node fails.</para>
+            /// <para>The number of retries allowed after a task failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -260,7 +290,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? FailRetryTimes { get; set; }
 
             /// <summary>
-            /// <para>The node name.</para>
+            /// <para>The task name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -271,7 +301,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable alerts for node startup.</para>
+            /// <para>Specifies whether to enable alerts for task startup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -282,13 +312,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <para>The tags.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public Dictionary<string, string> Tags { get; set; }
 
             /// <summary>
-            /// <para>The node definition parameters.</para>
+            /// <para>The task definition parameters.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("taskParams")]
@@ -325,22 +358,49 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [Validation(Required=false)]
                 public bool? Fusion { get; set; }
 
+                /// <summary>
+                /// <para>The list of local parameters for the task.</para>
+                /// </summary>
                 [NameInMap("localParams")]
                 [Validation(Required=false)]
                 public List<UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams> LocalParams { get; set; }
                 public class UpdateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams : TeaModel {
+                    /// <summary>
+                    /// <para>The parameter direction. Valid values: IN (input) and OUT (output).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>IN</para>
+                    /// </summary>
                     [NameInMap("direct")]
                     [Validation(Required=false)]
                     public string Direct { get; set; }
 
+                    /// <summary>
+                    /// <para>The parameter name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testGlobalParam</para>
+                    /// </summary>
                     [NameInMap("prop")]
                     [Validation(Required=false)]
                     public string Prop { get; set; }
 
+                    /// <summary>
+                    /// <para>The data type of the parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>VARCHAR</para>
+                    /// </summary>
                     [NameInMap("type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
+                    /// <summary>
+                    /// <para>The parameter value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testGlobalParam</para>
+                    /// </summary>
                     [NameInMap("value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -348,7 +408,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the queue for running the node.</para>
+                /// <para>The name of the queue used to run the task.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -359,7 +419,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ResourceQueueId { get; set; }
 
                 /// <summary>
-                /// <para>The Spark node configuration.</para>
+                /// <para>The Spark task configurations.</para>
                 /// </summary>
                 [NameInMap("sparkConf")]
                 [Validation(Required=false)]
@@ -398,7 +458,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? SparkDriverCores { get; set; }
 
                 /// <summary>
-                /// <para>The memory for the Spark driver.</para>
+                /// <para>The memory size for the Spark driver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4g</para>
@@ -418,7 +478,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? SparkExecutorCores { get; set; }
 
                 /// <summary>
-                /// <para>The memory for the Spark executor.</para>
+                /// <para>The memory size for the Spark executor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4g</para>
@@ -438,7 +498,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string SparkLogLevel { get; set; }
 
                 /// <summary>
-                /// <para>The log path of the Spark node.</para>
+                /// <para>The log path for the Spark node.</para>
                 /// </summary>
                 [NameInMap("sparkLogPath")]
                 [Validation(Required=false)]
@@ -455,7 +515,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string SparkVersion { get; set; }
 
                 /// <summary>
-                /// <para>The data development node ID.</para>
+                /// <para>The data development task ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -500,7 +560,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The default timeout for node execution.</para>
+            /// <para>The default timeout period for task execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -512,7 +572,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The concurrency of workflow node execution.</para>
+        /// <para>The concurrency level for workflow node execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -522,7 +582,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? TaskParallelism { get; set; }
 
         /// <summary>
-        /// <para>The JSON array of node dependencies, which contains the dependencies among all nodes in the workflow. preTaskCode is the upstream node ID, and postTaskCode is the downstream node ID. Each node must have a unique ID. If a node does not have an upstream node, you must add a dependency with preTaskCode set to 0.</para>
+        /// <para>The JSON array of task dependencies, which contains the dependencies among all tasks in the workflow. preTaskCode specifies the upstream task ID, and postTaskCode specifies the downstream task ID. Each task must have a unique ID. If a task node does not have an upstream task, you must add a dependency with preTaskCode set to 0.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("taskRelationJson")]
@@ -530,7 +590,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<UpdateProcessDefinitionWithScheduleRequestTaskRelationJson> TaskRelationJson { get; set; }
         public class UpdateProcessDefinitionWithScheduleRequestTaskRelationJson : TeaModel {
             /// <summary>
-            /// <para>The name of the node topology relationship. Set this parameter to the workflow name.</para>
+            /// <para>The name of the task topology relationship. Set this parameter to the workflow name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -541,7 +601,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The downstream node ID.</para>
+            /// <para>The downstream task ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -552,7 +612,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? PostTaskCode { get; set; }
 
             /// <summary>
-            /// <para>The downstream node version.</para>
+            /// <para>The downstream task version.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -563,7 +623,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? PostTaskVersion { get; set; }
 
             /// <summary>
-            /// <para>The upstream node ID.</para>
+            /// <para>The upstream task ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -574,7 +634,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? PreTaskCode { get; set; }
 
             /// <summary>
-            /// <para>The upstream node version.</para>
+            /// <para>The upstream task version.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -587,7 +647,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The default timeout for workflow execution.</para>
+        /// <para>The default timeout period for workflow execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

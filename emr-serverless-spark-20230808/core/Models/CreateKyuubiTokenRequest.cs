@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateKyuubiTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The automatic expiration settings.</para>
+        /// <para>The auto-expiration configuration struct.</para>
         /// </summary>
         [NameInMap("autoExpireConfiguration")]
         [Validation(Required=false)]
         public CreateKyuubiTokenRequestAutoExpireConfiguration AutoExpireConfiguration { get; set; }
         public class CreateKyuubiTokenRequestAutoExpireConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the token automatically expires.</para>
+            /// <para>Specifies whether automatic expiration is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The expiration period in days.</para>
+            /// <para>The expiration time in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>365</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The list of ARNs of authorized users.</para>
+        /// <para>The list of ARNs for authorized users.</para>
         /// </summary>
         [NameInMap("memberArns")]
         [Validation(Required=false)]
@@ -55,12 +55,15 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The list of Spark roles associated with the token.</para>
+        /// </summary>
         [NameInMap("sparkRole")]
         [Validation(Required=false)]
         public List<string> SparkRole { get; set; }
 
         /// <summary>
-        /// <para>The token content. The token must be 32 characters long and contain only lowercase letters and digits.</para>
+        /// <para>The token content, which must be 32 characters in length and contain only lowercase letters and digits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rjy7ejhej9gkzjjuun49jnx2xk8if2cu</para>

@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed description corresponding to the request code.</para>
+        /// <para>The detailed description corresponding to the return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>

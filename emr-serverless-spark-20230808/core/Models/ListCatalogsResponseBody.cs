@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<ListCatalogsResponseBodyCatalogs> Catalogs { get; set; }
         public class ListCatalogsResponseBodyCatalogs : TeaModel {
             /// <summary>
+            /// <para>alias</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alias</para>
             /// </summary>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data catalog.</para>
+            /// <para>The data catalog ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15097**********</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CatalogId { get; set; }
 
             /// <summary>
-            /// <para>The provider of the data catalog.</para>
+            /// <para>The data catalog type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HMS</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CatalogProvider { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the default data catalog.</para>
+            /// <para>Indicates whether the data catalog is the default data catalog.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default_catalog</para>
@@ -55,21 +57,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CatalogType { get; set; }
 
             /// <summary>
-            /// <para>The environment types.</para>
+            /// <para>The environment type.</para>
             /// </summary>
             [NameInMap("environments")]
             [Validation(Required=false)]
             public List<string> Environments { get; set; }
 
             /// <summary>
-            /// <para>Extra information.</para>
+            /// <para>The extra information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;networkName&quot;:&quot;hms&quot;,&quot;metastoreUrl&quot;:&quot;thrift://metastore.example.com:9083&quot;}</para>
             /// </summary>
             [NameInMap("extras")]
             [Validation(Required=false)]
             public Dictionary<string, string> Extras { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760604889</para>
@@ -79,7 +84,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760604889</para>
@@ -89,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource owner.</para>
+            /// <para>The resource owner ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15097**********</para>
@@ -111,7 +116,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of records to return per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -121,7 +126,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The next page token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -141,7 +146,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

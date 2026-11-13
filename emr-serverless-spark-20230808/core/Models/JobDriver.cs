@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class JobDriver : TeaModel {
         /// <summary>
-        /// <para>The configurations of SparkSubmit.</para>
+        /// <para>The SparkSubmit configuration information.</para>
         /// </summary>
         [NameInMap("sparkSubmit")]
         [Validation(Required=false)]
         public JobDriverSparkSubmit SparkSubmit { get; set; }
         public class JobDriverSparkSubmit : TeaModel {
             /// <summary>
-            /// <para>The main program of Spark.</para>
+            /// <para>The Spark main program.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://bucket/path/to/entrypoint.jar</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EntryPoint { get; set; }
 
             /// <summary>
-            /// <para>The parameters related to the main program of Spark.</para>
+            /// <para>The list of arguments for the Spark main program.</para>
             /// </summary>
             [NameInMap("entryPointArguments")]
             [Validation(Required=false)]
             public List<string> EntryPointArguments { get; set; }
 
             /// <summary>
-            /// <para>The command-line parameter of SparkSubmit.</para>
+            /// <para>The SparkSubmit command-line parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--conf spark.app.name=test</para>

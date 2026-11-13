@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class Category : TeaModel {
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The ID of the folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who creates the folder.</para>
+        /// <para>The UID of the creator.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? Creator { get; set; }
 
         /// <summary>
-        /// <para>The time when the folder was created.</para>
+        /// <para>The creation time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The time when the folder was last updated.</para>
+        /// <para>The last updated time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who last modifies the folder.</para>
+        /// <para>The UID of the last updater.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The parent folder ID.</para>
+        /// <para>The ID of the parent folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w-d6********</para>

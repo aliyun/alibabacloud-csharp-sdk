@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string ExecutionType { get; set; }
 
+        /// <summary>
+        /// <para>The list of global parameters for the workflow.</para>
+        /// </summary>
         [NameInMap("globalParams")]
         [Validation(Required=false)]
         public string GlobalParamsShrink { get; set; }
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RunAs { get; set; }
 
         /// <summary>
-        /// <para>The scheduling structure.</para>
+        /// <para>The schedule structure.</para>
         /// </summary>
         [NameInMap("schedule")]
         [Validation(Required=false)]
@@ -126,6 +129,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <para>The tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

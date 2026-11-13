@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public GetKyuubiTokenResponseBodyDataAutoExpireConfiguration AutoExpireConfiguration { get; set; }
             public class GetKyuubiTokenResponseBodyDataAutoExpireConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether auto-expiration is enabled.</para>
+                /// <para>Indicates whether automatic expiration is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>The list of authorized user ARNs.</para>
+            /// <para>The list of ARNs of authorized users.</para>
             /// </summary>
             [NameInMap("memberArns")]
             [Validation(Required=false)]
@@ -102,6 +102,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The list of Spark roles associated with the token.</para>
+            /// </summary>
             [NameInMap("sparkRole")]
             [Validation(Required=false)]
             public List<string> SparkRole { get; set; }
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Token { get; set; }
 
             /// <summary>
-            /// <para>Token ID。</para>
+            /// <para>The token ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tk-zpi0*****hdv4y</para>

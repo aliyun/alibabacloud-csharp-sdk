@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class Template : TeaModel {
+        /// <summary>
+        /// <para>The business ID of the Spark task template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>template-example-****</para>
+        /// </summary>
         [NameInMap("bizId")]
         [Validation(Required=false)]
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Creator UID.</para>
+        /// <para>The creator UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? Creator { get; set; }
 
         /// <summary>
-        /// <para>Spark engine display version.</para>
+        /// <para>The display version of the Spark engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-4.1.1</para>
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DisplaySparkVersion { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the fusion switch.</para>
+        /// <para>Specifies whether Fusion is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -45,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Fusion { get; set; }
 
         /// <summary>
-        /// <para>Creation time.</para>
+        /// <para>The creation time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>Last modified time.</para>
+        /// <para>The last updated time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,12 +72,15 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string GmtModified { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the template is the default template.</para>
+        /// </summary>
         [NameInMap("isDefault")]
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// <para>Last modifier UID.</para>
+        /// <para>The last updater UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,6 +90,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public long? Modifier { get; set; }
 
+        /// <summary>
+        /// <para>The template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>spark-task-template</para>
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -93,7 +108,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<SparkConf> SparkConf { get; set; }
 
         /// <summary>
-        /// <para>Spark Driver cores.</para>
+        /// <para>The number of Spark driver cores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +119,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? SparkDriverCores { get; set; }
 
         /// <summary>
-        /// <para>Spark Driver memory.</para>
+        /// <para>The Spark driver memory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +130,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? SparkDriverMemory { get; set; }
 
         /// <summary>
-        /// <para>Spark Executor cores.</para>
+        /// <para>The number of Spark executor cores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,7 +141,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? SparkExecutorCores { get; set; }
 
         /// <summary>
-        /// <para>Spark Executor memory.</para>
+        /// <para>The Spark executor memory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +152,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? SparkExecutorMemory { get; set; }
 
         /// <summary>
-        /// <para>Spark log level.</para>
+        /// <para>The Spark log level.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,7 +163,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SparkLogLevel { get; set; }
 
         /// <summary>
-        /// <para>Spark log path.</para>
+        /// <para>The Spark log path.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +174,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SparkLogPath { get; set; }
 
         /// <summary>
-        /// <para>Spark internal release version.</para>
+        /// <para>The Spark internal release version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -170,7 +185,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SparkVersion { get; set; }
 
         /// <summary>
-        /// <para>Template type.</para>
+        /// <para>The templatetype.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TASK</para>

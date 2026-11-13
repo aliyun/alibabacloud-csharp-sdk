@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class DeleteKyuubiServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The return result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

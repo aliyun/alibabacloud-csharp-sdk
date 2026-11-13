@@ -41,22 +41,49 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string ExecutionType { get; set; }
 
+        /// <summary>
+        /// <para>The list of global parameters for the workflow.</para>
+        /// </summary>
         [NameInMap("globalParams")]
         [Validation(Required=false)]
         public List<CreateProcessDefinitionWithScheduleRequestGlobalParams> GlobalParams { get; set; }
         public class CreateProcessDefinitionWithScheduleRequestGlobalParams : TeaModel {
+            /// <summary>
+            /// <para>The parameter direction. Valid values: IN (input) and OUT (output).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IN</para>
+            /// </summary>
             [NameInMap("direct")]
             [Validation(Required=false)]
             public string Direct { get; set; }
 
+            /// <summary>
+            /// <para>The parameter name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testGlobalParam</para>
+            /// </summary>
             [NameInMap("prop")]
             [Validation(Required=false)]
             public string Prop { get; set; }
 
+            /// <summary>
+            /// <para>The data type of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VARCHAR</para>
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <para>The parameter value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testGlobalParam</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -136,7 +163,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RunAs { get; set; }
 
         /// <summary>
-        /// <para>The scheduling structure.</para>
+        /// <para>The schedule structure.</para>
         /// </summary>
         [NameInMap("schedule")]
         [Validation(Required=false)]
@@ -186,6 +213,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <para>The tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -273,6 +303,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <para>The tags.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;tagkey&quot;:&quot;tagvalue&quot;}</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -316,22 +349,49 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [Validation(Required=false)]
                 public bool? Fusion { get; set; }
 
+                /// <summary>
+                /// <para>The list of local parameters for the task.</para>
+                /// </summary>
                 [NameInMap("localParams")]
                 [Validation(Required=false)]
                 public List<CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams> LocalParams { get; set; }
                 public class CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams : TeaModel {
+                    /// <summary>
+                    /// <para>The parameter direction. Valid values: IN (input) and OUT (output).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>IN</para>
+                    /// </summary>
                     [NameInMap("direct")]
                     [Validation(Required=false)]
                     public string Direct { get; set; }
 
+                    /// <summary>
+                    /// <para>The parameter name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testGlobalParam</para>
+                    /// </summary>
                     [NameInMap("prop")]
                     [Validation(Required=false)]
                     public string Prop { get; set; }
 
+                    /// <summary>
+                    /// <para>The data type of the parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>VARCHAR</para>
+                    /// </summary>
                     [NameInMap("type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
+                    /// <summary>
+                    /// <para>The parameter value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testGlobalParam</para>
+                    /// </summary>
                     [NameInMap("value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -429,14 +489,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string SparkLogLevel { get; set; }
 
                 /// <summary>
-                /// <para>The path to the task logs of the Spark node.</para>
+                /// <para>The task logs path for the Spark node.</para>
                 /// </summary>
                 [NameInMap("sparkLogPath")]
                 [Validation(Required=false)]
                 public string SparkLogPath { get; set; }
 
                 /// <summary>
-                /// <para>The database engine version of the Spark DPI engine.</para>
+                /// <para>The Spark DPI engine database engine version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</para>

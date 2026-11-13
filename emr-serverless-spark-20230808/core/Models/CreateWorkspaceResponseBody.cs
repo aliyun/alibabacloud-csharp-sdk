@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation ID.</para>
+        /// <para>The ID of the operation flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>op-******</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w-******</para>

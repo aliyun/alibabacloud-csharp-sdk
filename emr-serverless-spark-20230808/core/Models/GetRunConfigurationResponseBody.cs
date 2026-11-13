@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<GetRunConfigurationResponseBodyRunConfigurationApplicationConfigs> ApplicationConfigs { get; set; }
             public class GetRunConfigurationResponseBodyRunConfigurationApplicationConfigs : TeaModel {
                 /// <summary>
-                /// <para>The name of the application configuration file.</para>
+                /// <para>The application configuration file name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark-defaults.conf</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigFileName { get; set; }
 
                 /// <summary>
-                /// <para>The key of the configuration item.</para>
+                /// <para>The configuration item key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark.driver.cores</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigItemKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the configuration item.</para>
+                /// <para>The configuration item value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>

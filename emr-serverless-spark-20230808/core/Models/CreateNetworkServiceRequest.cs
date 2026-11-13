@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateNetworkServiceRequest : TeaModel {
         /// <summary>
-        /// <para>A token to ensure the idempotency of the request.</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acaf8f54-d40e-4c33-a900-f6c1b345cb47</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the network service.</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
+        /// <para>The security group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>securityGroupId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the network service.</para>
+        /// <para>The type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>type</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1g14f566kbk8jex****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>A list of vSwitch IDs.</para>
+        /// <para>The list of vSwitch IDs.</para>
         /// </summary>
         [NameInMap("vswitchIds")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return in a single request.</para>
+        /// <para>The maximum number of results to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace. Fuzzy search by workspace name is supported.</para>
+        /// <para>The name of the workspace. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_workspace</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The token that indicates the position from which to start reading.</para>
+        /// <para>The pagination token that specifies the starting position for the current read operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         /// <item><description>Running: The workspace is running.</description></item>
         /// <item><description>Stopping: The workspace is stopping.</description></item>
         /// <item><description>Stopped: The workspace is stopped.</description></item>
-        /// <item><description>Error: The workspace failed.</description></item>
+        /// <item><description>Error: The workspace has failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>iPhone remaining disk space percentage</para>
+            /// <para>iPhone disk space remaining rate</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

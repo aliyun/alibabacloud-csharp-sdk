@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListJobRunsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistical results aggregated by job state.</para>
+        /// <para>The statistical results aggregated by job status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Success&quot;:&quot;2&quot;}</para>
         /// </summary>
         [NameInMap("aggregations")]
         [Validation(Required=false)]
@@ -25,9 +28,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public class ListJobRunsResponseBodyJobRuns : TeaModel {
             /// <summary>
             /// <para>The code type of the job. Valid values:</para>
-            /// <para>SQL</para>
-            /// <para>JAR</para>
-            /// <para>PYTHON.</para>
+            /// <list type="bullet">
+            /// <item><description><para>SQL</para>
+            /// </description></item>
+            /// <item><description><para>JAR</para>
+            /// </description></item>
+            /// <item><description><para>PYTHON</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>SQL</para>
@@ -37,7 +45,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CodeType { get; set; }
 
             /// <summary>
-            /// <para>The advanced Spark configurations. This parameter is not returned by the List operation.</para>
+            /// <para>The advanced Spark configurations. This parameter is not returned by the list operation.</para>
             /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
@@ -53,7 +61,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The UID of the user who created the job.</para>
+            /// <para>The UID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150978934701****</para>
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public double? CuHours { get; set; }
 
             /// <summary>
-            /// <para>The Spark DPI engine version of the running job.</para>
+            /// <para>The Spark engine version used to run the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</para>
@@ -113,7 +121,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Fusion { get; set; }
 
             /// <summary>
-            /// <para>The information about the Spark driver. This parameter is not returned by the List operation.</para>
+            /// <para>The information about the Spark driver. This parameter is not returned by the list operation.</para>
             /// </summary>
             [NameInMap("jobDriver")]
             [Validation(Required=false)]
@@ -167,7 +175,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The Spark DPI engine version of the running job.</para>
+            /// <para>The Spark engine version used to run the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-3.0.0 (Spark 3.4.3, Scala 2.12, Native Runtime)</para>
@@ -275,7 +283,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned for the request.</para>
+        /// <para>The maximum number of records returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -285,7 +293,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position of the data read.</para>
+        /// <para>The token that indicates the position of the next data record to be read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

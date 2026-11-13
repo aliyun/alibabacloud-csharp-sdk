@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<CreateSessionClusterRequestApplicationConfigs> ApplicationConfigs { get; set; }
         public class CreateSessionClusterRequestApplicationConfigs : TeaModel {
             /// <summary>
-            /// <para>The configuration file name.</para>
+            /// <para>The name of the configuration file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spark-defaults.conf</para>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic startup. Valid values:</para>
+        /// <para>Specifies whether to enable auto-start. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("autoStartConfiguration")]
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateSessionClusterRequestAutoStartConfiguration AutoStartConfiguration { get; set; }
         public class CreateSessionClusterRequestAutoStartConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable automatic startup. Valid values:</para>
+            /// <para>Specifies whether to enable auto-start. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Disabled.</description></item>
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The automatic stop configuration.</para>
+        /// <para>The auto-stop configuration.</para>
         /// </summary>
         [NameInMap("autoStopConfiguration")]
         [Validation(Required=false)]
@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <summary>
             /// <para>Specifies whether to allow automatic stop. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Allowed.</description></item>
-            /// <item><description>false: Not allowed.</description></item>
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The number of idle minutes after which the session is automatically stopped.</para>
+            /// <para>The number of idle minutes before the session is automatically stopped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client token used to ensure request idempotence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-token-asxkxxxxxxx</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DisplayReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The Python environment ID. This parameter takes effect only for Notebook sessions.</para>
+        /// <para>The ID of the Python environment. This parameter takes effect only for Notebook sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-cpv569tlhtgndjl86t40</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         /// <para>The session type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SQL: SQL session.</description></item>
-        /// <item><description>NOTEBOOK: NOTEBOOK session.</description></item>
+        /// <item><description>NOTEBOOK: Notebook session.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The node name.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spark_job_name</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the public network access endpoint.</para>
+        /// <para>Specifies whether public network access is enabled for the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? PublicEndpointEnabled { get; set; }
 
         /// <summary>
-        /// <para>The queue name.</para>
+        /// <para>The name of the queue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root_queue</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string QueueName { get; set; }
 
         /// <summary>
-        /// <para>The Spark DPI engine version number.</para>
+        /// <para>The version number of the Spark DPI engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-3.3.1</para>

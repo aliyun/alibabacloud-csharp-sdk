@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public GetWorkspaceResponseBodyWorkspace Workspace { get; set; }
         public class GetWorkspaceResponseBodyWorkspace : TeaModel {
             /// <summary>
-            /// <para>Specifies whether auto-renewal is enabled. This parameter is required for subscription workspaces.</para>
+            /// <para>Specifies whether to enable auto-renewal. This parameter is required for subscription instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal period. This parameter is required for subscription workspaces.</para>
+            /// <para>The auto-renewal duration. This parameter is required for subscription instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal cycle. This parameter is required for subscription workspaces.</para>
+            /// <para>The auto-renewal cycle. This parameter is required for subscription instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the workspace was created. The time is displayed as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1776824869000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DlfCatalogId { get; set; }
 
             /// <summary>
-            /// <para>The bound DLF type.</para>
+            /// <para>The type of the bound DLF.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DLF-NEXT</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DlfType { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration. This parameter is required for subscription workspaces.</para>
+            /// <para>The subscription duration. This parameter is required for subscription instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? Duration { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace is released.</para>
+            /// <para>The time when the workspace was released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1786586477000</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<string> IpWhiteList { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription period. This parameter is required for subscription workspaces.</para>
+            /// <para>The unit of the subscription duration. This parameter is required for subscription instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string AllocatedResource { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether auto-renewal is enabled for the resource.</para>
+                /// <para>Specifies whether auto-renewal is enabled for the resource. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</description></item>
                 /// <item><description>false: Auto-renewal is disabled. The resource is stopped upon expiration.</description></item>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public bool? AutoRenewal { get; set; }
 
                 /// <summary>
-                /// <para>The time when the workspace was created. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The time when the workspace was created. The time is displayed as a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1791802817000</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the GPU subscription quota. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The expiration time of the GPU subscription quota. The time is displayed as a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1779768979586</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The list of GPU subscription quotas.</para>
+            /// <para>The list of GPU subscription resources.</para>
             /// </summary>
             [NameInMap("prePaidQuotaGpu")]
             [Validation(Required=false)]
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string CpuCoreCount { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the resource was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1782292672000</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time.</para>
+                /// <para>The expiration time of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1782292772000</para>
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? GpuNum { get; set; }
 
                 /// <summary>
-                /// <para>The GPU instance type.</para>
+                /// <para>The GPU model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.gn7i-c8g1.2xlarge</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The reason why the workspace is released.</para>
+            /// <para>The reason why the workspace was released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stable</para>
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The UID of the user who created the workspace.</para>
+            /// <para>The UID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13*************</para>
@@ -522,14 +522,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Storage { get; set; }
 
             /// <summary>
-            /// <para>The tag keys.</para>
+            /// <para>The tag key.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetWorkspaceResponseBodyWorkspaceTags> Tags { get; set; }
             public class GetWorkspaceResponseBodyWorkspaceTags : TeaModel {
                 /// <summary>
-                /// <para>The tag keys.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[\&quot;COST\&quot;]</para>
@@ -561,7 +561,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Spark batch job workspace-1</para>
@@ -571,7 +571,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string WorkspaceName { get; set; }
 
             /// <summary>
-            /// <para>The workspace status.</para>
+            /// <para>The status of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STARTING,RUNNING,TERMINATED</para>

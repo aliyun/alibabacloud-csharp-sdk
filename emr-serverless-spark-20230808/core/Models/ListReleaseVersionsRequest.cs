@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The version type.</para>
+        /// <para>The release type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stable</para>
@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string ReleaseVersionStatus { get; set; }
 
+        /// <summary>
+        /// <para>Filters available versions by service type. Valid values: kyuubi and ray.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>kyuubi</para>
+        /// </summary>
         [NameInMap("serviceFilter")]
         [Validation(Required=false)]
         public string ServiceFilter { get; set; }

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ComputeInstance { get; set; }
 
         /// <summary>
-        /// <para>The Kyuubi service configuration.</para>
+        /// <para>The Kyuubi service configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;key\&quot;:\&quot;kyuubi.engine.share.level\&quot;,\&quot;value\&quot;:\&quot;USER\&quot;}]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string KyuubiConfigs { get; set; }
 
         /// <summary>
-        /// <para>The Kyuubi service database engine version.</para>
+        /// <para>The Kyuubi service DPI engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.9.2-0.0.2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string KyuubiReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The Kyuubi service name.</para>
+        /// <para>The name of the Kyuubi service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_serverless_spark</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? PublicEndpointEnabled { get; set; }
 
         /// <summary>
-        /// <para>The queue where the Kyuubi service runs.</para>
+        /// <para>The execution queue of the Kyuubi service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Queue { get; set; }
 
         /// <summary>
-        /// <para>The Spark database engine version.</para>
+        /// <para>The Spark DPI engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-4.6.0 (Spark 3.5.2, Scala 2.12)</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of replicas for high availability (HA).</para>
+        /// <para>The number of replicas for high availability.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Replica { get; set; }
 
         /// <summary>
-        /// <para>The Spark configuration.</para>
+        /// <para>The Spark configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;key\&quot;:\&quot;spark.app.name\&quot;,\&quot;value\&quot;:\&quot;test\&quot;}]</para>

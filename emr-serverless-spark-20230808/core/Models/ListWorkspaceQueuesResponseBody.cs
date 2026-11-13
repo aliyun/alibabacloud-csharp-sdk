@@ -151,6 +151,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             /// <summary>
             /// <para>The ID of the resource instance associated with the queue.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-resource-****</para>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]

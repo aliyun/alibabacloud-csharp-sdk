@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the cancellation is successfully triggered.</para>
+        /// <para>Indicates whether the cancellation was successfully triggered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

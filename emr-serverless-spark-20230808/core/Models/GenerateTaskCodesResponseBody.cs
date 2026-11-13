@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GenerateTaskCodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The detailed description corresponding to the request code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>

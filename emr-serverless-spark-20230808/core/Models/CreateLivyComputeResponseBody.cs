@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateLivyComputeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the request. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. For more information, see the message parameter.</para>
+        /// <para>The response code. A value of 1000000 indicates that the request is successful. Other values indicate that the request failed. For detailed error causes, refer to the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateLivyComputeResponseBodyData Data { get; set; }
         public class CreateLivyComputeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Livy Gateway.</para>
+            /// <para>The ID of the Livy gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lc-i8xogcdfa4fk3yn1</para>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "emr-serverless-spark";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("emr-serverless-spark", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -157,7 +160,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Resource Access Management (RAM) user or a RAM role to a workspace as a member.</para>
+        /// <para>Invokes AddMembers to add Resource Access Management (RAM) users or RAM roles to a workspace as new members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -213,7 +216,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Resource Access Management (RAM) user or a RAM role to a workspace as a member.</para>
+        /// <para>Invokes AddMembers to add Resource Access Management (RAM) users or RAM roles to a workspace as new members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -269,7 +272,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Resource Access Management (RAM) user or a RAM role to a workspace as a member.</para>
+        /// <para>Invokes AddMembers to add Resource Access Management (RAM) users or RAM roles to a workspace as new members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -288,7 +291,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Resource Access Management (RAM) user or a RAM role to a workspace as a member.</para>
+        /// <para>Invokes AddMembers to add Resource Access Management (RAM) users or RAM roles to a workspace as new members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -307,7 +310,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a Spark job.</para>
+        /// <para>Terminates a running Spark job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -353,7 +356,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a Spark job.</para>
+        /// <para>Terminates a running Spark job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -399,7 +402,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a Spark job.</para>
+        /// <para>Terminates a running Spark job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -418,7 +421,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates a Spark job.</para>
+        /// <para>Terminates a running Spark job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -437,7 +440,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a Kyuubi Spark application.</para>
+        /// <para>Cancels a Spark application submitted by Kyuubi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -483,7 +486,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a Kyuubi Spark application.</para>
+        /// <para>Cancels a Spark application submitted by Kyuubi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -529,7 +532,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a Kyuubi Spark application.</para>
+        /// <para>Cancels a Spark application submitted by Kyuubi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -548,7 +551,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a Kyuubi Spark application.</para>
+        /// <para>Cancels a Spark application submitted by Kyuubi.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -567,7 +570,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a RayJob.</para>
+        /// <para>Stops a Ray job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -607,7 +610,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a RayJob.</para>
+        /// <para>Stops a Ray job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -647,7 +650,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a RayJob.</para>
+        /// <para>Stops a Ray job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -666,7 +669,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a RayJob.</para>
+        /// <para>Stops a Ray job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -685,7 +688,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves an instance to a different resource group.</para>
+        /// <para>Updates the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -743,7 +746,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves an instance to a different resource group.</para>
+        /// <para>Updates the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -801,7 +804,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves an instance to a different resource group.</para>
+        /// <para>Updates the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -820,7 +823,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves an instance to a different resource group.</para>
+        /// <para>Updates the resource group of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -839,7 +842,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Kyuubi gateway.</para>
+        /// <para>Creates a Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -917,7 +920,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Kyuubi gateway.</para>
+        /// <para>Creates a Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -995,7 +998,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Kyuubi gateway.</para>
+        /// <para>Creates a Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1014,7 +1017,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Kyuubi gateway.</para>
+        /// <para>Creates a Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1461,7 +1464,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a token for a Livy Gateway.</para>
+        /// <para>Creates a token for Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1521,7 +1524,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a token for a Livy Gateway.</para>
+        /// <para>Creates a token for Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1581,7 +1584,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a token for a Livy Gateway.</para>
+        /// <para>Creates a token for Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1600,7 +1603,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a token for a Livy Gateway.</para>
+        /// <para>Creates a token for Livy Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1619,7 +1622,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network service.</para>
+        /// <para>Creates network connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1691,7 +1694,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network service.</para>
+        /// <para>Creates network connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1763,7 +1766,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network service.</para>
+        /// <para>Creates network connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1782,7 +1785,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network service.</para>
+        /// <para>Creates network connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2519,7 +2522,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an SQL query.</para>
+        /// <para>Creates a SQL query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2591,7 +2594,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an SQL query.</para>
+        /// <para>Creates a SQL query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2663,7 +2666,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an SQL query.</para>
+        /// <para>Creates a SQL query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2682,7 +2685,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an SQL query.</para>
+        /// <para>Creates a SQL query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3547,7 +3550,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a token for a Livy Gateway.</para>
+        /// <para>Deletes the token of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3593,7 +3596,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a token for a Livy Gateway.</para>
+        /// <para>Deletes the token of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3639,7 +3642,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a token for a Livy Gateway.</para>
+        /// <para>Deletes the token of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3658,7 +3661,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a token for a Livy Gateway.</para>
+        /// <para>Deletes the token of a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4099,7 +4102,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a workflow and its scheduling configuration.</para>
+        /// <para>Publishes a workflow and its scheduling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4153,7 +4156,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a workflow and its scheduling configuration.</para>
+        /// <para>Publishes a workflow and its scheduling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4207,7 +4210,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a workflow and its scheduling configuration.</para>
+        /// <para>Publishes a workflow and its scheduling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4226,7 +4229,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a workflow and its scheduling configuration.</para>
+        /// <para>Publishes a workflow and its scheduling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5757,7 +5760,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of a Spark job.</para>
+        /// <para>Retrieves the configuration of a Spark task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5803,7 +5806,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of a Spark job.</para>
+        /// <para>Retrieves the configuration of a Spark task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5849,7 +5852,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of a Spark job.</para>
+        /// <para>Retrieves the configuration of a Spark task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5868,7 +5871,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of a Spark job.</para>
+        /// <para>Retrieves the configuration of a Spark task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6573,7 +6576,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the list of data catalogs</para>
+        /// <para>Queries the list of data catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6623,7 +6626,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the list of data catalogs</para>
+        /// <para>Queries the list of data catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6673,7 +6676,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the list of data catalogs</para>
+        /// <para>Queries the list of data catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6692,7 +6695,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the list of data catalogs</para>
+        /// <para>Queries the list of data catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7027,7 +7030,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Spark job runs.</para>
+        /// <para>Retrieves a list of Spark job runs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7155,7 +7158,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Spark job runs.</para>
+        /// <para>Retrieves a list of Spark job runs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7283,7 +7286,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Spark job runs.</para>
+        /// <para>Retrieves a list of Spark job runs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7302,7 +7305,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Spark job runs.</para>
+        /// <para>Retrieves a list of Spark job runs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7697,7 +7700,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Kyuubi Server authentication tokens.</para>
+        /// <para>Lists the authentication tokens for Kyuubi Server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7743,7 +7746,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Kyuubi Server authentication tokens.</para>
+        /// <para>Lists the authentication tokens for Kyuubi Server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7789,7 +7792,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Kyuubi Server authentication tokens.</para>
+        /// <para>Lists the authentication tokens for Kyuubi Server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7808,7 +7811,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Kyuubi Server authentication tokens.</para>
+        /// <para>Lists the authentication tokens for Kyuubi Server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10045,7 +10048,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of workspaces.</para>
+        /// <para>Queries a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10121,7 +10124,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of workspaces.</para>
+        /// <para>Queries a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10197,7 +10200,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of workspaces.</para>
+        /// <para>Queries a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10216,7 +10219,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of workspaces.</para>
+        /// <para>Queries a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12993,7 +12996,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Kyuubi Gateway authentication token.</para>
+        /// <para>Updates the authentication token for Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13061,7 +13064,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Kyuubi Gateway authentication token.</para>
+        /// <para>Updates the authentication token for Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13129,7 +13132,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Kyuubi Gateway authentication token.</para>
+        /// <para>Updates the authentication token for Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13148,7 +13151,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Kyuubi Gateway authentication token.</para>
+        /// <para>Updates the authentication token for Kyuubi Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13167,7 +13170,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Livy Gateway.</para>
+        /// <para>Updates a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13275,7 +13278,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Livy Gateway.</para>
+        /// <para>Updates a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13383,7 +13386,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Livy Gateway.</para>
+        /// <para>Updates a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13402,7 +13405,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Livy Gateway.</para>
+        /// <para>Updates a Livy gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13421,7 +13424,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the workflow definition and timed scheduling.</para>
+        /// <para>Updates a workflow definition and scheduling.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13557,7 +13560,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the workflow definition and timed scheduling.</para>
+        /// <para>Updates a workflow definition and scheduling.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13693,7 +13696,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the workflow definition and timed scheduling.</para>
+        /// <para>Updates a workflow definition and scheduling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13712,7 +13715,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the workflow definition and timed scheduling.</para>
+        /// <para>Updates a workflow definition and scheduling.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListWorkspacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return in a single request.</para>
+        /// <para>The maximum number of results to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<ListWorkspacesResponseBodyWorkspaces> Workspaces { get; set; }
         public class ListWorkspacesResponseBodyWorkspaces : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable auto-renewal. This parameter is required for subscription resources.</para>
+            /// <para>Specifies whether to enable auto-renewal. This parameter is required for the subscription billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal duration. This parameter is required for subscription resources.</para>
+            /// <para>The auto-renewal duration. This parameter is required for the subscription billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal epoch. This parameter is required for subscription resources.</para>
+            /// <para>The auto-renewal cycle. This parameter is required for the subscription billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DlfType { get; set; }
 
             /// <summary>
-            /// <para>The duration of the subscription. This parameter is required for subscription resources.</para>
+            /// <para>The length of the subscription period. This parameter is required for the subscription billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The reason for the failure.</para>
+            /// <para>The cause of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>out of stock</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string FailReason { get; set; }
 
             /// <summary>
-            /// <para>The list of GPU models.</para>
+            /// <para>The list of GPU instance types.</para>
             /// </summary>
             [NameInMap("gpuSpec")]
             [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<string> IpWhiteList { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription period. This parameter is required for subscription resources.</para>
+            /// <para>The unit of the subscription period. This parameter is required for the subscription billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 /// <para>Specifies whether auto-renewal is enabled for the resource. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</description></item>
-                /// <item><description>false: Auto-renewal is disabled. The resource is stopped upon expiration.</description></item>
+                /// <item><description>false: Auto-renewal is disabled. The resource stops working upon expiration.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the resource quota. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The time when the resource quota expires. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1740537153000</para>
@@ -317,6 +317,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
                 /// <summary>
                 /// <para>The number of CPU cores.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("cpuCoreCount")]
                 [Validation(Required=false)]
@@ -333,7 +336,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the GPU subscription quota. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The time when the GPU subscription quota expires. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1782292772000</para>
@@ -383,7 +386,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? GpuNum { get; set; }
 
                 /// <summary>
-                /// <para>The GPU model.</para>
+                /// <para>The GPU instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.gn7i-c8g1.2xlarge</para>
@@ -404,6 +407,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
                 /// <summary>
                 /// <para>The instance family.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.g5</para>
                 /// </summary>
                 [NameInMap("instanceTypeFamily")]
                 [Validation(Required=false)]
@@ -411,6 +417,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
                 /// <summary>
                 /// <para>The instance type ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.g5.small</para>
                 /// </summary>
                 [NameInMap("instanceTypeId")]
                 [Validation(Required=false)]
@@ -418,6 +427,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
                 /// <summary>
                 /// <para>The memory size.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4096</para>
                 /// </summary>
                 [NameInMap("memorySize")]
                 [Validation(Required=false)]
@@ -533,6 +545,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public class ListWorkspacesResponseBodyWorkspacesTags : TeaModel {
                 /// <summary>
                 /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[\&quot;COST\&quot;]</para>
                 /// </summary>
                 [NameInMap("tagKey")]
                 [Validation(Required=false)]
@@ -540,6 +555,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
                 /// <summary>
                 /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3d775731-9ec1-4fe2-a00d-061d51fce677</para>
                 /// </summary>
                 [NameInMap("tagValue")]
                 [Validation(Required=false)]

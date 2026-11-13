@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CancelJobRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The job run ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jr-f09a8fda2396****</para>
