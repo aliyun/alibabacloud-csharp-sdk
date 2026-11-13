@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string CheapRate { get; set; }
 
                 /// <summary>
-                /// <para>The total list price after the price reduction.</para>
+                /// <para>The reduced total list price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string CheapStandAmount { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to display the price reduction percentage.</para>
+                /// <para>Indicates whether to display the price reduction margin.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string OriginalStandAmount { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the price reduction, in ISO 8601 format.</para>
+                /// <para>The start time of the price reduction. The time is in the ISO 8601 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-08-21T02:06:00Z</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public float? DiscountAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an enterprise discount is applied.</para>
+            /// <para>Indicates whether the enterprise discount is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public bool? IsContractActivity { get; set; }
 
             /// <summary>
-            /// <para>The Lingxiao request ID of the call.</para>
+            /// <para>The request ID of the Lingxiao system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>67F33190-946B-1105-B6A1-E2DF0426DD51</para>
@@ -153,27 +153,27 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public List<QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions> OptionalPromotions { get; set; }
             public class QueryConvertInstancePriceResponseBodyPriceInfoOptionalPromotions : TeaModel {
                 /// <summary>
-                /// <para>The coupon description.</para>
+                /// <para>The description of the coupon.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>¥1,391.5 coupon (valid until 03/23/2022)</para>
+                /// <para>CNY 1,391.5 coupon (valid until 03/23/2022)</para>
                 /// </summary>
                 [NameInMap("PromotionDesc")]
                 [Validation(Required=false)]
                 public string PromotionDesc { get; set; }
 
                 /// <summary>
-                /// <para>The coupon name.</para>
+                /// <para>The name of the coupon.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>¥1,391.5 coupon</para>
+                /// <para>CNY 1,391.5 coupon</para>
                 /// </summary>
                 [NameInMap("PromotionName")]
                 [Validation(Required=false)]
                 public string PromotionName { get; set; }
 
                 /// <summary>
-                /// <para>The coupon number.</para>
+                /// <para>The ID of the coupon.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500011220010099</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string PromotionOptionNo { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the coupon is selected. Valid values:</para>
+                /// <para>Specifies whether the coupon is selected. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>true: Selected.</para>
                 /// </description></item>
@@ -221,14 +221,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 /// <para>The description of the promotion rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Purchase for 1 year or more and enjoy a 15% discount off the list price</para>
+                /// <para>Get a 15% discount on the list price for a 1-year subscription</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The promotion ID.</para>
+                /// <para>The ID of the promotion.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>587</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The promotional price based on the standard discount from the official website.</para>
+            /// <para>The discounted price based on the list price discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21321</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string StandDiscountPrice { get; set; }
 
             /// <summary>
-            /// <para>The standard discounted price on the official website or the direct sales contract discounted price.</para>
+            /// <para>The discounted list price or the discounted direct sales contract price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32432</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string StandPrice { get; set; }
 
             /// <summary>
-            /// <para>The final price, which is the original price minus the discount amount.</para>
+            /// <para>The final price, which is the original price minus the discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3712.8</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

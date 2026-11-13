@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ConvertInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>211473228320700</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>67F33190-946B-1105-B6A1-E2DF0426DD51</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

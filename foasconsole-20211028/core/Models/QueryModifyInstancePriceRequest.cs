@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class QueryModifyInstancePriceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to select zone-disaster recovery resources.</para>
+        /// <para>Specifies whether to select high-availability resources for zone-disaster recovery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
-        /// <para>The zone-disaster recovery resource description.</para>
+        /// <para>The description of high-availability resources for zone-disaster recovery.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public QueryModifyInstancePriceRequestHaResourceSpec HaResourceSpec { get; set; }
         public class QueryModifyInstancePriceRequestHaResourceSpec : TeaModel {
             /// <summary>
-            /// <para>The number of CPUs for zone-disaster recovery.</para>
+            /// <para>The number of CPUs for zone-disaster recovery high availability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The active memory size for zone-disaster recovery.</para>
+            /// <para>The memory size for high availability in zone-disaster recovery.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         }
 
         /// <summary>
-        /// <para>The vSwitch group for the zone-disaster recovery secondary zone.</para>
+        /// <para>The vSwitch group in the secondary zone for zone-disaster recovery.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public List<string> HaVSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The order instance ID.</para>
+        /// <para>The instance ID of the order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +72,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>500043499350689</para>
+        /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }
@@ -109,7 +115,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <summary>
             /// <para>The memory size after the specification change.</para>
             /// <remarks>
-            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// <para>The memory size must be four times the number of CPUs.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -122,6 +128,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("UsePromotionCode")]
         [Validation(Required=false)]
         public bool? UsePromotionCode { get; set; }

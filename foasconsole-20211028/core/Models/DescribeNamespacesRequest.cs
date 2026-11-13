@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeNamespacesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether zone-disaster recovery is enabled.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

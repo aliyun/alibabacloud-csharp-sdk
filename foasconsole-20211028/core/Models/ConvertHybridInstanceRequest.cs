@@ -53,12 +53,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <summary>
             /// <para>The memory size. Unit: GB.</para>
             /// <remarks>
-            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// <para>The memory size must be four times the number of CPUs.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>40GB</para>
+            /// <para>40</para>
             /// </summary>
             [NameInMap("MemoryGB")]
             [Validation(Required=false)]

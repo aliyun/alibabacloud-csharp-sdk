@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class CreateNamespaceRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable zone-level high availability.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
-        /// <para>The order instance ID.</para>
+        /// <para>The instance ID of the order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The namespace name.</para>
+        /// <para>The name of the namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <summary>
             /// <para>The memory size. Unit: GB.</para>
             /// <remarks>
-            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// <para>The memory size must be four times the number of CPUs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

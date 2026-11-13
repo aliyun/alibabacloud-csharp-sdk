@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ModifyPrepayInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable zone-disaster recovery resources for the workspace.</para>
+        /// <para>Specifies whether cross-zone high-availability resources are enabled for the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
-        /// <para>The resource specifications for zone-disaster recovery.</para>
+        /// <para>The resource specifications for cross-zone high availability.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public ModifyPrepayInstanceSpecRequestHaResourceSpec HaResourceSpec { get; set; }
         public class ModifyPrepayInstanceSpecRequestHaResourceSpec : TeaModel {
             /// <summary>
-            /// <para>The number of CPUs for zone-disaster recovery resources.</para>
+            /// <para>The number of CPUs for cross-zone high-availability resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The memory size of zone-disaster recovery resources, in GB. The value must be 4 times the number of CPUs.</para>
+            /// <para>The memory size of cross-zone high-availability resources, in GB. The value must be four times the number of CPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         }
 
         /// <summary>
-        /// <para>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</para>
+        /// <para>The list of vSwitch IDs in the secondary zone for cross-zone high availability.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -65,7 +65,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public List<string> HaVSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the secondary zone for zone-disaster recovery.</para>
+        /// <para>The ID of the secondary zone for cross-zone high availability.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hongkong-b</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaZoneId { get; set; }
 
         /// <summary>
-        /// <para>The order instance ID.</para>
+        /// <para>The instance ID of the order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The resource specification information.</para>
+        /// <para>The resource specifications.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceSpec")]
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <summary>
             /// <para>The memory size.</para>
             /// <remarks>
-            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// <para>The memory size must be four times the number of CPUs.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class GetFlinkAiServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Flink AI service data transfer object.</para>
+        /// <para>The data transfer object for the Flink AI service.</para>
         /// </summary>
         [NameInMap("FlinkAiServiceDTO")]
         [Validation(Required=false)]
         public GetFlinkAiServiceResponseBodyFlinkAiServiceDTO FlinkAiServiceDTO { get; set; }
         public class GetFlinkAiServiceResponseBodyFlinkAiServiceDTO : TeaModel {
             /// <summary>
-            /// <para>Indicates whether deletion protection is enabled.</para>
+            /// <para>Indicates whether release protection is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -29,12 +29,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <summary>
             /// <para>The status of the Flink AI instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CLOSED: closed or not activated.</description></item>
-            /// <item><description>WAITING: waiting to be activated after payment.</description></item>
-            /// <item><description>OPENING: being activated.</description></item>
-            /// <item><description>RUNNING: activated.</description></item>
-            /// <item><description>CLOSING: being closed.</description></item>
-            /// <item><description>DISABLE: overdue payment.</description></item>
+            /// <item><description>CLOSED: The service is closed or not activated.</description></item>
+            /// <item><description>WAITING: The service is waiting for activation after successful payment.</description></item>
+            /// <item><description>OPENING: The service is being activated.</description></item>
+            /// <item><description>RUNNING: The service is activated.</description></item>
+            /// <item><description>CLOSING: The service is being closed.</description></item>
+            /// <item><description>DISABLE: The service has an overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string FlinkAiInstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The AI service order instance ID.</para>
+            /// <para>The ID of the AI service order instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sc_flinkaifuncpost_public_cn-o3s4xabcdef</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The time when the AI service was activated, in timestamp format (milliseconds).</para>
+            /// <para>The activation time of the AI service. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1786934292</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

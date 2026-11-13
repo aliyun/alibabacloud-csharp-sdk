@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The order instance ID.</para>
+        /// <para>The instance ID of the order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? IsAutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The resource specifications of the namespace.</para>
+        /// <para>The resource specifications of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NamespaceResourceSpecs")]
@@ -61,6 +61,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
+        /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>500043499350689</para>
+        /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }
@@ -76,6 +82,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Use a coupon.</description></item>
+        /// <item><description>false: Do not use a coupon.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("UsePromotionCode")]
         [Validation(Required=false)]
         public bool? UsePromotionCode { get; set; }

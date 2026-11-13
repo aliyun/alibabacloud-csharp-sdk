@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ModifyInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the workspace has zone-disaster recovery resources.</para>
+        /// <para>Specifies whether the workspace has cross-zone high-availability resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
-        /// <para>The zone-disaster recovery resource specifications.</para>
+        /// <para>The description of the cross-zone high-availability resources.</para>
         /// </summary>
         [NameInMap("HaResourceSpec")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <summary>
             /// <para>The memory size.</para>
             /// <remarks>
-            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// <para>The memory size must be four times the number of CPUs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         }
 
         /// <summary>
-        /// <para>The vSwitch group in the secondary zone for zone-disaster recovery.</para>
+        /// <para>The vSwitch group in the secondary zone for cross-zone high availability.</para>
         /// </summary>
         [NameInMap("HaVSwitchIds")]
         [Validation(Required=false)]
         public List<string> HaVSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The order instance ID.</para>
+        /// <para>The instance ID of the order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <summary>
             /// <para>The memory size.</para>
             /// <remarks>
-            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// <para>The memory size must be four times the number of CPUs.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 

@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled (default).</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal (default).</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter does not take effect for pay-as-you-go instances.</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>The number of billing cycles.</para>
         /// <remarks>
-        /// <para>When ChargeType is set to PRE, the Duration parameter is required.</para>
+        /// <para>This parameter is required when ChargeType is set to PRE.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
-        /// <para>The zone-disaster recovery resource specifications.</para>
+        /// <para>The description of zone-disaster recovery resources.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaResourceSpecShrink { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtc-e2e-test-post</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle. Subscription instances support only Year and Month. Pay-as-you-go instances support Hour.</para>
+        /// <para>The billing cycle. Subscription instances support only yearly (Year) and monthly (Month) billing cycles. For pay-as-you-go instances, select hourly (Hour).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -152,8 +152,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Use a coupon.</description></item>
-        /// <item><description>false: Do not use a coupon.</description></item>
+        /// <item><description>true: uses a coupon.</description></item>
+        /// <item><description>false: does not use a coupon.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string VSwitchIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID of the user.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2ze9xoh8qyt1rnxfmfcdi</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The processor architecture. Valid values: X86 and ARM.</para>
+        /// <para>The processor architecture. Valid values: x86 and ARM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>X86</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether hybrid billing is used.</para>
+        /// <para>Specifies whether hybrid billing is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Elastic { get; set; }
 
         /// <summary>
-        /// <para>The order instance ID.</para>
+        /// <para>The instance ID of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f-cn-wwo36qj4g06</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
