@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <ol>
-        /// <item><description>You must specify either DataSourceId or EmrInstanceId. Otherwise, an error is returned.</description></item>
+        /// <item><description>You must specify either DataSourceId or EmrInstanceId as input. Otherwise, an error is returned.</description></item>
         /// <item><description>If both parameters are specified, EmrInstanceId takes precedence.</description></item>
         /// <item><description>If the data source specified by DataSourceId is a self-managed Hadoop cluster, an error is returned.</description></item>
         /// </ol>

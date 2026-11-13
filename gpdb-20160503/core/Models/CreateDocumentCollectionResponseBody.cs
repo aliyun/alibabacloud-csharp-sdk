@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDocumentCollectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The API execution status. Valid values:</para>
+        /// <para>The execution status of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: The operation was successful.</description></item>
-        /// <item><description><b>fail</b>: The operation failed.</description></item>
+        /// <item><description><b>success</b>: The operation is successful.</description></item>
+        /// <item><description><b>fail</b>: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

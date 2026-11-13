@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The model parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Not yet available.</para>
+        /// <para>暂未开放</para>
         /// </summary>
         [NameInMap("ModelParams")]
         [Validation(Required=false)]

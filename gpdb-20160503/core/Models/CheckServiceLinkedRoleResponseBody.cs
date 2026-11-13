@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether a service-linked role (SLR) is created.</para>
+        /// <para>Indicates whether the service-linked role (SLR) is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListModelOperatorApiKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of API keys.</para>
+        /// <para>The list of API keys for which no deletion request has been initiated. After a deletion request is accepted, the key no longer appears in this list.</para>
         /// </summary>
         [NameInMap("ApiKeys")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The endpoint.</para>
+            /// <para>The complete HTTP(S) endpoint for calling the model operator service. This field is returned only when Status is Running. This field is not returned for other statuses. The list operation does not return the plaintext API key. To obtain the plaintext API key, call DescribeModelOperatorApiKey.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx">https://xxxx</a></para>
@@ -57,7 +57,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The status of the key. Valid values: Creating, Running, Locked, and Deleting.</para>
+            /// <para>The status of the API key. The statuses returned in the list include:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating: The API key is being created.</description></item>
+            /// <item><description>Running: The API key is running.</description></item>
+            /// <item><description>Locked: The API key is locked and cannot be used to call the model operator service. This status may also be displayed when the API key is being locked or unlocked.</description></item>
+            /// </list>
+            /// <para>API keys for which a deletion request has been accepted no longer appear in the list. You can call DescribeModelOperatorApiKey to query the Deleting status. After the cleanup is complete, a detail query returns a resource not found error. The status indicates the processing result on the control plane. A short propagation delay may occur before the status takes effect on the data plane.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>

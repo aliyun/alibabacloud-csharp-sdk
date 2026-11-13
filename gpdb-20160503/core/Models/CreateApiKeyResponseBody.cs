@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API key.</para>
+        /// <para>The content of the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxx</para>

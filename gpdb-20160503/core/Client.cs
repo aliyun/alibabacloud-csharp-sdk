@@ -2300,12 +2300,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks for updatable versions of a SaaS service.</para>
+        /// <para>Checks for available updates for a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Checks for updatable versions of a SaaS service.</para>
+        /// <para>Checks for available updates for a SaaS service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2351,12 +2351,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks for updatable versions of a SaaS service.</para>
+        /// <para>Checks for available updates for a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Checks for updatable versions of a SaaS service.</para>
+        /// <para>Checks for available updates for a SaaS service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2402,12 +2402,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks for updatable versions of a SaaS service.</para>
+        /// <para>Checks for available updates for a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Checks for updatable versions of a SaaS service.</para>
+        /// <para>Checks for available updates for a SaaS service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2425,12 +2425,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks for updatable versions of a SaaS service.</para>
+        /// <para>Checks for available updates for a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Checks for updatable versions of a SaaS service.</para>
+        /// <para>Checks for available updates for a SaaS service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2448,7 +2448,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role is created.</para>
+        /// <para>Checks whether the service-linked role is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2490,7 +2490,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role is created.</para>
+        /// <para>Checks whether the service-linked role is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2532,7 +2532,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role is created.</para>
+        /// <para>Checks whether the service-linked role is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2550,7 +2550,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role is created.</para>
+        /// <para>Checks whether the service-linked role is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2568,7 +2568,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores data to a new AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Restores data to a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2618,7 +2618,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores data to a new AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Restores data to a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2668,7 +2668,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores data to a new AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Restores data to a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2686,7 +2686,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores data to a new AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Restores data to a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2864,17 +2864,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an initial account for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Creates the initial account for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create only initial accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</description></item>
+        /// <item><description>Before using an AnalyticDB for PostgreSQL instance, you must create an initial account.</description></item>
+        /// <item><description>This operation only supports creating an initial account. To create other accounts, refer to <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</description></item>
         /// </list>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2940,17 +2938,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an initial account for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Creates the initial account for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create only initial accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</description></item>
+        /// <item><description>Before using an AnalyticDB for PostgreSQL instance, you must create an initial account.</description></item>
+        /// <item><description>This operation only supports creating an initial account. To create other accounts, refer to <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</description></item>
         /// </list>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3016,17 +3012,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an initial account for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Creates the initial account for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create only initial accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</description></item>
+        /// <item><description>Before using an AnalyticDB for PostgreSQL instance, you must create an initial account.</description></item>
+        /// <item><description>This operation only supports creating an initial account. To create other accounts, refer to <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</description></item>
         /// </list>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3044,17 +3038,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an initial account for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Creates the initial account for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to create only initial accounts. For information about how to create other types of accounts, see <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</description></item>
+        /// <item><description>Before using an AnalyticDB for PostgreSQL instance, you must create an initial account.</description></item>
+        /// <item><description>This operation only supports creating an initial account. To create other accounts, refer to <a href="https://help.aliyun.com/document_detail/50206.html">Create a database account</a>.</description></item>
         /// </list>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3256,7 +3248,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup set.</para>
+        /// <para>Creates a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3298,7 +3290,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup set.</para>
+        /// <para>Creates a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3340,7 +3332,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup set.</para>
+        /// <para>Creates a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3358,7 +3350,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup set.</para>
+        /// <para>Creates a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3381,7 +3373,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits the region, network, storage, and other resource configurations from the primary branch.</para>
+        /// <para>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits resource configurations such as region, network, and storage from the main branch.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3472,7 +3464,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits the region, network, storage, and other resource configurations from the primary branch.</para>
+        /// <para>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits resource configurations such as region, network, and storage from the main branch.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3563,7 +3555,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits the region, network, storage, and other resource configurations from the primary branch.</para>
+        /// <para>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits resource configurations such as region, network, and storage from the main branch.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3586,7 +3578,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits the region, network, storage, and other resource configurations from the primary branch.</para>
+        /// <para>Creates a new Supabase branch based on a specified parent branch. By default, a child branch inherits resource configurations such as region, network, and storage from the main branch.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4412,7 +4404,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address whitelist group for an instance.</para>
+        /// <para>Creates an IP whitelist group for an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4472,7 +4464,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address whitelist group for an instance.</para>
+        /// <para>Creates an IP whitelist group for an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4532,7 +4524,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address whitelist group for an instance.</para>
+        /// <para>Creates an IP whitelist group for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4550,7 +4542,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address whitelist group for an instance.</para>
+        /// <para>Creates an IP whitelist group for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6492,6 +6484,186 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateModelOperatorApiKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a model creation operator sub-service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and pricing of the model creation operator sub-service, and confirm the prices for the target region and specifications in the console.</em>*
+        /// This operation creates a model creation operator sub-service and generates a sales order. If the request is successful, ServiceId and OrderId are returned. The service is activated asynchronously by a sales callback, which does not mean that the service is already active. You can call ListModelOperatorServices to query the service status. After the service is activated, you can call CreateModelOperatorApiKey to create credentials to invoke the service.
+        /// Each time you successfully invoke the service, a new order may be generated. Do not query the progress by repeatedly creating orders. If a timeout occurs when you invoke the service or an unclear result is returned, check the original order and service first before deciding whether to retry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateModelOperatorServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateModelOperatorServiceResponse
+        /// </returns>
+        public CreateModelOperatorServiceResponse CreateModelOperatorServiceWithOptions(CreateModelOperatorServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cu))
+            {
+                query["Cu"] = request.Cu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateModelOperatorService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateModelOperatorServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a model creation operator sub-service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and pricing of the model creation operator sub-service, and confirm the prices for the target region and specifications in the console.</em>*
+        /// This operation creates a model creation operator sub-service and generates a sales order. If the request is successful, ServiceId and OrderId are returned. The service is activated asynchronously by a sales callback, which does not mean that the service is already active. You can call ListModelOperatorServices to query the service status. After the service is activated, you can call CreateModelOperatorApiKey to create credentials to invoke the service.
+        /// Each time you successfully invoke the service, a new order may be generated. Do not query the progress by repeatedly creating orders. If a timeout occurs when you invoke the service or an unclear result is returned, check the original order and service first before deciding whether to retry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateModelOperatorServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateModelOperatorServiceResponse
+        /// </returns>
+        public async Task<CreateModelOperatorServiceResponse> CreateModelOperatorServiceWithOptionsAsync(CreateModelOperatorServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cu))
+            {
+                query["Cu"] = request.Cu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateModelOperatorService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateModelOperatorServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a model creation operator sub-service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and pricing of the model creation operator sub-service, and confirm the prices for the target region and specifications in the console.</em>*
+        /// This operation creates a model creation operator sub-service and generates a sales order. If the request is successful, ServiceId and OrderId are returned. The service is activated asynchronously by a sales callback, which does not mean that the service is already active. You can call ListModelOperatorServices to query the service status. After the service is activated, you can call CreateModelOperatorApiKey to create credentials to invoke the service.
+        /// Each time you successfully invoke the service, a new order may be generated. Do not query the progress by repeatedly creating orders. If a timeout occurs when you invoke the service or an unclear result is returned, check the original order and service first before deciding whether to retry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateModelOperatorServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateModelOperatorServiceResponse
+        /// </returns>
+        public CreateModelOperatorServiceResponse CreateModelOperatorService(CreateModelOperatorServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateModelOperatorServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a model creation operator sub-service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and pricing of the model creation operator sub-service, and confirm the prices for the target region and specifications in the console.</em>*
+        /// This operation creates a model creation operator sub-service and generates a sales order. If the request is successful, ServiceId and OrderId are returned. The service is activated asynchronously by a sales callback, which does not mean that the service is already active. You can call ListModelOperatorServices to query the service status. After the service is activated, you can call CreateModelOperatorApiKey to create credentials to invoke the service.
+        /// Each time you successfully invoke the service, a new order may be generated. Do not query the progress by repeatedly creating orders. If a timeout occurs when you invoke the service or an unclear result is returned, check the original order and service first before deciding whether to retry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateModelOperatorServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateModelOperatorServiceResponse
+        /// </returns>
+        public async Task<CreateModelOperatorServiceResponse> CreateModelOperatorServiceAsync(CreateModelOperatorServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateModelOperatorServiceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12620,6 +12792,306 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteJDBCDataSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a model operator API key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified API key. A successful request indicates that the deletion intent is accepted and external credentials are asynchronously cleaned up by the system. This does not mean that all underlying resources have been deleted.
+        /// After the deletion is accepted, the key no longer appears in the ListModelOperatorApiKeys response. During the cleanup period, DescribeModelOperatorApiKey returns Deleting and does not return the plaintext key or the endpoint. After the cleanup is complete, it returns a resource not found error.
+        /// Call the API by using the endpoint of the region to which the target key belongs, and specify an ApiKeyId greater than 0.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteModelOperatorApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteModelOperatorApiKeyResponse
+        /// </returns>
+        public DeleteModelOperatorApiKeyResponse DeleteModelOperatorApiKeyWithOptions(DeleteModelOperatorApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
+            {
+                query["ApiKeyId"] = request.ApiKeyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteModelOperatorApiKey",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteModelOperatorApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a model operator API key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified API key. A successful request indicates that the deletion intent is accepted and external credentials are asynchronously cleaned up by the system. This does not mean that all underlying resources have been deleted.
+        /// After the deletion is accepted, the key no longer appears in the ListModelOperatorApiKeys response. During the cleanup period, DescribeModelOperatorApiKey returns Deleting and does not return the plaintext key or the endpoint. After the cleanup is complete, it returns a resource not found error.
+        /// Call the API by using the endpoint of the region to which the target key belongs, and specify an ApiKeyId greater than 0.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteModelOperatorApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteModelOperatorApiKeyResponse
+        /// </returns>
+        public async Task<DeleteModelOperatorApiKeyResponse> DeleteModelOperatorApiKeyWithOptionsAsync(DeleteModelOperatorApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyId))
+            {
+                query["ApiKeyId"] = request.ApiKeyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteModelOperatorApiKey",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteModelOperatorApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a model operator API key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified API key. A successful request indicates that the deletion intent is accepted and external credentials are asynchronously cleaned up by the system. This does not mean that all underlying resources have been deleted.
+        /// After the deletion is accepted, the key no longer appears in the ListModelOperatorApiKeys response. During the cleanup period, DescribeModelOperatorApiKey returns Deleting and does not return the plaintext key or the endpoint. After the cleanup is complete, it returns a resource not found error.
+        /// Call the API by using the endpoint of the region to which the target key belongs, and specify an ApiKeyId greater than 0.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteModelOperatorApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteModelOperatorApiKeyResponse
+        /// </returns>
+        public DeleteModelOperatorApiKeyResponse DeleteModelOperatorApiKey(DeleteModelOperatorApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteModelOperatorApiKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a model operator API key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified API key. A successful request indicates that the deletion intent is accepted and external credentials are asynchronously cleaned up by the system. This does not mean that all underlying resources have been deleted.
+        /// After the deletion is accepted, the key no longer appears in the ListModelOperatorApiKeys response. During the cleanup period, DescribeModelOperatorApiKey returns Deleting and does not return the plaintext key or the endpoint. After the cleanup is complete, it returns a resource not found error.
+        /// Call the API by using the endpoint of the region to which the target key belongs, and specify an ApiKeyId greater than 0.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteModelOperatorApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteModelOperatorApiKeyResponse
+        /// </returns>
+        public async Task<DeleteModelOperatorApiKeyResponse> DeleteModelOperatorApiKeyAsync(DeleteModelOperatorApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteModelOperatorApiKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a model operator service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Releases a specified model operator service. Standard deletion supports services in the active and locked states. You cannot initiate a new release for services in processing states such as locking or unlocking.
+        /// Delete all API keys under the service that have not been marked for deletion. Subscription services must be handled through the unsubscription or refund process and cannot be directly released by calling this operation. Deletion requests for pay-as-you-go services are accepted after the services pass the ownership, billing method, and associated key checks.
+        /// A successful request indicates that the deletion intent is accepted and the system asynchronously cleans up associated resources. It does not indicate that all underlying resources are deleted. You can call ListModelOperatorServices to query the deleting status. After all keys and the gateway are physically cleaned up, the service no longer appears in the list.
+        /// Use the endpoint of the region where the service resides to make the call. The Force parameter is not provided as a user parameter for this operation and cannot be used to bypass the associated key check.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteModelOperatorServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteModelOperatorServiceResponse
+        /// </returns>
+        public DeleteModelOperatorServiceResponse DeleteModelOperatorServiceWithOptions(DeleteModelOperatorServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteModelOperatorService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteModelOperatorServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a model operator service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Releases a specified model operator service. Standard deletion supports services in the active and locked states. You cannot initiate a new release for services in processing states such as locking or unlocking.
+        /// Delete all API keys under the service that have not been marked for deletion. Subscription services must be handled through the unsubscription or refund process and cannot be directly released by calling this operation. Deletion requests for pay-as-you-go services are accepted after the services pass the ownership, billing method, and associated key checks.
+        /// A successful request indicates that the deletion intent is accepted and the system asynchronously cleans up associated resources. It does not indicate that all underlying resources are deleted. You can call ListModelOperatorServices to query the deleting status. After all keys and the gateway are physically cleaned up, the service no longer appears in the list.
+        /// Use the endpoint of the region where the service resides to make the call. The Force parameter is not provided as a user parameter for this operation and cannot be used to bypass the associated key check.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteModelOperatorServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteModelOperatorServiceResponse
+        /// </returns>
+        public async Task<DeleteModelOperatorServiceResponse> DeleteModelOperatorServiceWithOptionsAsync(DeleteModelOperatorServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteModelOperatorService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteModelOperatorServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a model operator service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Releases a specified model operator service. Standard deletion supports services in the active and locked states. You cannot initiate a new release for services in processing states such as locking or unlocking.
+        /// Delete all API keys under the service that have not been marked for deletion. Subscription services must be handled through the unsubscription or refund process and cannot be directly released by calling this operation. Deletion requests for pay-as-you-go services are accepted after the services pass the ownership, billing method, and associated key checks.
+        /// A successful request indicates that the deletion intent is accepted and the system asynchronously cleans up associated resources. It does not indicate that all underlying resources are deleted. You can call ListModelOperatorServices to query the deleting status. After all keys and the gateway are physically cleaned up, the service no longer appears in the list.
+        /// Use the endpoint of the region where the service resides to make the call. The Force parameter is not provided as a user parameter for this operation and cannot be used to bypass the associated key check.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteModelOperatorServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteModelOperatorServiceResponse
+        /// </returns>
+        public DeleteModelOperatorServiceResponse DeleteModelOperatorService(DeleteModelOperatorServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteModelOperatorServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a model operator service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Releases a specified model operator service. Standard deletion supports services in the active and locked states. You cannot initiate a new release for services in processing states such as locking or unlocking.
+        /// Delete all API keys under the service that have not been marked for deletion. Subscription services must be handled through the unsubscription or refund process and cannot be directly released by calling this operation. Deletion requests for pay-as-you-go services are accepted after the services pass the ownership, billing method, and associated key checks.
+        /// A successful request indicates that the deletion intent is accepted and the system asynchronously cleans up associated resources. It does not indicate that all underlying resources are deleted. You can call ListModelOperatorServices to query the deleting status. After all keys and the gateway are physically cleaned up, the service no longer appears in the list.
+        /// Use the endpoint of the region where the service resides to make the call. The Force parameter is not provided as a user parameter for this operation and cannot be used to bypass the associated key check.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteModelOperatorServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteModelOperatorServiceResponse
+        /// </returns>
+        public async Task<DeleteModelOperatorServiceResponse> DeleteModelOperatorServiceAsync(DeleteModelOperatorServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteModelOperatorServiceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -29277,7 +29749,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Aggregates SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</para>
+        /// <para>Summarizes SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29340,7 +29812,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Aggregates SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</para>
+        /// <para>Summarizes SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29403,7 +29875,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Aggregates SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</para>
+        /// <para>Summarizes SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29426,7 +29898,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Aggregates SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</para>
+        /// <para>Summarizes SaaS DataUnit usage by scenario, project, and UTC hour or day. A single query can span up to 7 days, and the start time must be within the last 30 days. The statistics are based on the rules at the time of the query, not the historical actual billing records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34700,7 +35172,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model services.</para>
+        /// <para>Queries the list of model services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34746,7 +35218,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model services.</para>
+        /// <para>Queries the list of model services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34792,7 +35264,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model services.</para>
+        /// <para>Queries the list of model services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34810,7 +35282,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model services.</para>
+        /// <para>Queries the list of model services.</para>
         /// </summary>
         /// 
         /// <param name="request">

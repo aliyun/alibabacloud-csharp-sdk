@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>bound</para>
+                /// <para>bound：表示已绑定。</para>
                 /// </summary>
                 [NameInMap("BindStatus")]
                 [Validation(Required=false)]

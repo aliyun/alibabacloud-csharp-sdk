@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckHadoopDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The Hadoop path to be checked.</para>
+        /// <para>The Hadoop path to check.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

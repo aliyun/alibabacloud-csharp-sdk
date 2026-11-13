@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>The instance used by this account to log in is DBInstanceId. The name used to log in is AccountName.</para>
+        /// <para>该账号用来登录的实例为DBInstanceId。用来登录的名称为AccountName。</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]

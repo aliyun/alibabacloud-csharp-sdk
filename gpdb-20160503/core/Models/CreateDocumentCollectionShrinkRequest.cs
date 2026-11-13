@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>hnswflat: HNSW index without quantization compression (default).</description></item>
-        /// <item><description>novam: graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendations.</description></item>
-        /// <item><description>novad: partitioned index with RaBitQ quantization, suitable for large-scale low-cost retrieval scenarios.</description></item>
+        /// <item><description>novam: Graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendation.</description></item>
+        /// <item><description>novad: Partitioned index with rabitq quantization, suitable for large-scale, low-cost retrieval scenarios.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The name of the knowledge base to create.</para>
+        /// <para>The name of the document library to create.</para>
         /// <remarks>
-        /// <para>The name must comply with PostgreSQL object naming conventions.</para>
+        /// <para>The name must comply with the object naming conventions of PostgreSQL.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The vector dimensions. The default value is the dimension supported by the embedding model.</para>
+        /// <para>The vector dimensions. The default value is the dimension supported by the embedding algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -64,26 +64,26 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Dimension { get; set; }
 
         /// <summary>
-        /// <para>The embedding model. Default value: text-embedding-v3.</para>
+        /// <para>The embedding algorithm. Default value: text-embedding-v3.</para>
         /// <remarks>
-        /// <para>Supported models:</para>
+        /// <para>Supported algorithms:</para>
         /// <list type="bullet">
         /// <item><description>text-embedding-v3 (recommended, default): 1024, 768, or 512 dimensions</description></item>
-        /// <item><description>multimodal-embedding-v1 (recommended): 1024 dimensions, multimodal embedding model</description></item>
+        /// <item><description>multimodal-embedding-v1 (recommended): 1024 dimensions, multimodal embedding algorithm</description></item>
         /// <item><description>text-embedding-v1: 1536 dimensions</description></item>
         /// <item><description>text-embedding-v2: 1536 dimensions</description></item>
         /// <item><description>text2vec (not recommended): 1024 dimensions</description></item>
         /// <item><description>m3e-base (not recommended): 768 dimensions</description></item>
         /// <item><description>m3e-small (not recommended): 512 dimensions</description></item>
-        /// <item><description>clip-vit-b-32 (not recommended): CLIP ViT-B/32 model, 512 dimensions, image embedding model</description></item>
-        /// <item><description>clip-vit-b-16 (not recommended): CLIP ViT-B/16 model, 512 dimensions, image embedding model</description></item>
-        /// <item><description>clip-vit-l-14 (not recommended): CLIP ViT-L/14 model, 768 dimensions, image embedding model</description></item>
-        /// <item><description>clip-vit-l-14-336px (not recommended): CLIP ViT-L/14@336px model, 768 dimensions, image embedding model</description></item>
-        /// <item><description>clip-rn50 (not recommended): CLIP RN50 model, 1024 dimensions, image embedding model</description></item>
-        /// <item><description>clip-rn101 (not recommended): CLIP RN101 model, 512 dimensions, image embedding model</description></item>
-        /// <item><description>clip-rn50x4 (not recommended): CLIP RN50x4 model, 640 dimensions, image embedding model</description></item>
-        /// <item><description>clip-rn50x16 (not recommended): CLIP RN50x16 model, 768 dimensions, image embedding model</description></item>
-        /// <item><description>clip-rn50x64 (not recommended): CLIP RN50x64 model, 1024 dimensions, image embedding model</description></item>
+        /// <item><description>clip-vit-b-32 (not recommended): CLIP ViT-B/32 model, 512 dimensions, image embedding algorithm</description></item>
+        /// <item><description>clip-vit-b-16 (not recommended): CLIP ViT-B/16 model, 512 dimensions, image embedding algorithm</description></item>
+        /// <item><description>clip-vit-l-14 (not recommended): CLIP ViT-L/14 model, 768 dimensions, image embedding algorithm</description></item>
+        /// <item><description>clip-vit-l-14-336px (not recommended): CLIP ViT-L/14@336px model, 768 dimensions, image embedding algorithm</description></item>
+        /// <item><description>clip-rn50 (not recommended): CLIP RN50 model, 1024 dimensions, image embedding algorithm</description></item>
+        /// <item><description>clip-rn101 (not recommended): CLIP RN101 model, 512 dimensions, image embedding algorithm</description></item>
+        /// <item><description>clip-rn50x4 (not recommended): CLIP RN50x4 model, 640 dimensions, image embedding algorithm</description></item>
+        /// <item><description>clip-rn50x16 (not recommended): CLIP RN50x16 model, 768 dimensions, image embedding algorithm</description></item>
+        /// <item><description>clip-rn50x64 (not recommended): CLIP RN50x64 model, 1024 dimensions, image embedding algorithm</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>Specifies whether to enable knowledge graph construction. Default value: false.</para>
         /// <remarks>
-        /// <para>Before using this parameter, upgrade the instance to a version that supports the graph engine. (During the public preview, submit a ticket to upgrade the version.)</para>
+        /// <para>Before you use this parameter, the instance must be upgraded to a version that supports the graph engine. (During the public preview, submit a ticket to upgrade the version.)</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -121,14 +121,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EntityTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use mmap to build the HNSW index. Default value: 0. If data does not need to be deleted and you require high upload performance, set this parameter to 1.</para>
+        /// <para>Specifies whether to use mmap to build the HNSW index. Default value: 0. If data deletion is not required and high data upload speed is needed, we recommend that you set this parameter to 1.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: uses segment-page storage to build the index. This mode uses shared_buffer in PostgreSQL as cache and supports delete and update operations.</description></item>
-        /// <item><description>1: uses mmap to build the index. This mode does not support delete or update operations.</description></item>
+        /// <item><description>0: Uses the default segment-page storage to build the index. In this mode, shared_buffer in PostgreSQL can be used for caching, and operations such as deletion and update are supported.</description></item>
+        /// <item><description>1: Uses mmap to build the index. In this mode, operations such as deletion and update are not supported.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Notice: Only version 6.0 supports the ExternalStorage parameter. Version 7.0 does not support this parameter.</para>
+        /// <para>Notice: The ExternalStorage parameter is supported only in V6.0. It is not supported in V7.0.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? ExternalStorage { get; set; }
 
         /// <summary>
-        /// <para>The fields used for full-text retrieval. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</para>
+        /// <para>The fields used to retrieve data from the full-text index. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,page</para>
@@ -149,12 +149,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FullTextRetrievalFields { get; set; }
 
         /// <summary>
-        /// <para>The candidate set size when building an index with the HNSW algorithm. The value must be &gt;= 2*HNSW_M.</para>
+        /// <para>The size of the candidate set when building the index with the HNSW algorithm. The value must be greater than or equal to 2 × HNSW_M.</para>
         /// <remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AnalyticDB for PostgreSQL 6.0 instances: 40 to 4000.</description></item>
-        /// <item><description>AnalyticDB for PostgreSQL 7.0 instances: 4 to 1000. Default value: 64.</description></item>
+        /// <item><description>AnalyticDB for PostgreSQL V6.0 instances: 40 to 4000.</description></item>
+        /// <item><description>AnalyticDB for PostgreSQL V7.0 instances: 4 to 1000. Default value: 64.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -166,20 +166,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HnswEfConstruction { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of neighbors in the HNSW algorithm. This value is automatically set based on the vector dimensions. Manual configuration is generally not required.</para>
+        /// <para>The maximum number of neighbors in the HNSW algorithm. The operation automatically sets this value based on the vector dimensions. Manual configuration is generally not required.</para>
         /// <remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AnalyticDB for PostgreSQL 6.0 instances: 1 to 1000.</description></item>
-        /// <item><description>AnalyticDB for PostgreSQL 7.0 instances: 2 to 100. Default value: 16.</description></item>
+        /// <item><description>AnalyticDB for PostgreSQL V6.0 instances: 1 to 1000.</description></item>
+        /// <item><description>AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. Default value: 16.</description></item>
         /// </list>
         /// </remarks>
         /// <remarks>
         /// <para>Recommended values based on vector dimensions:</para>
         /// <list type="bullet">
-        /// <item><description>384 or fewer: 16</description></item>
-        /// <item><description>Greater than 384 and up to 768: 32</description></item>
-        /// <item><description>Greater than 768 and up to 1024: 64</description></item>
+        /// <item><description>Less than or equal to 384: 16</description></item>
+        /// <item><description>Greater than 384 and less than or equal to 768: 32</description></item>
+        /// <item><description>Greater than 768 and less than or equal to 1024: 64</description></item>
         /// <item><description>Greater than 1024: 128</description></item>
         /// </list>
         /// </remarks>
@@ -192,9 +192,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? HnswM { get; set; }
 
         /// <summary>
-        /// <para>The LLM model name. Valid values:</para>
+        /// <para>The name of the LLM. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>knowledge-extract-standard: default value.</description></item>
+        /// <item><description>knowledge-extract-standard: Default value.</description></item>
         /// <item><description>knowledge-extract-mini<remarks>
         /// <para>This parameter takes effect only when knowledge graph construction is enabled.</para>
         /// </remarks>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string LLMModel { get; set; }
 
         /// <summary>
-        /// <para>The language used for knowledge graph construction. Valid values:</para>
+        /// <para>The language used to construct the knowledge graph. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Simplified Chinese: Simplified Chinese. Default value.</description></item>
         /// <item><description>English: English.<remarks>
@@ -251,16 +251,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ManagerAccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The metadata of vector data, in the format of a JSON string representing a MAP. The key represents the field name, and the value represents the data type.</para>
+        /// <para>The metadata of the vector data, which is a JSON string in MAP format. The key represents the field name, and the value represents the data type.</para>
         /// <remarks>
         /// <para>Supported data types:</para>
         /// <list type="bullet">
-        /// <item><description>For the list of data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</description></item>
+        /// <item><description>For a list of data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</description></item>
         /// <item><description>The money type is not supported.</description></item>
         /// </list>
         /// </remarks>
         /// <remarks>
-        /// <para>Warning: The following fields are reserved and cannot be used: id, vector, doc_name, content, loader_metadata, source, and to_tsvector.</para>
+        /// <para>Warning: The id, vector, doc_name, content, loader_metadata, source, and to_tsvector fields are reserved and cannot be used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -281,12 +281,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MetadataIndices { get; set; }
 
         /// <summary>
-        /// <para>The distance metric used for building vector indexes.</para>
+        /// <para>The distance metric used when building the vector index.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>l2</b>: Euclidean distance.</description></item>
-        /// <item><description><b>ip</b>: inner product distance.</description></item>
-        /// <item><description><b>cosine</b> (default): cosine similarity.</description></item>
+        /// <item><description><b>ip</b>: Dot product (inner product) distance.</description></item>
+        /// <item><description><b>cosine</b> (default): Cosine similarity.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query the list of namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace, or call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the namespace list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tokenizer used for full-text retrieval. Default value: zh_cn.</para>
+        /// <para>The tokenizer used to retrieve data from the full-text index. Default value: zh_cn.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh_cn</para>
@@ -324,10 +324,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Parser { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Product Quantization (PQ) algorithm acceleration for the index. We recommend enabling this feature when the data volume exceeds 500,000. Valid values:</para>
+        /// <para>Specifies whether to enable the Product Quantization (PQ) algorithm to accelerate index building. It is recommended to enable this feature when the data volume exceeds 500,000. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: disabled.</description></item>
-        /// <item><description>1: enabled (default).</description></item>
+        /// <item><description>0: Disable.</description></item>
+        /// <item><description>1: Enable (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RelationshipTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The metadata fields used for building sparse vectors. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</para>
+        /// <para>The metadata fields used to build sparse vectors. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,abstract</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SparseRetrievalFields { get; set; }
 
         /// <summary>
-        /// <para>The sparse vector index configuration. If specified, a sparse vector index is created.</para>
+        /// <para>The sparse vector index configuration. If this parameter is specified, a sparse vector index is created.</para>
         /// </summary>
         [NameInMap("SparseVectorIndexConfig")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Supabase project that corresponds to the primary branch.</para>
+        /// <para>The ID of the Supabase project to which the main branch belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>

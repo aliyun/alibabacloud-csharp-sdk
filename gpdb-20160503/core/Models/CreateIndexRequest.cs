@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;b-tree&quot;:{&quot;fillFactor&quot;:90}} or {&quot;gin&quot;:{&quot;fastUpdate&quot;:false}}</para>
+        /// <para>{&quot;b-tree&quot;:{&quot;fillFactor&quot;:90}} 或者 {&quot;gin&quot;:{&quot;fastUpdate&quot;:false}}</para>
         /// </summary>
         [NameInMap("IndexConfig")]
         [Validation(Required=false)]

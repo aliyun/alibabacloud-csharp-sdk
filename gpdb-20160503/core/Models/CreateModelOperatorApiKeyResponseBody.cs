@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns Creating after the creation request is accepted. The plaintext and endpoint are not returned.</para>
+        /// <para>The acceptance status of the creation request. If the request is successfully accepted, the value is always Creating, which does not indicate that the API key is available. Call DescribeModelOperatorApiKey or ListModelOperatorApiKeys to query the subsequent status. You can obtain the endpoint only when the status is Running, and obtain the plaintext key by calling DescribeModelOperatorApiKey. Each call to this operation creates a new API key. Do not repeatedly call this operation to check the progress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>

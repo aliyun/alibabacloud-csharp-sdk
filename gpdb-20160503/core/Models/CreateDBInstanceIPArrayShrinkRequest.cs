@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceIPArrayShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the target region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The attribute value of the IP address whitelist group.</para>
+        /// <para>The property value of the IP address whitelist group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>taffyFish</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string IPArrayName { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in the IP address whitelist group. A maximum of 1,000 IP addresses are supported.</para>
+        /// <para>The list of IP addresses in the IP address whitelist group. You can specify up to 1,000 IP addresses.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SecurityIPList")]

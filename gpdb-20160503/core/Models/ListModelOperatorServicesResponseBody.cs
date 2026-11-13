@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListModelOperatorServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,15 +57,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the model operator service. Valid values:</para>
+            /// <para>The lifecycle status of the model operator service. The return value from the server is retained. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: Normal.</description></item>
+            /// <item><description>active: Running.</description></item>
             /// <item><description>locking: Locking.</description></item>
             /// <item><description>locked: Locked.</description></item>
             /// <item><description>unlocking: Unlocking.</description></item>
-            /// <item><description>deleting: Releasing.</description></item>
+            /// <item><description>deleting: Deleting. The underlying resources are still being asynchronously cleaned up.</description></item>
             /// </list>
-            /// <para>This status indicates the processing status of the control plane and does not mean that data plane propagation of the MO gateway is complete.</para>
+            /// <para>This field indicates the service status, which differs from the Creating, Running, Locked, and Deleting statuses of an API key. A transitional status does not indicate that the operation is complete. After a service is deleted, it no longer appears in the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>

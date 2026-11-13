@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CheckHadoopNetConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message. If the connection fails, an error message is returned. Otherwise, an empty string is returned.</para>
+        /// <para>The returned message. If the connection fails, an error message is returned. Otherwise, an empty string is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>connection timeout</para>

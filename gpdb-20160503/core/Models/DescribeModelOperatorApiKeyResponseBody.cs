@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModelOperatorApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The content of the API key.</para>
+        /// <para>The plaintext API key. This field is returned only when Status is Running.</para>
         /// 
         /// <b>Example:</b>
         /// <para>QEDGOTAJOG</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The endpoint.</para>
+        /// <para>The endpoint of the model operator service. This field is returned only when Status is Running.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxx">https://xxxx</a></para>
@@ -70,7 +70,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the API key. Valid values: Creating, Running, Locked, and Deleting.</para>
+        /// <para>The status of the API key. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Creating: The API key is being created.</description></item>
+        /// <item><description>Running: The API key is running.</description></item>
+        /// <item><description>Locked: The API key is locked and cannot be used to call the model operator service.</description></item>
+        /// <item><description>Deleting: The API key is being deleted. You can still query it by calling this operation, but it is no longer displayed in the results of ListModelOperatorApiKeys.</description></item>
+        /// </list>
+        /// <para>The plaintext API key and endpoint are returned only when Status is Running. After the deletion is complete, this operation returns a resource not found error. The status indicates the processing result of the control plane. A short propagation delay may occur before the status takes effect on the data plane.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
