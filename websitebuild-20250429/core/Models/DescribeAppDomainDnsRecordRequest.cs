@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DescribeAppDomainDnsRecordRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID.</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250821114240000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Domain name.</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rayihealth.cn</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The purpose of querying DNS configuration.</para>
+        /// <para>The purpose of querying the DNS configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>restore</para>

@@ -1775,12 +1775,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously initiates a conversation with an AI employee.</para>
+        /// <para>Asynchronously initiates a conversation with an AI agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates a WanXiaoZhi 2.0 AI conversation.</para>
+        /// <para>Initiates a Wanxiaozhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1844,12 +1844,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously initiates a conversation with an AI employee.</para>
+        /// <para>Asynchronously initiates a conversation with an AI agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates a WanXiaoZhi 2.0 AI conversation.</para>
+        /// <para>Initiates a Wanxiaozhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1913,12 +1913,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously initiates a conversation with an AI employee.</para>
+        /// <para>Asynchronously initiates a conversation with an AI agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates a WanXiaoZhi 2.0 AI conversation.</para>
+        /// <para>Initiates a Wanxiaozhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1936,12 +1936,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously initiates a conversation with an AI employee.</para>
+        /// <para>Asynchronously initiates a conversation with an AI agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates a WanXiaoZhi 2.0 AI conversation.</para>
+        /// <para>Initiates a Wanxiaozhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1959,12 +1959,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AI employee session.</para>
+        /// <para>Creates an AI agent session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI session for Wan Xiaozhi 2.0.</para>
+        /// <para>Creates an AI session in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2006,12 +2006,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AI employee session.</para>
+        /// <para>Creates an AI agent session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI session for Wan Xiaozhi 2.0.</para>
+        /// <para>Creates an AI session in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2053,12 +2053,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AI employee session.</para>
+        /// <para>Creates an AI agent session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI session for Wan Xiaozhi 2.0.</para>
+        /// <para>Creates an AI session in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2076,12 +2076,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AI employee session.</para>
+        /// <para>Creates an AI agent session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AI session for Wan Xiaozhi 2.0.</para>
+        /// <para>Creates an AI session in Wanxiaozhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3583,7 +3583,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the Wanxiaozhi inspiration value service.</para>
+        /// <para>Enables the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3630,7 +3630,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the Wanxiaozhi inspiration value service.</para>
+        /// <para>Enables the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3677,7 +3677,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the Wanxiaozhi inspiration value service.</para>
+        /// <para>Enables the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3700,7 +3700,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the Wanxiaozhi inspiration value service.</para>
+        /// <para>Enables the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6611,7 +6611,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</para>
+        /// <para>Queries the DNS resolution records of a website. Supports CNAME and verification resolution queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6661,7 +6661,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</para>
+        /// <para>Queries the DNS resolution records of a website. Supports CNAME and verification resolution queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6711,7 +6711,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</para>
+        /// <para>Queries the DNS resolution records of a website. Supports CNAME and verification resolution queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6729,7 +6729,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</para>
+        /// <para>Queries the DNS resolution records of a website. Supports CNAME and verification resolution queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6899,7 +6899,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a plug-in configuration.</para>
+        /// <para>Modifies the plug-in configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6957,7 +6957,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a plug-in configuration.</para>
+        /// <para>Modifies the plug-in configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7015,7 +7015,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a plug-in configuration.</para>
+        /// <para>Modifies the plug-in configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7033,7 +7033,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a plug-in configuration.</para>
+        /// <para>Modifies the plug-in configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7479,12 +7479,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a code workspace.</para>
+        /// <para>Queries the details of a code workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7526,12 +7526,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a code workspace.</para>
+        /// <para>Queries the details of a code workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7573,12 +7573,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a code workspace.</para>
+        /// <para>Queries the details of a code workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7596,12 +7596,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a code workspace.</para>
+        /// <para>Queries the details of a code workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries application instance information.</para>
+        /// <para>Queries the application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9199,20 +9199,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plugin configuration of a Wanxiaozhi site for internal services and returns an encrypted configuration string.</para>
+        /// <para>Retrieves the plugin configuration of a Wanxiaozhi site for internal services and returns the encrypted configuration string.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The service design of this operation is exclusively for internal platform services to read the plugin configuration of a specific site by using a service identity.</description></item>
+        /// <item><description>This API operation is used in internal platform service design to read the plugin configuration of a specific site by using a service identity.</description></item>
         /// <item><description>Authentication relies entirely on gateway RAM control and is available only to trusted internal service accounts.</description></item>
-        /// <item><description>If the specified plugin is not installed on the site or the request parameters are empty, the operation returns a success status with an empty Module. Clients that invoke the operation should treat this as unconfigured.</description></item>
-        /// <item><description>The returned <c>PluginConfig</c> field contains an AES-encrypted JSON character string. Clients that invoke the operation must perform decryption before use.</description></item>
-        /// <item><description>To invoke in user mode, continue to use the <c>GetAppPluginConfig</c> operation instead of this operation.</description></item>
-        /// <item><description>The <c>BizId</c> and <c>PluginId</c> parameters are both required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module. This is a fault-tolerance behavior, and clients that invoke the operation should not rely on it.</description></item>
-        /// <item><description>This operation supports HTTPS and RPC-style POST requests, with parameters passed through formData.</description></item>
+        /// <item><description>If the specified plugin is not installed on the site or the request parameters are empty, the API operation returns a success status but the Module field is empty. The invoker must handle this as an unconfigured state.</description></item>
+        /// <item><description>The returned PluginConfig field contains an AES-encrypted JSON character string. The invoker must perform decryption before use.</description></item>
+        /// <item><description>To invoke in user mode, continue to use the GetAppPluginConfig API operation instead of this API operation.</description></item>
+        /// <item><description>The BizId and PluginId parameters are required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module field. This is a fault-tolerance behavior, and invokers must not rely on it.</description></item>
+        /// <item><description>This API operation supports HTTPS and RPC-style POST requests. Parameters are passed by using form data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9259,20 +9259,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plugin configuration of a Wanxiaozhi site for internal services and returns an encrypted configuration string.</para>
+        /// <para>Retrieves the plugin configuration of a Wanxiaozhi site for internal services and returns the encrypted configuration string.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The service design of this operation is exclusively for internal platform services to read the plugin configuration of a specific site by using a service identity.</description></item>
+        /// <item><description>This API operation is used in internal platform service design to read the plugin configuration of a specific site by using a service identity.</description></item>
         /// <item><description>Authentication relies entirely on gateway RAM control and is available only to trusted internal service accounts.</description></item>
-        /// <item><description>If the specified plugin is not installed on the site or the request parameters are empty, the operation returns a success status with an empty Module. Clients that invoke the operation should treat this as unconfigured.</description></item>
-        /// <item><description>The returned <c>PluginConfig</c> field contains an AES-encrypted JSON character string. Clients that invoke the operation must perform decryption before use.</description></item>
-        /// <item><description>To invoke in user mode, continue to use the <c>GetAppPluginConfig</c> operation instead of this operation.</description></item>
-        /// <item><description>The <c>BizId</c> and <c>PluginId</c> parameters are both required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module. This is a fault-tolerance behavior, and clients that invoke the operation should not rely on it.</description></item>
-        /// <item><description>This operation supports HTTPS and RPC-style POST requests, with parameters passed through formData.</description></item>
+        /// <item><description>If the specified plugin is not installed on the site or the request parameters are empty, the API operation returns a success status but the Module field is empty. The invoker must handle this as an unconfigured state.</description></item>
+        /// <item><description>The returned PluginConfig field contains an AES-encrypted JSON character string. The invoker must perform decryption before use.</description></item>
+        /// <item><description>To invoke in user mode, continue to use the GetAppPluginConfig API operation instead of this API operation.</description></item>
+        /// <item><description>The BizId and PluginId parameters are required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module field. This is a fault-tolerance behavior, and invokers must not rely on it.</description></item>
+        /// <item><description>This API operation supports HTTPS and RPC-style POST requests. Parameters are passed by using form data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9319,20 +9319,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plugin configuration of a Wanxiaozhi site for internal services and returns an encrypted configuration string.</para>
+        /// <para>Retrieves the plugin configuration of a Wanxiaozhi site for internal services and returns the encrypted configuration string.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The service design of this operation is exclusively for internal platform services to read the plugin configuration of a specific site by using a service identity.</description></item>
+        /// <item><description>This API operation is used in internal platform service design to read the plugin configuration of a specific site by using a service identity.</description></item>
         /// <item><description>Authentication relies entirely on gateway RAM control and is available only to trusted internal service accounts.</description></item>
-        /// <item><description>If the specified plugin is not installed on the site or the request parameters are empty, the operation returns a success status with an empty Module. Clients that invoke the operation should treat this as unconfigured.</description></item>
-        /// <item><description>The returned <c>PluginConfig</c> field contains an AES-encrypted JSON character string. Clients that invoke the operation must perform decryption before use.</description></item>
-        /// <item><description>To invoke in user mode, continue to use the <c>GetAppPluginConfig</c> operation instead of this operation.</description></item>
-        /// <item><description>The <c>BizId</c> and <c>PluginId</c> parameters are both required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module. This is a fault-tolerance behavior, and clients that invoke the operation should not rely on it.</description></item>
-        /// <item><description>This operation supports HTTPS and RPC-style POST requests, with parameters passed through formData.</description></item>
+        /// <item><description>If the specified plugin is not installed on the site or the request parameters are empty, the API operation returns a success status but the Module field is empty. The invoker must handle this as an unconfigured state.</description></item>
+        /// <item><description>The returned PluginConfig field contains an AES-encrypted JSON character string. The invoker must perform decryption before use.</description></item>
+        /// <item><description>To invoke in user mode, continue to use the GetAppPluginConfig API operation instead of this API operation.</description></item>
+        /// <item><description>The BizId and PluginId parameters are required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module field. This is a fault-tolerance behavior, and invokers must not rely on it.</description></item>
+        /// <item><description>This API operation supports HTTPS and RPC-style POST requests. Parameters are passed by using form data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9351,20 +9351,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the plugin configuration of a Wanxiaozhi site for internal services and returns an encrypted configuration string.</para>
+        /// <para>Retrieves the plugin configuration of a Wanxiaozhi site for internal services and returns the encrypted configuration string.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The service design of this operation is exclusively for internal platform services to read the plugin configuration of a specific site by using a service identity.</description></item>
+        /// <item><description>This API operation is used in internal platform service design to read the plugin configuration of a specific site by using a service identity.</description></item>
         /// <item><description>Authentication relies entirely on gateway RAM control and is available only to trusted internal service accounts.</description></item>
-        /// <item><description>If the specified plugin is not installed on the site or the request parameters are empty, the operation returns a success status with an empty Module. Clients that invoke the operation should treat this as unconfigured.</description></item>
-        /// <item><description>The returned <c>PluginConfig</c> field contains an AES-encrypted JSON character string. Clients that invoke the operation must perform decryption before use.</description></item>
-        /// <item><description>To invoke in user mode, continue to use the <c>GetAppPluginConfig</c> operation instead of this operation.</description></item>
-        /// <item><description>The <c>BizId</c> and <c>PluginId</c> parameters are both required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module. This is a fault-tolerance behavior, and clients that invoke the operation should not rely on it.</description></item>
-        /// <item><description>This operation supports HTTPS and RPC-style POST requests, with parameters passed through formData.</description></item>
+        /// <item><description>If the specified plugin is not installed on the site or the request parameters are empty, the API operation returns a success status but the Module field is empty. The invoker must handle this as an unconfigured state.</description></item>
+        /// <item><description>The returned PluginConfig field contains an AES-encrypted JSON character string. The invoker must perform decryption before use.</description></item>
+        /// <item><description>To invoke in user mode, continue to use the GetAppPluginConfig API operation instead of this API operation.</description></item>
+        /// <item><description>The BizId and PluginId parameters are required in the contract. Passing empty character strings is not blocked by the gateway but causes the backend to return an empty Module field. This is a fault-tolerance behavior, and invokers must not rely on it.</description></item>
+        /// <item><description>This API operation supports HTTPS and RPC-style POST requests. Parameters are passed by using form data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11555,7 +11555,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the China Internet Content Provider (ICP) filing information of a domain name.</para>
+        /// <para>Queries the ICP filing information for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11601,7 +11601,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the China Internet Content Provider (ICP) filing information of a domain name.</para>
+        /// <para>Queries the ICP filing information for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11647,7 +11647,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the China Internet Content Provider (ICP) filing information of a domain name.</para>
+        /// <para>Queries the ICP filing information for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11665,7 +11665,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the China Internet Content Provider (ICP) filing information of a domain name.</para>
+        /// <para>Queries the ICP filing information for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11688,7 +11688,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11739,7 +11739,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11790,7 +11790,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11813,7 +11813,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the Supabase instance configuration information corresponding to a resource.</para>
+        /// <para>Queries the configuration information of the Supabase instance associated with the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13171,7 +13171,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Introspection analysis of免登 accessToken</para>
+        /// <para>Introspects the logon-free access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13217,7 +13217,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Introspection analysis of免登 accessToken</para>
+        /// <para>Introspects the logon-free access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13263,7 +13263,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Introspection analysis of免登 accessToken</para>
+        /// <para>Introspects the logon-free access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13281,7 +13281,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Introspection analysis of免登 accessToken</para>
+        /// <para>Introspects the logon-free access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14087,12 +14087,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Website Build Product Details</para>
+        /// <para>Queries the details of website builder products.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get QR code plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14138,12 +14138,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Website Build Product Details</para>
+        /// <para>Queries the details of website builder products.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get QR code plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14189,12 +14189,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Website Build Product Details</para>
+        /// <para>Queries the details of website builder products.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get QR code plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14212,12 +14212,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Website Build Product Details</para>
+        /// <para>Queries the details of website builder products.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get QR code plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14978,6 +14978,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             {
                 query["BizIds"] = request.BizIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeBegin))
             {
                 query["EndTimeBegin"] = request.EndTimeBegin;
@@ -15085,6 +15089,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizIdsShrink))
             {
                 query["BizIds"] = request.BizIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeBegin))
             {
@@ -19515,7 +19523,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates an application by a partner.</para>
+        /// <para>Operates a partner application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19561,7 +19569,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates an application by a partner.</para>
+        /// <para>Operates a partner application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19607,7 +19615,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates an application by a partner.</para>
+        /// <para>Operates a partner application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19625,7 +19633,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates an application by a partner.</para>
+        /// <para>Operates a partner application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23603,7 +23611,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Processes a refund for a channel partner website building service.</para>
+        /// <para>Issues a refund for a channel partner\&quot;s website building service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23657,7 +23665,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Processes a refund for a channel partner website building service.</para>
+        /// <para>Issues a refund for a channel partner\&quot;s website building service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23711,7 +23719,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Processes a refund for a channel partner website building service.</para>
+        /// <para>Issues a refund for a channel partner\&quot;s website building service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23729,7 +23737,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Processes a refund for a channel partner website building service.</para>
+        /// <para>Issues a refund for a channel partner\&quot;s website building service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25279,12 +25287,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save Requirement</para>
+        /// <para>Saves a requirement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get code generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25332,12 +25340,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save Requirement</para>
+        /// <para>Saves a requirement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get code generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25385,12 +25393,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save Requirement</para>
+        /// <para>Saves a requirement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get code generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25408,12 +25416,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save Requirement</para>
+        /// <para>Saves a requirement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get code generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27847,7 +27855,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of a website building instance.</para>
+        /// <para>Changes the specifications of a website builder instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27950,7 +27958,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of a website building instance.</para>
+        /// <para>Changes the specifications of a website builder instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28053,7 +28061,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of a website building instance.</para>
+        /// <para>Changes the specifications of a website builder instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28076,7 +28084,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of a website building instance.</para>
+        /// <para>Changes the specifications of a website builder instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

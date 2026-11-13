@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeletedTime { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddddwww</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>文件名</para>
+        /// <para>File name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage size.</para>
+        /// <para>The storage space size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23M</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string StorageSize { get; set; }
 
         /// <summary>
-        /// <para>The file name extension.</para>
+        /// <para>The file extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>png</para>

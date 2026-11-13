@@ -177,6 +177,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The business extension metadata. The value must be a JSON string in map format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;appId&quot;:&quot;WS20260510153620000001&quot;,&quot;inputTokens&quot;:1120,&quot;outputTokens&quot;:32}</para>
                 /// </summary>
                 [NameInMap("MetaData")]
                 [Validation(Required=false)]

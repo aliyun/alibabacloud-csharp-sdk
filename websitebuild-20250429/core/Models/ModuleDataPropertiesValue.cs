@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModuleDataPropertiesValue : TeaModel {
         /// <summary>
-        /// <para>Property code, such as &quot;aliyun_commodity_agreement&quot;</para>
+        /// <para>The property code, such as &quot;aliyun_commodity_agreement&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>placeholder</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Property value list</para>
+        /// <para>The list of property values.</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The application type. Valid values: </para>
-        /// <list type="bullet">
-        /// <item><description>PC_WebSite: web application. </description></item>
-        /// <item><description>Mini_Program: mini program. 
-        /// If this parameter is not specified or left empty, applications are not filtered by type. For compatibility, historical missing, NULL, or empty types are treated as PC_WebSite.</description></item>
-        /// </list>
+        /// <para>The application type. Valid values: PC_WebSite for web applications, and Mini_Program for mini programs. If this parameter is not specified or is left empty, no filtering by type is applied. Historical missing, NULL, or empty types are treated as PC_WebSite for compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PC_WebSite</para>
@@ -42,7 +37,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<string> BizIds { get; set; }
 
         /// <summary>
-        /// <para>The expiration start time.</para>
+        /// <para>Used only in the CONTENT_CREATION pattern. This parameter performs an exact match on the fully attached domain name and is mutually exclusive with Query. It does not include the protocol, port, or path.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
+        /// </summary>
+        [NameInMap("Domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
+
+        /// <summary>
+        /// <para>The start time of the expiration period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-18T14:30:00Z</para>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The expiration end time.</para>
+        /// <para>The end time of the expiration period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-31T14:30:00Z</para>
@@ -82,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no next query exists.</para>
+        /// <para>The token used to start the next query. This parameter is empty if no subsequent query is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -92,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort field.</para>
+        /// <para>The field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -132,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query parameter.</para>
+        /// <para>The query parameter. In CONTENT_CREATION mode, this parameter matches the application name or keywords of valid bound domain names and is mutually exclusive with Domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;RequestId\&quot;:\&quot;\&quot;}</para>
@@ -142,10 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The query mode. Valid values: </para>
-        /// <list type="bullet">
-        /// <item><description>CONTENT_CREATION: specifies a lightweight query for the content creation site selector. It queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</description></item>
-        /// </list>
+        /// <para>The query mode. CONTENT_CREATION indicates a lightweight query for the content creation site selector. It queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CONTENT_CREATION</para>
@@ -155,7 +157,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string QueryMode { get; set; }
 
         /// <summary>
-        /// <para>The status range.</para>
+        /// <para>The status scope.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]

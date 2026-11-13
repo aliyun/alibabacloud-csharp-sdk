@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The plug-in description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>根据关键字查询相关的Github Repositories</para>
+        /// <para>Query relevant GitHub repositories based on keywords</para>
         /// </summary>
         [NameInMap("PluginDesc")]
         [Validation(Required=false)]

@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <summary>
         /// <para>The image category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: illustrations or article images.</description></item>
-        /// <item><description>banner: background images or carousel images.</description></item>
-        /// <item><description>goods: product or service images.</description></item>
+        /// <item><description>normal: Illustrations and article images.</description></item>
+        /// <item><description>banner: Background images and carousel images.</description></item>
+        /// <item><description>goods: Product or service images.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,13 +45,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ImageCategory { get; set; }
 
         /// <summary>
-        /// <para>The aspect ratio of the image. Valid values:
-        /// &quot;16:9&quot;
-        /// &quot;4:3&quot;
-        /// &quot;2:1&quot;
-        /// &quot;1:1&quot;
-        /// &quot;3:4&quot;
-        /// &quot;9:16&quot;.</para>
+        /// <para>The aspect ratio of the image. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>&quot;16:9&quot;</description></item>
+        /// <item><description>&quot;4:3&quot;</description></item>
+        /// <item><description>&quot;2:1&quot;</description></item>
+        /// <item><description>&quot;1:1&quot;</description></item>
+        /// <item><description>&quot;3:4&quot;</description></item>
+        /// <item><description>&quot;9:16&quot;</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>16:9</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxHeight { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Maximum value: 100. Default value: 20.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MinWidth { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters do not take effect, and the TotalCount value in the response is invalid.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous call to this operation. You do not need to set this parameter for the first call. If NextToken is set, the PageSize and PageNumber request parameters become invalid, and the TotalCount value in the response is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>The number of returned results. Default value: 10.</para>
+        /// <para>The number of results to return. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The start position of the returned results. Valid values: 0 to 499. Default value: 0.</para>
+        /// <para>The starting position of the returned results. Valid values: 0 to 499. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -158,13 +160,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The description text used to search for images.</para>
-        /// <remarks>
-        /// <para>Maximum length: 512 characters.</para>
-        /// </remarks>
+        /// <para>The descriptive text used to search for images. A maximum of 512 characters are supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>卫浴五金产品，表面采用拉丝不锈钢材质，整体色调为现代银灰色，呈现简约且富有质感的风格。产品包括淋浴花洒、水龙头及毛巾架等配件，均具备防锈、耐腐蚀性能，适用于潮湿环境。各部件连接处设计精密，配有隐藏式螺丝结构，提升整体美观度。水龙头和花洒喷头支持多模式出水，把手操作顺滑，符合人体工学设计。所有五金件通过国家节水认证，支持冷热水接入，安装方式为壁挂式。</para>
+        /// <para>Bathroom hardware products, featuring a brushed stainless steel surface with an overall modern silver-gray tone, presenting a minimalist and textured style. The products include accessories such as showerheads, faucets, and towel racks, all of which are rust-proof and corrosion-resistant, making them suitable for humid environments. The joints between components are precisely designed with hidden screw structures to enhance overall aesthetics. The faucets and showerheads support multiple water flow modes, and the handles operate smoothly, conforming to ergonomic design. All hardware fittings have passed the national water-saving certification, support both cold and hot water connections, and are wall-mounted</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]

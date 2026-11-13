@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The list of subfolders.</para>
+        /// <para>The list of child folders.</para>
         /// </summary>
         [NameInMap("Children")]
         [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>图片管理</para>
+        /// <para>Image Management</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sort number.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

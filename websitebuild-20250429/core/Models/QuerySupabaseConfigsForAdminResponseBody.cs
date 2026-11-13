@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QuerySupabaseConfigsForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public QuerySupabaseConfigsForAdminResponseBodyModule Module { get; set; }
         public class QuerySupabaseConfigsForAdminResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The scope. Valid values: subUser and owner.</para>
+            /// <para>The mapping between Supabase configuration items and configuration values.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;SMS_ALIYUN_SIGN_NAME&quot;:&quot;示例签名&quot;}</para>
+            /// <para>{&quot;SMS_ALIYUN_SIGN_NAME&quot;:&quot;Sample signature&quot;}</para>
             /// </summary>
             [NameInMap("Configs")]
             [Validation(Required=false)]

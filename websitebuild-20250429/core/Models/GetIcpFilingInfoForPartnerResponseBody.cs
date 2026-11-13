@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? Recorded { get; set; }
 
             /// <summary>
-            /// <para>The website ICP filing number associated with the domain name.</para>
+            /// <para>The website ICP filing number corresponding to the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>湘ICP备14011526号-3A</para>

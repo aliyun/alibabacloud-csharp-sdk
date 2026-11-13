@@ -120,6 +120,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The extended fields, such as unsupportedReason.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;unsupportedReason&quot;:&quot;当前实例不支持该商品。&quot;}</para>
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]

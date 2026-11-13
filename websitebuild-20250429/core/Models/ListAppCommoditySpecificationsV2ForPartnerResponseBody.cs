@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppCommoditySpecificationsV2ForPartnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied detail.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The app name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> error message of the response parameters.</para>
+        /// <para>The dynamic error message used to replace <c>%s</c> in the error message returned in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,8 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The number of results per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -98,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The request result.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -115,10 +114,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The default values.</para>
+                /// <para>The component mapping for the product specifications, where the key is the component code.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;ModuleAttrStatus&quot;:1,&quot;Properties&quot;:{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;中国香港&quot;}]}}}}</para>
+                /// <para>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;ModuleAttrStatus&quot;:1,&quot;Properties&quot;:{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;China (Hong Kong)&quot;}]}}}}</para>
                 /// </summary>
                 [NameInMap("Components")]
                 [Validation(Required=false)]
@@ -128,14 +127,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>文件名</para>
+                /// <para>File name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The duration.</para>
+                /// <para>The property mapping for the product specifications, where the key is the property code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;version&quot;:{&quot;Code&quot;:&quot;version&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;V2.0&quot;}]}}</para>
@@ -164,10 +163,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The default values.</para>
+                /// <para>The component mapping for the product specifications, where the key is the component code.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;ModuleAttrStatus&quot;:1,&quot;Properties&quot;:{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;部署地区&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;中国香港&quot;}]}}}}</para>
+                /// <para>{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;ModuleAttrStatus&quot;:1,&quot;Properties&quot;:{&quot;deploy_area&quot;:{&quot;Code&quot;:&quot;deploy_area&quot;,&quot;Name&quot;:&quot;Deployment region&quot;,&quot;Value&quot;:&quot;HongKong&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;HongKong&quot;,&quot;Name&quot;:&quot;China (Hong Kong)&quot;}]}}}}</para>
                 /// </summary>
                 [NameInMap("Components")]
                 [Validation(Required=false)]
@@ -184,7 +183,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The frame rate.</para>
+                /// <para>The property mapping for the product specifications, where the key is the property code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;version&quot;:{&quot;Code&quot;:&quot;version&quot;,&quot;Values&quot;:[{&quot;Value&quot;:&quot;V2.0&quot;}]}}</para>
@@ -196,7 +195,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether there is a next page.</para>
+            /// <para>Indicates whether a next page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -206,7 +205,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -216,7 +215,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether there is a previous page.</para>
+            /// <para>Indicates whether a previous page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -226,14 +225,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to pagination limits, the server processes a maximum of the most recent 1000 records per query. If the results exceed 1000, <b>ResultLimit</b> is <b>true</b>, and you need to narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is set to <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is set to <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
             public bool? ResultLimit { get; set; }
 
             /// <summary>
-            /// <para>The total number of items.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -255,7 +254,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty when there is no next query.</para>
+        /// <para>The token used to start the next query. This value is empty if there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -288,7 +287,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

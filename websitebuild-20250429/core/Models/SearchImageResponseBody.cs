@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SearchImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</para>
+        /// <para>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error code list in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public List<SearchImageResponseBodyImageResponseImageList> ImageList { get; set; }
             public class SearchImageResponseBodyImageResponseImageList : TeaModel {
                 /// <summary>
-                /// <para>The descriptive tones identified from the image.</para>
+                /// <para>The descriptive tones recognized from the image.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>冷色调 蓝色</para>
+                /// <para>Cool tone, blue</para>
                 /// </summary>
                 [NameInMap("DescriptiveTones")]
                 [Validation(Required=false)]
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <summary>
                 /// <para>The image category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>normal: illustrations or article images.</description></item>
-                /// <item><description>banner: background images or carousel images.</description></item>
-                /// <item><description>goods: product or service images.</description></item>
+                /// <item><description>normal: Illustrations and article images.</description></item>
+                /// <item><description>banner: Background images and carousel images.</description></item>
+                /// <item><description>goods: Product or service images.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The image tags.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>日出、奔跑</para>
+                /// <para>Sunrise, running</para>
                 /// </summary>
                 [NameInMap("TagsFromImage")]
                 [Validation(Required=false)]
@@ -151,8 +151,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>The number of entries returned per query.</para>
-            /// <para>Valid values: 10 to 100. Default value: 20.</para>
+            /// <para>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -162,7 +161,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token for the next query. This value is empty if there are no more results.</para>
+            /// <para>The token for the next query. This parameter is empty if no next query exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2c6b65b6f9d625d4e2514a628bde8eb2e0b5e8707e68181f</para>
@@ -184,7 +183,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppCodeWorkspaceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reasons for the access denial.</para>
+        /// <para>The details of the access denied error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether retries are allowed. Valid values:</para>
+        /// <para>Indicates whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>false: Retries are not allowed.</description></item>
         /// <item><description>true: Retries are allowed.</description></item>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message used to replace the <c>%s</c> placeholder in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the value of the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string CommitHash { get; set; }
 
             /// <summary>
-            /// <para>true</para>
+            /// <para>Indicates whether the workspace has uncommitted changes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsDirty")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? MaxLogicalNumber { get; set; }
 
             /// <summary>
-            /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteId { get; set; }
 
             /// <summary>
-            /// <para>The operation description.</para>
+            /// <para>The API description information.</para>
             /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]

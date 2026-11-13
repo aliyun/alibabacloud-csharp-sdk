@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The name of the agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试业务空间</para>
+        /// <para>Test workspace</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]

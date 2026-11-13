@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The idempotence token.</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c6f7e8b9-a0b1-4c2d-9e0f-1a2b3c4d5e6f</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The reason for the refund.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>渠道商退款</para>
+        /// <para>Channel partner refund</para>
         /// </summary>
         [NameInMap("RefundReason")]
         [Validation(Required=false)]

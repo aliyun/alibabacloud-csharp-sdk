@@ -1,3 +1,7 @@
+2026-11-13 Version: 2.37.1
+- Update API ListAppInstances: add request parameters Domain.
+
+
 2026-11-11 Version: 2.37.0
 - Support API GetAppPluginConfigForAdmin.
 - Update API AllocateSupabaseForAdmin: add response parameters Body.Module.SchemaName.

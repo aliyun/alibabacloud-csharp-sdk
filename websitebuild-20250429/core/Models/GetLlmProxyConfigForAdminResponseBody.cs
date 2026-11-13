@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetLlmProxyConfigForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed. Valid values:</para>
+        /// <para>Specifies whether to allow retries. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>false: Retries are not allowed.</description></item>
         /// <item><description>true: Retries are allowed.</description></item>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The application with this name is queried.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic code. This field is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message. This parameter is used to replace the <c>%s</c> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para>For example, if the <b>ErrMessage</b> parameter returns <b>The Value of Input Parameter %s is not valid</b> and the <b>DynamicMessage</b> parameter returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BlockedModels { get; set; }
 
             /// <summary>
-            /// <para>Grants specific permissions to processes in the container. Only NET_ADMIN and NET_RAW are supported.</para>
+            /// <para>Grants specific permissions to processes in the container. Currently, only NET_ADMIN and NET_RAW are supported.</para>
             /// <remarks>
             /// <para>NET_RAW is not supported by default. Submit a ticket to apply for this permission.</para>
             /// </remarks>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Capability { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of requests per day.</para>
+            /// <para>The daily request limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? DailyLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of tokens per day.</para>
+            /// <para>The daily token limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? DailyTokenLimit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether scheduled delivery of resource snapshots is enabled.</para>
+            /// <para>Specifies whether to enable scheduled delivery of resource snapshots.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The extended configuration in JSON format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;绑定域名及发布\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</para>
+            /// <para>{&quot;deliveryNodeName&quot;:&quot;Bind domain name and publish&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</para>
             /// </summary>
             [NameInMap("Extend")]
             [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string IpBlacklist { get; set; }
 
             /// <summary>
-            /// <para>The IP whitelist. Separate multiple IP addresses with commas (,).</para>
+            /// <para>The IP whitelist. Separate multiple IP addresses with commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>121.41.11.161,10.200.255.60</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string IpWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of requests per minute.</para>
+            /// <para>The number of requests per minute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>trial,draft,live,refunded,expired,released</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>NORMAL</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The reason for suspension.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务已暂停。</para>
+            /// <para>xxx</para>
             /// </summary>
             [NameInMap("SuspendReason")]
             [Validation(Required=false)]
@@ -271,17 +271,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

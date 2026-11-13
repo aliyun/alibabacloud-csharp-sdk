@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class IntrospectAppInstanceTicketForPreviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The detailed cause of the access denied error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App Name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the provided request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,21 +63,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error arguments.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public IntrospectAppInstanceTicketForPreviewResponseBodyModule Module { get; set; }
         public class IntrospectAppInstanceTicketForPreviewResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Access token time-to-live (TTL)</para>
+            /// <para>The time when the access token expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-18T22:30:00+08:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AccessTokenExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>Access token issue Time</para>
+            /// <para>The time when the access token was issued.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-18T22:30:00+08:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AccessTokenIssuedAt { get; set; }
 
             /// <summary>
-            /// <para>Access token value</para>
+            /// <para>The value of the access token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2108341e17661121129745384e79f9</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AliyunPk { get; set; }
 
             /// <summary>
-            /// <para>Extension property</para>
+            /// <para>The extended attributes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Attributes { get; set; }
 
             /// <summary>
-            /// <para>Authorization code Type</para>
+            /// <para>The authorization grant type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>authorization_code</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Bid { get; set; }
 
             /// <summary>
-            /// <para>Parent Alibaba Cloud PK</para>
+            /// <para>The parent Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12343131221311</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ParentPk { get; set; }
 
             /// <summary>
-            /// <para>Time-to-live (TTL) of the refresh token</para>
+            /// <para>The time when the refresh token expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768619049924</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RefreshTokenExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>Refresh token issue Time</para>
+            /// <para>The time when the refresh token was issued.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768619049924</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RefreshTokenIssuedAt { get; set; }
 
             /// <summary>
-            /// <para>Refresh token value</para>
+            /// <para>The value of the refresh token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>be9750d595b6cd7c93a80b46</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RefreshTokenValue { get; set; }
 
             /// <summary>
-            /// <para>Externally Unique</para>
+            /// <para>The external UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hdm_33be9750d595b6cd7c93a80b46734b22</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -219,17 +219,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

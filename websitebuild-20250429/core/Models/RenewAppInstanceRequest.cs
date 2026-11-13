@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure request idempotence. You can generate the value from your client and make sure that it is unique across different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fdfjafdfadfenjeora</para>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The extended information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</para>
+        /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;Delivery quality inspection\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>The payment type.</para>
+        /// <para>The payment method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayAsYouGo</para>
@@ -60,13 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>Required. The unit of the subscription period. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Year: year</description></item>
-        /// <item><description>Month: month</description></item>
-        /// <item><description>Day: day</description></item>
-        /// <item><description>Hour: hour.</description></item>
-        /// </list>
+        /// <para>Required. The unit of the subscription period. Valid values: Year, Month, Day, and Hour.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>

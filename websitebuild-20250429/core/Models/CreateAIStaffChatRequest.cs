@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The chat ID. Pass in this parameter to resume a conversation after an interruption.</para>
+        /// <para>The chat ID. Pass this parameter when resuming from an interruption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3b465fe1-6f06-4899-af9f-d43d9338df25</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The business extension metadata in Map format. The value must be a JSON string.</para>
+            /// <para>The business extension metadata in map format. The value must be a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The additional information for the conversation.</para>
+        /// <para>The additional conversation information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

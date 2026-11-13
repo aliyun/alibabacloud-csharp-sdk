@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The extended information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</para>
+        /// <para>{&quot;deliveryNodeName&quot;:&quot;Delivery inspection&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]

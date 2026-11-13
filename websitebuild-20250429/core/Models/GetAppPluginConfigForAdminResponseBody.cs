@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPluginConfigForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation status or POP error code.</para>
+        /// <para>The API operation status or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-28T02:25:41Z</para>

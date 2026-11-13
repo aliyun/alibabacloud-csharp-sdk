@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The user role that the ticket will assume.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
