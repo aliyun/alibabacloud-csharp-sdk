@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiOperationInfo : TeaModel {
         /// <summary>
-        /// <para>The permission authentication configuration.</para>
+        /// <para>The authentication configuration.</para>
         /// </summary>
         [NameInMap("authConfig")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The API operation backend service deployment information.</para>
+        /// <para>The backend service deployment information for the operation.</para>
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The API operation method.</para>
+        /// <para>The operation method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GET</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The API operation mock parameter settings.</para>
+        /// <para>The operation mock parameter settings.</para>
         /// </summary>
         [NameInMap("mock")]
         [Validation(Required=false)]
         public HttpApiMockContract Mock { get; set; }
 
         /// <summary>
-        /// <para>The API operation name.</para>
+        /// <para>The operation name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GetUserInfo</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The API operation ID.</para>
+        /// <para>The operation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>op-xxx</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string OperationId { get; set; }
 
         /// <summary>
-        /// <para>The API operation path.</para>
+        /// <para>The operation path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/user/123</para>
@@ -101,21 +101,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The API operation request parameter definition.</para>
+        /// <para>The operation request parameter definition.</para>
         /// </summary>
         [NameInMap("request")]
         [Validation(Required=false)]
         public HttpApiRequestContract Request { get; set; }
 
         /// <summary>
-        /// <para>The API operation response parameter definition.</para>
+        /// <para>The operation response parameter definition.</para>
         /// </summary>
         [NameInMap("response")]
         [Validation(Required=false)]
         public HttpApiResponseContract Response { get; set; }
 
         /// <summary>
-        /// <para>The publication status of the API operation on the gateway.</para>
+        /// <para>The publish status of the operation on the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Deployed</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumersRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway type used to filter results. Valid values: <b>AI</b> and <b>API</b>.</para>
+        /// <para>The gateway type used for filtering. Valid values: <b>AI</b> and <b>API</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy matches APIs by API name.</para>
+        /// <para>The keyword used to perform a fuzzy search for APIs by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UI-test</para>

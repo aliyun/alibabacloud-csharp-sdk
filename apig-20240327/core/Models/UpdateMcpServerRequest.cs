@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the MCP server.</para>
+            /// <para>The MCP server name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-mcp</para>
@@ -130,13 +130,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The creation source type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ApiGatewayHttpToMCP: API gateway-hosted HTTP-to-MCP.</description></item>
-        /// <item><description>ApiGatewayProxyMcpHosting: API gateway-hosted MCP direct proxy.</description></item>
-        /// <item><description>ApiGatewayAssembly: API gateway MCP assembly.</description></item>
-        /// <item><description>NacosHttpToMCP: API gateway-hosted Nacos-synchronized HTTP-to-MCP.</description></item>
-        /// <item><description>NacosMcpHosting: API gateway-hosted Nacos-synchronized MCP direct proxy.</description></item>
-        /// </list>
+        /// <para>ApiGatewayHttpToMCP: API Gateway-managed HTTP-to-MCP.
+        /// ApiGatewayProxyMcpHosting: API Gateway-managed MCP direct proxy.
+        /// ApiGatewayAssembly: API Gateway MCP assembly.
+        /// NacosHttpToMCP: API Gateway-managed Nacos-synchronized HTTP-to-MCP.
+        /// NacosMcpHosting: API Gateway-managed Nacos-synchronized MCP direct proxy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ApiGatewayMcpHosting</para>
@@ -291,7 +289,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateMcpServerRequestMcpServerConfig McpServerConfig { get; set; }
         public class UpdateMcpServerRequestMcpServerConfig : TeaModel {
             /// <summary>
-            /// <para>The MCP server configurations. This parameter is mutually exclusive with the swaggerConfig parameter.</para>
+            /// <para>The MCP server configurations. This parameter is mutually exclusive with swaggerConfig.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-server-spec-yaml</para>
@@ -301,7 +299,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerSpec { get; set; }
 
             /// <summary>
-            /// <para>The Swagger document for HTTP-to-MCP. The document must comply with the OpenAPI 3.0 specification.</para>
+            /// <para>The Swagger document for HTTP-to-MCP, which must comply with the OpenAPI 3.0 specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swagger-content</para>
@@ -323,13 +321,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? McpStatisticsEnable { get; set; }
 
         /// <summary>
-        /// <para>The protocol type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>HTTP: HTTP.</description></item>
-        /// <item><description>HTTPS: HTTPS.</description></item>
-        /// <item><description>SSE: Server-Sent Events.</description></item>
-        /// <item><description>StreamableHTTP: Streaming HTTP.</description></item>
-        /// </list>
+        /// <para>The protocol type. Valid values:
+        /// HTTP: HTTP protocol.
+        /// HTTPS: HTTPS protocol.
+        /// SSE: Server-Sent Events protocol.
+        /// StreamableHTTP: Streaming HTTP protocol.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

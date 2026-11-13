@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateDeveloperResponseBodyData Data { get; set; }
         public class CreateDeveloperResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The developer ID. This ID can be used to identify the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</para>
+            /// <para>The developer ID. You can use this ID to locate the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev-xxxxxxxx</para>

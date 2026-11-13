@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListRiskCheckResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of records to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1 (DefaultPageNumber).</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10 (DefaultPageSize).</para>
+        /// <para>The page size. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

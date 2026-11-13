@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginClassesRequest : TeaModel {
         /// <summary>
-        /// <para>The plug-in alias. Fuzzy match is supported.</para>
+        /// <para>The plugin alias for fuzzy search.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OAuth2 Authentication</para>
+        /// <para>OAuth2 authentication</para>
         /// </summary>
         [NameInMap("aliasLike")]
         [Validation(Required=false)]
         public string AliasLike { get; set; }
 
         /// <summary>
-        /// <para>The inbound or outbound direction. Valid values:</para>
+        /// <para>The traffic direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OutBound: outbound.</description></item>
-        /// <item><description>InBound: inbound.</description></item>
-        /// <item><description>Both: both directions.</description></item>
+        /// <item><description>OutBound: Outbound.</description></item>
+        /// <item><description>InBound: Inbound.</description></item>
+        /// <item><description>Both: Both.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exclude built-in plug-ins.</para>
+        /// <para>Specifies whether to exclude built-in plugins.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the plug-in is installed.</para>
+        /// <para>Specifies whether the plugin is installed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Installed { get; set; }
 
         /// <summary>
-        /// <para>The plug-in name. Fuzzy match is supported.</para>
+        /// <para>The plugin name for fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oauth</para>
@@ -105,11 +105,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The plug-in source. Valid values:</para>
+        /// <para>The plugin source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HigressOfficial: Higress official.</description></item>
-        /// <item><description>HigressCommunity: Higress community.</description></item>
-        /// <item><description>Custom: custom.</description></item>
+        /// <item><description>Higress official: HigressOfficial.</description></item>
+        /// <item><description>Higress community: HigressCommunity.</description></item>
+        /// <item><description>Custom: Custom.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The plug-in type.</para>
+        /// <para>The plugin type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Auth</para>

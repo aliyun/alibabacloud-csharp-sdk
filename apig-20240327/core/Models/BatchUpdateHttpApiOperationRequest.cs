@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable consumer authentication. If set to true, a valid authConfig must be provided. If set to false, authConfig is not validated and the existing configuration remains unchanged.</para>
+        /// <para>Specifies whether to enable consumer authentication. If this parameter is set to true, a valid authConfig must be provided. If this parameter is set to false, authConfig is not verified and the original configuration remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The list of operation IDs to update in batches. This parameter cannot be empty.</para>
+        /// <para>The list of operation IDs to be updated in batches. This parameter cannot be empty.</para>
         /// </summary>
         [NameInMap("operationIds")]
         [Validation(Required=false)]

@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayElasticPolicyResponseBodyData Data { get; set; }
         public class GetGatewayElasticPolicyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The elastic policy configuration, deserialized from the elastic_config JSON field in the database.</para>
+            /// <para>The elastic policy configuration, deserialized from the elastic_config JSON in the database.</para>
             /// </summary>
             [NameInMap("elasticPolicy")]
             [Validation(Required=false)]
             public GetGatewayElasticPolicyResponseBodyDataElasticPolicy ElasticPolicy { get; set; }
             public class GetGatewayElasticPolicyResponseBodyDataElasticPolicy : TeaModel {
                 /// <summary>
-                /// <para>The time periods during which AutoHPA scale-out is prohibited.</para>
+                /// <para>The time periods during which AutoHPA is prohibited from scaling out.</para>
                 /// </summary>
                 [NameInMap("disableScaleTimePolicyList")]
                 [Validation(Required=false)]
                 public List<GetGatewayElasticPolicyResponseBodyDataElasticPolicyDisableScaleTimePolicyList> DisableScaleTimePolicyList { get; set; }
                 public class GetGatewayElasticPolicyResponseBodyDataElasticPolicyDisableScaleTimePolicyList : TeaModel {
                     /// <summary>
-                    /// <para>The O&amp;M end time in the HH:mm format.</para>
+                    /// <para>The end time of the O&amp;M window (HH:mm).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>00:00</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The O&amp;M start time in the HH:mm format.</para>
+                    /// <para>The start time of the O&amp;M window (HH:mm).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>00:00</para>
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ElasticType { get; set; }
 
                 /// <summary>
-                /// <para>The time periods during which AutoHPA scale-out is allowed.</para>
+                /// <para>The time periods during which AutoHPA is allowed to scale out.</para>
                 /// </summary>
                 [NameInMap("enableScaleTimePolicyList")]
                 [Validation(Required=false)]
                 public List<GetGatewayElasticPolicyResponseBodyDataElasticPolicyEnableScaleTimePolicyList> EnableScaleTimePolicyList { get; set; }
                 public class GetGatewayElasticPolicyResponseBodyDataElasticPolicyEnableScaleTimePolicyList : TeaModel {
                     /// <summary>
-                    /// <para>The O&amp;M end time in the HH:mm format.</para>
+                    /// <para>The end time of the O&amp;M window (HH:mm).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>18:00</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The O&amp;M start time in the HH:mm format.</para>
+                    /// <para>The start time of the O&amp;M window (HH:mm).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>09:00</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The load alert threshold switch for AutoHPA.</para>
+                /// <para>The AutoHPA load alert threshold switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? MaxUnits { get; set; }
 
                 /// <summary>
-                /// <para>The list of CronHPA scheduled policies. Each entry includes units (number of replicas), startTime, and endTime.</para>
+                /// <para>The list of scheduled policies for CronHPA, including units (number of replicas), startTime, and endTime.</para>
                 /// </summary>
                 [NameInMap("timePolicyList")]
                 [Validation(Required=false)]
                 public List<GetGatewayElasticPolicyResponseBodyDataElasticPolicyTimePolicyList> TimePolicyList { get; set; }
                 public class GetGatewayElasticPolicyResponseBodyDataElasticPolicyTimePolicyList : TeaModel {
                     /// <summary>
-                    /// <para>The O&amp;M end time in the HH:mm format.</para>
+                    /// <para>The end time of the O&amp;M window (HH:mm).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>06:00</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The O&amp;M start time in the HH:mm format.</para>
+                    /// <para>The start time of the O&amp;M window (HH:mm).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>00:00</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The KubeOne AutoScaleStrategy instance ID.</para>
+            /// <para>The ID of the KubeOne AutoScaleStrategy instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ElasticType { get; set; }
 
             /// <summary>
-            /// <para>The gateway ID.</para>
+            /// <para>The ID of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-xxxx</para>

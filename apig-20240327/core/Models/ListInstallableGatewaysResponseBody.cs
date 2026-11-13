@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListInstallableGatewaysResponseBodyData Data { get; set; }
         public class ListInstallableGatewaysResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of gateways.</para>
+            /// <para>The list.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListInstallableGatewaysResponseBodyDataItems> Items { get; set; }
             public class ListInstallableGatewaysResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The database engine version of the gateway DPI engine.</para>
+                /// <para>The gateway DPI engine version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.1.10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The gateway status. The value is passed through from the GatewayPhase enumeration, such as Running or Creating.</para>
+                /// <para>The gateway status. This is a pass-through of the GatewayPhase enum, such as Running or Creating.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayPhase { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the plugin can be installed on the gateway.</para>
+                /// <para>Indicates whether the gateway is installable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Installable { get; set; }
 
                 /// <summary>
-                /// <para>The reason why the plugin cannot be installed.</para>
+                /// <para>The reason why the gateway is not installable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VERSION_NOT_MATCH</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string InstallableFalseReasonType { get; set; }
 
                 /// <summary>
-                /// <para>The version number of another version of the same plugin class that is already installed on the gateway.</para>
+                /// <para>The version number of another plug-in of the same class that is already installed on the gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>

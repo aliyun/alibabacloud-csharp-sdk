@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateConsumerGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned if the request is successful.</para>
+        /// <para>The response status code. Returns Ok if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>

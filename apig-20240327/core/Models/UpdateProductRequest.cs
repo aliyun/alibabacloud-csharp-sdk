@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Document { get; set; }
 
         /// <summary>
-        /// <para>The capability configuration of the API product. Currently, this parameter only includes the modelFeature member, which contains the model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal fields.</para>
+        /// <para>The capability configuration of the API product. Currently, this configuration only includes the modelFeature member, which contains the model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal fields.</para>
         /// </summary>
         [NameInMap("feature")]
         [Validation(Required=false)]

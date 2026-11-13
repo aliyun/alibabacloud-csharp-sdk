@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateConsumerGroupResponseBodyData Data { get; set; }
         public class CreateConsumerGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The consumer group ID.</para>
+            /// <para>The ID of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>csg-8c13d2b4f8a1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The gateway type. Valid values: API or AI.</para>
+            /// <para>The gateway type. Valid values: API and AI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API</para>

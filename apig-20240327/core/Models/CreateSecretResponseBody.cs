@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateSecretResponseBodyData Data { get; set; }
         public class CreateSecretResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The key ID.</para>
+            /// <para>The secret ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sec-d5e6shmm1hkoxxxxxxxx</para>

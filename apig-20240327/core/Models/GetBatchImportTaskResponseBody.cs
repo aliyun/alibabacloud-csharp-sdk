@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetBatchImportTaskResponseBodyData Data { get; set; }
         public class GetBatchImportTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. The time is in UTC and follows the RFC 3339 format.</para>
+            /// <para>The time when the task was created. The time is in UTC and follows the RFC 3339 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-15T10:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The number of processed items.</para>
+            /// <para>The processed count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ApiType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the task is in dry run mode.</para>
+                /// <para>Indicates whether the dry run mode is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<GetBatchImportTaskResponseBodyDataResultDryRunResults> DryRunResults { get; set; }
                 public class GetBatchImportTaskResponseBodyDataResultDryRunResults : TeaModel {
                     /// <summary>
-                    /// <para>The API name. The value unknown is returned if the name cannot be identified.</para>
+                    /// <para>The name of the API. If the name cannot be identified, unknown is returned.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>petstore</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ApiName { get; set; }
 
                     /// <summary>
-                    /// <para>The dry run details, including the operations, routes, components, and error or warning messages planned for creation or update in this file.</para>
+                    /// <para>The dry run details, including the operations, routes, components, and error and warning messages to be created or updated by this file.</para>
                     /// </summary>
                     [NameInMap("dryRunInfo")]
                     [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public List<string> ErrorMessages { get; set; }
 
                         /// <summary>
-                        /// <para>The basic information about the existing HTTP API matched during import.</para>
+                        /// <para>The basic information of the existing HTTP API matched during import.</para>
                         /// </summary>
                         [NameInMap("existHttpApiInfo")]
                         [Validation(Required=false)]
@@ -172,14 +172,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                             public string Type { get; set; }
 
                             /// <summary>
-                            /// <para>The API versioning information.</para>
+                            /// <para>The versioning information of the API.</para>
                             /// </summary>
                             [NameInMap("versionInfo")]
                             [Validation(Required=false)]
                             public GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoExistHttpApiInfoVersionInfo VersionInfo { get; set; }
                             public class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoExistHttpApiInfoVersionInfo : TeaModel {
                                 /// <summary>
-                                /// <para>Indicates whether versioning is enabled.</para>
+                                /// <para>Specifies whether versioning is enabled.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>true</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureComponents> FailureComponents { get; set; }
                         public class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureComponents : TeaModel {
                             /// <summary>
-                            /// <para>The reason why the dry run failed.</para>
+                            /// <para>The reason for the dry run failure.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>invalid schema</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureOperations> FailureOperations { get; set; }
                         public class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureOperations : TeaModel {
                             /// <summary>
-                            /// <para>The reason why the dry run failed.</para>
+                            /// <para>The reason for the dry run failure.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>unsupported operation</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureRoutes> FailureRoutes { get; set; }
                         public class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoFailureRoutes : TeaModel {
                             /// <summary>
-                            /// <para>The reason why the dry run failed.</para>
+                            /// <para>The reason for the dry run failure.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>domain not found</para>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessComponents> SuccessComponents { get; set; }
                         public class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessComponents : TeaModel {
                             /// <summary>
-                            /// <para>The action type to be performed after the dry run.</para>
+                            /// <para>The type of action to be performed after the dry run.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>Create</para>
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessOperations> SuccessOperations { get; set; }
                         public class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessOperations : TeaModel {
                             /// <summary>
-                            /// <para>The action type to be performed after the dry run.</para>
+                            /// <para>The type of action to be performed after the dry run.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>Create</para>
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public List<GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessRoutes> SuccessRoutes { get; set; }
                         public class GetBatchImportTaskResponseBodyDataResultDryRunResultsDryRunInfoSuccessRoutes : TeaModel {
                             /// <summary>
-                            /// <para>The action type to be performed after the dry run.</para>
+                            /// <para>The type of action to be performed after the dry run.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>Create</para>
@@ -485,7 +485,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ApiId { get; set; }
 
                     /// <summary>
-                    /// <para>The API name. The value unknown is returned if the name cannot be identified.</para>
+                    /// <para>The name of the API. If the name cannot be identified, unknown is returned.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>petstore</para>
@@ -527,14 +527,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The formal import request body. This field is returned only for dry run tasks and can be resubmitted as the request body of BatchImportHttpApis. The dryRun parameter is fixed to false. Temporary specFileUrl values are still subject to URL expiration constraints.</para>
+                /// <para>The formal import request body. Returned only for dry run tasks. Can be resubmitted as the BatchImportHttpApis request body with dryRun set to false. The temporary specFileUrl is still subject to the URL expiration period.</para>
                 /// </summary>
                 [NameInMap("importRequest")]
                 [Validation(Required=false)]
                 public GetBatchImportTaskResponseBodyDataResultImportRequest ImportRequest { get; set; }
                 public class GetBatchImportTaskResponseBodyDataResultImportRequest : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to allow overwriting existing APIs.</para>
+                    /// <para>Specifies whether to allow overwriting and updating existing APIs.</para>
                     /// </summary>
                     [NameInMap("allowUpdate")]
                     [Validation(Required=false)]
@@ -551,7 +551,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ApiType { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the request is in dry run mode. This parameter is fixed to false in the formal import request body.</para>
+                    /// <para>Indicates whether the dry run mode is enabled. This parameter is fixed to false in the formal import request body.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -571,7 +571,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string GatewayId { get; set; }
 
                     /// <summary>
-                    /// <para>The resource group ID.</para>
+                    /// <para>The ID of the resource group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rg-xxx</para>
@@ -581,7 +581,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ResourceGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The download URL of the OAS ZIP file, which is consistent with the dry run request.</para>
+                    /// <para>The download URL of the OAS ZIP file, which is the same as that in the dry run request.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip">https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip</a></para>
@@ -591,7 +591,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string SpecFileUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The OSS configuration of the OAS file, which is consistent with the dry run request.</para>
+                    /// <para>The OSS configuration of the OAS file, which is the same as that in the dry run request.</para>
                     /// </summary>
                     [NameInMap("specOssConfig")]
                     [Validation(Required=false)]
@@ -640,7 +640,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Strategy { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to import with gateway extension configurations.</para>
+                    /// <para>Specifies whether to import with the gateway extension configuration.</para>
                     /// </summary>
                     [NameInMap("withGatewayExtension")]
                     [Validation(Required=false)]
@@ -666,7 +666,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ApiId { get; set; }
 
                     /// <summary>
-                    /// <para>The API name. The value unknown is returned if the name cannot be identified.</para>
+                    /// <para>The name of the API. If the name cannot be identified, unknown is returned.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>petstore</para>

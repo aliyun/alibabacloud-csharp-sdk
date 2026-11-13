@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListMcpServersRequest : TeaModel {
         /// <summary>
-        /// <para>The creation source type.</para>
+        /// <para>The creation source types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ApiGatewayHttpToMCP</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CreateFromTypes { get; set; }
 
         /// <summary>
-        /// <para>The deployment status of the MCP server.</para>
+        /// <para>The deployment statuses of the MCP servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Deployed</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to fuzzy match MCP servers by name.</para>
+        /// <para>The keyword used to perform a fuzzy search for MCP servers by API name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

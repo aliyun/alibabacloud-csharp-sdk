@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetPluginClassResponseBodyData Data { get; set; }
         public class GetPluginClassResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The plug-in alias.</para>
+            /// <para>The alias of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Key Auth</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The plug-in description.</para>
+            /// <para>The description of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Authentication based on API Key</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Document { get; set; }
 
             /// <summary>
-            /// <para>The plug-in name.</para>
+            /// <para>The name of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-auth</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PublishStatus { get; set; }
 
             /// <summary>
-            /// <para>The plug-in type.</para>
+            /// <para>The type of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Auth</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The programming language of the Wasm plug-in.</para>
+            /// <para>The programming language of the Wasm plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TinyGo</para>

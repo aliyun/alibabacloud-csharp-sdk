@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -34,27 +34,27 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListPluginClassesResponseBodyDataItems> Items { get; set; }
             public class ListPluginClassesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The plug-in alias.</para>
+                /// <para>The plugin alias.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>OAuth2 Authentication</para>
+                /// <para>OAuth2 authentication</para>
                 /// </summary>
                 [NameInMap("alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in description.</para>
+                /// <para>The plugin description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Implements identity authentication and authorization based on OAuth2</para>
+                /// <para>Implements authentication and authorization based on OAuth2</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the plug-in is installed.</para>
+                /// <para>Indicates whether the plugin is installed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Installed { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in name.</para>
+                /// <para>The plugin name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oauth</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in type ID.</para>
+                /// <para>The plugin type ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pls-d4ghv6em1hkixxxxxxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PluginClassId { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in ID.</para>
+                /// <para>The plugin ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pl-cvu6r4um1hkoxxxxxxxx</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PublishStatus { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in source.</para>
+                /// <para>The plugin source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HigressOfficial</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The minimum gateway version supported by the plug-in.</para>
+                /// <para>The minimum gateway version supported by the plugin.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0.0</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SupportedMinGatewayVersion { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in type.</para>
+                /// <para>The plugin type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Auth</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in version.</para>
+                /// <para>The plugin version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>

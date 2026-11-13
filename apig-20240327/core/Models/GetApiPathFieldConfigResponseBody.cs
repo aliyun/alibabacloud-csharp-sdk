@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The list of field configurations grouped by API request path.</para>
+            /// <para>The list of field configurations grouped by API URI of the request.</para>
             /// </summary>
             [NameInMap("pathConfigs")]
             [Validation(Required=false)]
             public List<GetApiPathFieldConfigResponseBodyDataPathConfigs> PathConfigs { get; set; }
             public class GetApiPathFieldConfigResponseBodyDataPathConfigs : TeaModel {
                 /// <summary>
-                /// <para>The collection of field configurations under the path, grouped by mapping key, where each group represents a set of field configuration items.</para>
+                /// <para>The collection of field configurations under the path, grouped by mapping key. Each group represents a set of field configuration items.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;model&quot;:[&quot;$.model&quot;],&quot;messages&quot;:[&quot;$.messages[*].content&quot;]}</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public Dictionary<string, List<DataPathConfigsFieldPathsValue>> FieldPaths { get; set; }
 
                 /// <summary>
-                /// <para>The request path of the API.</para>
+                /// <para>The URI of the request of the API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/v1/chat/completions</para>

@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The portal domain configuration list. The list element is named domainConfig.</para>
+                /// <para>The portal domain name configuration list. The list element is named domainConfig.</para>
                 /// </summary>
                 [NameInMap("portalDomainConfig")]
                 [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor token for querying the next page.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-xxxxxxxx</para>

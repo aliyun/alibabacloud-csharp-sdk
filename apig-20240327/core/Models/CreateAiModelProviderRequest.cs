@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateAiModelProviderRequest : TeaModel {
         /// <summary>
+        /// <para>The optional default AI service ID. If not empty, it must be a service in the current association set. Omitting this parameter indicates that no default is set. An explicit empty string clears the default. A non-empty value sets the default. The length cannot exceed 64 characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>svc-d00000000000000000000</para>
+        /// </summary>
+        [NameInMap("defaultServiceId")]
+        [Validation(Required=false)]
+        public string DefaultServiceId { get; set; }
+
+        /// <summary>
         /// <para>The display name of the model provider.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,14 +53,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>The list of service IDs to bind to the provider.</para>
+        /// <para>The list of service IDs to associate with the provider.</para>
         /// </summary>
         [NameInMap("serviceIds")]
         [Validation(Required=false)]
         public List<string> ServiceIds { get; set; }
 
         /// <summary>
-        /// <para>The client token that ensures the idempotence of the request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>

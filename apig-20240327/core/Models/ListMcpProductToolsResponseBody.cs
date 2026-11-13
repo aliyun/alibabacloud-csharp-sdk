@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListMcpProductToolsResponseBodyData Data { get; set; }
         public class ListMcpProductToolsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of MCP tools. Each element in the list is named tool and represents an MCP tool.</para>
+            /// <para>The list of MCP tools. Each element in the list is named tool and represents a single MCP tool.</para>
             /// </summary>
             [NameInMap("tools")]
             [Validation(Required=false)]
             public List<ListMcpProductToolsResponseBodyDataTools> Tools { get; set; }
             public class ListMcpProductToolsResponseBodyDataTools : TeaModel {
                 /// <summary>
-                /// <para>The annotation information of the tool. This field is a map structure. The API definition declares it only as map<any> without specifying its members and purposes.</para>
+                /// <para>The annotation information of the tool, formatted as a map. The API definition declares this field only as map<any> without specifying its members or purposes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;readOnly&quot;:true}</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The structure definition of the input parameters for the tool. This field is a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</para>
+                /// <para>The input parameter schema of the tool, formatted as a map. The API definition declares this field only as map<any> without specifying its members or constraints.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;query&quot;:{&quot;type&quot;:&quot;string&quot;}}}</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public Dictionary<string, object> InputSchema { get; set; }
 
                 /// <summary>
-                /// <para>The metadata of the tool. This field is a map structure. The API definition declares it only as map<any> without specifying its members and purposes.</para>
+                /// <para>The metadata of the tool, formatted as a map. The API definition declares this field only as map<any> without specifying its members or purposes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;version&quot;:&quot;1.0.0&quot;}</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The structure definition of the output results for the tool. This field is a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</para>
+                /// <para>The output result schema of the tool, formatted as a map. The API definition declares this field only as map<any> without specifying its members or constraints.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;string&quot;}}}</para>

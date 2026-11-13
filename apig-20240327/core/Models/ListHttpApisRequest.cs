@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Supports fuzzy match by API name or exact search by API ID.</para>
+        /// <para>The search keyword. Supports fuzzy search by API name or exact search by API ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The types of the HTTP API. You can specify multiple types separated by commas (,). Valid values:</para>
+        /// <para>The types of the HTTP APIs. You can specify multiple types separated by commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Http</description></item>
         /// <item><description>Rest</description></item>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAPIsPublishedToEnvironment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the environment. If specified, the response includes the consumer authentication policy information for each API in the specified environment.</para>
+        /// <para>The environment ID. If specified, the response includes consumer authentication policy information for each API in the specified environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxx</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithAuthPolicyInEnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the permission authentication policy is enabled.</para>
+        /// <para>Specifies whether the authentication policy is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAuthPolicyList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the consumer. If specified, the response includes the list of authorization rules for the specified consumer in each API information.</para>
+        /// <para>The consumer ID. If specified, the response includes the authorization rule list for the specified consumer in the information of each API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInfoById { get; set; }
 
         /// <summary>
-        /// <para>The environment context.</para>
+        /// <para>Specifies whether to include the environment context.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithEnvironmentInfo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the environment.</para>
+        /// <para>The environment ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-ctovu5mm1hksb4q8ln40</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithIngressInfo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the plug-in. If specified, the plug-in release information is retrieved based on this plug-in ID.</para>
+        /// <para>The plugin ID. If specified, the plugin release information is retrieved based on this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-ct9qn3um1hktue8dqol0</para>

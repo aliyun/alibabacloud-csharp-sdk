@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>The business parameters. Each agent performs custom validation. For example, pass the Simple Log Service context for log diagnostics.</para>
+        /// <para>The business parameters. Each agent performs custom validation. For example, pass the SLS context for log diagnosis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;app&quot;:&quot;log-diagnosis&quot;,&quot;logStore&quot;:&quot;apig-logstore&quot;}</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<InvokeAIAgentRequestHistory> History { get; set; }
         public class InvokeAIAgentRequestHistory : TeaModel {
             /// <summary>
-            /// <para>The content. The returned data is in rich text format.</para>
+            /// <para>The content of the message. The returned data is in rich text format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Previous question</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The output language. If this parameter is set to en, the default error message is displayed in English.</para>
+        /// <para>The output language. If set to en, the default error message is in English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh / en</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string OutputLanguage { get; set; }
 
         /// <summary>
-        /// <para>The current user input. If this parameter is empty, a default value is used based on the scenario, such as Start.</para>
+        /// <para>The user input for the current session. If empty, a default value is used based on the scenario, such as Start.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Help me diagnose this error log</para>

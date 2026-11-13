@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetPolicyAttachmentResponseBodyData Data { get; set; }
         public class GetPolicyAttachmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the attached resource.</para>
+            /// <para>The attached resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>op-csbkd9llhtgqhqua***</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AttachResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the attached resource. Valid values: HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, and Domain.</para>
+            /// <para>The attached resource type, such as HttpApi, GatewayRoute, Operation, GatewayService, GatewayServicePort, Gateway, or Domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Operation</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AttachResourceType { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the attached policy.</para>
+            /// <para>The policy attachment configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;unitNum&quot;:1,&quot;timeUnit&quot;:&quot;s&quot;,&quot;enable&quot;:true}</para>

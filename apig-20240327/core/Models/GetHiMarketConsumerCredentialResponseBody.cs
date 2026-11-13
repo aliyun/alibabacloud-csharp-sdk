@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetHiMarketConsumerCredentialResponseBodyData Data { get; set; }
         public class GetHiMarketConsumerCredentialResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The API key credential configuration of the consumer, which corresponds to the common data structure HiMarketApiKeyConfig. The members include key, source, and the credentials list, where each list item contains an apiKey.</para>
+            /// <para>The API key consumer credential configuration. This corresponds to the common data structure HiMarketApiKeyConfig. The members include key, source, and the credential list credentials, where each list item contains an apiKey.</para>
             /// </summary>
             [NameInMap("apiKeyConfig")]
             [Validation(Required=false)]
             public HiMarketApiKeyConfig ApiKeyConfig { get; set; }
 
             /// <summary>
-            /// <para>The HMAC credential configuration of the consumer, which corresponds to the common data structure HiMarketHmacConfig. The members include the credentials list, where each list item contains ak and sk.</para>
+            /// <para>The HMAC consumer credential configuration. This corresponds to the common data structure HiMarketHmacConfig. The members include the credential list credentials, where each list item contains an ak and an sk.</para>
             /// </summary>
             [NameInMap("hmacConfig")]
             [Validation(Required=false)]

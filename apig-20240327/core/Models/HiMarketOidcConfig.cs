@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketOidcConfig : TeaModel {
         /// <summary>
-        /// <para>The OAuth2 Authorization Code configuration.</para>
+        /// <para>The OAuth2 authorization code configuration.</para>
         /// </summary>
         [NameInMap("authCodeConfig")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RedirectUri { get; set; }
 
             /// <summary>
-            /// <para>The OAuth2 authorization scopes.</para>
+            /// <para>The OAuth2 scopes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>openid profile email</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable the OIDC configuration.</para>
+        /// <para>Specifies whether the OIDC configuration is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The authorization type.</para>
+        /// <para>The grant type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>authorization_code</para>
@@ -136,14 +136,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HiMarketOidcConfigIdentityMapping IdentityMapping { get; set; }
         public class HiMarketOidcConfigIdentityMapping : TeaModel {
             /// <summary>
-            /// <para>The custom field mapping.</para>
+            /// <para>The custom field mappings.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;department&quot;:&quot;dept&quot;,&quot;role&quot;:&quot;role&quot;}</para>
             /// </summary>
             [NameInMap("customFields")]
             [Validation(Required=false)]
             public Dictionary<string, string> CustomFields { get; set; }
 
             /// <summary>
-            /// <para>The identity field name that corresponds to the email address.</para>
+            /// <para>The name of the identity field that corresponds to the email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>email</para>
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EmailField { get; set; }
 
             /// <summary>
-            /// <para>The identity field name that corresponds to the user ID.</para>
+            /// <para>The name of the identity field that corresponds to the user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sub</para>
@@ -163,7 +166,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string UserIdField { get; set; }
 
             /// <summary>
-            /// <para>The identity field name that corresponds to the username.</para>
+            /// <para>The name of the identity field that corresponds to the username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The provider logo URL.</para>
+        /// <para>The URL of the provider logo.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/logo.png">https://example.com/logo.png</a></para>
@@ -185,7 +188,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string LogoUrl { get; set; }
 
         /// <summary>
-        /// <para>The OIDC configuration name.</para>
+        /// <para>The name of the OIDC configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-oidc-config</para>
@@ -195,7 +198,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The OIDC provider name.</para>
+        /// <para>The name of the OIDC provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alibaba Cloud IDaaS</para>

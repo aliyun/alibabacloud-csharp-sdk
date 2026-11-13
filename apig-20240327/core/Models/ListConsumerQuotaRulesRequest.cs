@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The keyword in the rule name for fuzzy match.</para>
+        /// <para>The keyword used to perform a fuzzy match on the rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>daily</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -48,6 +48,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The rule status. This parameter is optional. Valid values: enabled and disabled. If this parameter is not specified, all rules are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>enabled</para>
+        /// </summary>
+        [NameInMap("ruleStatus")]
+        [Validation(Required=false)]
+        public string RuleStatus { get; set; }
 
     }
 

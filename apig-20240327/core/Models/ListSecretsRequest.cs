@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListSecretsRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway type used for filtering. Valid values: <b>AI</b> and <b>API</b>.</para>
+        /// <para>The gateway type for filtering. Supported gateway types: <b>AI</b> and <b>API</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The key name. Fuzzy match is supported.</para>
+        /// <para>The name of the secret for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_secret</para>

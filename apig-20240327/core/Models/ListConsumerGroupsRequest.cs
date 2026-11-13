@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway type. Valid values: API or AI.</para>
+        /// <para>The gateway type. Valid values: API and AI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

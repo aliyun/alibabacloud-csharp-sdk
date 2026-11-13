@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiType { get; set; }
 
         /// <summary>
-        /// <para>The export extension configuration. When this configuration is specified for a REST API, gatewayId is required. This configuration is required for batch export of HTTP APIs.</para>
+        /// <para>The export extension configuration. The gatewayId parameter is required when this configuration is specified for REST APIs. This configuration is required for batch export of HTTP APIs.</para>
         /// </summary>
         [NameInMap("extensionConfig")]
         [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Format { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID. This parameter is required when extensionConfig is specified for a REST API. This parameter is required for batch export of HTTP APIs.</para>
+        /// <para>The gateway instance ID. This parameter is required when extensionConfig is specified for REST APIs. This parameter is also required for batch export of HTTP APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxx</para>

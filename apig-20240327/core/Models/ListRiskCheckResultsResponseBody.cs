@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of records to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. This parameter is empty if no more pages are available.</para>
+        /// <para>The pagination token. This parameter is empty if no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxx</para>

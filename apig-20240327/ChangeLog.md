@@ -1,3 +1,58 @@
+2026-11-13 Version: 11.9.0
+- Support API AuthorizeConsumerModelCardGrants.
+- Support API CreateAiModelSource.
+- Support API CreateAiModelSourceModel.
+- Support API CreateLogicalModel.
+- Support API CreateModelApi.
+- Support API CreateModelGroup.
+- Support API DeleteAiModelSource.
+- Support API DeleteAiModelSourceModel.
+- Support API DeleteLogicalModel.
+- Support API DeleteModelApi.
+- Support API DeleteModelGroup.
+- Support API GetAiModelSource.
+- Support API GetAiModelSourceEditImpact.
+- Support API GetAiModelSourceModel.
+- Support API GetConsumerAccessOverview.
+- Support API GetDirectSupply.
+- Support API GetLogicalModel.
+- Support API GetLogicalModelDeployment.
+- Support API GetModelApi.
+- Support API GetModelGroup.
+- Support API ListAiModelSourceModels.
+- Support API ListAiModelSources.
+- Support API ListConsumerConsoleSummaries.
+- Support API ListConsumerModelCardGrants.
+- Support API ListLogicalModels.
+- Support API ListModelApis.
+- Support API ListModelGroups.
+- Support API PreviewLogicalModelUpdate.
+- Support API RetryLogicalModelDeployment.
+- Support API RevokeConsumerModelCardGrants.
+- Support API UpdateAiModelSource.
+- Support API UpdateAiModelSourceModel.
+- Support API UpdateLogicalModel.
+- Support API UpdateModelApi.
+- Support API UpdateModelGroup.
+- Update API CreateAiModelProvider: add request parameters body.defaultServiceId.
+- Update API CreateAiModelProvider: add response parameters Body.data.defaultServiceId.
+- Update API GetAiModelProvider: add response parameters Body.data.defaultServiceId.
+- Update API GetGatewayQuotaRuleSubjectUsage: add response parameters Body.data.details.items.$.modelCardId.
+- Update API GetGatewayQuotaRuleSubjectUsage: add response parameters Body.data.details.items.$.modelSourceId.
+- Update API GetGatewayQuotaRuleSubjectUsage: add response parameters Body.data.details.items.$.modelSourceName.
+- Update API GetGatewayQuotaRuleSubjectUsage: add response parameters Body.data.details.items.$.serviceId.
+- Update API ListAiModelProviders: add response parameters Body.data.items.$.defaultServiceId.
+- Update API ListConsumerGroupQuotaRules: add request parameters ruleStatus.
+- Update API ListConsumerQuotaRules: add request parameters ruleStatus.
+- Update API ListGatewayQuotaRules: add request parameters ruleStatus.
+- Update API ListGatewayQuotaRules: add request parameters subjectNameLike.
+- Update API ListPolicies: add request parameters pageNumber.
+- Update API ListPolicies: add request parameters pageSize.
+- Update API UpdateAiModelProvider: add request parameters body.defaultServiceId.
+- Update API UpdateAiModelProvider: add response parameters Body.data.defaultServiceId.
+- Update API UpdateService: add request parameters body.expectedConfigRevision.
+
+
 2026-11-10 Version: 11.8.0
 - Support API CreateGatewayQuotaRuleSubjectUsageExportTask.
 - Support API GetGatewayQuotaRuleSubjectUsageExportTask.

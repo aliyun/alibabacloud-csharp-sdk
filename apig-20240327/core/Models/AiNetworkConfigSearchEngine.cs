@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The content mode. This parameter is specific to Quark.</para>
+        /// <para>Quark-specific: the content mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>summary</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// <para>The industry filter. This parameter is specific to Quark.</para>
+        /// <para>Quark-specific: the industry filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internet</para>
@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The search engine-specific parameters in key-value pair format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;market&quot;:&quot;zh-CN&quot;}</para>
         /// </summary>
         [NameInMap("optionArgs")]
         [Validation(Required=false)]
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? Start { get; set; }
 
         /// <summary>
-        /// <para>The time range filter. This parameter is specific to Quark.</para>
+        /// <para>Quark-specific: the time range filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7d</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TimeRange { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for the API call, in milliseconds.</para>
+        /// <para>The API call timeout in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>

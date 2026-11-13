@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether version management is enabled.</para>
+        /// <para>Specifies whether version management is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? VersionEnabled { get; set; }
 
         /// <summary>
-        /// <para>The version information of the versioned APIs.</para>
+        /// <para>The versioned API version information.</para>
         /// </summary>
         [NameInMap("versionedHttpApis")]
         [Validation(Required=false)]

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayName { get; set; }
 
                 /// <summary>
-                /// <para>The period multiplier, which indicates the number of periods after which the quota is reset. This parameter is returned when the rule uses a custom period. Minimum value: 1. Maximum value: 60.</para>
+                /// <para>The period multiplier, which indicates the number of periods after which the quota is reset. This parameter is returned when the rule uses a custom period. Valid values: 1 to 60.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time zone corresponding to the natural period, in UTC+x format.</para>
+                /// <para>The time zone for the natural period in UTC+x format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UTC+8</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Timezone { get; set; }
 
                 /// <summary>
-                /// <para>The period type. calendar indicates a natural period, and epoch indicates a custom period.</para>
+                /// <para>The period type. Valid values: calendar and epoch. calendar indicates a natural period. epoch indicates a custom period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>calendar</para>

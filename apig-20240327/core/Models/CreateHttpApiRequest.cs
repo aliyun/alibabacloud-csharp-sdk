@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiRequest : TeaModel {
         /// <summary>
-        /// <para>The list of protocols supported by the agent. This parameter is required when type is set to Agent. It is not required for other types.</para>
+        /// <para>The list of protocols supported by the agent. This parameter is required when type is set to Agent. For other types, you do not need to specify this parameter.</para>
         /// </summary>
         [NameInMap("agentProtocols")]
         [Validation(Required=false)]
         public List<string> AgentProtocols { get; set; }
 
         /// <summary>
-        /// <para>The list of AI API protocols. This parameter is required and only one protocol can be passed when type is set to LLM. It is required and multiple protocols can be passed when type is set to Ai. It is not required for other types. Example: OpenAI/v1.</para>
+        /// <para>The list of AI API protocols. This parameter is required and only one protocol can be specified when type is set to LLM. This parameter is required and multiple protocols can be specified when type is set to Ai. For other types, this parameter is not required. Example: OpenAI/v1.</para>
         /// </summary>
         [NameInMap("aiProtocols")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BasePath { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway to which the API belongs.</para>
+        /// <para>The ID of the associated gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-abc123xyz789</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BelongGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The list of deployment configurations for the HTTP API. This parameter is required and only one deployment configuration can be passed when type is set to LLM or Ai. Request-layer validation is not performed for other types.</para>
+        /// <para>The list of deployment configurations for the HTTP API. This parameter is required and only one deployment configuration can be specified when type is set to LLM or Ai. For other types, this parameter is not validated at the request layer.</para>
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run without executing the operation.</para>
+        /// <para>Specifies whether to only preview the operation without executing it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable permission authentication. This parameter is validated when type is set to LLM, Ai, or Agent. It is not validated at the request layer when type is set to Rest.</para>
+        /// <para>Specifies whether to enable permission authentication. This parameter is validated when type is set to LLM, Ai, or Agent. When type is set to Rest, this parameter is not validated at the request layer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? FirstByteTimeout { get; set; }
 
         /// <summary>
-        /// <para>The configuration information of the HTTP Ingress API. This parameter is required and cannot be nil when type is set to HttpIngress. It is not required for other types.</para>
+        /// <para>The configuration information of the HTTP Ingress API. This parameter is required and cannot be null when type is set to HttpIngress. For other types, you do not need to specify this parameter.</para>
         /// </summary>
         [NameInMap("ingressConfig")]
         [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The AI model category. This parameter is optional when type is set to LLM or Ai, and is not required for other types. Valid values: Text (text generation), Image (image generation), Audio (audio processing), Video (video generation), MultiModal (multimodal), Embedding (vector embedding), Rerank (reranking), and Others (others).</para>
+        /// <para>The AI model category. This parameter is optional when type is set to LLM or Ai. For other types, you do not need to specify this parameter. Valid values: Text (text generation), Image (image generation), Audio (audio processing), Video (video generation), MultiModal (multimodal), Embedding (vector embedding), Rerank (reranking), and Others (others).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Text</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the HTTP API, which is used to identify the API resource, such as test-api.</para>
+        /// <para>The name of the HTTP API, which is used to identify the current API resource, such as test-api.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -242,14 +242,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The versioning configuration of the API.</para>
+        /// <para>The API versioning configuration.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]
         public HttpApiVersionConfig VersionConfig { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. It is a globally unique value generated by the caller. Use a UUID. The token can be up to 64 characters in length. Within about 24 hours after the first request succeeds, a repeated request with the same ClientToken and identical request parameters directly returns the httpApiId created by the first request without creating the HTTP API again. If the request parameters are different, the IdempotentParameterMismatch error is returned. If the first request is still being processed, the IdempotentProcessing error is returned. If this parameter is not specified, idempotency control is disabled, and the behavior is consistent with the existing version.</para>
+        /// <para>The idempotency token. A globally unique value generated by the caller (a UUID is recommended). The value can be up to 64 characters in length. If you make a repeated request with the same ClientToken and identical request parameters within approximately 24 hours after the initial request succeeds, the system directly returns the httpApiId created by the initial request and does not create a duplicate HTTP API. If a repeated request has the same ClientToken but different request parameters, the system returns the IdempotentParameterMismatch error. If the initial request is still being processed, the system returns the IdempotentProcessing error. If this parameter is not specified, idempotency control is disabled, and the behavior remains the same as in previous versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5f7a2c1e-9b3d-4e8f-a1c6-0d2b8e4f7a13</para>

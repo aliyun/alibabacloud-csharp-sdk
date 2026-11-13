@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListAiModelProvidersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AI gateway instance. The target instance must exist, belong to the current account, and be of the AI gateway type.</para>
+        /// <para>The ID of the AI target instance. The specified instance must exist, belong to the current account, and be an AI target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy match condition for the model provider identifier. If this parameter is left empty, all model providers under the current gateway are queried.</para>
+        /// <para>The fuzzy match condition for the model provider identifier. If left empty, all model providers under the current gateway are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen</para>

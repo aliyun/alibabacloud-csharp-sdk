@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DataPathConfigsFieldPathsValue : TeaModel {
         /// <summary>
-        /// <para>The identity key of the field, which is unique within the same request path, such as input_token.</para>
+        /// <para>The identity key of the field, which is unique within the same URI of the request, such as input_token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>input_token</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string JsonPath { get; set; }
 
         /// <summary>
-        /// <para>The value rule for the field.</para>
+        /// <para>The value extraction rule for the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>first</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The message direction of the field, which indicates whether the field is extracted from the request or the response.</para>
+        /// <para>The message direction of the field, which indicates whether it is extracted from the request or the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>response</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? RecordEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the collection status of the field can be toggled.</para>
+        /// <para>Indicates whether the collection switch for the field can be toggled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? JsonPathRewriteAllowed { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the field configuration is from a field template.</para>
+        /// <para>Indicates whether the field configuration is derived from a field template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

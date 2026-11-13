@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateMigrationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the source ACK cluster. It must match the cluster in the IngressInfo of the API. Note: This parameter is required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error.</para>
+        /// <para>The ID of the source ACK cluster. The value must be the same as the cluster in the IngressInfo of the API. Note: This parameter is actually required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-xxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The task description. It is stored in the database only when the task is created.</para>
+        /// <para>The description of the task. The description is stored in the database only when the task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>migration from Nginx</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the destination environment. It must match the Ingress import environment of the API. Note: This parameter is required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error. You can call ListEnvironments to query existing environment IDs. CreateEnvironment is deprecated.</para>
+        /// <para>The ID of the destination environment. The value must be the same as the Ingress import environment of the API. Note: This parameter is actually required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error. You can call the ListEnvironments operation to query existing environment IDs. The CreateEnvironment operation is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxxx</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination gateway to which migration traffic is switched.</para>
+        /// <para>The ID of the destination gateway to which the migration traffic is switched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxxx</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HTTP API. The API must be imported as an Ingress type (HttpIngress) API. Note: This parameter is required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error.</para>
+        /// <para>The ID of the HTTP API. The API must be imported as an Ingress type (HttpIngress). Note: This parameter is actually required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-xxxx</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string HttpApiId { get; set; }
 
         /// <summary>
-        /// <para>The Ingress class. It must match the API import configuration. Otherwise, an ingress class conflict error is reported.</para>
+        /// <para>The Ingress class. The value must be the same as the API import configuration. Otherwise, an ingress class conflict error is reported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nginx</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string MigrationType { get; set; }
 
         /// <summary>
-        /// <para>The watched namespace. It must match the API import configuration. Otherwise, a watchNamespace conflict error is reported.</para>
+        /// <para>The watched namespace. The value must be the same as the API import configuration. Otherwise, a watchNamespace conflict error is reported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

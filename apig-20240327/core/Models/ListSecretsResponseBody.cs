@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of key information.</para>
+        /// <para>The list of secrets.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListSecretsResponseBodyData Data { get; set; }
         public class ListSecretsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of key details.</para>
+            /// <para>The list of secret details.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>The KMS configuration information.</para>
+                /// <para>The KMS configuration.</para>
                 /// </summary>
                 [NameInMap("kmsConfig")]
                 [Validation(Required=false)]
                 public KMSConfig KmsConfig { get; set; }
 
                 /// <summary>
-                /// <para>The key name.</para>
+                /// <para>The secret name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my_secret</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The resource count of resources that reference the current key.</para>
+                /// <para>The resource count of the resources that reference the current secret.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? ReferenceCount { get; set; }
 
                 /// <summary>
-                /// <para>The key ID.</para>
+                /// <para>The secret ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sec-d5e6shmm1hkoxxxxxxxx</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SecretId { get; set; }
 
                 /// <summary>
-                /// <para>The key source.</para>
+                /// <para>The secret source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KMS</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SecretSource { get; set; }
 
                 /// <summary>
-                /// <para>The key status. Valid values:</para>
+                /// <para>The secret status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ENABLE: Enabled.</description></item>
                 /// <item><description>DISABLE: Disabled.</description></item>

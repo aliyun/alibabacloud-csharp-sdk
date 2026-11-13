@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListConsumersResponseBodyData Data { get; set; }
         public class ListConsumersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of API consumer information.</para>
+            /// <para>The list of consumers.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListConsumersResponseBodyDataItems> Items { get; set; }
             public class ListConsumersResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The API consumer ID.</para>
+                /// <para>The consumer ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cs-csheiftlhtgmp0j0hp4g</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the API consumer is enabled.</para>
+                /// <para>Indicates whether the consumer is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The API consumer name.</para>
+                /// <para>The consumer name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-service</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

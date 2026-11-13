@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The security group name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Product Center Cluster Security Group</para>
+                /// <para>Product center cluster security group</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The security group type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal: Custom security group.</description></item>
-                /// <item><description>Enterprise: Advanced security group.</description></item>
+                /// <item><description>Normal: basic security group.</description></item>
+                /// <item><description>Enterprise: advanced security group.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

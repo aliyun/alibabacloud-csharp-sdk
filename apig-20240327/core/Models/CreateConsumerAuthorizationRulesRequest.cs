@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateConsumerAuthorizationRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The consumer authentication rules.</para>
+        /// <para>The consumer authorization rules.</para>
         /// </summary>
         [NameInMap("authorizationRules")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ExpireTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The type of the principal.</para>
+            /// <para>The type of the authorized principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ConsumerGroup</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The resource identifier, which is provided to non-standard code sources as a unique identifier for space reuse.</para>
+            /// <para>The resource identifier, which is provided to non-standard code sources as a unique identifier for namespace reuse.</para>
             /// </summary>
             [NameInMap("resourceIdentifier")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ParentResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the target resource for authorization. The required ID type is determined by resourceType, and the prefix must match.</para>
+                /// <para>The ID of the target resource to be authorized. The required ID type is determined by resourceType, and the prefix must match.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ha-cn-li942gy8p03</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>The type of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HttpApiRoute</para>

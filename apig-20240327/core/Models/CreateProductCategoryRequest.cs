@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateProductCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the product category. Maximum length: 500 characters.</para>
+        /// <para>The description of the product category. The description can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Product category for AI-related capabilities</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HiMarketIcon Icon { get; set; }
 
         /// <summary>
-        /// <para>The name of the product category. Maximum length: 100 characters.</para>
+        /// <para>The name of the product category. The name can be up to 100 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai-capabilities</para>

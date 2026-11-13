@@ -18,16 +18,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AttachResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of mount point supported by the policy.</para>
-        /// <para>Valid values:</para>
+        /// <para>The mount point types supported by the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HttpApi: HttpApi.</description></item>
-        /// <item><description>Operation: Operation of HttpApi.</description></item>
-        /// <item><description>GatewayRoute: gateway rule.</description></item>
-        /// <item><description>GatewayService: gateway service.</description></item>
-        /// <item><description>GatewayServicePort: gateway service port.</description></item>
-        /// <item><description>Domain: gateway domain name.</description></item>
-        /// <item><description>Gateway: gateway.</description></item>
+        /// <item><description>HttpApi: HTTP API</description></item>
+        /// <item><description>Operation: operation of the HTTP API</description></item>
+        /// <item><description>GatewayRoute: gateway route</description></item>
+        /// <item><description>GatewayService: gateway service</description></item>
+        /// <item><description>GatewayServicePort: gateway service port</description></item>
+        /// <item><description>Domain: gateway domain name</description></item>
+        /// <item><description>Gateway: gateway</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +38,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The configuration information. The value is a JSON string.</para>
+        /// <para>The configuration information.
+        /// JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

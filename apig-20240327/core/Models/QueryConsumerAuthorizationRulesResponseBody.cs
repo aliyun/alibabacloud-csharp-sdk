@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public GatewayInfo GatewayInfo { get; set; }
 
                 /// <summary>
-                /// <para>The principal type. Valid values: Consumer and ConsumerGroup.</para>
+                /// <para>The type of the authorized principal. Valid values: Consumer and ConsumerGroup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ConsumerGroup</para>

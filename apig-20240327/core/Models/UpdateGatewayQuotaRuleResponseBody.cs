@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class UpdateGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the write request is accepted by the system. If dryRun=true, a value of true only indicates that the dry run is accepted, not that the configuration is saved. If a formal write request returns false, it indicates that the configuration is not saved due to conflicts, and you should check the conflictPreview. A value of false typically occurs in retryable scenarios, such as when a conflict overwrite is not confirmed.</para>
+            /// <para>Indicates whether the semantics of the current write request can be accepted by the system. A value of false typically occurs in retryable scenarios, such as when a conflict is not confirmed for overwriting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <term><b>Obsolete</b></term>
                     /// 
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month, respectively. This is a legacy field. Use the periodType field in the actual response instead. This field is not guaranteed to be returned.</para>
+                    /// <para>The period type of the existing conflicting rule on the consumer. This is a historically declared field. Use periodType in the actual response instead. This field is not guaranteed to be returned. Valid values: day, week, and month.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -77,7 +77,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer. Valid values: calendar, which indicates that the existing conflicting rule uses a natural period, and epoch, which indicates that the existing conflicting rule uses a custom period.</para>
+                    /// <para>The type of the existing conflicting rule on the consumer. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>calendar: The existing conflicting rule on the consumer uses a natural period.</description></item>
+                    /// <item><description>epoch: The existing conflicting rule uses a custom period.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictType { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the consumer. This parameter is replaced by subjectId.</para>
+                    /// <para>The consumer ID. You can now uniformly use subjectId instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-d82n1g6m1hkm375xxxxx</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the consumer. This parameter is replaced by subjectName.</para>
+                    /// <para>The consumer name. You can now uniformly use subjectName instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
@@ -161,7 +165,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the request is a dry run.</para>
+            /// <para>Indicates whether a dry run is performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -171,7 +175,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? DryRun { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qr-xxxxxx</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class SubscribeProductRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the API product to subscribe to. This is the primary ID of the Product resource. You can obtain this ID from the productId field of a list item returned by ListProducts.</para>
+        /// <para>The ID of the API product to subscribe to. This is the primary ID of the API product resource. You can obtain this ID from the productId field in the items returned by the ListProducts operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>product-xxxxxxxx</para>

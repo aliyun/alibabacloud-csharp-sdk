@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Authority { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span must be less than or equal to 24 hours.</para>
+        /// <para>The end time of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span cannot exceed 24 hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The exact filter for the gateway request ID (x-acs-request-id).</para>
+        /// <para>The gateway request ID filter. This parameter performs an exact match on the x-acs-request-id field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E5D4xxxx</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The specific HTTP error code. Only three-digit numbers in the range of 400 to 599 are accepted. This parameter is required. If it is not provided, the API returns the InvalidParameter.WithDetail(400) error.</para>
+        /// <para>The specific HTTP error code. Only three-digit numbers in the range of 400 to 599 are accepted. This parameter is required. If it is not provided, the API returns an InvalidParameter.WithDetail(400) error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>502</para>

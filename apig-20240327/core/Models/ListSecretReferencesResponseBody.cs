@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListSecretReferencesResponseBodyDataItems> Items { get; set; }
             public class ListSecretReferencesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The plug-in information that references the current secret.</para>
+                /// <para>The information about the plugin that references the current secret.</para>
                 /// </summary>
                 [NameInMap("PluginConfig")]
                 [Validation(Required=false)]
                 public ListSecretReferencesResponseBodyDataItemsPluginConfig PluginConfig { get; set; }
                 public class ListSecretReferencesResponseBodyDataItemsPluginConfig : TeaModel {
                     /// <summary>
-                    /// <para>The plug-in name.</para>
+                    /// <para>The name of the plugin.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>oauth</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The plug-in type ID.</para>
+                    /// <para>The ID of the plugin class.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pls-xxxxxxxx</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string PluginClassId { get; set; }
 
                     /// <summary>
-                    /// <para>The plug-in ID.</para>
+                    /// <para>The ID of the plugin.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pl-d4ijk56m1hkhxxxxxxxx</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The service information that references the current secret.</para>
+                /// <para>The information about the service that references the current secret.</para>
                 /// </summary>
                 [NameInMap("ServiceConfig")]
                 [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The service ID.</para>
+                    /// <para>The ID of the service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>svc-cvgbtcmm1hkmxxxxxxxx</para>
@@ -102,14 +102,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The consumer information that references the current secret.</para>
+                /// <para>The information about the consumer that references the current secret.</para>
                 /// </summary>
                 [NameInMap("consumerConfig")]
                 [Validation(Required=false)]
                 public ListSecretReferencesResponseBodyDataItemsConsumerConfig ConsumerConfig { get; set; }
                 public class ListSecretReferencesResponseBodyDataItemsConsumerConfig : TeaModel {
                     /// <summary>
-                    /// <para>The consumer ID.</para>
+                    /// <para>The ID of the consumer.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-d0iltnem1hkhxxxxxxxx</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer name.</para>
+                    /// <para>The name of the consumer.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>myconsumer</para>
@@ -141,14 +141,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The MCP server information that references the current secret.</para>
+                /// <para>The information about the MCP service that references the current secret.</para>
                 /// </summary>
                 [NameInMap("mcpServerConfig")]
                 [Validation(Required=false)]
                 public ListSecretReferencesResponseBodyDataItemsMcpServerConfig McpServerConfig { get; set; }
                 public class ListSecretReferencesResponseBodyDataItemsMcpServerConfig : TeaModel {
                     /// <summary>
-                    /// <para>HTTP API ID。</para>
+                    /// <para>The HTTP API ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>api-d2vv43em201hxxxxxxxx</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string HttpApiId { get; set; }
 
                     /// <summary>
-                    /// <para>The route name.</para>
+                    /// <para>The name of the route.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mcp</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The route ID.</para>
+                    /// <para>The ID of the route.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hr-cv0i5oum1hkhxxxxxxxx</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The attachment point ID.</para>
+        /// <para>The ID of the mount point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-cq7l5s5lhtgi6qasrdc0</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of attachment point supported by the policy.</para>
+        /// <para>The type of mount points supported by the policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>HttpApi: HTTP API.</description></item>
-        /// <item><description>Operation: Operation of an HTTP API.</description></item>
+        /// <item><description>Operation: The operation of the HTTP API.</description></item>
         /// <item><description>GatewayRoute: Gateway route.</description></item>
         /// <item><description>GatewayService: Gateway service.</description></item>
         /// <item><description>GatewayServicePort: Gateway service port.</description></item>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The environment ID.</para>
+        /// <para>The ID of the environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-cq7l5s5lhtgi6qasrdc0</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The gateway ID.</para>
+        /// <para>The ID of the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cq2fm65lhtgm9nrrl7ag</para>
@@ -59,7 +59,27 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return attachment information.</para>
+        /// <para>The page number. Pages start from 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("pageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to return mount information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

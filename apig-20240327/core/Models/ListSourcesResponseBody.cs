@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public ListSourcesResponseBodyDataItemsK8sSourceInfo K8sSourceInfo { get; set; }
                 public class ListSourcesResponseBodyDataItemsK8sSourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The container service cluster ID.</para>
+                    /// <para>The ID of the container service cluster.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>c09212180612a42adbed6a940d01d***</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Address { get; set; }
 
                     /// <summary>
-                    /// <para>The NACOS registry cluster ID.</para>
+                    /// <para>The ID of the Nacos registry cluster.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mse-3353***</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The source name. If the source type is container service, the name is the container service cluster name. If the source type is MSE Nacos, the name is the Nacos instance name.</para>
+                /// <para>The source name. If the source type is container service, the name is the name of the container service cluster. If the source is MSE Nacos, the name is the name of the Nacos instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>itemcenter-dev-cluster</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The resource group ID.</para>
+                /// <para>The ID of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-xxxx</para>

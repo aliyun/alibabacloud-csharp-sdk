@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string OrganizationId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the most recent pipeline run. This parameter is not returned if the plugin has never been built.</para>
+            /// <para>The ID of the most recent pipeline run. This parameter is not returned if no build has been executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>987654</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The repository name (the English ID of the plugin).</para>
+            /// <para>The repository name, which is the English ID of the plug-in.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-custom-plugin</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The OSS download URL of the compiled WASM build output. This parameter is returned only when the pipeline status is SUCCESS.</para>
+            /// <para>The OSS download URL for the Wasm build output. This parameter is returned only when the pipeline status is SUCCESS.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://apigw-console-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/%7Buid%7D/plugin/plugin_1756262400.wasm">https://apigw-console-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/{uid}/plugin/plugin_1756262400.wasm</a></para>

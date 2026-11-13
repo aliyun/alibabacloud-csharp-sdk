@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayQuotaRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword in the rule name for fuzzy match.</para>
+        /// <para>The keyword in the rule name used for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>daily</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return in a single request. This parameter is not supported.</para>
+        /// <para>The maximum number of entries to return in a single call. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -58,6 +58,26 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The status of the rule. Valid values: enabled and disabled. If you do not specify this parameter, all rules are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>enabled</para>
+        /// </summary>
+        [NameInMap("ruleStatus")]
+        [Validation(Required=false)]
+        public string RuleStatus { get; set; }
+
+        /// <summary>
+        /// <para>The keyword in the name of the associated subject for fuzzy matching based on the consumer or consumer group name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alpha</para>
+        /// </summary>
+        [NameInMap("subjectNameLike")]
+        [Validation(Required=false)]
+        public string SubjectNameLike { get; set; }
 
     }
 

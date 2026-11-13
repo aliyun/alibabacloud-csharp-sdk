@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateConsumerRequest : TeaModel {
         /// <summary>
-        /// <para>The list of AccessKey pair authentication configurations.</para>
+        /// <para>The list of AK/SK identity authentication configurations.</para>
         /// </summary>
         [NameInMap("akSkIdentityConfigs")]
         [Validation(Required=false)]
         public List<AkSkIdentityConfig> AkSkIdentityConfigs { get; set; }
 
         /// <summary>
-        /// <para>The API key authentication configuration.</para>
+        /// <para>The API key identity authentication configuration.</para>
         /// </summary>
         [NameInMap("apikeyIdentityConfig")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the consumer.</para>
+        /// <para>Specifies whether the consumer is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The JWT authentication configuration.</para>
+        /// <para>The JWT identity authentication configuration.</para>
         /// </summary>
         [NameInMap("jwtIdentityConfig")]
         [Validation(Required=false)]

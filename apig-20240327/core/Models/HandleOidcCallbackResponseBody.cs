@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HandleOidcCallbackResponseBodyData Data { get; set; }
         public class HandleOidcCallbackResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The access token returned for the OIDC logon. This field is marked as sensitive in the API definition.</para>
+            /// <para>The access token returned for this OIDC logon. The API definition marks this field as a sensitive field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>access-token-xxxxxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AccessToken { get; set; }
 
             /// <summary>
-            /// <para>The numeric value for the validity period of the access token. The unit is not declared in the API definition.</para>
+            /// <para>The validity period value of the access token. The unit is not declared in the API definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ExpiresIn { get; set; }
 
             /// <summary>
-            /// <para>The type identifier of the access token. The valid values are not declared in the API definition.</para>
+            /// <para>The type identifier of the access token. The set of valid values is not declared in the API definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>token-type-xxxxxxxx</para>

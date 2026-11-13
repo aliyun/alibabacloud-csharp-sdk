@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public ParentResourceInfo ParentResourceInfo { get; set; }
 
             /// <summary>
-            /// <para>The plugin attachment ID.</para>
+            /// <para>The ID of the plugin attachment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa-d05f1tmm1hku195dd8j0</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PluginAttachmentId { get; set; }
 
             /// <summary>
-            /// <para>The plugin class information.</para>
+            /// <para>The plugin type information.</para>
             /// </summary>
             [NameInMap("pluginClassInfo")]
             [Validation(Required=false)]

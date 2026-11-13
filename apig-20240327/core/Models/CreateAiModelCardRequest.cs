@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<CreateAiModelCardRequestAvailablePaths> AvailablePaths { get; set; }
         public class CreateAiModelCardRequestAvailablePaths : TeaModel {
             /// <summary>
-            /// <para>The path. The model call path, which can be up to 2,048 characters in length.</para>
+            /// <para>The path. The model call path, which is up to 2,048 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/v1/chat/completions</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The protocol type corresponding to the path, which can be up to 64 characters in length.</para>
+            /// <para>The protocol type corresponding to the path, which is up to 64 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAICompatible</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The model capability switches. The key must be the name of a model capability supported by the API gateway, and the value must be a Boolean value.</para>
+        /// <para>The model capability switches. The key must be the name of a model capability supported by API Gateway, and the value must be a Boolean value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true,&quot;promptCaching&quot;:false}</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The name of the model. The model name must be unique within the same AI gateway instance and model provider, and can be up to 256 characters in length.</para>
+        /// <para>The name of the model. The model name must be unique within the same AI gateway instance and the same model provider, and be up to 256 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the model provider. It must reference an existing model provider in the target AI gateway instance and can be up to 128 characters in length.</para>
+        /// <para>The identifier of the model provider. It must reference an existing model provider in the target AI gateway instance and be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

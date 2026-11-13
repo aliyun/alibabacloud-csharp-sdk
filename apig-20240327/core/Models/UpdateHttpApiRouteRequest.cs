@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP-to-Dubbo protocol conversion configuration. This configuration is only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</para>
+                /// <para>The HTTP-to-Dubbo protocol conversion configuration. Only SingleService MSE_NACOS DUBBO backends of HTTP APIs are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public HttpDubboTranscoder HttpDubboTranscoder { get; set; }
 
                 /// <summary>
-                /// <para>The name of the target model. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</para>
+                /// <para>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. It must be configured for the SemanticRouter scenario. If it is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-plus</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The service protocol. Valid values:</para>
+                /// <para>The service protocol:</para>
                 /// <list type="bullet">
                 /// <item><description>HTTP.</description></item>
                 /// <item><description>HTTPS.</description></item>
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The current ExtProc service selection for fixed DFP routes. You can only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</para>
+        /// <para>The current ExtProc service selection for fixed DFP routes. Only edit mounted routes. This parameter cannot be submitted together with backendConfig, mcpRouteConfig, or policyConfigs.</para>
         /// </summary>
         [NameInMap("dfpConfig")]
         [Validation(Required=false)]
         public UpdateHttpApiRouteRequestDfpConfig DfpConfig { get; set; }
         public class UpdateHttpApiRouteRequestDfpConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the ExtProc service mounted to the current route. When updating a fixed DFP route, this ID must match the existing service. Service switching is not supported.</para>
+            /// <para>The ID of the ExtProc service mounted to the current route. When updating a fixed DFP route, the value must be consistent with the existing service. Service switching is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>svc-cr8k0udlhtgt80sh7png</para>

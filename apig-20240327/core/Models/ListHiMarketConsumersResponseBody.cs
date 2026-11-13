@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListHiMarketConsumersResponseBodyData Data { get; set; }
         public class ListHiMarketConsumersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of consumers. Each element represents a HiMarket consumer.</para>
+            /// <para>The list of consumers. Each element in the list is named consumer and represents a HiMarket consumer.</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor for the next page. An empty value indicates that the last page has been reached.</para>
+        /// <para>The pagination token for the next page. An empty value indicates that the last page is reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>

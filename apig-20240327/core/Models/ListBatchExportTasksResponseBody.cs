@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListBatchExportTasksResponseBodyData Data { get; set; }
         public class ListBatchExportTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of tasks, returned in reverse chronological order with the most recent tasks first.</para>
+            /// <para>The list of tasks. Tasks are returned in descending order of creation time, with the latest tasks first.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListBatchExportTasksResponseBodyDataItems> Items { get; set; }
             public class ListBatchExportTasksResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The task creation time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+                /// <para>The creation time of the task. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-26T10:00:00Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The gateway instance ID associated with the task.</para>
+                /// <para>The instance ID of the gateway associated with the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gw-xxx</para>
@@ -74,14 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? ProcessedCount { get; set; }
 
                 /// <summary>
-                /// <para>The task status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Pending: The task is pending.</description></item>
-                /// <item><description>Running: The task is running.</description></item>
-                /// <item><description>Success: All items succeeded.</description></item>
-                /// <item><description>PartialSuccess: Some items succeeded.</description></item>
-                /// <item><description>Failed: All items failed.</description></item>
-                /// </list>
+                /// <para>The status of the task. Valid values: Pending, Running, Success, PartialSuccess, and Failed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -91,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The task ID.</para>
+                /// <para>The ID of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>task-xxx</para>
@@ -101,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// <para>The task type.</para>
+                /// <para>The type of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BatchExport</para>
@@ -133,7 +126,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -175,7 +168,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. This value is empty when no more results are available.</para>
+        /// <para>The starting token for the next query. This parameter is empty when no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxx</para>

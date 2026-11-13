@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CheckCommodityStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of commodity statuses. Each item includes the commodity code and indicates whether the commodity capability is enabled for the current account.</para>
+        /// <para>The commodity status list. Each item includes the commodity code and indicates whether the commodity capability is enabled for the current account.</para>
         /// </summary>
         [NameInMap("commodities")]
         [Validation(Required=false)]

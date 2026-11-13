@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public SyncMCPServersResponseBodyData Data { get; set; }
         public class SyncMCPServersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of MCP servers that failed to sync.</para>
+            /// <para>The list of MCP servers that failed to synchronize.</para>
             /// </summary>
             [NameInMap("failedMcpServers")]
             [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The list of MCP servers that were synced successfully.</para>
+            /// <para>The list of successfully synchronized MCP servers.</para>
             /// </summary>
             [NameInMap("succeedMcpServers")]
             [Validation(Required=false)]

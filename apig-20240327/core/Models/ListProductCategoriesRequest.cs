@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListProductCategoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword for the category name. This parameter is used to search for product categories by name.</para>
+        /// <para>The keyword used to search for product categories by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai-capabilities</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The minimum value is 1.</para>
+        /// <para>The number of entries to return on each page. Minimum value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

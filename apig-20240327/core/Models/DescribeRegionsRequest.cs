@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh, en.</para>
+        /// <para>The language of the response. Valid values: zh and en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

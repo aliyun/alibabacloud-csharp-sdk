@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The MCP server name.</para>
+            /// <para>The name of the MCP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-mcp</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The backend service configuration for the route. This parameter is required. You must specify the backend service configuration, including scene and services. If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</para>
+        /// <para>The backend service configuration for the route. This parameter is required. You must provide the backend service configuration, including scene and services. If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</para>
         /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>HTTP</description></item>
-                /// <item><description>HTTPS</description></item>
+                /// <item><description>HTTP.</description></item>
+                /// <item><description>HTTPS.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The service ID. The serviceId must be a backend service ID that is registered under the gateway. You can call the ListServices operation (with the gatewayId parameter) to query available service IDs.</para>
+                /// <para>The service ID. The serviceId is the ID of a registered backend service under the gateway. You can query it by calling the ListServices API and passing the gatewayId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>svc-crbgq0dlhtgr***</para>
@@ -128,14 +128,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The creation source type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</description></item>
-        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.</description></item>
-        /// <item><description>ApiGatewayAssembly: gateway MCP assembly.</description></item>
-        /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</description></item>
-        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</description></item>
-        /// </list>
+        /// <para>The creation source type.</para>
+        /// <para>ApiGatewayHttpToMCP: API gateway-hosted HTTP-to-MCP
+        /// ApiGatewayProxyMcpHosting: API gateway-hosted MCP direct proxy
+        /// ApiGatewayAssembly: API gateway MCP assembly
+        /// NacosHttpToMCP: API gateway-hosted Nacos-synchronized HTTP-to-MCP
+        /// NacosMcpHosting: API gateway-hosted Nacos-synchronized MCP direct proxy</para>
         /// 
         /// <b>Example:</b>
         /// <para>ApiGatewayMcpHosting</para>
@@ -183,7 +181,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The canary release route configurations.</para>
+        /// <para>The canary route configurations.</para>
         /// </summary>
         [NameInMap("grayMcpServerConfigs")]
         [Validation(Required=false)]
@@ -287,7 +285,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route match rule. When type is set to RealMCP, the match parameter is required and you must specify a route match rule.</para>
+        /// <para>The route match rule. If type is set to RealMCP, the match parameter is required and a route match rule must be provided.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -301,7 +299,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateMcpServerRequestMcpServerConfig McpServerConfig { get; set; }
         public class CreateMcpServerRequestMcpServerConfig : TeaModel {
             /// <summary>
-            /// <para>The MCP server spec configuration. This parameter is mutually exclusive with swaggerConfig.</para>
+            /// <para>The MCP server configuration. This parameter is mutually exclusive with the swaggerConfig parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-spec.yaml</para>
@@ -311,7 +309,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerSpec { get; set; }
 
             /// <summary>
-            /// <para>The Swagger document for HTTP-to-MCP conversion. The document must comply with the OpenAPI 3.0 specification.</para>
+            /// <para>The Swagger document for HTTP-to-MCP. The document must comply with the OpenAPI 3.0 specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swagger.yaml</para>
@@ -333,7 +331,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? McpStatisticsEnable { get; set; }
 
         /// <summary>
-        /// <para>The MCP server name. The name must match the regular expression ^<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?(\.<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?)*$ and cannot exceed 64 characters in length.</para>
+        /// <para>The name of the MCP server. The name must match the regular expression ^<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?(\.<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?)*$ and be up to 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -344,7 +342,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type. This parameter is required. You must explicitly specify the protocol type (HTTP/HTTPS/SSE/StreamableHTTP). If this parameter is not specified, the API returns InvalidParameter.WithValue(400).</para>
+        /// <para>The protocol type. This parameter is required. You must explicitly specify the protocol type, such as HTTP, HTTPS, SSE, or StreamableHTTP. If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
@@ -354,10 +352,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>RealMCP: a standard MCP service.</description></item>
-        /// </list>
+        /// <para>The type.</para>
+        /// <para>RealMCP: Standard MCP service</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

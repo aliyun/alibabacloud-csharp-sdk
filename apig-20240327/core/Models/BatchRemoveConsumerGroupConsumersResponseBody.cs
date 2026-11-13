@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class BatchRemoveConsumerGroupConsumersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Returns Ok if the request succeeds.</para>
+        /// <para>The response status code. Ok is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned if the request is successful.</para>
+        /// <para>The response status code. Ok is returned if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ConsumerCount { get; set; }
 
                 /// <summary>
-                /// <para>The consumer group ID.</para>
+                /// <para>The ID of the consumer group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>csg-8c13d2b4f8a1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time of the consumer group, in Unix millisecond timestamp.</para>
+                /// <para>The time when the consumer group was created. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1715769600000</para>
@@ -64,17 +64,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The consumer group description.</para>
+                /// <para>The description of the consumer group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Used for grouping online API callers</para>
+                /// <para>Used to group online API callers</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The gateway type. Valid values: API or AI.</para>
+                /// <para>The gateway type. Valid values: API and AI.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>API</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>The consumer group name.</para>
+                /// <para>The name of the consumer group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-consumer-group</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of items per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of consumer groups that match the specified conditions.</para>
+            /// <para>The total number of matched consumer groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

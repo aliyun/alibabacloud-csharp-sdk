@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListBatchExportTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+        /// <para>The end time of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-26T11:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID. If specified, only tasks under this gateway are returned.</para>
+        /// <para>The instance ID of the gateway. If specified, only tasks under this gateway are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The paging token that indicates the start position of the next query.</para>
+        /// <para>The starting token for paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+        /// <para>The start time of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-26T10:00:00Z</para>

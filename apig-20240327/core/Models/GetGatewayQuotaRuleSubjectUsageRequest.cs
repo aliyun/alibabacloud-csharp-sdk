@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetGatewayQuotaRuleSubjectUsageRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for querying detailed consumption records. The time is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the start time based on the rule period.</para>
+        /// <para>The end time for querying detailed consumption records. The value is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the start time based on the rule period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788425220</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying detailed consumption records. The time is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the end time based on the rule period.</para>
+        /// <para>The start time for querying detailed consumption records. The value is a UNIX timestamp in seconds. If only this parameter is specified, the system automatically calculates the end time based on the rule period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788338820</para>

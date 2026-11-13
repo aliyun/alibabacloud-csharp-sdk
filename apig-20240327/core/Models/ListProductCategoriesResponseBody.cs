@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListProductCategoriesResponseBodyDataContent> Content { get; set; }
             public class ListProductCategoriesResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The product category ID. You can use this ID as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory. You can also use it as an element in the categories parameter (a set of category IDs) for SetProductCategories and CreateProduct.</para>
+                /// <para>The product category ID. You can use this ID as the categoryId path parameter in the GetProductCategory, UpdateProductCategory, and DeleteProductCategory operations, or as an element in the categories parameter (a set of category IDs) in the SetProductCategories and CreateProduct operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>category-xxxxxxxx</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The product category description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Product category containing AI-related capabilities</para>
+                /// <para>Product category that includes AI-related capabilities</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The product category icon. It consists of two fields: icon type (type) and icon information (value).</para>
+                /// <para>The product category icon. It consists of two fields: type (the icon type) and value (the icon information).</para>
                 /// </summary>
                 [NameInMap("icon")]
                 [Validation(Required=false)]

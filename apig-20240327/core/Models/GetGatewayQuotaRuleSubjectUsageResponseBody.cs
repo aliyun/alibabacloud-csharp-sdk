@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayQuotaRuleSubjectUsageResponseBodyData Data { get; set; }
         public class GetGatewayQuotaRuleSubjectUsageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total cached token consumption.</para>
+            /// <para>The total number of cached tokens consumed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public double? CachedAmountDecimal { get; set; }
 
             /// <summary>
-            /// <para>The pagination of consumption details.</para>
+            /// <para>The paginated consumption details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;totalSize&quot;:100}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems> Items { get; set; }
                 public class GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems : TeaModel {
                     /// <summary>
-                    /// <para>The cached token consumption.</para>
+                    /// <para>The number of cached tokens consumed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Consumer { get; set; }
 
                     /// <summary>
-                    /// <para>The input token consumption.</para>
+                    /// <para>The number of input tokens consumed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>120</para>
@@ -130,7 +130,37 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Model { get; set; }
 
                     /// <summary>
-                    /// <para>The output token consumption.</para>
+                    /// <para>The ID of the executed model card.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>msc-d00000000000000000000</para>
+                    /// </summary>
+                    [NameInMap("modelCardId")]
+                    [Validation(Required=false)]
+                    public string ModelCardId { get; set; }
+
+                    /// <summary>
+                    /// <para>The ID of the model source at execution. This field is empty for legacy records.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ms-d00000000000000000000</para>
+                    /// </summary>
+                    [NameInMap("modelSourceId")]
+                    [Validation(Required=false)]
+                    public string ModelSourceId { get; set; }
+
+                    /// <summary>
+                    /// <para>The snapshot of the model source name at execution.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Model Studio model source</para>
+                    /// </summary>
+                    [NameInMap("modelSourceName")]
+                    [Validation(Required=false)]
+                    public string ModelSourceName { get; set; }
+
+                    /// <summary>
+                    /// <para>The number of output tokens consumed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80</para>
@@ -158,6 +188,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [NameInMap("requestId")]
                     [Validation(Required=false)]
                     public string RequestId { get; set; }
+
+                    /// <summary>
+                    /// <para>The ID of the executed service.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>svc-d00000000000000000000</para>
+                    /// </summary>
+                    [NameInMap("serviceId")]
+                    [Validation(Required=false)]
+                    public string ServiceId { get; set; }
 
                     /// <summary>
                     /// <para>The consumption or request time in the YYYY-MM-DD format.</para>
@@ -224,7 +264,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The total input token consumption.</para>
+            /// <para>The total number of input tokens consumed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -244,7 +284,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public double? InputAmountDecimal { get; set; }
 
             /// <summary>
-            /// <para>The total output token consumption.</para>
+            /// <para>The total number of output tokens consumed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180</para>
@@ -274,7 +314,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? OverLimit { get; set; }
 
             /// <summary>
-            /// <para>The quota dimension. Valid values: token and credit.</para>
+            /// <para>The quota dimension. Valid values: token or credit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>token</para>
@@ -284,7 +324,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string QuotaDimension { get; set; }
 
             /// <summary>
-            /// <para>The subject type. Valid values: consumer and consumer_group.</para>
+            /// <para>The subject type. Valid values: consumer or consumer_group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>consumer_group</para>

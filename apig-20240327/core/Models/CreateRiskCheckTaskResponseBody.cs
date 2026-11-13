@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateRiskCheckTaskResponseBodyData Data { get; set; }
         public class CreateRiskCheckTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The risk detection task ID.</para>
+            /// <para>The ID of the risk detection task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rct-xxxxxxxx</para>

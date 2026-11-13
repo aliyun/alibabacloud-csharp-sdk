@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListMigrationTasksResponseBodyData Data { get; set; }
         public class ListMigrationTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of migration tasks.</para>
+            /// <para>The items.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// <para>The source ACK cluster. A hyphen (-) is displayed if the cluster name fails to be queried.</para>
+                /// <para>The source ACK cluster ID. A hyphen (-) is returned if the name query fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c-xxxxxx</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ClusterName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace for SLB traffic switching.</para>
+                /// <para>The namespace for SLB traffic shifting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ClusterNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The creation time, in Unix seconds.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1756262400</para>
@@ -134,14 +134,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayName { get; set; }
 
                 /// <summary>
-                /// <para>The monitored Ingress Class configuration.</para>
+                /// <para>The Ingress class of the listener.</para>
                 /// </summary>
                 [NameInMap("ingressConfig")]
                 [Validation(Required=false)]
                 public ListMigrationTasksResponseBodyDataItemsIngressConfig IngressConfig { get; set; }
                 public class ListMigrationTasksResponseBodyDataItemsIngressConfig : TeaModel {
                     /// <summary>
-                    /// <para>The monitored Ingress Class.</para>
+                    /// <para>The Ingress class of the listener.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>nginx</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string IngressClass { get; set; }
 
                     /// <summary>
-                    /// <para>The monitored namespace.</para>
+                    /// <para>The namespace watched by the listener.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the SLB instance used for traffic switching.</para>
+                /// <para>The ID of the SLB instance for traffic shifting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>lb-bp1xxxx</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The traffic switching method. Valid values: DNS and SLB.</para>
+                /// <para>The traffic shifting method. Valid values: DNS and SLB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SLB</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user to whom the task belongs.</para>
+                /// <para>The ID of the owner user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234567890</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ListMigrationTasksResponseBodyDataItemsVirtualServices> VirtualServices { get; set; }
                 public class ListMigrationTasksResponseBodyDataItemsVirtualServices : TeaModel {
                     /// <summary>
-                    /// <para>The listener port. Valid values: 1 to 65535. This parameter is required in Step 3 of the frontend form.</para>
+                    /// <para>The listening port. Valid values: 1 to 65535. This field is required in Step 3 on the frontend.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>443</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The listener protocol. This parameter is required for CLB migration. During MSE migration validation, CLB requests without a protocol are directly rejected. See migrationtask.go#L95-L97. This parameter can be left empty for NLB scenarios.</para>
+                    /// <para>The listening protocol. This field is required for CLB migration. If the protocol is missing during MSE migration validation for CLB, the request is directly rejected. This field can be left empty for NLB scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tcp</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Protocol { get; set; }
 
                     /// <summary>
-                    /// <para>The virtual server group ID. For CLB, this is the VServerGroupId. For NLB, this is the ServerGroupId. This parameter is required in Step 3 of the frontend form.</para>
+                    /// <para>The virtual server group ID. For CLB, this is VServerGroupId. For NLB, this is ServerGroupId. This field is required in the Step 3 form on the frontend and is validated to be non-empty.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rsp-xxxx</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string VirtualServiceGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the virtual server group.</para>
+                    /// <para>The name of the group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80-tcp</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The weight of the service on the API gateway side in the legacy workflow. Valid values: 0 to 100.</para>
+                /// <para>The service weight on the APIG side in the legacy process. Valid values: 0 to 100.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>

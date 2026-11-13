@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? DefaultGatewayIngress { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the load balancer can be edited. This serves as an edit switch for load balancers during migration.</para>
+                /// <para>Indicates whether the load balancer can be edited. This parameter serves as an edit switch for load balancers during migration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string LoadBalancerId { get; set; }
 
                 /// <summary>
-                /// <para>The association mode.</para>
+                /// <para>The binding mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Managed</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<ListGatewayLoadBalancersResponseBodyDataItemsLoadBalancerZoneMappingsLoadBalancerAddresses> LoadBalancerAddresses { get; set; }
                     public class ListGatewayLoadBalancersResponseBodyDataItemsLoadBalancerZoneMappingsLoadBalancerAddresses : TeaModel {
                         /// <summary>
-                        /// <para>The allocation ID of the elastic IP address (EIP) corresponding to the public IP address.</para>
+                        /// <para>The EIP allocation ID corresponding to the public IP address.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>eip-bp1xxxx</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public int? Port { get; set; }
 
                         /// <summary>
-                        /// <para>The listener protocol. No backend enumeration validation is performed. The actual value is obtained from the SLB or NLB API. Common values include tcp, udp, http, https, and tls.</para>
+                        /// <para>The listener protocol. No backend enum verification is performed. The actual value is retrieved from the SLB or NLB POP API. Common values include tcp, udp, http, https, and tls.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>https</para>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The ID of the virtual server group. This is VServerGroupId for Classic Load Balancer (CLB) and ServerGroupId for Network Load Balancer (NLB).</para>
+                    /// <para>The ID of the virtual server group. For CLB, this is the VServerGroupId. For NLB, this is the ServerGroupId.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rsp-xxxx</para>

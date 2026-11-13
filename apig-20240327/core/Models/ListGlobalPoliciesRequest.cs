@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGlobalPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The attached resource type to filter by. This parameter takes effect only when globalPolicyType is set to BlackOrWhite. If this parameter is not specified, Gateway, Domain, and Route resources are queried.</para>
+        /// <para>Filters by mounted resource type. This parameter takes effect only for the BlackOrWhite policy type. By default, the Gateway, Domain, and Route types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Gateway</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The policy class name. Separate multiple values with commas (server-side strings.Split).</para>
+        /// <para>The policy class name. You can specify multiple values separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JWTAuth,OIDCAuth,ExternalZAuth</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClassName { get; set; }
 
         /// <summary>
-        /// <para>The enabling status to filter by.</para>
+        /// <para>Filters by enabling status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The environment ID to filter by.</para>
+        /// <para>Filters by environment ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The gateway ID to filter by (attachment dimension).</para>
+        /// <para>Filters by gateway ID at the attachment level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GlobalPolicyType { get; set; }
 
         /// <summary>
-        /// <para>The IP content to filter by. A LIKE match is performed on the config field.</para>
+        /// <para>Filters by IP content by performing a LIKE query on the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.3.4</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string IpAccessControlContent { get; set; }
 
         /// <summary>
-        /// <para>The protocol layer to filter by. L4 queries config entries that contain L4. L7 queries config entries that do not contain L4.</para>
+        /// <para>Filters by protocol layer. If you specify L4, configurations containing L4 are queried. If you specify L7, configurations that do not contain L4 are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>L7</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string IpAccessControlProtocolLayer { get; set; }
 
         /// <summary>
-        /// <para>The resource name to filter by. A LIKE match is performed on the config field.</para>
+        /// <para>Filters by resource name by performing a LIKE query on the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-route</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string IpAccessControlResourceName { get; set; }
 
         /// <summary>
-        /// <para>The IP access control type to filter by. A LIKE match is performed on the config field.</para>
+        /// <para>Filters by IP access control type by performing a LIKE query on the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>White / Black</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string IpAccessControlType { get; set; }
 
         /// <summary>
-        /// <para>The exact policy name to filter by.</para>
+        /// <para>Filters by exact policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-jwt-auth</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateGatewayElasticPolicyRequestElasticPolicy ElasticPolicy { get; set; }
         public class UpdateGatewayElasticPolicyRequestElasticPolicy : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the elastic policy. A value of false indicates that the elastic policy is disabled. When the elastic policy is disabled, other fields are not validated and the system directly proceeds with the disabling process.</para>
+            /// <para>Specifies whether to enable elastic scaling. A value of false indicates that elastic scaling is disabled. When disabled, other fields are not validated and the disabling process is executed directly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ElasticType { get; set; }
 
             /// <summary>
-            /// <para>The time periods during which AutoHPA is allowed to scale out, specified by startTime and endTime.</para>
+            /// <para>The time periods during which AutoHPA is allowed to scale out (startTime/endTime).</para>
             /// </summary>
             [NameInMap("enableScaleTimePolicyList")]
             [Validation(Required=false)]
             public List<UpdateGatewayElasticPolicyRequestElasticPolicyEnableScaleTimePolicyList> EnableScaleTimePolicyList { get; set; }
             public class UpdateGatewayElasticPolicyRequestElasticPolicyEnableScaleTimePolicyList : TeaModel {
                 /// <summary>
-                /// <para>The O&amp;M end time in the HH:mm format.</para>
+                /// <para>The O&amp;M end time (HH:mm).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18:00</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The O&amp;M start time in the HH:mm format.</para>
+                /// <para>The O&amp;M start time (HH:mm).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>09:00</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the AutoHPA load alert threshold.</para>
+            /// <para>Specifies whether to enable the load alert threshold for AutoHPA.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<UpdateGatewayElasticPolicyRequestElasticPolicyTimePolicyList> TimePolicyList { get; set; }
             public class UpdateGatewayElasticPolicyRequestElasticPolicyTimePolicyList : TeaModel {
                 /// <summary>
-                /// <para>The O&amp;M end time in the HH:mm format.</para>
+                /// <para>The O&amp;M end time (HH:mm).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>06:00</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The O&amp;M start time in the HH:mm format.</para>
+                /// <para>The O&amp;M start time (HH:mm).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00</para>

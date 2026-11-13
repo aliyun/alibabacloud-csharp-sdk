@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The Nacos instance name.</para>
+                /// <para>The name of the Nacos instance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Product Center Nacos Registry</para>
+                /// <para>Product Center Nacos registry</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]

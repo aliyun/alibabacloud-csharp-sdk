@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public PublishProductResponseBodyData Data { get; set; }
         public class PublishProductResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The publication record ID, which identifies the publication relationship between the published API product and the target portal. You can query this ID in the response of ListProductPublications at /himarket/v1/products/{productId}/publications. You can also use this ID as the publicationId path parameter in UnpublishProduct to unpublish the record.</para>
+            /// <para>The publication record ID, which identifies the publication relationship between the published API product and the target portal. You can query this ID in the response of ListProductPublications at /himarket/v1/products/{productId}/publications. You can also use this ID as the publicationId path parameter in UnpublishProduct to unpublish the publication record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>publication-xxxxxxxx</para>

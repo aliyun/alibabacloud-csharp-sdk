@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The description of the policy.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a gateway timeout policy</para>

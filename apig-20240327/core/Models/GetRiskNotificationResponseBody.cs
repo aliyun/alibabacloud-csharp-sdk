@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the notification for the risk item is muted.</para>
+            /// <para>Indicates whether notifications for the risk item are muted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? IsMute { get; set; }
 
             /// <summary>
-            /// <para>The code of the risk item.</para>
+            /// <para>The risk item code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GW_VERSION_EXPIRED</para>

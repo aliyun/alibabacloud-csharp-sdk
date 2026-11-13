@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayLoadBalancersRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return all instances in the optional list mode. This parameter affects the pagination and filtering strategies.</para>
+        /// <para>Specifies whether to return all instances in the optional list mode. This parameter affects the pagination and filtering policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Network { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the list of load balancers associated with the gateway. If set to true, the associated load balancers are returned based on database relationships. We recommend setting this parameter to true to retrieve the associated load balancers. If set to false or left empty, the optional list mode is used to call the SLB or NLB API and filter bindable instances. In the default mode where related is false, calling the SLB or NLB API may return a 500 error due to backend data issues in common scenarios.</para>
+        /// <para>Specifies the mode switch. If set to true, the API returns the list of load balancers associated with the gateway by reading database relationships. If set to false or left empty, the API uses the optional list mode and calls the SLB or NLB POP API to filter bindable instances. We recommend that you set this parameter to true to retrieve the associated load balancers. In the default mode where related is set to false, the API calls the SLB or NLB POP API to filter bindable instances, which may return a 500 error in common scenarios due to backend data issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

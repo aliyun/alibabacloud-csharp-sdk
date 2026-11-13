@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListHiMarketConsumerSubscriptionsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page. The default value and valid values are not declared in the API definition.</para>
+        /// <para>The maximum number of entries per page. The default value and valid values are not specified in the API definition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Pass the token returned in the previous response to retrieve the next page. Do not specify this parameter for the first request.</para>
+        /// <para>The pagination token. Pass the nextToken value returned in the previous response to retrieve the next page. Do not pass this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The subscription status. Filters subscriptions by status. Valid values: PENDING and APPROVED.</para>
+        /// <para>The subscription status used to filter subscriptions. Valid values: PENDING and APPROVED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>APPROVED</para>

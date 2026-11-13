@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the subscribed API product, which is the primary ID of the API product resource. This ID is the same as the productId path parameter of this operation.</para>
+                /// <para>The ID of the subscribed API product. This is the primary ID of the API product resource and is the same as the productId path parameter of this operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product-xxxxxxxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ProductId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the subscribed API product, which is the Name property of the API product resource.</para>
+                /// <para>The name of the subscribed API product. This is the Name property of the API product resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>model-service</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ProductType { get; set; }
 
                 /// <summary>
-                /// <para>The subscription status. Valid values: PENDING and APPROVED. The valid values are defined in the enum of the status request parameter, and this response parameter is not annotated with @enums.</para>
+                /// <para>The subscription status. Valid values: PENDING and APPROVED. The valid values are defined in the status request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>APPROVED</para>

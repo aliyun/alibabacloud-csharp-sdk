@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerAuthorizationRuleId { get; set; }
 
                 /// <summary>
-                /// <para>The consumer ID.</para>
+                /// <para>The ID of the consumer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cs-csheiftlhtgmp0j0hp4g</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public GatewayInfo GatewayInfo { get; set; }
 
                 /// <summary>
-                /// <para>The resource ID.</para>
+                /// <para>The ID of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2351944</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type.</para>
+                /// <para>The type of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HttpApiRoute</para>

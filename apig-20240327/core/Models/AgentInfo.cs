@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AgentInfoAgentAccess AgentAccess { get; set; }
         public class AgentInfoAgentAccess : TeaModel {
             /// <summary>
-            /// <para>The ID of the HTTP API associated with the agent access capability. The frontend uses this ID to call existing HTTP API, route, consumer authorization, policy, and plugin query operations.</para>
+            /// <para>The ID of the HTTP API associated with the agent access capability. The frontend uses this ID to call existing HTTP API, route, consumer authorization, policy, and plug-in query operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;httpApiId&quot;: &quot;api-abc123&quot; }</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The type of the agent. DashScope allows only agent access. Dify allows agent access and model access. ClaudeCode allows only model access. Custom allows agent access and model access.</para>
+        /// <para>The type of the agent. DashScope (Model Studio) allows only agent access, Dify allows agent access and model access, ClaudeCode allows only model access, and Custom allows agent access and model access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom</para>
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AgentType { get; set; }
 
         /// <summary>
-        /// <para>The list of capabilities that the current agent type is allowed to configure. This field does not indicate that the capabilities are already configured. To check whether a capability is configured, determine whether agentAccess or modelAccess is null.</para>
+        /// <para>The list of capabilities that the current agent type is allowed to configure. This field does not indicate that the capabilities are configured. To determine whether they are configured, check whether agentAccess or modelAccess is null.</para>
         /// </summary>
         [NameInMap("allowedCapabilities")]
         [Validation(Required=false)]
         public List<string> AllowedCapabilities { get; set; }
 
         /// <summary>
-        /// <para>The time when the agent was created. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The creation time of the agent, as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1755129600000</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AgentInfoModelAccess ModelAccess { get; set; }
         public class AgentInfoModelAccess : TeaModel {
             /// <summary>
-            /// <para>The list of consumer identity bindings maintained by the agent domain. The Model API ID and the consumer IDs in the list jointly identify the agent and take effect for all routes of the Model API. You can obtain consumer details and their Model API authorization details by calling existing Consumer API and consumer authorization query operations.</para>
+            /// <para>The list of consumer identity bindings maintained by the agent domain. The Model API ID and the consumer IDs in the list jointly locate the agent identity and take effect for all routes of the Model API. Consumer details and their Model API authorization details are obtained through existing Consumer API and consumer authorization query operations.</para>
             /// </summary>
             [NameInMap("consumerIds")]
             [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the agent was last updated. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The last update time of the agent, as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1755129600000</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateProductResponseBodyData Data { get; set; }
         public class CreateProductResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the new API product. You can use this ID to locate the product in API operations such as GetProduct, UpdateProduct, PublishProduct, and GetProductRef.</para>
+            /// <para>The ID of the newly created API product, which can be used to locate the product in API operations such as GetProduct, UpdateProduct, PublishProduct, and GetProductRef.</para>
             /// 
             /// <b>Example:</b>
             /// <para>p-xxxxxxxx</para>

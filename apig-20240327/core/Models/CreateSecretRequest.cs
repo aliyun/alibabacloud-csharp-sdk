@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateSecretRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the key.</para>
+        /// <para>The description of the secret.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public KMSConfig KmsConfig { get; set; }
 
         /// <summary>
-        /// <para>The key name. The name can contain letters, digits, and underscores (_) and can be up to 64 characters in length.</para>
+        /// <para>The name of the secret. The name can contain letters, digits, and underscores (_) and must not exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_secret</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The KMS credential value.</para>
+        /// <para>The KMS secret value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apikey-123456xxxxxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SecretData { get; set; }
 
         /// <summary>
-        /// <para>The key source.</para>
+        /// <para>The source of the secret.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KMS</para>

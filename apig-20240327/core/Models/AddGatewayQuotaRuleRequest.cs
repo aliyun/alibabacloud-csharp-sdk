@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AddGatewayQuotaRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The hash of the conflict snapshot, which is used to prevent concurrent dirty overwrites when you confirm to overwrite. You can obtain this value by performing a dry run with dryRun set to true and extracting it from the response.</para>
-        /// <para>You do not need to specify this parameter in the following scenarios: no conflicts exist, you perform only a dry run with dryRun set to true, or you do not confirm to overwrite with overwrite set to false.</para>
-        /// <para>If you set dryRun to false and overwrite to true but do not specify this parameter or the parameter expires and does not match, the backend returns accepted=false and a new conflict preview. In this case, you must perform a dry run again to confirm the new conflicts.</para>
+        /// <para>The conflict snapshot hash, which is used to prevent concurrent dirty overwrites when you confirm to overwrite. You can obtain this value by first setting dryRun to true and extracting it from the response.</para>
+        /// <para>You do not need to specify this parameter in the following scenarios: no conflicts exist; you only perform a dry run by setting dryRun to true; or you do not confirm overwriting by setting overwrite to false.</para>
+        /// <para>If you set dryRun to false and overwrite to true but do not specify this parameter or the parameter expires and does not match, the backend returns accepted=false along with a new conflict preview. In this case, you must perform a dry run again to confirm the new conflicts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConflictHash { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the consumer groups to which the rule is bound.</para>
+        /// <para>The IDs of the consumer groups to which the rule is bound. This parameter is used when subjectType is set to consumer_group and cannot be specified together with consumerIds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group1,group2</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> ConsumerGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the consumers to which the rule is bound. You can specify up to 1,000 consumers at a time.</para>
+        /// <para>The IDs of the consumers to which the rule is bound. You can specify up to 1,000 consumers in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1001,1002,1003</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> ConsumerIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run without saving the configuration or delivering it to the gateway. A dry run checks whether conflicting rules exist on the bound subjects. A subject cannot have two natural period quotas with the same period. For example, if a subject already has a natural day quota, you cannot add another natural day quota rule to it.</para>
+        /// <para>Specifies whether to perform only a dry run without saving or delivering the actual configuration. This is used to check whether conflicting rules exist on the bound consumption subjects. A single consumption subject cannot be configured with two natural period quotas of the same period. For example, a consumption subject that already has a natural day quota cannot be added with another natural day quota rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow overwriting when conflicts occur. If you allow overwriting, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</para>
+        /// <para>Specifies whether to allow overwriting when a conflict occurs. If overwriting is allowed, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Overwrite { get; set; }
 
         /// <summary>
-        /// <para>The period multiplier in days. This parameter is required when windowAlignment is set to epoch. Valid values: 1 to 106751. Do not set this parameter for a natural period.</para>
+        /// <para>The period multiplier in days. This parameter is required for custom period rules and applies when windowAlignment is set to epoch. Valid values: 1 to 106751. Do not set this parameter for natural periods.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? PeriodMultiplier { get; set; }
 
         /// <summary>
-        /// <para>The period type. For a natural period, valid values are day, week, and month. For a custom period, only day is supported.</para>
+        /// <para>The period type. For natural periods, valid values are day, week, and month. For custom periods, only day is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PeriodType { get; set; }
 
         /// <summary>
-        /// <para>The quota dimension or limit type. Valid values: token and credit.</para>
+        /// <para>The quota dimension or limit type. Valid values: token, credit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The subject type of the rule. A value of consumer indicates a consumer, and a value of consumer_group indicates a consumer group. Default value: consumer.</para>
+        /// <para>The subject type of the rule. Valid values: consumer, consumer_group. Default value: consumer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>consumer_group</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SubjectType { get; set; }
 
         /// <summary>
-        /// <para>The time zone for the natural period, in UTC+x format.</para>
+        /// <para>The time zone for the natural period in UTC+x format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UTC+8</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Timezone { get; set; }
 
         /// <summary>
-        /// <para>The reset period type. A value of calendar indicates a natural period, and a value of epoch indicates a custom period.</para>
+        /// <para>The reset period type. A natural period starts from the beginning of a natural day, week, or month. A custom period starts when the rule is delivered. Valid values: calendar, epoch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>calendar</para>

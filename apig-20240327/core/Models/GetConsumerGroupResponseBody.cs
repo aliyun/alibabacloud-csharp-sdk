@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetConsumerGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned if the request is successful.</para>
+        /// <para>The response status code. Ok is returned if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ConsumerCount { get; set; }
 
             /// <summary>
-            /// <para>The consumer group ID.</para>
+            /// <para>The ID of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>csg-8c13d2b4f8a1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the consumer group, in Unix millisecond timestamp.</para>
+            /// <para>The time when the consumer group was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1715769600000</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The consumer group description.</para>
+            /// <para>The description of the consumer group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Group for online API callers</para>
+            /// <para>Used to group production API consumers</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayType { get; set; }
 
             /// <summary>
-            /// <para>The consumer group name.</para>
+            /// <para>The name of the consumer group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>api-consumer-group</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The update time of the consumer group, in Unix millisecond timestamp.</para>
+            /// <para>The time when the consumer group was updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1715769600000</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Pass the nextToken returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</para>
+        /// <para>The pagination cursor. Pass the nextToken returned in the previous response to retrieve the next page. Do not pass this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

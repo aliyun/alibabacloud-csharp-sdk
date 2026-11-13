@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public Backend Backend { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the route is a built-in system route.</para>
+        /// <para>Specifies whether the route is a built-in system route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ExtProc service selected for the fixed dynamic forwarding route. This field is not returned when no matching binding exists.</para>
+        /// <para>The ExtProc service selection for fixed dynamic forwarding routes. This field is not returned when no matching binding exists.</para>
         /// </summary>
         [NameInMap("dfpConfig")]
         [Validation(Required=false)]
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The list of domain information.</para>
+        /// <para>The list of domain name information.</para>
         /// </summary>
         [NameInMap("domainInfos")]
         [Validation(Required=false)]
         public List<HttpRouteDomainInfos> DomainInfos { get; set; }
         public class HttpRouteDomainInfos : TeaModel {
             /// <summary>
-            /// <para>The domain ID.</para>
+            /// <para>The domain name ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-cr3v7dllhtgi9s***</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<HttpRouteEnvironmentInfoSubDomains> SubDomains { get; set; }
             public class HttpRouteEnvironmentInfoSubDomains : TeaModel {
                 /// <summary>
-                /// <para>The domain ID.</para>
+                /// <para>The domain name ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d-cqu19hdlhtgjuv4***</para>

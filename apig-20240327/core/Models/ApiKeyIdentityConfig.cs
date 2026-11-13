@@ -85,6 +85,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Apikey { get; set; }
 
             /// <summary>
+            /// <para>The creation time of this logical key saved by the server, in Unix milliseconds, for read-only purposes. When updated, the original key retains the saved time, and client input is not used as the time basis. A missing or null history indicates an unknown time, and the consumer creation time must not be used as a substitute.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1792627200000</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("createTimestamp")]
+            [Validation(Required=false)]
+            public long? CreateTimestamp { get; set; }
+
+            /// <summary>
             /// <para>The generation mode.</para>
             /// 
             /// <b>Example:</b>

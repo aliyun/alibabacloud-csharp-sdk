@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListModelCardsRequest : TeaModel {
         /// <summary>
-        /// <para>The identifier of the model provider used to filter model cards by provider.</para>
+        /// <para>The model provider identifier used to filter model cards by provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>provider-xxxxxxxx</para>

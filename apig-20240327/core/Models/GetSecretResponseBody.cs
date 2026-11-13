@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The key information.</para>
+        /// <para>The secret information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The gateway type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>API: API gateway.</description></item>
-            /// <item><description>AI: AI gateway.</description></item>
+            /// <item><description>API: API gateway</description></item>
+            /// <item><description>AI: AI gateway</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of resources that reference the current key.</para>
+            /// <para>The number of resources that reference the current secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? ReferenceCount { get; set; }
 
             /// <summary>
-            /// <para>The key ID.</para>
+            /// <para>The ID of the secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sec-d5e6shmm1hkoxxxxxxxx</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SecretId { get; set; }
 
             /// <summary>
-            /// <para>The key source.</para>
+            /// <para>The source of the secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KMS</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SecretSource { get; set; }
 
             /// <summary>
-            /// <para>The key status. Valid values:</para>
+            /// <para>The secret status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ENALBE: Enabled.</description></item>
-            /// <item><description>DISABLE: Disabled.</description></item>
+            /// <item><description>DISABLE: Unavailable.</description></item>
             /// <item><description>DELETED: Deleted.</description></item>
             /// </list>
             /// 

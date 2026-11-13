@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateGatewayLoadBalancerResponseBodyData Data { get; set; }
         public class UpdateGatewayLoadBalancerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the load balancer can be edited. This serves as the edit toggle for a load balancer that is being migrated.</para>
+            /// <para>Specifies whether the load balancer being migrated can be edited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<int?> Ports { get; set; }
 
             /// <summary>
-            /// <para>The gateway service weight for traffic shifting during migration. Valid values: 0 to 100.</para>
+            /// <para>The gateway service weight in traffic switching scenarios during migration. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>The backend server group bindings.</para>
+            /// <para>The list of backend server group bindings.</para>
             /// </summary>
             [NameInMap("virtualServiceList")]
             [Validation(Required=false)]
             public List<UpdateGatewayLoadBalancerResponseBodyDataVirtualServiceList> VirtualServiceList { get; set; }
             public class UpdateGatewayLoadBalancerResponseBodyDataVirtualServiceList : TeaModel {
                 /// <summary>
-                /// <para>The port. When an NLB instance is associated, two placeholder entries with ports 80 and 443 are returned.</para>
+                /// <para>The port. When an NLB is bound, ports 80 and 443 are fixed and returned as placeholders.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// <para>The protocol. When an NLB instance is associated, HTTP and HTTPS are returned as placeholders. For CLB, the value is deserialized from the stored vServerGroupMetaInfo.</para>
+                /// <para>The protocol. When an NLB is bound, HTTP and HTTPS are fixed and returned as placeholders. For CLB, the value is deserialized from the persisted vServerGroupMetaInfo.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>http</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The VServerGroup or ServerGroup ID. When an NLB instance is associated, this field is an empty string placeholder.</para>
+                /// <para>The VServerGroup or ServerGroup ID. When an NLB is bound, an empty string is returned as a placeholder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rsp-xxxx</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string VirtualServiceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The group name. When an NLB instance is associated, this field is an empty string placeholder.</para>
+                /// <para>The group name. When an NLB is bound, an empty string is returned as a placeholder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80-tcp</para>

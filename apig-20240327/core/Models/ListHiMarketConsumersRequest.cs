@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListHiMarketConsumersRequest : TeaModel {
         /// <summary>
-        /// <para>The developer ID used to filter consumers.</para>
+        /// <para>The developer ID. This parameter is used to filter consumers by developer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev-xxxxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination cursor. Pass the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</para>
+        /// <para>The pagination token. To retrieve the next page, pass the nextToken value returned in the previous response. Do not pass this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The portal ID used to filter consumers.</para>
+        /// <para>The portal ID. This parameter is used to filter consumers by portal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>portal-xxxxxxxx</para>

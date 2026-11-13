@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetGatewayDfpExtProcServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code of the request. The value is Ok if the request is successful.</para>
+        /// <para>The request result code. The value is Ok if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The binding information of the dynamic forwarding ExtProc service for the gateway.</para>
+        /// <para>The binding information of the gateway dynamic forwarding ExtProc service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;bound&quot;:true,&quot;serviceId&quot;:&quot;svc-cr8k0udlhtgt80sh7png&quot;,&quot;servicePort&quot;:9002}</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The result message of the request. If the request failed, the message contains the error message of the fault.</para>
+        /// <para>The request result description, which contains the fault message if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

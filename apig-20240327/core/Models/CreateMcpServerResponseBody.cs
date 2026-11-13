@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The MCP server name.</para>
+            /// <para>The name of the MCP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-mcp</para>

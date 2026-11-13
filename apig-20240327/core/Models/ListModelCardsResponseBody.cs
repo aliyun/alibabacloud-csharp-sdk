@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The feature configuration of the model card, which is a key-value map structure. The set of keys is not declared in the API definition.</para>
+            /// <para>The feature configuration of the model card as a key-value map. The set of keys is not declared in the API definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;functionCall&quot;:true}</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The pricing information of the model card, which is a key-value map structure. The set of keys and the billing criteria are not declared in the API definition.</para>
+            /// <para>The pricing information of the model card as a key-value map. The set of keys and the billing criteria are not declared in the API definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;input&quot;:0.004,&quot;output&quot;:0.012}</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public Dictionary<string, object> Pricing { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the model provider corresponding to the model card.</para>
+            /// <para>The model provider identifier corresponding to the model card.</para>
             /// 
             /// <b>Example:</b>
             /// <para>provider-xxxxxxxx</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The list of snapshots for the model card. Each array item is a map structure with undeclared members. The snapshot content and generation rules are not specified in the API definition.</para>
+            /// <para>The list of snapshots for the model card. Array items are map structures with undeclared members. The snapshot content and generation rules are not specified in the API definition.</para>
             /// </summary>
             [NameInMap("snapshots")]
             [Validation(Required=false)]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class GetGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The base timestamp of the period.</para>
+            /// <para>The base timestamp of the period, in UNIX seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1745846400000</para>

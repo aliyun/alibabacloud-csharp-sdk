@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListK8sClusterSourcesResponseBodyDataItems> Items { get; set; }
             public class ListK8sClusterSourcesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The container service cluster ID.</para>
+                /// <para>The ID of the Container Service cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c4a21b3560fad4ec***</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The container service cluster name.</para>
+                /// <para>The name of the Container Service cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>itemcenter-dev-cluster</para>

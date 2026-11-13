@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The description of the API product, which is the Description property of the Product resource.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>An API product that provides weather query capabilities</para>
+                /// <para>API product that provides weather query capabilities</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

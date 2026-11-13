@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayQuotaRuleSubjectUsageExportTaskResponseBodyData Data { get; set; }
         public class GetGatewayQuotaRuleSubjectUsageExportTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error summary when the task fails, which is used to troubleshoot issues such as disabled logs, query failures, exceeded detail limits, processing timeouts, or file generation failures. This field may be omitted when no errors occur.</para>
+            /// <para>The error summary when the task fails, which is used to troubleshoot issues such as disabled logs, query failures, exceeded detail limits, processing timeouts, or file generation failures. This field may be omitted if no errors occur.</para>
             /// 
             /// <b>Example:</b>
             /// <para>log delivery is not enabled</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The number of detail rows written to the exported file, excluding the header. This value is used to check the processing progress. Even if this value equals totalCount, you should determine whether the file is downloadable based on status=Success.</para>
+            /// <para>The number of detail rows written to the exported file, excluding the header. This value is used to check the processing progress. Even if this value equals totalCount, determine whether the file is downloadable based on status=Success.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? DownloadUrlExpiredAt { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the actual export time range. It is a UNIX timestamp in seconds. The actual start time is also limited by the rule creation time, rule reset, or the effective start time of clearing history records. No details are available if the start time is not earlier than the end time.</para>
+                /// <para>The start time of the actual export time range. It is a UNIX timestamp in seconds. The actual start time is also limited by the rule creation time, rule reset, or the effective start time of purging history records. No details are available if the start time is not earlier than the end time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1783931600</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? EffectiveWindowStart { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the exported file has exceeded the server-side period for providing download links. A value of true indicates that the file has expired, downloadUrl and downloadUrlExpiredAt are not returned, and you need to create a new export task. This field may be omitted when the value is false. To determine whether the file is downloadable, check both status and downloadUrl.</para>
+                /// <para>Indicates whether the exported file has exceeded the period during which the server provides download links. A value of true indicates that the file has expired, downloadUrl and downloadUrlExpiredAt are not returned, and you need to create a new export task. This field may be omitted if the value is false. To determine whether the file is downloadable, check both status and downloadUrl.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? FileExpired { get; set; }
 
                 /// <summary>
-                /// <para>The time when the file stops providing new download links. It is a UNIX timestamp in seconds and is usually 24 hours after the file is successfully uploaded. After this time, this operation returns fileExpired=true and no longer generates downloadUrl. The task remains in the Success state. This time is different from the downloadUrlExpiredAt of a single signed link.</para>
+                /// <para>The time when the file stops providing new download links. It is a UNIX timestamp in seconds and is usually 24 hours after the file is successfully uploaded. After this time is reached, this operation returns fileExpired=true and no longer generates downloadUrl. The task remains in the Success state. This time is different from downloadUrlExpiredAt of a single signed link.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1784021600</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? FileExpiredAt { get; set; }
 
                 /// <summary>
-                /// <para>The size of the successfully generated and uploaded GZIP compressed file, in bytes. This field may be omitted when the task is not successful.</para>
+                /// <para>The size of the successfully generated and uploaded GZIP compressed file, in bytes. This field may be omitted if the task has not succeeded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? FileSize { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to filter out requests with failed or zero usage, which is specified when the task is created. A value of true filters out records with 0 usage and retains only records with usage. This field may be omitted when the value is false.</para>
+                /// <para>The usage filter switch specified when the task was created. A value of true filters out records with 0 usage and retains only records with usage. This field may be omitted if the value is false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the request time range determined when the task was created. It is a UNIX timestamp in seconds and does not include this moment. If no time range is specified, this value is the task creation time and is not updated when the task is queried.</para>
+                /// <para>The end time of the request time range determined when the task was created. It is a UNIX timestamp in seconds and excludes this moment. If no time range is specified, this value is the task creation time and is not updated when the task is queried.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1783935200</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? QueryWindowStart { get; set; }
 
                 /// <summary>
-                /// <para>The quota metering dimension determined when the task was created. token indicates token usage, and credit indicates credit usage. The CSV file outputs the corresponding columns based on this dimension. Credit usage retains decimal places.</para>
+                /// <para>The quota metering dimension determined when the task was created. token indicates token usage, and credit indicates credit usage. The CSV file outputs the corresponding column based on this dimension. Credit usage retains decimal places.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>token</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string QuotaDimension { get; set; }
 
                 /// <summary>
-                /// <para>The number of successfully exported consumption detail rows, excluding the CSV header. This field may be omitted when the task is not successful or the export result contains 0 rows. If the task is successful but no matching details exist, the file contains only the header.</para>
+                /// <para>The number of successfully exported usage detail rows, excluding the CSV header. This field may be omitted if the task has not succeeded or the export result contains 0 rows. If the task succeeds but no matching details are found, the file contains only the header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -196,14 +196,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The current status of the task. Valid values:</para>
+            /// <para>The current status of the task.</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The task is submitted and waiting to be processed.</description></item>
-            /// <item><description>Running: The task is querying details, generating files, or uploading files.</description></item>
+            /// <item><description>Pending: The task is submitted and pending processing.</description></item>
+            /// <item><description>Running: The system is querying details, generating files, or uploading files.</description></item>
             /// <item><description>Success: The file is generated and uploaded. You still need to check whether the file is expired.</description></item>
             /// <item><description>Failed: The task failed. For the cause, see errorMessage.</description></item>
             /// </list>
-            /// <para>Tasks that are not completed within 10 minutes after creation are processed as Failed. After a file expires, the task remains in the Success state.</para>
+            /// <para>Tasks that are not completed within 10 minutes after creation are processed as Failed. After the file expires, the task remains in the Success state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SubjectId { get; set; }
 
             /// <summary>
-            /// <para>The subject name recorded when the task was created, which is used to match consumption logs. Subsequent changes to the subject name do not modify the name recorded for this task.</para>
+            /// <para>The subject name recorded when the task was created, which is used to match usage logs. Subsequent changes to the subject name do not modify the name recorded for this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>consumer-name</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task type. The value is fixed as FinOpsUsageDetailExport, which indicates the export of quota rule subject consumption details.</para>
+            /// <para>The task type. The value is fixed as FinOpsUsageDetailExport, which indicates the export of usage details for a quota rule subject.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinOpsUsageDetailExport</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The total number of detail rows to be exported as counted by backend queries, excluding the CSV header. This value may be 0 before the counting is completed. You cannot determine whether the result is empty or the task is completed based solely on this value.</para>
+            /// <para>The total number of detail rows to be exported as counted by backend queries, excluding the CSV header. This value may be 0 before counting is completed. Do not determine whether the result is empty or the task is completed based solely on this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID of this OpenAPI query call, which is used to troubleshoot call issues. This is different from the request_id of each consumption record in the exported file.</para>
+        /// <para>The request ID of this OpenAPI query call, which is used to troubleshoot call issues. This is different from the request_id of each usage record in the exported file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

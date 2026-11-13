@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetBatchExportTaskResponseBodyData Data { get; set; }
         public class GetBatchExportTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+            /// <para>The task creation time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-15T10:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The number of processed items.</para>
+            /// <para>The processed count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ApiType { get; set; }
 
                 /// <summary>
-                /// <para>The list of APIs that failed to be processed.</para>
+                /// <para>The list of failed APIs.</para>
                 /// </summary>
                 [NameInMap("failureItems")]
                 [Validation(Required=false)]
                 public List<GetBatchExportTaskResponseBodyDataResultFailureItems> FailureItems { get; set; }
                 public class GetBatchExportTaskResponseBodyDataResultFailureItems : TeaModel {
                     /// <summary>
-                    /// <para>API ID。</para>
+                    /// <para>The API ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>api-xxx</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The Base64-encoded ZIP file content. After the frontend decodes the content, it can directly trigger a browser download.</para>
+                /// <para>The Base64-encoded content of the ZIP file. The frontend can decode the content to directly trigger a download in the browser.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UEsDBBQAAAA...</para>
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SpecContentBase64 { get; set; }
 
                 /// <summary>
-                /// <para>The list of APIs that were processed successfully.</para>
+                /// <para>The list of successfully processed APIs.</para>
                 /// </summary>
                 [NameInMap("successItems")]
                 [Validation(Required=false)]
                 public List<GetBatchExportTaskResponseBodyDataResultSuccessItems> SuccessItems { get; set; }
                 public class GetBatchExportTaskResponseBodyDataResultSuccessItems : TeaModel {
                     /// <summary>
-                    /// <para>API ID。</para>
+                    /// <para>The API ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>api-xxx</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The total number of items.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

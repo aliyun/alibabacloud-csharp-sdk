@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The list of Nacos MCP servers to sync. If the list contains MCP servers that have already been synced, include the mcpServerId.</para>
+        /// <para>The list of Nacos MCP servers to synchronize. If the list includes already synchronized MCP servers, specify the mcpServerId.</para>
         /// </summary>
         [NameInMap("nacosMcpServers")]
         [Validation(Required=false)]
         public List<SyncMCPServersRequestNacosMcpServers> NacosMcpServers { get; set; }
         public class SyncMCPServersRequestNacosMcpServers : TeaModel {
             /// <summary>
-            /// <para>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</para>
+            /// <para>The exposed URI path. Required when the protocol is SSE or StreamableHTTP and the type is RealMCP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/sse</para>

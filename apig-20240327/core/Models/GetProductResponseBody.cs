@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetProductResponseBodyData Data { get; set; }
         public class GetProductResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</para>
+            /// <para>The agent configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</para>
             /// </summary>
             [NameInMap("agentConfig")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The description of the API product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>API product that provides weather query capabilities</para>
+            /// <para>An API product that provides weather query capabilities</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The documentation content of the API product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Invocation methods, parameters, and billing instructions for this product</para>
+            /// <para>The invocation methods, parameters, and billing instructions for this product</para>
             /// </summary>
             [NameInMap("document")]
             [Validation(Required=false)]
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HiMarketIcon Icon { get; set; }
 
             /// <summary>
-            /// <para>The MCP-related configurations of the API product. The members include mcpServerName (the name of the MCP server), tools, mcpServerConfig (path and domains), and meta (protocol).</para>
+            /// <para>The Model Context Protocol (MCP) configurations of the API product. The members include mcpServerName (the name of the MCP server), tools, mcpServerConfig (path and domains), and meta (protocol).</para>
             /// </summary>
             [NameInMap("mcpConfig")]
             [Validation(Required=false)]
             public HiMarketMcpConfig McpConfig { get; set; }
 
             /// <summary>
-            /// <para>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</para>
+            /// <para>The model API configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</para>
             /// </summary>
             [NameInMap("modelConfig")]
             [Validation(Required=false)]

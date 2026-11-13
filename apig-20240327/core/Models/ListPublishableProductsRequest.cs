@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPublishableProductsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the API product. This corresponds to the name field in the response list items.</para>
+        /// <para>The name of the API product. This is the same field as the name property in the response list items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>weather-query-api</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

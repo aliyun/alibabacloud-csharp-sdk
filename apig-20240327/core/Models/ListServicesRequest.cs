@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The exact name of the service to query.</para>
+        /// <para>The name of the service for an exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-service</para>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The source type of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: Services from MSE Nacos.</description></item>
-        /// <item><description>K8S: Services from Kubernetes clusters in Container Service.</description></item>
-        /// <item><description>FC3: Services from Function Compute.</description></item>
-        /// <item><description>VIP: Services from fixed addresses.</description></item>
-        /// <item><description>DNS: Services from domain names.</description></item>
+        /// <item><description>MSE_NACOS: services from Microservices Engine (MSE) Nacos.</description></item>
+        /// <item><description>K8S: services from Kubernetes clusters in Container Service for Kubernetes.</description></item>
+        /// <item><description>FC3: services from Function Compute.</description></item>
+        /// <item><description>VIP: services from fixed addresses.</description></item>
+        /// <item><description>DNS: services from domain names.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

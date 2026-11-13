@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for the rule name. This parameter is optional. If specified, fuzzy matching is performed on the rule name.</para>
+        /// <para>The keyword for the rule name. This parameter is optional. If specified, the results are filtered by a fuzzy match on the rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>daily</para>
@@ -48,6 +48,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The rule status. This parameter is optional. Valid values: enabled and disabled. If not specified, all rules are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>enabled</para>
+        /// </summary>
+        [NameInMap("ruleStatus")]
+        [Validation(Required=false)]
+        public string RuleStatus { get; set; }
 
     }
 

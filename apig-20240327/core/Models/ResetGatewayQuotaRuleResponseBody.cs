@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The request data content.</para>
+        /// <para>The response data content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;key\&quot;: \&quot;value\&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ResetGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class ResetGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the semantics of the current write request can be accepted by the system. A value of false is common in retryable scenarios such as unconfirmed conflict overwrites.</para>
+            /// <para>Indicates whether the semantics of the current write request can be accepted by the system. A value of false typically occurs in retryable scenarios, such as when conflicts are not confirmed for overwriting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the subject. A value of day, week, or month indicates that the period of the existing conflicting rule on the subject is daily, weekly, or monthly.</para>
+                    /// <para>The period type of the existing conflicting rule on the subject. A value of day, week, or month indicates that the period of the existing conflicting rule on the subject is day, week, or month, respectively.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the subject. A value of calendar indicates that the existing conflicting rule on the subject uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</para>
+                    /// <para>The type of the existing conflicting rule on the subject. A value of calendar indicates that the existing conflicting rule on the subject uses a calendar period. A value of epoch indicates that the existing conflicting rule uses a custom period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictType { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer ID. This parameter can now be uniformly replaced by subjectId.</para>
+                    /// <para>The consumer ID. You can use subjectId instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-d82n1g6m1hkm3xxxxxxx</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer name. This parameter can now be uniformly replaced by subjectName.</para>
+                    /// <para>The consumer name. You can use subjectName instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether it is a dry run.</para>
+            /// <para>Indicates whether a dry run is performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

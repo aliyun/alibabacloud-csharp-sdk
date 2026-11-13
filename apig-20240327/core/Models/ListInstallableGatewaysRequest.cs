@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListInstallableGatewaysRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway type used for filtering.</para>
+        /// <para>The gateway type filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>

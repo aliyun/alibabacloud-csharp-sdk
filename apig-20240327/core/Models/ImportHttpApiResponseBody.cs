@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ImportHttpApiResponseBodyData Data { get; set; }
         public class ImportHttpApiResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The dry run results.</para>
+            /// <para>The dry run result.</para>
             /// </summary>
             [NameInMap("dryRunInfo")]
             [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents> SuccessComponents { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents : TeaModel {
                     /// <summary>
-                    /// <para>The action to be performed after the dry run.</para>
+                    /// <para>The action to perform after the dry run.</para>
                     /// <list type="bullet">
                     /// <item><description>Create: Create.</description></item>
                     /// <item><description>Update: Update.</description></item>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> SuccessOperations { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations : TeaModel {
                     /// <summary>
-                    /// <para>The action to be performed after the dry run.</para>
+                    /// <para>The action to perform after the dry run.</para>
                     /// <list type="bullet">
                     /// <item><description>Create: Create.</description></item>
                     /// <item><description>Update: Update.</description></item>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The warning messages. If the warning messages are not empty, some operations or data structures may fail to be imported.</para>
+                /// <para>The warning messages. If the warning messages are not empty, some operations or data structures may fail to import.</para>
                 /// </summary>
                 [NameInMap("warningMessages")]
                 [Validation(Required=false)]

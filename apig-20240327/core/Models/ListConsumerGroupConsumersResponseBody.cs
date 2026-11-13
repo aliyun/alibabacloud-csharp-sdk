@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerGroupConsumersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned if the request is successful.</para>
+        /// <para>The response status code. Ok is returned if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListConsumerGroupConsumersResponseBodyData Data { get; set; }
         public class ListConsumerGroupConsumersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The consumer group member list.</para>
+            /// <para>The list of consumer group members.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>The consumer deployment status. Valid values: Processing, Failed, and Success.</para>
+                /// <para>The deployment status of the consumer. Valid values: Processing, Failed, and Success.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The consumer description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Online API caller</para>
+                /// <para>Production API caller</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of items per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of consumers that match the filter conditions.</para>
+            /// <para>The total number of consumers that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

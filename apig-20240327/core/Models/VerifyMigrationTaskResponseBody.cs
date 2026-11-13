@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? IsSupported { get; set; }
 
             /// <summary>
-            /// <para>The description of the check result, such as the failure cause or incompatibility summary, which is derived from the Istio validation reason.</para>
+            /// <para>The description of the check result, such as the cause of failure or incompatibility summary, which is derived from the Istio validation reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>all routes supported</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the check is successfully executed, which reflects whether the Istiod query link is functioning properly.</para>
+            /// <para>Indicates whether the check is executed successfully, which indicates whether the Istiod query path is normal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

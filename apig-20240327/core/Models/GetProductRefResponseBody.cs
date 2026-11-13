@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetProductRefResponseBodyData Data { get; set; }
         public class GetProductRefResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The API configuration currently associated with the API product. The structure is derived from the common structure HiMarketProductRefConfig. This structure contains two members: gatewayId and apigRefConfig. The inner apigRefConfig contains the following members: mcpServerId, mcpRouteId, mcpServerName, agentApiId, agentApiName, modelApiId, and modelApiName.</para>
+            /// <para>The API configuration currently associated with the API product. The structure is derived from the common HiMarketProductRefConfig structure. This structure contains the gatewayId and apigRefConfig members. The inner apigRefConfig member includes mcpServerId, mcpRouteId, mcpServerName, agentApiId, agentApiName, modelApiId, and modelApiName.</para>
             /// </summary>
             [NameInMap("apigRefConfig")]
             [Validation(Required=false)]

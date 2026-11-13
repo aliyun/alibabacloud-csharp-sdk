@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<Dictionary<string, object>> ErrorLogs { get; set; }
 
         /// <summary>
-        /// <para>The plug-in instance ID.</para>
+        /// <para>The ID of the plug-in instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pi-xxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the backend service that the plugin depends on is healthy.</para>
+        /// <para>Indicates whether the backend service on which the plug-in depends is healthy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

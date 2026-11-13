@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateMigrationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The namespace of the source cluster (for SLB traffic switching).</para>
+        /// <para>The namespace of the source cluster for SLB traffic switching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClusterNamespace { get; set; }
 
         /// <summary>
-        /// <para>The task description. For DNS-based Engine updates, only this field is modified.</para>
+        /// <para>The description of the task. When the target is Engine and the switch type is DNS, only this field can be updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Migration test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The SLB service name.</para>
+        /// <para>The name of the SLB service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nginx-ingress-lb</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The SLB instance ID. Required when the task is in the Initial state with SLB traffic switching. The type is determined by the prefix (lb- or nlb-).</para>
+        /// <para>The ID of the SLB instance. This parameter is required when the status is advanced to Initial and the switch type is SLB. The instance type is determined by the prefix lb- or nlb-.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-bp1xxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SlbId { get; set; }
 
         /// <summary>
-        /// <para>The traffic switching method. Required when advancing from the Initial state.</para>
+        /// <para>The traffic switching method. This parameter is required when the status is advanced to Initial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SLB</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SwitchType { get; set; }
 
         /// <summary>
-        /// <para>Required. The update target. Determines whether to advance the task status or perform an engine operation.</para>
+        /// <para>Required. The update target, which determines whether to advance the status or perform an engine operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Task</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Target { get; set; }
 
         /// <summary>
-        /// <para>The list of backend server group bindings.</para>
+        /// <para>The list of backend group bindings.</para>
         /// </summary>
         [NameInMap("virtualServices")]
         [Validation(Required=false)]
         public List<UpdateMigrationTaskRequestVirtualServices> VirtualServices { get; set; }
         public class UpdateMigrationTaskRequestVirtualServices : TeaModel {
             /// <summary>
-            /// <para>The port. Valid values: 1 to 65535.</para>
+            /// <para>The port number. Valid values: 1 to 65535.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Required for CLB.</para>
+            /// <para>The protocol. This parameter is required for CLB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string VirtualServiceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The group name.</para>
+            /// <para>The name of the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80-tcp</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The traffic switching weight for the legacy flow. Valid values: 0 to 100. Takes effect when the target is set to Engine.</para>
+        /// <para>The traffic switching weight for the legacy process. Valid values: 0 to 100. This parameter takes effect when the target is Engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

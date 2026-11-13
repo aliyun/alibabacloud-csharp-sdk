@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<GetGatewayResourceQuotaUsageResponseBodyDataItems> Items { get; set; }
             public class GetGatewayResourceQuotaUsageResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether the quota value is provided.</para>
+                /// <para>Indicates whether the quota value is provided.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? Used { get; set; }
 
                 /// <summary>
-                /// <para>The scope of usage statistics.</para>
+                /// <para>The usage statistics scope.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GATEWAY</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The time when the statistics collection was completed.</para>
+            /// <para>The statistics completion time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-17T08:00:00Z</para>

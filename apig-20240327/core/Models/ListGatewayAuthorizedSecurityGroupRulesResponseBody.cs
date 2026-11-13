@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListGatewayAuthorizedSecurityGroupRulesResponseBodyDataItems> Items { get; set; }
             public class ListGatewayAuthorizedSecurityGroupRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The list of authorized CIDR block addresses.</para>
+                /// <para>The list of authorized CIDR blocks.</para>
                 /// </summary>
                 [NameInMap("authCidrs")]
                 [Validation(Required=false)]
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The rule description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Security group authorized by the staging gateway of the product center</para>
+                /// <para>Product Center staging gateway authorized security group</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The protocol:</para>
+                /// <para>The protocol. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>TCP</description></item>
                 /// </list>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The security group name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Product center cluster security group</para>
+                /// <para>Product Center cluster security group</para>
                 /// </summary>
                 [NameInMap("securityGroupName")]
                 [Validation(Required=false)]
                 public string SecurityGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The security rule ID of the cloud-native API gateway.</para>
+                /// <para>The ID of the security rule for the cloud-native API gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gsgr-cqadis5lhtgmv***</para>

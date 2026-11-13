@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreatePluginClassRequest : TeaModel {
         /// <summary>
-        /// <para>The alias of the plug-in. This parameter is required. If it is not provided, the service returns InvalidParameter.WithValue.</para>
+        /// <para>The alias of the plug-in. This parameter is actually required. If it is not provided, the service returns InvalidParameter.WithValue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My Wasm Plugin</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The minimum supported gateway version.</para>
+        /// <para>The minimum compatible gateway version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.0</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WasmLanguage { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the WASM plug-in binary file.</para>
+        /// <para>The download URL of the binary file for the WASM plug-in.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID used to filter results. This parameter is also used for RAM authentication.</para>
+        /// <para>The ID of the resource group used to filter resources. This parameter is also used for Resource Access Management (RAM) authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-xxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The source type used to filter the query results.</para>
+        /// <para>The source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MSE_NACOS</para>
