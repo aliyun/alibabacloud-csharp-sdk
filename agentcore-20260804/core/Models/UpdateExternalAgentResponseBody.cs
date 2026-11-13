@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateExternalAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of SUCCESS indicates success.</para>
+        /// <para>The business status code. The value is SUCCESS for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -55,11 +55,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The skill source type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>REFERENCE: References AI Registry assets.</description></item>
-                /// <item><description>STATIC: Statically provided with deployment artifacts.</description></item>
-                /// </list>
+                /// <para>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REFERENCE</para>
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The legacy compatibility field. Use sourceType and versionSelector for new requests.</para>
+                /// <para>The legacy compatibility field. For new requests, use sourceType and versionSelector.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -79,18 +75,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
+                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
                 public UpdateExternalAgentResponseBodyDataConfiguredSkillsVersionSelector VersionSelector { get; set; }
                 public class UpdateExternalAgentResponseBodyDataConfiguredSkillsVersionSelector : TeaModel {
                     /// <summary>
-                    /// <para>The version selector type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>LABEL: Selects by tag.</description></item>
-                    /// <item><description>VERSION: Selects by specific version.</description></item>
-                    /// </list>
+                    /// <para>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LABEL</para>
@@ -147,11 +139,39 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the managed agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Code review agent running in the user environment</para>
+            /// <para>A code review agent that runs in the user environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            /// <summary>
+            /// <para>The credential binding configuration.</para>
+            /// </summary>
+            [NameInMap("environment")]
+            [Validation(Required=false)]
+            public UpdateExternalAgentResponseBodyDataEnvironment Environment { get; set; }
+            public class UpdateExternalAgentResponseBodyDataEnvironment : TeaModel {
+                /// <summary>
+                /// <para>The list of credential references. You must explicitly provide this list when passing the environment object, and it cannot be null. The list is replaced in its entirety. If you do not pass environment during an update, the original binding is retained. If you pass an empty list or set environment to null, the binding is cleared. Pass only the credential ID, not the actual key.</para>
+                /// </summary>
+                [NameInMap("credentialReferences")]
+                [Validation(Required=false)]
+                public List<UpdateExternalAgentResponseBodyDataEnvironmentCredentialReferences> CredentialReferences { get; set; }
+                public class UpdateExternalAgentResponseBodyDataEnvironmentCredentialReferences : TeaModel {
+                    /// <summary>
+                    /// <para>The credential ID. This parameter is required when passing a credential reference item and is verified by the backend.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cred-example</para>
+                    /// </summary>
+                    [NameInMap("credentialId")]
+                    [Validation(Required=false)]
+                    public string CredentialId { get; set; }
+
+                }
+
+            }
 
             /// <summary>
             /// <para>The runtime status information reported by the managed agent.</para>
@@ -161,7 +181,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public UpdateExternalAgentResponseBodyDataExternalAgentStatus ExternalAgentStatus { get; set; }
             public class UpdateExternalAgentResponseBodyDataExternalAgentStatus : TeaModel {
                 /// <summary>
-                /// <para>The heartbeat status. ONLINE indicates that the most recent heartbeat did not exceed the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or the format is invalid. Valid values: ONLINE (online), STALE (heartbeat expired), and UNKNOWN (unknown).</para>
+                /// <para>The heartbeat status. ONLINE indicates that the most recent heartbeat did not exceed the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or the format is invalid. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ONLINE: Online.</description></item>
+                /// <item><description>STALE: Heartbeat expired.</description></item>
+                /// <item><description>UNKNOWN: Unknown.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ONLINE</para>
@@ -270,7 +295,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The model token quota configuration and the quota usage status for the current cycle. This field is empty if no quota is configured.</para>
+                /// <para>The model token quota configuration and usage status for the current period. This field is empty if no quota is configured.</para>
                 /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
@@ -297,7 +322,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LimitType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the quota is exceeded in the current cycle. This field is read-only and returned by the backend.</para>
+                    /// <para>Indicates whether the quota is exceeded in the current period. This field is read-only and returned by the backend.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -327,7 +352,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string RuleStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of tokens allowed to be consumed in a single cycle.</para>
+                    /// <para>The maximum number of tokens allowed to be consumed in a single period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000000</para>
@@ -337,7 +362,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public long? UsageLimit { get; set; }
 
                     /// <summary>
-                    /// <para>The number of tokens consumed in the current cycle. This field is read-only and returned by the backend.</para>
+                    /// <para>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12345</para>
@@ -351,11 +376,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be passed at the same time. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PLATFORM: Platform model.</description></item>
-            /// <item><description>RUNTIME: Runtime model.</description></item>
-            /// </list>
+            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PLATFORM</para>
@@ -402,7 +423,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<UpdateExternalAgentResponseBodyDataSkills> Skills { get; set; }
             public class UpdateExternalAgentResponseBodyDataSkills : TeaModel {
                 /// <summary>
-                /// <para>The effective version at runtime. This field is read-only.</para>
+                /// <para>The effective version applied at runtime. This field is read-only.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -412,7 +433,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppliedVersion { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the skill is from a fixed template. This field is read-only. Template items cannot be removed.</para>
+                /// <para>Indicates whether the skill is from a fixed template. This field is read-only, and template items cannot be removed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -442,11 +463,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResolvedVersion { get; set; }
 
                 /// <summary>
-                /// <para>The skill source type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>REFERENCE: References AI Registry assets.</description></item>
-                /// <item><description>STATIC: Statically provided with deployment artifacts.</description></item>
-                /// </list>
+                /// <para>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REFERENCE</para>
@@ -466,18 +483,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
+                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
                 public UpdateExternalAgentResponseBodyDataSkillsVersionSelector VersionSelector { get; set; }
                 public class UpdateExternalAgentResponseBodyDataSkillsVersionSelector : TeaModel {
                     /// <summary>
-                    /// <para>The version selector type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>LABEL: Selects by tag.</description></item>
-                    /// <item><description>VERSION: Selects by specific version.</description></item>
-                    /// </list>
+                    /// <para>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LABEL</para>
@@ -569,10 +582,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The tool type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>MCP: MCP tool.</description></item>
-                /// </list>
+                /// <para>The tool type. Valid values: MCP (MCP tool).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -607,7 +617,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 indicates success.</para>
+        /// <para>The HTTP status code. The value is 200 for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

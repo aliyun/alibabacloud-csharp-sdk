@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSkillReferencesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The skill reference relationships returned in the paging query.</para>
+        /// <para>The skill reference relationship data returned by the paged query.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListSkillReferencesResponseBodyDataPageItems> PageItems { get; set; }
             public class ListSkillReferencesResponseBodyDataPageItems : TeaModel {
                 /// <summary>
-                /// <para>The ID of the referencing entity, which identifies the agent or AgentSpec.</para>
+                /// <para>The ID of the referencing entity, which is the identifier of the agent or agent spec.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-1234567890abcdef</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the referencing entity. Valid values: AGENT and AGENTSPEC.</para>
+                /// <para>The type of the referencing entity. Valid values: AGENT, AGENTSPEC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AGENT</para>
@@ -54,7 +54,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string OwnerVersion { get; set; }
 
                 /// <summary>
-                /// <para>The reference selector type. Valid values: LABEL and VERSION.</para>
+                /// <para>The reference strength. Valid values: STRONG, WEAK. For legacy data, STRONG is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>STRONG</para>
+                /// </summary>
+                [NameInMap("refType")]
+                [Validation(Required=false)]
+                public string RefType { get; set; }
+
+                /// <summary>
+                /// <para>The reference selector type. Valid values: LABEL, VERSION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LABEL</para>
@@ -84,7 +94,27 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SkillName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workspace to which the reference belongs.</para>
+                /// <para>The reference source identifier. For legacy data, agentcore is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agentcore</para>
+                /// </summary>
+                [NameInMap("sourceId")]
+                [Validation(Required=false)]
+                public string SourceId { get; set; }
+
+                /// <summary>
+                /// <para>The display name of the reference source. If no name is registered, the source identifier is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AgentCore</para>
+                /// </summary>
+                [NameInMap("sourceName")]
+                [Validation(Required=false)]
+                public string SourceName { get; set; }
+
+                /// <summary>
+                /// <para>The workspace ID to which the reference belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ws-1234567890abcdef</para>
@@ -106,7 +136,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The total number of pages.</para>
+            /// <para>The total number of available pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -116,7 +146,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? PagesAvailable { get; set; }
 
             /// <summary>
-            /// <para>The total number of reference relationships that meet the filter conditions.</para>
+            /// <para>The total number of reference relationships that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -128,7 +158,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used for troubleshooting.</para>
+        /// <para>The request ID, used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5C6D9E10-1234-5678-9ABC-DEF012345678</para>

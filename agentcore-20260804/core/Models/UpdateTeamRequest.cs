@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateTeamRequestBody Body { get; set; }
         public class UpdateTeamRequestBody : TeaModel {
             /// <summary>
-            /// <para>The new list of agent members, which replaces the existing agent members by using full overwrite semantics. If not specified, the agent member list remains unchanged.</para>
+            /// <para>The new list of agent members, which replaces the existing agent members based on full overwrite semantics. If not specified, the list remains unchanged. The list must contain exactly one LEADER, and the LEADER must be a managed agent. External agents and high-code agents only support the WORKER role. High-code agents must also declare the AG-UI (agui) or OpenAI Chat Completions (openai-chat-completion) protocol in the latest version configuration.</para>
             /// </summary>
             [NameInMap("agents")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The role of the agent in the team. Valid values: LEADER and WORKER.</para>
+                /// <para>The role of the agent in the team. Valid values: LEADER, WORKER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WORKER</para>
@@ -49,21 +49,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The new description of the team. If not specified, the description remains unchanged.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The team responsible for intelligent customer service</para>
+            /// <para>Team responsible for intelligent customer service</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The new list of user members, which replaces the existing user members by using full overwrite semantics. If this parameter is specified, it must contain exactly one member whose role is ADMIN. If not specified, the user member list remains unchanged.</para>
+            /// <para>The new list of user members, which replaces the existing user members based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If not specified, the list remains unchanged.</para>
             /// </summary>
             [NameInMap("users")]
             [Validation(Required=false)]
             public List<UpdateTeamRequestBodyUsers> Users { get; set; }
             public class UpdateTeamRequestBodyUsers : TeaModel {
                 /// <summary>
-                /// <para>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must have exactly one ADMIN.</para>
+                /// <para>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>

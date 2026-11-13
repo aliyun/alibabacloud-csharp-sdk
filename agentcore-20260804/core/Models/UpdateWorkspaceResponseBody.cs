@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateWorkspaceResponseBodyData Data { get; set; }
         public class UpdateWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The OSS storage authorization status.</para>
+            /// <para>The authorization status of OSS storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AUTHORIZED</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public UpdateWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class UpdateWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This setting only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PublicEgressEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress of all agent endpoints in the workspace is closed. When re-enabled, the original public network ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public ingress for all agent endpoints in the workspace is closed, and the original public ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

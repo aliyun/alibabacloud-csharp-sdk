@@ -2402,12 +2402,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the access configuration.</para>
+        /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the onboarding configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain access information and complete the connection.</para>
+        /// <para>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain onboarding information and complete the connection.</para>
         /// <h3>Configure a managed agent</h3>
         /// <para>Provide <c>name</c> and select the configuration based on the model source:</para>
         /// <table>
@@ -2430,15 +2430,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>Configure instructions, MCP tools, and skills through <c>instruction</c>, <c>tools</c>, and <c>skills</c>. You can also reference an agent template through <c>template.aiRegistry</c>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
+        /// <td>Configure instructions, MCP tools, and skills by using <c>instruction</c>, <c>tools</c>, and <c>skills</c>. You can also reference an agent template by using <c>template.aiRegistry</c>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Access sequence</h3>
+        /// <h3>Onboarding sequence</h3>
         /// <para><b>Step 1:</b> After creation, save the <c>agentId</c> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
-        /// <b>Step 2:</b> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available access networks.
-        /// <b>Step 3:</b> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the access token and CMS configuration. The external process then completes the access.
-        /// <c>clientToken</c> is a reserved query parameter and currently does not provide idempotency guarantees.</para>
+        /// <b>Step 2:</b> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available onboarding networks.
+        /// <b>Step 3:</b> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the onboarding token and CMS configuration. The external process completes the onboarding.
+        /// <c>clientToken</c> is a reserved query parameter and does not provide idempotency guarantees at this time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2496,12 +2496,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the access configuration.</para>
+        /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the onboarding configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain access information and complete the connection.</para>
+        /// <para>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain onboarding information and complete the connection.</para>
         /// <h3>Configure a managed agent</h3>
         /// <para>Provide <c>name</c> and select the configuration based on the model source:</para>
         /// <table>
@@ -2524,15 +2524,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>Configure instructions, MCP tools, and skills through <c>instruction</c>, <c>tools</c>, and <c>skills</c>. You can also reference an agent template through <c>template.aiRegistry</c>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
+        /// <td>Configure instructions, MCP tools, and skills by using <c>instruction</c>, <c>tools</c>, and <c>skills</c>. You can also reference an agent template by using <c>template.aiRegistry</c>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Access sequence</h3>
+        /// <h3>Onboarding sequence</h3>
         /// <para><b>Step 1:</b> After creation, save the <c>agentId</c> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
-        /// <b>Step 2:</b> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available access networks.
-        /// <b>Step 3:</b> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the access token and CMS configuration. The external process then completes the access.
-        /// <c>clientToken</c> is a reserved query parameter and currently does not provide idempotency guarantees.</para>
+        /// <b>Step 2:</b> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available onboarding networks.
+        /// <b>Step 3:</b> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the onboarding token and CMS configuration. The external process completes the onboarding.
+        /// <c>clientToken</c> is a reserved query parameter and does not provide idempotency guarantees at this time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2590,12 +2590,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the access configuration.</para>
+        /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the onboarding configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain access information and complete the connection.</para>
+        /// <para>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain onboarding information and complete the connection.</para>
         /// <h3>Configure a managed agent</h3>
         /// <para>Provide <c>name</c> and select the configuration based on the model source:</para>
         /// <table>
@@ -2618,15 +2618,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>Configure instructions, MCP tools, and skills through <c>instruction</c>, <c>tools</c>, and <c>skills</c>. You can also reference an agent template through <c>template.aiRegistry</c>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
+        /// <td>Configure instructions, MCP tools, and skills by using <c>instruction</c>, <c>tools</c>, and <c>skills</c>. You can also reference an agent template by using <c>template.aiRegistry</c>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Access sequence</h3>
+        /// <h3>Onboarding sequence</h3>
         /// <para><b>Step 1:</b> After creation, save the <c>agentId</c> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
-        /// <b>Step 2:</b> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available access networks.
-        /// <b>Step 3:</b> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the access token and CMS configuration. The external process then completes the access.
-        /// <c>clientToken</c> is a reserved query parameter and currently does not provide idempotency guarantees.</para>
+        /// <b>Step 2:</b> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available onboarding networks.
+        /// <b>Step 3:</b> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the onboarding token and CMS configuration. The external process completes the onboarding.
+        /// <c>clientToken</c> is a reserved query parameter and does not provide idempotency guarantees at this time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2645,12 +2645,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the access configuration.</para>
+        /// <para>Creates an agent that runs in an external environment, saves the configurations for the platform model, instructions, tools, and skills, and asynchronously processes the onboarding configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain access information and complete the connection.</para>
+        /// <para>Registers an agent hosted in a user runtime environment, which corresponds to the &quot;Managed Agent&quot; in the console. After registration, you can continue to obtain onboarding information and complete the connection.</para>
         /// <h3>Configure a managed agent</h3>
         /// <para>Provide <c>name</c> and select the configuration based on the model source:</para>
         /// <table>
@@ -2673,15 +2673,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>Configure instructions, MCP tools, and skills through <c>instruction</c>, <c>tools</c>, and <c>skills</c>. You can also reference an agent template through <c>template.aiRegistry</c>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
+        /// <td>Configure instructions, MCP tools, and skills by using <c>instruction</c>, <c>tools</c>, and <c>skills</c>. You can also reference an agent template by using <c>template.aiRegistry</c>. The external process is deployed by the caller. This operation does not create a platform runtime instance.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Access sequence</h3>
+        /// <h3>Onboarding sequence</h3>
         /// <para><b>Step 1:</b> After creation, save the <c>agentId</c> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration processing result.
-        /// <b>Step 2:</b> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available access networks.
-        /// <b>Step 3:</b> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the access token and CMS configuration. The external process then completes the access.
-        /// <c>clientToken</c> is a reserved query parameter and currently does not provide idempotency guarantees.</para>
+        /// <b>Step 2:</b> After the latest configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to obtain the available onboarding networks.
+        /// <b>Step 3:</b> Select an available network and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain the onboarding token and CMS configuration. The external process completes the onboarding.
+        /// <c>clientToken</c> is a reserved query parameter and does not provide idempotency guarantees at this time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2870,20 +2870,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider such as DingTalk, Lark, or a custom identity source to a workspace for enterprise account logon and user synchronization.</para>
+        /// <para>Integrates an external identity provider such as DingTalk, Lark, or a custom identity source into a workspace for enterprise account logon and user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Binds an enterprise identity source to a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
-        /// DingTalk, Lark, and custom identity sources (<c>CustomSSO</c>) are supported. A workspace can be bound to only one identity source. To change the access method, you must unbind the current identity source first.</para>
-        /// <h3>Select an access method</h3>
+        /// <para>Integrates an enterprise identity source into a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
+        /// DingTalk, Lark, and custom identity sources (<c>CustomSSO</c>) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</para>
+        /// <h3>Select an integration method</h3>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th>Access method</th>
+        /// <th>Integration method</th>
         /// <th>Scenario</th>
-        /// <th>Task completed by this operation</th>
+        /// <th>Operation performed by this API</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -2897,24 +2897,24 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td>Creates a shared user pool to prepare for subsequent SAML single sign-on (SSO) and SCIM user synchronization configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>A user pool is used to store application users and identity access configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
+        /// <td>The user pool is used to store application users and identity integration configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Bind DingTalk or Lark</h3>
         /// <para>Enter the enterprise application credentials in <c>metadata</c>: DingTalk requires <c>appKey</c>, <c>appSecret</c>, and <c>corpId</c>, while Lark requires <c>appId</c> and <c>appSecret</c>.
-        /// Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <c>syncOnBind=false</c>.
+        /// Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <c>syncOnBind</c> to <c>false</c>.
         /// Subsequent address book change synchronization is controlled by <c>syncEnabled</c> and is disabled by default. When enabled, you must also provide <c>encryptKey</c> and <c>verificationToken</c>.</para>
         /// <h3>Bind a custom identity source</h3>
-        /// <para>When you create a <c>CustomSSO</c> binding, you only need to specify the identity source type:</para>
+        /// <para>When creating a <c>CustomSSO</c> binding, you only need to specify the identity source type:</para>
         /// <pre><code class="language-http">POST /workspaces/{workspaceId}/identity-providers
         /// {&quot;identityProviderType&quot;:&quot;CustomSSO&quot;}
         /// </c></pre>
-        /// <para>This call only creates a user pool. Logon and user synchronization are disabled by default. Do not fill in <c>metadata</c> or enable <c>loginEnabled</c> and <c>syncEnabled</c> during creation.
-        /// After creation, query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. A return value of <c>WAITING_CONFIGURATION</c> indicates that the user pool is created and you can continue to configure access:</para>
+        /// <para>This call only creates the user pool. Logon and user synchronization are disabled by default. Do not enter <c>metadata</c> or enable <c>loginEnabled</c> and <c>syncEnabled</c> during creation.
+        /// After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If <c>WAITING_CONFIGURATION</c> is returned, the user pool is created and you can proceed with the integration configuration:</para>
         /// <list type="bullet">
-        /// <item><description><b>Integrate enterprise account logon</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML access information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</description></item>
+        /// <item><description><b>Integrate enterprise account logon</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML integration information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</description></item>
         /// <item><description><b>Integrate user synchronization</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the SCIM receiving endpoint and credentials, and configure them in the enterprise identity system. After the external configuration is complete, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to enable AgentCore user synchronization.
         /// The two processes are independent of each other. You can select one or both based on your business requirements.</description></item>
         /// </list>
@@ -2969,20 +2969,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider such as DingTalk, Lark, or a custom identity source to a workspace for enterprise account logon and user synchronization.</para>
+        /// <para>Integrates an external identity provider such as DingTalk, Lark, or a custom identity source into a workspace for enterprise account logon and user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Binds an enterprise identity source to a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
-        /// DingTalk, Lark, and custom identity sources (<c>CustomSSO</c>) are supported. A workspace can be bound to only one identity source. To change the access method, you must unbind the current identity source first.</para>
-        /// <h3>Select an access method</h3>
+        /// <para>Integrates an enterprise identity source into a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
+        /// DingTalk, Lark, and custom identity sources (<c>CustomSSO</c>) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</para>
+        /// <h3>Select an integration method</h3>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th>Access method</th>
+        /// <th>Integration method</th>
         /// <th>Scenario</th>
-        /// <th>Task completed by this operation</th>
+        /// <th>Operation performed by this API</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -2996,24 +2996,24 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td>Creates a shared user pool to prepare for subsequent SAML single sign-on (SSO) and SCIM user synchronization configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>A user pool is used to store application users and identity access configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
+        /// <td>The user pool is used to store application users and identity integration configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Bind DingTalk or Lark</h3>
         /// <para>Enter the enterprise application credentials in <c>metadata</c>: DingTalk requires <c>appKey</c>, <c>appSecret</c>, and <c>corpId</c>, while Lark requires <c>appId</c> and <c>appSecret</c>.
-        /// Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <c>syncOnBind=false</c>.
+        /// Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <c>syncOnBind</c> to <c>false</c>.
         /// Subsequent address book change synchronization is controlled by <c>syncEnabled</c> and is disabled by default. When enabled, you must also provide <c>encryptKey</c> and <c>verificationToken</c>.</para>
         /// <h3>Bind a custom identity source</h3>
-        /// <para>When you create a <c>CustomSSO</c> binding, you only need to specify the identity source type:</para>
+        /// <para>When creating a <c>CustomSSO</c> binding, you only need to specify the identity source type:</para>
         /// <pre><code class="language-http">POST /workspaces/{workspaceId}/identity-providers
         /// {&quot;identityProviderType&quot;:&quot;CustomSSO&quot;}
         /// </c></pre>
-        /// <para>This call only creates a user pool. Logon and user synchronization are disabled by default. Do not fill in <c>metadata</c> or enable <c>loginEnabled</c> and <c>syncEnabled</c> during creation.
-        /// After creation, query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. A return value of <c>WAITING_CONFIGURATION</c> indicates that the user pool is created and you can continue to configure access:</para>
+        /// <para>This call only creates the user pool. Logon and user synchronization are disabled by default. Do not enter <c>metadata</c> or enable <c>loginEnabled</c> and <c>syncEnabled</c> during creation.
+        /// After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If <c>WAITING_CONFIGURATION</c> is returned, the user pool is created and you can proceed with the integration configuration:</para>
         /// <list type="bullet">
-        /// <item><description><b>Integrate enterprise account logon</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML access information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</description></item>
+        /// <item><description><b>Integrate enterprise account logon</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML integration information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</description></item>
         /// <item><description><b>Integrate user synchronization</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the SCIM receiving endpoint and credentials, and configure them in the enterprise identity system. After the external configuration is complete, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to enable AgentCore user synchronization.
         /// The two processes are independent of each other. You can select one or both based on your business requirements.</description></item>
         /// </list>
@@ -3068,20 +3068,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider such as DingTalk, Lark, or a custom identity source to a workspace for enterprise account logon and user synchronization.</para>
+        /// <para>Integrates an external identity provider such as DingTalk, Lark, or a custom identity source into a workspace for enterprise account logon and user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Binds an enterprise identity source to a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
-        /// DingTalk, Lark, and custom identity sources (<c>CustomSSO</c>) are supported. A workspace can be bound to only one identity source. To change the access method, you must unbind the current identity source first.</para>
-        /// <h3>Select an access method</h3>
+        /// <para>Integrates an enterprise identity source into a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
+        /// DingTalk, Lark, and custom identity sources (<c>CustomSSO</c>) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</para>
+        /// <h3>Select an integration method</h3>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th>Access method</th>
+        /// <th>Integration method</th>
         /// <th>Scenario</th>
-        /// <th>Task completed by this operation</th>
+        /// <th>Operation performed by this API</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -3095,24 +3095,24 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td>Creates a shared user pool to prepare for subsequent SAML single sign-on (SSO) and SCIM user synchronization configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>A user pool is used to store application users and identity access configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
+        /// <td>The user pool is used to store application users and identity integration configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Bind DingTalk or Lark</h3>
         /// <para>Enter the enterprise application credentials in <c>metadata</c>: DingTalk requires <c>appKey</c>, <c>appSecret</c>, and <c>corpId</c>, while Lark requires <c>appId</c> and <c>appSecret</c>.
-        /// Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <c>syncOnBind=false</c>.
+        /// Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <c>syncOnBind</c> to <c>false</c>.
         /// Subsequent address book change synchronization is controlled by <c>syncEnabled</c> and is disabled by default. When enabled, you must also provide <c>encryptKey</c> and <c>verificationToken</c>.</para>
         /// <h3>Bind a custom identity source</h3>
-        /// <para>When you create a <c>CustomSSO</c> binding, you only need to specify the identity source type:</para>
+        /// <para>When creating a <c>CustomSSO</c> binding, you only need to specify the identity source type:</para>
         /// <pre><code class="language-http">POST /workspaces/{workspaceId}/identity-providers
         /// {&quot;identityProviderType&quot;:&quot;CustomSSO&quot;}
         /// </c></pre>
-        /// <para>This call only creates a user pool. Logon and user synchronization are disabled by default. Do not fill in <c>metadata</c> or enable <c>loginEnabled</c> and <c>syncEnabled</c> during creation.
-        /// After creation, query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. A return value of <c>WAITING_CONFIGURATION</c> indicates that the user pool is created and you can continue to configure access:</para>
+        /// <para>This call only creates the user pool. Logon and user synchronization are disabled by default. Do not enter <c>metadata</c> or enable <c>loginEnabled</c> and <c>syncEnabled</c> during creation.
+        /// After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If <c>WAITING_CONFIGURATION</c> is returned, the user pool is created and you can proceed with the integration configuration:</para>
         /// <list type="bullet">
-        /// <item><description><b>Integrate enterprise account logon</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML access information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</description></item>
+        /// <item><description><b>Integrate enterprise account logon</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML integration information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</description></item>
         /// <item><description><b>Integrate user synchronization</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the SCIM receiving endpoint and credentials, and configure them in the enterprise identity system. After the external configuration is complete, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to enable AgentCore user synchronization.
         /// The two processes are independent of each other. You can select one or both based on your business requirements.</description></item>
         /// </list>
@@ -3134,20 +3134,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider such as DingTalk, Lark, or a custom identity source to a workspace for enterprise account logon and user synchronization.</para>
+        /// <para>Integrates an external identity provider such as DingTalk, Lark, or a custom identity source into a workspace for enterprise account logon and user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Binds an enterprise identity source to a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
-        /// DingTalk, Lark, and custom identity sources (<c>CustomSSO</c>) are supported. A workspace can be bound to only one identity source. To change the access method, you must unbind the current identity source first.</para>
-        /// <h3>Select an access method</h3>
+        /// <para>Integrates an enterprise identity source into a workspace to allow application users to log on with enterprise accounts or synchronize users from the enterprise address book to the workspace.
+        /// DingTalk, Lark, and custom identity sources (<c>CustomSSO</c>) are supported. A workspace can be bound to only one identity source. To change the integration method, you must unbind the current identity source first.</para>
+        /// <h3>Select an integration method</h3>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th>Access method</th>
+        /// <th>Integration method</th>
         /// <th>Scenario</th>
-        /// <th>Task completed by this operation</th>
+        /// <th>Operation performed by this API</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -3161,24 +3161,24 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td>Creates a shared user pool to prepare for subsequent SAML single sign-on (SSO) and SCIM user synchronization configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>A user pool is used to store application users and identity access configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
+        /// <td>The user pool is used to store application users and identity integration configurations. SAML handles enterprise account logon, and SCIM handles provisioning users from the enterprise identity system to the user pool. You can configure these two capabilities separately.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Bind DingTalk or Lark</h3>
         /// <para>Enter the enterprise application credentials in <c>metadata</c>: DingTalk requires <c>appKey</c>, <c>appSecret</c>, and <c>corpId</c>, while Lark requires <c>appId</c> and <c>appSecret</c>.
-        /// Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <c>syncOnBind=false</c>.
+        /// Logon is enabled by default. A user synchronization task is executed by default upon the first binding. If you want to select departments before synchronization, set <c>syncOnBind</c> to <c>false</c>.
         /// Subsequent address book change synchronization is controlled by <c>syncEnabled</c> and is disabled by default. When enabled, you must also provide <c>encryptKey</c> and <c>verificationToken</c>.</para>
         /// <h3>Bind a custom identity source</h3>
-        /// <para>When you create a <c>CustomSSO</c> binding, you only need to specify the identity source type:</para>
+        /// <para>When creating a <c>CustomSSO</c> binding, you only need to specify the identity source type:</para>
         /// <pre><code class="language-http">POST /workspaces/{workspaceId}/identity-providers
         /// {&quot;identityProviderType&quot;:&quot;CustomSSO&quot;}
         /// </c></pre>
-        /// <para>This call only creates a user pool. Logon and user synchronization are disabled by default. Do not fill in <c>metadata</c> or enable <c>loginEnabled</c> and <c>syncEnabled</c> during creation.
-        /// After creation, query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>. A return value of <c>WAITING_CONFIGURATION</c> indicates that the user pool is created and you can continue to configure access:</para>
+        /// <para>This call only creates the user pool. Logon and user synchronization are disabled by default. Do not enter <c>metadata</c> or enable <c>loginEnabled</c> and <c>syncEnabled</c> during creation.
+        /// After creation, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress. If <c>WAITING_CONFIGURATION</c> is returned, the user pool is created and you can proceed with the integration configuration:</para>
         /// <list type="bullet">
-        /// <item><description><b>Integrate enterprise account logon</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML access information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</description></item>
+        /// <item><description><b>Integrate enterprise account logon</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the SAML integration information of AgentCore and configure it in the enterprise identity system. Then, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> to save the SAML configuration of the enterprise identity system and enable logon as needed.</description></item>
         /// <item><description><b>Integrate user synchronization</b>: Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/PrepareIdentityProviderSCIM">PrepareIdentityProviderSCIM</a> to obtain the SCIM receiving endpoint and credentials, and configure them in the enterprise identity system. After the external configuration is complete, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a> to enable AgentCore user synchronization.
         /// The two processes are independent of each other. You can select one or both based on your business requirements.</description></item>
         /// </list>
@@ -3572,20 +3572,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or reuses an image cache for an ACR Enterprise Edition image in a workspace, and returns the cache status upon acceptance.</para>
+        /// <para>Creates or reuses an image cache for ACR Enterprise Edition images in a workspace, and returns the cache status upon acceptance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pre-builds or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</para>
+        /// <para>Prepares or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</para>
         /// <h3>Request parameters</h3>
-        /// <para>regionId, workspaceId, and clientToken are passed as query parameters. The region must match the entry endpoint and the workspace.
-        /// The JSON request body provides acrInstanceId, namespace, repository, and tag. For repository, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</para>
+        /// <para><c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> are passed as query parameters. The region must match the entry endpoint and the workspace.
+        /// The JSON request body provides <c>acrInstanceId</c>, <c>namespace</c>, <c>repository</c>, and <c>tag</c>. For <c>repository</c>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</para>
         /// <h3>Transfer network</h3>
-        /// <para>Both accessInternet and accessVpc must be provided, and at least one of them must be set to true. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</para>
+        /// <para>Both <c>accessInternet</c> and <c>accessVpc</c> must be provided, and at least one of them must be set to <c>true</c>. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</para>
         /// <h3>Acceptance and readiness</h3>
-        /// <para>A successful response returns the current cache snapshot. PENDING indicates that the cache is being prepared, READY indicates that the cache is ready, and FAILED indicates a failure. For failures, check the error field. Save the imageId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, digest may be empty.
-        /// Currently, clientToken is only validated to ensure it is not empty. It does not guarantee deduplication based on this identifier or recovery of the original acceptance result. If the result is not confirmed, query existing caches first.</para>
+        /// <para>A successful response returns the current cache snapshot. <c>PENDING</c> indicates that the cache is being prepared, <c>READY</c> indicates that the cache is ready, and <c>FAILED</c> indicates a failure. For failures, check the <c>error</c> field. Save the <c>imageId</c> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, <c>digest</c> may be empty.
+        /// Currently, <c>clientToken</c> is only validated to ensure it is not empty. It does not guarantee deduplication by this identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3651,20 +3651,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or reuses an image cache for an ACR Enterprise Edition image in a workspace, and returns the cache status upon acceptance.</para>
+        /// <para>Creates or reuses an image cache for ACR Enterprise Edition images in a workspace, and returns the cache status upon acceptance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pre-builds or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</para>
+        /// <para>Prepares or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</para>
         /// <h3>Request parameters</h3>
-        /// <para>regionId, workspaceId, and clientToken are passed as query parameters. The region must match the entry endpoint and the workspace.
-        /// The JSON request body provides acrInstanceId, namespace, repository, and tag. For repository, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</para>
+        /// <para><c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> are passed as query parameters. The region must match the entry endpoint and the workspace.
+        /// The JSON request body provides <c>acrInstanceId</c>, <c>namespace</c>, <c>repository</c>, and <c>tag</c>. For <c>repository</c>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</para>
         /// <h3>Transfer network</h3>
-        /// <para>Both accessInternet and accessVpc must be provided, and at least one of them must be set to true. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</para>
+        /// <para>Both <c>accessInternet</c> and <c>accessVpc</c> must be provided, and at least one of them must be set to <c>true</c>. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</para>
         /// <h3>Acceptance and readiness</h3>
-        /// <para>A successful response returns the current cache snapshot. PENDING indicates that the cache is being prepared, READY indicates that the cache is ready, and FAILED indicates a failure. For failures, check the error field. Save the imageId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, digest may be empty.
-        /// Currently, clientToken is only validated to ensure it is not empty. It does not guarantee deduplication based on this identifier or recovery of the original acceptance result. If the result is not confirmed, query existing caches first.</para>
+        /// <para>A successful response returns the current cache snapshot. <c>PENDING</c> indicates that the cache is being prepared, <c>READY</c> indicates that the cache is ready, and <c>FAILED</c> indicates a failure. For failures, check the <c>error</c> field. Save the <c>imageId</c> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, <c>digest</c> may be empty.
+        /// Currently, <c>clientToken</c> is only validated to ensure it is not empty. It does not guarantee deduplication by this identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3730,20 +3730,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or reuses an image cache for an ACR Enterprise Edition image in a workspace, and returns the cache status upon acceptance.</para>
+        /// <para>Creates or reuses an image cache for ACR Enterprise Edition images in a workspace, and returns the cache status upon acceptance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pre-builds or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</para>
+        /// <para>Prepares or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</para>
         /// <h3>Request parameters</h3>
-        /// <para>regionId, workspaceId, and clientToken are passed as query parameters. The region must match the entry endpoint and the workspace.
-        /// The JSON request body provides acrInstanceId, namespace, repository, and tag. For repository, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</para>
+        /// <para><c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> are passed as query parameters. The region must match the entry endpoint and the workspace.
+        /// The JSON request body provides <c>acrInstanceId</c>, <c>namespace</c>, <c>repository</c>, and <c>tag</c>. For <c>repository</c>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</para>
         /// <h3>Transfer network</h3>
-        /// <para>Both accessInternet and accessVpc must be provided, and at least one of them must be set to true. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</para>
+        /// <para>Both <c>accessInternet</c> and <c>accessVpc</c> must be provided, and at least one of them must be set to <c>true</c>. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</para>
         /// <h3>Acceptance and readiness</h3>
-        /// <para>A successful response returns the current cache snapshot. PENDING indicates that the cache is being prepared, READY indicates that the cache is ready, and FAILED indicates a failure. For failures, check the error field. Save the imageId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, digest may be empty.
-        /// Currently, clientToken is only validated to ensure it is not empty. It does not guarantee deduplication based on this identifier or recovery of the original acceptance result. If the result is not confirmed, query existing caches first.</para>
+        /// <para>A successful response returns the current cache snapshot. <c>PENDING</c> indicates that the cache is being prepared, <c>READY</c> indicates that the cache is ready, and <c>FAILED</c> indicates a failure. For failures, check the <c>error</c> field. Save the <c>imageId</c> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, <c>digest</c> may be empty.
+        /// Currently, <c>clientToken</c> is only validated to ensure it is not empty. It does not guarantee deduplication by this identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3762,20 +3762,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or reuses an image cache for an ACR Enterprise Edition image in a workspace, and returns the cache status upon acceptance.</para>
+        /// <para>Creates or reuses an image cache for ACR Enterprise Edition images in a workspace, and returns the cache status upon acceptance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pre-builds or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</para>
+        /// <para>Prepares or reuses an ACR Enterprise Edition image cache for custom code or image agents for subsequent deployment and startup.</para>
         /// <h3>Request parameters</h3>
-        /// <para>regionId, workspaceId, and clientToken are passed as query parameters. The region must match the entry endpoint and the workspace.
-        /// The JSON request body provides acrInstanceId, namespace, repository, and tag. For repository, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</para>
+        /// <para><c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> are passed as query parameters. The region must match the entry endpoint and the workspace.
+        /// The JSON request body provides <c>acrInstanceId</c>, <c>namespace</c>, <c>repository</c>, and <c>tag</c>. For <c>repository</c>, specify only the repository name without repeating the namespace. The source repository must have pull authorization for the workspace resource role. You can obtain the authorization URL by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspaceAcrRamAuthorizeUrl">GetWorkspaceAcrRamAuthorizeUrl</a>.</para>
         /// <h3>Transfer network</h3>
-        /// <para>Both accessInternet and accessVpc must be provided, and at least one of them must be set to true. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</para>
+        /// <para>Both <c>accessInternet</c> and <c>accessVpc</c> must be provided, and at least one of them must be set to <c>true</c>. The server validates these parameters based on the network conditions of the workspace. These parameters control the source reading and transfer for the current operation and do not modify the runtime network of the agent.</para>
         /// <h3>Acceptance and readiness</h3>
-        /// <para>A successful response returns the current cache snapshot. PENDING indicates that the cache is being prepared, READY indicates that the cache is ready, and FAILED indicates a failure. For failures, check the error field. Save the imageId and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, digest may be empty.
-        /// Currently, clientToken is only validated to ensure it is not empty. It does not guarantee deduplication based on this identifier or recovery of the original acceptance result. If the result is not confirmed, query existing caches first.</para>
+        /// <para>A successful response returns the current cache snapshot. <c>PENDING</c> indicates that the cache is being prepared, <c>READY</c> indicates that the cache is ready, and <c>FAILED</c> indicates a failure. For failures, check the <c>error</c> field. Save the <c>imageId</c> and call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> to query subsequent results. If the image digest has not been parsed, <c>digest</c> may be empty.
+        /// Currently, <c>clientToken</c> is only validated to ensure it is not empty. It does not guarantee deduplication by this identifier or recovery of the original acceptance result. If the result is not confirmed, query the existing cache first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4902,12 +4902,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates model creation for a connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates model creation for a connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4965,12 +4965,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates model creation for a connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates model creation for a connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5028,12 +5028,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates model creation for a connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates model creation for a connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5052,12 +5052,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates model creation for a connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates model creation for a connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service endpoint, invoke protocol, and access credentials for model creation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5412,12 +5412,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a team in a specified workspace and configures user and agent members. The user members must include exactly one member with the ADMIN role, and the agent members can only have the LEADER or WORKER role.</para>
+        /// <para>Creates a team in a specified workspace and configures user members and agent members at the same time. The user members must include exactly one member with the ADMIN role, and agent members can only have the LEADER or WORKER role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a team in a specified workspace and configures user and agent members.</para>
+        /// <para>Creates a team in a specified workspace and configures user members and agent members at the same time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5475,12 +5475,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a team in a specified workspace and configures user and agent members. The user members must include exactly one member with the ADMIN role, and the agent members can only have the LEADER or WORKER role.</para>
+        /// <para>Creates a team in a specified workspace and configures user members and agent members at the same time. The user members must include exactly one member with the ADMIN role, and agent members can only have the LEADER or WORKER role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a team in a specified workspace and configures user and agent members.</para>
+        /// <para>Creates a team in a specified workspace and configures user members and agent members at the same time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5538,12 +5538,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a team in a specified workspace and configures user and agent members. The user members must include exactly one member with the ADMIN role, and the agent members can only have the LEADER or WORKER role.</para>
+        /// <para>Creates a team in a specified workspace and configures user members and agent members at the same time. The user members must include exactly one member with the ADMIN role, and agent members can only have the LEADER or WORKER role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a team in a specified workspace and configures user and agent members.</para>
+        /// <para>Creates a team in a specified workspace and configures user members and agent members at the same time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5562,12 +5562,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a team in a specified workspace and configures user and agent members. The user members must include exactly one member with the ADMIN role, and the agent members can only have the LEADER or WORKER role.</para>
+        /// <para>Creates a team in a specified workspace and configures user members and agent members at the same time. The user members must include exactly one member with the ADMIN role, and agent members can only have the LEADER or WORKER role.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a team in a specified workspace and configures user and agent members.</para>
+        /// <para>Creates a team in a specified workspace and configures user members and agent members at the same time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5760,13 +5760,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.</para>
+        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, MCP services, and collaboration configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.
-        /// After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query details and manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</para>
+        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, MCP services, and collaboration configurations.
+        /// After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query the details, and then manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5824,13 +5824,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.</para>
+        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, MCP services, and collaboration configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.
-        /// After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query details and manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</para>
+        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, MCP services, and collaboration configurations.
+        /// After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query the details, and then manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5888,13 +5888,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.</para>
+        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, MCP services, and collaboration configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.
-        /// After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query details and manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</para>
+        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, MCP services, and collaboration configurations.
+        /// After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query the details, and then manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5913,13 +5913,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.</para>
+        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, MCP services, and collaboration configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, Model Context Protocol (MCP) services, and collaboration configurations.
-        /// After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query details and manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</para>
+        /// <para>Creates an AgentCore workspace as a resource scope for organizing agents, models, MCP services, and collaboration configurations.
+        /// After the workspace is created, you can use the returned workspace ID to call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetWorkspace">GetWorkspace</a> to query the details, and then manage agents and associated resources in the workspace. For network configuration fields and their dependencies, see the request parameters table.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7288,21 +7288,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</para>
+        /// <para>Disconnects the identity source integration for a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disconnects the association between a workspace and an enterprise identity source. This operation is used to terminate identity federation or clear the current configuration before you attach another identity source.
-        /// Disconnecting removes the AgentCore users and associated configurations imported from the identity source. For CustomSSO, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</para>
-        /// <h3>Preparations</h3>
-        /// <para>Remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
-        /// If you only need to temporarily disable a specific capability, you can retain the identity source binding. You can disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</para>
+        /// <para>Disconnects the workspace from the enterprise identity source to end identity federation, or clears the current attachment before attaching another identity source.
+        /// Disconnecting clears the AgentCore users and associated configurations imported from the identity source. For <c>CustomSSO</c>, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</para>
+        /// <h3>Preparations before disconnection</h3>
+        /// <para>First, remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
+        /// If you only want to temporarily disable a specific capability, you can retain the identity source binding: disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</para>
         /// <h3>Verify the disconnection result</h3>
-        /// <para>The disconnection is executed in the background. After the request is accepted, DISCONNECTING is returned. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress:</para>
+        /// <para>The disconnection is executed in the background. After the request is accepted, <c>DISCONNECTING</c> is returned. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>:</para>
         /// <list type="bullet">
-        /// <item><description>If the query returns IdentityProviderNotFound, the binding has been removed and the disconnection is complete.</description></item>
-        /// <item><description>If DISCONNECT_FAILED is returned, the cleanup failed. Some resources may have already been cleared. You can initiate the disconnection again.
+        /// <item><description>If the query returns <c>IdentityProviderNotFound</c>, the binding has been removed and the disconnection is complete.</description></item>
+        /// <item><description>If <c>DISCONNECT_FAILED</c> is returned, the cleanup failed. Some resources may have already been cleaned up. You can initiate the disconnection again.
         /// You can bind a new identity source to the workspace only after the disconnection is complete.</description></item>
         /// </list>
         /// </description>
@@ -7350,21 +7350,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</para>
+        /// <para>Disconnects the identity source integration for a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disconnects the association between a workspace and an enterprise identity source. This operation is used to terminate identity federation or clear the current configuration before you attach another identity source.
-        /// Disconnecting removes the AgentCore users and associated configurations imported from the identity source. For CustomSSO, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</para>
-        /// <h3>Preparations</h3>
-        /// <para>Remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
-        /// If you only need to temporarily disable a specific capability, you can retain the identity source binding. You can disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</para>
+        /// <para>Disconnects the workspace from the enterprise identity source to end identity federation, or clears the current attachment before attaching another identity source.
+        /// Disconnecting clears the AgentCore users and associated configurations imported from the identity source. For <c>CustomSSO</c>, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</para>
+        /// <h3>Preparations before disconnection</h3>
+        /// <para>First, remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
+        /// If you only want to temporarily disable a specific capability, you can retain the identity source binding: disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</para>
         /// <h3>Verify the disconnection result</h3>
-        /// <para>The disconnection is executed in the background. After the request is accepted, DISCONNECTING is returned. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress:</para>
+        /// <para>The disconnection is executed in the background. After the request is accepted, <c>DISCONNECTING</c> is returned. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>:</para>
         /// <list type="bullet">
-        /// <item><description>If the query returns IdentityProviderNotFound, the binding has been removed and the disconnection is complete.</description></item>
-        /// <item><description>If DISCONNECT_FAILED is returned, the cleanup failed. Some resources may have already been cleared. You can initiate the disconnection again.
+        /// <item><description>If the query returns <c>IdentityProviderNotFound</c>, the binding has been removed and the disconnection is complete.</description></item>
+        /// <item><description>If <c>DISCONNECT_FAILED</c> is returned, the cleanup failed. Some resources may have already been cleaned up. You can initiate the disconnection again.
         /// You can bind a new identity source to the workspace only after the disconnection is complete.</description></item>
         /// </list>
         /// </description>
@@ -7412,21 +7412,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</para>
+        /// <para>Disconnects the identity source integration for a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disconnects the association between a workspace and an enterprise identity source. This operation is used to terminate identity federation or clear the current configuration before you attach another identity source.
-        /// Disconnecting removes the AgentCore users and associated configurations imported from the identity source. For CustomSSO, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</para>
-        /// <h3>Preparations</h3>
-        /// <para>Remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
-        /// If you only need to temporarily disable a specific capability, you can retain the identity source binding. You can disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</para>
+        /// <para>Disconnects the workspace from the enterprise identity source to end identity federation, or clears the current attachment before attaching another identity source.
+        /// Disconnecting clears the AgentCore users and associated configurations imported from the identity source. For <c>CustomSSO</c>, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</para>
+        /// <h3>Preparations before disconnection</h3>
+        /// <para>First, remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
+        /// If you only want to temporarily disable a specific capability, you can retain the identity source binding: disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</para>
         /// <h3>Verify the disconnection result</h3>
-        /// <para>The disconnection is executed in the background. After the request is accepted, DISCONNECTING is returned. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress:</para>
+        /// <para>The disconnection is executed in the background. After the request is accepted, <c>DISCONNECTING</c> is returned. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>:</para>
         /// <list type="bullet">
-        /// <item><description>If the query returns IdentityProviderNotFound, the binding has been removed and the disconnection is complete.</description></item>
-        /// <item><description>If DISCONNECT_FAILED is returned, the cleanup failed. Some resources may have already been cleared. You can initiate the disconnection again.
+        /// <item><description>If the query returns <c>IdentityProviderNotFound</c>, the binding has been removed and the disconnection is complete.</description></item>
+        /// <item><description>If <c>DISCONNECT_FAILED</c> is returned, the cleanup failed. Some resources may have already been cleaned up. You can initiate the disconnection again.
         /// You can bind a new identity source to the workspace only after the disconnection is complete.</description></item>
         /// </list>
         /// </description>
@@ -7447,21 +7447,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</para>
+        /// <para>Disconnects the identity source integration for a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding API operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disconnects the association between a workspace and an enterprise identity source. This operation is used to terminate identity federation or clear the current configuration before you attach another identity source.
-        /// Disconnecting removes the AgentCore users and associated configurations imported from the identity source. For CustomSSO, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</para>
-        /// <h3>Preparations</h3>
-        /// <para>Remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
-        /// If you only need to temporarily disable a specific capability, you can retain the identity source binding. You can disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</para>
+        /// <para>Disconnects the workspace from the enterprise identity source to end identity federation, or clears the current attachment before attaching another identity source.
+        /// Disconnecting clears the AgentCore users and associated configurations imported from the identity source. For <c>CustomSSO</c>, it also clears the shared user pool and SAML and SCIM access resources. Applications created by users in the enterprise identity system must still be managed on the enterprise side.</para>
+        /// <h3>Preparations before disconnection</h3>
+        /// <para>First, remove the references between the relevant users and collaboration teams. If any team still references these users, the API operation rejects the disconnection request.
+        /// If you only want to temporarily disable a specific capability, you can retain the identity source binding: disable logon by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>, or disable SCIM synchronization by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProviderSCIM">UpdateIdentityProviderSCIM</a>.</para>
         /// <h3>Verify the disconnection result</h3>
-        /// <para>The disconnection is executed in the background. After the request is accepted, DISCONNECTING is returned. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> to query the progress:</para>
+        /// <para>The disconnection is executed in the background. After the request is accepted, <c>DISCONNECTING</c> is returned. You can query the progress by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>:</para>
         /// <list type="bullet">
-        /// <item><description>If the query returns IdentityProviderNotFound, the binding has been removed and the disconnection is complete.</description></item>
-        /// <item><description>If DISCONNECT_FAILED is returned, the cleanup failed. Some resources may have already been cleared. You can initiate the disconnection again.
+        /// <item><description>If the query returns <c>IdentityProviderNotFound</c>, the binding has been removed and the disconnection is complete.</description></item>
+        /// <item><description>If <c>DISCONNECT_FAILED</c> is returned, the cleanup failed. Some resources may have already been cleaned up. You can initiate the disconnection again.
         /// You can bind a new identity source to the workspace only after the disconnection is complete.</description></item>
         /// </list>
         /// </description>
@@ -7651,9 +7651,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Deletes the image cache association in a workspace and checks agent references and instance usage before submission.</para>
         /// <h3>Deletion conditions</h3>
-        /// <para>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if instances are still using it or resources are being released. You can first query <c>agentCount</c>, <c>canDelete</c>, and <c>deleteBlockReason</c> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
+        /// <para>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if the cache is still in use by instances or being released. You can first query <c>agentCount</c>, <c>canDelete</c>, and <c>deleteBlockReason</c> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
         /// <h3>Query results</h3>
-        /// <para>The <c>imageId</c> in the response corresponds to this request. The current implementation of <c>deletionPending</c> returns <c>false</c>. To confirm whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
+        /// <para>The <c>imageId</c> in the response corresponds to this request. The current implementation of <c>deletionPending</c> returns <c>false</c>. To check whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
         /// This operation deletes the cache association in the specified workspace. It does not delete the source ACR repository or the source image.</para>
         /// </description>
         /// 
@@ -7711,9 +7711,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Deletes the image cache association in a workspace and checks agent references and instance usage before submission.</para>
         /// <h3>Deletion conditions</h3>
-        /// <para>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if instances are still using it or resources are being released. You can first query <c>agentCount</c>, <c>canDelete</c>, and <c>deleteBlockReason</c> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
+        /// <para>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if the cache is still in use by instances or being released. You can first query <c>agentCount</c>, <c>canDelete</c>, and <c>deleteBlockReason</c> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
         /// <h3>Query results</h3>
-        /// <para>The <c>imageId</c> in the response corresponds to this request. The current implementation of <c>deletionPending</c> returns <c>false</c>. To confirm whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
+        /// <para>The <c>imageId</c> in the response corresponds to this request. The current implementation of <c>deletionPending</c> returns <c>false</c>. To check whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
         /// This operation deletes the cache association in the specified workspace. It does not delete the source ACR repository or the source image.</para>
         /// </description>
         /// 
@@ -7771,9 +7771,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Deletes the image cache association in a workspace and checks agent references and instance usage before submission.</para>
         /// <h3>Deletion conditions</h3>
-        /// <para>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if instances are still using it or resources are being released. You can first query <c>agentCount</c>, <c>canDelete</c>, and <c>deleteBlockReason</c> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
+        /// <para>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if the cache is still in use by instances or being released. You can first query <c>agentCount</c>, <c>canDelete</c>, and <c>deleteBlockReason</c> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
         /// <h3>Query results</h3>
-        /// <para>The <c>imageId</c> in the response corresponds to this request. The current implementation of <c>deletionPending</c> returns <c>false</c>. To confirm whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
+        /// <para>The <c>imageId</c> in the response corresponds to this request. The current implementation of <c>deletionPending</c> returns <c>false</c>. To check whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
         /// This operation deletes the cache association in the specified workspace. It does not delete the source ACR repository or the source image.</para>
         /// </description>
         /// 
@@ -7800,9 +7800,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Deletes the image cache association in a workspace and checks agent references and instance usage before submission.</para>
         /// <h3>Deletion conditions</h3>
-        /// <para>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if instances are still using it or resources are being released. You can first query <c>agentCount</c>, <c>canDelete</c>, and <c>deleteBlockReason</c> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
+        /// <para>The deletion request is rejected if the cache is still referenced by an agent with the cache switch enabled, or if the cache is still in use by instances or being released. You can first query <c>agentCount</c>, <c>canDelete</c>, and <c>deleteBlockReason</c> by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
         /// <h3>Query results</h3>
-        /// <para>The <c>imageId</c> in the response corresponds to this request. The current implementation of <c>deletionPending</c> returns <c>false</c>. To confirm whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
+        /// <para>The <c>imageId</c> in the response corresponds to this request. The current implementation of <c>deletionPending</c> returns <c>false</c>. To check whether the cache is still visible, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a> or <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListImageCaches">ListImageCaches</a>.
         /// This operation deletes the cache association in the specified workspace. It does not delete the source ACR repository or the source image.</para>
         /// </description>
         /// 
@@ -13045,9 +13045,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration application.</para>
+        /// <para>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration effectiveness.</para>
         /// <h3>Configuration processing and runtime status</h3>
-        /// <para><c>latestSpecVersion</c> and <c>latestVersionStatus</c> indicate the latest submitted configuration and its processing status. <c>status</c> indicates the platform resource status, and <c>externalAgentStatus</c> indicates the external runtime status. A successfully accepted configuration does not mean that the external process is connected.
+        /// <para><c>latestSpecVersion</c> and <c>latestVersionStatus</c> indicate the latest submitted configuration and its processing status. <c>status</c> represents the platform resource status, and <c>externalAgentStatus</c> represents the external runtime status. A successful configuration acceptance does not indicate that the external process is connected.
         /// If <c>modelSource</c> is <c>PLATFORM</c>, the returned model configuration is used. <c>RUNTIME</c> indicates that the model is managed by the external environment. <c>configuredSkills</c> indicates explicit skill configurations, and <c>skills</c> represents the aggregated skill information.</para>
         /// <h3>External access</h3>
         /// <para>After the configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to query available networks, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain access information. If the agent does not exist, has been deleted, or does not belong to the workspace, a resource not found error is returned.</para>
@@ -13095,9 +13095,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration application.</para>
+        /// <para>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration effectiveness.</para>
         /// <h3>Configuration processing and runtime status</h3>
-        /// <para><c>latestSpecVersion</c> and <c>latestVersionStatus</c> indicate the latest submitted configuration and its processing status. <c>status</c> indicates the platform resource status, and <c>externalAgentStatus</c> indicates the external runtime status. A successfully accepted configuration does not mean that the external process is connected.
+        /// <para><c>latestSpecVersion</c> and <c>latestVersionStatus</c> indicate the latest submitted configuration and its processing status. <c>status</c> represents the platform resource status, and <c>externalAgentStatus</c> represents the external runtime status. A successful configuration acceptance does not indicate that the external process is connected.
         /// If <c>modelSource</c> is <c>PLATFORM</c>, the returned model configuration is used. <c>RUNTIME</c> indicates that the model is managed by the external environment. <c>configuredSkills</c> indicates explicit skill configurations, and <c>skills</c> represents the aggregated skill information.</para>
         /// <h3>External access</h3>
         /// <para>After the configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to query available networks, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain access information. If the agent does not exist, has been deleted, or does not belong to the workspace, a resource not found error is returned.</para>
@@ -13145,9 +13145,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration application.</para>
+        /// <para>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration effectiveness.</para>
         /// <h3>Configuration processing and runtime status</h3>
-        /// <para><c>latestSpecVersion</c> and <c>latestVersionStatus</c> indicate the latest submitted configuration and its processing status. <c>status</c> indicates the platform resource status, and <c>externalAgentStatus</c> indicates the external runtime status. A successfully accepted configuration does not mean that the external process is connected.
+        /// <para><c>latestSpecVersion</c> and <c>latestVersionStatus</c> indicate the latest submitted configuration and its processing status. <c>status</c> represents the platform resource status, and <c>externalAgentStatus</c> represents the external runtime status. A successful configuration acceptance does not indicate that the external process is connected.
         /// If <c>modelSource</c> is <c>PLATFORM</c>, the returned model configuration is used. <c>RUNTIME</c> indicates that the model is managed by the external environment. <c>configuredSkills</c> indicates explicit skill configurations, and <c>skills</c> represents the aggregated skill information.</para>
         /// <h3>External access</h3>
         /// <para>After the configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to query available networks, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain access information. If the agent does not exist, has been deleted, or does not belong to the workspace, a resource not found error is returned.</para>
@@ -13174,9 +13174,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration application.</para>
+        /// <para>Queries the platform configuration, version processing status, and external runtime status of a managed agent to verify access and configuration effectiveness.</para>
         /// <h3>Configuration processing and runtime status</h3>
-        /// <para><c>latestSpecVersion</c> and <c>latestVersionStatus</c> indicate the latest submitted configuration and its processing status. <c>status</c> indicates the platform resource status, and <c>externalAgentStatus</c> indicates the external runtime status. A successfully accepted configuration does not mean that the external process is connected.
+        /// <para><c>latestSpecVersion</c> and <c>latestVersionStatus</c> indicate the latest submitted configuration and its processing status. <c>status</c> represents the platform resource status, and <c>externalAgentStatus</c> represents the external runtime status. A successful configuration acceptance does not indicate that the external process is connected.
         /// If <c>modelSource</c> is <c>PLATFORM</c>, the returned model configuration is used. <c>RUNTIME</c> indicates that the model is managed by the external environment. <c>configuredSkills</c> indicates explicit skill configurations, and <c>skills</c> represents the aggregated skill information.</para>
         /// <h3>External access</h3>
         /// <para>After the configuration takes effect, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgentBootstrapOptions">GetExternalAgentBootstrapOptions</a> to query available networks, and then call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/CreateExternalAgentBootstrapToken">CreateExternalAgentBootstrapToken</a> to obtain access information. If the agent does not exist, has been deleted, or does not belong to the workspace, a resource not found error is returned.</para>
@@ -13357,8 +13357,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the enterprise identity providers bound to a workspace to view the access configuration, logon and user synchronization toggles, and configuration processing progress.
-        /// For a custom identity provider (<c>CustomSSO</c>), this API operation also reads the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</para>
+        /// <para>Queries the enterprise identity providers bound to a workspace. You can use this operation to view the access configuration, logon and user synchronization switches, and configuration processing progress.
+        /// For custom identity providers (<c>CustomSSO</c>), this API operation also retrieves the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</para>
         /// <h3>How to interpret the query results</h3>
         /// <table>
         /// <thead>
@@ -13377,7 +13377,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// <tr>
         /// <td><c>saml</c></td>
-        /// <td>The saved SAML configuration of the enterprise identity system, used to backfill fields when editing the configuration.</td>
+        /// <td>The saved SAML configuration of the enterprise identity system, used for backfilling when editing the configuration.</td>
         /// </tr>
         /// <tr>
         /// <td><c>configuration</c></td>
@@ -13385,19 +13385,19 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// <tr>
         /// <td><c>status</c></td>
-        /// <td>The processing progress of attaching the identity provider or the logon configuration.</td>
+        /// <td>The processing progress of the identity provider attachment or logon configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>If <c>CustomSSO</c> returns <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and continue configuring enterprise single sign-on.</td>
+        /// <td>When <c>CustomSSO</c> returns <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information for AgentCore and continue configuring enterprise single sign-on.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>After saving the logon configuration, you can query <c>status</c> to track the processing progress. <c>READY</c> indicates that the configuration processing is complete. To check whether logon is enabled, you also need to verify <c>loginEnabled</c> and <c>configuration</c>.</td>
+        /// <td>After you save the logon configuration, you can query <c>status</c> to track the processing progress. <c>READY</c> indicates that the configuration processing is complete. To check whether logon is enabled, you must also verify <c>loginEnabled</c> and <c>configuration</c>.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Query user synchronization status</h3>
-        /// <para>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system into the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</para>
+        /// <h3>Query the user synchronization status</h3>
+        /// <para>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system to the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13442,8 +13442,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the enterprise identity providers bound to a workspace to view the access configuration, logon and user synchronization toggles, and configuration processing progress.
-        /// For a custom identity provider (<c>CustomSSO</c>), this API operation also reads the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</para>
+        /// <para>Queries the enterprise identity providers bound to a workspace. You can use this operation to view the access configuration, logon and user synchronization switches, and configuration processing progress.
+        /// For custom identity providers (<c>CustomSSO</c>), this API operation also retrieves the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</para>
         /// <h3>How to interpret the query results</h3>
         /// <table>
         /// <thead>
@@ -13462,7 +13462,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// <tr>
         /// <td><c>saml</c></td>
-        /// <td>The saved SAML configuration of the enterprise identity system, used to backfill fields when editing the configuration.</td>
+        /// <td>The saved SAML configuration of the enterprise identity system, used for backfilling when editing the configuration.</td>
         /// </tr>
         /// <tr>
         /// <td><c>configuration</c></td>
@@ -13470,19 +13470,19 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// <tr>
         /// <td><c>status</c></td>
-        /// <td>The processing progress of attaching the identity provider or the logon configuration.</td>
+        /// <td>The processing progress of the identity provider attachment or logon configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>If <c>CustomSSO</c> returns <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and continue configuring enterprise single sign-on.</td>
+        /// <td>When <c>CustomSSO</c> returns <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information for AgentCore and continue configuring enterprise single sign-on.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>After saving the logon configuration, you can query <c>status</c> to track the processing progress. <c>READY</c> indicates that the configuration processing is complete. To check whether logon is enabled, you also need to verify <c>loginEnabled</c> and <c>configuration</c>.</td>
+        /// <td>After you save the logon configuration, you can query <c>status</c> to track the processing progress. <c>READY</c> indicates that the configuration processing is complete. To check whether logon is enabled, you must also verify <c>loginEnabled</c> and <c>configuration</c>.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Query user synchronization status</h3>
-        /// <para>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system into the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</para>
+        /// <h3>Query the user synchronization status</h3>
+        /// <para>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system to the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13527,8 +13527,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the enterprise identity providers bound to a workspace to view the access configuration, logon and user synchronization toggles, and configuration processing progress.
-        /// For a custom identity provider (<c>CustomSSO</c>), this API operation also reads the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</para>
+        /// <para>Queries the enterprise identity providers bound to a workspace. You can use this operation to view the access configuration, logon and user synchronization switches, and configuration processing progress.
+        /// For custom identity providers (<c>CustomSSO</c>), this API operation also retrieves the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</para>
         /// <h3>How to interpret the query results</h3>
         /// <table>
         /// <thead>
@@ -13547,7 +13547,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// <tr>
         /// <td><c>saml</c></td>
-        /// <td>The saved SAML configuration of the enterprise identity system, used to backfill fields when editing the configuration.</td>
+        /// <td>The saved SAML configuration of the enterprise identity system, used for backfilling when editing the configuration.</td>
         /// </tr>
         /// <tr>
         /// <td><c>configuration</c></td>
@@ -13555,19 +13555,19 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// <tr>
         /// <td><c>status</c></td>
-        /// <td>The processing progress of attaching the identity provider or the logon configuration.</td>
+        /// <td>The processing progress of the identity provider attachment or logon configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>If <c>CustomSSO</c> returns <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and continue configuring enterprise single sign-on.</td>
+        /// <td>When <c>CustomSSO</c> returns <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information for AgentCore and continue configuring enterprise single sign-on.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>After saving the logon configuration, you can query <c>status</c> to track the processing progress. <c>READY</c> indicates that the configuration processing is complete. To check whether logon is enabled, you also need to verify <c>loginEnabled</c> and <c>configuration</c>.</td>
+        /// <td>After you save the logon configuration, you can query <c>status</c> to track the processing progress. <c>READY</c> indicates that the configuration processing is complete. To check whether logon is enabled, you must also verify <c>loginEnabled</c> and <c>configuration</c>.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Query user synchronization status</h3>
-        /// <para>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system into the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</para>
+        /// <h3>Query the user synchronization status</h3>
+        /// <para>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system to the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13591,8 +13591,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the enterprise identity providers bound to a workspace to view the access configuration, logon and user synchronization toggles, and configuration processing progress.
-        /// For a custom identity provider (<c>CustomSSO</c>), this API operation also reads the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</para>
+        /// <para>Queries the enterprise identity providers bound to a workspace. You can use this operation to view the access configuration, logon and user synchronization switches, and configuration processing progress.
+        /// For custom identity providers (<c>CustomSSO</c>), this API operation also retrieves the saved SAML logon configuration for viewing or modifying enterprise single sign-on (SSO) settings.</para>
         /// <h3>How to interpret the query results</h3>
         /// <table>
         /// <thead>
@@ -13611,7 +13611,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// <tr>
         /// <td><c>saml</c></td>
-        /// <td>The saved SAML configuration of the enterprise identity system, used to backfill fields when editing the configuration.</td>
+        /// <td>The saved SAML configuration of the enterprise identity system, used for backfilling when editing the configuration.</td>
         /// </tr>
         /// <tr>
         /// <td><c>configuration</c></td>
@@ -13619,19 +13619,19 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// <tr>
         /// <td><c>status</c></td>
-        /// <td>The processing progress of attaching the identity provider or the logon configuration.</td>
+        /// <td>The processing progress of the identity provider attachment or logon configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>If <c>CustomSSO</c> returns <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information of AgentCore and continue configuring enterprise single sign-on.</td>
+        /// <td>When <c>CustomSSO</c> returns <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and the SAML logon configuration is pending. In this case, you can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a> to obtain the access information for AgentCore and continue configuring enterprise single sign-on.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>After saving the logon configuration, you can query <c>status</c> to track the processing progress. <c>READY</c> indicates that the configuration processing is complete. To check whether logon is enabled, you also need to verify <c>loginEnabled</c> and <c>configuration</c>.</td>
+        /// <td>After you save the logon configuration, you can query <c>status</c> to track the processing progress. <c>READY</c> indicates that the configuration processing is complete. To check whether logon is enabled, you must also verify <c>loginEnabled</c> and <c>configuration</c>.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Query user synchronization status</h3>
-        /// <para>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system into the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</para>
+        /// <h3>Query the user synchronization status</h3>
+        /// <para>SAML logon and SCIM user synchronization are configured separately. SCIM is used to pre-provision users from the enterprise identity system to the user pool. You can call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a> to query the receiver configuration and synchronization task results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14072,7 +14072,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SAML service provider (SP) information of CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, for users to configure an external IdP.</para>
+        /// <para>Queries the SAML service provider (SP) information for CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, to help users configure an external IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14080,12 +14080,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>Retrieves the SAML service provider (SP) access information of AgentCore for configuring single sign-on (SSO) in an enterprise identity provider (IdP).
         /// An SP is a service provider that receives logon assertions. An IdP is an enterprise identity provider that verifies user identities and issues logon assertions. This operation returns the SP information on the AgentCore side.</para>
         /// <h3>Before you begin</h3>
-        /// <para>The workspace is bound to CustomSSO, and the shared user pool is initialized. The protocol parameter is required and must be set to SAML.
-        /// You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can obtain the SP information and then complete the SAML configuration.</para>
+        /// <para>The workspace is bound to <c>CustomSSO</c>, and the shared user pool is initialized. The <c>protocol</c> parameter is required and must be set to <c>SAML</c>.
+        /// You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can retrieve the SP information and then complete the SAML configuration.</para>
         /// <h3>Request example</h3>
         /// <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/CustomSSO/service-provider?protocol=SAML
         /// </c></pre>
-        /// <h3>Response elements</h3>
+        /// <h3>Response information</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -14094,26 +14094,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>protocol</td>
-        /// <td>The access protocol. This operation returns SAML.</td>
+        /// <td><c>protocol</c></td>
+        /// <td>The access protocol. This operation returns <c>SAML</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>entityId</td>
-        /// <td>The SP identifier of AgentCore. Configure it as the service provider Entity ID in the enterprise IdP.</td>
+        /// <td><c>entityId</c></td>
+        /// <td>The SP identifier of AgentCore. Configure this value as the service provider Entity ID in the enterprise IdP.</td>
         /// </tr>
         /// <tr>
-        /// <td>acsUrl</td>
-        /// <td>The URL where AgentCore receives SAML logon assertions. Configure it as the ACS URL in the enterprise IdP.</td>
+        /// <td><c>acsUrl</c></td>
+        /// <td>The URL where AgentCore receives SAML logon assertions. Configure this value as the ACS URL in the enterprise IdP.</td>
         /// </tr>
         /// <tr>
-        /// <td>metadataXml</td>
-        /// <td>The SP metadata XML. Use it to import the SP configuration in an enterprise IdP that supports metadata import.</td>
+        /// <td><c>metadataXml</c></td>
+        /// <td>The SP metadata XML. Use this file to import the SP configuration in an enterprise IdP that supports metadata import.</td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Configuration procedure</h3>
-        /// <para><b>Step 1:</b> Call this operation to obtain the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
-        /// <b>Step 2:</b> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>.
-        /// <b>Step 3:</b> After the configuration is complete, enable single sign-on by using loginEnabled as needed.</para>
+        /// <para><b>Step 1:</b> Call this operation to retrieve the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
+        /// <b>Step 2:</b> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> operation.
+        /// <b>Step 3:</b> After the configuration is complete, enable single sign-on by setting <c>loginEnabled</c> as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14159,7 +14159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SAML service provider (SP) information of CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, for users to configure an external IdP.</para>
+        /// <para>Queries the SAML service provider (SP) information for CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, to help users configure an external IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14167,12 +14167,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>Retrieves the SAML service provider (SP) access information of AgentCore for configuring single sign-on (SSO) in an enterprise identity provider (IdP).
         /// An SP is a service provider that receives logon assertions. An IdP is an enterprise identity provider that verifies user identities and issues logon assertions. This operation returns the SP information on the AgentCore side.</para>
         /// <h3>Before you begin</h3>
-        /// <para>The workspace is bound to CustomSSO, and the shared user pool is initialized. The protocol parameter is required and must be set to SAML.
-        /// You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can obtain the SP information and then complete the SAML configuration.</para>
+        /// <para>The workspace is bound to <c>CustomSSO</c>, and the shared user pool is initialized. The <c>protocol</c> parameter is required and must be set to <c>SAML</c>.
+        /// You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can retrieve the SP information and then complete the SAML configuration.</para>
         /// <h3>Request example</h3>
         /// <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/CustomSSO/service-provider?protocol=SAML
         /// </c></pre>
-        /// <h3>Response elements</h3>
+        /// <h3>Response information</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -14181,26 +14181,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>protocol</td>
-        /// <td>The access protocol. This operation returns SAML.</td>
+        /// <td><c>protocol</c></td>
+        /// <td>The access protocol. This operation returns <c>SAML</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>entityId</td>
-        /// <td>The SP identifier of AgentCore. Configure it as the service provider Entity ID in the enterprise IdP.</td>
+        /// <td><c>entityId</c></td>
+        /// <td>The SP identifier of AgentCore. Configure this value as the service provider Entity ID in the enterprise IdP.</td>
         /// </tr>
         /// <tr>
-        /// <td>acsUrl</td>
-        /// <td>The URL where AgentCore receives SAML logon assertions. Configure it as the ACS URL in the enterprise IdP.</td>
+        /// <td><c>acsUrl</c></td>
+        /// <td>The URL where AgentCore receives SAML logon assertions. Configure this value as the ACS URL in the enterprise IdP.</td>
         /// </tr>
         /// <tr>
-        /// <td>metadataXml</td>
-        /// <td>The SP metadata XML. Use it to import the SP configuration in an enterprise IdP that supports metadata import.</td>
+        /// <td><c>metadataXml</c></td>
+        /// <td>The SP metadata XML. Use this file to import the SP configuration in an enterprise IdP that supports metadata import.</td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Configuration procedure</h3>
-        /// <para><b>Step 1:</b> Call this operation to obtain the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
-        /// <b>Step 2:</b> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>.
-        /// <b>Step 3:</b> After the configuration is complete, enable single sign-on by using loginEnabled as needed.</para>
+        /// <para><b>Step 1:</b> Call this operation to retrieve the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
+        /// <b>Step 2:</b> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> operation.
+        /// <b>Step 3:</b> After the configuration is complete, enable single sign-on by setting <c>loginEnabled</c> as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14246,7 +14246,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SAML service provider (SP) information of CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, for users to configure an external IdP.</para>
+        /// <para>Queries the SAML service provider (SP) information for CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, to help users configure an external IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14254,12 +14254,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>Retrieves the SAML service provider (SP) access information of AgentCore for configuring single sign-on (SSO) in an enterprise identity provider (IdP).
         /// An SP is a service provider that receives logon assertions. An IdP is an enterprise identity provider that verifies user identities and issues logon assertions. This operation returns the SP information on the AgentCore side.</para>
         /// <h3>Before you begin</h3>
-        /// <para>The workspace is bound to CustomSSO, and the shared user pool is initialized. The protocol parameter is required and must be set to SAML.
-        /// You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can obtain the SP information and then complete the SAML configuration.</para>
+        /// <para>The workspace is bound to <c>CustomSSO</c>, and the shared user pool is initialized. The <c>protocol</c> parameter is required and must be set to <c>SAML</c>.
+        /// You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can retrieve the SP information and then complete the SAML configuration.</para>
         /// <h3>Request example</h3>
         /// <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/CustomSSO/service-provider?protocol=SAML
         /// </c></pre>
-        /// <h3>Response elements</h3>
+        /// <h3>Response information</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -14268,26 +14268,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>protocol</td>
-        /// <td>The access protocol. This operation returns SAML.</td>
+        /// <td><c>protocol</c></td>
+        /// <td>The access protocol. This operation returns <c>SAML</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>entityId</td>
-        /// <td>The SP identifier of AgentCore. Configure it as the service provider Entity ID in the enterprise IdP.</td>
+        /// <td><c>entityId</c></td>
+        /// <td>The SP identifier of AgentCore. Configure this value as the service provider Entity ID in the enterprise IdP.</td>
         /// </tr>
         /// <tr>
-        /// <td>acsUrl</td>
-        /// <td>The URL where AgentCore receives SAML logon assertions. Configure it as the ACS URL in the enterprise IdP.</td>
+        /// <td><c>acsUrl</c></td>
+        /// <td>The URL where AgentCore receives SAML logon assertions. Configure this value as the ACS URL in the enterprise IdP.</td>
         /// </tr>
         /// <tr>
-        /// <td>metadataXml</td>
-        /// <td>The SP metadata XML. Use it to import the SP configuration in an enterprise IdP that supports metadata import.</td>
+        /// <td><c>metadataXml</c></td>
+        /// <td>The SP metadata XML. Use this file to import the SP configuration in an enterprise IdP that supports metadata import.</td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Configuration procedure</h3>
-        /// <para><b>Step 1:</b> Call this operation to obtain the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
-        /// <b>Step 2:</b> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>.
-        /// <b>Step 3:</b> After the configuration is complete, enable single sign-on by using loginEnabled as needed.</para>
+        /// <para><b>Step 1:</b> Call this operation to retrieve the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
+        /// <b>Step 2:</b> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> operation.
+        /// <b>Step 3:</b> After the configuration is complete, enable single sign-on by setting <c>loginEnabled</c> as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14306,7 +14306,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SAML service provider (SP) information of CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, for users to configure an external IdP.</para>
+        /// <para>Queries the SAML service provider (SP) information for CustomSSO, including the Entity ID, ACS URL, and SP metadata XML, to help users configure an external IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14314,12 +14314,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>Retrieves the SAML service provider (SP) access information of AgentCore for configuring single sign-on (SSO) in an enterprise identity provider (IdP).
         /// An SP is a service provider that receives logon assertions. An IdP is an enterprise identity provider that verifies user identities and issues logon assertions. This operation returns the SP information on the AgentCore side.</para>
         /// <h3>Before you begin</h3>
-        /// <para>The workspace is bound to CustomSSO, and the shared user pool is initialized. The protocol parameter is required and must be set to SAML.
-        /// You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can obtain the SP information and then complete the SAML configuration.</para>
+        /// <para>The workspace is bound to <c>CustomSSO</c>, and the shared user pool is initialized. The <c>protocol</c> parameter is required and must be set to <c>SAML</c>.
+        /// You can call the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a> operation to query the binding information. After the user pool becomes available, you can retrieve the SP information and then complete the SAML configuration.</para>
         /// <h3>Request example</h3>
         /// <pre><code class="language-http">GET /workspaces/{workspaceId}/identity-providers/CustomSSO/service-provider?protocol=SAML
         /// </c></pre>
-        /// <h3>Response elements</h3>
+        /// <h3>Response information</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -14328,26 +14328,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>protocol</td>
-        /// <td>The access protocol. This operation returns SAML.</td>
+        /// <td><c>protocol</c></td>
+        /// <td>The access protocol. This operation returns <c>SAML</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>entityId</td>
-        /// <td>The SP identifier of AgentCore. Configure it as the service provider Entity ID in the enterprise IdP.</td>
+        /// <td><c>entityId</c></td>
+        /// <td>The SP identifier of AgentCore. Configure this value as the service provider Entity ID in the enterprise IdP.</td>
         /// </tr>
         /// <tr>
-        /// <td>acsUrl</td>
-        /// <td>The URL where AgentCore receives SAML logon assertions. Configure it as the ACS URL in the enterprise IdP.</td>
+        /// <td><c>acsUrl</c></td>
+        /// <td>The URL where AgentCore receives SAML logon assertions. Configure this value as the ACS URL in the enterprise IdP.</td>
         /// </tr>
         /// <tr>
-        /// <td>metadataXml</td>
-        /// <td>The SP metadata XML. Use it to import the SP configuration in an enterprise IdP that supports metadata import.</td>
+        /// <td><c>metadataXml</c></td>
+        /// <td>The SP metadata XML. Use this file to import the SP configuration in an enterprise IdP that supports metadata import.</td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Configuration procedure</h3>
-        /// <para><b>Step 1:</b> Call this operation to obtain the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
-        /// <b>Step 2:</b> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a>.
-        /// <b>Step 3:</b> After the configuration is complete, enable single sign-on by using loginEnabled as needed.</para>
+        /// <para><b>Step 1:</b> Call this operation to retrieve the SP information, and configure the SP identifier and assertion receiving URL of AgentCore in the enterprise IdP.
+        /// <b>Step 2:</b> Export the metadata XML from the enterprise IdP and save it to AgentCore by calling the <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/UpdateIdentityProvider">UpdateIdentityProvider</a> operation.
+        /// <b>Step 3:</b> After the configuration is complete, enable single sign-on by setting <c>loginEnabled</c> as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14884,38 +14884,38 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th>status</th>
+        /// <th><c>status</c></th>
         /// <th>Description</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>PENDING</td>
+        /// <td><c>PENDING</c></td>
         /// <td>Preparing. Continue querying.</td>
         /// </tr>
         /// <tr>
-        /// <td>READY</td>
+        /// <td><c>READY</c></td>
         /// <td>Ready.</td>
         /// </tr>
         /// <tr>
-        /// <td>FAILED</td>
-        /// <td>Preparation failed. Troubleshoot based on the error field.</td>
+        /// <td><c>FAILED</c></td>
+        /// <td>Preparation failed. Troubleshoot based on the <c>error</c> field.</td>
         /// </tr>
         /// <tr>
-        /// <td>DELETING</td>
+        /// <td><c>DELETING</c></td>
         /// <td>Deleting.</td>
         /// </tr>
         /// <tr>
-        /// <td>DISABLED</td>
+        /// <td><c>DISABLED</c></td>
         /// <td>Disabled.</td>
         /// </tr>
         /// <tr>
-        /// <td>The digest is provided after the source resolution is complete. The unit of cacheSizeBytes is bytes, and it may be empty when the cache is not yet available.</td>
+        /// <td>The <c>digest</c> is provided after the source resolution is completed. The unit of <c>cacheSizeBytes</c> is bytes, and it may be empty when the cache is not yet available.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Usage and deletion</h3>
-        /// <para>agentCount indicates the number of agents that have enabled the cache feature and reference this cache. canDelete and deleteBlockReason indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests still recheck the usage.
-        /// The query scope of this operation is determined by regionId, workspaceId, and imageId.</para>
+        /// <para><c>agentCount</c> indicates the number of agents that have the cache switch enabled and reference this cache. <c>canDelete</c> and <c>deleteBlockReason</c> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
+        /// The query scope of this operation is determined by <c>regionId</c>, <c>workspaceId</c>, and <c>imageId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14975,38 +14975,38 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th>status</th>
+        /// <th><c>status</c></th>
         /// <th>Description</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>PENDING</td>
+        /// <td><c>PENDING</c></td>
         /// <td>Preparing. Continue querying.</td>
         /// </tr>
         /// <tr>
-        /// <td>READY</td>
+        /// <td><c>READY</c></td>
         /// <td>Ready.</td>
         /// </tr>
         /// <tr>
-        /// <td>FAILED</td>
-        /// <td>Preparation failed. Troubleshoot based on the error field.</td>
+        /// <td><c>FAILED</c></td>
+        /// <td>Preparation failed. Troubleshoot based on the <c>error</c> field.</td>
         /// </tr>
         /// <tr>
-        /// <td>DELETING</td>
+        /// <td><c>DELETING</c></td>
         /// <td>Deleting.</td>
         /// </tr>
         /// <tr>
-        /// <td>DISABLED</td>
+        /// <td><c>DISABLED</c></td>
         /// <td>Disabled.</td>
         /// </tr>
         /// <tr>
-        /// <td>The digest is provided after the source resolution is complete. The unit of cacheSizeBytes is bytes, and it may be empty when the cache is not yet available.</td>
+        /// <td>The <c>digest</c> is provided after the source resolution is completed. The unit of <c>cacheSizeBytes</c> is bytes, and it may be empty when the cache is not yet available.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Usage and deletion</h3>
-        /// <para>agentCount indicates the number of agents that have enabled the cache feature and reference this cache. canDelete and deleteBlockReason indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests still recheck the usage.
-        /// The query scope of this operation is determined by regionId, workspaceId, and imageId.</para>
+        /// <para><c>agentCount</c> indicates the number of agents that have the cache switch enabled and reference this cache. <c>canDelete</c> and <c>deleteBlockReason</c> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
+        /// The query scope of this operation is determined by <c>regionId</c>, <c>workspaceId</c>, and <c>imageId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15066,38 +15066,38 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th>status</th>
+        /// <th><c>status</c></th>
         /// <th>Description</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>PENDING</td>
+        /// <td><c>PENDING</c></td>
         /// <td>Preparing. Continue querying.</td>
         /// </tr>
         /// <tr>
-        /// <td>READY</td>
+        /// <td><c>READY</c></td>
         /// <td>Ready.</td>
         /// </tr>
         /// <tr>
-        /// <td>FAILED</td>
-        /// <td>Preparation failed. Troubleshoot based on the error field.</td>
+        /// <td><c>FAILED</c></td>
+        /// <td>Preparation failed. Troubleshoot based on the <c>error</c> field.</td>
         /// </tr>
         /// <tr>
-        /// <td>DELETING</td>
+        /// <td><c>DELETING</c></td>
         /// <td>Deleting.</td>
         /// </tr>
         /// <tr>
-        /// <td>DISABLED</td>
+        /// <td><c>DISABLED</c></td>
         /// <td>Disabled.</td>
         /// </tr>
         /// <tr>
-        /// <td>The digest is provided after the source resolution is complete. The unit of cacheSizeBytes is bytes, and it may be empty when the cache is not yet available.</td>
+        /// <td>The <c>digest</c> is provided after the source resolution is completed. The unit of <c>cacheSizeBytes</c> is bytes, and it may be empty when the cache is not yet available.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Usage and deletion</h3>
-        /// <para>agentCount indicates the number of agents that have enabled the cache feature and reference this cache. canDelete and deleteBlockReason indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests still recheck the usage.
-        /// The query scope of this operation is determined by regionId, workspaceId, and imageId.</para>
+        /// <para><c>agentCount</c> indicates the number of agents that have the cache switch enabled and reference this cache. <c>canDelete</c> and <c>deleteBlockReason</c> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
+        /// The query scope of this operation is determined by <c>regionId</c>, <c>workspaceId</c>, and <c>imageId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15126,38 +15126,38 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th>status</th>
+        /// <th><c>status</c></th>
         /// <th>Description</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>PENDING</td>
+        /// <td><c>PENDING</c></td>
         /// <td>Preparing. Continue querying.</td>
         /// </tr>
         /// <tr>
-        /// <td>READY</td>
+        /// <td><c>READY</c></td>
         /// <td>Ready.</td>
         /// </tr>
         /// <tr>
-        /// <td>FAILED</td>
-        /// <td>Preparation failed. Troubleshoot based on the error field.</td>
+        /// <td><c>FAILED</c></td>
+        /// <td>Preparation failed. Troubleshoot based on the <c>error</c> field.</td>
         /// </tr>
         /// <tr>
-        /// <td>DELETING</td>
+        /// <td><c>DELETING</c></td>
         /// <td>Deleting.</td>
         /// </tr>
         /// <tr>
-        /// <td>DISABLED</td>
+        /// <td><c>DISABLED</c></td>
         /// <td>Disabled.</td>
         /// </tr>
         /// <tr>
-        /// <td>The digest is provided after the source resolution is complete. The unit of cacheSizeBytes is bytes, and it may be empty when the cache is not yet available.</td>
+        /// <td>The <c>digest</c> is provided after the source resolution is completed. The unit of <c>cacheSizeBytes</c> is bytes, and it may be empty when the cache is not yet available.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Usage and deletion</h3>
-        /// <para>agentCount indicates the number of agents that have enabled the cache feature and reference this cache. canDelete and deleteBlockReason indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests still recheck the usage.
-        /// The query scope of this operation is determined by regionId, workspaceId, and imageId.</para>
+        /// <para><c>agentCount</c> indicates the number of agents that have the cache switch enabled and reference this cache. <c>canDelete</c> and <c>deleteBlockReason</c> indicate whether the cache can be deleted and the reason for blocking deletion. Deletion requests will recheck the usage.
+        /// The query scope of this operation is determined by <c>regionId</c>, <c>workspaceId</c>, and <c>imageId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21011,18 +21011,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the enterprise identity providers currently connected to a workspace. This operation is used to display the identity provider list or to check whether a binding already exists before configuring a connection.
-        /// A workspace can be bound to at most one external identity provider at a time: DingTalk, Lark, or a custom identity provider (<c>CustomSSO</c>). If no identity provider is bound, the returned <c>items</c> is an empty array.</para>
+        /// <para>Queries the enterprise identity providers currently connected to a workspace. You can use this operation to display the identity provider list or check whether a binding exists before configuring a connection.
+        /// A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<c>CustomSSO</c>). If no identity provider is bound, the returned <c>items</c> array is empty.</para>
         /// <h3>What you can view in the list</h3>
-        /// <para>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. When the status of <c>CustomSSO</c> is <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and you can proceed to configure the connection.
+        /// <para>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. If the status of <c>CustomSSO</c> is <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and you can proceed to fill in the connection configuration.
         /// This operation returns a binding summary. To view specific connection configurations, use the corresponding operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Retrieves the identity provider details and SAML logon configuration.</description></item>
         /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML connection information required to configure AgentCore in the enterprise identity system.</description></item>
-        /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Retrieves the SCIM receiver configuration and user synchronization status.</description></item>
+        /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Queries the SCIM receiver configuration and user synchronization status.</description></item>
         /// </list>
         /// <h3>Pagination</h3>
-        /// <para>Currently, at most one binding is returned. <c>nextToken</c> should be omitted or set to an empty string. The default value of <c>maxResults</c> is 10. Valid values: 1 to 100.</para>
+        /// <para>Currently, at most one binding is returned. The <c>nextToken</c> parameter should be omitted or set to an empty string. The default value of <c>maxResults</c> is 10, and valid values are 1 to 100.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21077,18 +21077,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the enterprise identity providers currently connected to a workspace. This operation is used to display the identity provider list or to check whether a binding already exists before configuring a connection.
-        /// A workspace can be bound to at most one external identity provider at a time: DingTalk, Lark, or a custom identity provider (<c>CustomSSO</c>). If no identity provider is bound, the returned <c>items</c> is an empty array.</para>
+        /// <para>Queries the enterprise identity providers currently connected to a workspace. You can use this operation to display the identity provider list or check whether a binding exists before configuring a connection.
+        /// A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<c>CustomSSO</c>). If no identity provider is bound, the returned <c>items</c> array is empty.</para>
         /// <h3>What you can view in the list</h3>
-        /// <para>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. When the status of <c>CustomSSO</c> is <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and you can proceed to configure the connection.
+        /// <para>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. If the status of <c>CustomSSO</c> is <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and you can proceed to fill in the connection configuration.
         /// This operation returns a binding summary. To view specific connection configurations, use the corresponding operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Retrieves the identity provider details and SAML logon configuration.</description></item>
         /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML connection information required to configure AgentCore in the enterprise identity system.</description></item>
-        /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Retrieves the SCIM receiver configuration and user synchronization status.</description></item>
+        /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Queries the SCIM receiver configuration and user synchronization status.</description></item>
         /// </list>
         /// <h3>Pagination</h3>
-        /// <para>Currently, at most one binding is returned. <c>nextToken</c> should be omitted or set to an empty string. The default value of <c>maxResults</c> is 10. Valid values: 1 to 100.</para>
+        /// <para>Currently, at most one binding is returned. The <c>nextToken</c> parameter should be omitted or set to an empty string. The default value of <c>maxResults</c> is 10, and valid values are 1 to 100.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21143,18 +21143,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the enterprise identity providers currently connected to a workspace. This operation is used to display the identity provider list or to check whether a binding already exists before configuring a connection.
-        /// A workspace can be bound to at most one external identity provider at a time: DingTalk, Lark, or a custom identity provider (<c>CustomSSO</c>). If no identity provider is bound, the returned <c>items</c> is an empty array.</para>
+        /// <para>Queries the enterprise identity providers currently connected to a workspace. You can use this operation to display the identity provider list or check whether a binding exists before configuring a connection.
+        /// A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<c>CustomSSO</c>). If no identity provider is bound, the returned <c>items</c> array is empty.</para>
         /// <h3>What you can view in the list</h3>
-        /// <para>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. When the status of <c>CustomSSO</c> is <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and you can proceed to configure the connection.
+        /// <para>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. If the status of <c>CustomSSO</c> is <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and you can proceed to fill in the connection configuration.
         /// This operation returns a binding summary. To view specific connection configurations, use the corresponding operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Retrieves the identity provider details and SAML logon configuration.</description></item>
         /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML connection information required to configure AgentCore in the enterprise identity system.</description></item>
-        /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Retrieves the SCIM receiver configuration and user synchronization status.</description></item>
+        /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Queries the SCIM receiver configuration and user synchronization status.</description></item>
         /// </list>
         /// <h3>Pagination</h3>
-        /// <para>Currently, at most one binding is returned. <c>nextToken</c> should be omitted or set to an empty string. The default value of <c>maxResults</c> is 10. Valid values: 1 to 100.</para>
+        /// <para>Currently, at most one binding is returned. The <c>nextToken</c> parameter should be omitted or set to an empty string. The default value of <c>maxResults</c> is 10, and valid values are 1 to 100.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21178,18 +21178,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the enterprise identity providers currently connected to a workspace. This operation is used to display the identity provider list or to check whether a binding already exists before configuring a connection.
-        /// A workspace can be bound to at most one external identity provider at a time: DingTalk, Lark, or a custom identity provider (<c>CustomSSO</c>). If no identity provider is bound, the returned <c>items</c> is an empty array.</para>
+        /// <para>Queries the enterprise identity providers currently connected to a workspace. You can use this operation to display the identity provider list or check whether a binding exists before configuring a connection.
+        /// A workspace can be bound to at most one external identity provider: DingTalk, Lark, or a custom identity provider (<c>CustomSSO</c>). If no identity provider is bound, the returned <c>items</c> array is empty.</para>
         /// <h3>What you can view in the list</h3>
-        /// <para>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. When the status of <c>CustomSSO</c> is <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and you can proceed to configure the connection.
+        /// <para>The list returns the identity provider type, binding status, and the switches for logon and user synchronization. If the status of <c>CustomSSO</c> is <c>WAITING_CONFIGURATION</c>, it indicates that the user pool is ready and you can proceed to fill in the connection configuration.
         /// This operation returns a binding summary. To view specific connection configurations, use the corresponding operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProvider">GetIdentityProvider</a>: Retrieves the identity provider details and SAML logon configuration.</description></item>
         /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderServiceProvider">GetIdentityProviderServiceProvider</a>: Retrieves the SAML connection information required to configure AgentCore in the enterprise identity system.</description></item>
-        /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Retrieves the SCIM receiver configuration and user synchronization status.</description></item>
+        /// <item><description><a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetIdentityProviderSCIM">GetIdentityProviderSCIM</a>: Queries the SCIM receiver configuration and user synchronization status.</description></item>
         /// </list>
         /// <h3>Pagination</h3>
-        /// <para>Currently, at most one binding is returned. <c>nextToken</c> should be omitted or set to an empty string. The default value of <c>maxResults</c> is 10. Valid values: 1 to 100.</para>
+        /// <para>Currently, at most one binding is returned. The <c>nextToken</c> parameter should be omitted or set to an empty string. The default value of <c>maxResults</c> is 10, and valid values are 1 to 100.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21208,18 +21208,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the image caches of a workspace and supports filtering by image source and cache status.</para>
+        /// <para>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the image caches of a workspace and supports filtering by image source and cache status.</para>
+        /// <para>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</para>
         /// <h3>Filter conditions</h3>
-        /// <para>Provide <c>regionId</c> and <c>workspaceId</c> in the query parameters. You can filter by ACR instance, <c>registry</c>, namespace, repository, tag, digest, and status. Use <c>imageRefContains</c> to search for image address fragments.</para>
+        /// <para>Provide regionId and workspaceId in the query parameters. You can filter by ACR instance, registry, namespace, repository, tag, digest, and status. Use imageRefContains to search for image address fragments.</para>
         /// <h3>Pagination rules</h3>
-        /// <para>The default value of <c>maxResults</c> is 20, and the valid values are 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that there are no more pages.</para>
+        /// <para>The default value of maxResults is 20. Valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that no more pages are available.</para>
         /// <h3>Response content</h3>
-        /// <para>Each item includes <c>imageId</c>, source, digest, status, size, reference count, and deletion conditions. <c>PENDING</c> only indicates that the cache is being prepared. For the cause of failure, see <c>error</c>. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
+        /// <para>Each item includes the imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21309,18 +21309,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the image caches of a workspace and supports filtering by image source and cache status.</para>
+        /// <para>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the image caches of a workspace and supports filtering by image source and cache status.</para>
+        /// <para>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</para>
         /// <h3>Filter conditions</h3>
-        /// <para>Provide <c>regionId</c> and <c>workspaceId</c> in the query parameters. You can filter by ACR instance, <c>registry</c>, namespace, repository, tag, digest, and status. Use <c>imageRefContains</c> to search for image address fragments.</para>
+        /// <para>Provide regionId and workspaceId in the query parameters. You can filter by ACR instance, registry, namespace, repository, tag, digest, and status. Use imageRefContains to search for image address fragments.</para>
         /// <h3>Pagination rules</h3>
-        /// <para>The default value of <c>maxResults</c> is 20, and the valid values are 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that there are no more pages.</para>
+        /// <para>The default value of maxResults is 20. Valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that no more pages are available.</para>
         /// <h3>Response content</h3>
-        /// <para>Each item includes <c>imageId</c>, source, digest, status, size, reference count, and deletion conditions. <c>PENDING</c> only indicates that the cache is being prepared. For the cause of failure, see <c>error</c>. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
+        /// <para>Each item includes the imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21410,18 +21410,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the image caches of a workspace and supports filtering by image source and cache status.</para>
+        /// <para>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the image caches of a workspace and supports filtering by image source and cache status.</para>
+        /// <para>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</para>
         /// <h3>Filter conditions</h3>
-        /// <para>Provide <c>regionId</c> and <c>workspaceId</c> in the query parameters. You can filter by ACR instance, <c>registry</c>, namespace, repository, tag, digest, and status. Use <c>imageRefContains</c> to search for image address fragments.</para>
+        /// <para>Provide regionId and workspaceId in the query parameters. You can filter by ACR instance, registry, namespace, repository, tag, digest, and status. Use imageRefContains to search for image address fragments.</para>
         /// <h3>Pagination rules</h3>
-        /// <para>The default value of <c>maxResults</c> is 20, and the valid values are 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that there are no more pages.</para>
+        /// <para>The default value of maxResults is 20. Valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that no more pages are available.</para>
         /// <h3>Response content</h3>
-        /// <para>Each item includes <c>imageId</c>, source, digest, status, size, reference count, and deletion conditions. <c>PENDING</c> only indicates that the cache is being prepared. For the cause of failure, see <c>error</c>. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
+        /// <para>Each item includes the imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21440,18 +21440,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the image caches of a workspace and supports filtering by image source and cache status.</para>
+        /// <para>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the image caches of a workspace and supports filtering by image source and cache status.</para>
+        /// <para>Performs a paged query on image caches in a workspace, and supports paging and filtering by image source and cache status.</para>
         /// <h3>Filter conditions</h3>
-        /// <para>Provide <c>regionId</c> and <c>workspaceId</c> in the query parameters. You can filter by ACR instance, <c>registry</c>, namespace, repository, tag, digest, and status. Use <c>imageRefContains</c> to search for image address fragments.</para>
+        /// <para>Provide regionId and workspaceId in the query parameters. You can filter by ACR instance, registry, namespace, repository, tag, digest, and status. Use imageRefContains to search for image address fragments.</para>
         /// <h3>Pagination rules</h3>
-        /// <para>The default value of <c>maxResults</c> is 20, and the valid values are 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that there are no more pages.</para>
+        /// <para>The default value of maxResults is 20. Valid values are 1 to 100. Omit nextToken for the first request. For subsequent requests, use the response token as is, and keep the workspace, region, page size, and all filter conditions unchanged. An empty token indicates that no more pages are available.</para>
         /// <h3>Response content</h3>
-        /// <para>Each item includes <c>imageId</c>, source, digest, status, size, reference count, and deletion conditions. <c>PENDING</c> only indicates that the cache is being prepared. For the cause of failure, see <c>error</c>. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
+        /// <para>Each item includes the imageId, source, digest, status, size, reference count, and deletion conditions. PENDING only indicates that the cache is being prepared. For the cause of failure, see error. You can query a single cache by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23756,18 +23756,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current active sessions and their sources in a specified agent instance by using paging.</para>
+        /// <para>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</para>
         /// <h3>Query scope</h3>
-        /// <para>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
+        /// <para>Locates the instance by using <c>workspaceId</c>, <c>agentId</c>, and <c>sandboxId</c>. You can obtain the <c>sandboxId</c> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
         /// <h3>Pagination</h3>
-        /// <para>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
+        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
         /// <h3>Session sources</h3>
-        /// <para>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</para>
+        /// <para>The source can be <c>API</c>, <c>CONSOLE_DEBUG</c>, <c>EXTERNAL_CHANNEL</c>, or <c>UNKNOWN</c>. For external channels, the channel type is additionally returned. If no source information is provided, <c>UNKNOWN</c> is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23821,18 +23821,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current active sessions and their sources in a specified agent instance by using paging.</para>
+        /// <para>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</para>
         /// <h3>Query scope</h3>
-        /// <para>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
+        /// <para>Locates the instance by using <c>workspaceId</c>, <c>agentId</c>, and <c>sandboxId</c>. You can obtain the <c>sandboxId</c> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
         /// <h3>Pagination</h3>
-        /// <para>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
+        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
         /// <h3>Session sources</h3>
-        /// <para>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</para>
+        /// <para>The source can be <c>API</c>, <c>CONSOLE_DEBUG</c>, <c>EXTERNAL_CHANNEL</c>, or <c>UNKNOWN</c>. For external channels, the channel type is additionally returned. If no source information is provided, <c>UNKNOWN</c> is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23886,18 +23886,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current active sessions and their sources in a specified agent instance by using paging.</para>
+        /// <para>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</para>
         /// <h3>Query scope</h3>
-        /// <para>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
+        /// <para>Locates the instance by using <c>workspaceId</c>, <c>agentId</c>, and <c>sandboxId</c>. You can obtain the <c>sandboxId</c> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
         /// <h3>Pagination</h3>
-        /// <para>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
+        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
         /// <h3>Session sources</h3>
-        /// <para>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</para>
+        /// <para>The source can be <c>API</c>, <c>CONSOLE_DEBUG</c>, <c>EXTERNAL_CHANNEL</c>, or <c>UNKNOWN</c>. For external channels, the channel type is additionally returned. If no source information is provided, <c>UNKNOWN</c> is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23916,18 +23916,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the current active sessions and their sources in a specified agent instance by using paging.</para>
+        /// <para>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</para>
         /// <h3>Query scope</h3>
-        /// <para>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
+        /// <para>Locates the instance by using <c>workspaceId</c>, <c>agentId</c>, and <c>sandboxId</c>. You can obtain the <c>sandboxId</c> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
         /// <h3>Pagination</h3>
-        /// <para>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
+        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
         /// <h3>Session sources</h3>
-        /// <para>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</para>
+        /// <para>The source can be <c>API</c>, <c>CONSOLE_DEBUG</c>, <c>EXTERNAL_CHANNEL</c>, or <c>UNKNOWN</c>. For external channels, the channel type is additionally returned. If no source information is provided, <c>UNKNOWN</c> is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24407,6 +24407,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["pageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefType))
+            {
+                query["refType"] = request.RefType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectorType))
             {
                 query["selectorType"] = request.SelectorType;
@@ -24414,6 +24418,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectorValue))
             {
                 query["selectorValue"] = request.SelectorValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["sourceId"] = request.SourceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -24470,6 +24478,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["pageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefType))
+            {
+                query["refType"] = request.RefType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectorType))
             {
                 query["selectorType"] = request.SelectorType;
@@ -24477,6 +24489,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectorValue))
             {
                 query["selectorValue"] = request.SelectorValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["sourceId"] = request.SourceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -26687,10 +26703,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Resubmits the creation request for an existing image cache to recreate a cache that has not been successfully created.</para>
         /// <h3>Scope</h3>
-        /// <para>Pass <c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> as query parameters, and use <c>imageId</c> to locate the cache. This operation applies to ACR-sourced caches and re-verifies the source repository authorization before submission.</para>
+        /// <para>Pass <c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> as query parameters, and use <c>imageId</c> to locate the cache. This operation is intended for ACR-sourced caches and re-verifies the source repository authorization before submission.</para>
         /// <h3>Query retry results</h3>
-        /// <para>A successful response indicates that a retry acceptance snapshot is returned, which does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <c>READY</c> indicates that the cache is ready. If the status is <c>FAILED</c>, check <c>error</c>.
-        /// Currently, <c>clientToken</c> is only verified to be non-empty and does not guarantee deduplication by this token or restoration of the original acceptance result.</para>
+        /// <para>A successful response indicates that a retry acceptance snapshot is returned, but it does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <c>READY</c> indicates that the cache is ready. If the status is <c>FAILED</c>, check the <c>error</c> field.
+        /// Currently, <c>clientToken</c> is only verified to be non-empty and does not guarantee deduplication or recovery of the original acceptance result based on this token.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26763,10 +26779,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Resubmits the creation request for an existing image cache to recreate a cache that has not been successfully created.</para>
         /// <h3>Scope</h3>
-        /// <para>Pass <c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> as query parameters, and use <c>imageId</c> to locate the cache. This operation applies to ACR-sourced caches and re-verifies the source repository authorization before submission.</para>
+        /// <para>Pass <c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> as query parameters, and use <c>imageId</c> to locate the cache. This operation is intended for ACR-sourced caches and re-verifies the source repository authorization before submission.</para>
         /// <h3>Query retry results</h3>
-        /// <para>A successful response indicates that a retry acceptance snapshot is returned, which does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <c>READY</c> indicates that the cache is ready. If the status is <c>FAILED</c>, check <c>error</c>.
-        /// Currently, <c>clientToken</c> is only verified to be non-empty and does not guarantee deduplication by this token or restoration of the original acceptance result.</para>
+        /// <para>A successful response indicates that a retry acceptance snapshot is returned, but it does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <c>READY</c> indicates that the cache is ready. If the status is <c>FAILED</c>, check the <c>error</c> field.
+        /// Currently, <c>clientToken</c> is only verified to be non-empty and does not guarantee deduplication or recovery of the original acceptance result based on this token.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26839,10 +26855,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Resubmits the creation request for an existing image cache to recreate a cache that has not been successfully created.</para>
         /// <h3>Scope</h3>
-        /// <para>Pass <c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> as query parameters, and use <c>imageId</c> to locate the cache. This operation applies to ACR-sourced caches and re-verifies the source repository authorization before submission.</para>
+        /// <para>Pass <c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> as query parameters, and use <c>imageId</c> to locate the cache. This operation is intended for ACR-sourced caches and re-verifies the source repository authorization before submission.</para>
         /// <h3>Query retry results</h3>
-        /// <para>A successful response indicates that a retry acceptance snapshot is returned, which does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <c>READY</c> indicates that the cache is ready. If the status is <c>FAILED</c>, check <c>error</c>.
-        /// Currently, <c>clientToken</c> is only verified to be non-empty and does not guarantee deduplication by this token or restoration of the original acceptance result.</para>
+        /// <para>A successful response indicates that a retry acceptance snapshot is returned, but it does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <c>READY</c> indicates that the cache is ready. If the status is <c>FAILED</c>, check the <c>error</c> field.
+        /// Currently, <c>clientToken</c> is only verified to be non-empty and does not guarantee deduplication or recovery of the original acceptance result based on this token.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26868,10 +26884,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <description>
         /// <para>Resubmits the creation request for an existing image cache to recreate a cache that has not been successfully created.</para>
         /// <h3>Scope</h3>
-        /// <para>Pass <c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> as query parameters, and use <c>imageId</c> to locate the cache. This operation applies to ACR-sourced caches and re-verifies the source repository authorization before submission.</para>
+        /// <para>Pass <c>regionId</c>, <c>workspaceId</c>, and <c>clientToken</c> as query parameters, and use <c>imageId</c> to locate the cache. This operation is intended for ACR-sourced caches and re-verifies the source repository authorization before submission.</para>
         /// <h3>Query retry results</h3>
-        /// <para>A successful response indicates that a retry acceptance snapshot is returned, which does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <c>READY</c> indicates that the cache is ready. If the status is <c>FAILED</c>, check <c>error</c>.
-        /// Currently, <c>clientToken</c> is only verified to be non-empty and does not guarantee deduplication by this token or restoration of the original acceptance result.</para>
+        /// <para>A successful response indicates that a retry acceptance snapshot is returned, but it does not mean that the creation is complete. Query the status by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetImageCache">GetImageCache</a>. <c>READY</c> indicates that the cache is ready. If the status is <c>FAILED</c>, check the <c>error</c> field.
+        /// Currently, <c>clientToken</c> is only verified to be non-empty and does not guarantee deduplication or recovery of the original acceptance result based on this token.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29551,14 +29567,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the model, instruction, tool, or skill configurations saved on the platform side for a managed agent to adjust its capability configurations after integration.</para>
+        /// <para>Updates the model, instruction, tool, or skill configurations saved on the platform for a managed agent to adjust its capability configurations after integration.</para>
         /// <h3>Update rules</h3>
-        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced as a whole upon submission. You must include the items to be retained, and pass [] to clear the corresponding explicit list.</para>
+        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced in their entirety upon submission. You must include the items that you want to retain. Pass [] to clear the corresponding explicit list.</para>
         /// <h3>Switch model sources</h3>
         /// <list type="bullet">
         /// <item><description>To switch to PLATFORM, provide modelSource=PLATFORM and a valid model configuration, including the model connection ID and model name.</description></item>
         /// <item><description>To switch to RUNTIME, update the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
-        /// When a template is used, configurations belonging to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</description></item>
+        /// When a template is used, configurations that belong to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29622,14 +29638,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the model, instruction, tool, or skill configurations saved on the platform side for a managed agent to adjust its capability configurations after integration.</para>
+        /// <para>Updates the model, instruction, tool, or skill configurations saved on the platform for a managed agent to adjust its capability configurations after integration.</para>
         /// <h3>Update rules</h3>
-        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced as a whole upon submission. You must include the items to be retained, and pass [] to clear the corresponding explicit list.</para>
+        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced in their entirety upon submission. You must include the items that you want to retain. Pass [] to clear the corresponding explicit list.</para>
         /// <h3>Switch model sources</h3>
         /// <list type="bullet">
         /// <item><description>To switch to PLATFORM, provide modelSource=PLATFORM and a valid model configuration, including the model connection ID and model name.</description></item>
         /// <item><description>To switch to RUNTIME, update the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
-        /// When a template is used, configurations belonging to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</description></item>
+        /// When a template is used, configurations that belong to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29693,14 +29709,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the model, instruction, tool, or skill configurations saved on the platform side for a managed agent to adjust its capability configurations after integration.</para>
+        /// <para>Updates the model, instruction, tool, or skill configurations saved on the platform for a managed agent to adjust its capability configurations after integration.</para>
         /// <h3>Update rules</h3>
-        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced as a whole upon submission. You must include the items to be retained, and pass [] to clear the corresponding explicit list.</para>
+        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced in their entirety upon submission. You must include the items that you want to retain. Pass [] to clear the corresponding explicit list.</para>
         /// <h3>Switch model sources</h3>
         /// <list type="bullet">
         /// <item><description>To switch to PLATFORM, provide modelSource=PLATFORM and a valid model configuration, including the model connection ID and model name.</description></item>
         /// <item><description>To switch to RUNTIME, update the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
-        /// When a template is used, configurations belonging to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</description></item>
+        /// When a template is used, configurations that belong to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29725,14 +29741,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the model, instruction, tool, or skill configurations saved on the platform side for a managed agent to adjust its capability configurations after integration.</para>
+        /// <para>Updates the model, instruction, tool, or skill configurations saved on the platform for a managed agent to adjust its capability configurations after integration.</para>
         /// <h3>Update rules</h3>
-        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced as a whole upon submission. You must include the items to be retained, and pass [] to clear the corresponding explicit list.</para>
+        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set description=null to clear the description. The tools and skills fields are replaced in their entirety upon submission. You must include the items that you want to retain. Pass [] to clear the corresponding explicit list.</para>
         /// <h3>Switch model sources</h3>
         /// <list type="bullet">
         /// <item><description>To switch to PLATFORM, provide modelSource=PLATFORM and a valid model configuration, including the model connection ID and model name.</description></item>
         /// <item><description>To switch to RUNTIME, update the Settings to modelSource=RUNTIME and do not commit the platform model. The original platform model configuration is removed when the source is switched.
-        /// When a template is used, configurations belonging to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</description></item>
+        /// When a template is used, configurations that belong to the template, such as instructions, are read from the template. A successful update indicates that the request is accepted. Invoke <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetExternalAgent">GetExternalAgent</a> to query the configuration version and external accessed state. The clientToken parameter does not provide idempotence guarantees at this time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31904,12 +31920,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publish task. The invocation protocol cannot be modified after creation.</para>
+        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publish task. The invocation protocol cannot be modified after creation.</para>
+        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.
+        /// The request body must contain at least one non-null update field. If a field is omitted or set to null, the original value is retained. When apiKeys is submitted, the existing keys are completely replaced by the new list.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31967,12 +31984,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publish task. The invocation protocol cannot be modified after creation.</para>
+        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publish task. The invocation protocol cannot be modified after creation.</para>
+        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.
+        /// The request body must contain at least one non-null update field. If a field is omitted or set to null, the original value is retained. When apiKeys is submitted, the existing keys are completely replaced by the new list.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -32030,12 +32048,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publish task. The invocation protocol cannot be modified after creation.</para>
+        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publish task. The invocation protocol cannot be modified after creation.</para>
+        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.
+        /// The request body must contain at least one non-null update field. If a field is omitted or set to null, the original value is retained. When apiKeys is submitted, the existing keys are completely replaced by the new list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32054,12 +32073,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publish task. The invocation protocol cannot be modified after creation.</para>
+        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publish task. The invocation protocol cannot be modified after creation.</para>
+        /// <para>Updates the mutable configurations of a specified model connection and resubmits the publishing task. The invocation protocol cannot be modified after creation.
+        /// The request body must contain at least one non-null update field. If a field is omitted or set to null, the original value is retained. When apiKeys is submitted, the existing keys are completely replaced by the new list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32564,7 +32584,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description and members of a specified team. If users or agents are provided, the corresponding member list is replaced by using full overwrite semantics. Unprovided member lists remain unchanged. The team name cannot be modified after creation.</para>
+        /// <para>Updates the description and members of a specified team. When users or agents are provided, the corresponding member list is replaced based on full overwrite semantics. Member lists that are not provided remain unchanged. The team name cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32627,7 +32647,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description and members of a specified team. If users or agents are provided, the corresponding member list is replaced by using full overwrite semantics. Unprovided member lists remain unchanged. The team name cannot be modified after creation.</para>
+        /// <para>Updates the description and members of a specified team. When users or agents are provided, the corresponding member list is replaced based on full overwrite semantics. Member lists that are not provided remain unchanged. The team name cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32690,7 +32710,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description and members of a specified team. If users or agents are provided, the corresponding member list is replaced by using full overwrite semantics. Unprovided member lists remain unchanged. The team name cannot be modified after creation.</para>
+        /// <para>Updates the description and members of a specified team. When users or agents are provided, the corresponding member list is replaced based on full overwrite semantics. Member lists that are not provided remain unchanged. The team name cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32714,7 +32734,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description and members of a specified team. If users or agents are provided, the corresponding member list is replaced by using full overwrite semantics. Unprovided member lists remain unchanged. The team name cannot be modified after creation.</para>
+        /// <para>Updates the description and members of a specified team. When users or agents are provided, the corresponding member list is replaced based on full overwrite semantics. Member lists that are not provided remain unchanged. The team name cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32912,7 +32932,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId parameters are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32975,7 +32995,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId parameters are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -33038,7 +33058,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId parameters are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -33062,7 +33082,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId parameters are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

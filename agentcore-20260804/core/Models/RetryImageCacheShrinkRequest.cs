@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class RetryImageCacheShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for retrying image cache creation.</para>
+        /// <para>The retry image cache request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The non-empty client token passed as a query parameter. The current implementation does not guarantee deduplication by this token or restoration of the original acceptance result.</para>
+        /// <para>The non-empty request token passed as a query parameter. The current implementation does not guarantee deduplication or recovery of the original acceptance result based on this token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is passed as a query parameter and must match the selected region endpoint and the workspace region.</para>
+        /// <para>The product entry region. It is passed as a query parameter and must match the selected region endpoint and the workspace region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

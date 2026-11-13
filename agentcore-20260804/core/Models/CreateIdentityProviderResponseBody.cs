@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateIdentityProviderResponseBodyDataConfiguration Configuration { get; set; }
             public class CreateIdentityProviderResponseBodyDataConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Valid values: HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</para>
+                /// <para>HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. It cannot be changed after configuration. It is different from the Entity ID of the service provider (SP).</para>
+                /// <para>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. It cannot be changed after configuration. It is different from the local entity ID queried by the service provider (SP).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>The actual switch value. Valid values: Enabled or Disabled. It is not equivalent to the expected loginEnabled value saved in the access control (AC).</para>
+                /// <para>The actual switch value, which is Enabled or Disabled. It is not equivalent to the expected loginEnabled value saved in the access configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
@@ -93,6 +93,125 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? LoginEnabled { get; set; }
 
             /// <summary>
+            /// <para>The security summary of the expected configuration. It does not contain credentials. The original SAML fields and meanings are retained.</para>
+            /// </summary>
+            [NameInMap("oidc")]
+            [Validation(Required=false)]
+            public CreateIdentityProviderResponseBodyDataOidc Oidc { get; set; }
+            public class CreateIdentityProviderResponseBodyDataOidc : TeaModel {
+                /// <summary>
+                /// <para>The absolute HTTPS URL required in manual entry mode. Do not specify this field in discovery mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/authorize">https://idp.example.com/authorize</a></para>
+                /// </summary>
+                [NameInMap("authorizationEndpoint")]
+                [Validation(Required=false)]
+                public string AuthorizationEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>The default value is client_secret_post. If the value is none, PKCE must be enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>client_secret_post</para>
+                /// </summary>
+                [NameInMap("clientAuthMethod")]
+                [Validation(Required=false)]
+                public string ClientAuthMethod { get; set; }
+
+                /// <summary>
+                /// <para>The client ID registered in the external IdP, which is different from the Matrix client. It cannot be replaced in place after configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example-client</para>
+                /// </summary>
+                [NameInMap("clientId")]
+                [Validation(Required=false)]
+                public string ClientId { get; set; }
+
+                /// <summary>
+                /// <para>The absolute HTTPS discovery endpoint. It is mutually exclusive with manually entered endpoints.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/.well-known/openid-configuration">https://idp.example.com/.well-known/openid-configuration</a></para>
+                /// </summary>
+                [NameInMap("discoveryEndpoint")]
+                [Validation(Required=false)]
+                public string DiscoveryEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>The absolute HTTPS issuer of the external IdP. It cannot be replaced in place after configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com">https://idp.example.com</a></para>
+                /// </summary>
+                [NameInMap("issuer")]
+                [Validation(Required=false)]
+                public string Issuer { get; set; }
+
+                /// <summary>
+                /// <para>The absolute HTTPS URL required in manual entry mode. Do not specify this field in discovery mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/jwks">https://idp.example.com/jwks</a></para>
+                /// </summary>
+                [NameInMap("jwksUri")]
+                [Validation(Required=false)]
+                public string JwksUri { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether PKCE is enabled. Default value: true. This parameter must be set to true when client authentication is not used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("pkceRequired")]
+                [Validation(Required=false)]
+                public bool? PkceRequired { get; set; }
+
+                /// <summary>
+                /// <para>An array of strings that must include openid. Default values: openid, profile, and email.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;openid&quot;,&quot;profile&quot;,&quot;email&quot;]</para>
+                /// </summary>
+                [NameInMap("scopes")]
+                [Validation(Required=false)]
+                public List<string> Scopes { get; set; }
+
+                /// <summary>
+                /// <para>The name of the claim in the ID token that is used to match the SCIM externalId. If omitted during creation, the default value sub is used. If omitted during an update, the saved value is retained. For Azure, you can specify oid. The value must be non-empty and contain no whitespace characters. When you query oidc, the saved value is returned. When you query oidcConfiguration, the actual upstream value is returned, which may be empty.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oid</para>
+                /// </summary>
+                [NameInMap("ssoMappingClaim")]
+                [Validation(Required=false)]
+                public string SsoMappingClaim { get; set; }
+
+                /// <summary>
+                /// <para>The absolute HTTPS URL required in manual entry mode. Do not specify this field in discovery mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/token">https://idp.example.com/token</a></para>
+                /// </summary>
+                [NameInMap("tokenEndpoint")]
+                [Validation(Required=false)]
+                public string TokenEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>The optional absolute HTTPS URL for manual mode. Leave this field empty in Discovery mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/userinfo">https://idp.example.com/userinfo</a></para>
+                /// </summary>
+                [NameInMap("userinfoEndpoint")]
+                [Validation(Required=false)]
+                public string UserinfoEndpoint { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>Currently, only SAML is supported. This field may not be returned if no valid configuration is saved. Initialization with an OIDC placeholder is not supported.</para>
             /// 
             /// <b>Example:</b>
@@ -103,14 +222,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The input supports either XML or complete manual entry. Queries return the standardized configuration and do not echo the original XML. This field can be omitted if it is not configured.</para>
+            /// <para>The input supports either XML or full manual entry. Queries return the standardized configuration and do not echo the original XML. This field can be omitted if it is not configured.</para>
             /// </summary>
             [NameInMap("saml")]
             [Validation(Required=false)]
             public CreateIdentityProviderResponseBodyDataSaml Saml { get; set; }
             public class CreateIdentityProviderResponseBodyDataSaml : TeaModel {
                 /// <summary>
-                /// <para>Valid values: HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</para>
+                /// <para>HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -120,7 +239,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. It cannot be changed after configuration. It is different from the Entity ID of the service provider (SP).</para>
+                /// <para>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. It cannot be changed after configuration. It is different from the local entity ID queried by the service provider (SP).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -154,15 +273,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The binding status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CONFIGURED: The configuration is accepted and waiting for the user pool to be activated.</description></item>
-            /// <item><description>SYNCING: Organization members are being synchronized.</description></item>
-            /// <item><description>SYNCED: The synchronization of organization members is complete.</description></item>
-            /// <item><description>READY: The binding is in effect.</description></item>
-            /// <item><description>SYNC_FAILED: The synchronization of organization members failed.</description></item>
-            /// <item><description>UPDATING: The configuration is being updated.</description></item>
-            /// <item><description>UPDATE_FAILED: The configuration update failed.</description></item>
-            /// <item><description>DISCONNECTING: The binding is being disconnected.</description></item>
-            /// <item><description>DISCONNECT_FAILED: The disconnection failed.</description></item>
+            /// <item><description>CONFIGURED: configuration accepted and waiting for user pool activation</description></item>
+            /// <item><description>SYNCING: synchronizing organization members</description></item>
+            /// <item><description>SYNCED: organization member synchronization completed</description></item>
+            /// <item><description>READY: binding in effect</description></item>
+            /// <item><description>SYNC_FAILED: organization member synchronization failed</description></item>
+            /// <item><description>UPDATING: updating configuration</description></item>
+            /// <item><description>UPDATE_FAILED: configuration update failed</description></item>
+            /// <item><description>DISCONNECTING: disconnecting the binding</description></item>
+            /// <item><description>DISCONNECT_FAILED: disconnection failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,7 +299,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>Follows the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If omitted or null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</para>
+            /// <para>Uses the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</para>
             /// </summary>
             [NameInMap("syncScope")]
             [Validation(Required=false)]
@@ -197,7 +316,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> DepartmentIds { get; set; }
 
                 /// <summary>
-                /// <para>AllAuthorized: the full authorization scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>AllAuthorized: the entire authorized scope, which is limited by the application address book authorization.</description></item>
+                /// <item><description>SelectedDepartments: the selected departments and all their sub-departments.
+                /// When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SelectedDepartments</para>

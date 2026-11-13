@@ -1,3 +1,25 @@
+2026-11-13 Version: 3.4.2
+- Update API CreateExternalAgent: add request parameters body.environment.
+- Update API CreateExternalAgent: add response parameters Body.data.environment.
+- Update API CreateIdentityProvider: add response parameters Body.data.oidc.
+- Update API DeleteIdentityProvider: add response parameters Body.data.oidc.
+- Update API GetExternalAgent: add response parameters Body.data.environment.
+- Update API GetIdentityProvider: add response parameters Body.data.oidc.
+- Update API GetIdentityProvider: add response parameters Body.data.oidcConfiguration.
+- Update API GetIdentityProviderServiceProvider: add response parameters Body.data.redirectUri.
+- Update API ListIdentityProviders: add response parameters Body.items.$.oidc.
+- Update API ListSkillReferences: add request parameters refType.
+- Update API ListSkillReferences: add request parameters sourceId.
+- Update API ListSkillReferences: add response parameters Body.data.pageItems.$.refType.
+- Update API ListSkillReferences: add response parameters Body.data.pageItems.$.sourceId.
+- Update API ListSkillReferences: add response parameters Body.data.pageItems.$.sourceName.
+- Update API UpdateExternalAgent: add request parameters body.environment.
+- Update API UpdateExternalAgent: add response parameters Body.data.environment.
+- Update API UpdateIdentityProvider: add request parameters body.oidc.
+- Update API UpdateIdentityProvider: add response parameters Body.data.oidc.
+- Update API UpdateIdentityProviderSCIM: add response parameters Body.data.oidc.
+
+
 2026-11-11 Version: 3.4.1
 - Update API GetServiceEndpoint: add response parameters Body.data.currentInstances.
 - Update API GetServiceEndpoint: add response parameters Body.data.effectiveCapacity.

@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListIdentityProvidersResponseBodyItems> Items { get; set; }
         public class ListIdentityProvidersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The actual upstream configuration. The actual SAML configuration is read back on demand only in GetIdentityProvider. SCIM queries and preparations return the actual received status and URL.</para>
+            /// <para>The actual upstream configuration. The actual SAML configuration is read on demand only in GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</para>
             /// </summary>
             [NameInMap("configuration")]
             [Validation(Required=false)]
             public ListIdentityProvidersResponseBodyItemsConfiguration Configuration { get; set; }
             public class ListIdentityProvidersResponseBodyItemsConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. This parameter is required when manually specified. The query returns the short name.</para>
+                /// <para>The SAML binding type, such as HTTP-Redirect or HTTP-POST. This parameter is required for manual configuration. The query returns the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>Required when manually filled in. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
+                /// <para>Required when manually filled in. It must be an absolute HTTPS URL without user credentials and fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC format compliant with RFC 3339.</para>
+            /// <para>The creation time in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The event subscription callback URL. You must configure this URL in the application of the external identity provider to receive organization change events. An empty string is returned if the user pool is not activated.</para>
+            /// <para>The event subscription callback URL. You must configure this URL in the application of the external identity provider to receive organization change events. An empty string is returned when the user pool is not activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>The login callback URL. You must configure this URL in the application of the external identity provider. An empty string is returned if the user pool is not activated.</para>
+            /// <para>The logon callback URL. You must configure this URL in the application of the external identity provider. An empty string is returned when the user pool is not activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Binding { get; set; }
 
                 /// <summary>
-                /// <para>The certificate string in the historical metadata snapshot. Use saml.x509Certificates to edit the configuration and do not submit the old metadata.</para>
+                /// <para>The certificate string in the historical metadata snapshot. Use saml.x509Certificates to edit the configuration, and do not submit the old metadata.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoXDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8oGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYNW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbYEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Okkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0EBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUWld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImcaWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTqP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjocJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdVjfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>Required when manually filled in. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
+                /// <para>Required when manually filled in. It must be an absolute HTTPS URL without user credentials and fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -212,7 +212,126 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Currently, only SAML is supported. This parameter may not be returned if no valid configuration is saved. Placeholder initialization with OIDC is not supported.</para>
+            /// <para>The security summary of the expected configuration. It does not contain credentials. The original SAML fields and meanings are retained.</para>
+            /// </summary>
+            [NameInMap("oidc")]
+            [Validation(Required=false)]
+            public ListIdentityProvidersResponseBodyItemsOidc Oidc { get; set; }
+            public class ListIdentityProvidersResponseBodyItemsOidc : TeaModel {
+                /// <summary>
+                /// <para>The absolute HTTPS URL required in manual mode. Do not specify this parameter in discovery mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/authorize">https://idp.example.com/authorize</a></para>
+                /// </summary>
+                [NameInMap("authorizationEndpoint")]
+                [Validation(Required=false)]
+                public string AuthorizationEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>The client authentication method. Default value: client_secret_post. If the value is none, PKCE must be enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>client_secret_post</para>
+                /// </summary>
+                [NameInMap("clientAuthMethod")]
+                [Validation(Required=false)]
+                public string ClientAuthMethod { get; set; }
+
+                /// <summary>
+                /// <para>The client identifier registered in the external IdP, which is different from the Matrix client. In-place replacement is not supported after configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example-client</para>
+                /// </summary>
+                [NameInMap("clientId")]
+                [Validation(Required=false)]
+                public string ClientId { get; set; }
+
+                /// <summary>
+                /// <para>The absolute HTTPS discovery endpoint. This parameter is mutually exclusive with manually specified endpoints.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/.well-known/openid-configuration">https://idp.example.com/.well-known/openid-configuration</a></para>
+                /// </summary>
+                [NameInMap("discoveryEndpoint")]
+                [Validation(Required=false)]
+                public string DiscoveryEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>The absolute HTTPS issuer of the external IdP. In-place replacement is not supported after configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com">https://idp.example.com</a></para>
+                /// </summary>
+                [NameInMap("issuer")]
+                [Validation(Required=false)]
+                public string Issuer { get; set; }
+
+                /// <summary>
+                /// <para>The absolute HTTPS URL required in manual mode. Do not specify this parameter in discovery mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/jwks">https://idp.example.com/jwks</a></para>
+                /// </summary>
+                [NameInMap("jwksUri")]
+                [Validation(Required=false)]
+                public string JwksUri { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether PKCE is enabled. Default value: true. This parameter must be set to true when no client authentication is used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("pkceRequired")]
+                [Validation(Required=false)]
+                public bool? PkceRequired { get; set; }
+
+                /// <summary>
+                /// <para>The array of scopes. The array must contain openid. Default values: openid, profile, and email.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;openid&quot;,&quot;profile&quot;,&quot;email&quot;]</para>
+                /// </summary>
+                [NameInMap("scopes")]
+                [Validation(Required=false)]
+                public List<string> Scopes { get; set; }
+
+                /// <summary>
+                /// <para>The claim name in the ID token used to match the SCIM externalId. If omitted during initial configuration, the default value sub is used. If omitted during an update, the saved value is retained. For Azure, you can enter oid. The value must be non-empty and cannot contain whitespace characters. In query results, oidc returns the saved value, and oidcConfiguration returns the actual upstream value, which may be empty.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oid</para>
+                /// </summary>
+                [NameInMap("ssoMappingClaim")]
+                [Validation(Required=false)]
+                public string SsoMappingClaim { get; set; }
+
+                /// <summary>
+                /// <para>The absolute HTTPS URL required in manual mode. Do not specify this parameter in discovery mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/token">https://idp.example.com/token</a></para>
+                /// </summary>
+                [NameInMap("tokenEndpoint")]
+                [Validation(Required=false)]
+                public string TokenEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>The optional absolute HTTPS URL in manual mode. Do not specify this parameter in discovery mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/userinfo">https://idp.example.com/userinfo</a></para>
+                /// </summary>
+                [NameInMap("userinfoEndpoint")]
+                [Validation(Required=false)]
+                public string UserinfoEndpoint { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>Currently, only SAML is supported. It may not be returned when no valid configuration is saved. OIDC placeholder initialization is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAML</para>
@@ -222,14 +341,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The input supports either XML or complete manual entry. Queries return standardized configurations and do not echo the original XML. This parameter can be omitted if not configured.</para>
+            /// <para>The input supports either XML or complete manual entry. The query returns the standardized configuration and does not echo the original XML. It can be omitted when not configured.</para>
             /// </summary>
             [NameInMap("saml")]
             [Validation(Required=false)]
             public ListIdentityProvidersResponseBodyItemsSaml Saml { get; set; }
             public class ListIdentityProvidersResponseBodyItemsSaml : TeaModel {
                 /// <summary>
-                /// <para>The SAML binding type. Valid values: HTTP-Redirect and HTTP-POST. This parameter is required when manually specified. The query returns the short name.</para>
+                /// <para>The SAML binding type, such as HTTP-Redirect or HTTP-POST. This parameter is required for manual configuration. The query returns the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -249,7 +368,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>Required when manually filled in. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</para>
+                /// <para>Required when manually filled in. It must be an absolute HTTPS URL without user credentials and fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -259,7 +378,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>The list of IdP signing certificates. A non-empty array is required when manually specified. Use PEM X.509 certificate text. The current validity period is verified. A maximum of two certificates are allowed after deduplication.</para>
+                /// <para>The list of IdP signing certificates. A non-empty array is required for manual configuration. Use PEM X.509 certificate text. The system validates the current validity period. A maximum of two unique certificates are allowed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</para>
@@ -271,7 +390,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The binding status. Valid values: CONFIGURED (the configuration is accepted and waiting for the user pool to be activated), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is completed), READY (the binding is in effect), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), and DISCONNECT_FAILED (disconnection failed).</para>
+            /// <para>The binding status. Valid values: CONFIGURED (the configuration is accepted, waiting for the user pool to be activated), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is completed), READY (the binding is in effect), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), and DISCONNECT_FAILED (disconnection failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -281,21 +400,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether organization member synchronization is enabled. If enabled, organization members are synchronized as workspace users by this external identity provider.</para>
+            /// <para>Specifies whether organization member synchronization is enabled. When enabled, organization members are synchronized as workspace users from this external identity provider.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>Follows the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger a full synchronization.</para>
+            /// <para>Follows the department-based sync scope definition. If omitted during creation, it defaults to AllAuthorized, and the first vendor sync is determined by syncOnBind. If omitted or null during an update, the original value is retained. Updating and saving the scope does not automatically trigger a full sync.</para>
             /// </summary>
             [NameInMap("syncScope")]
             [Validation(Required=false)]
             public ListIdentityProvidersResponseBodyItemsSyncScope SyncScope { get; set; }
             public class ListIdentityProvidersResponseBodyItemsSyncScope : TeaModel {
                 /// <summary>
-                /// <para>When the mode is SelectedDepartments, this parameter must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</para>
+                /// <para>When set to SelectedDepartments, it must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When set to AllAuthorized, pass an empty array or omit this field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;10001&quot;]</para>
@@ -305,7 +424,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> DepartmentIds { get; set; }
 
                 /// <summary>
-                /// <para>The scope mode. Valid values: AllAuthorized: the full authorization scope, limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. A valid mode must be provided when explicitly submitting syncScope and is verified by the backend.</para>
+                /// <para>AllAuthorized: the full authorized scope, limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. A valid mode must be provided and verified by the backend when explicitly submitting syncScope.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SelectedDepartments</para>
@@ -317,7 +436,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC format compliant with RFC 3339.</para>
+            /// <para>The time of the last modification in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -349,7 +468,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. Returns an error description if the request fails.</para>
+        /// <para>The response message. Returns an error description when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -359,7 +478,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor for the next page. This parameter is empty if no next page exists.</para>
+        /// <para>The token for the next page. Empty if there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aWRlbnRpdHktcHJvdmlkZXItb2Zmc2V0OjEw</para>

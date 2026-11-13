@@ -96,6 +96,145 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
+            /// <para>仅 CustomSSO 接受，和 saml 互斥。提交完整公共配置；省略凭据保留已有值，新值替换，空白和掩码值不能作为凭据。</para>
+            /// </summary>
+            [NameInMap("oidc")]
+            [Validation(Required=false)]
+            public UpdateIdentityProviderRequestBodyOidc Oidc { get; set; }
+            public class UpdateIdentityProviderRequestBodyOidc : TeaModel {
+                /// <summary>
+                /// <para>手填模式必填的绝对 HTTPS URL；Discovery 模式不填写。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/authorize">https://idp.example.com/authorize</a></para>
+                /// </summary>
+                [NameInMap("authorizationEndpoint")]
+                [Validation(Required=false)]
+                public string AuthorizationEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>默认 client_secret_post；none 必须开启 PKCE。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>client_secret_post</para>
+                /// </summary>
+                [NameInMap("clientAuthMethod")]
+                [Validation(Required=false)]
+                public string ClientAuthMethod { get; set; }
+
+                /// <summary>
+                /// <para>外部 IdP 中注册的客户端标识，区别于 Matrix 客户端；配置后不支持原地更换。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example-client</para>
+                /// </summary>
+                [NameInMap("clientId")]
+                [Validation(Required=false)]
+                public string ClientId { get; set; }
+
+                /// <summary>
+                /// <para>private_key_jwt 认证必需的私钥；更新省略保留原值，响应不回显。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>-----BEGIN PRIVATE KEY-----\nEXAMPLE_ONLY_REPLACE_WITH_YOUR_PKCS8_PRIVATE_KEY\n-----END PRIVATE KEY-----</para>
+                /// </summary>
+                [NameInMap("clientPrivateKey")]
+                [Validation(Required=false)]
+                public string ClientPrivateKey { get; set; }
+
+                /// <summary>
+                /// <para>post/basic 认证必需；更新省略保留原值，不接受空白或全星号掩码，响应不回显。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example-client-secret-not-for-production</para>
+                /// </summary>
+                [NameInMap("clientSecret")]
+                [Validation(Required=false)]
+                public string ClientSecret { get; set; }
+
+                /// <summary>
+                /// <para>绝对 HTTPS Discovery 地址；与手填端点互斥。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/.well-known/openid-configuration">https://idp.example.com/.well-known/openid-configuration</a></para>
+                /// </summary>
+                [NameInMap("discoveryEndpoint")]
+                [Validation(Required=false)]
+                public string DiscoveryEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>外部 IdP 的绝对 HTTPS Issuer；配置后不支持原地更换。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com">https://idp.example.com</a></para>
+                /// </summary>
+                [NameInMap("issuer")]
+                [Validation(Required=false)]
+                public string Issuer { get; set; }
+
+                /// <summary>
+                /// <para>手填模式必填的绝对 HTTPS URL；Discovery 模式不填写。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/jwks">https://idp.example.com/jwks</a></para>
+                /// </summary>
+                [NameInMap("jwksUri")]
+                [Validation(Required=false)]
+                public string JwksUri { get; set; }
+
+                /// <summary>
+                /// <para>默认 true；无客户端认证时必须为 true。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("pkceRequired")]
+                [Validation(Required=false)]
+                public bool? PkceRequired { get; set; }
+
+                /// <summary>
+                /// <para>字符串数组，必须包含 openid；默认 openid、profile、email。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;openid&quot;,&quot;profile&quot;,&quot;email&quot;]</para>
+                /// </summary>
+                [NameInMap("scopes")]
+                [Validation(Required=false)]
+                public List<string> Scopes { get; set; }
+
+                /// <summary>
+                /// <para>ID Token 中用于与 SCIM externalId 匹配的 Claim 名。首次省略默认 sub；更新省略保留已保存值。Azure 可填 oid。非空且不含空白字符。查询 oidc 为保存值，oidcConfiguration 为上游实际值，可能为空。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oid</para>
+                /// </summary>
+                [NameInMap("ssoMappingClaim")]
+                [Validation(Required=false)]
+                public string SsoMappingClaim { get; set; }
+
+                /// <summary>
+                /// <para>手填模式必填的绝对 HTTPS URL；Discovery 模式不填写。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/token">https://idp.example.com/token</a></para>
+                /// </summary>
+                [NameInMap("tokenEndpoint")]
+                [Validation(Required=false)]
+                public string TokenEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>手填模式可选的绝对 HTTPS URL；Discovery 模式不填写。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://idp.example.com/userinfo">https://idp.example.com/userinfo</a></para>
+                /// </summary>
+                [NameInMap("userinfoEndpoint")]
+                [Validation(Required=false)]
+                public string UserinfoEndpoint { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The logon protocol for CustomSSO. Only SAML is supported. You can pass SAML when saving the SAML configuration. You can omit this field if you only modify loginEnabled. DingTalk and Lark do not accept this field.</para>
             /// 
             /// <b>Example:</b>

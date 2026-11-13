@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The image cache details.</para>
+        /// <para>The query result of the image cache details.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("data")]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? CanDelete { get; set; }
 
             /// <summary>
-            /// <para>The resource creation time. The format is RFC 3339. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The resource creation time. It uses the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The reason for blocking deletion.</para>
+            /// <para>The reason why deletion is blocked.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>The cache failure reason.</para>
+            /// <para>The reason for the cache failure.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>if can be null:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public GetImageCacheResponseBodyDataError Error { get; set; }
             public class GetImageCacheResponseBodyDataError : TeaModel {
                 /// <summary>
-                /// <para>The error code for creation failure.</para>
+                /// <para>The error code for the creation failure.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Image cache creation failed. Try again</para>
+                /// <para>Image cache creation failed. Please try again</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used for troubleshooting.</para>
+        /// <para>The request ID, which is used for troubleshooting.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. This does not mean that the cache creation is complete.</para>
+        /// <para>Indicates whether the request is successful. This does not mean that the cache creation is completed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

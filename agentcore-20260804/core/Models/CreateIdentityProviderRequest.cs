@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? LoginEnabled { get; set; }
 
             /// <summary>
-            /// <para>The application configuration of the external identity provider. When binding DingTalk, you must provide appKey, appSecret, and corpId. When binding Lark, you must provide appId and appSecret.</para>
+            /// <para>The application configuration of the external identity provider. When binding DingTalk, you must provide appKey, appSecret, and corpId. When binding Feishu, you must provide appId and appSecret.</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
             public CreateIdentityProviderRequestBodyMetadata Metadata { get; set; }
             public class CreateIdentityProviderRequestBodyMetadata : TeaModel {
                 /// <summary>
-                /// <para>The App ID of the Lark application. This parameter is required when the binding type is Lark.</para>
+                /// <para>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cli_exampleappid01</para>
@@ -111,14 +111,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>Controls the initial synchronization when DingTalk or Lark is bound. If this parameter is omitted or is null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull pipeline.</para>
+            /// <para>Controls the initial synchronization when DingTalk or Feishu is bound. If omitted or set to null, the default value is true. If set to false, only the configuration is saved, and synchronization must be explicitly triggered later. CustomSSO does not use the vendor pull pipeline.</para>
             /// </summary>
             [NameInMap("syncOnBind")]
             [Validation(Required=false)]
             public bool? SyncOnBind { get; set; }
 
             /// <summary>
-            /// <para>Follows the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If omitted or null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</para>
+            /// <para>Uses the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</para>
             /// </summary>
             [NameInMap("syncScope")]
             [Validation(Required=false)]
@@ -135,7 +135,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> DepartmentIds { get; set; }
 
                 /// <summary>
-                /// <para>AllAuthorized: the full authorization scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>AllAuthorized: the entire authorized scope, which is limited by the application address book authorization.</description></item>
+                /// <item><description>SelectedDepartments: the selected departments and all their sub-departments.
+                /// When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SelectedDepartments</para>

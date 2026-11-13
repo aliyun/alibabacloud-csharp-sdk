@@ -20,11 +20,39 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the managed agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Code review agent running in the user environment</para>
+            /// <para>A code review agent that runs in the user environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            /// <summary>
+            /// <para>The credential binding configuration. If you do not pass this parameter, the original binding is retained. If you pass an object, you must explicitly provide a non-null credentialReferences list, and the list is replaced in its entirety. If the list is empty or environment is null, the binding is cleared. Empty objects and objects that contain only common environment variables are invalid.</para>
+            /// </summary>
+            [NameInMap("environment")]
+            [Validation(Required=false)]
+            public UpdateExternalAgentRequestBodyEnvironment Environment { get; set; }
+            public class UpdateExternalAgentRequestBodyEnvironment : TeaModel {
+                /// <summary>
+                /// <para>The list of credential references. You must explicitly provide this list when passing the environment object, and it cannot be null. The list is replaced in its entirety. If you do not pass environment during an update, the original binding is retained. If you pass an empty list or set environment to null, the binding is cleared. Pass only the credential ID, not the actual key.</para>
+                /// </summary>
+                [NameInMap("credentialReferences")]
+                [Validation(Required=false)]
+                public List<UpdateExternalAgentRequestBodyEnvironmentCredentialReferences> CredentialReferences { get; set; }
+                public class UpdateExternalAgentRequestBodyEnvironmentCredentialReferences : TeaModel {
+                    /// <summary>
+                    /// <para>The credential ID. This parameter is required when passing a credential reference item and is verified by the backend.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cred-example</para>
+                    /// </summary>
+                    [NameInMap("credentialId")]
+                    [Validation(Required=false)]
+                    public string CredentialId { get; set; }
+
+                }
+
+            }
 
             /// <summary>
             /// <para>The agent instruction, which is used to guide the behavior of the agent.</para>
@@ -66,14 +94,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The model token quota configuration. If this parameter is not passed, no quota is configured.</para>
+                /// <para>The model token quota configuration. If you do not pass this parameter, no quota is configured.</para>
                 /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
                 public UpdateExternalAgentRequestBodyModelQuota Quota { get; set; }
                 public class UpdateExternalAgentRequestBodyModelQuota : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable the token quota. If this parameter is not specified, the default value is true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</para>
+                    /// <para>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -93,11 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LimitType { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical period of the quota. This parameter is required and verified by the backend when the quota is enabled. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>day: Daily.</description></item>
-                    /// <item><description>month: Monthly.</description></item>
-                    /// </list>
+                    /// <para>The statistical period of the quota. This parameter is required and verified by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>day</para>
@@ -107,7 +131,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string PeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of tokens allowed to be consumed in a single period. This parameter is required and verified by the backend when the quota is enabled. The value must be greater than 0.</para>
+                    /// <para>The maximum number of tokens that can be consumed in a single period. This parameter is required and verified by the backend when the quota is enabled. The value must be greater than 0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000000</para>
@@ -121,11 +145,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be passed at the same time. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PLATFORM: Platform model.</description></item>
-            /// <item><description>RUNTIME: Runtime model.</description></item>
-            /// </list>
+            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PLATFORM</para>
@@ -163,11 +183,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The skill source type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>REFERENCE: References AI Registry assets.</description></item>
-                /// <item><description>STATIC: Statically provided with deployment artifacts.</description></item>
-                /// </list>
+                /// <para>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REFERENCE</para>
@@ -187,18 +203,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
+                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
                 public UpdateExternalAgentRequestBodySkillsVersionSelector VersionSelector { get; set; }
                 public class UpdateExternalAgentRequestBodySkillsVersionSelector : TeaModel {
                     /// <summary>
-                    /// <para>The version selector type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>LABEL: Selects by tag.</description></item>
-                    /// <item><description>VERSION: Selects by specific version.</description></item>
-                    /// </list>
+                    /// <para>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LABEL</para>
@@ -280,10 +292,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The tool type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>MCP: MCP tool.</description></item>
-                /// </list>
+                /// <para>The tool type. Valid values: MCP (MCP tool).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -298,7 +307,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved query parameter. The backend does not provide idempotence guarantees for deduplication or recovery of original acceptance results based on this identifier at this time.</para>
+        /// <para>The reserved query parameter. The backend does not currently provide idempotence guarantees for deduplication or recovery of original acceptance results based on this identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

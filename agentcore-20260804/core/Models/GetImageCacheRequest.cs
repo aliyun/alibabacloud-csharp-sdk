@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetImageCacheRequest : TeaModel {
         /// <summary>
-        /// <para>The product entry region, passed as a query parameter. It must match the selected region endpoint and the workspace region.</para>
+        /// <para>The product entry region. It is passed as a query parameter and must be consistent with the selected region endpoint and the workspace region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

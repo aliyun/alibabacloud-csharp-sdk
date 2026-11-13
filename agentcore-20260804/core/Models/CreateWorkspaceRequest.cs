@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateWorkspaceRequestBody Body { get; set; }
         public class CreateWorkspaceRequestBody : TeaModel {
             /// <summary>
-            /// <para>If specified, the workspace is directly bound to this AgentSpace, and a new one is not created. The CMS workspace to which it belongs is determined by the server reverse lookup result, and CmsWorkspace validation is not required. When the workspace is deleted, it is only unbound, and the AgentSpace is not deleted. The value must match the current account and region, and the reverse lookup must return the associated CMS workspace. Otherwise, InvalidParameter is returned.</para>
+            /// <para>If this parameter is specified, the workspace is directly bound to the specified AgentSpace, and a new one is not created. The CMS workspace to which it belongs is determined by the server reverse lookup result, and CmsWorkspace does not need to be verified. When the workspace is deleted, it is only unbound, and the AgentSpace is not deleted. The value must match the current account and region, and the associated CMS workspace must be found through reverse lookup. Otherwise, InvalidParameter is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent-space</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentSpace { get; set; }
 
             /// <summary>
-            /// <para>If specified, the workspace is bound to this CMS workspace, and the platform does not create a new one. When the workspace is deleted, it is only unbound, and the CMS workspace is not deleted. The value must match the current account and region. Otherwise, InvalidParameter is returned.</para>
+            /// <para>If this parameter is specified, the workspace is bound to the specified CMS workspace, and the platform does not create a new one. When the workspace is deleted, it is only unbound, and the CMS workspace is not deleted. The value must match the current account and region. Otherwise, InvalidParameter is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-cms-workspace</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CmsWorkspace { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>The workspace name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateWorkspaceRequestBodyNetworkConfiguration NetworkConfiguration { get; set; }
             public class CreateWorkspaceRequestBodyNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to allow public egress access through the platform. If not specified, this feature is enabled by default. This parameter only controls whether the latest versions of managed and custom agents use the platform public egress. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</para>
+                /// <para>Specifies whether to allow public egress access from the platform. If this parameter is not specified, the default value is true. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PublicEgressEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to allow public ingress access. If not specified, this feature is enabled by default. If disabled, the public ingress endpoints of all agent endpoints in the workspace are closed. If re-enabled, the original public ingress endpoints are restored. INNER_DIRECT and user VPC ingress endpoints are not affected. Collaboration and Element Web ingress endpoints are not controlled by this parameter.</para>
+                /// <para>Specifies whether to allow public ingress access. If this parameter is not specified, the default value is true. If this parameter is set to false, the public ingress of all agent endpoints in the workspace is disabled. If this parameter is set to true again, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter. If this parameter is set to false, the workspace VPC must be enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PublicIngressEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The network configuration of the user VPC.</para>
+                /// <para>The VPC network configuration of the user.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]

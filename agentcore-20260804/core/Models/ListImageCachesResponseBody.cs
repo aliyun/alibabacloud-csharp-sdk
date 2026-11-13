@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The records on the current page. An empty array is returned if no matching items are found.</para>
+        /// <para>The records on the current page. This is an empty array if no matching items are found.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The number of agents using the cache.</para>
+            /// <para>The number of agents that use the cache.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? CanDelete { get; set; }
 
             /// <summary>
-            /// <para>The resource creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The resource creation time. The time follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Image cache creation failed. Try again</para>
+                /// <para>Image cache creation failed. Please try again</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The actual page size used for this request, which is not the number of items on the current page.</para>
+        /// <para>The actual page size used for this request, not the number of items on this page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used for troubleshooting.</para>
+        /// <para>The request ID used for troubleshooting.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records under the current filter conditions. Do not use this value to determine whether the traversal is complete.</para>
+        /// <para>The total number of records that match the current filter conditions. This value is not used to determine whether the traversal is complete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

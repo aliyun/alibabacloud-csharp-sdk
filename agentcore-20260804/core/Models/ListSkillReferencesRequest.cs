@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSkillReferencesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number, starting from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. If omitted, the server default value is used.</para>
+        /// <para>The number of entries per page. If not specified, the server default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The reference selector type used for filtering. Valid values: LABEL and VERSION.</para>
+        /// <para>Filters by reference strength. Valid values: STRONG, WEAK.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>STRONG</para>
+        /// </summary>
+        [NameInMap("refType")]
+        [Validation(Required=false)]
+        public string RefType { get; set; }
+
+        /// <summary>
+        /// <para>Filters by reference selector type. Valid values: LABEL, VERSION.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LABEL</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string SelectorType { get; set; }
 
         /// <summary>
-        /// <para>The reference selector value used for filtering. Valid values: latest, a named label, HEAD, or a specific version.</para>
+        /// <para>Filters by reference selector value. Valid values: latest, a named label, HEAD, or a specific version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HEAD</para>
@@ -48,6 +58,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [NameInMap("selectorValue")]
         [Validation(Required=false)]
         public string SelectorValue { get; set; }
+
+        /// <summary>
+        /// <para>Filters by reference source identifier. The value must be agentcore or a configured source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agentcore</para>
+        /// </summary>
+        [NameInMap("sourceId")]
+        [Validation(Required=false)]
+        public string SourceId { get; set; }
 
     }
 

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of retrying image cache creation.</para>
+        /// <para>The retry image cache result.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("data")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public RetryImageCacheResponseBodyData Data { get; set; }
         public class RetryImageCacheResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the source ACR instance.</para>
+            /// <para>The source ACR instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The number of agents that use the cache.</para>
+            /// <para>The number of agents using the cache.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? AgentCount { get; set; }
 
             /// <summary>
-            /// <para>The size of the cache in bytes.</para>
+            /// <para>The cache size in bytes.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? CacheSizeBytes { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the cache can be deleted.</para>
+            /// <para>Indicates whether deletion is allowed.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? CanDelete { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created. The time follows the RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The resource creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The reason why the cache cannot be deleted.</para>
+            /// <para>The reason why deletion is blocked.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The image cache creation failed. Please try again</para>
+                /// <para>Image cache creation failed. Please try again</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the source image.</para>
+            /// <para>The source image domain name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Registry { get; set; }
 
             /// <summary>
-            /// <para>The path of the source image repository.</para>
+            /// <para>The source image repository path.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Repository { get; set; }
 
             /// <summary>
-            /// <para>The cache status.</para>
+            /// <para>The image cache status.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag of the source image.</para>
+            /// <para>The source image tag.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</para>
+        /// <para>Indicates whether the request is successful. This does not mean that the cache creation is complete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateWorkspaceResponseBodyData Data { get; set; }
         public class CreateWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AI Registry namespace ID. This parameter is returned after related resources are bound and may be empty during initialization.</para>
+            /// <para>The AI Registry namespace ID. This value is returned after the related resources are bound and may be empty during initialization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namespace-0123456789abcdef</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The CloudMonitor workspace ID. This parameter is returned after related resources are bound and may be empty during initialization.</para>
+            /// <para>The CloudMonitor workspace ID. This value is returned after the related resources are bound and may be empty during initialization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms-ws-0123456789abcdef</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CmsWorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created. The time is in the ISO 8601 format.</para>
+            /// <para>The time when the workspace was created. The time follows the ISO-8601 standard.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>production-agents</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class CreateWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public egress of the user VPC.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the modification is still in progress, and UpdateFailed indicates that the current modification failed. This setting only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PublicEgressEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this parameter is disabled, the public ingress of all agent endpoints in the workspace is disabled. After it is re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the modification is in progress, and UpdateFailed indicates that the modification failed. After this setting is disabled, the public network ingress for all agent endpoints in the workspace is closed, and the original public network ingress is restored after it is re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PublicIngressEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The network configuration of the user VPC.</para>
+                /// <para>The VPC network configuration of the user.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch IDs.</para>
+                    /// <para>The list of vSwitch IDs.</para>
                     /// </summary>
                     [NameInMap("vSwitchIds")]
                     [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the workspace belongs. This parameter may be empty if no resource group is specified.</para>
+            /// <para>The ID of the resource group to which the workspace belongs. This value may be empty if no resource group is specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm1234567890</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The supplementary reason for the current status of the workspace. This parameter is used to display the specific reason when initialization fails or authorization is pending, and may be empty under normal circumstances.</para>
+            /// <para>The supplementary reason for the current status of the workspace. This value is used to display the specific reason when initialization fails or authorization is pending, and may be empty under normal circumstances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Waiting for OSS RAM authorization</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The tags of the workspace. An empty array is returned if no tags are set.</para>
+            /// <para>The list of tags for the workspace. An empty array is returned if no tags are set.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("tags")]

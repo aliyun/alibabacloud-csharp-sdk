@@ -27,7 +27,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The agent instructions, which are used to guide the behavior of the agent.</para>
+            /// <para>Optional. Credentials can be bound to both PLATFORM and RUNTIME model sources. When passing the object, you must explicitly provide a non-null credentialReferences list. Common environment variables are not supported.</para>
+            /// </summary>
+            [NameInMap("environment")]
+            [Validation(Required=false)]
+            public CreateExternalAgentRequestBodyEnvironment Environment { get; set; }
+            public class CreateExternalAgentRequestBodyEnvironment : TeaModel {
+                /// <summary>
+                /// <para>This list must be explicitly provided and cannot be null when the environment object is passed. The list is replaced as a whole. If environment is not passed during an update, the original binding is retained. If an empty list is passed or environment is null, the binding is cleared. Only the credential ID is passed, not the actual secret key.</para>
+                /// </summary>
+                [NameInMap("credentialReferences")]
+                [Validation(Required=false)]
+                public List<CreateExternalAgentRequestBodyEnvironmentCredentialReferences> CredentialReferences { get; set; }
+                public class CreateExternalAgentRequestBodyEnvironmentCredentialReferences : TeaModel {
+                    /// <summary>
+                    /// <para>Required when a credential reference item is passed. Validated by the backend.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cred-example</para>
+                    /// </summary>
+                    [NameInMap("credentialId")]
+                    [Validation(Required=false)]
+                    public string CredentialId { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
+            /// <para>The agent instruction, used to guide the behavior of the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>You are a code review assistant</para>
@@ -73,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateExternalAgentRequestBodyModelQuota Quota { get; set; }
                 public class CreateExternalAgentRequestBodyModelQuota : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable the token quota. Default value: true. If set to false, the quota is disabled and existing quota rules are deleted.</para>
+                    /// <para>Specifies whether to enable the token quota. Defaults to true if not specified. Passing false disables and deletes existing quota rules.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -117,7 +145,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</para>
+            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PLATFORM</para>
@@ -156,7 +184,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The skill source type. REFERENCE references AI Registry, and STATIC is statically provided with the package.</para>
+                /// <para>The skill source type. REFERENCE references the AI Registry. STATIC is statically provided with the deployment package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REFERENCE</para>
@@ -166,7 +194,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The skill version field for compatibility with legacy requests. For new requests, use sourceType and versionSelector. Do not submit this field in combination with sourceType.</para>
+                /// <para>The skill version field for compatibility with legacy requests. Use sourceType and versionSelector for new requests. Do not submit it in combination with sourceType.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -176,14 +204,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If omitted, LABEL/latest is used. STATIC sources do not provide a selector.</para>
+                /// <para>The skill reference version selector. Supports LABEL tags and VERSION specific versions. Defaults to LABEL/latest if omitted. Selectors are not provided for STATIC sources.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
                 public CreateExternalAgentRequestBodySkillsVersionSelector VersionSelector { get; set; }
                 public class CreateExternalAgentRequestBodySkillsVersionSelector : TeaModel {
                     /// <summary>
-                    /// <para>The version selector type. LABEL selects by tag, and VERSION selects by specific version.</para>
+                    /// <para>The version selector type. LABEL selects by tag. VERSION selects by specific version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LABEL</para>
@@ -221,7 +249,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateExternalAgentRequestBodyTemplateAiRegistry AiRegistry { get; set; }
                 public class CreateExternalAgentRequestBodyTemplateAiRegistry : TeaModel {
                     /// <summary>
-                    /// <para>The name of the template in AI Registry.</para>
+                    /// <para>The name of the template in the AI Registry.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -232,7 +260,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The version of the template in AI Registry.</para>
+                    /// <para>The version of the template in the AI Registry.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -280,7 +308,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved query parameter. Currently, the backend does not provide idempotency guarantees for deduplication or restoring the original acceptance result based on this identifier.</para>
+        /// <para>The reserved query parameter. The backend does not provide idempotency guarantees for deduplication or restoring the original acceptance result based on this identifier at this time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

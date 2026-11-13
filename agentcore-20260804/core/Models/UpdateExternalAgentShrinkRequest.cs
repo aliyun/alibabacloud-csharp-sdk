@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The reserved query parameter. The backend does not provide idempotence guarantees for deduplication or recovery of original acceptance results based on this identifier at this time.</para>
+        /// <para>The reserved query parameter. The backend does not currently provide idempotence guarantees for deduplication or recovery of original acceptance results based on this identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

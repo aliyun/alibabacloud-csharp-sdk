@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The source type of the session. A value of API indicates an API call, CONSOLE_DEBUG indicates console debugging, EXTERNAL_CHANNEL indicates an external channel, and UNKNOWN indicates an unknown source.</para>
+            /// <para>The source type of the session. A value of API indicates an API call. A value of CONSOLE_DEBUG indicates console debugging. A value of EXTERNAL_CHANNEL indicates an external channel. A value of UNKNOWN indicates an unknown source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EXTERNAL_CHANNEL</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A value of true indicates success, and a value of false indicates failure.</para>
+        /// <para>Indicates whether the request is successful. A value of true indicates success. A value of false indicates failure.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
