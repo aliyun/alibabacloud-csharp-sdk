@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.InternetBankOpen20240612.Models
 {
     public class ListProductReportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query result of the periodic report list, which contains the Reports array. The array is empty if no available reports exist.</para>
+        /// <para>The query results of the periodic report list, which includes the Reports array. The array is empty if no available reports exist.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListProductReportsResponseBodyData Data { get; set; }
         public class ListProductReportsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The available report records sorted by period from newest to oldest. By default, up to ten records are returned. If LatestOnly is set to true, at most one record is returned. The array is empty if no reports exist. A single natural week may have multiple report records. Use ReportId to distinguish them. The list does not contain download URLs. The actual download status is subject to the result of GetAiReport.</para>
+            /// <para>The available report records sorted by period in descending order. By default, up to ten records are returned. If LatestOnly is set to true, at most one record is returned. The array is empty if no reports exist. A single natural week may have multiple report records; use ReportId to distinguish them. The list does not contain download URLs. The actual download status is subject to GetAiReport.</para>
             /// </summary>
             [NameInMap("Reports")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.InternetBankOpen20240612.Models
         }
 
         /// <summary>
-        /// <para>The unique identity of the request, which is used for Tracing Analysis and troubleshooting. Provide this ID when troubleshooting exceptions.</para>
+        /// <para>The unique identity of the request, which is used for Tracing Analysis and troubleshooting. Provide this identity when troubleshooting exceptions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9634F2B3-B59C-5475-BA9F-96D95271882C</para>

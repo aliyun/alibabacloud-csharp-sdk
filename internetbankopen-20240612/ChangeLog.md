@@ -1,3 +1,6 @@
+2026-11-13 Version: 1.1.2
+- Generated csharp 2024-06-12 for InternetBankOpen.
+
 2026-11-12 Version: 1.1.1
 - Generated csharp 2024-06-12 for InternetBankOpen.
 
