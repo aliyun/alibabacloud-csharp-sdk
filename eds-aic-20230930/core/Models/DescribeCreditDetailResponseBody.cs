@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCreditDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response object.</para>
+        /// <para>The result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<DescribeCreditDetailResponseBodyDataDetails> Details { get; set; }
             public class DescribeCreditDetailResponseBodyDataDetails : TeaModel {
                 /// <summary>
-                /// <para>The agent type. This field is populated only when you query by a single agent type.</para>
+                /// <para>The agent type. This field is populated only when querying by a single agent type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloudphone_enterprise</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string AgentType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the API key.</para>
+                /// <para>The API key name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string ChangeTime { get; set; }
 
                 /// <summary>
-                /// <para>The amount of credit change.</para>
+                /// <para>The credit change.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.7637</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The model inference duration in milliseconds.</para>
+                /// <para>The model inference duration, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -193,6 +193,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [Validation(Required=false)]
                 public long? TtftMs { get; set; }
 
+                /// <summary>
+                /// <para>The user data disk ID. This field is returned for dual-disk instances when details are aggregated by disk, and is empty for single-disk instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cpd-5hh4a31emkt6u****</para>
+                /// </summary>
+                [NameInMap("UserDiskId")]
+                [Validation(Required=false)]
+                public string UserDiskId { get; set; }
+
             }
 
             /// <summary>
@@ -216,7 +226,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// <para>The number of entries to return per page. Default value: 10. Maximum value: 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -226,7 +236,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of detail records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -236,7 +246,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The total amount of credit change.</para>
+            /// <para>The total credit change.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

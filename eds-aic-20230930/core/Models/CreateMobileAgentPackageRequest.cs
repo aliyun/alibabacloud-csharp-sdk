@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateMobileAgentPackageRequest : TeaModel {
         /// <summary>
-        /// <para>The number of resource plans.</para>
+        /// <para>The number of packages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Automatic payment. You must ensure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b> (default): Generates an order without deducting fees.</description></item>
+        /// <item><description><b>true</b>: Automatic payment is enabled. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b> (default): An order is generated but no payment is deducted.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If your payment method has an insufficient balance, you can set this parameter to false. An unpaid order will be generated, and you can log on to the WUYING Cloud Phone console to pay the order.</para>
+        /// <para>If your payment method has an insufficient balance, you can set this parameter to false. In this case, an unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth package ID, which is used to associate an existing bandwidth package when creating an instance. The value must be prefixed with np- and followed by lowercase letters and digits. The bandwidth package must be an AI premium bandwidth package (CBWP_ECD) that belongs to the current account. If this parameter is left empty, the default bandwidth package allocation logic applies.</para>
+        /// <para>The ID of the bandwidth plan. This parameter is used to bind an existing bandwidth plan when creating an instance. The format is the np- prefix followed by lowercase letters and digits, and it must be an AI premium bandwidth plan (CBWP_ECD) that belongs to the current account. If this parameter is left empty, the default bandwidth plan allocation logic is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>np-791ncq8qcuoop9hta</para>
@@ -95,6 +95,45 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CreditConfig { get; set; }
 
         /// <summary>
+        /// <para>The custom display configuration. This parameter is optional. If not specified, the existing default display configuration is used. ResolutionWidth and ResolutionHeight must be specified together. Specifying only one of them returns InvalidDisplayConfig. Dpi is only supported for the matrix (CPS) form factor. The instance group (VM) form factor does not support display density. Specifying Dpi for the VM form factor returns InvalidDpi, and the display density for this form factor is derived from the resolution.</para>
+        /// </summary>
+        [NameInMap("DisplayConfig")]
+        [Validation(Required=false)]
+        public CreateMobileAgentPackageRequestDisplayConfig DisplayConfig { get; set; }
+        public class CreateMobileAgentPackageRequestDisplayConfig : TeaModel {
+            /// <summary>
+            /// <para>The display density in dpi. Valid values: 120 to 600 (inclusive). It must be an integer. This parameter is only supported for the matrix (CPS) form factor. Specifying this parameter for the instance group (VM) form factor returns InvalidDpi and no order is generated. The display density for the VM form factor is derived from the resolution.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>480</para>
+            /// </summary>
+            [NameInMap("Dpi")]
+            [Validation(Required=false)]
+            public int? Dpi { get; set; }
+
+            /// <summary>
+            /// <para>The resolution height in pixels. It must be an even number. The valid value range varies by form factor: 300 to 3000 for the instance group (VM) form factor, and 480 to 2640 for the matrix (CPS) form factor. This parameter must be specified together with ResolutionWidth. Width and height are validated separately, and there are no restrictions on the aspect ratio or the size relationship between width and height.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1920</para>
+            /// </summary>
+            [NameInMap("ResolutionHeight")]
+            [Validation(Required=false)]
+            public int? ResolutionHeight { get; set; }
+
+            /// <summary>
+            /// <para>The resolution width in pixels. It must be an even number. The valid value range varies by form factor: 300 to 3000 for the instance group (VM) form factor, and 480 to 2640 for the matrix (CPS) form factor. This parameter must be specified together with ResolutionHeight. Specifying only one of them returns InvalidDisplayConfig. Exceeding the valid range for the corresponding form factor also returns InvalidDisplayConfig and no order is generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1080</para>
+            /// </summary>
+            [NameInMap("ResolutionWidth")]
+            [Validation(Required=false)]
+            public int? ResolutionWidth { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +154,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The specification of the resource plan.</para>
+        /// <para>The specification of the package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>advanced</para>
@@ -151,8 +190,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: Months.</description></item>
-        /// <item><description><b>Year</b>: Years.</description></item>
+        /// <item><description><b>Month</b>: Month.</description></item>
+        /// <item><description><b>Year</b>: Year.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +202,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>
@@ -200,6 +239,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Value { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The ID of the target zone. This parameter is optional. If specified, the instance is created in this zone, which must be an available zone for this specification in the region. If not specified, the system automatically selects a zone based on inventory and IP addresses.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
+        /// </summary>
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

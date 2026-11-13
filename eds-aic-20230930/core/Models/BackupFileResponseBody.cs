@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<BackupFileResponseBodyData> Data { get; set; }
         public class BackupFileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Cloud Phone instance ID.</para>
+            /// <para>The cloud phone instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-34pqe4r0kd9kn****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup file.</para>
+            /// <para>The backup file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bf-b0qbg3pbpjkn7****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BackupFileName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-22ex666a653gq****</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the batch task.</para>
+        /// <para>The batch task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-14xwibw7pyrjd****</para>

@@ -107,6 +107,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <para>The image distribution information by region. The key is the region, and the value is the distribution information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;cn-hangzhou&quot;:{&quot;DistributeStatus&quot;:&quot;AVAILABLE&quot;,&quot;Progress&quot;:&quot;100%&quot;}}</para>
             /// </summary>
             [NameInMap("ImageRegionDistributeMap")]
             [Validation(Required=false)]

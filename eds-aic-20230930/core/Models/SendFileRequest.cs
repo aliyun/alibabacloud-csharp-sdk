@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The MD5 value of the input file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cf0bee3e4dcbc0250d9df62c1492****</para>
         /// </summary>
         [NameInMap("FileMd5")]
         [Validation(Required=false)]

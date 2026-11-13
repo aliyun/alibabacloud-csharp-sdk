@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCreditDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The list of agent types. This parameter is used to filter credit change details by agent type.</para>
+        /// <para>The list of agent types used to filter credit change records by agent type.</para>
         /// </summary>
         [NameInMap("AgentTypes")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for this request.</para>
+        /// <para>The maximum number of entries to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If a query does not return all results, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue the query.</para>
+        /// <para>The token for the next query. If the current query does not return all results, the returned NextToken is not empty. You can include the returned NextToken in the next request to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
@@ -91,11 +91,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of task IDs. This parameter is used to filter credit details by task.</para>
+        /// <para>The list of task IDs used to filter credit details by task.</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public List<string> TaskIds { get; set; }
+
+        /// <summary>
+        /// <para>The list of user data cloud disk IDs. Credit details for dual-disk instances are aggregated by disk. This parameter can be used together with InstanceIds.</para>
+        /// </summary>
+        [NameInMap("UserDiskIds")]
+        [Validation(Required=false)]
+        public List<string> UserDiskIds { get; set; }
 
     }
 

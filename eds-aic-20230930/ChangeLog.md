@@ -1,3 +1,15 @@
+2026-11-13 Version: 4.34.3
+- Update API CreateMobileAgentPackage: add request parameters DisplayConfig.
+- Update API CreateMobileAgentPackage: add request parameters ZoneId.
+- Update API DescribeAndroidInstances: add request parameters ZoneId.
+- Update API DescribeAndroidInstances: add response parameters Body.InstanceModel.$.DiskStatus.
+- Update API DescribeAndroidInstances: add response parameters Body.InstanceModel.$.UserDiskId.
+- Update API DescribeCreditDetail: add request parameters UserDiskIds.
+- Update API DescribeCreditDetail: add response parameters Body.Data.Details.$.UserDiskId.
+- Update API DescribeJVSInstance: add response parameters Body.Data.$.DisplayConfig.
+- Update API ModifyJVSInstance: add request parameters DisplayConfig.
+
+
 2026-11-06 Version: 4.34.2
 - Update API BackupFile: add request parameters CustomScripts.
 - Update API DescribeJVSInstance: add response parameters Body.Data.$.InstanceName.

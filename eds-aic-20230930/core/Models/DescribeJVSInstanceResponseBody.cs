@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeJVSInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response object.</para>
+        /// <para>The returned result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -85,7 +85,46 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The expiration time. The time is in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The complete saved display configuration of the node. If the configuration is modified but the node is not restarted, the latest saved value is returned, which does not reflect the current running value. Historical values are returned as recorded. The DPI for the VM (instance group) form is not persisted to the database and is therefore empty.</para>
+            /// </summary>
+            [NameInMap("DisplayConfig")]
+            [Validation(Required=false)]
+            public DescribeJVSInstanceResponseBodyDataDisplayConfig DisplayConfig { get; set; }
+            public class DescribeJVSInstanceResponseBodyDataDisplayConfig : TeaModel {
+                /// <summary>
+                /// <para>The saved display density of the node, in DPI. The display density is not saved for the instance group (VM) form and is always null. For the matrix (CPS) form, this value is null if it was never specified.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>480</para>
+                /// </summary>
+                [NameInMap("Dpi")]
+                [Validation(Required=false)]
+                public int? Dpi { get; set; }
+
+                /// <summary>
+                /// <para>The saved resolution height of the node, in pixels. For historical nodes where the display configuration was never specified, this value is null.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1920</para>
+                /// </summary>
+                [NameInMap("ResolutionHeight")]
+                [Validation(Required=false)]
+                public int? ResolutionHeight { get; set; }
+
+                /// <summary>
+                /// <para>The saved resolution width of the node, in pixels. For historical nodes where the display configuration was never specified, this value is null, indicating no saved value exists and not reflecting the current running value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1080</para>
+                /// </summary>
+                [NameInMap("ResolutionWidth")]
+                [Validation(Required=false)]
+                public int? ResolutionWidth { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The expiration time. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -194,7 +233,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string JvsPackageId { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time is in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The modification time. The time is displayed in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -221,7 +260,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<DescribeJVSInstanceResponseBodyDataUsedCredit> UsedCredit { get; set; }
             public class DescribeJVSInstanceResponseBodyDataUsedCredit : TeaModel {
                 /// <summary>
-                /// <para>The credit amount.</para>
+                /// <para>The number of credits.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -231,7 +270,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public long? Credit { get; set; }
 
                 /// <summary>
-                /// <para>The period of the current credit.</para>
+                /// <para>The dimension to which the current credit belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>day</para>
@@ -245,7 +284,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of data entries returned in the current request.</para>
+        /// <para>The maximum number of results returned in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -255,7 +294,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the starting position for the current query. If this parameter is left empty, the query starts from the beginning.</para>
+        /// <para>The token that specifies the starting position for the current query. An empty value indicates that the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>

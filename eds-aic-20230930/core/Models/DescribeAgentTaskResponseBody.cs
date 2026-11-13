@@ -164,6 +164,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <para>The reason for the task status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>任务已完成。</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]

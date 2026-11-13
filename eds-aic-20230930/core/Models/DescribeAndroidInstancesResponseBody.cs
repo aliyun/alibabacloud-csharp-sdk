@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BandwidthPackageType { get; set; }
 
             /// <summary>
-            /// <para>The user to whom the instance is bound.</para>
+            /// <para>The bound user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The order source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CLOUDPHONE (AI cloud phone)</description></item>
+            /// <item><description>CLOUDPHONE: AI cloud phone</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -226,6 +226,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("Cpu")]
             [Validation(Required=false)]
             public string Cpu { get; set; }
+
+            /// <summary>
+            /// <para>The mount status of the data cloud disk. Valid values: IDLE, ATTACHING, ATTACHED, and DETACHING. If the dual-disk feature is not enabled, this parameter is empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ATTACHED</para>
+            /// </summary>
+            [NameInMap("DiskStatus")]
+            [Validation(Required=false)]
+            public string DiskStatus { get; set; }
 
             /// <summary>
             /// <para>The disk information.</para>
@@ -326,7 +336,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? DownBandwidthLimit { get; set; }
 
             /// <summary>
-            /// <para>The error cause for data backup or restoration failures of the instance.</para>
+            /// <para>The error cause for instance data backup and restoration failures.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FilePathNotFound</para>
@@ -398,13 +408,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The network status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>INIT: Creating.</para>
+            /// <item><description><para>INIT: The network is being created.</para>
             /// </description></item>
-            /// <item><description><para>UPDATING: Updating.</para>
+            /// <item><description><para>UPDATING: The network is being updated.</para>
             /// </description></item>
-            /// <item><description><para>AVAILABLE: Available.</para>
+            /// <item><description><para>AVAILABLE: The network is available.</para>
             /// </description></item>
-            /// <item><description><para>UNAVAILABLE: Unavailable.</para>
+            /// <item><description><para>UNAVAILABLE: The network is unavailable.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -570,7 +580,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string QosRuleId { get; set; }
 
             /// <summary>
-            /// <para>The progress of data backup and restoration for the instance.</para>
+            /// <para>The progress of instance data backup and restoration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -690,6 +700,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("UpBandwidthLimit")]
             [Validation(Required=false)]
             public int? UpBandwidthLimit { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the mounted data cloud disk, which is prefixed with cpd-. This parameter is empty when no data cloud disk is mounted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cpd-xxxxxxxx</para>
+            /// </summary>
+            [NameInMap("UserDiskId")]
+            [Validation(Required=false)]
+            public string UserDiskId { get; set; }
 
             /// <summary>
             /// <para>The vSwitch ID in the virtual private cloud (VPC).</para>

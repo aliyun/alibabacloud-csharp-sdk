@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AppManagePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user assigned to the instance, which is the Wuying convenience user ID.</para>
+        /// <para>The ID of the user assigned to the instance, which is the Wuying convenience account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AuthorizedUserId { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the list of regions where different versions of cloud phones (instance edition and matrix edition) are available for purchase.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the list of regions where different versions of cloud phones (Instance Edition and Matrix Edition) are available for purchase.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the list of regions where cloud phones are available for purchase.</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the starting position for the next query. An empty value indicates that the query starts from the beginning.</para>
+        /// <para>The token that specifies the starting position of the query. If you leave this parameter empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> QosRuleIds { get; set; }
 
         /// <summary>
-        /// <para>The sale mode.</para>
+        /// <para>The sales mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -191,10 +191,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SaleMode { get; set; }
 
         /// <summary>
-        /// <para>The sort key used when querying resources.</para>
-        /// <para>This parameter must be used together with SortType. Valid values: CreationTime and ExpiredTime.</para>
-        /// <para>If you set this parameter to CreationTime, the resources are sorted by creation time. If you set this parameter to ExpiredTime, the resources are sorted by expiration time.</para>
-        /// <para>By default, resources are sorted in descending order of creation time.</para>
+        /// <para>The sort key used when querying resources. This parameter must be used together with SortType. Valid values: CreationTime and ExpiredTime. A value of CreationTime sorts the results by creation time. A value of ExpiredTime sorts the results by expiration time. By default, the results are sorted in descending order of creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -206,8 +203,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>The sort order. Default value: DESC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: ascending order</description></item>
-        /// <item><description>DESC: descending order</description></item>
+        /// <item><description>ASC: Ascending order.</description></item>
+        /// <item><description>DESC: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -255,6 +252,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Value { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The zone ID. This parameter is optional. If you specify this parameter, only instances in the specified zone are returned. If you leave this parameter empty, instances are not filtered by zone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
+        /// </summary>
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 
