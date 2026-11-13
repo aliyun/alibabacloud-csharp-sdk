@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListDataAssetAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The database account name. The system filters accounts by the exact account name.</para>
+        /// <para>The database account name. This parameter filters accounts by exact account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_reader</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         /// <summary>
         /// <para>The column encryption access permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>fullAccess: plaintext access</description></item>
-        /// <item><description>restrictedAccess: restricted access</description></item>
-        /// <item><description>noneAccess: decryption prohibited. This value applies only to ApsaraDB RDS for MySQL instances whose current effective key mode is client_key.</description></item>
+        /// <item><description>fullAccess: Plaintext access.</description></item>
+        /// <item><description>restrictedAccess: Restricted access.</description></item>
+        /// <item><description>noneAccess: Decryption prohibited. The noneAccess value applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The database instance ID. You can obtain this value from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</para>
+        /// <para>The database instance identity. You can obtain this value from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the response description. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud service type IDs. Separate multiple values with commas (,). For the column encryption scenario, the valid values are 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</para>
+        /// <para>The list of cloud service type identifiers. Separate multiple values with commas (,). For the column encryption scenario, the valid values are 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

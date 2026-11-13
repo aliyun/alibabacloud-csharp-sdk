@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListRiskLevelsRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved feature type parameter. This parameter is not used to filter results in the current query. You do not need to specify this parameter for column encryption calls.</para>
+        /// <para>The reserved feature type parameter. This parameter is not used to filter results in the current query. You do not need to pass this parameter when calling the column encryption API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The template must be consistent with the selected sensitivity level and detection model.</para>
+        /// <para>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the ListTemplates response. The template must be consistent with the selected sensitivity level and detection model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

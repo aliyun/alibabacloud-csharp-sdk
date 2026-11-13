@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public GetDataMaskingAccountCountResponseBodyAccountCount AccountCount { get; set; }
         public class GetDataMaskingAccountCountResponseBodyAccountCount : TeaModel {
             /// <summary>
-            /// <para>The number of accounts with plaintext access (fullAccess).</para>
+            /// <para>The number of accounts with fullAccess plaintext access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? FullAccessCount { get; set; }
 
             /// <summary>
-            /// <para>The number of accounts prohibited from decryption (noneAccess).</para>
+            /// <para>The number of accounts with noneAccess decryption prohibition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? NoneAccessCount { get; set; }
 
             /// <summary>
-            /// <para>The number of accounts with restricted access (restrictedAccess).</para>
+            /// <para>The number of accounts with restrictedAccess restricted access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate the API call.</para>
+        /// <para>The request ID, which can be used to locate this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

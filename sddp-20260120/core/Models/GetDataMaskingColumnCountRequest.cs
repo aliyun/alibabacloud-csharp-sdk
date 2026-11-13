@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud product type identifiers. Separate multiple values with commas (,). For column encryption scenarios, the values correspond to 5 (ApsaraDB RDS), 8 (PolarDB), and 27 (PolarDB-X).</para>
+        /// <para>The list of cloud product type identifiers. Separate multiple values with commas (,). For column encryption scenarios, the corresponding values are 5 (RDS), 8 (PolarDB), and 27 (PolarDB-X).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductIds { get; set; }
 
         /// <summary>
-        /// <para>The data classification template ID. You can obtain the ID from the Items[].Id parameter in the ListTemplates response. The ID must be consistent with the selected sensitivity level and detection model.</para>
+        /// <para>The identifier of the data classification template. You can obtain it from Items[].Id in the response of ListTemplates. It must be consistent with the selected sensitivity level and detection model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

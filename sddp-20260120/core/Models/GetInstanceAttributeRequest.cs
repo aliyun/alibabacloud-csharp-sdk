@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class GetInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The database instance ID. You can obtain this value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</para>
+        /// <para>The database instance ID. You can obtain this value from Items[].InstanceId returned by ListDataMaskingInstances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response description. Valid values: zh: Chinese; en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -44,13 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The cloud service type identifier. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>5: RDS.</description></item>
-        /// <item><description>8: POLARDB.</description></item>
-        /// <item><description>27: PolarDBX2.
-        /// If this parameter is specified together with ProductCode, the values must match.</description></item>
-        /// </list>
+        /// <para>The cloud service type identifier. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2. If this parameter is specified together with ProductCode, the values must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

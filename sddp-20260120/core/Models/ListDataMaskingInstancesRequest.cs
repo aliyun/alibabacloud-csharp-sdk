@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The database instance identity. You can obtain the identity from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</para>
+        /// <para>The database instance identity. You can obtain the value from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -60,7 +60,11 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values: zh: Chinese. en: English.</para>
+        /// <para>The language of the response description. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -70,7 +74,12 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The column encryption status filter. Valid values: NotEncrypted: not encrypted. Success: encrypted. Failed: encryption failed.</para>
+        /// <para>The column encryption status filter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NotEncrypted: Unencrypted.</description></item>
+        /// <item><description>Success: Encrypted successfully.</description></item>
+        /// <item><description>Failed: Encryption failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NotEncrypted</para>
@@ -80,7 +89,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string MaskingStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model tag. This parameter is used to filter data that matches the specified model tag.</para>
+        /// <para>The ID of the model tag. This parameter is used to limit the data that matches the corresponding model tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -100,7 +109,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If you specify this parameter and ProductId at the same time, the values must match.</para>
+        /// <para>The code of the cloud service. Column encryption supports RDS, PolarDB, and PolarDB-X 2.0. If this parameter is specified together with ProductId, the values must correspond to each other.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -110,7 +119,13 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If you specify this parameter and ProductCode at the same time, the values must match.</para>
+        /// <para>The ID of the cloud service type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>5: RDS.</description></item>
+        /// <item><description>8: PolarDB.</description></item>
+        /// <item><description>27: PolarDB-X 2.0.
+        /// If this parameter is specified together with ProductCode, the values must correspond to each other.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -120,7 +135,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud service type IDs. Separate multiple values with commas (,). In column encryption scenarios, the valid values are 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</para>
+        /// <para>The list of cloud service type IDs. Separate multiple values with commas (,). In column encryption scenarios, the valid values are 5 (RDS), 8 (PolarDB), and 27 (PolarDB-X 2.0).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -130,7 +145,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sensitivity level. You can obtain the ID from the response of the ListRiskLevels operation.</para>
+        /// <para>The ID of the sensitivity level. You can obtain the value from the response list of the ListRiskLevels operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -140,7 +155,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? RiskLevelId { get; set; }
 
         /// <summary>
-        /// <para>The list of sensitivity level IDs. Separate multiple values with commas (,). Select the values from the response of the ListRiskLevels operation that corresponds to the same TemplateId.</para>
+        /// <para>The list of sensitivity level IDs. Separate multiple values with commas (,). Select the values from the response of the ListRiskLevels operation corresponding to the same TemplateId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2</para>
@@ -160,7 +175,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The ID must be consistent with the selected sensitivity level and identification model.</para>
+        /// <para>The ID of the data classification template. You can obtain the value from the Items[].Id parameter in the response of the ListTemplates operation. The value must be consistent with the selected sensitivity level and identification model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -170,7 +185,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The list of identification model IDs. Separate multiple values with commas (,). Select the values from the response of the ListIdentifyModels operation that corresponds to the same TemplateId.</para>
+        /// <para>The list of identification model IDs. Separate multiple values with commas (,). Select the values from the response of the ListIdentifyModels operation corresponding to the same TemplateId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1001,1002</para>

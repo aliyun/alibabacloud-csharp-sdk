@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number, starting from 1.</para>
+        /// <para>The current page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of records returned per page. Keep other filter conditions consistent when querying the next page.</para>
+        /// <para>The number of entries to return per page. Keep other filter conditions consistent when querying the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

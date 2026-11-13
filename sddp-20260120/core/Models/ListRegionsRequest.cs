@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to filter regions by assets with auditing enabled. Valid values: true: Enabled. false: Disabled. If you do not specify this parameter, this filter condition is not applied.</para>
+        /// <para>Specifies whether to filter regions based on assets for which auditing is enabled. Valid values: true: Auditing is enabled. false: Auditing is not enabled. If you do not specify this parameter, this condition is not used.</para>
         /// </summary>
         [NameInMap("Audited")]
         [Validation(Required=false)]
         public bool? Audited { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter regions by assets with detection enabled. Valid values: true: Enabled. false: Disabled. If you do not specify this parameter, this filter condition is not applied.</para>
+        /// <para>Specifies whether to filter regions based on assets for which detection is enabled. Valid values: true: Detection is enabled. false: Detection is not enabled. If you do not specify this parameter, this condition is not used.</para>
         /// </summary>
         [NameInMap("Identified")]
         [Validation(Required=false)]

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The business error code for the record or operation. This parameter can be empty when no error occurs. You should evaluate this parameter together with ErrorMessage.</para>
+        /// <para>The business error code of the record or operation. This parameter can be empty when no error occurs. You should evaluate this parameter together with ErrorMessage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>data_masking_not_running</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The business error message for the record or operation.</para>
+        /// <para>The business error message of the record or operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The instance is not in the running state</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public bool? KmsEncryptionSupported { get; set; }
 
         /// <summary>
-        /// <para>The end time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The returned value combines the UTC time of the maintenance window with the date of the query day.</para>
+        /// <para>The end time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The UTC time of the maintenance window is combined with the date of the query day and returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788570000000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The returned value combines the UTC time of the maintenance window with the date of the query day.</para>
+        /// <para>The start time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The UTC time of the maintenance window is combined with the date of the query day and returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788566400000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? MaintainStartTime { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// <para>The request ID, which can be used to locate the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

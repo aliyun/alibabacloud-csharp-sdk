@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public List<ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms> Algorithms { get; set; }
         public class ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms : TeaModel {
             /// <summary>
-            /// <para>The business error code for the record or operation. This parameter can be empty when no error occurs. Evaluate this parameter together with ErrorMessage.</para>
+            /// <para>The business error code for the record or operation. This parameter can be empty if no error occurs. Evaluate this parameter together with ErrorMessage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data_masking_not_running</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// <para>The request ID, which can be used to trace the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

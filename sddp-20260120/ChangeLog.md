@@ -1,3 +1,7 @@
+2026-11-13 Version: 1.0.7
+- Update API ListDataMaskingInstances: add response parameters Body.Items.$.Description.
+
+
 2026-11-10 Version: 1.0.6
 - Update API ListColumns: add request parameters OnlyColumnName.
 

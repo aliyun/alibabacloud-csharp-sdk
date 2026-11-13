@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of records returned in the current query.</para>
+        /// <para>The list of records returned for the current query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListColumnsResponseBodyItems> Items { get; set; }
         public class ListColumnsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The creation time of the data object. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The creation time of the data object. The value is a UNIX timestamp in milliseconds that represents the time elapsed since 00:00:00 UTC on January 1, 1970.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788566400000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The instance identity of the cloud instance.</para>
+            /// <para>The cloud instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-2ze1abcdefgh****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The instance identity of the cloud instance to which the column belongs. This is a compatible field.</para>
+            /// <para>The cloud instance ID to which the column belongs. This is a compatible field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-2ze1abcdefgh****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The compatibility field for the column encryption status. To query the column encryption results, call ListDataMaskingColumns.</para>
+            /// <para>The compatibility field for the column encryption status. To query column encryption results, call ListDataMaskingColumns.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the asset is located.</para>
+            /// <para>The identifier of the region where the asset is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page in the current query.</para>
+        /// <para>The number of entries returned per page for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to locate this API call.</para>
+        /// <para>The request ID, which can be used to locate this API invoke.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

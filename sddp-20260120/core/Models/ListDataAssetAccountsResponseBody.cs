@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public List<ListDataAssetAccountsResponseBodyItems> Items { get; set; }
         public class ListDataAssetAccountsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The database account name.</para>
+            /// <para>The database account name. When creating a column encryption rule or modifying account permissions, use this field as is for UserList[].AccountId and combine it with the InstanceId of this record to select the target account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_reader</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             /// <summary>
             /// <para>The column encryption access permissions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>fullAccess: plaintext access</description></item>
-            /// <item><description>restrictedAccess: restricted access</description></item>
-            /// <item><description>noneAccess: decryption prohibited. This value applies only to ApsaraDB RDS for MySQL instances whose current effective key mode is client_key.</description></item>
+            /// <item><description>fullAccess: Plaintext access.</description></item>
+            /// <item><description>restrictedAccess: Restricted access.</description></item>
+            /// <item><description>noneAccess: Decryption prohibited. The noneAccess value applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             /// <summary>
             /// <para>The current effective column encryption key mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>client_key: local key</description></item>
-            /// <item><description>kms_key: KMS key
-            /// This parameter is not returned if no effective configuration exists.</description></item>
+            /// <item><description>client_key: Local key.</description></item>
+            /// <item><description>kms_key: KMS key.
+            /// If no effective configuration exists, this parameter may not be returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the plaintext access permissions. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. This parameter is not returned if no validity period is set.</para>
+            /// <para>The expiration time of the plaintext access permissions. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. If the validity period Settings are not configured, this parameter may not be returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2145953410000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The database account ID. This ID is used as AccountId when configuring permissions.</para>
+            /// <para>The ID of the Data Security Center (DSC) data asset account record. This is not the database account name. When creating a column encryption rule or modifying account permissions, set AccountId to the AccountName of this record instead of this Id.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The database instance ID.</para>
+            /// <para>The database instance identity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-2ze1abcdefgh****</para>
@@ -137,7 +137,12 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The cloud service type ID. Valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</para>
+            /// <para>The cloud service type identifier. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>5: RDS.</description></item>
+            /// <item><description>8: POLARDB.</description></item>
+            /// <item><description>27: PolarDBX2.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -179,7 +184,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to trace the current API call.</para>
+        /// <para>The request ID. You can use this ID to locate the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
@@ -189,7 +194,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the current statistics or query conditions.</para>
+        /// <para>The total number of entries that meet the current statistics or query scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

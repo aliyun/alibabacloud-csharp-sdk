@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListKmsKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The instance identity of the database. You can obtain the value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</para>
+        /// <para>The database instance identity. You can obtain this value from the Items[].InstanceId field in the response of the ListDataMaskingInstances operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values: zh: Chinese. en: English.</para>
+        /// <para>The language of the response message. Valid values: zh: Chinese, en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
+        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If you specify both this parameter and ProductId, the values must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If both this parameter and ProductCode are specified, they must match.</para>
+        /// <para>The ID of the cloud service type. Valid values: 5: RDS, 8: POLARDB, and 27: PolarDBX2. If you specify both this parameter and ProductCode, the values must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

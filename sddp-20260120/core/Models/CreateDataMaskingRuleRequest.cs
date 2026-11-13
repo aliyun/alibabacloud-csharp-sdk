@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EncAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the Key Management Service (KMS) key. You can obtain it from Items[].KeyId in the response of the ListKmsKeys operation. Provide this parameter when you use a KMS key. Do not pass this parameter in local key scenarios.</para>
+        /// <para>The KMS key identifier. You can obtain it from Items[].KeyId in the response of ListKmsKeys. Provide this parameter when you use a KMS key. Do not pass this parameter in local key scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-12345678****</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         /// <summary>
         /// <para>The key mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>client_key: local key</description></item>
-        /// <item><description>kms_key: KMS key
-        /// When you use kms_key, you must specify EncryptionKeyId.</description></item>
+        /// <item><description>client_key: local key.</description></item>
+        /// <item><description>kms_key: KMS key.
+        /// If you use kms_key, you must specify EncryptionKeyId.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EncryptionKeyMode { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine. The value must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</para>
+        /// <para>The database engine type. The value must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the plaintext permission. The value is a UNIX timestamp in milliseconds since 00:00:00 UTC on January 1, 1970. Specify this parameter only when ExpireTimeOperation is set to SET. The value must be later than the current time and no greater than 2145953410000. The server saves the value with second precision. Do not specify this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</para>
+        /// <para>The expiration time of the plaintext access permissions. The value is a UNIX timestamp in milliseconds since 00:00:00 UTC on January 1, 1970. Specify this parameter only when ExpireTimeOperation is set to SET. The value must be later than the current time and no greater than 2145953410000. The server saves the value with second precision. Do not pass this parameter when ExpireTimeOperation is set to PRESERVE or CLEAR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2145953410000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ExpireTimeOperation { get; set; }
 
         /// <summary>
-        /// <para>The instance identity. You can obtain it from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</para>
+        /// <para>The database instance identity. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         /// <summary>
         /// <para>The language of the response description. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also passed, the two must correspond to each other.</para>
+        /// <para>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you pass ProductId at the same time, the two values must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -115,12 +115,12 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the cloud service type. Valid values:</para>
+        /// <para>The cloud service type identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>5: RDS</description></item>
-        /// <item><description>8: POLARDB</description></item>
-        /// <item><description>27: PolarDBX2
-        /// When specified together with ProductCode, the values must correspond to each other.</description></item>
+        /// <item><description>5: RDS.</description></item>
+        /// <item><description>8: POLARDB.</description></item>
+        /// <item><description>27: PolarDBX2.
+        /// If you specify this parameter together with ProductCode, the values must match.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public List<CreateDataMaskingRuleRequestSubRuleList> SubRuleList { get; set; }
         public class CreateDataMaskingRuleRequestSubRuleList : TeaModel {
             /// <summary>
-            /// <para>The list of target column names. Multiple column names are separated by commas (,).</para>
+            /// <para>The list of target column names. Separate multiple column names with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>phone,email</para>
@@ -180,17 +180,17 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The list of database accounts to which the fullAccess plaintext permission is granted. The accounts must belong to the target instance.</para>
+        /// <para>The list of database accounts to which the fullAccess plaintext access permissions are granted. The accounts must belong to the target instance.</para>
         /// </summary>
         [NameInMap("UserList")]
         [Validation(Required=false)]
         public List<CreateDataMaskingRuleRequestUserList> UserList { get; set; }
         public class CreateDataMaskingRuleRequestUserList : TeaModel {
             /// <summary>
-            /// <para>The identifier of the database account. You can obtain it from Items[].Id in the response of the ListDataAssetAccounts operation. Pass the value as a string.</para>
+            /// <para>The name of the database account. Obtain the value from Items[].AccountName in the target instance record returned by ListDataAssetAccounts and pass it as a string as is. Do not pass Items[].Id. When you create a rule, the account belongs to the instance specified by the top-level InstanceId.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1001</para>
+            /// <para>app_reader</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]

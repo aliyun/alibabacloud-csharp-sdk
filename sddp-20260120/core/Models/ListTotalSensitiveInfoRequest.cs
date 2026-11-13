@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         /// <para>The statistics scenario. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>41: Overview.</description></item>
-        /// <item><description>42: Query data catalog statistics by product.</description></item>
-        /// <item><description>43: Query region and template summaries by product.</description></item>
+        /// <item><description>42: Data catalog statistics by product.</description></item>
+        /// <item><description>43: Region and template summaries by product.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
+        /// <para>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The codes of multiple cloud services, separated by commas (,). This parameter is used when CountType is set to 43 and ProductCode is not specified. The results are aggregated by region and template.</para>
+        /// <para>The codes of multiple cloud services, separated by commas. This parameter is used when CountType is set to 43 and ProductCode is not specified. The results are aggregated by region and template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS,POLARDB,PolarDBX2</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCodeList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The template must be consistent with the selected sensitivity level and detection model.</para>
+        /// <para>The ID of the data classification and grading template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The template must be consistent with the selected sensitivity level and detection model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

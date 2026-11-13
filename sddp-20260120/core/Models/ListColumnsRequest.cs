@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The instance identity of the cloud database. Set this parameter to the InstanceId in the instance list.</para>
+        /// <para>The cloud database instance ID. Set this parameter to the InstanceId in the instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both parameters are specified, DataAssetSourceId is used.</para>
+        /// <para>The compatible parameter for the instance ID. DataAssetSourceId takes precedence. If both parameters are specified, DataAssetSourceId is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>

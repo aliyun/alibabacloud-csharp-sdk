@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class CheckDataMaskingInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The database instance identity. You can obtain the value from Items[].InstanceId in the response of ListDataMaskingInstances.</para>
+        /// <para>The database instance identity. You can obtain this value from Items[].InstanceId in the response of ListDataMaskingInstances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         /// <summary>
         /// <para>The language of the response description. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
+        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -44,11 +44,11 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The cloud service type identifier. Valid values:</para>
+        /// <para>The cloud product type identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>5: RDS</description></item>
-        /// <item><description>8: POLARDB</description></item>
-        /// <item><description>27: PolarDBX2
+        /// <item><description>5: RDS.</description></item>
+        /// <item><description>8: POLARDB.</description></item>
+        /// <item><description>27: PolarDBX2.
         /// If this parameter is specified together with ProductCode, the values must match.</description></item>
         /// </list>
         /// 

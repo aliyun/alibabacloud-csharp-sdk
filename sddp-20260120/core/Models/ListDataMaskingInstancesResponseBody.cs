@@ -20,12 +20,22 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of records returned by the current query.</para>
+        /// <para>The list of records returned in this query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListDataMaskingInstancesResponseBodyItems> Items { get; set; }
         public class ListDataMaskingInstancesResponseBodyItems : TeaModel {
+            /// <summary>
+            /// <para>The description of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Description</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             /// <summary>
             /// <para>The current column encryption algorithm of the instance.</para>
             /// 
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2.</para>
+            /// <para>The ID of the cloud service type. Valid values: 5 (RDS), 8 (PolarDB), and 27 (PolarDB-X 2.0).</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -119,7 +129,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page in the current query.</para>
+        /// <para>The number of entries returned per page in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -129,7 +139,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate the current API call.</para>
+        /// <para>The request ID. You can use the ID to locate this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

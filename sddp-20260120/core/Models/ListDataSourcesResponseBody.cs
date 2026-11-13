@@ -27,13 +27,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public List<ListDataSourcesResponseBodyItems> Items { get; set; }
         public class ListDataSourcesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The connection status of the data source. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>UnConnected: Not connected.</description></item>
-            /// <item><description>Processing: Connecting.</description></item>
-            /// <item><description>Success: Connected.</description></item>
-            /// <item><description>Failed: Connection failed.</description></item>
-            /// </list>
+            /// <para>The connection status of the data source. Valid values: UnConnected: not connected. Processing: connecting. Success: connected. Failed: connection failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -103,7 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The business error code of the record or operation. This field can be empty if no error occurs. Evaluate this field together with ErrorMessage.</para>
+            /// <para>The business error code for the record or operation. This parameter may be empty if no error occurs. Evaluate this parameter together with ErrorMessage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data_masking_not_running</para>
@@ -113,7 +107,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The business error message of the record or operation.</para>
+            /// <para>The business error message for the record or operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The instance is not in the running state</para>
@@ -123,7 +117,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the record.</para>
+            /// <para>The ID of the record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -133,17 +127,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The status of the data source detection switch. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Enable: Submitted for enabling.</description></item>
-            /// <item><description>Enabling: Enabling.</description></item>
-            /// <item><description>Enabled: Enabled.</description></item>
-            /// <item><description>EnableFailed: Enabling failed.</description></item>
-            /// <item><description>Disable: Submitted for disabling.</description></item>
-            /// <item><description>Disabling: Disabling.</description></item>
-            /// <item><description>Disabled: Disabled.</description></item>
-            /// <item><description>DisableFailed: Disabling failed.</description></item>
-            /// </list>
+            /// <para>The status of the data source detection switch. Valid values: Enable: submitted for enabling. Enabling: enabling. Enabled: enabled. EnableFailed: enabling failed. Disable: submitted for disabling. Disabling: disabling. Disabled: disabled. DisableFailed: disabling failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>
@@ -173,7 +157,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? MemberAccount { get; set; }
 
             /// <summary>
-            /// <para>The port for the database connection.</para>
+            /// <para>The database connection port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3306</para>
@@ -193,7 +177,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the cloud service type. 5: ApsaraDB RDS; 8: PolarDB; 27: PolarDB-X 2.0.</para>
+            /// <para>The identifier of the cloud service type. 5: ApsaraDB RDS. 8: PolarDB. 27: PolarDB-X 2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -203,7 +187,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? ProductId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the asset resides.</para>
+            /// <para>The ID of the region where the asset is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
@@ -213,7 +197,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the region where the asset resides.</para>
+            /// <para>The name of the region where the asset is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China (Zhangjiakou)</para>
@@ -223,7 +207,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RegionName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the asset belongs.</para>
+            /// <para>The identifier of the resource group to which the asset belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmexample****</para>
@@ -265,7 +249,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A compatible pagination cursor field. The ListDataSources operation uses page number-based pagination and does not rely on this field to determine whether more pages exist.</para>
+        /// <para>A compatible pagination cursor field. The ListDataSources operation uses page number-based pagination and does not rely on this field to determine whether a next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-example</para>
@@ -275,7 +259,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of records returned on each page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -285,7 +269,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request identity, which is active when you invoke this API call.</para>
+        /// <para>The ID of the request. You can use the ID to locate the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>

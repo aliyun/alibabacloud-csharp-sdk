@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListDataSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The connection status of the data source. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>UnConnected: Not connected.</description></item>
-        /// <item><description>Processing: Connecting.</description></item>
-        /// <item><description>Success: Connected.</description></item>
-        /// <item><description>Failed: Connection failed.</description></item>
-        /// </list>
+        /// <para>The connection status of the data source. Valid values: UnConnected: not connected. Processing: connecting. Success: connected. Failed: connection failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -83,17 +77,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The status of the data source detection switch. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Enable: Submitted for enabling.</description></item>
-        /// <item><description>Enabling: Enabling.</description></item>
-        /// <item><description>Enabled: Enabled.</description></item>
-        /// <item><description>EnableFailed: Enabling failed.</description></item>
-        /// <item><description>Disable: Submitted for disabling.</description></item>
-        /// <item><description>Disabling: Disabling.</description></item>
-        /// <item><description>Disabled: Disabled.</description></item>
-        /// <item><description>DisableFailed: Disabling failed.</description></item>
-        /// </list>
+        /// <para>The status of the data source detection switch. Valid values: Enable: submitted for enabling. Enabling: enabling. Enabled: enabled. EnableFailed: enabling failed. Disable: submitted for disabling. Disabling: disabling. Disabled: disabled. DisableFailed: disabling failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>
@@ -113,11 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response description. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -157,7 +137,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The port for the database connection.</para>
+        /// <para>The database connection port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -177,7 +157,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the cloud service type. 5: ApsaraDB RDS; 8: PolarDB; 27: PolarDB-X 2.0. If this parameter is specified together with ProductCode, the values must match.</para>
+        /// <para>The identifier of the cloud service type. 5: ApsaraDB RDS. 8: PolarDB. 27: PolarDB-X 2.0. If this parameter is specified together with ProductCode, the values must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

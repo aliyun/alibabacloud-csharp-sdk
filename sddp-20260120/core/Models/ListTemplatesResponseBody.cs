@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of records returned for the current query.</para>
+        /// <para>The list of records returned for this query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the template. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</para>
+            /// <para>The time when the template was created. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788566400000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the template. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</para>
+            /// <para>The time when the template was last modified. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788566400000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the classification and grading template.</para>
+            /// <para>The ID of the classification and grading template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the template. Valid values: 0: Disabled. 1: Enabled primary template. 2: Active template. 3: General detection model.</para>
+            /// <para>The template status. Valid values: 0: Disabled. 1: Enabled primary template. 2: Active template. 3: General detection model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public int? SupportEdit { get; set; }
 
             /// <summary>
-            /// <para>The category of the template. Valid values: 1: Alibaba Cloud template. 2: Finance template. 3: Energy template. 4: Personal information security template. 5: Travel template. 65: General template. 66: Custom template. 67: Template from other cloud services.</para>
+            /// <para>The template category. Valid values: 1: Alibaba Cloud template. 2: Finance template. 3: Energy template. 4: Personal information security template. 5: Travel template. 65: General template. 66: Custom template. 67: Template from other cloud services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>65</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The number of records per page for the current query.</para>
+        /// <para>The number of entries returned per page for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to trace the current API call.</para>
+        /// <para>The request ID, which can be used to locate this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the current query conditions.</para>
+        /// <para>The total number of entries that meet the current statistics or query scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

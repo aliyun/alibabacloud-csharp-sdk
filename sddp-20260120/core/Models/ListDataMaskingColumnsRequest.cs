@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The instance identity of the database. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</para>
+        /// <para>The database instance identity. You can obtain it from Items[].InstanceId in the response of ListDataMaskingInstances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -60,7 +60,11 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values: zh: Chinese; en: English.</para>
+        /// <para>The language of the response description. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -70,7 +74,12 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The filter for the column encryption status. Valid values: NotEncrypted: not encrypted; Success: encrypted successfully; Failed: encryption failed.</para>
+        /// <para>The filter for the column encryption status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NotEncrypted: Not encrypted.</description></item>
+        /// <item><description>Success: Encryption succeeded.</description></item>
+        /// <item><description>Failed: Encryption failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NotEncrypted</para>
@@ -90,7 +99,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two must correspond to each other.</para>
+        /// <para>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -100,7 +109,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud service type. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2. It must correspond to ProductCode if both are specified.</para>
+        /// <para>The ID of the cloud service type. Valid values: 5 for RDS, 8 for POLARDB, and 27 for PolarDBX2. If specified together with ProductCode, they must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -110,7 +119,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>The compatible parameter for the list of product IDs. For the current column query, use a single ProductId or ProductCode. Call the operation separately to query multiple products.</para>
+        /// <para>The compatible parameter for a list of product IDs. For the current column query, use a single ProductId or ProductCode. Call the operation separately to query multiple products.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -140,7 +149,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RiskLevelIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the table. In PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</para>
+        /// <para>The name of the table. For PostgreSQL or Oracle scenarios, preserve the schema.table format obtained from the table list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customer</para>

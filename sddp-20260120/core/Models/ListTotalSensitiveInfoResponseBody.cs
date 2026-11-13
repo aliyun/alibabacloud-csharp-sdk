@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public List<ListTotalSensitiveInfoResponseBodyDataCountDOListDataCountDOList> DataCountDOList { get; set; }
             public class ListTotalSensitiveInfoResponseBodyDataCountDOListDataCountDOList : TeaModel {
                 /// <summary>
-                /// <para>The statistics date, represented by a UNIX timestamp in nanoseconds. The time corresponds to 00:00:00 of the day in the server time zone.</para>
+                /// <para>The statistics date, represented as a UNIX timestamp in nanoseconds. The time corresponds to midnight of the current day in the server time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1788537600000000000</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public long? Date { get; set; }
 
                 /// <summary>
-                /// <para>The number of sensitive data objects within the current statistics scope.</para>
+                /// <para>The number of sensitive data items within the current statistics scope.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public long? SensitiveCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of data objects that meet the current statistics or query scope.</para>
+                /// <para>The total number of items that meet the current statistics or query scope.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             }
 
             /// <summary>
-            /// <para>The statistics date, represented by a UNIX timestamp in nanoseconds. The time corresponds to 00:00:00 of the day in the server time zone.</para>
+            /// <para>The statistics date, represented as a UNIX timestamp in nanoseconds. The time corresponds to midnight of the current day in the server time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788537600000000000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of quantities aggregated by detection rule.</para>
+            /// <para>The list of aggregated counts by detection rule.</para>
             /// </summary>
             [NameInMap("RuleInfoList")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public long? RuleCount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the hit detection rule.</para>
+                /// <para>The ID of the matched detection rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1001</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public long? RuleId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the hit detection rule.</para>
+                /// <para>The name of the matched detection rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Phone number</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             }
 
             /// <summary>
-            /// <para>The number of data objects at the S0 sensitivity level.</para>
+            /// <para>The number of S0-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S0Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S10 sensitivity level.</para>
+            /// <para>The number of S10-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S10Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S1 sensitivity level.</para>
+            /// <para>The number of S1-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S1Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S2 sensitivity level.</para>
+            /// <para>The number of S2-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S2Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S3 sensitivity level.</para>
+            /// <para>The number of S3-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S3Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S4 sensitivity level.</para>
+            /// <para>The number of S4-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S4Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S5 sensitivity level.</para>
+            /// <para>The number of S5-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S5Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S6 sensitivity level.</para>
+            /// <para>The number of S6-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S6Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S7 sensitivity level.</para>
+            /// <para>The number of S7-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S7Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S8 sensitivity level.</para>
+            /// <para>The number of S8-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S8Count { get; set; }
 
             /// <summary>
-            /// <para>The number of data objects at the S9 sensitivity level.</para>
+            /// <para>The number of S9-level data objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? S9Count { get; set; }
 
             /// <summary>
-            /// <para>The number of sensitive data objects within the current statistics scope.</para>
+            /// <para>The number of sensitive data items within the current statistics scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public int? StructFlag { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data classification template.</para>
+            /// <para>The ID of the data classification and grading template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -259,17 +259,17 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data classification template.</para>
+            /// <para>The name of the data classification and grading template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>General data classification template</para>
+            /// <para>General classification and grading template</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The total number of data objects that meet the current statistics or query scope.</para>
+            /// <para>The total number of items that meet the current statistics or query scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The request identity, which is active for locating the current API call when you invoke the API.</para>
+        /// <para>The request ID, which is active and can be used to locate the API you invoke.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of quantities aggregated by detection rule.</para>
+        /// <para>The list of aggregated counts by detection rule.</para>
         /// </summary>
         [NameInMap("RuleInfoList")]
         [Validation(Required=false)]
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? RuleCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the hit detection rule.</para>
+            /// <para>The ID of the matched detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public int? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the hit detection rule.</para>
+            /// <para>The name of the matched detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Phone number</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
-        /// <para>The number of data objects at the S0 sensitivity level.</para>
+        /// <para>The number of S0-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S0Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S10 sensitivity level.</para>
+        /// <para>The number of S10-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S10Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S1 sensitivity level.</para>
+        /// <para>The number of S1-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S1Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S2 sensitivity level.</para>
+        /// <para>The number of S2-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S2Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S3 sensitivity level.</para>
+        /// <para>The number of S3-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S3Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S4 sensitivity level.</para>
+        /// <para>The number of S4-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S4Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S5 sensitivity level.</para>
+        /// <para>The number of S5-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S5Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S6 sensitivity level.</para>
+        /// <para>The number of S6-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -430,7 +430,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S6Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S7 sensitivity level.</para>
+        /// <para>The number of S7-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S7Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S8 sensitivity level.</para>
+        /// <para>The number of S8-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S8Count { get; set; }
 
         /// <summary>
-        /// <para>The number of data objects at the S9 sensitivity level.</para>
+        /// <para>The number of S9-level data objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -460,7 +460,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? S9Count { get; set; }
 
         /// <summary>
-        /// <para>The number of sensitive data objects within the current statistics scope.</para>
+        /// <para>The number of sensitive data items within the current statistics scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -500,7 +500,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? SensitiveUnStructSize { get; set; }
 
         /// <summary>
-        /// <para>The number of child sensitive data objects, which is used for sensitive column statistics in structured data scenarios.</para>
+        /// <para>The number of child sensitive data objects. This parameter is used for sensitive column statistics in structured data scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -510,7 +510,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? SubSensitiveCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of child data objects, which is used for column-level statistics in structured data scenarios.</para>
+        /// <para>The total number of child data objects. This parameter is used for column-level statistics in structured data scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public long? SubTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of data objects that meet the current statistics or query scope.</para>
+        /// <para>The total number of items that meet the current statistics or query scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class SyncDataAssetsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh: Chinese. en: English.</para>
+        /// <para>The language of the response description. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

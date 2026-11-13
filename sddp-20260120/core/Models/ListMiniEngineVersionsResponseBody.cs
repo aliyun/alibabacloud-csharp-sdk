@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public List<ListMiniEngineVersionsResponseBodyKernelVersions> KernelVersions { get; set; }
         public class ListMiniEngineVersionsResponseBodyKernelVersions : TeaModel {
             /// <summary>
-            /// <para>The release type of the kernel version, which follows the return values of the corresponding database service. For example, for RDS, LTS indicates the long-term support version and BETA indicates the preview version. For PolarDB, the value may be Stable, Old, HighRisk, or Beta.</para>
+            /// <para>The release type of the kernel version, which follows the return values of the corresponding database service. For example, for RDS, LTS indicates the long-term support version and BETA indicates the preview version. PolarDB may return Stable, Old, HighRisk, or Beta.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LTS</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string KernelReleaseType { get; set; }
 
             /// <summary>
-            /// <para>The available kernel version number.</para>
+            /// <para>The available kernel version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds_20220731</para>

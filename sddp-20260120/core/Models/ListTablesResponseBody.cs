@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of records returned by the query.</para>
+        /// <para>The list of records returned for the current query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The time when the data object was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The creation time of the data object. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788566400000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string DataAssetSourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>business_db</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the database table.</para>
+            /// <para>The cloud account ID of the database table owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789012****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service.</para>
+            /// <para>The cloud service code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sensitivity level.</para>
+            /// <para>The sensitivity level ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the sensitivity level.</para>
+                /// <para>The sensitivity level ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public bool? Sensitive { get; set; }
 
             /// <summary>
-            /// <para>The number of sensitive data entries within the current statistical scope.</para>
+            /// <para>The number of sensitive data entries within the current statistics scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string TenantName { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries that meet the current statistical or query scope.</para>
+            /// <para>The total number of entries that meet the current statistics or query scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to locate the API call.</para>
+        /// <para>The request ID. You can use this ID to locate the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the current statistical or query scope.</para>
+        /// <para>The total number of entries that meet the current statistics or query scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether more pages exist. A value of true indicates that more data exists. A value of false indicates that no more data exists.</para>
+        /// <para>Indicates whether subsequent pages exist. The string true indicates that more data is available, and false indicates that no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
