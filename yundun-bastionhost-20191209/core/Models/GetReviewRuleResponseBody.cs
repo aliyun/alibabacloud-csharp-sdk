@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The auditor information associated with the audit policy.</para>
+            /// <para>The information about the auditors associated with the audit policy.</para>
             /// </summary>
             [NameInMap("Principals")]
             [Validation(Required=false)]
             public List<GetReviewRuleResponseBodyReviewRulePrincipals> Principals { get; set; }
             public class GetReviewRuleResponseBodyReviewRulePrincipals : TeaModel {
                 /// <summary>
-                /// <para>If the value of PrincipalType is RamUser, the returned value is the RAM user ID of the associated auditor. If the value of PrincipalType is RamRole, the returned value is the ARN of the RAM role of the associated auditor.</para>
+                /// <para>If the PrincipalType parameter is set to RamUser, this parameter returns the ID of the RAM user that acts as the auditor. If the PrincipalType parameter is set to RamRole, this parameter returns the ARN of the RAM role that acts as the auditor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2061****5219</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string PrincipalId { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the RAM user or RAM role of the associated auditor.</para>
+                /// <para>The display name of the RAM user or RAM role that acts as the auditor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string PrincipalName { get; set; }
 
                 /// <summary>
-                /// <para>The auditor type. Valid values:</para>
+                /// <para>The type of the auditor. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>RamUser</b>: Resource Access Management (RAM) user.</para>
                 /// </description></item>
@@ -82,21 +82,24 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// <para>The array of project IDs specified as auditable in the audit policy. This parameter is valid only when the value of ScopeType is 2.</para>
+            /// <para>The array of project IDs that can be audited based on the audit policy. This parameter is valid only when the value of ScopeType is 2.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[2,3]</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]
             public List<long?> ProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The auditable project information.</para>
+            /// <para>The information about the projects that can be audited.</para>
             /// </summary>
             [NameInMap("Projects")]
             [Validation(Required=false)]
             public List<GetReviewRuleResponseBodyReviewRuleProjects> Projects { get; set; }
             public class GetReviewRuleResponseBodyReviewRuleProjects : TeaModel {
                 /// <summary>
-                /// <para>The project description.</para>
+                /// <para>The description of the project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>comment</para>
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The project name.</para>
+                /// <para>The name of the project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>project1</para>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The project ID.</para>
+                /// <para>The ID of the project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// <para>The audit policy ID.</para>
+            /// <para>The ID of the audit policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ReviewRuleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the auditable asset scope rule specified in the audit policy. Valid values:</para>
+            /// <para>The type of the asset scope rule specified in the audit policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>1</b>: All projects.</para>
             /// </description></item>

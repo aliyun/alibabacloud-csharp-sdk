@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AttachHostAccountsToUserRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the hosts and host accounts to be authorized for the user. You can specify up to 10 host IDs, and up to 9 host account IDs for each host. If you do not specify host account IDs, only the hosts are authorized for the user. For more information about the structure of this parameter, see the Hosts parameter structure description in the request parameters section.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query host account IDs.</para>
-        /// </remarks>
+        /// <para>The IDs of the hosts and host accounts to which you want to grant the user access. You can specify up to 10 host IDs, and up to 9 host account IDs for each host. If you do not specify host account IDs, only the hosts are authorized for the user. For more information about the structure of this parameter, see the Hosts parameter structure description in the request parameters section. You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query host IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query host account IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,9 +21,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Hosts { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Bastionhost instance to which the user to be granted authorization for hosts and host accounts belongs.</para>
+        /// <para>The ID of the Bastionhost instance to which the user to be authorized for hosts and host accounts belongs.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +35,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Bastionhost instance where the user to be authorized for hosts and host accounts resides.</para>
+        /// <para>Specifies the region ID of the Bastionhost instance where the user to be authorized to access hosts and host accounts is located.</para>
         /// <remarks>
         /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
@@ -51,10 +48,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user to whom you want to authorize hosts and host accounts.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the value of this parameter.</para>
-        /// </remarks>
+        /// <para>The ID of the user to whom you want to grant access to hosts and host accounts. You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

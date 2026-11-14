@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyInstanceADAuthServerRequest : TeaModel {
         /// <summary>
-        /// <para>The server account.</para>
+        /// <para>The account of the server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Bastionhost instance.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the AD authentication server is the default server. A value of true indicates that the server is the default AD authentication server. A value of false indicates that the server is not the default AD authentication server.</para>
+        /// <para>Specifies whether the AD authentication server is the default server. Valid values: true and false. A value of true indicates that the server is the default AD authentication server, and a value of false indicates that the server is not the default AD authentication server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string IsSSL { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to synchronize the email address. A value of true indicates that the email address is synchronized. A value of false indicates that the email address is not synchronized.</para>
+        /// <para>Specifies whether to synchronize the email address. Valid values: true and false. A value of true indicates that the email address is synchronized, and a value of false indicates that the email address is not synchronized.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string IsSyncEmailAttr { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to synchronize the mobile phone number. A value of true indicates that the mobile phone number is synchronized. A value of false indicates that the mobile phone number is not synchronized.</para>
+        /// <para>Specifies whether to synchronize the mobile phone number. Valid values: true and false. A value of true indicates that the mobile phone number is synchronized, and a value of false indicates that the mobile phone number is not synchronized.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string IsSyncMobileAttr { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to synchronize the display name. A value of true indicates that the display name is synchronized. A value of false indicates that the display name is not synchronized.</para>
+        /// <para>Specifies whether to synchronize the display name. Valid values: true and false. A value of true indicates that the display name is synchronized, and a value of false indicates that the display name is not synchronized.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string IsSyncNameAttr { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to synchronize the organization to which the user belongs as a user group. A value of true indicates that the organization is synchronized as a user group. A value of false indicates that the organization is not synchronized as a user group.</para>
+        /// <para>Specifies whether to synchronize the organization to which the user belongs as a user group. Valid values: true and false. A value of true indicates that the organization is synchronized as a user group, and a value of false indicates that the organization is not synchronized as a user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <para>The password of the server account.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Demo****123!</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string StandbyServer { get; set; }
 
         /// <summary>
-        /// <para>The interval at which user snapshots are automatically synchronized, in hours. Valid values: 0, and 4 to 168. A value of 0 indicates that automatic synchronization is disabled.</para>
+        /// <para>The interval at which user snapshots are automatically synchronized. Unit: hours. Valid values: 0, and 4 to 168. A value of 0 indicates that automatic synchronization is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -235,6 +235,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string SyncInterval { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>39</para>
+        /// </summary>
         [NameInMap("UserSourceId")]
         [Validation(Required=false)]
         public string UserSourceId { get; set; }

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<ListOperationTicketsResponseBodyOperationTickets> OperationTickets { get; set; }
         public class ListOperationTicketsResponseBodyOperationTickets : TeaModel {
             /// <summary>
-            /// <para>The ID of the O&amp;M applicant.</para>
+            /// <para>The ID of the user who submitted the O&amp;M ticket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ApplyUserId { get; set; }
 
             /// <summary>
-            /// <para>The username of the O&amp;M applicant.</para>
+            /// <para>The username of the user who submitted the O&amp;M ticket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ApplyUsername { get; set; }
 
             /// <summary>
-            /// <para>The remarks entered by the O&amp;M engineer when applying for O&amp;M.</para>
+            /// <para>The approval status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Pending approval.</description></item>
+            /// <item><description>2: Processed.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("ApprovalStatus")]
+            [Validation(Required=false)]
+            public int? ApprovalStatus { get; set; }
+
+            /// <summary>
+            /// <para>The remarks entered by the O&amp;M engineer when submitting the O&amp;M ticket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Comment</para>
@@ -47,7 +61,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ApproveComment { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset account for which O&amp;M is requested.</para>
+            /// <para>The ID of the asset account requested for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +71,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetAccountId { get; set; }
 
             /// <summary>
-            /// <para>The logon name of the asset account for which O&amp;M is requested.</para>
+            /// <para>The logon name of the asset account requested for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -67,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetAccountName { get; set; }
 
             /// <summary>
-            /// <para>The address of the asset for which O&amp;M is requested.</para>
+            /// <para>The address of the asset requested for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.167.XX.XX</para>
@@ -77,7 +91,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetAddress { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset for which O&amp;M is requested.</para>
+            /// <para>The ID of the asset requested for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -87,7 +101,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset for which O&amp;M is requested.</para>
+            /// <para>The name of the asset requested for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>poros-test</para>
@@ -97,7 +111,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network domain to which the asset for which O&amp;M is requested belongs.</para>
+            /// <para>The ID of the network domain to which the asset requested for O&amp;M belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -107,7 +121,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetNetworkDomainId { get; set; }
 
             /// <summary>
-            /// <para>The operating system type of the asset for which O&amp;M is requested.</para>
+            /// <para>The operating system type of the asset requested for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux</para>
@@ -117,12 +131,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetOs { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset source to which the asset for which O&amp;M is requested belongs. Valid values:</para>
+            /// <para>The name of the asset source to which the asset requested for O&amp;M belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Local</b>: local host</description></item>
-            /// <item><description><b>Ecs</b>: ECS instance</description></item>
-            /// <item><description><b>Rds</b>: ApsaraDB RDS instance</description></item>
-            /// <item><description>name of a third-party asset source</description></item>
+            /// <item><description><b>Local</b>: Local host.</description></item>
+            /// <item><description><b>Ecs</b>: ECS instance.</description></item>
+            /// <item><description><b>Rds</b>: ApsaraDB RDS instance.</description></item>
+            /// <item><description>The name of a third-party asset source.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +147,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetSource { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset source to which the asset for which O&amp;M is requested belongs.</para>
+            /// <para>The ID of the asset source to which the asset requested for O&amp;M belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -143,7 +157,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetSourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was submitted. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The time when the O&amp;M ticket was submitted. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669965908</para>
@@ -155,7 +169,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The limit on the number of logons requested by the O&amp;M engineer. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No limit is imposed on the number of logons. The O&amp;M engineer can log on an unlimited number of times within the validity period.</description></item>
+            /// <item><description><b>0</b>: No limit on the number of logons. The O&amp;M engineer can log on an unlimited number of times within the validity period.</description></item>
             /// <item><description><b>1</b>: The O&amp;M engineer is allowed to log on only once within the validity period.</description></item>
             /// </list>
             /// 
@@ -167,9 +181,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public int? EffectCount { get; set; }
 
             /// <summary>
-            /// <para>The end time of the approved O&amp;M period specified by the O&amp;M engineer. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The end time of the O&amp;M session specified by the O&amp;M engineer. The value is a UNIX timestamp in seconds.</para>
             /// <remarks>
-            /// <para>A value of 0 indicates that the O&amp;M engineer did not specify a time when submitting the application.</para>
+            /// <para>A value of 0 indicates that the O&amp;M engineer did not specify an end time when submitting the ticket.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -180,9 +194,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public int? EffectEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the approved O&amp;M period specified by the O&amp;M engineer. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The start time of the O&amp;M session specified by the O&amp;M engineer. The value is a UNIX timestamp in seconds.</para>
             /// <remarks>
-            /// <para>A value of 0 indicates that the O&amp;M engineer did not specify a time when submitting the application.</para>
+            /// <para>A value of 0 indicates that the O&amp;M engineer did not specify a start time when submitting the ticket.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -203,7 +217,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string OperationTicketId { get; set; }
 
             /// <summary>
-            /// <para>The name of the protocol for the O&amp;M request.</para>
+            /// <para>The name of the protocol requested for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SSH</para>
@@ -215,7 +229,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The approval status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: pending approval</description></item>
+            /// <item><description>Normal: Pending approval.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

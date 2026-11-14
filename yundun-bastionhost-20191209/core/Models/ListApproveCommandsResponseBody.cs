@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<ListApproveCommandsResponseBodyApproveCommands> ApproveCommands { get; set; }
         public class ListApproveCommandsResponseBodyApproveCommands : TeaModel {
             /// <summary>
+            /// <para>The approval status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Pending.</description></item>
+            /// <item><description>2: Processed.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("ApprovalStatus")]
+            [Validation(Required=false)]
+            public int? ApprovalStatus { get; set; }
+
+            /// <summary>
             /// <para>The ID of the command pending approval.</para>
             /// 
             /// <b>Example:</b>
@@ -27,7 +41,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ApproveCommandId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset account.</para>
+            /// <para>The name of the asset account used for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -37,7 +51,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetAccountName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the O&amp;M asset.</para>
+            /// <para>The IP address of the asset for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.167.XX.XX</para>
@@ -47,7 +61,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string AssetIp { get; set; }
 
             /// <summary>
-            /// <para>The name of the O&amp;M asset.</para>
+            /// <para>The name of the asset for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>poros-test</para>
@@ -97,7 +111,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the O&amp;M protocol.</para>
+            /// <para>The name of the protocol used for O&amp;M.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SSH</para>
@@ -117,8 +131,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The approval status.
-            /// <b>Wait</b>: Pending approval.</para>
+            /// <para>The approval status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Wait</b>: Pending.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Wait</para>

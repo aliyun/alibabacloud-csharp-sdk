@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <para>The new description of the network domain.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>This network domain is used for the test environment</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The type of the proxy server node to be modified. Valid values:</para>
+            /// <para>The node type of the proxy server. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Master</b>: Primary proxy server.</description></item>
             /// <item><description><b>Slave</b>: Secondary proxy server.</description></item>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The new password of the proxy server account.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>Demo****123!</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the Bastionhost instance to which the network domain to be modified belongs.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

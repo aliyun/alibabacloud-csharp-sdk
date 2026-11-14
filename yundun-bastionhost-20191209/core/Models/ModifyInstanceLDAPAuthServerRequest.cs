@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyInstanceLDAPAuthServerRequest : TeaModel {
         /// <summary>
-        /// <para>The account of the server.</para>
+        /// <para>The server account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string BaseDN { get; set; }
 
         /// <summary>
-        /// <para>The server attribute name that corresponds to the user email address.</para>
+        /// <para>The server attribute name that maps to the user email address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emailAttr</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the parameter value.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string IsSSL { get; set; }
 
         /// <summary>
-        /// <para>The server attribute name that corresponds to the user logon name.</para>
+        /// <para>The server attribute name that maps to the user logon name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>userNameAttr</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string LoginNameMapping { get; set; }
 
         /// <summary>
-        /// <para>The server attribute name that corresponds to the user mobile phone number.</para>
+        /// <para>The server attribute name that maps to the user mobile phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mobileAttr</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string MobileMapping { get; set; }
 
         /// <summary>
-        /// <para>The server attribute name that corresponds to the username.</para>
+        /// <para>The server attribute name that maps to the username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nameAttr</para>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NameMapping { get; set; }
 
         /// <summary>
-        /// <para>The password of the server account. This parameter is required when you add an LDAP authentication server. When you modify the information of an LDAP authentication server, if you do not specify this parameter, the current password is retained.</para>
+        /// <para>The password of the server account. This parameter is required when you add an LDAP authentication server. If you do not specify this parameter when you modify the LDAP authentication server, the current password is retained.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Demo****123!</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]

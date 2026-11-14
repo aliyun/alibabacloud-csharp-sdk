@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The project authorization ID.</para>
         /// <remarks>
-        /// <para>You can call the ListProjectAuthorizations operation to query this parameter.</para>
+        /// <para>You can call the ListProjectAuthorizations operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? AuthorizationId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the bastion host.</para>
+        /// <para>The instance ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<AttachProjectManagersToProjectAuthorizationRequestPrincipals> Principals { get; set; }
         public class AttachProjectManagersToProjectAuthorizationRequestPrincipals : TeaModel {
             /// <summary>
-            /// <para>When PrincipalType is set to RamUser, specify the ID of the RAM user to be designated as the project administrator. When PrincipalType is set to RamRole, specify the ARN of the RAM role to be designated as the project administrator.</para>
+            /// <para>The ID of the RAM user or the ARN of the RAM role to be specified as a project administrator. If PrincipalType is set to RamUser, specify the ID of the RAM user. If PrincipalType is set to RamRole, specify the ARN of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>160****2519</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PrincipalId { get; set; }
 
             /// <summary>
-            /// <para>The display name of the RAM user or RAM role designated as the project administrator.</para>
+            /// <para>The display name of the RAM user or RAM role specified as the project administrator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

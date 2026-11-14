@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Yundun-bastionhost";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -1710,7 +1713,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
+        /// <para>Grants a user access to assets. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1764,7 +1767,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
+        /// <para>Grants a user access to assets. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1818,7 +1821,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
+        /// <para>Grants a user access to assets. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1836,7 +1839,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
+        /// <para>Grants a user access to assets. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2458,7 +2461,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates project authorization administrators.</para>
+        /// <para>Associates administrators with a project authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2512,7 +2515,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates project authorization administrators.</para>
+        /// <para>Associates administrators with a project authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2566,7 +2569,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates project authorization administrators.</para>
+        /// <para>Associates administrators with a project authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2584,7 +2587,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates project authorization administrators.</para>
+        /// <para>Associates administrators with a project authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9102,7 +9105,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9172,7 +9175,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9242,7 +9245,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9260,7 +9263,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of instances.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9278,7 +9281,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud regions that support Bastionhost instances.</para>
+        /// <para>Queries the Alibaba Cloud regions supported by Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9324,7 +9327,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud regions that support Bastionhost instances.</para>
+        /// <para>Queries the Alibaba Cloud regions supported by Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9370,7 +9373,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud regions that support Bastionhost instances.</para>
+        /// <para>Queries the Alibaba Cloud regions supported by Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9388,7 +9391,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud regions that support Bastionhost instances.</para>
+        /// <para>Queries the Alibaba Cloud regions supported by Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9998,7 +10001,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes authorized hosts and host accounts from a user group.</para>
+        /// <para>Removes the hosts and host accounts authorized for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10056,7 +10059,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes authorized hosts and host accounts from a user group.</para>
+        /// <para>Removes the hosts and host accounts authorized for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10114,7 +10117,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes authorized hosts and host accounts from a user group.</para>
+        /// <para>Removes the hosts and host accounts authorized for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10132,7 +10135,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes authorized hosts and host accounts from a user group.</para>
+        /// <para>Removes the hosts and host accounts authorized for a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15223,8 +15226,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows administrators to retrieve the list of commands that require approval.
-        /// The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// <para>This operation allows administrators to retrieve the list of commands that require approval.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15241,6 +15244,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalStatus))
+            {
+                query["ApprovalStatus"] = request.ApprovalStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApproveCommandId))
+            {
+                query["ApproveCommandId"] = request.ApproveCommandId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -15287,8 +15298,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows administrators to retrieve the list of commands that require approval.
-        /// The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// <para>This operation allows administrators to retrieve the list of commands that require approval.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15305,6 +15316,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalStatus))
+            {
+                query["ApprovalStatus"] = request.ApprovalStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApproveCommandId))
+            {
+                query["ApproveCommandId"] = request.ApproveCommandId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -15351,8 +15370,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows administrators to retrieve the list of commands that require approval.
-        /// The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// <para>This operation allows administrators to retrieve the list of commands that require approval.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15375,8 +15394,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows administrators to retrieve the list of commands that require approval.
-        /// The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// <para>This operation allows administrators to retrieve the list of commands that require approval.
+        /// The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20098,13 +20117,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of O&amp;M tickets pending approval.</para>
+        /// <para>Queries the list of O&amp;M tickets pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
-        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// <para>This operation is used by administrators to query the list of O&amp;M tickets pending approval.
+        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20121,6 +20140,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalStatus))
+            {
+                query["ApprovalStatus"] = request.ApprovalStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetAddress))
             {
                 query["AssetAddress"] = request.AssetAddress;
@@ -20128,6 +20151,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTicketId))
+            {
+                query["OperationTicketId"] = request.OperationTicketId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -20166,13 +20193,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of O&amp;M tickets pending approval.</para>
+        /// <para>Queries the list of O&amp;M tickets pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
-        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// <para>This operation is used by administrators to query the list of O&amp;M tickets pending approval.
+        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20189,6 +20216,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalStatus))
+            {
+                query["ApprovalStatus"] = request.ApprovalStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetAddress))
             {
                 query["AssetAddress"] = request.AssetAddress;
@@ -20196,6 +20227,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTicketId))
+            {
+                query["OperationTicketId"] = request.OperationTicketId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -20234,13 +20269,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of O&amp;M tickets pending approval.</para>
+        /// <para>Queries the list of O&amp;M tickets pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
-        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// <para>This operation is used by administrators to query the list of O&amp;M tickets pending approval.
+        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20258,13 +20293,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of O&amp;M tickets pending approval.</para>
+        /// <para>Queries the list of O&amp;M tickets pending approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows administrators to retrieve a list of O&amp;M tickets pending approval.
-        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// <para>This operation is used by administrators to query the list of O&amp;M tickets pending approval.
+        /// The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24734,7 +24769,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves hosts to a different project in a batch.</para>
+        /// <para>Updates the project ownership of multiple hosts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24792,7 +24827,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves hosts to a different project in a batch.</para>
+        /// <para>Updates the project ownership of multiple hosts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24850,7 +24885,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves hosts to a different project in a batch.</para>
+        /// <para>Updates the project ownership of multiple hosts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24868,7 +24903,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves hosts to a different project in a batch.</para>
+        /// <para>Updates the project ownership of multiple hosts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29690,7 +29725,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the effective asset scope for a specified control policy.</para>
+        /// <para>Sets the asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29760,7 +29795,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the effective asset scope for a specified control policy.</para>
+        /// <para>Sets the asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29830,7 +29865,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the effective asset scope for a specified control policy.</para>
+        /// <para>Sets the asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29848,7 +29883,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the effective asset scope for a specified control policy.</para>
+        /// <para>Sets the asset scope for a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31154,7 +31189,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</para>
+        /// <para>Verifies the AD service configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31236,7 +31271,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</para>
+        /// <para>Verifies the AD service configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31318,7 +31353,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</para>
+        /// <para>Verifies the AD service configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31336,7 +31371,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</para>
+        /// <para>Verifies the AD service configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31354,7 +31389,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</para>
+        /// <para>Verifies the LDAP service configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31432,7 +31467,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</para>
+        /// <para>Verifies the LDAP service configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31510,7 +31545,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</para>
+        /// <para>Verifies the LDAP service configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31528,7 +31563,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</para>
+        /// <para>Verifies the LDAP service configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

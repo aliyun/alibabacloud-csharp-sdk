@@ -22,19 +22,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The status of the Bastionhost instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PENDING</b>: Uninitialized</para>
+        /// <item><description><para><b>PENDING</b>: Not initialized.</para>
         /// </description></item>
-        /// <item><description><para><b>CREATING</b>: Creating </para>
+        /// <item><description><para><b>CREATING</b>: Being created. </para>
         /// </description></item>
-        /// <item><description><para><b>RUNNING</b>: Running </para>
+        /// <item><description><para><b>RUNNING</b>: Running. </para>
         /// </description></item>
-        /// <item><description><para><b>EXPIRED</b>: Expired </para>
+        /// <item><description><para><b>EXPIRED</b>: Expired. </para>
         /// </description></item>
-        /// <item><description><para><b>CREATE_FAILED</b>: Creation failed</para>
+        /// <item><description><para><b>CREATE_FAILED</b>: Creation failed.</para>
         /// </description></item>
-        /// <item><description><para><b>UPGRADING</b>: Upgrading</para>
+        /// <item><description><para><b>UPGRADING</b>: Being upgraded.</para>
         /// </description></item>
-        /// <item><description><para><b>UPGRADE_FAILED</b>: Upgrade failed</para>
+        /// <item><description><para><b>UPGRADE_FAILED</b>: Upgrade failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies the page number of the returned results. Default value: <b>1</b>.</para>
+        /// <para>The page number of the returned results. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Settings for a paged query. Specifies the number of Bastionhost instances to display on each page during paging. Default value: <b>10</b>, which indicates that 10 Bastionhost instances are displayed on each page.</para>
+        /// <para>Settings for the number of Bastionhost instances to return on each page in a paged query. Default value: <b>10</b>, which indicates that 10 Bastionhost instances are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
