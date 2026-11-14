@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource to connect to.</para>
+        /// <para>The type of the resource to connect to. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUILDER</b>: Connects to the creation environment.</description></item>
-        /// <item><description><b>VALIDATE</b>: Connects to the validation environment.</description></item>
+        /// <item><description><b>BUILDER</b>: connect to the creation environment</description></item>
+        /// <item><description><b>VALIDATE</b>: connect to the validation environment</description></item>
         /// </list>
         /// <para>The corresponding environment must be created and in a connectable state.</para>
         /// <para>This parameter is required.</para>
@@ -67,32 +67,31 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The actual task type. It must match the creation or validation task corresponding to the TaskId. Use the TaskType returned by GetTask. The task must also have connectable creation or validation resources. You cannot obtain an authorization code for distribution or snapshot tasks that do not have connection resources.</para>
-        /// <para>Recognized task types:</para>
+        /// <para>The actual task type. It must match the creation or validation task corresponding to the TaskId. Use the TaskType returned by GetTask. The task must also have connectable creation or validation resources. You cannot obtain an authorization code for distribution or snapshot tasks that do not have connection resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AUTO_CREATE_IMAGE_VHD</b>: Automatically creates a VHD image.</description></item>
-        /// <item><description><b>RETRY_CREATE_IMAGE_VHD</b>: Retries VHD image creation.</description></item>
-        /// <item><description><b>AUTO_CREATE_VHD</b>: Automatically creates a VHD.</description></item>
-        /// <item><description><b>RETRY_VHD</b>: Retries VHD creation.</description></item>
-        /// <item><description><b>AUTO_VALIDATE_VHD</b>: Automatically validates a VHD.</description></item>
-        /// <item><description><b>RETRY_VALIDATE_VHD</b>: Retries VHD validation.</description></item>
-        /// <item><description><b>APPLY_VHD_BUILDER</b>: Applies for a VHD application recording environment.</description></item>
-        /// <item><description><b>ADAPT_AUTO</b>: Automatically creates application adaptation.</description></item>
-        /// <item><description><b>ADAPT_AUTO_RETRY</b>: Retries automatic application adaptation creation.</description></item>
-        /// <item><description><b>ADAPT_MANUAL</b>: Manually creates application adaptation.</description></item>
-        /// <item><description><b>ADAPT_MANUAL_RETRY</b>: Retries manual application adaptation creation.</description></item>
-        /// <item><description><b>DESKTOP_CUSTOM_IMAGE</b>: Creates a custom image for cloud desktops.</description></item>
-        /// <item><description><b>DESKTOP_CUSTOM_IMAGE_RETRY</b>: Retries custom image creation for cloud desktops.</description></item>
-        /// <item><description><b>IMAGE_MANUAL</b>: Manually creates an image.</description></item>
-        /// <item><description><b>IMAGE_MANUAL_RETRY</b>: Retries manual image creation.</description></item>
-        /// <item><description><b>IMAGE_FROM_INSTANCE</b>: Creates an image based on an instance.</description></item>
-        /// <item><description><b>IMAGE_FROM_INSTANCE_RETRY</b>: Retries image creation based on an instance.</description></item>
-        /// <item><description><b>IMAGE_DISTRIBUTE</b>: Distributes an image to multiple regions.</description></item>
-        /// <item><description><b>IMAGE_DISTRIBUTE_RETRY</b>: Retries image distribution.</description></item>
-        /// <item><description><b>SNAPSHOT_DISTRIBUTE</b>: Distributes a snapshot to multiple regions.</description></item>
-        /// <item><description><b>SNAPSHOT_DISTRIBUTE_RETRY</b>: Retries snapshot distribution.</description></item>
-        /// <item><description><b>SNAPSHOT_FROM_DISK</b>: Creates a snapshot based on a disk.</description></item>
-        /// <item><description><b>SNAPSHOT_FROM_DISK_RETRY</b>: Retries snapshot creation based on a disk.</description></item>
+        /// <item><description><b>AUTO_CREATE_IMAGE_VHD</b>: automatically create a VHD image</description></item>
+        /// <item><description><b>RETRY_CREATE_IMAGE_VHD</b>: retry VHD image creation</description></item>
+        /// <item><description><b>AUTO_CREATE_VHD</b>: automatically create a VHD</description></item>
+        /// <item><description><b>RETRY_VHD</b>: retry VHD creation</description></item>
+        /// <item><description><b>AUTO_VALIDATE_VHD</b>: automatically validate a VHD</description></item>
+        /// <item><description><b>RETRY_VALIDATE_VHD</b>: retry VHD validation</description></item>
+        /// <item><description><b>APPLY_VHD_BUILDER</b>: apply for a VHD application recording environment</description></item>
+        /// <item><description><b>ADAPT_AUTO</b>: automatically create application adaptation</description></item>
+        /// <item><description><b>ADAPT_AUTO_RETRY</b>: retry automatic application adaptation creation</description></item>
+        /// <item><description><b>ADAPT_MANUAL</b>: manually create application adaptation</description></item>
+        /// <item><description><b>ADAPT_MANUAL_RETRY</b>: retry manual application adaptation creation</description></item>
+        /// <item><description><b>DESKTOP_CUSTOM_IMAGE</b>: create a custom image for cloud desktop</description></item>
+        /// <item><description><b>DESKTOP_CUSTOM_IMAGE_RETRY</b>: retry custom image creation for cloud desktop</description></item>
+        /// <item><description><b>IMAGE_MANUAL</b>: manually create an image</description></item>
+        /// <item><description><b>IMAGE_MANUAL_RETRY</b>: retry manual image creation</description></item>
+        /// <item><description><b>IMAGE_FROM_INSTANCE</b>: create an image from an instance</description></item>
+        /// <item><description><b>IMAGE_FROM_INSTANCE_RETRY</b>: retry image creation from an instance</description></item>
+        /// <item><description><b>IMAGE_DISTRIBUTE</b>: distribute an image to multiple regions</description></item>
+        /// <item><description><b>IMAGE_DISTRIBUTE_RETRY</b>: retry image distribution</description></item>
+        /// <item><description><b>SNAPSHOT_DISTRIBUTE</b>: distribute a snapshot to multiple regions</description></item>
+        /// <item><description><b>SNAPSHOT_DISTRIBUTE_RETRY</b>: retry snapshot distribution</description></item>
+        /// <item><description><b>SNAPSHOT_FROM_DISK</b>: create a snapshot from a disk</description></item>
+        /// <item><description><b>SNAPSHOT_FROM_DISK_RETRY</b>: retry snapshot creation from a disk</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

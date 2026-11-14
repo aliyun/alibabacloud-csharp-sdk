@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error or result message. This field describes the cause of a failed request and may not be included in a successful response.</para>
+        /// <para>The error message or result prompt. This field describes the cause of a failure and may not be included in a successful response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, query the task status separately.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To determine whether the asynchronous task is completed, query the task status.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

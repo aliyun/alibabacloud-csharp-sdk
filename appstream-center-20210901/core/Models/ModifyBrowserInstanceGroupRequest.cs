@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyBrowserInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to send notification emails for authorization and deauthorization.</para>
+        /// <para>Specifies whether to send notification emails for authorization and revocation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string BookmarkFolder { get; set; }
 
                 /// <summary>
-                /// <para>The bookmark ID. This parameter is required only for modification scenarios.</para>
+                /// <para>The bookmark ID. This parameter is required only for update scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bm-12345</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CloudBrowserName { get; set; }
 
         /// <summary>
-        /// <para>The maximum resource count. This parameter takes effect only for the pay-as-you-go billing method based on monthly active users.</para>
+        /// <para>The maximum resource count. This parameter takes effect for the pay-as-you-go billing method based on monthly active users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -208,10 +208,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The file path for network-restricted URLs.</para>
+            /// <para>The file path for network restricted URLs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_whitelist_template.csv</para>
+            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URLWhitelistTemplate.csv</para>
             /// </summary>
             [NameInMap("RestrictedURLsFilePath")]
             [Validation(Required=false)]
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The logon client type control.</para>
+            /// <para>The client type control for logon.</para>
             /// </summary>
             [NameInMap("ClientTypes")]
             [Validation(Required=false)]
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Clipboard { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard read length limit.</para>
+                /// <para>The read length limit for the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ClipboardSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The clipboard write length limit.</para>
+                /// <para>The write length limit for the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardLimit { get; set; }
 
                 /// <summary>
-                /// <para>The rich text clipboard read size.</para>
+                /// <para>The outbound size limit for rich text in the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The rich text clipboard read size unit.</para>
+                /// <para>The outbound size unit for rich text in the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RichTextClipboardSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The rich text clipboard write size.</para>
+                /// <para>The inbound size limit for rich text in the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? RichTextClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The rich text clipboard write size unit.</para>
+                /// <para>The inbound size unit for rich text in the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TextClipboard { get; set; }
 
                 /// <summary>
-                /// <para>The text clipboard read size.</para>
+                /// <para>The outbound size limit for text in the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? TextClipboardReadLimit { get; set; }
 
                 /// <summary>
-                /// <para>The text clipboard read size unit.</para>
+                /// <para>The outbound size unit for text in the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TextClipboardReadSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>The text clipboard write size.</para>
+                /// <para>The inbound size limit for text in the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -472,7 +472,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? TextClipboardWriteLimit { get; set; }
 
                 /// <summary>
-                /// <para>The text clipboard write size unit.</para>
+                /// <para>The inbound size unit for text in the clipboard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB</para>
@@ -504,7 +504,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? DisconnectKeepSessionTime { get; set; }
 
             /// <summary>
-            /// <para>The floating ball file manager switch.</para>
+            /// <para>The switch for the file manager in the floating button.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Html5FileTransfer { get; set; }
 
             /// <summary>
-            /// <para>The cloud browser dual-screen switch.</para>
+            /// <para>The dual-screen switch for the cloud browser.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -534,7 +534,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string MultiScreen { get; set; }
 
             /// <summary>
-            /// <para>The no-operation disconnect policy.</para>
+            /// <para>The policy for disconnecting upon inactivity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -544,7 +544,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NoOperationDisconnect { get; set; }
 
             /// <summary>
-            /// <para>The no-operation disconnect time in seconds.</para>
+            /// <para>The inactivity disconnect time, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The product type, such as cloud desktop, cloud application, or workstation.</para>
+        /// <para>The product type, such as cloud desktop, cloud application, and workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudDesktop</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account IDs to remove from the share list.</para>
+        /// <para>The Alibaba Cloud account IDs to remove from sharing.</para>
         /// </summary>
         [NameInMap("RemoveAccount")]
         [Validation(Required=false)]

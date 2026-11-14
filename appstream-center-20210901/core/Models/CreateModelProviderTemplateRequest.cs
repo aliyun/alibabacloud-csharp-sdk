@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The JSON configuration of the model provider, which includes connection information such as baseUrl, apiKey, and api. The apiKey is encrypted and stored after creation. When ProviderType is WuyingCredit, this parameter is not required and will be copied from the system template.</para>
+        /// <para>The JSON configuration of the model provider, which includes connection information such as baseUrl, apiKey, and api. The apiKey is encrypted and stored after creation. When ProviderType is WuyingCredit, this parameter is not required and is copied from the system template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The description of the model provider template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud Bailian provider</para>
+        /// <para>Alibaba Cloud Model Studio provider</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Wuying secure proxy. This parameter must be set to true when ProviderType is WuyingCredit.</para>
+        /// <para>Specifies whether to enable the Wuying security proxy. This parameter must be set to true when ProviderType is WuyingCredit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The name of the model provider template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud Bailian</para>
+        /// <para>Alibaba Cloud Model Studio</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the model provider. The name must be unique within the same model template. The naming conventions vary based on the ProviderType. For more information, see the description of ProviderType.</para>
+        /// <para>The name of the model provider. The name must be unique within the same model template. The naming rules vary based on the ProviderType. For more information, see the description of ProviderType.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

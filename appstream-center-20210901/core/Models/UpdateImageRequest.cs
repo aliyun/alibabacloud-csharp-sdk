@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UpdateImageRequest : TeaModel {
         /// <summary>
-        /// <para>The complete list of application adapter IDs for the selected image version. A maximum of 100 items are supported. <b>When a non-empty list is passed, it must include the adapters that you still want to retain. Omitting this parameter or passing an empty list does not clear the existing associations.</b></para>
+        /// <para>The complete list of application adapter IDs for the selected image version. A maximum of 100 items are supported. <b>When a non-empty list is passed, it must include the adapters that you want to retain. Omitting this parameter or passing an empty list does not clear the existing associations.</b></para>
         /// </summary>
         [NameInMap("AdaptorIdList")]
         [Validation(Required=false)]
         public List<string> AdaptorIdList { get; set; }
 
         /// <summary>
-        /// <para>The updated description of the image.</para>
+        /// <para>The new description of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Update office software and basic configurations</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The operating system distribution information of the image. This must be consistent with the actual operating system distribution of the image.</para>
+        /// <para>The operating system distribution information of the image. It must be consistent with the actual operating system distribution of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ubuntu 22.04 64-bit</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image version to be modified. If this parameter is omitted, the current effective version of the image specified by ImageId is used. You must provide at least one of ImageId and VersionId.</para>
+        /// <para>The ID of the image version to be modified. If this parameter is omitted, the current effective version of the image specified by ImageId is used. You must provide at least one of VersionId and ImageId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iv-bp1example****</para>

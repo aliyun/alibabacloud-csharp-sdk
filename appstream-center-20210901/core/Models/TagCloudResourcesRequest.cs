@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class TagCloudResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</para>
+        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported. This parameter is not required when the resource type is tenant ID.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -30,13 +30,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The list of tags. System tags and custom tags are supported.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for system tags:</para>
+        /// <item><description><para>System tag enum values:</para>
         /// <list type="bullet">
-        /// <item><description><c>System/Scheduler/GRAYSCALE</c>: canary release tag</description></item>
-        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents newly bound users from connecting to the app instance group</description></item>
+        /// <item><description><c>System/Scheduler/GRAYSCALE</c>: grayscale tag.</description></item>
+        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents new users bound to the app instance group from establishing connections.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Custom tags: You can create up to 20 custom tags.</para>
+        /// <item><description><para>Custom tags: A maximum of 20 custom tags can be created.</para>
         /// </description></item>
         /// </list>
         /// <remarks>

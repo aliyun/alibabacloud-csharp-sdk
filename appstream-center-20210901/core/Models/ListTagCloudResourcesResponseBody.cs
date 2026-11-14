@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListTagCloudResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token that indicates whether more results exist.</para>
+        /// <para>Indicates whether a token for the next query is available based on NextToken.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags bound to resources.</para>
+        /// <para>The tags bound to the resource.</para>
         /// </summary>
         [NameInMap("ResourceTags")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The tag list.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The expiration time of the delivery group. For delivery groups sold as resources, the expiration time of their resources is returned. For other delivery groups, the expiration time of the delivery group itself is returned. The time is in the ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
+            /// <para>The expiration time of the delivery group. For delivery groups sold as resources, the expiration time of their resources is returned. For other delivery groups, the expiration time of the delivery groups themselves is returned. The time is in the ISO 8601 date and time format, including milliseconds and time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-27T16:00:00.000+00:00</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether mixed authorization for users and user groups is supported.</para>
+            /// <para>Indicates whether mixed authorization of users and user groups is supported.</para>
             /// </summary>
             [NameInMap("SupportUserGroupMixedAuth")]
             [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of delivery groups per page specified in the request. Unit: delivery groups. This value does not represent the actual number of entries returned on the current page. The actual number on the current page may be less than this value.</para>
+        /// <para>The number of delivery groups per page specified in the request. Unit: delivery groups. This value does not indicate the actual number of entries returned on the current page. The actual number on the current page may be less than this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListWuyingServerWorkloadTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>A compatibility field. The current version does not use this field to indicate the number of returned entries.</para>
+        /// <para>The compatibility field. The current version does not use this field to indicate the number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A compatibility field. The current version does not generate a next page token.</para>
+        /// <para>The compatibility field. The current version does not generate a next page token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unused</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, which can be used to troubleshoot request issues.</para>
+        /// <para>The unique identifier of the request. You can use this ID to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of workload templates. Up to 100 templates are returned, sorted by template configuration order.</para>
+        /// <para>The list of workload templates. The templates are returned in the order of their configuration, with a maximum of 100 entries.</para>
         /// </summary>
         [NameInMap("WorkloadTemplates")]
         [Validation(Required=false)]

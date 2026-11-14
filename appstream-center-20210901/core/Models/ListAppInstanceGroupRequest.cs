@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The application image ID. You can obtain this value from the Image Management page in the WUYING Workspace console.</para>
+        /// <para>The ID of the app image. You can obtain the ID from the Image Management page in the WUYING Cloud App console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>img-8z4nztpaqvay4****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppCenterImageId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group ID.</para>
+        /// <para>The ID of the app instance group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <c>OfficeApp</c>, all delivery groups whose names contain <c>OfficeApp</c> are returned, such as <c>MyOfficeApp</c> and <c>OfficeAppA</c>.</para>
+        /// <para>The name of the app instance group. Fuzzy match is supported. For example, if you specify <c>Office App</c>, app instance groups whose names contain <c>Office App</c> are queried, such as <c>My Office App</c> and <c>Office App A</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OfficeApp</para>
+        /// <para>Office App</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
+        /// <para>The ID of the region to which the app instance group belongs. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of excluded authorized user group IDs.</para>
+        /// <para>The list of excluded authorization user group IDs.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> ExcludedUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The specification type ID of the purchased resource. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</para>
+        /// <para>The ID of the instance type for the purchased resources. You can obtain the ID by calling the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appstreaming.vgpu.4c8g.2g</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NodeInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The office network ID.</para>
+        /// <para>The ID of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hongkong+dir-643067****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query results to display.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of query results per page. Maximum value: <c>100</c>.</para>
+        /// <para>The number of entries to return on each page. The value cannot exceed <c>100</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of delivery group statuses.</para>
+        /// <para>The statuses of the app instance groups.</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

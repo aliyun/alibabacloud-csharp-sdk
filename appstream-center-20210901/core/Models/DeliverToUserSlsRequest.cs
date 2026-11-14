@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The name of an existing SLS project. Either this parameter or ProjectName must be specified.</para>
+        /// <para>The name of the existing SLS project. You must specify either this parameter or ProjectName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elastic-desktop-xxx</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ExistedProjectName { get; set; }
 
         /// <summary>
-        /// <para>The LogStore name.</para>
+        /// <para>The name of the Logstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elastic_desktop_xxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string LogStoreName { get; set; }
 
         /// <summary>
-        /// <para>The SLS project name. Either this parameter or ExistedProjectName must be specified.</para>
+        /// <para>The name of the SLS project. You must specify either this parameter or ExistedProjectName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elastic-desktop-xxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SLS instance.</para>
+        /// <para>The region ID of SLS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

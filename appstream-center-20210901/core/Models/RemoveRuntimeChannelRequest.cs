@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The agent provider. The mappings with the agent runtime type are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>JVS Computer: Set this parameter to OpenClaw.</description></item>
-        /// <item><description>OpenClaw: Set this parameter to OpenClaw.</description></item>
-        /// <item><description>Hermes Agent: Set this parameter to HermesAgent, and you must also set AgentPlatform to ENTERPRISE_JVS. If AgentPlatform is not specified, the default value is ENTERPRISE, and only OpenClaw is supported in this case.</description></item>
+        /// <item><description>JVS Computer: Set to OpenClaw.</description></item>
+        /// <item><description>OpenClaw: Set to OpenClaw.</description></item>
+        /// <item><description>Hermes Agent: Set to HermesAgent, and you must also set AgentPlatform to ENTERPRISE_JVS. If AgentPlatform is not specified, the default value is ENTERPRISE, and only OpenClaw is supported in this case.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

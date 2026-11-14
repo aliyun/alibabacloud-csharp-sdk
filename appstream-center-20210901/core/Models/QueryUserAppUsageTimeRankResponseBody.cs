@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryUserAppUsageTimeRankResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of <c>200</c> indicates that the request is processed successfully. Other values indicate that the processing failed.</para>
+        /// <para>The business status code. A value of <c>200</c> indicates that the request was processed successfully. Other values indicate that the processing failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<QueryUserAppUsageTimeRankResponseBodyIndexData> IndexData { get; set; }
         public class QueryUserAppUsageTimeRankResponseBodyIndexData : TeaModel {
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-9ciijz60n4xsv****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Visual Studio Code</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppTimeCnt { get; set; }
 
             /// <summary>
-            /// <para>The application version. The current version may not return this value, and callers should not rely on this field. A non-empty value indicates the application version.</para>
+            /// <para>The version of the application. The current version may not return this value, and callers should not rely on this field. A non-empty value indicates the application version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.96.0</para>

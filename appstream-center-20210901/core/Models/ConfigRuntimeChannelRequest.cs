@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The agent provider.</para>
         /// <list type="bullet">
-        /// <item><description>JVS Computer: Set to OpenClaw.</description></item>
-        /// <item><description>OpenClaw: Set to OpenClaw.</description></item>
-        /// <item><description>Hermes Agent: Set to HermesAgent.</description></item>
+        /// <item><description>JVS Computer: Enter OpenClaw.</description></item>
+        /// <item><description>OpenClaw: Enter OpenClaw.</description></item>
+        /// <item><description>Hermes Agent: Enter HermesAgent.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The JSON string for channel configuration.</para>
+        /// <para>The channel configuration JSON string.</para>
         /// <list type="bullet">
         /// <item><description>Example of the simple configuration mode:</description></item>
         /// </list>

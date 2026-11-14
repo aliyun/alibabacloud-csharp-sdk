@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The processing information returned by the API.</para>
+        /// <para>The processing message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

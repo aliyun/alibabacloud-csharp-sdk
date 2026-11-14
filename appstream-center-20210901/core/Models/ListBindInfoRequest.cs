@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AppInstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query results to display. Default value: <c>1</c>. Specify this parameter.</para>
+        /// <para>The page number of the query results to return. Default value: <c>1</c>. Specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of query results per page. Maximum value: <c>100</c>. Default value: <c>20</c>. Specify this parameter.</para>
+        /// <para>The number of entries to return on each page. Maximum value: <c>100</c>. Default value: <c>20</c>. Specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

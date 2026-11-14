@@ -1346,6 +1346,146 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Clears the memory of a specified agent instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>First, call <c>ListAgentInstanceMemory</c> to query the target instance ID and the associated user. <b>Verify the instance and user before clearing the memory.</b></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ClearAgentInstanceMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearAgentInstanceMemoryResponse
+        /// </returns>
+        public ClearAgentInstanceMemoryResponse ClearAgentInstanceMemoryWithOptions(ClearAgentInstanceMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentInstanceId))
+            {
+                body["AgentInstanceId"] = request.AgentInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClearAgentInstanceMemory",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClearAgentInstanceMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the memory of a specified agent instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>First, call <c>ListAgentInstanceMemory</c> to query the target instance ID and the associated user. <b>Verify the instance and user before clearing the memory.</b></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ClearAgentInstanceMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearAgentInstanceMemoryResponse
+        /// </returns>
+        public async Task<ClearAgentInstanceMemoryResponse> ClearAgentInstanceMemoryWithOptionsAsync(ClearAgentInstanceMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentInstanceId))
+            {
+                body["AgentInstanceId"] = request.AgentInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClearAgentInstanceMemory",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClearAgentInstanceMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the memory of a specified agent instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>First, call <c>ListAgentInstanceMemory</c> to query the target instance ID and the associated user. <b>Verify the instance and user before clearing the memory.</b></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ClearAgentInstanceMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearAgentInstanceMemoryResponse
+        /// </returns>
+        public ClearAgentInstanceMemoryResponse ClearAgentInstanceMemory(ClearAgentInstanceMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ClearAgentInstanceMemoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the memory of a specified agent instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>First, call <c>ListAgentInstanceMemory</c> to query the target instance ID and the associated user. <b>Verify the instance and user before clearing the memory.</b></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ClearAgentInstanceMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearAgentInstanceMemoryResponse
+        /// </returns>
+        public async Task<ClearAgentInstanceMemoryResponse> ClearAgentInstanceMemoryAsync(ClearAgentInstanceMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ClearAgentInstanceMemoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Configures the model group for a resource group.</para>
         /// </summary>
         /// 
@@ -1552,7 +1692,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can configure third-party channels for agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended agent communication methods in addition to the AgentIM channel.
-        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1628,7 +1768,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can configure third-party channels for agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended agent communication methods in addition to the AgentIM channel.
-        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1704,7 +1844,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can configure third-party channels for agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended agent communication methods in addition to the AgentIM channel.
-        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1728,7 +1868,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can configure third-party channels for agent runtime resources such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center. These channels serve as extended agent communication methods in addition to the AgentIM channel.
-        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1746,7 +1886,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the model group for agent runtime resources.</para>
+        /// <para>Configures model groups for agent runtime resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1802,7 +1942,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the model group for agent runtime resources.</para>
+        /// <para>Configures model groups for agent runtime resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1858,7 +1998,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the model group for agent runtime resources.</para>
+        /// <para>Configures model groups for agent runtime resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1882,7 +2022,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the model group for agent runtime resources.</para>
+        /// <para>Configures model groups for agent runtime resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1906,13 +2046,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application and binds it to a specified image version.</para>
+        /// <para>Creates an application and binds the application to a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
-        /// Call ListImage to select an image first. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
+        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, it must belong to the image corresponding to ImageId.
+        /// Call ListImage first to select an image. After creation, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1978,13 +2118,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application and binds it to a specified image version.</para>
+        /// <para>Creates an application and binds the application to a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
-        /// Call ListImage to select an image first. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
+        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, it must belong to the image corresponding to ImageId.
+        /// Call ListImage first to select an image. After creation, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2050,13 +2190,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application and binds it to a specified image version.</para>
+        /// <para>Creates an application and binds the application to a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
-        /// Call ListImage to select an image first. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
+        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, it must belong to the image corresponding to ImageId.
+        /// Call ListImage first to select an image. After creation, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2074,13 +2214,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application and binds it to a specified image version.</para>
+        /// <para>Creates an application and binds the application to a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
-        /// Call ListImage to select an image first. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
+        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, it must belong to the image corresponding to ImageId.
+        /// Call ListImage first to select an image. After creation, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2530,31 +2670,31 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud browser group billed by monthly active users (MAUs).</para>
+        /// <para>Creates a cloud browser group billed by monthly active users (MAU).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Prerequisites</h2>
         /// <list type="bullet">
-        /// <item><description>Prepare available office networks, images, and specifications in the target business region, and ensure that your account has the corresponding browser configurations and resource quotas.</description></item>
-        /// <item><description>Specify CloudBrowserName and BizRegionId. You must set OsType to Windows.</description></item>
+        /// <item><description>Prepare an available office network, image, and specification in the target business region, and ensure that the account has the corresponding browser configurations and resource quotas.</description></item>
+        /// <item><description>Specify CloudBrowserName and BizRegionId. You must set OsType to <c>Windows</c>.</description></item>
         /// <item><description>The authorized users must be created in advance and match the account type. The authorized user groups must belong to the current account and match the account type of the office network.</description></item>
         /// <item><description><b>Users and UserGroupIds cannot be specified at the same time.</b></description></item>
         /// </list>
         /// <h2>MAU billing parameters</h2>
         /// <list type="bullet">
-        /// <item><description>Set ChargeType to PostPaid.</description></item>
-        /// <item><description><b>You must explicitly set SubPayType to mau. Omitting this parameter does not enable MAU billing.</b></description></item>
-        /// <item><description>Set ChargeResourceMode to AppInstance.</description></item>
+        /// <item><description>Set ChargeType to <c>PostPaid</c>.</description></item>
+        /// <item><description><b>You must explicitly set SubPayType to <c>mau</c>. Omitting this parameter does not enable MAU billing.</b></description></item>
+        /// <item><description>Set ChargeResourceMode to <c>AppInstance</c>.</description></item>
         /// <item><description>You do not need to specify Period, PeriodUnit, AppPackageType, AutoPay, AutoRenew, or NodePool.</description></item>
         /// </list>
-        /// <h2>Post-processing</h2>
-        /// <para><b>A successful API response does not indicate that the browser resources are ready.</b> After creation, query the status of the browser group and use it only after confirming that it is connectable.
+        /// <h2>Post-call processing</h2>
+        /// <para><b>A successful API response does not indicate that the browser resources are ready.</b> After the creation, query the status of the browser group and use it only after you confirm that it is connectable.
         /// This operation creates a new cloud browser group. You do not need to create a delivery group in advance.</para>
         /// <h2>Example descriptions</h2>
-        /// <para>Field examples demonstrate how to specify parameters. Replace resource identifiers with actual values under your current account. Capacity examples do not represent default values or upper limits.
-        /// An example value of - indicates that the parameter is not required. When calling the API, omit the corresponding parameter instead of passing the - character.</para>
+        /// <para>Field examples are provided to show how to specify parameters. Replace resource identifiers with the actual values under the current account. Capacity examples do not represent default values or upper limits.
+        /// An example value of <c>-</c> indicates that the parameter is not required. When you call the operation, omit the corresponding parameter and do not pass the <c>-</c> character.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2742,31 +2882,31 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud browser group billed by monthly active users (MAUs).</para>
+        /// <para>Creates a cloud browser group billed by monthly active users (MAU).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Prerequisites</h2>
         /// <list type="bullet">
-        /// <item><description>Prepare available office networks, images, and specifications in the target business region, and ensure that your account has the corresponding browser configurations and resource quotas.</description></item>
-        /// <item><description>Specify CloudBrowserName and BizRegionId. You must set OsType to Windows.</description></item>
+        /// <item><description>Prepare an available office network, image, and specification in the target business region, and ensure that the account has the corresponding browser configurations and resource quotas.</description></item>
+        /// <item><description>Specify CloudBrowserName and BizRegionId. You must set OsType to <c>Windows</c>.</description></item>
         /// <item><description>The authorized users must be created in advance and match the account type. The authorized user groups must belong to the current account and match the account type of the office network.</description></item>
         /// <item><description><b>Users and UserGroupIds cannot be specified at the same time.</b></description></item>
         /// </list>
         /// <h2>MAU billing parameters</h2>
         /// <list type="bullet">
-        /// <item><description>Set ChargeType to PostPaid.</description></item>
-        /// <item><description><b>You must explicitly set SubPayType to mau. Omitting this parameter does not enable MAU billing.</b></description></item>
-        /// <item><description>Set ChargeResourceMode to AppInstance.</description></item>
+        /// <item><description>Set ChargeType to <c>PostPaid</c>.</description></item>
+        /// <item><description><b>You must explicitly set SubPayType to <c>mau</c>. Omitting this parameter does not enable MAU billing.</b></description></item>
+        /// <item><description>Set ChargeResourceMode to <c>AppInstance</c>.</description></item>
         /// <item><description>You do not need to specify Period, PeriodUnit, AppPackageType, AutoPay, AutoRenew, or NodePool.</description></item>
         /// </list>
-        /// <h2>Post-processing</h2>
-        /// <para><b>A successful API response does not indicate that the browser resources are ready.</b> After creation, query the status of the browser group and use it only after confirming that it is connectable.
+        /// <h2>Post-call processing</h2>
+        /// <para><b>A successful API response does not indicate that the browser resources are ready.</b> After the creation, query the status of the browser group and use it only after you confirm that it is connectable.
         /// This operation creates a new cloud browser group. You do not need to create a delivery group in advance.</para>
         /// <h2>Example descriptions</h2>
-        /// <para>Field examples demonstrate how to specify parameters. Replace resource identifiers with actual values under your current account. Capacity examples do not represent default values or upper limits.
-        /// An example value of - indicates that the parameter is not required. When calling the API, omit the corresponding parameter instead of passing the - character.</para>
+        /// <para>Field examples are provided to show how to specify parameters. Replace resource identifiers with the actual values under the current account. Capacity examples do not represent default values or upper limits.
+        /// An example value of <c>-</c> indicates that the parameter is not required. When you call the operation, omit the corresponding parameter and do not pass the <c>-</c> character.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2954,31 +3094,31 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud browser group billed by monthly active users (MAUs).</para>
+        /// <para>Creates a cloud browser group billed by monthly active users (MAU).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Prerequisites</h2>
         /// <list type="bullet">
-        /// <item><description>Prepare available office networks, images, and specifications in the target business region, and ensure that your account has the corresponding browser configurations and resource quotas.</description></item>
-        /// <item><description>Specify CloudBrowserName and BizRegionId. You must set OsType to Windows.</description></item>
+        /// <item><description>Prepare an available office network, image, and specification in the target business region, and ensure that the account has the corresponding browser configurations and resource quotas.</description></item>
+        /// <item><description>Specify CloudBrowserName and BizRegionId. You must set OsType to <c>Windows</c>.</description></item>
         /// <item><description>The authorized users must be created in advance and match the account type. The authorized user groups must belong to the current account and match the account type of the office network.</description></item>
         /// <item><description><b>Users and UserGroupIds cannot be specified at the same time.</b></description></item>
         /// </list>
         /// <h2>MAU billing parameters</h2>
         /// <list type="bullet">
-        /// <item><description>Set ChargeType to PostPaid.</description></item>
-        /// <item><description><b>You must explicitly set SubPayType to mau. Omitting this parameter does not enable MAU billing.</b></description></item>
-        /// <item><description>Set ChargeResourceMode to AppInstance.</description></item>
+        /// <item><description>Set ChargeType to <c>PostPaid</c>.</description></item>
+        /// <item><description><b>You must explicitly set SubPayType to <c>mau</c>. Omitting this parameter does not enable MAU billing.</b></description></item>
+        /// <item><description>Set ChargeResourceMode to <c>AppInstance</c>.</description></item>
         /// <item><description>You do not need to specify Period, PeriodUnit, AppPackageType, AutoPay, AutoRenew, or NodePool.</description></item>
         /// </list>
-        /// <h2>Post-processing</h2>
-        /// <para><b>A successful API response does not indicate that the browser resources are ready.</b> After creation, query the status of the browser group and use it only after confirming that it is connectable.
+        /// <h2>Post-call processing</h2>
+        /// <para><b>A successful API response does not indicate that the browser resources are ready.</b> After the creation, query the status of the browser group and use it only after you confirm that it is connectable.
         /// This operation creates a new cloud browser group. You do not need to create a delivery group in advance.</para>
         /// <h2>Example descriptions</h2>
-        /// <para>Field examples demonstrate how to specify parameters. Replace resource identifiers with actual values under your current account. Capacity examples do not represent default values or upper limits.
-        /// An example value of - indicates that the parameter is not required. When calling the API, omit the corresponding parameter instead of passing the - character.</para>
+        /// <para>Field examples are provided to show how to specify parameters. Replace resource identifiers with the actual values under the current account. Capacity examples do not represent default values or upper limits.
+        /// An example value of <c>-</c> indicates that the parameter is not required. When you call the operation, omit the corresponding parameter and do not pass the <c>-</c> character.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2996,31 +3136,31 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud browser group billed by monthly active users (MAUs).</para>
+        /// <para>Creates a cloud browser group billed by monthly active users (MAU).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
+        /// <h2>Prerequisites</h2>
         /// <list type="bullet">
-        /// <item><description>Prepare available office networks, images, and specifications in the target business region, and ensure that your account has the corresponding browser configurations and resource quotas.</description></item>
-        /// <item><description>Specify CloudBrowserName and BizRegionId. You must set OsType to Windows.</description></item>
+        /// <item><description>Prepare an available office network, image, and specification in the target business region, and ensure that the account has the corresponding browser configurations and resource quotas.</description></item>
+        /// <item><description>Specify CloudBrowserName and BizRegionId. You must set OsType to <c>Windows</c>.</description></item>
         /// <item><description>The authorized users must be created in advance and match the account type. The authorized user groups must belong to the current account and match the account type of the office network.</description></item>
         /// <item><description><b>Users and UserGroupIds cannot be specified at the same time.</b></description></item>
         /// </list>
         /// <h2>MAU billing parameters</h2>
         /// <list type="bullet">
-        /// <item><description>Set ChargeType to PostPaid.</description></item>
-        /// <item><description><b>You must explicitly set SubPayType to mau. Omitting this parameter does not enable MAU billing.</b></description></item>
-        /// <item><description>Set ChargeResourceMode to AppInstance.</description></item>
+        /// <item><description>Set ChargeType to <c>PostPaid</c>.</description></item>
+        /// <item><description><b>You must explicitly set SubPayType to <c>mau</c>. Omitting this parameter does not enable MAU billing.</b></description></item>
+        /// <item><description>Set ChargeResourceMode to <c>AppInstance</c>.</description></item>
         /// <item><description>You do not need to specify Period, PeriodUnit, AppPackageType, AutoPay, AutoRenew, or NodePool.</description></item>
         /// </list>
-        /// <h2>Post-processing</h2>
-        /// <para><b>A successful API response does not indicate that the browser resources are ready.</b> After creation, query the status of the browser group and use it only after confirming that it is connectable.
+        /// <h2>Post-call processing</h2>
+        /// <para><b>A successful API response does not indicate that the browser resources are ready.</b> After the creation, query the status of the browser group and use it only after you confirm that it is connectable.
         /// This operation creates a new cloud browser group. You do not need to create a delivery group in advance.</para>
         /// <h2>Example descriptions</h2>
-        /// <para>Field examples demonstrate how to specify parameters. Replace resource identifiers with actual values under your current account. Capacity examples do not represent default values or upper limits.
-        /// An example value of - indicates that the parameter is not required. When calling the API, omit the corresponding parameter instead of passing the - character.</para>
+        /// <para>Field examples are provided to show how to specify parameters. Replace resource identifiers with the actual values under the current account. Capacity examples do not represent default values or upper limits.
+        /// An example value of <c>-</c> indicates that the parameter is not required. When you call the operation, omit the corresponding parameter and do not pass the <c>-</c> character.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3043,10 +3183,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
-        /// After the task is created, save the TaskId and call DescribeExportTasks to query the task status and progress. We recommend a polling interval of 5 to 10 seconds. If the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. If the status is FAILED, check the ErrorMsg and stop polling.
+        /// <para>This operation creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
+        /// After the task is created, save TaskId and call DescribeExportTasks to query the task status and progress. The recommended polling interval is 5 to 10 seconds. When the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. When the status is FAILED, check ErrorMsg and stop polling.
         /// The task is valid for 24 hours after creation. The download URL has an independent signature validity period of up to 1 hour, which does not exceed the remaining validity period of the task. Query the latest URL before downloading. You cannot obtain a valid download URL after the task expires.
-        /// The WUYING server list export only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server, and a single task can export up to 100,000 records. The cloud browser bookmarks and URL whitelist exports retrieve the complete list of the target delivery group, which is not affected by the list search terms or the current page. The ownership and product type of the delivery group are verified before execution. Data is read in pages during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, query, or file generation will succeed.</para>
+        /// The WUYING server list export only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server. A single task can export up to 100,000 records. The cloud browser bookmarks and URL whitelist exports export the complete list of the target delivery group. This is not affected by the list search terms or the current page. The ownership and product type of the delivery group are verified before execution. Data is read in pages during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, query, or file generation will succeed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3101,10 +3241,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
-        /// After the task is created, save the TaskId and call DescribeExportTasks to query the task status and progress. We recommend a polling interval of 5 to 10 seconds. If the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. If the status is FAILED, check the ErrorMsg and stop polling.
+        /// <para>This operation creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
+        /// After the task is created, save TaskId and call DescribeExportTasks to query the task status and progress. The recommended polling interval is 5 to 10 seconds. When the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. When the status is FAILED, check ErrorMsg and stop polling.
         /// The task is valid for 24 hours after creation. The download URL has an independent signature validity period of up to 1 hour, which does not exceed the remaining validity period of the task. Query the latest URL before downloading. You cannot obtain a valid download URL after the task expires.
-        /// The WUYING server list export only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server, and a single task can export up to 100,000 records. The cloud browser bookmarks and URL whitelist exports retrieve the complete list of the target delivery group, which is not affected by the list search terms or the current page. The ownership and product type of the delivery group are verified before execution. Data is read in pages during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, query, or file generation will succeed.</para>
+        /// The WUYING server list export only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server. A single task can export up to 100,000 records. The cloud browser bookmarks and URL whitelist exports export the complete list of the target delivery group. This is not affected by the list search terms or the current page. The ownership and product type of the delivery group are verified before execution. Data is read in pages during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, query, or file generation will succeed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3159,10 +3299,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
-        /// After the task is created, save the TaskId and call DescribeExportTasks to query the task status and progress. We recommend a polling interval of 5 to 10 seconds. If the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. If the status is FAILED, check the ErrorMsg and stop polling.
+        /// <para>This operation creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
+        /// After the task is created, save TaskId and call DescribeExportTasks to query the task status and progress. The recommended polling interval is 5 to 10 seconds. When the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. When the status is FAILED, check ErrorMsg and stop polling.
         /// The task is valid for 24 hours after creation. The download URL has an independent signature validity period of up to 1 hour, which does not exceed the remaining validity period of the task. Query the latest URL before downloading. You cannot obtain a valid download URL after the task expires.
-        /// The WUYING server list export only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server, and a single task can export up to 100,000 records. The cloud browser bookmarks and URL whitelist exports retrieve the complete list of the target delivery group, which is not affected by the list search terms or the current page. The ownership and product type of the delivery group are verified before execution. Data is read in pages during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, query, or file generation will succeed.</para>
+        /// The WUYING server list export only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server. A single task can export up to 100,000 records. The cloud browser bookmarks and URL whitelist exports export the complete list of the target delivery group. This is not affected by the list search terms or the current page. The ownership and product type of the delivery group are verified before execution. Data is read in pages during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, query, or file generation will succeed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3185,10 +3325,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
-        /// After the task is created, save the TaskId and call DescribeExportTasks to query the task status and progress. We recommend a polling interval of 5 to 10 seconds. If the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. If the status is FAILED, check the ErrorMsg and stop polling.
+        /// <para>This operation creates an export task and returns the task ID and initial status. The exported file is not returned synchronously.
+        /// After the task is created, save TaskId and call DescribeExportTasks to query the task status and progress. The recommended polling interval is 5 to 10 seconds. When the status is FINISHED, use the DownloadUrl in the latest query result to download the XLSX file. When the status is FAILED, check ErrorMsg and stop polling.
         /// The task is valid for 24 hours after creation. The download URL has an independent signature validity period of up to 1 hour, which does not exceed the remaining validity period of the task. Query the latest URL before downloading. You cannot obtain a valid download URL after the task expires.
-        /// The WUYING server list export only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server, and a single task can export up to 100,000 records. The cloud browser bookmarks and URL whitelist exports retrieve the complete list of the target delivery group, which is not affected by the list search terms or the current page. The ownership and product type of the delivery group are verified before execution. Data is read in pages during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, query, or file generation will succeed.</para>
+        /// The WUYING server list export only accepts the filter fields listed in QueryParamJson. Pagination is controlled by the server. A single task can export up to 100,000 records. The cloud browser bookmarks and URL whitelist exports export the complete list of the target delivery group. This is not affected by the list search terms or the current page. The ownership and product type of the delivery group are verified before execution. Data is read in pages during execution, and no consistent snapshot is provided. A successful creation does not guarantee that subsequent verification, query, or file generation will succeed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3206,7 +3346,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</para>
+        /// <para>Creates a custom image from a deployed WUYING instance to quickly create more WUYING instances with the same configurations and avoid repeated environment configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3290,7 +3430,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</para>
+        /// <para>Creates a custom image from a deployed WUYING instance to quickly create more WUYING instances with the same configurations and avoid repeated environment configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3374,7 +3514,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</para>
+        /// <para>Creates a custom image from a deployed WUYING instance to quickly create more WUYING instances with the same configurations and avoid repeated environment configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3392,7 +3532,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a deployed WUYING instance. You can use the custom image to quickly create more WUYING instances with the same configurations, without having to repeatedly configure the instance environment each time.</para>
+        /// <para>Creates a custom image from a deployed WUYING instance to quickly create more WUYING instances with the same configurations and avoid repeated environment configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3546,13 +3686,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model provider template for model creation.</para>
+        /// <para>Creates a provider template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
-        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can create a provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Model Studio, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
+        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3630,13 +3770,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model provider template for model creation.</para>
+        /// <para>Creates a provider template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
-        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can create a provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Model Studio, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
+        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3714,13 +3854,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model provider template for model creation.</para>
+        /// <para>Creates a provider template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
-        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can create a provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Model Studio, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
+        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3738,13 +3878,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model provider template for model creation.</para>
+        /// <para>Creates a provider template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Bailian, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
-        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can create a provider template for model creation under the model templates in the Wuying Agent Management Center to configure the connection information and keys for model services (such as Alibaba Cloud Model Studio, Token Plan, and Moonshot AI) that can be invoked by agents. The created model provider template is automatically associated with the specified model template.
+        /// Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3762,13 +3902,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model template.</para>
+        /// <para>Creates a template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After model creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
+        /// <para>You can create a model creation group in the Wuying Agent Management Center to manage the model service providers and model scopes that can be invoked by agents. After creation, you can attach the model creation group to a cloud computer as the inference engine configuration for agents to execute nodes. Ensure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3830,13 +3969,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model template.</para>
+        /// <para>Creates a template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After model creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
+        /// <para>You can create a model creation group in the Wuying Agent Management Center to manage the model service providers and model scopes that can be invoked by agents. After creation, you can attach the model creation group to a cloud computer as the inference engine configuration for agents to execute nodes. Ensure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3898,13 +4036,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model template.</para>
+        /// <para>Creates a template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After model creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
+        /// <para>You can create a model creation group in the Wuying Agent Management Center to manage the model service providers and model scopes that can be invoked by agents. After creation, you can attach the model creation group to a cloud computer as the inference engine configuration for agents to execute nodes. Ensure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3922,13 +4059,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model template.</para>
+        /// <para>Creates a template for model creation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a model group in the Wuying Agent Management Center to manage the model providers and model scope that an Agent can invoke. After model creation, you can attach the model group to a cloud computer as the inference engine configuration for Agent task execution.
-        /// Make sure that you are familiar with the operations and usage of the Wuying Agent Management Center before invoking this operation.</para>
+        /// <para>You can create a model creation group in the Wuying Agent Management Center to manage the model service providers and model scopes that can be invoked by agents. After creation, you can attach the model creation group to a cloud computer as the inference engine configuration for agents to execute nodes. Ensure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3952,9 +4088,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A project corresponds to the resource configuration module in the CloudFlow console.</description></item>
-        /// <item><description>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> and bindss it at the same time.</description></item>
-        /// <item><description>This operation succeeds only when the default version of the Content is in an available state.</description></item>
+        /// <item><description>A project is equivalent to the resource configuration module in the CloudFlow console.</description></item>
+        /// <item><description>If the ContentId parameter has multiple versions, this operation <notice>uses the default version</notice> for binding.</description></item>
+        /// <item><description>This operation succeeds only when the default version of the content is in the available state.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4121,9 +4257,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A project corresponds to the resource configuration module in the CloudFlow console.</description></item>
-        /// <item><description>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> and bindss it at the same time.</description></item>
-        /// <item><description>This operation succeeds only when the default version of the Content is in an available state.</description></item>
+        /// <item><description>A project is equivalent to the resource configuration module in the CloudFlow console.</description></item>
+        /// <item><description>If the ContentId parameter has multiple versions, this operation <notice>uses the default version</notice> for binding.</description></item>
+        /// <item><description>This operation succeeds only when the default version of the content is in the available state.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4290,9 +4426,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A project corresponds to the resource configuration module in the CloudFlow console.</description></item>
-        /// <item><description>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> and bindss it at the same time.</description></item>
-        /// <item><description>This operation succeeds only when the default version of the Content is in an available state.</description></item>
+        /// <item><description>A project is equivalent to the resource configuration module in the CloudFlow console.</description></item>
+        /// <item><description>If the ContentId parameter has multiple versions, this operation <notice>uses the default version</notice> for binding.</description></item>
+        /// <item><description>This operation succeeds only when the default version of the content is in the available state.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4317,9 +4453,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>A project corresponds to the resource configuration module in the CloudFlow console.</description></item>
-        /// <item><description>When the ContentId input parameter has multiple versions, this API <notice>uses the default version</notice> and bindss it at the same time.</description></item>
-        /// <item><description>This operation succeeds only when the default version of the Content is in an available state.</description></item>
+        /// <item><description>A project is equivalent to the resource configuration module in the CloudFlow console.</description></item>
+        /// <item><description>If the ContentId parameter has multiple versions, this operation <notice>uses the default version</notice> for binding.</description></item>
+        /// <item><description>This operation succeeds only when the default version of the content is in the available state.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4338,16 +4474,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified application adaptation, or dissociates the adaptation from a specified image version.</para>
+        /// <para>Deletes a specified application adaptation or dissociates the adaptation from a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Confirm the deletion scope first.</em>*</para>
         /// <list type="bullet">
-        /// <item><description>If both ImageId and VersionId are specified: only the association between the adaptation and the specified image version is dissociated.</description></item>
-        /// <item><description>If ImageId and VersionId are not both specified: the adaptation deletion process starts. The adaptation cannot be deleted if it is still referenced by multiple images. If the application still has other adaptations, the application cannot be deleted along with it.
-        /// <b>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adaptation.</b> Verify these identifiers by querying the application and image first.</description></item>
+        /// <item><description>If both ImageId and VersionId are specified: only dissociates the adaptation from the specified image version.</description></item>
+        /// <item><description>If ImageId and VersionId are not both specified: initiates the adaptation deletion process. The adaptation cannot be deleted if it is still referenced by multiple images. If the application has other adaptations, it cannot be deleted together with the application.
+        /// <b>AdaptorId, AppVersionId, and AppId must be provided at the same time and correspond to the same application adaptation.</b> Verify these identifiers through the application and image query results first.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4406,16 +4542,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified application adaptation, or dissociates the adaptation from a specified image version.</para>
+        /// <para>Deletes a specified application adaptation or dissociates the adaptation from a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Confirm the deletion scope first.</em>*</para>
         /// <list type="bullet">
-        /// <item><description>If both ImageId and VersionId are specified: only the association between the adaptation and the specified image version is dissociated.</description></item>
-        /// <item><description>If ImageId and VersionId are not both specified: the adaptation deletion process starts. The adaptation cannot be deleted if it is still referenced by multiple images. If the application still has other adaptations, the application cannot be deleted along with it.
-        /// <b>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adaptation.</b> Verify these identifiers by querying the application and image first.</description></item>
+        /// <item><description>If both ImageId and VersionId are specified: only dissociates the adaptation from the specified image version.</description></item>
+        /// <item><description>If ImageId and VersionId are not both specified: initiates the adaptation deletion process. The adaptation cannot be deleted if it is still referenced by multiple images. If the application has other adaptations, it cannot be deleted together with the application.
+        /// <b>AdaptorId, AppVersionId, and AppId must be provided at the same time and correspond to the same application adaptation.</b> Verify these identifiers through the application and image query results first.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4474,16 +4610,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified application adaptation, or dissociates the adaptation from a specified image version.</para>
+        /// <para>Deletes a specified application adaptation or dissociates the adaptation from a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Confirm the deletion scope first.</em>*</para>
         /// <list type="bullet">
-        /// <item><description>If both ImageId and VersionId are specified: only the association between the adaptation and the specified image version is dissociated.</description></item>
-        /// <item><description>If ImageId and VersionId are not both specified: the adaptation deletion process starts. The adaptation cannot be deleted if it is still referenced by multiple images. If the application still has other adaptations, the application cannot be deleted along with it.
-        /// <b>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adaptation.</b> Verify these identifiers by querying the application and image first.</description></item>
+        /// <item><description>If both ImageId and VersionId are specified: only dissociates the adaptation from the specified image version.</description></item>
+        /// <item><description>If ImageId and VersionId are not both specified: initiates the adaptation deletion process. The adaptation cannot be deleted if it is still referenced by multiple images. If the application has other adaptations, it cannot be deleted together with the application.
+        /// <b>AdaptorId, AppVersionId, and AppId must be provided at the same time and correspond to the same application adaptation.</b> Verify these identifiers through the application and image query results first.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4502,16 +4638,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified application adaptation, or dissociates the adaptation from a specified image version.</para>
+        /// <para>Deletes a specified application adaptation or dissociates the adaptation from a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Confirm the deletion scope first.</em>*</para>
         /// <list type="bullet">
-        /// <item><description>If both ImageId and VersionId are specified: only the association between the adaptation and the specified image version is dissociated.</description></item>
-        /// <item><description>If ImageId and VersionId are not both specified: the adaptation deletion process starts. The adaptation cannot be deleted if it is still referenced by multiple images. If the application still has other adaptations, the application cannot be deleted along with it.
-        /// <b>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adaptation.</b> Verify these identifiers by querying the application and image first.</description></item>
+        /// <item><description>If both ImageId and VersionId are specified: only dissociates the adaptation from the specified image version.</description></item>
+        /// <item><description>If ImageId and VersionId are not both specified: initiates the adaptation deletion process. The adaptation cannot be deleted if it is still referenced by multiple images. If the application has other adaptations, it cannot be deleted together with the application.
+        /// <b>AdaptorId, AppVersionId, and AppId must be provided at the same time and correspond to the same application adaptation.</b> Verify these identifiers through the application and image query results first.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4530,15 +4666,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</para>
+        /// <para>Deletes a specified application version. If the version ID is omitted, deletes the entire application and its adapters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>You must dissociate all image associations from the target application or version before deletion.</em>*</para>
+        /// <para><em>You must disassociate all images from the target application or version before deletion.</em>*</para>
         /// <ol>
         /// <item><description>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</description></item>
-        /// <item><description>Use UnbindApp or DeleteAdaptor to dissociate the related image associations.</description></item>
+        /// <item><description>Use UnbindApp or DeleteAdaptor to disassociate the related images.</description></item>
         /// <item><description>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
         /// After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</description></item>
         /// </ol>
@@ -4587,15 +4723,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</para>
+        /// <para>Deletes a specified application version. If the version ID is omitted, deletes the entire application and its adapters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>You must dissociate all image associations from the target application or version before deletion.</em>*</para>
+        /// <para><em>You must disassociate all images from the target application or version before deletion.</em>*</para>
         /// <ol>
         /// <item><description>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</description></item>
-        /// <item><description>Use UnbindApp or DeleteAdaptor to dissociate the related image associations.</description></item>
+        /// <item><description>Use UnbindApp or DeleteAdaptor to disassociate the related images.</description></item>
         /// <item><description>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
         /// After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</description></item>
         /// </ol>
@@ -4644,15 +4780,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</para>
+        /// <para>Deletes a specified application version. If the version ID is omitted, deletes the entire application and its adapters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>You must dissociate all image associations from the target application or version before deletion.</em>*</para>
+        /// <para><em>You must disassociate all images from the target application or version before deletion.</em>*</para>
         /// <ol>
         /// <item><description>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</description></item>
-        /// <item><description>Use UnbindApp or DeleteAdaptor to dissociate the related image associations.</description></item>
+        /// <item><description>Use UnbindApp or DeleteAdaptor to disassociate the related images.</description></item>
         /// <item><description>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
         /// After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</description></item>
         /// </ol>
@@ -4673,15 +4809,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</para>
+        /// <para>Deletes a specified application version. If the version ID is omitted, deletes the entire application and its adapters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>You must dissociate all image associations from the target application or version before deletion.</em>*</para>
+        /// <para><em>You must disassociate all images from the target application or version before deletion.</em>*</para>
         /// <ol>
         /// <item><description>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</description></item>
-        /// <item><description>Use UnbindApp or DeleteAdaptor to dissociate the related image associations.</description></item>
+        /// <item><description>Use UnbindApp or DeleteAdaptor to disassociate the related images.</description></item>
         /// <item><description>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
         /// After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</description></item>
         /// </ol>
@@ -5020,9 +5156,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only custom images that belong to your account can be deleted.</description></item>
-        /// <item><description>For images associated with WUYING Workspace pools, WUYING Cloud Apps, or WUYING Workstations, ensure that no WUYING instances are using the image before you delete it.</description></item>
-        /// <item><description>If a WUYING Cloud Desktop template references the image, the template is also deleted when you delete the image.</description></item>
+        /// <item><description>You can only delete custom images that you own.</description></item>
+        /// <item><description>For images used in the WUYING Cloud Computer Pool, WUYING Cloud App, and WUYING Workstation product lines, ensure that no WUYING instances are using the image before you delete it.</description></item>
+        /// <item><description>If a WUYING cloud desktop template references the image, the template is also deleted when you delete the image.</description></item>
         /// <item><description>If the image is available in multiple regions, deleting the image removes it from all regions.</description></item>
         /// </list>
         /// </description>
@@ -5072,9 +5208,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only custom images that belong to your account can be deleted.</description></item>
-        /// <item><description>For images associated with WUYING Workspace pools, WUYING Cloud Apps, or WUYING Workstations, ensure that no WUYING instances are using the image before you delete it.</description></item>
-        /// <item><description>If a WUYING Cloud Desktop template references the image, the template is also deleted when you delete the image.</description></item>
+        /// <item><description>You can only delete custom images that you own.</description></item>
+        /// <item><description>For images used in the WUYING Cloud Computer Pool, WUYING Cloud App, and WUYING Workstation product lines, ensure that no WUYING instances are using the image before you delete it.</description></item>
+        /// <item><description>If a WUYING cloud desktop template references the image, the template is also deleted when you delete the image.</description></item>
         /// <item><description>If the image is available in multiple regions, deleting the image removes it from all regions.</description></item>
         /// </list>
         /// </description>
@@ -5124,9 +5260,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only custom images that belong to your account can be deleted.</description></item>
-        /// <item><description>For images associated with WUYING Workspace pools, WUYING Cloud Apps, or WUYING Workstations, ensure that no WUYING instances are using the image before you delete it.</description></item>
-        /// <item><description>If a WUYING Cloud Desktop template references the image, the template is also deleted when you delete the image.</description></item>
+        /// <item><description>You can only delete custom images that you own.</description></item>
+        /// <item><description>For images used in the WUYING Cloud Computer Pool, WUYING Cloud App, and WUYING Workstation product lines, ensure that no WUYING instances are using the image before you delete it.</description></item>
+        /// <item><description>If a WUYING cloud desktop template references the image, the template is also deleted when you delete the image.</description></item>
         /// <item><description>If the image is available in multiple regions, deleting the image removes it from all regions.</description></item>
         /// </list>
         /// </description>
@@ -5152,9 +5288,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only custom images that belong to your account can be deleted.</description></item>
-        /// <item><description>For images associated with WUYING Workspace pools, WUYING Cloud Apps, or WUYING Workstations, ensure that no WUYING instances are using the image before you delete it.</description></item>
-        /// <item><description>If a WUYING Cloud Desktop template references the image, the template is also deleted when you delete the image.</description></item>
+        /// <item><description>You can only delete custom images that you own.</description></item>
+        /// <item><description>For images used in the WUYING Cloud Computer Pool, WUYING Cloud App, and WUYING Workstation product lines, ensure that no WUYING instances are using the image before you delete it.</description></item>
+        /// <item><description>If a WUYING cloud desktop template references the image, the template is also deleted when you delete the image.</description></item>
         /// <item><description>If the image is available in multiple regions, deleting the image removes it from all regions.</description></item>
         /// </list>
         /// </description>
@@ -5179,7 +5315,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before you delete the template, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the deletion, the model configurations of associated cloud computers are automatically refreshed. Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before deletion, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the model template is deleted, the model configurations of the associated cloud desktops are automatically refreshed.
+        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5226,7 +5363,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before you delete the template, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the deletion, the model configurations of associated cloud computers are automatically refreshed. Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before deletion, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the model template is deleted, the model configurations of the associated cloud desktops are automatically refreshed.
+        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5273,7 +5411,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before you delete the template, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the deletion, the model configurations of associated cloud computers are automatically refreshed. Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before deletion, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the model template is deleted, the model configurations of the associated cloud desktops are automatically refreshed.
+        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5296,7 +5435,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before you delete the template, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the deletion, the model configurations of associated cloud computers are automatically refreshed. Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can delete a model template created under a model service provider template in the Wuying Agent Management Center. Before deletion, make sure that the model is not the default model of an associated model group. Otherwise, the deletion fails. After the model template is deleted, the model configurations of the associated cloud desktops are automatically refreshed.
+        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5319,8 +5459,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider, such as the Wuying credit package. After deletion, the associated models and key configurations are also cleared.
-        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider (such as the Wuying credit package). After deletion, the associated models and key configurations are also removed.
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5367,8 +5507,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider, such as the Wuying credit package. After deletion, the associated models and key configurations are also cleared.
-        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider (such as the Wuying credit package). After deletion, the associated models and key configurations are also removed.
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5415,8 +5555,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider, such as the Wuying credit package. After deletion, the associated models and key configurations are also cleared.
-        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider (such as the Wuying credit package). After deletion, the associated models and key configurations are also removed.
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5439,8 +5579,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider, such as the Wuying credit package. After deletion, the associated models and key configurations are also cleared.
-        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
+        /// <para>You can delete a model provider template created under model templates in the Wuying Agent Management Center. Before deletion, ensure that the model provider is not the provider of the default model and is not a system-preset provider (such as the Wuying credit package). After deletion, the associated models and key configurations are also removed.
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5463,8 +5603,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model group created in the Wuying Agent Management Center. Before you delete the model group, make sure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
-        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can delete a model group created in the Wuying Agent Management Center. Before deletion, ensure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
+        /// Before you use this API operation, ensure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5511,8 +5651,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model group created in the Wuying Agent Management Center. Before you delete the model group, make sure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
-        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can delete a model group created in the Wuying Agent Management Center. Before deletion, ensure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
+        /// Before you use this API operation, ensure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5559,8 +5699,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model group created in the Wuying Agent Management Center. Before you delete the model group, make sure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
-        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can delete a model group created in the Wuying Agent Management Center. Before deletion, ensure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
+        /// Before you use this API operation, ensure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5583,8 +5723,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete a model group created in the Wuying Agent Management Center. Before you delete the model group, make sure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
-        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can delete a model group created in the Wuying Agent Management Center. Before deletion, ensure that the template is not authorized for any resources. Otherwise, the deletion fails. After the model group is deleted, the model providers and models in the model group are also removed.
+        /// Before you use this API operation, ensure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5742,7 +5882,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures SLS log delivery.</para>
+        /// <para>Configures Simple Log Service (SLS) log delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5810,7 +5950,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures SLS log delivery.</para>
+        /// <para>Configures Simple Log Service (SLS) log delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5878,7 +6018,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures SLS log delivery.</para>
+        /// <para>Configures Simple Log Service (SLS) log delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5896,7 +6036,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures SLS log delivery.</para>
+        /// <para>Configures Simple Log Service (SLS) log delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5914,12 +6054,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</para>
+        /// <para>Performs a paged query to retrieve the resource and session events of the current account within the last 30 days by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</para>
+        /// <para>Queries the resource and session events of the current account. <c>StartTime</c> and <c>EndTime</c> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <c>PageSize</c> and <c>PageNumber</c>. The current version does not use <c>MaxResults</c> and <c>NextToken</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6021,12 +6161,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</para>
+        /// <para>Performs a paged query to retrieve the resource and session events of the current account within the last 30 days by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</para>
+        /// <para>Queries the resource and session events of the current account. <c>StartTime</c> and <c>EndTime</c> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <c>PageSize</c> and <c>PageNumber</c>. The current version does not use <c>MaxResults</c> and <c>NextToken</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6128,12 +6268,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</para>
+        /// <para>Performs a paged query to retrieve the resource and session events of the current account within the last 30 days by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</para>
+        /// <para>Queries the resource and session events of the current account. <c>StartTime</c> and <c>EndTime</c> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <c>PageSize</c> and <c>PageNumber</c>. The current version does not use <c>MaxResults</c> and <c>NextToken</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6151,12 +6291,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</para>
+        /// <para>Performs a paged query to retrieve the resource and session events of the current account within the last 30 days by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</para>
+        /// <para>Queries the resource and session events of the current account. <c>StartTime</c> and <c>EndTime</c> must be specified at the same time, and the time range includes the start and end times. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is used. Results are returned in descending order of the event log time. To use page number-based pagination, specify <c>PageSize</c> and <c>PageNumber</c>. The current version does not use <c>MaxResults</c> and <c>NextToken</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6174,15 +6314,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status, progress, and download URLs of export tasks by paging.</para>
+        /// <para>Queries the execution status, progress, and download URLs of export tasks by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query export tasks under the current Alibaba Cloud account by paging, and obtain the task status, execution progress, export file name, and download URL. Export tasks are created by calling CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
+        /// <para>Calls this operation to query the export tasks under the current Alibaba Cloud account by page to obtain the task status, execution progress, export file names, and download URLs. Export tasks are created by CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
         /// The query results are returned in descending order of task creation time, with the most recently created tasks listed first. Only tasks in the INIT, RUNNING, FINISHED, and FAILED states are returned. Tasks marked as EXPIRED are not included in the results.
         /// When polling a single task by TaskId, set PageNumber to 1 and PageSize to 1, set the polling interval to 5 to 10 seconds, and stop polling after the task enters the FINISHED or FAILED state.
-        /// A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, you may still query a FINISHED task, but the DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
+        /// A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, a FINISHED task may still be queried, but its DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
         /// If the query result is an empty array, it may be because there are no visible tasks under the current account, the task type does not match, the page number is out of bounds, or the tasks have expired. This operation always returns an array structure and does not return an error when the query result is empty.
         /// The DownloadUrl is an OSS pre-signed URL. The default maximum validity period is 1 hour and does not exceed the remaining validity period of the task. The server automatically refreshes the URL when it is about to expire. Use the URL returned by the most recent query for downloading and do not cache the initially returned URL for a long time.</para>
         /// </description>
@@ -6238,15 +6378,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status, progress, and download URLs of export tasks by paging.</para>
+        /// <para>Queries the execution status, progress, and download URLs of export tasks by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query export tasks under the current Alibaba Cloud account by paging, and obtain the task status, execution progress, export file name, and download URL. Export tasks are created by calling CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
+        /// <para>Calls this operation to query the export tasks under the current Alibaba Cloud account by page to obtain the task status, execution progress, export file names, and download URLs. Export tasks are created by CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
         /// The query results are returned in descending order of task creation time, with the most recently created tasks listed first. Only tasks in the INIT, RUNNING, FINISHED, and FAILED states are returned. Tasks marked as EXPIRED are not included in the results.
         /// When polling a single task by TaskId, set PageNumber to 1 and PageSize to 1, set the polling interval to 5 to 10 seconds, and stop polling after the task enters the FINISHED or FAILED state.
-        /// A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, you may still query a FINISHED task, but the DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
+        /// A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, a FINISHED task may still be queried, but its DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
         /// If the query result is an empty array, it may be because there are no visible tasks under the current account, the task type does not match, the page number is out of bounds, or the tasks have expired. This operation always returns an array structure and does not return an error when the query result is empty.
         /// The DownloadUrl is an OSS pre-signed URL. The default maximum validity period is 1 hour and does not exceed the remaining validity period of the task. The server automatically refreshes the URL when it is about to expire. Use the URL returned by the most recent query for downloading and do not cache the initially returned URL for a long time.</para>
         /// </description>
@@ -6302,15 +6442,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status, progress, and download URLs of export tasks by paging.</para>
+        /// <para>Queries the execution status, progress, and download URLs of export tasks by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query export tasks under the current Alibaba Cloud account by paging, and obtain the task status, execution progress, export file name, and download URL. Export tasks are created by calling CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
+        /// <para>Calls this operation to query the export tasks under the current Alibaba Cloud account by page to obtain the task status, execution progress, export file names, and download URLs. Export tasks are created by CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
         /// The query results are returned in descending order of task creation time, with the most recently created tasks listed first. Only tasks in the INIT, RUNNING, FINISHED, and FAILED states are returned. Tasks marked as EXPIRED are not included in the results.
         /// When polling a single task by TaskId, set PageNumber to 1 and PageSize to 1, set the polling interval to 5 to 10 seconds, and stop polling after the task enters the FINISHED or FAILED state.
-        /// A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, you may still query a FINISHED task, but the DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
+        /// A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, a FINISHED task may still be queried, but its DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
         /// If the query result is an empty array, it may be because there are no visible tasks under the current account, the task type does not match, the page number is out of bounds, or the tasks have expired. This operation always returns an array structure and does not return an error when the query result is empty.
         /// The DownloadUrl is an OSS pre-signed URL. The default maximum validity period is 1 hour and does not exceed the remaining validity period of the task. The server automatically refreshes the URL when it is about to expire. Use the URL returned by the most recent query for downloading and do not cache the initially returned URL for a long time.</para>
         /// </description>
@@ -6330,15 +6470,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status, progress, and download URLs of export tasks by paging.</para>
+        /// <para>Queries the execution status, progress, and download URLs of export tasks by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query export tasks under the current Alibaba Cloud account by paging, and obtain the task status, execution progress, export file name, and download URL. Export tasks are created by calling CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
+        /// <para>Calls this operation to query the export tasks under the current Alibaba Cloud account by page to obtain the task status, execution progress, export file names, and download URLs. Export tasks are created by CreateExportTask. This operation only reads task information and does not create, modify, or retry tasks.
         /// The query results are returned in descending order of task creation time, with the most recently created tasks listed first. Only tasks in the INIT, RUNNING, FINISHED, and FAILED states are returned. Tasks marked as EXPIRED are not included in the results.
         /// When polling a single task by TaskId, set PageNumber to 1 and PageSize to 1, set the polling interval to 5 to 10 seconds, and stop polling after the task enters the FINISHED or FAILED state.
-        /// A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, you may still query a FINISHED task, but the DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
+        /// A task is valid for 24 hours after creation and is marked as expired by a background task after 25 hours. Therefore, within the 24- to 25-hour window, a FINISHED task may still be queried, but its DownloadUrl is empty. After a task is marked as expired, the query result is an empty array.
         /// If the query result is an empty array, it may be because there are no visible tasks under the current account, the task type does not match, the page number is out of bounds, or the tasks have expired. This operation always returns an array structure and does not return an error when the query result is empty.
         /// The DownloadUrl is an OSS pre-signed URL. The default maximum validity period is 1 hour and does not exceed the remaining validity period of the task. The server automatically refreshes the URL when it is about to expire. Use the URL returned by the most recent query for downloading and do not cache the initially returned URL for a long time.</para>
         /// </description>
@@ -6358,7 +6498,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Alibaba Cloud accounts to which the current image is shared.</para>
+        /// <para>Queries the list of Alibaba Cloud accounts with which the current image is shared.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6400,7 +6540,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Alibaba Cloud accounts to which the current image is shared.</para>
+        /// <para>Queries the list of Alibaba Cloud accounts with which the current image is shared.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6442,7 +6582,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Alibaba Cloud accounts to which the current image is shared.</para>
+        /// <para>Queries the list of Alibaba Cloud accounts with which the current image is shared.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6460,7 +6600,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Alibaba Cloud accounts to which the current image is shared.</para>
+        /// <para>Queries the list of Alibaba Cloud accounts with which the current image is shared.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6474,6 +6614,170 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeShareImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the system default path rules or the user data roaming rules of a specified app instance group or app instance group set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When querying a specified target, specify either the app instance group ID or the app instance group set ID. When querying a set, the rules of the primary app instance group are returned. You can use the query result as a reference for modifying rules and then call SetUserProfilePathRules to submit the complete rule list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeUserProfilePathRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserProfilePathRulesResponse
+        /// </returns>
+        public DescribeUserProfilePathRulesResponse DescribeUserProfilePathRulesWithOptions(DescribeUserProfilePathRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupSetId))
+            {
+                body["AppInstanceGroupSetId"] = request.AppInstanceGroupSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                body["RuleType"] = request.RuleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserProfilePathRules",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserProfilePathRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the system default path rules or the user data roaming rules of a specified app instance group or app instance group set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When querying a specified target, specify either the app instance group ID or the app instance group set ID. When querying a set, the rules of the primary app instance group are returned. You can use the query result as a reference for modifying rules and then call SetUserProfilePathRules to submit the complete rule list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeUserProfilePathRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserProfilePathRulesResponse
+        /// </returns>
+        public async Task<DescribeUserProfilePathRulesResponse> DescribeUserProfilePathRulesWithOptionsAsync(DescribeUserProfilePathRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupSetId))
+            {
+                body["AppInstanceGroupSetId"] = request.AppInstanceGroupSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                body["RuleType"] = request.RuleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserProfilePathRules",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserProfilePathRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the system default path rules or the user data roaming rules of a specified app instance group or app instance group set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When querying a specified target, specify either the app instance group ID or the app instance group set ID. When querying a set, the rules of the primary app instance group are returned. You can use the query result as a reference for modifying rules and then call SetUserProfilePathRules to submit the complete rule list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeUserProfilePathRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserProfilePathRulesResponse
+        /// </returns>
+        public DescribeUserProfilePathRulesResponse DescribeUserProfilePathRules(DescribeUserProfilePathRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserProfilePathRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the system default path rules or the user data roaming rules of a specified app instance group or app instance group set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When querying a specified target, specify either the app instance group ID or the app instance group set ID. When querying a set, the rules of the primary app instance group are returned. You can use the query result as a reference for modifying rules and then call SetUserProfilePathRules to submit the complete rule list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeUserProfilePathRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserProfilePathRulesResponse
+        /// </returns>
+        public async Task<DescribeUserProfilePathRulesResponse> DescribeUserProfilePathRulesAsync(DescribeUserProfilePathRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserProfilePathRulesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6598,7 +6902,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Elastic IP Address (EIP) information of a Wuying workspace.</para>
+        /// <para>Queries the elastic IP address (EIP) information of a Wuying workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6644,7 +6948,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Elastic IP Address (EIP) information of a Wuying workspace.</para>
+        /// <para>Queries the elastic IP address (EIP) information of a Wuying workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6690,7 +6994,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Elastic IP Address (EIP) information of a Wuying workspace.</para>
+        /// <para>Queries the elastic IP address (EIP) information of a Wuying workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6708,7 +7012,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Elastic IP Address (EIP) information of a Wuying workspace.</para>
+        /// <para>Queries the elastic IP address (EIP) information of a Wuying workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6726,7 +7030,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Confirms the successful verification of the image or application creation process.</para>
+        /// <para>Confirms the successful verification of an image or application build.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6780,7 +7084,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Confirms the successful verification of the image or application creation process.</para>
+        /// <para>Confirms the successful verification of an image or application build.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6834,7 +7138,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Confirms the successful verification of the image or application creation process.</para>
+        /// <para>Confirms the successful verification of an image or application build.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6852,7 +7156,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Confirms the successful verification of the image or application creation process.</para>
+        /// <para>Confirms the successful verification of an image or application build.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6870,7 +7174,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider, including the total count, the count of runtimes without model configurations, the count of runtimes without channel configurations, the count of risky runtimes, and the count of expired runtimes.</para>
+        /// <para>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider. The statistics include the total number of runtimes, the number of runtimes without a configured model, the number of runtimes without a configured channel, the number of risky runtimes, and the number of expired runtimes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6924,7 +7228,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider, including the total count, the count of runtimes without model configurations, the count of runtimes without channel configurations, the count of risky runtimes, and the count of expired runtimes.</para>
+        /// <para>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider. The statistics include the total number of runtimes, the number of runtimes without a configured model, the number of runtimes without a configured channel, the number of risky runtimes, and the number of expired runtimes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6978,7 +7282,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider, including the total count, the count of runtimes without model configurations, the count of runtimes without channel configurations, the count of risky runtimes, and the count of expired runtimes.</para>
+        /// <para>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider. The statistics include the total number of runtimes, the number of runtimes without a configured model, the number of runtimes without a configured channel, the number of risky runtimes, and the number of expired runtimes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6996,7 +7300,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider, including the total count, the count of runtimes without model configurations, the count of runtimes without channel configurations, the count of risky runtimes, and the count of expired runtimes.</para>
+        /// <para>Queries the statistics of runtimes of a specified type under the current Alibaba Cloud account, grouped by agent platform and agent provider. The statistics include the total number of runtimes, the number of runtimes without a configured model, the number of runtimes without a configured channel, the number of risky runtimes, and the number of expired runtimes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7151,7 +7455,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <ol>
         /// <item><description>Obtain the TaskId and actual TaskType from the response of the task creation operation or GetTask.</description></item>
         /// <item><description>Specify ResourceType to obtain the connection information for the creation or validation environment.</description></item>
-        /// <item><description>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+        /// <item><description>Use the returned authorization code together with the user, resource group, and application identifiers in the same response for connection.
         /// The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</description></item>
         /// </ol>
         /// </description>
@@ -7224,7 +7528,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <ol>
         /// <item><description>Obtain the TaskId and actual TaskType from the response of the task creation operation or GetTask.</description></item>
         /// <item><description>Specify ResourceType to obtain the connection information for the creation or validation environment.</description></item>
-        /// <item><description>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+        /// <item><description>Use the returned authorization code together with the user, resource group, and application identifiers in the same response for connection.
         /// The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</description></item>
         /// </ol>
         /// </description>
@@ -7297,7 +7601,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <ol>
         /// <item><description>Obtain the TaskId and actual TaskType from the response of the task creation operation or GetTask.</description></item>
         /// <item><description>Specify ResourceType to obtain the connection information for the creation or validation environment.</description></item>
-        /// <item><description>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+        /// <item><description>Use the returned authorization code together with the user, resource group, and application identifiers in the same response for connection.
         /// The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</description></item>
         /// </ol>
         /// </description>
@@ -7326,7 +7630,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <ol>
         /// <item><description>Obtain the TaskId and actual TaskType from the response of the task creation operation or GetTask.</description></item>
         /// <item><description>Specify ResourceType to obtain the connection information for the creation or validation environment.</description></item>
-        /// <item><description>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+        /// <item><description>Use the returned authorization code together with the user, resource group, and application identifiers in the same response for connection.
         /// The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</description></item>
         /// </ol>
         /// </description>
@@ -7353,13 +7657,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>This topic describes how to use the query operation in the monthly active user (MAU) billing scenario.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Obtain the ID of a cloud browser group within the current account. You can call <c>ListBrowserInstanceGroup</c> to obtain the ID.</para>
+        /// <para>You have obtained the ID of a cloud browser group under the current account. You can call the <c>ListBrowserInstanceGroup</c> operation to obtain the ID.</para>
         /// <h2>Response content</h2>
-        /// <para>Returns the current configuration, status, and authorization statistics of the browser group. The bookmark and website access lists in the details return up to the first 20 entries each. To query the complete lists, call <c>ListBrowserBookmarks</c> and <c>ListBrowserRestrictedURLs</c> respectively.</para>
+        /// <para>The operation returns the current configuration, status, and authorization statistics of the browser group. The details return up to the first 20 bookmarks and website access records. To query the complete lists, call the <c>ListBrowserBookmarks</c> and <c>ListBrowserRestrictedURLs</c> operations.</para>
         /// <h2>What to do next</h2>
-        /// <para>This operation only queries the configuration and does not modify resources. After reading the returned status, perform connection or management operations that match the status.</para>
-        /// <h2>Example description</h2>
-        /// <para>In the examples, <c>-</c> indicates that the current scenario does not apply or the field is not returned. It is not a string actually returned by the operation. Examples of common resource IDs are masked. Use the actual query results.</para>
+        /// <para>This operation only queries configurations and does not modify resources. After you read the returned status, perform connection or management operations that match the status.</para>
+        /// <h2>Examples</h2>
+        /// <para>In the examples, <c>-</c> indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the operation. Common resource ID examples are desensitized. Use the actual query results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7404,13 +7708,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>This topic describes how to use the query operation in the monthly active user (MAU) billing scenario.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Obtain the ID of a cloud browser group within the current account. You can call <c>ListBrowserInstanceGroup</c> to obtain the ID.</para>
+        /// <para>You have obtained the ID of a cloud browser group under the current account. You can call the <c>ListBrowserInstanceGroup</c> operation to obtain the ID.</para>
         /// <h2>Response content</h2>
-        /// <para>Returns the current configuration, status, and authorization statistics of the browser group. The bookmark and website access lists in the details return up to the first 20 entries each. To query the complete lists, call <c>ListBrowserBookmarks</c> and <c>ListBrowserRestrictedURLs</c> respectively.</para>
+        /// <para>The operation returns the current configuration, status, and authorization statistics of the browser group. The details return up to the first 20 bookmarks and website access records. To query the complete lists, call the <c>ListBrowserBookmarks</c> and <c>ListBrowserRestrictedURLs</c> operations.</para>
         /// <h2>What to do next</h2>
-        /// <para>This operation only queries the configuration and does not modify resources. After reading the returned status, perform connection or management operations that match the status.</para>
-        /// <h2>Example description</h2>
-        /// <para>In the examples, <c>-</c> indicates that the current scenario does not apply or the field is not returned. It is not a string actually returned by the operation. Examples of common resource IDs are masked. Use the actual query results.</para>
+        /// <para>This operation only queries configurations and does not modify resources. After you read the returned status, perform connection or management operations that match the status.</para>
+        /// <h2>Examples</h2>
+        /// <para>In the examples, <c>-</c> indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the operation. Common resource ID examples are desensitized. Use the actual query results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7455,13 +7759,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>This topic describes how to use the query operation in the monthly active user (MAU) billing scenario.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Obtain the ID of a cloud browser group within the current account. You can call <c>ListBrowserInstanceGroup</c> to obtain the ID.</para>
+        /// <para>You have obtained the ID of a cloud browser group under the current account. You can call the <c>ListBrowserInstanceGroup</c> operation to obtain the ID.</para>
         /// <h2>Response content</h2>
-        /// <para>Returns the current configuration, status, and authorization statistics of the browser group. The bookmark and website access lists in the details return up to the first 20 entries each. To query the complete lists, call <c>ListBrowserBookmarks</c> and <c>ListBrowserRestrictedURLs</c> respectively.</para>
+        /// <para>The operation returns the current configuration, status, and authorization statistics of the browser group. The details return up to the first 20 bookmarks and website access records. To query the complete lists, call the <c>ListBrowserBookmarks</c> and <c>ListBrowserRestrictedURLs</c> operations.</para>
         /// <h2>What to do next</h2>
-        /// <para>This operation only queries the configuration and does not modify resources. After reading the returned status, perform connection or management operations that match the status.</para>
-        /// <h2>Example description</h2>
-        /// <para>In the examples, <c>-</c> indicates that the current scenario does not apply or the field is not returned. It is not a string actually returned by the operation. Examples of common resource IDs are masked. Use the actual query results.</para>
+        /// <para>This operation only queries configurations and does not modify resources. After you read the returned status, perform connection or management operations that match the status.</para>
+        /// <h2>Examples</h2>
+        /// <para>In the examples, <c>-</c> indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the operation. Common resource ID examples are desensitized. Use the actual query results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7486,13 +7790,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>This topic describes how to use the query operation in the monthly active user (MAU) billing scenario.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Obtain the ID of a cloud browser group within the current account. You can call <c>ListBrowserInstanceGroup</c> to obtain the ID.</para>
+        /// <para>You have obtained the ID of a cloud browser group under the current account. You can call the <c>ListBrowserInstanceGroup</c> operation to obtain the ID.</para>
         /// <h2>Response content</h2>
-        /// <para>Returns the current configuration, status, and authorization statistics of the browser group. The bookmark and website access lists in the details return up to the first 20 entries each. To query the complete lists, call <c>ListBrowserBookmarks</c> and <c>ListBrowserRestrictedURLs</c> respectively.</para>
+        /// <para>The operation returns the current configuration, status, and authorization statistics of the browser group. The details return up to the first 20 bookmarks and website access records. To query the complete lists, call the <c>ListBrowserBookmarks</c> and <c>ListBrowserRestrictedURLs</c> operations.</para>
         /// <h2>What to do next</h2>
-        /// <para>This operation only queries the configuration and does not modify resources. After reading the returned status, perform connection or management operations that match the status.</para>
-        /// <h2>Example description</h2>
-        /// <para>In the examples, <c>-</c> indicates that the current scenario does not apply or the field is not returned. It is not a string actually returned by the operation. Examples of common resource IDs are masked. Use the actual query results.</para>
+        /// <para>This operation only queries configurations and does not modify resources. After you read the returned status, perform connection or management operations that match the status.</para>
+        /// <h2>Examples</h2>
+        /// <para>In the examples, <c>-</c> indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the operation. Common resource ID examples are desensitized. Use the actual query results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7971,7 +8275,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the effective image versions in various regions by ImageId. If a newer version is configured in the same region, the newer version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
+        /// <para>Queries the effective versions of an image in various regions by ImageId. If a image version is configured in the same region, the image version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8042,7 +8346,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the effective image versions in various regions by ImageId. If a newer version is configured in the same region, the newer version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
+        /// <para>Queries the effective versions of an image in various regions by ImageId. If a image version is configured in the same region, the image version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8113,7 +8417,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the effective image versions in various regions by ImageId. If a newer version is configured in the same region, the newer version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
+        /// <para>Queries the effective versions of an image in various regions by ImageId. If a image version is configured in the same region, the image version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8136,7 +8440,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the effective image versions in various regions by ImageId. If a newer version is configured in the same region, the newer version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
+        /// <para>Queries the effective versions of an image in various regions by ImageId. If a image version is configured in the same region, the image version is returned first. You can specify BizRegionId to limit the query to a specific region. The returned results are also constrained by the product type and the regions visible to the account. To query the details of a specific version, call GetImageById.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8159,7 +8463,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Visitor information is filled in on the lead capture page when visitors execute a cloud flow. Therefore, the usage mode of cloud applications does not generate visitor information.</para>
+        /// <para>Visitor information is filled in by visitors on the lead capture page when they execute a cloud flow. Therefore, the usage of cloud applications does not generate visitor information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8206,7 +8510,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Visitor information is filled in on the lead capture page when visitors execute a cloud flow. Therefore, the usage mode of cloud applications does not generate visitor information.</para>
+        /// <para>Visitor information is filled in by visitors on the lead capture page when they execute a cloud flow. Therefore, the usage of cloud applications does not generate visitor information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8253,7 +8557,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Visitor information is filled in on the lead capture page when visitors execute a cloud flow. Therefore, the usage mode of cloud applications does not generate visitor information.</para>
+        /// <para>Visitor information is filled in by visitors on the lead capture page when they execute a cloud flow. Therefore, the usage of cloud applications does not generate visitor information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8276,7 +8580,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Visitor information is filled in on the lead capture page when visitors execute a cloud flow. Therefore, the usage mode of cloud applications does not generate visitor information.</para>
+        /// <para>Visitor information is filled in by visitors on the lead capture page when they execute a cloud flow. Therefore, the usage of cloud applications does not generate visitor information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8299,7 +8603,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must specify at least one of ImageId and VersionId. If you specify only ImageId, the online version is queried. If you specify VersionId, the specified version is queried. If you specify both parameters, the VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
+        /// <para>You must specify at least one of ImageId and VersionId. If only ImageId is specified, the online version is queried. If VersionId is specified, the specified version is queried. If both parameters are specified, VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8366,7 +8670,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must specify at least one of ImageId and VersionId. If you specify only ImageId, the online version is queried. If you specify VersionId, the specified version is queried. If you specify both parameters, the VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
+        /// <para>You must specify at least one of ImageId and VersionId. If only ImageId is specified, the online version is queried. If VersionId is specified, the specified version is queried. If both parameters are specified, VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8433,7 +8737,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must specify at least one of ImageId and VersionId. If you specify only ImageId, the online version is queried. If you specify VersionId, the specified version is queried. If you specify both parameters, the VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
+        /// <para>You must specify at least one of ImageId and VersionId. If only ImageId is specified, the online version is queried. If VersionId is specified, the specified version is queried. If both parameters are specified, VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8456,7 +8760,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must specify at least one of ImageId and VersionId. If you specify only ImageId, the online version is queried. If you specify VersionId, the specified version is queried. If you specify both parameters, the VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
+        /// <para>You must specify at least one of ImageId and VersionId. If only ImageId is specified, the online version is queried. If VersionId is specified, the specified version is queried. If both parameters are specified, VersionId must belong to the specified image. To query the effective version in each region, call GetEffectiveImageById.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8479,7 +8783,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the corresponding list of region IDs.</para>
+        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the list of corresponding region IDs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8530,7 +8834,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the corresponding list of region IDs.</para>
+        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the list of corresponding region IDs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8581,7 +8885,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the corresponding list of region IDs.</para>
+        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the list of corresponding region IDs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8604,7 +8908,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the corresponding list of region IDs.</para>
+        /// <para>Queries the region distribution status of an image by ImageId. If VersionId is not specified, the online version is queried. If VersionId is specified, the specified version is queried. Returns the non-deleted region distribution records and the list of corresponding region IDs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8627,8 +8931,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can query the details of a specified model provider template in the Wuying Agent Management Center, including the provider name, description, and connection configuration list.
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8675,8 +8979,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can query the details of a specified model provider template in the Wuying Agent Management Center, including the provider name, description, and connection configuration list.
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8723,8 +9027,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can query the details of a specified model provider template in the Wuying Agent Management Center, including the provider name, description, and connection configuration list.
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8747,8 +9051,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of a specified model provider template in the WUYING Agent Management Center, including the provider name, description, and connection configuration list.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can query the details of a specified model provider template in the Wuying Agent Management Center, including the provider name, description, and connection configuration list.
+        /// Before you call this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8771,13 +9075,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the credentials and connection information required for a client to establish an MQTT connection.</para>
+        /// <para>Call this operation to retrieve the credentials and connection information required for a client to establish an MQTT connection.</para>
         /// <ol>
-        /// <item><description>Use MqttUsername and MqttPassword as the username and password when connecting the MQTT client.</description></item>
-        /// <item><description>Use MqttEndpoint as the connection endpoint. If the client meets the VPC network access requirements, you can use MqttVPCEndpoint. MqttInstanceId is used for token authentication, and MqttGroupId is used to concatenate the MQTT ClientId.</description></item>
-        /// <item><description>Distinguish between publish and subscribe topics based on the topic, type, and permission fields of each item in TopicList. W indicates publish permission, and R indicates subscribe permission.</description></item>
-        /// <item><description>ExpireTimeStamp is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
-        /// The device identity and request IDs in the documentation are demonstration data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
+        /// <item><description>Use <c>MqttUsername</c> and <c>MqttPassword</c> as the username and password when connecting the MQTT client.</description></item>
+        /// <item><description>Use <c>MqttEndpoint</c> as the connection endpoint. If the client meets the required VPC network access conditions, you can use <c>MqttVPCEndpoint</c>. <c>MqttInstanceId</c> is used for token authentication, and <c>MqttGroupId</c> is used to concatenate the MQTT ClientId.</description></item>
+        /// <item><description>Distinguish between publish and subscribe topics based on the <c>topic</c>, <c>type</c>, and <c>permission</c> fields of each item in <c>TopicList</c>. <c>W</c> indicates publish permission, and <c>R</c> indicates subscribe permission.</description></item>
+        /// <item><description><c>ExpireTimeStamp</c> is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
+        /// The device identity and request IDs in the documentation are demo data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are sample or desensitized values. These examples cannot be used directly for actual connections.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -8847,13 +9151,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the credentials and connection information required for a client to establish an MQTT connection.</para>
+        /// <para>Call this operation to retrieve the credentials and connection information required for a client to establish an MQTT connection.</para>
         /// <ol>
-        /// <item><description>Use MqttUsername and MqttPassword as the username and password when connecting the MQTT client.</description></item>
-        /// <item><description>Use MqttEndpoint as the connection endpoint. If the client meets the VPC network access requirements, you can use MqttVPCEndpoint. MqttInstanceId is used for token authentication, and MqttGroupId is used to concatenate the MQTT ClientId.</description></item>
-        /// <item><description>Distinguish between publish and subscribe topics based on the topic, type, and permission fields of each item in TopicList. W indicates publish permission, and R indicates subscribe permission.</description></item>
-        /// <item><description>ExpireTimeStamp is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
-        /// The device identity and request IDs in the documentation are demonstration data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
+        /// <item><description>Use <c>MqttUsername</c> and <c>MqttPassword</c> as the username and password when connecting the MQTT client.</description></item>
+        /// <item><description>Use <c>MqttEndpoint</c> as the connection endpoint. If the client meets the required VPC network access conditions, you can use <c>MqttVPCEndpoint</c>. <c>MqttInstanceId</c> is used for token authentication, and <c>MqttGroupId</c> is used to concatenate the MQTT ClientId.</description></item>
+        /// <item><description>Distinguish between publish and subscribe topics based on the <c>topic</c>, <c>type</c>, and <c>permission</c> fields of each item in <c>TopicList</c>. <c>W</c> indicates publish permission, and <c>R</c> indicates subscribe permission.</description></item>
+        /// <item><description><c>ExpireTimeStamp</c> is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
+        /// The device identity and request IDs in the documentation are demo data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are sample or desensitized values. These examples cannot be used directly for actual connections.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -8923,13 +9227,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the credentials and connection information required for a client to establish an MQTT connection.</para>
+        /// <para>Call this operation to retrieve the credentials and connection information required for a client to establish an MQTT connection.</para>
         /// <ol>
-        /// <item><description>Use MqttUsername and MqttPassword as the username and password when connecting the MQTT client.</description></item>
-        /// <item><description>Use MqttEndpoint as the connection endpoint. If the client meets the VPC network access requirements, you can use MqttVPCEndpoint. MqttInstanceId is used for token authentication, and MqttGroupId is used to concatenate the MQTT ClientId.</description></item>
-        /// <item><description>Distinguish between publish and subscribe topics based on the topic, type, and permission fields of each item in TopicList. W indicates publish permission, and R indicates subscribe permission.</description></item>
-        /// <item><description>ExpireTimeStamp is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
-        /// The device identity and request IDs in the documentation are demonstration data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
+        /// <item><description>Use <c>MqttUsername</c> and <c>MqttPassword</c> as the username and password when connecting the MQTT client.</description></item>
+        /// <item><description>Use <c>MqttEndpoint</c> as the connection endpoint. If the client meets the required VPC network access conditions, you can use <c>MqttVPCEndpoint</c>. <c>MqttInstanceId</c> is used for token authentication, and <c>MqttGroupId</c> is used to concatenate the MQTT ClientId.</description></item>
+        /// <item><description>Distinguish between publish and subscribe topics based on the <c>topic</c>, <c>type</c>, and <c>permission</c> fields of each item in <c>TopicList</c>. <c>W</c> indicates publish permission, and <c>R</c> indicates subscribe permission.</description></item>
+        /// <item><description><c>ExpireTimeStamp</c> is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
+        /// The device identity and request IDs in the documentation are demo data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are sample or desensitized values. These examples cannot be used directly for actual connections.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -8953,13 +9257,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the credentials and connection information required for a client to establish an MQTT connection.</para>
+        /// <para>Call this operation to retrieve the credentials and connection information required for a client to establish an MQTT connection.</para>
         /// <ol>
-        /// <item><description>Use MqttUsername and MqttPassword as the username and password when connecting the MQTT client.</description></item>
-        /// <item><description>Use MqttEndpoint as the connection endpoint. If the client meets the VPC network access requirements, you can use MqttVPCEndpoint. MqttInstanceId is used for token authentication, and MqttGroupId is used to concatenate the MQTT ClientId.</description></item>
-        /// <item><description>Distinguish between publish and subscribe topics based on the topic, type, and permission fields of each item in TopicList. W indicates publish permission, and R indicates subscribe permission.</description></item>
-        /// <item><description>ExpireTimeStamp is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
-        /// The device identity and request IDs in the documentation are demonstration data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are exemplified or desensitized. These examples cannot be used directly for actual connections.</description></item>
+        /// <item><description>Use <c>MqttUsername</c> and <c>MqttPassword</c> as the username and password when connecting the MQTT client.</description></item>
+        /// <item><description>Use <c>MqttEndpoint</c> as the connection endpoint. If the client meets the required VPC network access conditions, you can use <c>MqttVPCEndpoint</c>. <c>MqttInstanceId</c> is used for token authentication, and <c>MqttGroupId</c> is used to concatenate the MQTT ClientId.</description></item>
+        /// <item><description>Distinguish between publish and subscribe topics based on the <c>topic</c>, <c>type</c>, and <c>permission</c> fields of each item in <c>TopicList</c>. <c>W</c> indicates publish permission, and <c>R</c> indicates subscribe permission.</description></item>
+        /// <item><description><c>ExpireTimeStamp</c> is the UNIX timestamp in milliseconds when the password expires. Credentials may be reused. Retrieve new credentials based on the expiration time returned in the response.
+        /// The device identity and request IDs in the documentation are demo data. The domain name uses the <c>example.com</c> sample domain. Credentials and instance identity are sample or desensitized values. These examples cannot be used directly for actual connections.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9242,30 +9546,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing and discount information required to scale out a subscription delivery group to a specified total number of nodes.</para>
+        /// <para>Queries the price and discount information required to scale out a subscription delivery group to a specified total number of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the resource scale-out price of an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
-        /// <b>Verify the following conditions before you call this operation:</b></para>
+        /// <para>This operation queries the resource scale-out price for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+        /// <b>Before you call this operation, verify the following conditions:</b></para>
         /// <list type="bullet">
         /// <item><description>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</description></item>
-        /// <item><description>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and billed by node. Pay-as-you-go or browser groups billed by monthly active user (MAU) are not supported.</description></item>
+        /// <item><description>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</description></item>
         /// <item><description>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</description></item>
         /// <item><description>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the account in the corresponding region, product, and billing method.
         /// <b>Parameter relationships:</b></description></item>
-        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required and must be specified together.</description></item>
+        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified at the same time.</description></item>
         /// <item><description>ProductType must match the product corresponding to AppInstanceGroupId.</description></item>
-        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be specified.
-        /// <b>Procedure:</b></description></item>
+        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+        /// <b>Call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Confirm the target delivery group and the current number of purchased nodes. For common scenarios of cloud apps, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and <c>NodePool.NodeAmount</c>.</description></item>
-        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and pricing rules.</description></item>
-        /// <item><description>After confirming the quote, if you want to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and specify the target total number in <c>NodePool.NodeAmount</c> as required by the operation. <b>A successful price inquiry does not mean that an order is created or the scale-out is completed.</b>
+        /// <item><description>Confirm the target delivery group and the current number of purchased nodes. For cloud app Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</description></item>
+        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and price calculation rules.</description></item>
+        /// <item><description>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <b>A successful price inquiry does not mean that an order has been created or the scale-out has been completed.</b>
         /// <b>Example scenario:</b>
-        /// If a cloud app delivery group currently has 1 purchased subscription node and you want to scale out to 2 nodes, specify ProductType=CloudApp, the AppInstanceGroupId of the delivery group, and Amount=2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The price examples only illustrate the relationship among the original price, discount amount, and final price, and do not represent the fixed selling price of the specifications.</description></item>
+        /// If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource ID with the actual value under the current account. The example quantity does not represent a default value or quota limit. The price example only illustrates the relationship between the original price, discount amount, and discounted price, and does not represent the fixed selling price of the specification.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9316,30 +9620,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing and discount information required to scale out a subscription delivery group to a specified total number of nodes.</para>
+        /// <para>Queries the price and discount information required to scale out a subscription delivery group to a specified total number of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the resource scale-out price of an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
-        /// <b>Verify the following conditions before you call this operation:</b></para>
+        /// <para>This operation queries the resource scale-out price for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+        /// <b>Before you call this operation, verify the following conditions:</b></para>
         /// <list type="bullet">
         /// <item><description>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</description></item>
-        /// <item><description>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and billed by node. Pay-as-you-go or browser groups billed by monthly active user (MAU) are not supported.</description></item>
+        /// <item><description>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</description></item>
         /// <item><description>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</description></item>
         /// <item><description>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the account in the corresponding region, product, and billing method.
         /// <b>Parameter relationships:</b></description></item>
-        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required and must be specified together.</description></item>
+        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified at the same time.</description></item>
         /// <item><description>ProductType must match the product corresponding to AppInstanceGroupId.</description></item>
-        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be specified.
-        /// <b>Procedure:</b></description></item>
+        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+        /// <b>Call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Confirm the target delivery group and the current number of purchased nodes. For common scenarios of cloud apps, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and <c>NodePool.NodeAmount</c>.</description></item>
-        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and pricing rules.</description></item>
-        /// <item><description>After confirming the quote, if you want to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and specify the target total number in <c>NodePool.NodeAmount</c> as required by the operation. <b>A successful price inquiry does not mean that an order is created or the scale-out is completed.</b>
+        /// <item><description>Confirm the target delivery group and the current number of purchased nodes. For cloud app Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</description></item>
+        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and price calculation rules.</description></item>
+        /// <item><description>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <b>A successful price inquiry does not mean that an order has been created or the scale-out has been completed.</b>
         /// <b>Example scenario:</b>
-        /// If a cloud app delivery group currently has 1 purchased subscription node and you want to scale out to 2 nodes, specify ProductType=CloudApp, the AppInstanceGroupId of the delivery group, and Amount=2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The price examples only illustrate the relationship among the original price, discount amount, and final price, and do not represent the fixed selling price of the specifications.</description></item>
+        /// If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource ID with the actual value under the current account. The example quantity does not represent a default value or quota limit. The price example only illustrates the relationship between the original price, discount amount, and discounted price, and does not represent the fixed selling price of the specification.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9390,30 +9694,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing and discount information required to scale out a subscription delivery group to a specified total number of nodes.</para>
+        /// <para>Queries the price and discount information required to scale out a subscription delivery group to a specified total number of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the resource scale-out price of an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
-        /// <b>Verify the following conditions before you call this operation:</b></para>
+        /// <para>This operation queries the resource scale-out price for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+        /// <b>Before you call this operation, verify the following conditions:</b></para>
         /// <list type="bullet">
         /// <item><description>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</description></item>
-        /// <item><description>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and billed by node. Pay-as-you-go or browser groups billed by monthly active user (MAU) are not supported.</description></item>
+        /// <item><description>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</description></item>
         /// <item><description>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</description></item>
         /// <item><description>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the account in the corresponding region, product, and billing method.
         /// <b>Parameter relationships:</b></description></item>
-        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required and must be specified together.</description></item>
+        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified at the same time.</description></item>
         /// <item><description>ProductType must match the product corresponding to AppInstanceGroupId.</description></item>
-        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be specified.
-        /// <b>Procedure:</b></description></item>
+        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+        /// <b>Call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Confirm the target delivery group and the current number of purchased nodes. For common scenarios of cloud apps, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and <c>NodePool.NodeAmount</c>.</description></item>
-        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and pricing rules.</description></item>
-        /// <item><description>After confirming the quote, if you want to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and specify the target total number in <c>NodePool.NodeAmount</c> as required by the operation. <b>A successful price inquiry does not mean that an order is created or the scale-out is completed.</b>
+        /// <item><description>Confirm the target delivery group and the current number of purchased nodes. For cloud app Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</description></item>
+        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and price calculation rules.</description></item>
+        /// <item><description>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <b>A successful price inquiry does not mean that an order has been created or the scale-out has been completed.</b>
         /// <b>Example scenario:</b>
-        /// If a cloud app delivery group currently has 1 purchased subscription node and you want to scale out to 2 nodes, specify ProductType=CloudApp, the AppInstanceGroupId of the delivery group, and Amount=2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The price examples only illustrate the relationship among the original price, discount amount, and final price, and do not represent the fixed selling price of the specifications.</description></item>
+        /// If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource ID with the actual value under the current account. The example quantity does not represent a default value or quota limit. The price example only illustrates the relationship between the original price, discount amount, and discounted price, and does not represent the fixed selling price of the specification.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9432,30 +9736,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing and discount information required to scale out a subscription delivery group to a specified total number of nodes.</para>
+        /// <para>Queries the price and discount information required to scale out a subscription delivery group to a specified total number of nodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the resource scale-out price of an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
-        /// <b>Verify the following conditions before you call this operation:</b></para>
+        /// <para>This operation queries the resource scale-out price for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+        /// <b>Before you call this operation, verify the following conditions:</b></para>
         /// <list type="bullet">
         /// <item><description>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</description></item>
-        /// <item><description>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and billed by node. Pay-as-you-go or browser groups billed by monthly active user (MAU) are not supported.</description></item>
+        /// <item><description>The product type is WUYING Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</description></item>
         /// <item><description>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</description></item>
         /// <item><description>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the account in the corresponding region, product, and billing method.
         /// <b>Parameter relationships:</b></description></item>
-        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required and must be specified together.</description></item>
+        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified at the same time.</description></item>
         /// <item><description>ProductType must match the product corresponding to AppInstanceGroupId.</description></item>
-        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be specified.
-        /// <b>Procedure:</b></description></item>
+        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+        /// <b>Call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Confirm the target delivery group and the current number of purchased nodes. For common scenarios of cloud apps, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and <c>NodePool.NodeAmount</c>.</description></item>
-        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and pricing rules.</description></item>
-        /// <item><description>After confirming the quote, if you want to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and specify the target total number in <c>NodePool.NodeAmount</c> as required by the operation. <b>A successful price inquiry does not mean that an order is created or the scale-out is completed.</b>
+        /// <item><description>Confirm the target delivery group and the current number of purchased nodes. For cloud app Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</description></item>
+        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the price, coupons, and price calculation rules.</description></item>
+        /// <item><description>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <b>A successful price inquiry does not mean that an order has been created or the scale-out has been completed.</b>
         /// <b>Example scenario:</b>
-        /// If a cloud app delivery group currently has 1 purchased subscription node and you want to scale out to 2 nodes, specify ProductType=CloudApp, the AppInstanceGroupId of the delivery group, and Amount=2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The price examples only illustrate the relationship among the original price, discount amount, and final price, and do not represent the fixed selling price of the specifications.</description></item>
+        /// If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource ID with the actual value under the current account. The example quantity does not represent a default value or quota limit. The price example only illustrates the relationship between the original price, discount amount, and discounted price, and does not represent the fixed selling price of the specification.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9658,17 +9962,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
         /// <b>Parameter relationships:</b></para>
         /// <list type="bullet">
-        /// <item><description>ResourceType and ProductType are required.</description></item>
-        /// <item><description>BizRegionId and ChargeType are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
+        /// <item><description><c>ResourceType</c> and <c>ProductType</c> are required.</description></item>
+        /// <item><description><c>BizRegionId</c> and <c>ChargeType</c> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
         /// <item><description>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</description></item>
         /// <item><description>If multiple quotas apply at the same time, the larger limit is returned.
         /// <b>Call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Select the resource type, product, business region, and billing method for the payer based on subsequent business needs.</description></item>
+        /// <item><description>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</description></item>
         /// <item><description>Invoke this operation to read <c>Data</c>. Query <c>AppInstanceGroup</c> before creating a delivery group, query <c>AppAuthUser</c> before authorizing an authorized user, and query <c>PoolNodeAmount</c> before purchasing or scaling out nodes.</description></item>
-        /// <item><description>Query the current usage in combination with the resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
-        /// Data=2147483647 indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
+        /// <item><description>Query the current usage in combination with resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
+        /// <c>Data=2147483647</c> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9731,17 +10035,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
         /// <b>Parameter relationships:</b></para>
         /// <list type="bullet">
-        /// <item><description>ResourceType and ProductType are required.</description></item>
-        /// <item><description>BizRegionId and ChargeType are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
+        /// <item><description><c>ResourceType</c> and <c>ProductType</c> are required.</description></item>
+        /// <item><description><c>BizRegionId</c> and <c>ChargeType</c> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
         /// <item><description>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</description></item>
         /// <item><description>If multiple quotas apply at the same time, the larger limit is returned.
         /// <b>Call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Select the resource type, product, business region, and billing method for the payer based on subsequent business needs.</description></item>
+        /// <item><description>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</description></item>
         /// <item><description>Invoke this operation to read <c>Data</c>. Query <c>AppInstanceGroup</c> before creating a delivery group, query <c>AppAuthUser</c> before authorizing an authorized user, and query <c>PoolNodeAmount</c> before purchasing or scaling out nodes.</description></item>
-        /// <item><description>Query the current usage in combination with the resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
-        /// Data=2147483647 indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
+        /// <item><description>Query the current usage in combination with resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
+        /// <c>Data=2147483647</c> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9804,17 +10108,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
         /// <b>Parameter relationships:</b></para>
         /// <list type="bullet">
-        /// <item><description>ResourceType and ProductType are required.</description></item>
-        /// <item><description>BizRegionId and ChargeType are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
+        /// <item><description><c>ResourceType</c> and <c>ProductType</c> are required.</description></item>
+        /// <item><description><c>BizRegionId</c> and <c>ChargeType</c> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
         /// <item><description>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</description></item>
         /// <item><description>If multiple quotas apply at the same time, the larger limit is returned.
         /// <b>Call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Select the resource type, product, business region, and billing method for the payer based on subsequent business needs.</description></item>
+        /// <item><description>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</description></item>
         /// <item><description>Invoke this operation to read <c>Data</c>. Query <c>AppInstanceGroup</c> before creating a delivery group, query <c>AppAuthUser</c> before authorizing an authorized user, and query <c>PoolNodeAmount</c> before purchasing or scaling out nodes.</description></item>
-        /// <item><description>Query the current usage in combination with the resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
-        /// Data=2147483647 indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
+        /// <item><description>Query the current usage in combination with resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
+        /// <c>Data=2147483647</c> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9841,17 +10145,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
         /// <b>Parameter relationships:</b></para>
         /// <list type="bullet">
-        /// <item><description>ResourceType and ProductType are required.</description></item>
-        /// <item><description>BizRegionId and ChargeType are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
+        /// <item><description><c>ResourceType</c> and <c>ProductType</c> are required.</description></item>
+        /// <item><description><c>BizRegionId</c> and <c>ChargeType</c> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
         /// <item><description>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</description></item>
         /// <item><description>If multiple quotas apply at the same time, the larger limit is returned.
         /// <b>Call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Select the resource type, product, business region, and billing method for the payer based on subsequent business needs.</description></item>
+        /// <item><description>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</description></item>
         /// <item><description>Invoke this operation to read <c>Data</c>. Query <c>AppInstanceGroup</c> before creating a delivery group, query <c>AppAuthUser</c> before authorizing an authorized user, and query <c>PoolNodeAmount</c> before purchasing or scaling out nodes.</description></item>
-        /// <item><description>Query the current usage in combination with the resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
-        /// Data=2147483647 indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
+        /// <item><description>Query the current usage in combination with resources, and then verify the current operation through subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
+        /// <c>Data=2147483647</c> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -10014,13 +10318,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the third-party channel configurations of an Agent runtime.</para>
+        /// <para>Queries the third-party channel configurations for agent runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the third-party channel configuration status of Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can query the third-party channel configuration status for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+        /// Before calling this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10078,13 +10382,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the third-party channel configurations of an Agent runtime.</para>
+        /// <para>Queries the third-party channel configurations for agent runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the third-party channel configuration status of Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can query the third-party channel configuration status for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+        /// Before calling this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10142,13 +10446,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the third-party channel configurations of an Agent runtime.</para>
+        /// <para>Queries the third-party channel configurations for agent runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the third-party channel configuration status of Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can query the third-party channel configuration status for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+        /// Before calling this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10166,13 +10470,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the third-party channel configurations of an Agent runtime.</para>
+        /// <para>Queries the third-party channel configurations for agent runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the third-party channel configuration status of Agents such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
-        /// Before using this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can query the third-party channel configuration status for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the Wuying Agent Management Center.
+        /// Before calling this operation, make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10190,12 +10494,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the model configuration for a cloud desktop.</para>
+        /// <para>Queries the model configuration details of a cloud desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, the list of model providers, and their associated model information. When the risk information mode is enabled, you can also identify discrepancies between the actual configuration of the end user and the configuration delivered by the administrator.</para>
+        /// <para>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, model provider list, and associated model information. When the risk information mode is enabled, you can also identify discrepancies between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10223,6 +10527,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeRiskInfo))
             {
                 query["IncludeRiskInfo"] = request.IncludeRiskInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeId))
             {
@@ -10257,12 +10565,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the model configuration for a cloud desktop.</para>
+        /// <para>Queries the model configuration details of a cloud desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, the list of model providers, and their associated model information. When the risk information mode is enabled, you can also identify discrepancies between the actual configuration of the end user and the configuration delivered by the administrator.</para>
+        /// <para>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, model provider list, and associated model information. When the risk information mode is enabled, you can also identify discrepancies between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10290,6 +10598,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeRiskInfo))
             {
                 query["IncludeRiskInfo"] = request.IncludeRiskInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeId))
             {
@@ -10324,12 +10636,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the model configuration for a cloud desktop.</para>
+        /// <para>Queries the model configuration details of a cloud desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, the list of model providers, and their associated model information. When the risk information mode is enabled, you can also identify discrepancies between the actual configuration of the end user and the configuration delivered by the administrator.</para>
+        /// <para>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, model provider list, and associated model information. When the risk information mode is enabled, you can also identify discrepancies between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10347,12 +10659,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of the model configuration for a cloud desktop.</para>
+        /// <para>Queries the model configuration details of a cloud desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, the list of model providers, and their associated model information. When the risk information mode is enabled, you can also identify discrepancies between the actual configuration of the end user and the configuration delivered by the administrator.</para>
+        /// <para>You can query the details of the model configuration currently bound to a specified cloud desktop in the Wuying Agent Management Center, including the model group, model provider list, and associated model information. When the risk information mode is enabled, you can also identify discrepancies between the end user\&quot;s actual configuration and the configuration delivered by the administrator.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10377,9 +10689,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>Supports two query methods:</para>
         /// <list type="bullet">
-        /// <item><description><b>By task ID</b>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</description></item>
-        /// <item><description><b>By resource</b>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters at the same time. You can use the EntityVersionId parameter to specify the resource version.
-        /// The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not mean the entire task is successful. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</description></item>
+        /// <item><description><b>By task ID</b>: Pass TaskId. This method takes precedence over resource information queries.</description></item>
+        /// <item><description><b>By resource</b>: Omit TaskId, and pass EntityId, EntityType, and TaskCategory. You can use EntityVersionId to specify the resource version.
+        /// The API returns the current task status and recorded step information. Determine the overall task result based on Status. The success of a single step does not mean the entire task is successful. You can call ListTaskStep to query the names and categories of image creation and application adaptation steps.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10449,9 +10761,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>Supports two query methods:</para>
         /// <list type="bullet">
-        /// <item><description><b>By task ID</b>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</description></item>
-        /// <item><description><b>By resource</b>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters at the same time. You can use the EntityVersionId parameter to specify the resource version.
-        /// The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not mean the entire task is successful. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</description></item>
+        /// <item><description><b>By task ID</b>: Pass TaskId. This method takes precedence over resource information queries.</description></item>
+        /// <item><description><b>By resource</b>: Omit TaskId, and pass EntityId, EntityType, and TaskCategory. You can use EntityVersionId to specify the resource version.
+        /// The API returns the current task status and recorded step information. Determine the overall task result based on Status. The success of a single step does not mean the entire task is successful. You can call ListTaskStep to query the names and categories of image creation and application adaptation steps.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10521,9 +10833,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>Supports two query methods:</para>
         /// <list type="bullet">
-        /// <item><description><b>By task ID</b>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</description></item>
-        /// <item><description><b>By resource</b>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters at the same time. You can use the EntityVersionId parameter to specify the resource version.
-        /// The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not mean the entire task is successful. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</description></item>
+        /// <item><description><b>By task ID</b>: Pass TaskId. This method takes precedence over resource information queries.</description></item>
+        /// <item><description><b>By resource</b>: Omit TaskId, and pass EntityId, EntityType, and TaskCategory. You can use EntityVersionId to specify the resource version.
+        /// The API returns the current task status and recorded step information. Determine the overall task result based on Status. The success of a single step does not mean the entire task is successful. You can call ListTaskStep to query the names and categories of image creation and application adaptation steps.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10549,9 +10861,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>Supports two query methods:</para>
         /// <list type="bullet">
-        /// <item><description><b>By task ID</b>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</description></item>
-        /// <item><description><b>By resource</b>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters at the same time. You can use the EntityVersionId parameter to specify the resource version.
-        /// The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not mean the entire task is successful. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</description></item>
+        /// <item><description><b>By task ID</b>: Pass TaskId. This method takes precedence over resource information queries.</description></item>
+        /// <item><description><b>By resource</b>: Omit TaskId, and pass EntityId, EntityType, and TaskCategory. You can use EntityVersionId to specify the resource version.
+        /// The API returns the current task status and recorded step information. Determine the overall task result based on Status. The success of a single step does not mean the entire task is successful. You can call ListTaskStep to query the names and categories of image creation and application adaptation steps.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10570,12 +10882,176 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Object Storage Service (OSS) endpoint, directory, and Security Token Service (STS) temporary credentials required to upload image task files.</para>
+        /// <para>Queries the tenant-level memory configurations of the current account by agent provider, business platform, and business type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, FileType only supports TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
+        /// <para>Specify the agent provider, business platform, and business type corresponding to the configuration. After modification, you can use the same combination to query whether the configuration has been updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTenantMemoryConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTenantMemoryConfigResponse
+        /// </returns>
+        public GetTenantMemoryConfigResponse GetTenantMemoryConfigWithOptions(GetTenantMemoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentInstanceId))
+            {
+                body["AgentInstanceId"] = request.AgentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatform))
+            {
+                body["AgentPlatform"] = request.AgentPlatform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
+            {
+                body["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTenantMemoryConfig",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTenantMemoryConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tenant-level memory configurations of the current account by agent provider, business platform, and business type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Specify the agent provider, business platform, and business type corresponding to the configuration. After modification, you can use the same combination to query whether the configuration has been updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTenantMemoryConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTenantMemoryConfigResponse
+        /// </returns>
+        public async Task<GetTenantMemoryConfigResponse> GetTenantMemoryConfigWithOptionsAsync(GetTenantMemoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentInstanceId))
+            {
+                body["AgentInstanceId"] = request.AgentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatform))
+            {
+                body["AgentPlatform"] = request.AgentPlatform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
+            {
+                body["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTenantMemoryConfig",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTenantMemoryConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tenant-level memory configurations of the current account by agent provider, business platform, and business type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Specify the agent provider, business platform, and business type corresponding to the configuration. After modification, you can use the same combination to query whether the configuration has been updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTenantMemoryConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTenantMemoryConfigResponse
+        /// </returns>
+        public GetTenantMemoryConfigResponse GetTenantMemoryConfig(GetTenantMemoryConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTenantMemoryConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tenant-level memory configurations of the current account by agent provider, business platform, and business type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Specify the agent provider, business platform, and business type corresponding to the configuration. After modification, you can use the same combination to query whether the configuration has been updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTenantMemoryConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTenantMemoryConfigResponse
+        /// </returns>
+        public async Task<GetTenantMemoryConfigResponse> GetTenantMemoryConfigAsync(GetTenantMemoryConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTenantMemoryConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS endpoint, directory, and STS temporary credentials required to upload image task files.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>FileType currently supports only TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10621,12 +11097,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Object Storage Service (OSS) endpoint, directory, and Security Token Service (STS) temporary credentials required to upload image task files.</para>
+        /// <para>Retrieves the OSS endpoint, directory, and STS temporary credentials required to upload image task files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, FileType only supports TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
+        /// <para>FileType currently supports only TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10672,12 +11148,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Object Storage Service (OSS) endpoint, directory, and Security Token Service (STS) temporary credentials required to upload image task files.</para>
+        /// <para>Retrieves the OSS endpoint, directory, and STS temporary credentials required to upload image task files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, FileType only supports TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
+        /// <para>FileType currently supports only TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10695,12 +11171,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Object Storage Service (OSS) endpoint, directory, and Security Token Service (STS) temporary credentials required to upload image task files.</para>
+        /// <para>Retrieves the OSS endpoint, directory, and STS temporary credentials required to upload image task files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, FileType only supports TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
+        /// <para>FileType currently supports only TASK. Use the returned OSS endpoint, bucket, file directory, and temporary credentials to upload files. After the file is uploaded, you can pass the complete OSS object path to ImportImage. Expiration is not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10718,7 +11194,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an image file from Object Storage Service (OSS) as a custom cloud desktop image and returns the image ID and version ID.</para>
+        /// <para>Imports an image file from Object Storage Service (OSS) as a custom Cloud Desktop image and returns the image ID and version ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10817,7 +11293,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an image file from Object Storage Service (OSS) as a custom cloud desktop image and returns the image ID and version ID.</para>
+        /// <para>Imports an image file from Object Storage Service (OSS) as a custom Cloud Desktop image and returns the image ID and version ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10916,7 +11392,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an image file from Object Storage Service (OSS) as a custom cloud desktop image and returns the image ID and version ID.</para>
+        /// <para>Imports an image file from Object Storage Service (OSS) as a custom Cloud Desktop image and returns the image ID and version ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10939,7 +11415,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an image file from Object Storage Service (OSS) as a custom cloud desktop image and returns the image ID and version ID.</para>
+        /// <para>Imports an image file from Object Storage Service (OSS) as a custom Cloud Desktop image and returns the image ID and version ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10958,6 +11434,218 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImportImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the memory configurations, memory statistics, and backup summary of agent instances for the current account by using a paged query with paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filter by agent provider, business platform, business type, end user, and instance memory switch as needed. Retain the filter conditions and increment the page number when navigating to the next page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentInstanceMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentInstanceMemoryResponse
+        /// </returns>
+        public ListAgentInstanceMemoryResponse ListAgentInstanceMemoryWithOptions(ListAgentInstanceMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatform))
+            {
+                query["AgentPlatform"] = request.AgentPlatform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
+            {
+                query["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                query["EndUserIds"] = request.EndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludedEndUserIds))
+            {
+                query["ExcludedEndUserIds"] = request.ExcludedEndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryStatuses))
+            {
+                query["MemoryStatuses"] = request.MemoryStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyword))
+            {
+                query["SearchKeyword"] = request.SearchKeyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                query["SearchType"] = request.SearchType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentInstanceMemory",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentInstanceMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the memory configurations, memory statistics, and backup summary of agent instances for the current account by using a paged query with paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filter by agent provider, business platform, business type, end user, and instance memory switch as needed. Retain the filter conditions and increment the page number when navigating to the next page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentInstanceMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentInstanceMemoryResponse
+        /// </returns>
+        public async Task<ListAgentInstanceMemoryResponse> ListAgentInstanceMemoryWithOptionsAsync(ListAgentInstanceMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatform))
+            {
+                query["AgentPlatform"] = request.AgentPlatform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
+            {
+                query["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                query["EndUserIds"] = request.EndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludedEndUserIds))
+            {
+                query["ExcludedEndUserIds"] = request.ExcludedEndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryStatuses))
+            {
+                query["MemoryStatuses"] = request.MemoryStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyword))
+            {
+                query["SearchKeyword"] = request.SearchKeyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                query["SearchType"] = request.SearchType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentInstanceMemory",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentInstanceMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the memory configurations, memory statistics, and backup summary of agent instances for the current account by using a paged query with paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filter by agent provider, business platform, business type, end user, and instance memory switch as needed. Retain the filter conditions and increment the page number when navigating to the next page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentInstanceMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentInstanceMemoryResponse
+        /// </returns>
+        public ListAgentInstanceMemoryResponse ListAgentInstanceMemory(ListAgentInstanceMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAgentInstanceMemoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the memory configurations, memory statistics, and backup summary of agent instances for the current account by using a paged query with paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filter by agent provider, business platform, business type, end user, and instance memory switch as needed. Retain the filter conditions and increment the page number when navigating to the next page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentInstanceMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentInstanceMemoryResponse
+        /// </returns>
+        public async Task<ListAgentInstanceMemoryResponse> ListAgentInstanceMemoryAsync(ListAgentInstanceMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAgentInstanceMemoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11090,13 +11778,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the valid applications of the current account by paging based on conditions such as the application ID, name, type, and associated product.</para>
+        /// <para>Queries valid applications of the current account by using paging based on conditions such as the application ID, name, type, and associated product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
-        /// If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</para>
+        /// <para>When multiple filter conditions are specified, they take effect together. AppName supports contains matching. If a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of them.
+        /// If PageSize is omitted, the default value is 10. We recommend that you start from page 1 and query page by page until the number of retrieved records reaches the value of Count. Before you delete an application, check the Deletable field.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11192,13 +11880,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the valid applications of the current account by paging based on conditions such as the application ID, name, type, and associated product.</para>
+        /// <para>Queries valid applications of the current account by using paging based on conditions such as the application ID, name, type, and associated product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
-        /// If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</para>
+        /// <para>When multiple filter conditions are specified, they take effect together. AppName supports contains matching. If a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of them.
+        /// If PageSize is omitted, the default value is 10. We recommend that you start from page 1 and query page by page until the number of retrieved records reaches the value of Count. Before you delete an application, check the Deletable field.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11294,13 +11982,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the valid applications of the current account by paging based on conditions such as the application ID, name, type, and associated product.</para>
+        /// <para>Queries valid applications of the current account by using paging based on conditions such as the application ID, name, type, and associated product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
-        /// If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</para>
+        /// <para>When multiple filter conditions are specified, they take effect together. AppName supports contains matching. If a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of them.
+        /// If PageSize is omitted, the default value is 10. We recommend that you start from page 1 and query page by page until the number of retrieved records reaches the value of Count. Before you delete an application, check the Deletable field.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11318,13 +12006,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the valid applications of the current account by paging based on conditions such as the application ID, name, type, and associated product.</para>
+        /// <para>Queries valid applications of the current account by using paging based on conditions such as the application ID, name, type, and associated product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When multiple filter conditions are specified at the same time, they take effect together. AppName supports contains matching. When a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of the forms.
-        /// If PageSize is omitted, the value is 10. Start from 1 for PageNumber and query page by page until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</para>
+        /// <para>When multiple filter conditions are specified, they take effect together. AppName supports contains matching. If a single-value filter and the corresponding list filter are specified at the same time, the intersection is used. To avoid empty results, specify only one of them.
+        /// If PageSize is omitted, the default value is 10. We recommend that you start from page 1 and query page by page until the number of retrieved records reaches the value of Count. Before you delete an application, check the Deletable field.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11342,7 +12030,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of multiple delivery groups. This operation queries all delivery groups that meet the specified conditions instead of a specific delivery group.</para>
+        /// <para>Queries the details of multiple app instance groups that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11438,7 +12126,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of multiple delivery groups. This operation queries all delivery groups that meet the specified conditions instead of a specific delivery group.</para>
+        /// <para>Queries the details of multiple app instance groups that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11534,7 +12222,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of multiple delivery groups. This operation queries all delivery groups that meet the specified conditions instead of a specific delivery group.</para>
+        /// <para>Queries the details of multiple app instance groups that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11552,7 +12240,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of multiple delivery groups. This operation queries all delivery groups that meet the specified conditions instead of a specific delivery group.</para>
+        /// <para>Queries the details of multiple app instance groups that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11570,25 +12258,25 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</para>
+        /// <para>Performs a paged query on the available session specifications for the current account based on the product, region, operating system, and specification conditions, returning results through paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types for the account and the business region. An empty result does not indicate a request failure.
+        /// <para>This operation is used to select session specifications and does not create resources. The returned scope is affected by the available specifications and business region of the account. An empty result does not indicate a request failure.
         /// <b>Filtering and pagination:</b></para>
         /// <list type="bullet">
         /// <item><description><c>ProductType</c> is required. Explicitly specify <c>BizRegionId</c>, <c>PageNumber</c>, and <c>PageSize</c>.</description></item>
-        /// <item><description>If <c>BizRegionId</c> is not provided, the region of the current request is used. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region.</description></item>
-        /// <item><description>You can specify both <c>AppInstanceType</c> and <c>AppInstanceTypeList</c>. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</description></item>
-        /// <item><description>The instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
+        /// <item><description>If <c>BizRegionId</c> is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</description></item>
+        /// <item><description>You can specify both <c>AppInstanceType</c> and <c>AppInstanceTypeList</c>. In this case, only the specifications that meet both conditions are returned. No priority override exists. The list can contain up to 100 items.</description></item>
+        /// <item><description>The specification family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
         /// <item><description>Pass <c>PageNumber</c> starting from 1. Use <c>TotalCount</c>, <c>PageSize</c>, and <c>PageNumber</c> to continue pagination until all matching results are read.
         /// <b>Inventory and subsequent calls:</b></description></item>
-        /// <item><description>Inventory is queried only when <c>QueryInventory</c> is set to <c>true</c>. If inventory information is not obtained, do not assume that the inventory is 0.</description></item>
-        /// <item><description>The inventory reflects the current query result and does not indicate a successful reservation.</description></item>
-        /// <item><description>After obtaining the <c>AppInstanceType</c>, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
-        /// <item><description>The current query does not use <c>AppCenterImageId</c> to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
-        /// Field examples are used to demonstrate how to fill in the fields and do not guarantee that the example instance types exist in the selected region or account. The GPU count field currently does not provide a value. Use the GPU memory field to understand the instance type.</description></item>
+        /// <item><description>Inventory is queried only when <c>QueryInventory=true</c>. If inventory information is not obtained, you cannot determine that the inventory is 0.</description></item>
+        /// <item><description>The inventory is the current query result and does not represent a successful reservation.</description></item>
+        /// <item><description>After obtaining <c>AppInstanceType</c>, you can query the price based on the session specification parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
+        /// <item><description>The current query does not use <c>AppCenterImageId</c> to filter specifications. Do not use this parameter to determine the compatibility between images and specifications.
+        /// Field examples are used to demonstrate how to fill in the fields. The existence of example specifications in the selected region or account is not guaranteed. The GPU count field does not currently provide values. Use the GPU memory field to understand the specifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11691,25 +12379,25 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</para>
+        /// <para>Performs a paged query on the available session specifications for the current account based on the product, region, operating system, and specification conditions, returning results through paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types for the account and the business region. An empty result does not indicate a request failure.
+        /// <para>This operation is used to select session specifications and does not create resources. The returned scope is affected by the available specifications and business region of the account. An empty result does not indicate a request failure.
         /// <b>Filtering and pagination:</b></para>
         /// <list type="bullet">
         /// <item><description><c>ProductType</c> is required. Explicitly specify <c>BizRegionId</c>, <c>PageNumber</c>, and <c>PageSize</c>.</description></item>
-        /// <item><description>If <c>BizRegionId</c> is not provided, the region of the current request is used. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region.</description></item>
-        /// <item><description>You can specify both <c>AppInstanceType</c> and <c>AppInstanceTypeList</c>. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</description></item>
-        /// <item><description>The instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
+        /// <item><description>If <c>BizRegionId</c> is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</description></item>
+        /// <item><description>You can specify both <c>AppInstanceType</c> and <c>AppInstanceTypeList</c>. In this case, only the specifications that meet both conditions are returned. No priority override exists. The list can contain up to 100 items.</description></item>
+        /// <item><description>The specification family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
         /// <item><description>Pass <c>PageNumber</c> starting from 1. Use <c>TotalCount</c>, <c>PageSize</c>, and <c>PageNumber</c> to continue pagination until all matching results are read.
         /// <b>Inventory and subsequent calls:</b></description></item>
-        /// <item><description>Inventory is queried only when <c>QueryInventory</c> is set to <c>true</c>. If inventory information is not obtained, do not assume that the inventory is 0.</description></item>
-        /// <item><description>The inventory reflects the current query result and does not indicate a successful reservation.</description></item>
-        /// <item><description>After obtaining the <c>AppInstanceType</c>, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
-        /// <item><description>The current query does not use <c>AppCenterImageId</c> to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
-        /// Field examples are used to demonstrate how to fill in the fields and do not guarantee that the example instance types exist in the selected region or account. The GPU count field currently does not provide a value. Use the GPU memory field to understand the instance type.</description></item>
+        /// <item><description>Inventory is queried only when <c>QueryInventory=true</c>. If inventory information is not obtained, you cannot determine that the inventory is 0.</description></item>
+        /// <item><description>The inventory is the current query result and does not represent a successful reservation.</description></item>
+        /// <item><description>After obtaining <c>AppInstanceType</c>, you can query the price based on the session specification parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
+        /// <item><description>The current query does not use <c>AppCenterImageId</c> to filter specifications. Do not use this parameter to determine the compatibility between images and specifications.
+        /// Field examples are used to demonstrate how to fill in the fields. The existence of example specifications in the selected region or account is not guaranteed. The GPU count field does not currently provide values. Use the GPU memory field to understand the specifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11812,25 +12500,25 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</para>
+        /// <para>Performs a paged query on the available session specifications for the current account based on the product, region, operating system, and specification conditions, returning results through paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types for the account and the business region. An empty result does not indicate a request failure.
+        /// <para>This operation is used to select session specifications and does not create resources. The returned scope is affected by the available specifications and business region of the account. An empty result does not indicate a request failure.
         /// <b>Filtering and pagination:</b></para>
         /// <list type="bullet">
         /// <item><description><c>ProductType</c> is required. Explicitly specify <c>BizRegionId</c>, <c>PageNumber</c>, and <c>PageSize</c>.</description></item>
-        /// <item><description>If <c>BizRegionId</c> is not provided, the region of the current request is used. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region.</description></item>
-        /// <item><description>You can specify both <c>AppInstanceType</c> and <c>AppInstanceTypeList</c>. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</description></item>
-        /// <item><description>The instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
+        /// <item><description>If <c>BizRegionId</c> is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</description></item>
+        /// <item><description>You can specify both <c>AppInstanceType</c> and <c>AppInstanceTypeList</c>. In this case, only the specifications that meet both conditions are returned. No priority override exists. The list can contain up to 100 items.</description></item>
+        /// <item><description>The specification family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
         /// <item><description>Pass <c>PageNumber</c> starting from 1. Use <c>TotalCount</c>, <c>PageSize</c>, and <c>PageNumber</c> to continue pagination until all matching results are read.
         /// <b>Inventory and subsequent calls:</b></description></item>
-        /// <item><description>Inventory is queried only when <c>QueryInventory</c> is set to <c>true</c>. If inventory information is not obtained, do not assume that the inventory is 0.</description></item>
-        /// <item><description>The inventory reflects the current query result and does not indicate a successful reservation.</description></item>
-        /// <item><description>After obtaining the <c>AppInstanceType</c>, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
-        /// <item><description>The current query does not use <c>AppCenterImageId</c> to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
-        /// Field examples are used to demonstrate how to fill in the fields and do not guarantee that the example instance types exist in the selected region or account. The GPU count field currently does not provide a value. Use the GPU memory field to understand the instance type.</description></item>
+        /// <item><description>Inventory is queried only when <c>QueryInventory=true</c>. If inventory information is not obtained, you cannot determine that the inventory is 0.</description></item>
+        /// <item><description>The inventory is the current query result and does not represent a successful reservation.</description></item>
+        /// <item><description>After obtaining <c>AppInstanceType</c>, you can query the price based on the session specification parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
+        /// <item><description>The current query does not use <c>AppCenterImageId</c> to filter specifications. Do not use this parameter to determine the compatibility between images and specifications.
+        /// Field examples are used to demonstrate how to fill in the fields. The existence of example specifications in the selected region or account is not guaranteed. The GPU count field does not currently provide values. Use the GPU memory field to understand the specifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11849,25 +12537,25 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</para>
+        /// <para>Performs a paged query on the available session specifications for the current account based on the product, region, operating system, and specification conditions, returning results through paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types for the account and the business region. An empty result does not indicate a request failure.
+        /// <para>This operation is used to select session specifications and does not create resources. The returned scope is affected by the available specifications and business region of the account. An empty result does not indicate a request failure.
         /// <b>Filtering and pagination:</b></para>
         /// <list type="bullet">
         /// <item><description><c>ProductType</c> is required. Explicitly specify <c>BizRegionId</c>, <c>PageNumber</c>, and <c>PageSize</c>.</description></item>
-        /// <item><description>If <c>BizRegionId</c> is not provided, the region of the current request is used. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region.</description></item>
-        /// <item><description>You can specify both <c>AppInstanceType</c> and <c>AppInstanceTypeList</c>. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</description></item>
-        /// <item><description>The instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
+        /// <item><description>If <c>BizRegionId</c> is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</description></item>
+        /// <item><description>You can specify both <c>AppInstanceType</c> and <c>AppInstanceTypeList</c>. In this case, only the specifications that meet both conditions are returned. No priority override exists. The list can contain up to 100 items.</description></item>
+        /// <item><description>The specification family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
         /// <item><description>Pass <c>PageNumber</c> starting from 1. Use <c>TotalCount</c>, <c>PageSize</c>, and <c>PageNumber</c> to continue pagination until all matching results are read.
         /// <b>Inventory and subsequent calls:</b></description></item>
-        /// <item><description>Inventory is queried only when <c>QueryInventory</c> is set to <c>true</c>. If inventory information is not obtained, do not assume that the inventory is 0.</description></item>
-        /// <item><description>The inventory reflects the current query result and does not indicate a successful reservation.</description></item>
-        /// <item><description>After obtaining the <c>AppInstanceType</c>, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
-        /// <item><description>The current query does not use <c>AppCenterImageId</c> to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
-        /// Field examples are used to demonstrate how to fill in the fields and do not guarantee that the example instance types exist in the selected region or account. The GPU count field currently does not provide a value. Use the GPU memory field to understand the instance type.</description></item>
+        /// <item><description>Inventory is queried only when <c>QueryInventory=true</c>. If inventory information is not obtained, you cannot determine that the inventory is 0.</description></item>
+        /// <item><description>The inventory is the current query result and does not represent a successful reservation.</description></item>
+        /// <item><description>After obtaining <c>AppInstanceType</c>, you can query the price based on the session specification parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
+        /// <item><description>The current query does not use <c>AppCenterImageId</c> to filter specifications. Do not use this parameter to determine the compatibility between images and specifications.
+        /// Field examples are used to demonstrate how to fill in the fields. The existence of example specifications in the selected region or account is not guaranteed. The GPU count field does not currently provide values. Use the GPU memory field to understand the specifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12302,35 +12990,35 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization. Supports paging and fuzzy filtering by delivery group ID, delivery group name, app ID, and app name.</para>
+        /// <para>Performs a paging query on the app instance groups for which a specified user has obtained access permissions through app instance group-level authorization, and supports fuzzy filtering by app instance group ID, app instance group name, application ID, and application name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of apps deployed in the delivery group.
+        /// <para>This operation queries the list of app instance groups to which a specified user (EndUserId) has been granted <b>app instance group-level authorization</b>. It returns the basic information of each app instance group (such as ID, name, status, region, creation time, and expiration time) and the list of applications deployed in the app instance group.
         /// Scope of returned results:</para>
         /// <list type="bullet">
-        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual app authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
-        /// <item><description>Only delivery groups whose product type matches ProductType and that are not deleted are returned. If no apps are deployed in the delivery group image, the delivery group is not returned.</description></item>
-        /// <item><description>Results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified delivery groups are listed first.</description></item>
+        /// <item><description>Only app instance groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records authorized for individual applications through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
+        /// <item><description>Only app instance groups whose product type matches ProductType and that are not deleted are returned. If no applications are deployed in the app instance group image, the app instance group is not returned.</description></item>
+        /// <item><description>The results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified app instance groups are ranked first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation has been called to authorize the delivery group to the user.</description></item>
+        /// <item><description>The <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation is called to authorize the app instance group to the user.</description></item>
         /// </list>
-        /// <h2>Metric description</h2>
+        /// <h2>Parameter description</h2>
         /// <list type="bullet">
         /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the error code <c>InvalidParameter.ProductType</c> is returned. If EndUserId is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</description></item>
-        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b>. A hit occurs if the string is contained. If multiple filter conditions are specified, all conditions must be met.</description></item>
+        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b> (a hit occurs if the string is contained). If multiple filter conditions are specified, all conditions must be met.</description></item>
         /// <item><description>PageNumber starts from 1. Valid values for PageSize: 1 to 100.</description></item>
-        /// <item><description>If the user does not have any authorization delivery groups that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
+        /// <item><description>If the user does not have any app instance groups with authorization that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</description></item>
-        /// <item><description>Call this operation to query the delivery groups authorized to the user and the apps deployed in the delivery groups.</description></item>
-        /// <item><description>To obtain the app connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
+        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the app instance group to the user.</description></item>
+        /// <item><description>Call this operation to query the app instance groups authorized for the user and the applications deployed in the app instance groups.</description></item>
+        /// <item><description>To obtain the application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12405,35 +13093,35 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization. Supports paging and fuzzy filtering by delivery group ID, delivery group name, app ID, and app name.</para>
+        /// <para>Performs a paging query on the app instance groups for which a specified user has obtained access permissions through app instance group-level authorization, and supports fuzzy filtering by app instance group ID, app instance group name, application ID, and application name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of apps deployed in the delivery group.
+        /// <para>This operation queries the list of app instance groups to which a specified user (EndUserId) has been granted <b>app instance group-level authorization</b>. It returns the basic information of each app instance group (such as ID, name, status, region, creation time, and expiration time) and the list of applications deployed in the app instance group.
         /// Scope of returned results:</para>
         /// <list type="bullet">
-        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual app authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
-        /// <item><description>Only delivery groups whose product type matches ProductType and that are not deleted are returned. If no apps are deployed in the delivery group image, the delivery group is not returned.</description></item>
-        /// <item><description>Results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified delivery groups are listed first.</description></item>
+        /// <item><description>Only app instance groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records authorized for individual applications through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
+        /// <item><description>Only app instance groups whose product type matches ProductType and that are not deleted are returned. If no applications are deployed in the app instance group image, the app instance group is not returned.</description></item>
+        /// <item><description>The results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified app instance groups are ranked first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation has been called to authorize the delivery group to the user.</description></item>
+        /// <item><description>The <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation is called to authorize the app instance group to the user.</description></item>
         /// </list>
-        /// <h2>Metric description</h2>
+        /// <h2>Parameter description</h2>
         /// <list type="bullet">
         /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the error code <c>InvalidParameter.ProductType</c> is returned. If EndUserId is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</description></item>
-        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b>. A hit occurs if the string is contained. If multiple filter conditions are specified, all conditions must be met.</description></item>
+        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b> (a hit occurs if the string is contained). If multiple filter conditions are specified, all conditions must be met.</description></item>
         /// <item><description>PageNumber starts from 1. Valid values for PageSize: 1 to 100.</description></item>
-        /// <item><description>If the user does not have any authorization delivery groups that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
+        /// <item><description>If the user does not have any app instance groups with authorization that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</description></item>
-        /// <item><description>Call this operation to query the delivery groups authorized to the user and the apps deployed in the delivery groups.</description></item>
-        /// <item><description>To obtain the app connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
+        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the app instance group to the user.</description></item>
+        /// <item><description>Call this operation to query the app instance groups authorized for the user and the applications deployed in the app instance groups.</description></item>
+        /// <item><description>To obtain the application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12508,35 +13196,35 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization. Supports paging and fuzzy filtering by delivery group ID, delivery group name, app ID, and app name.</para>
+        /// <para>Performs a paging query on the app instance groups for which a specified user has obtained access permissions through app instance group-level authorization, and supports fuzzy filtering by app instance group ID, app instance group name, application ID, and application name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of apps deployed in the delivery group.
+        /// <para>This operation queries the list of app instance groups to which a specified user (EndUserId) has been granted <b>app instance group-level authorization</b>. It returns the basic information of each app instance group (such as ID, name, status, region, creation time, and expiration time) and the list of applications deployed in the app instance group.
         /// Scope of returned results:</para>
         /// <list type="bullet">
-        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual app authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
-        /// <item><description>Only delivery groups whose product type matches ProductType and that are not deleted are returned. If no apps are deployed in the delivery group image, the delivery group is not returned.</description></item>
-        /// <item><description>Results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified delivery groups are listed first.</description></item>
+        /// <item><description>Only app instance groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records authorized for individual applications through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
+        /// <item><description>Only app instance groups whose product type matches ProductType and that are not deleted are returned. If no applications are deployed in the app instance group image, the app instance group is not returned.</description></item>
+        /// <item><description>The results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified app instance groups are ranked first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation has been called to authorize the delivery group to the user.</description></item>
+        /// <item><description>The <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation is called to authorize the app instance group to the user.</description></item>
         /// </list>
-        /// <h2>Metric description</h2>
+        /// <h2>Parameter description</h2>
         /// <list type="bullet">
         /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the error code <c>InvalidParameter.ProductType</c> is returned. If EndUserId is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</description></item>
-        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b>. A hit occurs if the string is contained. If multiple filter conditions are specified, all conditions must be met.</description></item>
+        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b> (a hit occurs if the string is contained). If multiple filter conditions are specified, all conditions must be met.</description></item>
         /// <item><description>PageNumber starts from 1. Valid values for PageSize: 1 to 100.</description></item>
-        /// <item><description>If the user does not have any authorization delivery groups that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
+        /// <item><description>If the user does not have any app instance groups with authorization that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</description></item>
-        /// <item><description>Call this operation to query the delivery groups authorized to the user and the apps deployed in the delivery groups.</description></item>
-        /// <item><description>To obtain the app connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
+        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the app instance group to the user.</description></item>
+        /// <item><description>Call this operation to query the app instance groups authorized for the user and the applications deployed in the app instance groups.</description></item>
+        /// <item><description>To obtain the application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12555,35 +13243,35 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery groups for which a specified user has obtained access permissions through delivery group-level authorization. Supports paging and fuzzy filtering by delivery group ID, delivery group name, app ID, and app name.</para>
+        /// <para>Performs a paging query on the app instance groups for which a specified user has obtained access permissions through app instance group-level authorization, and supports fuzzy filtering by app instance group ID, app instance group name, application ID, and application name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the list of delivery groups for which a specified user (EndUserId) has been granted <b>delivery group-level authorization</b>. It returns the basic information of each delivery group (such as ID, name, status, region, creation time, and expiration time) and the list of apps deployed in the delivery group.
+        /// <para>This operation queries the list of app instance groups to which a specified user (EndUserId) has been granted <b>app instance group-level authorization</b>. It returns the basic information of each app instance group (such as ID, name, status, region, creation time, and expiration time) and the list of applications deployed in the app instance group.
         /// Scope of returned results:</para>
         /// <list type="bullet">
-        /// <item><description>Only delivery groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records of individual app authorizations granted through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
-        /// <item><description>Only delivery groups whose product type matches ProductType and that are not deleted are returned. If no apps are deployed in the delivery group image, the delivery group is not returned.</description></item>
-        /// <item><description>Results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified delivery groups are listed first.</description></item>
+        /// <item><description>Only app instance groups that are authorized to the user as a whole through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are returned. Records authorized for individual applications through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation are not included.</description></item>
+        /// <item><description>Only app instance groups whose product type matches ProductType and that are not deleted are returned. If no applications are deployed in the app instance group image, the app instance group is not returned.</description></item>
+        /// <item><description>The results are sorted in descending order based on the update time of the authorization records. The most recently authorized or modified app instance groups are ranked first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation has been called to authorize the delivery group to the user.</description></item>
+        /// <item><description>The <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation is called to authorize the app instance group to the user.</description></item>
         /// </list>
-        /// <h2>Metric description</h2>
+        /// <h2>Parameter description</h2>
         /// <list type="bullet">
         /// <item><description><b>ProductType and EndUserId are required</b>. If ProductType is not specified, the error code <c>InvalidParameter.ProductType</c> is returned. If EndUserId is not specified, the error code <c>InvalidParameter.UserId</c> is returned.</description></item>
-        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b>. A hit occurs if the string is contained. If multiple filter conditions are specified, all conditions must be met.</description></item>
+        /// <item><description>EndUserId uses <b>exact match</b> based on the username. AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName use <b>fuzzy match</b> (a hit occurs if the string is contained). If multiple filter conditions are specified, all conditions must be met.</description></item>
         /// <item><description>PageNumber starts from 1. Valid values for PageSize: 1 to 100.</description></item>
-        /// <item><description>If the user does not have any authorization delivery groups that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
+        /// <item><description>If the user does not have any app instance groups with authorization that meet the conditional requirements, the operation returns a normal response: AppInstanceGroupModels is an empty list and TotalCount is 0.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the delivery group to the user.</description></item>
-        /// <item><description>Call this operation to query the delivery groups authorized to the user and the apps deployed in the delivery groups.</description></item>
-        /// <item><description>To obtain the app connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
+        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and then call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize the app instance group to the user.</description></item>
+        /// <item><description>Call this operation to query the app instance groups authorized for the user and the applications deployed in the app instance groups.</description></item>
+        /// <item><description>To obtain the application connection ticket for the user, call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation based on the returned AppInstanceGroupId and the AppId in Apps.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12602,30 +13290,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the applications for which a specified user has obtained access permissions through per-application authorization by paging. You can filter results by delivery group ID, delivery group name, application ID, or application name using fuzzy match.</para>
+        /// <para>Performs a paging query to retrieve the applications for which a specified user has obtained access permissions through application authorization, and supports fuzzy filtering by app instance group ID, app instance group name, application ID, or application name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the applications that a specified user is authorized to access at the application granularity. <b>Only records authorized at the application level are returned</b> (for example, authorizations completed through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorizations granted to an entire delivery group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are not included in the response.
-        /// The results are deduplicated by the combination of delivery group and application. Each record corresponds to one application within one delivery group.</para>
+        /// <para>This operation queries the applications authorized for a specified user at the application level. <b>It returns only the records of applications authorized for the user at the application level</b> (for example, authorization completed by calling the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorization granted for an entire app instance group by calling the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation is not included in the response.
+        /// The response is deduplicated by the combination of app instance group and application. Each record corresponds to an application within an app instance group.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The user must already exist under the current account. If the user does not exist, the error code <c>User.NotFound</c> is returned. Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</description></item>
-        /// <item><description>The delivery group that contains the application must already be created, and the application must have been authorized to the user at the application level. If no per-application authorization has been performed, an empty application list is returned.</description></item>
+        /// <item><description>The user exists in the current account. If the user does not exist, the error code User.NotFound is returned. You can call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</description></item>
+        /// <item><description>The app instance group to which the application belongs has been created, and the application has been authorized for the user at the application level. If no application-level authorization has been performed, an empty application list is returned.</description></item>
         /// </list>
-        /// <h2>Parameter description</h2>
+        /// <h2>Metric description</h2>
         /// <list type="bullet">
-        /// <item><description><b><c>EndUserId</c> and <c>ProductType</c> are required.</b> Set <c>ProductType</c> to <c>CloudApp</c>, which indicates WUYING Cloud Application.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppId</c>, <c>AppInstanceGroupName</c>, and <c>AppName</c> are optional filter conditions. All of them use fuzzy match and can be combined in any way. If all are omitted, all per-application authorization records for the user are returned.</description></item>
-        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> for paging. <c>PageNumber</c> starts from 1, and <c>PageSize</c> ranges from 1 to 100. Use the returned <c>TotalCount</c> to determine whether to continue querying.</description></item>
+        /// <item><description><b>EndUserId and ProductType are required.</b> Set ProductType to CloudApp, which indicates WUYING Cloud App.</description></item>
+        /// <item><description>AppInstanceGroupId, AppId, AppInstanceGroupName, and AppName are optional filter conditions. Fuzzy match is used for all these parameters, and they can be used in any combination. If all of them are omitted, all application-level authorization records for the user are returned.</description></item>
+        /// <item><description>Use PageNumber and PageSize for paging. PageNumber starts from 1, and the valid values for PageSize range from 1 to 100. You can determine whether to continue the query based on the returned TotalCount.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications within the delivery group (AppId in the Apps list).</description></item>
-        /// <item><description>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the application to the target user.</description></item>
-        /// <item><description>Call this operation to query the applications that the user is authorized to access.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the app instance group ID (AppInstanceGroupId) and the application IDs (AppId in the Apps list) of the applications deployed in the app instance group.</description></item>
+        /// <item><description>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the applications for the target user.</description></item>
+        /// <item><description>Call this operation to query the applications authorized for the user.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12696,30 +13384,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the applications for which a specified user has obtained access permissions through per-application authorization by paging. You can filter results by delivery group ID, delivery group name, application ID, or application name using fuzzy match.</para>
+        /// <para>Performs a paging query to retrieve the applications for which a specified user has obtained access permissions through application authorization, and supports fuzzy filtering by app instance group ID, app instance group name, application ID, or application name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the applications that a specified user is authorized to access at the application granularity. <b>Only records authorized at the application level are returned</b> (for example, authorizations completed through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorizations granted to an entire delivery group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are not included in the response.
-        /// The results are deduplicated by the combination of delivery group and application. Each record corresponds to one application within one delivery group.</para>
+        /// <para>This operation queries the applications authorized for a specified user at the application level. <b>It returns only the records of applications authorized for the user at the application level</b> (for example, authorization completed by calling the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorization granted for an entire app instance group by calling the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation is not included in the response.
+        /// The response is deduplicated by the combination of app instance group and application. Each record corresponds to an application within an app instance group.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The user must already exist under the current account. If the user does not exist, the error code <c>User.NotFound</c> is returned. Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</description></item>
-        /// <item><description>The delivery group that contains the application must already be created, and the application must have been authorized to the user at the application level. If no per-application authorization has been performed, an empty application list is returned.</description></item>
+        /// <item><description>The user exists in the current account. If the user does not exist, the error code User.NotFound is returned. You can call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</description></item>
+        /// <item><description>The app instance group to which the application belongs has been created, and the application has been authorized for the user at the application level. If no application-level authorization has been performed, an empty application list is returned.</description></item>
         /// </list>
-        /// <h2>Parameter description</h2>
+        /// <h2>Metric description</h2>
         /// <list type="bullet">
-        /// <item><description><b><c>EndUserId</c> and <c>ProductType</c> are required.</b> Set <c>ProductType</c> to <c>CloudApp</c>, which indicates WUYING Cloud Application.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppId</c>, <c>AppInstanceGroupName</c>, and <c>AppName</c> are optional filter conditions. All of them use fuzzy match and can be combined in any way. If all are omitted, all per-application authorization records for the user are returned.</description></item>
-        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> for paging. <c>PageNumber</c> starts from 1, and <c>PageSize</c> ranges from 1 to 100. Use the returned <c>TotalCount</c> to determine whether to continue querying.</description></item>
+        /// <item><description><b>EndUserId and ProductType are required.</b> Set ProductType to CloudApp, which indicates WUYING Cloud App.</description></item>
+        /// <item><description>AppInstanceGroupId, AppId, AppInstanceGroupName, and AppName are optional filter conditions. Fuzzy match is used for all these parameters, and they can be used in any combination. If all of them are omitted, all application-level authorization records for the user are returned.</description></item>
+        /// <item><description>Use PageNumber and PageSize for paging. PageNumber starts from 1, and the valid values for PageSize range from 1 to 100. You can determine whether to continue the query based on the returned TotalCount.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications within the delivery group (AppId in the Apps list).</description></item>
-        /// <item><description>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the application to the target user.</description></item>
-        /// <item><description>Call this operation to query the applications that the user is authorized to access.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the app instance group ID (AppInstanceGroupId) and the application IDs (AppId in the Apps list) of the applications deployed in the app instance group.</description></item>
+        /// <item><description>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the applications for the target user.</description></item>
+        /// <item><description>Call this operation to query the applications authorized for the user.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12790,30 +13478,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the applications for which a specified user has obtained access permissions through per-application authorization by paging. You can filter results by delivery group ID, delivery group name, application ID, or application name using fuzzy match.</para>
+        /// <para>Performs a paging query to retrieve the applications for which a specified user has obtained access permissions through application authorization, and supports fuzzy filtering by app instance group ID, app instance group name, application ID, or application name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the applications that a specified user is authorized to access at the application granularity. <b>Only records authorized at the application level are returned</b> (for example, authorizations completed through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorizations granted to an entire delivery group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are not included in the response.
-        /// The results are deduplicated by the combination of delivery group and application. Each record corresponds to one application within one delivery group.</para>
+        /// <para>This operation queries the applications authorized for a specified user at the application level. <b>It returns only the records of applications authorized for the user at the application level</b> (for example, authorization completed by calling the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorization granted for an entire app instance group by calling the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation is not included in the response.
+        /// The response is deduplicated by the combination of app instance group and application. Each record corresponds to an application within an app instance group.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The user must already exist under the current account. If the user does not exist, the error code <c>User.NotFound</c> is returned. Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</description></item>
-        /// <item><description>The delivery group that contains the application must already be created, and the application must have been authorized to the user at the application level. If no per-application authorization has been performed, an empty application list is returned.</description></item>
+        /// <item><description>The user exists in the current account. If the user does not exist, the error code User.NotFound is returned. You can call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</description></item>
+        /// <item><description>The app instance group to which the application belongs has been created, and the application has been authorized for the user at the application level. If no application-level authorization has been performed, an empty application list is returned.</description></item>
         /// </list>
-        /// <h2>Parameter description</h2>
+        /// <h2>Metric description</h2>
         /// <list type="bullet">
-        /// <item><description><b><c>EndUserId</c> and <c>ProductType</c> are required.</b> Set <c>ProductType</c> to <c>CloudApp</c>, which indicates WUYING Cloud Application.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppId</c>, <c>AppInstanceGroupName</c>, and <c>AppName</c> are optional filter conditions. All of them use fuzzy match and can be combined in any way. If all are omitted, all per-application authorization records for the user are returned.</description></item>
-        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> for paging. <c>PageNumber</c> starts from 1, and <c>PageSize</c> ranges from 1 to 100. Use the returned <c>TotalCount</c> to determine whether to continue querying.</description></item>
+        /// <item><description><b>EndUserId and ProductType are required.</b> Set ProductType to CloudApp, which indicates WUYING Cloud App.</description></item>
+        /// <item><description>AppInstanceGroupId, AppId, AppInstanceGroupName, and AppName are optional filter conditions. Fuzzy match is used for all these parameters, and they can be used in any combination. If all of them are omitted, all application-level authorization records for the user are returned.</description></item>
+        /// <item><description>Use PageNumber and PageSize for paging. PageNumber starts from 1, and the valid values for PageSize range from 1 to 100. You can determine whether to continue the query based on the returned TotalCount.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications within the delivery group (AppId in the Apps list).</description></item>
-        /// <item><description>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the application to the target user.</description></item>
-        /// <item><description>Call this operation to query the applications that the user is authorized to access.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the app instance group ID (AppInstanceGroupId) and the application IDs (AppId in the Apps list) of the applications deployed in the app instance group.</description></item>
+        /// <item><description>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the applications for the target user.</description></item>
+        /// <item><description>Call this operation to query the applications authorized for the user.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12832,30 +13520,30 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the applications for which a specified user has obtained access permissions through per-application authorization by paging. You can filter results by delivery group ID, delivery group name, application ID, or application name using fuzzy match.</para>
+        /// <para>Performs a paging query to retrieve the applications for which a specified user has obtained access permissions through application authorization, and supports fuzzy filtering by app instance group ID, app instance group name, application ID, or application name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the applications that a specified user is authorized to access at the application granularity. <b>Only records authorized at the application level are returned</b> (for example, authorizations completed through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorizations granted to an entire delivery group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation are not included in the response.
-        /// The results are deduplicated by the combination of delivery group and application. Each record corresponds to one application within one delivery group.</para>
+        /// <para>This operation queries the applications authorized for a specified user at the application level. <b>It returns only the records of applications authorized for the user at the application level</b> (for example, authorization completed by calling the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation). Authorization granted for an entire app instance group by calling the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation is not included in the response.
+        /// The response is deduplicated by the combination of app instance group and application. Each record corresponds to an application within an app instance group.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The user must already exist under the current account. If the user does not exist, the error code <c>User.NotFound</c> is returned. Call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</description></item>
-        /// <item><description>The delivery group that contains the application must already be created, and the application must have been authorized to the user at the application level. If no per-application authorization has been performed, an empty application list is returned.</description></item>
+        /// <item><description>The user exists in the current account. If the user does not exist, the error code User.NotFound is returned. You can call the <a href="https://help.aliyun.com/document_detail/436936.html">DescribeUsers</a> operation to obtain the username.</description></item>
+        /// <item><description>The app instance group to which the application belongs has been created, and the application has been authorized for the user at the application level. If no application-level authorization has been performed, an empty application list is returned.</description></item>
         /// </list>
-        /// <h2>Parameter description</h2>
+        /// <h2>Metric description</h2>
         /// <list type="bullet">
-        /// <item><description><b><c>EndUserId</c> and <c>ProductType</c> are required.</b> Set <c>ProductType</c> to <c>CloudApp</c>, which indicates WUYING Cloud Application.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppId</c>, <c>AppInstanceGroupName</c>, and <c>AppName</c> are optional filter conditions. All of them use fuzzy match and can be combined in any way. If all are omitted, all per-application authorization records for the user are returned.</description></item>
-        /// <item><description>Use <c>PageNumber</c> and <c>PageSize</c> for paging. <c>PageNumber</c> starts from 1, and <c>PageSize</c> ranges from 1 to 100. Use the returned <c>TotalCount</c> to determine whether to continue querying.</description></item>
+        /// <item><description><b>EndUserId and ProductType are required.</b> Set ProductType to CloudApp, which indicates WUYING Cloud App.</description></item>
+        /// <item><description>AppInstanceGroupId, AppId, AppInstanceGroupName, and AppName are optional filter conditions. Fuzzy match is used for all these parameters, and they can be used in any combination. If all of them are omitted, all application-level authorization records for the user are returned.</description></item>
+        /// <item><description>Use PageNumber and PageSize for paging. PageNumber starts from 1, and the valid values for PageSize range from 1 to 100. You can determine whether to continue the query based on the returned TotalCount.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the delivery group ID (AppInstanceGroupId) and the application IDs of deployed applications within the delivery group (AppId in the Apps list).</description></item>
-        /// <item><description>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the application to the target user.</description></item>
-        /// <item><description>Call this operation to query the applications that the user is authorized to access.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> or <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation to obtain the app instance group ID (AppInstanceGroupId) and the application IDs (AppId in the Apps list) of the applications deployed in the app instance group.</description></item>
+        /// <item><description>Call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize the applications for the target user.</description></item>
+        /// <item><description>Call this operation to query the applications authorized for the user.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12874,7 +13562,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of user groups authorized by a specified delivery group.</para>
+        /// <para>Queries the user groups authorized for an app instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12940,7 +13628,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of user groups authorized by a specified delivery group.</para>
+        /// <para>Queries the user groups authorized for an app instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13006,7 +13694,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of user groups authorized by a specified delivery group.</para>
+        /// <para>Queries the user groups authorized for an app instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13024,7 +13712,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of user groups authorized by a specified delivery group.</para>
+        /// <para>Queries the user groups authorized for an app instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13042,52 +13730,52 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of authorized users for a specified delivery group or delivery group set by using paging. Supports exact or fuzzy filtering by username.</para>
+        /// <para>Performs a paging query on the authorized user list of a specified app instance group or app instance group set, and supports exact or fuzzy filtering by username.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the currently authorized users of a specified delivery group (AppInstanceGroupId) or delivery group set (AppInstanceGroupSetId). It returns each user\&quot;s username, account type, email address, phone number, and the authorization mode of the associated delivery group.</para>
+        /// <para>This operation queries the currently authorized users of a specified app instance group (AppInstanceGroupId) or app instance group set (AppInstanceGroupSetId). It returns the username, account type, email address, phone number, and the authorization mode of the app instance group to which each user belongs.</para>
         /// <list type="bullet">
-        /// <item><description>This operation returns <b>authorization relationships</b> and does not indicate whether users are currently online or have established connections.</description></item>
-        /// <item><description>In the Cloud Browser product, a delivery group corresponds to a cloud browser group, and a delivery group ID corresponds to a browser group ID.
-        /// The scope of results depends on the authorization mode of the delivery group (response parameter AuthMode):</description></item>
-        /// <item><description>When the authorization mode is <c>App</c> (application-level authorization) or <c>AppInstanceGroup</c> (delivery group-level authorization): Returns users authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation at the delivery group level, as well as users authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation at the application level. If AppId is specified, only users <b>authorized for that specific application</b> are returned.</description></item>
-        /// <item><description>When the authorization mode is <c>Session</c> (session-level authorization): Returns users who have been granted persistent sessions. The AppInstancePersistentIds field lists all persistent session IDs granted to each user. If AppInstancePersistentId is specified, only users granted that session are returned.</description></item>
-        /// <item><description>When querying by delivery group set: Returns users authorized for the set. The response parameter AppInstanceGroupId is the primary delivery group ID of the set, and AppInstanceGroupSetId is the queried set ID.
-        /// When querying by delivery group, results are sorted in descending order by authorization time, with the most recently authorized users listed first.</description></item>
+        /// <item><description>This operation returns <b>authorization relationships</b>, which does not indicate that the users are currently online or have established connections.</description></item>
+        /// <item><description>In the Cloud Browser product, an app instance group is a cloud browser group, and the app instance group ID is the browser group ID.
+        /// The return scope depends on the authorization mode of the app instance group (the AuthMode response parameter):</description></item>
+        /// <item><description>When the authorization mode is <c>App</c> (application authorization) or <c>AppInstanceGroup</c> (app instance group authorization): returns the users authorized by app instance group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation and the users authorized by application through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If AppId is specified, only the users <b>specifically authorized for this application</b> are returned.</description></item>
+        /// <item><description>When the authorization mode is <c>Session</c> (session authorization): returns the users who are granted persistent sessions, and lists all persistent session IDs granted to each user in AppInstancePersistentIds. If AppInstancePersistentId is specified, only the users granted this session are returned.</description></item>
+        /// <item><description>When querying by app instance group set: returns the users authorized to the set. The AppInstanceGroupId response parameter is the primary app instance group ID of the set, and AppInstanceGroupSetId is the ID of the queried set.
+        /// When querying by app instance group, the results are sorted in descending order of authorization time, with the most recently authorized users listed first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The target delivery group or delivery group set must be created, belong to the current account, and match the specified ProductType. Otherwise, a resource-not-found error code is returned.</description></item>
-        /// <item><description>Users must have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns normally with an empty Users list and TotalCount of 0.</description></item>
+        /// <item><description>The target app instance group or app instance group set has been created, belongs to the current account, and its product type matches ProductType. Otherwise, a resource not found error code is returned.</description></item>
+        /// <item><description>Users have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns a normal response with Users as an empty list and TotalCount as 0.</description></item>
         /// </list>
         /// <h2>Parameter description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ProductType, PageNumber, and PageSize are required</b>. If ProductType has an invalid value, the error code <c>ProductTypeInvalid</c> is returned.</description></item>
-        /// <item><description><b>Exactly one of AppInstanceGroupId and AppInstanceGroupSetId must be specified</b>. If both or neither are specified, the error code <c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c> is returned.</description></item>
-        /// <item><description><b>AppId and AppInstancePersistentId are not supported when querying by delivery group set</b>. If specified, the error codes <c>InvalidParameter.AppId</c> and <c>InvalidParameter.AppInstancePersistentId</c> are returned respectively.</description></item>
-        /// <item><description>EndUserId performs <b>exact matching</b> by username. UserIdFuzzy performs <b>fuzzy matching</b> by username (a hit occurs if the username contains the keyword). Both can be specified simultaneously, in which case both conditions must be met.</description></item>
-        /// <item><description>PageNumber starts from 1. Valid values of PageSize: 1 to 100.</description></item>
-        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, TotalCount is the number of <b>authorization records</b> that match the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the records are merged into a single user entry in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <c>Session</c>, TotalCount is the deduplicated user count.</description></item>
+        /// <item><description><b>ProductType, PageNumber, and PageSize are required</b>. If the value of ProductType is invalid, the <c>ProductTypeInvalid</c> error code is returned.</description></item>
+        /// <item><description><b>You must specify either AppInstanceGroupId or AppInstanceGroupSetId, but not both</b>. If both are specified or neither is specified, the <c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c> error code is returned.</description></item>
+        /// <item><description><b>AppId and AppInstancePersistentId are not supported when querying by app instance group set</b>. If either is specified, the <c>InvalidParameter.AppId</c> or <c>InvalidParameter.AppInstancePersistentId</c> error code is returned.</description></item>
+        /// <item><description>EndUserId performs <b>exact match</b> by username, and UserIdFuzzy performs <b>fuzzy match</b> by username (a hit occurs if the username contains the keyword). Both can be specified at the same time, and both conditions must be met.</description></item>
+        /// <item><description>PageNumber starts from 1. The value range of PageSize is 1 to 100.</description></item>
+        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, TotalCount is the <b>number of authorization records</b> that meet the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the user is merged into one in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <c>Session</c>, TotalCount is the number of deduplicated users.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</description></item>
-        /// <item><description>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize at the delivery group level, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize at the application level.</description></item>
-        /// <item><description>Call this operation to query authorized users. To remove authorization, pass the returned EndUserId values to the UnAuthorizeUserIds parameter of the authorization operations mentioned above.</description></item>
+        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</description></item>
+        /// <item><description>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize by app instance group, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize by application.</description></item>
+        /// <item><description>Call this operation to query the authorized users. To remove authorization, pass the returned EndUserId to the UnAuthorizeUserIds parameter of the preceding authorization operations.</description></item>
         /// </ol>
         /// <h2>Error codes</h2>
         /// <list type="bullet">
         /// <item><description><c>ProductTypeInvalid</c>: The value of ProductType is invalid.</description></item>
         /// <item><description><c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c>: Both AppInstanceGroupId and AppInstanceGroupSetId are specified, or neither is specified.</description></item>
-        /// <item><description><c>InvalidParameter.AppId</c>: AppId is specified when querying by delivery group set.</description></item>
-        /// <item><description><c>InvalidParameter.AppInstancePersistentId</c>: AppInstancePersistentId is specified when querying by delivery group set.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSpecItem.NotFound</c>: The delivery group does not exist, does not belong to the current account, or the product type does not match.</description></item>
+        /// <item><description><c>InvalidParameter.AppId</c>: AppId is specified when querying by app instance group set.</description></item>
+        /// <item><description><c>InvalidParameter.AppInstancePersistentId</c>: AppInstancePersistentId is specified when querying by app instance group set.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSpecItem.NotFound</c>: The app instance group does not exist, does not belong to the current account, or the product type does not match.</description></item>
         /// <item><description><c>InvalidBrowserInstanceGroup.NotFound</c>: When ProductType is <c>CloudBrowser</c>, the cloud browser group does not exist, does not belong to the current account, or the product type does not match.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSet.NotFound</c>: The delivery group set does not exist, does not belong to the current account, the product type does not match, or the set does not have an available primary delivery group.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSet.ActivationFailed</c>: The delivery group set is not in an available state.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSet.NotFound</c>: The app instance group set does not exist, does not belong to the current account, the product type does not match, or there is no available primary app instance group in the set.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSet.ActivationFailed</c>: The app instance group set is not in an available state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13164,52 +13852,52 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of authorized users for a specified delivery group or delivery group set by using paging. Supports exact or fuzzy filtering by username.</para>
+        /// <para>Performs a paging query on the authorized user list of a specified app instance group or app instance group set, and supports exact or fuzzy filtering by username.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the currently authorized users of a specified delivery group (AppInstanceGroupId) or delivery group set (AppInstanceGroupSetId). It returns each user\&quot;s username, account type, email address, phone number, and the authorization mode of the associated delivery group.</para>
+        /// <para>This operation queries the currently authorized users of a specified app instance group (AppInstanceGroupId) or app instance group set (AppInstanceGroupSetId). It returns the username, account type, email address, phone number, and the authorization mode of the app instance group to which each user belongs.</para>
         /// <list type="bullet">
-        /// <item><description>This operation returns <b>authorization relationships</b> and does not indicate whether users are currently online or have established connections.</description></item>
-        /// <item><description>In the Cloud Browser product, a delivery group corresponds to a cloud browser group, and a delivery group ID corresponds to a browser group ID.
-        /// The scope of results depends on the authorization mode of the delivery group (response parameter AuthMode):</description></item>
-        /// <item><description>When the authorization mode is <c>App</c> (application-level authorization) or <c>AppInstanceGroup</c> (delivery group-level authorization): Returns users authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation at the delivery group level, as well as users authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation at the application level. If AppId is specified, only users <b>authorized for that specific application</b> are returned.</description></item>
-        /// <item><description>When the authorization mode is <c>Session</c> (session-level authorization): Returns users who have been granted persistent sessions. The AppInstancePersistentIds field lists all persistent session IDs granted to each user. If AppInstancePersistentId is specified, only users granted that session are returned.</description></item>
-        /// <item><description>When querying by delivery group set: Returns users authorized for the set. The response parameter AppInstanceGroupId is the primary delivery group ID of the set, and AppInstanceGroupSetId is the queried set ID.
-        /// When querying by delivery group, results are sorted in descending order by authorization time, with the most recently authorized users listed first.</description></item>
+        /// <item><description>This operation returns <b>authorization relationships</b>, which does not indicate that the users are currently online or have established connections.</description></item>
+        /// <item><description>In the Cloud Browser product, an app instance group is a cloud browser group, and the app instance group ID is the browser group ID.
+        /// The return scope depends on the authorization mode of the app instance group (the AuthMode response parameter):</description></item>
+        /// <item><description>When the authorization mode is <c>App</c> (application authorization) or <c>AppInstanceGroup</c> (app instance group authorization): returns the users authorized by app instance group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation and the users authorized by application through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If AppId is specified, only the users <b>specifically authorized for this application</b> are returned.</description></item>
+        /// <item><description>When the authorization mode is <c>Session</c> (session authorization): returns the users who are granted persistent sessions, and lists all persistent session IDs granted to each user in AppInstancePersistentIds. If AppInstancePersistentId is specified, only the users granted this session are returned.</description></item>
+        /// <item><description>When querying by app instance group set: returns the users authorized to the set. The AppInstanceGroupId response parameter is the primary app instance group ID of the set, and AppInstanceGroupSetId is the ID of the queried set.
+        /// When querying by app instance group, the results are sorted in descending order of authorization time, with the most recently authorized users listed first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The target delivery group or delivery group set must be created, belong to the current account, and match the specified ProductType. Otherwise, a resource-not-found error code is returned.</description></item>
-        /// <item><description>Users must have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns normally with an empty Users list and TotalCount of 0.</description></item>
+        /// <item><description>The target app instance group or app instance group set has been created, belongs to the current account, and its product type matches ProductType. Otherwise, a resource not found error code is returned.</description></item>
+        /// <item><description>Users have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns a normal response with Users as an empty list and TotalCount as 0.</description></item>
         /// </list>
         /// <h2>Parameter description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ProductType, PageNumber, and PageSize are required</b>. If ProductType has an invalid value, the error code <c>ProductTypeInvalid</c> is returned.</description></item>
-        /// <item><description><b>Exactly one of AppInstanceGroupId and AppInstanceGroupSetId must be specified</b>. If both or neither are specified, the error code <c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c> is returned.</description></item>
-        /// <item><description><b>AppId and AppInstancePersistentId are not supported when querying by delivery group set</b>. If specified, the error codes <c>InvalidParameter.AppId</c> and <c>InvalidParameter.AppInstancePersistentId</c> are returned respectively.</description></item>
-        /// <item><description>EndUserId performs <b>exact matching</b> by username. UserIdFuzzy performs <b>fuzzy matching</b> by username (a hit occurs if the username contains the keyword). Both can be specified simultaneously, in which case both conditions must be met.</description></item>
-        /// <item><description>PageNumber starts from 1. Valid values of PageSize: 1 to 100.</description></item>
-        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, TotalCount is the number of <b>authorization records</b> that match the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the records are merged into a single user entry in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <c>Session</c>, TotalCount is the deduplicated user count.</description></item>
+        /// <item><description><b>ProductType, PageNumber, and PageSize are required</b>. If the value of ProductType is invalid, the <c>ProductTypeInvalid</c> error code is returned.</description></item>
+        /// <item><description><b>You must specify either AppInstanceGroupId or AppInstanceGroupSetId, but not both</b>. If both are specified or neither is specified, the <c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c> error code is returned.</description></item>
+        /// <item><description><b>AppId and AppInstancePersistentId are not supported when querying by app instance group set</b>. If either is specified, the <c>InvalidParameter.AppId</c> or <c>InvalidParameter.AppInstancePersistentId</c> error code is returned.</description></item>
+        /// <item><description>EndUserId performs <b>exact match</b> by username, and UserIdFuzzy performs <b>fuzzy match</b> by username (a hit occurs if the username contains the keyword). Both can be specified at the same time, and both conditions must be met.</description></item>
+        /// <item><description>PageNumber starts from 1. The value range of PageSize is 1 to 100.</description></item>
+        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, TotalCount is the <b>number of authorization records</b> that meet the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the user is merged into one in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <c>Session</c>, TotalCount is the number of deduplicated users.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</description></item>
-        /// <item><description>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize at the delivery group level, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize at the application level.</description></item>
-        /// <item><description>Call this operation to query authorized users. To remove authorization, pass the returned EndUserId values to the UnAuthorizeUserIds parameter of the authorization operations mentioned above.</description></item>
+        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</description></item>
+        /// <item><description>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize by app instance group, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize by application.</description></item>
+        /// <item><description>Call this operation to query the authorized users. To remove authorization, pass the returned EndUserId to the UnAuthorizeUserIds parameter of the preceding authorization operations.</description></item>
         /// </ol>
         /// <h2>Error codes</h2>
         /// <list type="bullet">
         /// <item><description><c>ProductTypeInvalid</c>: The value of ProductType is invalid.</description></item>
         /// <item><description><c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c>: Both AppInstanceGroupId and AppInstanceGroupSetId are specified, or neither is specified.</description></item>
-        /// <item><description><c>InvalidParameter.AppId</c>: AppId is specified when querying by delivery group set.</description></item>
-        /// <item><description><c>InvalidParameter.AppInstancePersistentId</c>: AppInstancePersistentId is specified when querying by delivery group set.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSpecItem.NotFound</c>: The delivery group does not exist, does not belong to the current account, or the product type does not match.</description></item>
+        /// <item><description><c>InvalidParameter.AppId</c>: AppId is specified when querying by app instance group set.</description></item>
+        /// <item><description><c>InvalidParameter.AppInstancePersistentId</c>: AppInstancePersistentId is specified when querying by app instance group set.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSpecItem.NotFound</c>: The app instance group does not exist, does not belong to the current account, or the product type does not match.</description></item>
         /// <item><description><c>InvalidBrowserInstanceGroup.NotFound</c>: When ProductType is <c>CloudBrowser</c>, the cloud browser group does not exist, does not belong to the current account, or the product type does not match.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSet.NotFound</c>: The delivery group set does not exist, does not belong to the current account, the product type does not match, or the set does not have an available primary delivery group.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSet.ActivationFailed</c>: The delivery group set is not in an available state.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSet.NotFound</c>: The app instance group set does not exist, does not belong to the current account, the product type does not match, or there is no available primary app instance group in the set.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSet.ActivationFailed</c>: The app instance group set is not in an available state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13286,52 +13974,52 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of authorized users for a specified delivery group or delivery group set by using paging. Supports exact or fuzzy filtering by username.</para>
+        /// <para>Performs a paging query on the authorized user list of a specified app instance group or app instance group set, and supports exact or fuzzy filtering by username.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the currently authorized users of a specified delivery group (AppInstanceGroupId) or delivery group set (AppInstanceGroupSetId). It returns each user\&quot;s username, account type, email address, phone number, and the authorization mode of the associated delivery group.</para>
+        /// <para>This operation queries the currently authorized users of a specified app instance group (AppInstanceGroupId) or app instance group set (AppInstanceGroupSetId). It returns the username, account type, email address, phone number, and the authorization mode of the app instance group to which each user belongs.</para>
         /// <list type="bullet">
-        /// <item><description>This operation returns <b>authorization relationships</b> and does not indicate whether users are currently online or have established connections.</description></item>
-        /// <item><description>In the Cloud Browser product, a delivery group corresponds to a cloud browser group, and a delivery group ID corresponds to a browser group ID.
-        /// The scope of results depends on the authorization mode of the delivery group (response parameter AuthMode):</description></item>
-        /// <item><description>When the authorization mode is <c>App</c> (application-level authorization) or <c>AppInstanceGroup</c> (delivery group-level authorization): Returns users authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation at the delivery group level, as well as users authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation at the application level. If AppId is specified, only users <b>authorized for that specific application</b> are returned.</description></item>
-        /// <item><description>When the authorization mode is <c>Session</c> (session-level authorization): Returns users who have been granted persistent sessions. The AppInstancePersistentIds field lists all persistent session IDs granted to each user. If AppInstancePersistentId is specified, only users granted that session are returned.</description></item>
-        /// <item><description>When querying by delivery group set: Returns users authorized for the set. The response parameter AppInstanceGroupId is the primary delivery group ID of the set, and AppInstanceGroupSetId is the queried set ID.
-        /// When querying by delivery group, results are sorted in descending order by authorization time, with the most recently authorized users listed first.</description></item>
+        /// <item><description>This operation returns <b>authorization relationships</b>, which does not indicate that the users are currently online or have established connections.</description></item>
+        /// <item><description>In the Cloud Browser product, an app instance group is a cloud browser group, and the app instance group ID is the browser group ID.
+        /// The return scope depends on the authorization mode of the app instance group (the AuthMode response parameter):</description></item>
+        /// <item><description>When the authorization mode is <c>App</c> (application authorization) or <c>AppInstanceGroup</c> (app instance group authorization): returns the users authorized by app instance group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation and the users authorized by application through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If AppId is specified, only the users <b>specifically authorized for this application</b> are returned.</description></item>
+        /// <item><description>When the authorization mode is <c>Session</c> (session authorization): returns the users who are granted persistent sessions, and lists all persistent session IDs granted to each user in AppInstancePersistentIds. If AppInstancePersistentId is specified, only the users granted this session are returned.</description></item>
+        /// <item><description>When querying by app instance group set: returns the users authorized to the set. The AppInstanceGroupId response parameter is the primary app instance group ID of the set, and AppInstanceGroupSetId is the ID of the queried set.
+        /// When querying by app instance group, the results are sorted in descending order of authorization time, with the most recently authorized users listed first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The target delivery group or delivery group set must be created, belong to the current account, and match the specified ProductType. Otherwise, a resource-not-found error code is returned.</description></item>
-        /// <item><description>Users must have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns normally with an empty Users list and TotalCount of 0.</description></item>
+        /// <item><description>The target app instance group or app instance group set has been created, belongs to the current account, and its product type matches ProductType. Otherwise, a resource not found error code is returned.</description></item>
+        /// <item><description>Users have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns a normal response with Users as an empty list and TotalCount as 0.</description></item>
         /// </list>
         /// <h2>Parameter description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ProductType, PageNumber, and PageSize are required</b>. If ProductType has an invalid value, the error code <c>ProductTypeInvalid</c> is returned.</description></item>
-        /// <item><description><b>Exactly one of AppInstanceGroupId and AppInstanceGroupSetId must be specified</b>. If both or neither are specified, the error code <c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c> is returned.</description></item>
-        /// <item><description><b>AppId and AppInstancePersistentId are not supported when querying by delivery group set</b>. If specified, the error codes <c>InvalidParameter.AppId</c> and <c>InvalidParameter.AppInstancePersistentId</c> are returned respectively.</description></item>
-        /// <item><description>EndUserId performs <b>exact matching</b> by username. UserIdFuzzy performs <b>fuzzy matching</b> by username (a hit occurs if the username contains the keyword). Both can be specified simultaneously, in which case both conditions must be met.</description></item>
-        /// <item><description>PageNumber starts from 1. Valid values of PageSize: 1 to 100.</description></item>
-        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, TotalCount is the number of <b>authorization records</b> that match the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the records are merged into a single user entry in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <c>Session</c>, TotalCount is the deduplicated user count.</description></item>
+        /// <item><description><b>ProductType, PageNumber, and PageSize are required</b>. If the value of ProductType is invalid, the <c>ProductTypeInvalid</c> error code is returned.</description></item>
+        /// <item><description><b>You must specify either AppInstanceGroupId or AppInstanceGroupSetId, but not both</b>. If both are specified or neither is specified, the <c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c> error code is returned.</description></item>
+        /// <item><description><b>AppId and AppInstancePersistentId are not supported when querying by app instance group set</b>. If either is specified, the <c>InvalidParameter.AppId</c> or <c>InvalidParameter.AppInstancePersistentId</c> error code is returned.</description></item>
+        /// <item><description>EndUserId performs <b>exact match</b> by username, and UserIdFuzzy performs <b>fuzzy match</b> by username (a hit occurs if the username contains the keyword). Both can be specified at the same time, and both conditions must be met.</description></item>
+        /// <item><description>PageNumber starts from 1. The value range of PageSize is 1 to 100.</description></item>
+        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, TotalCount is the <b>number of authorization records</b> that meet the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the user is merged into one in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <c>Session</c>, TotalCount is the number of deduplicated users.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</description></item>
-        /// <item><description>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize at the delivery group level, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize at the application level.</description></item>
-        /// <item><description>Call this operation to query authorized users. To remove authorization, pass the returned EndUserId values to the UnAuthorizeUserIds parameter of the authorization operations mentioned above.</description></item>
+        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</description></item>
+        /// <item><description>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize by app instance group, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize by application.</description></item>
+        /// <item><description>Call this operation to query the authorized users. To remove authorization, pass the returned EndUserId to the UnAuthorizeUserIds parameter of the preceding authorization operations.</description></item>
         /// </ol>
         /// <h2>Error codes</h2>
         /// <list type="bullet">
         /// <item><description><c>ProductTypeInvalid</c>: The value of ProductType is invalid.</description></item>
         /// <item><description><c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c>: Both AppInstanceGroupId and AppInstanceGroupSetId are specified, or neither is specified.</description></item>
-        /// <item><description><c>InvalidParameter.AppId</c>: AppId is specified when querying by delivery group set.</description></item>
-        /// <item><description><c>InvalidParameter.AppInstancePersistentId</c>: AppInstancePersistentId is specified when querying by delivery group set.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSpecItem.NotFound</c>: The delivery group does not exist, does not belong to the current account, or the product type does not match.</description></item>
+        /// <item><description><c>InvalidParameter.AppId</c>: AppId is specified when querying by app instance group set.</description></item>
+        /// <item><description><c>InvalidParameter.AppInstancePersistentId</c>: AppInstancePersistentId is specified when querying by app instance group set.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSpecItem.NotFound</c>: The app instance group does not exist, does not belong to the current account, or the product type does not match.</description></item>
         /// <item><description><c>InvalidBrowserInstanceGroup.NotFound</c>: When ProductType is <c>CloudBrowser</c>, the cloud browser group does not exist, does not belong to the current account, or the product type does not match.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSet.NotFound</c>: The delivery group set does not exist, does not belong to the current account, the product type does not match, or the set does not have an available primary delivery group.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSet.ActivationFailed</c>: The delivery group set is not in an available state.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSet.NotFound</c>: The app instance group set does not exist, does not belong to the current account, the product type does not match, or there is no available primary app instance group in the set.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSet.ActivationFailed</c>: The app instance group set is not in an available state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13350,52 +14038,52 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of authorized users for a specified delivery group or delivery group set by using paging. Supports exact or fuzzy filtering by username.</para>
+        /// <para>Performs a paging query on the authorized user list of a specified app instance group or app instance group set, and supports exact or fuzzy filtering by username.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation queries the currently authorized users of a specified delivery group (AppInstanceGroupId) or delivery group set (AppInstanceGroupSetId). It returns each user\&quot;s username, account type, email address, phone number, and the authorization mode of the associated delivery group.</para>
+        /// <para>This operation queries the currently authorized users of a specified app instance group (AppInstanceGroupId) or app instance group set (AppInstanceGroupSetId). It returns the username, account type, email address, phone number, and the authorization mode of the app instance group to which each user belongs.</para>
         /// <list type="bullet">
-        /// <item><description>This operation returns <b>authorization relationships</b> and does not indicate whether users are currently online or have established connections.</description></item>
-        /// <item><description>In the Cloud Browser product, a delivery group corresponds to a cloud browser group, and a delivery group ID corresponds to a browser group ID.
-        /// The scope of results depends on the authorization mode of the delivery group (response parameter AuthMode):</description></item>
-        /// <item><description>When the authorization mode is <c>App</c> (application-level authorization) or <c>AppInstanceGroup</c> (delivery group-level authorization): Returns users authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation at the delivery group level, as well as users authorized through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation at the application level. If AppId is specified, only users <b>authorized for that specific application</b> are returned.</description></item>
-        /// <item><description>When the authorization mode is <c>Session</c> (session-level authorization): Returns users who have been granted persistent sessions. The AppInstancePersistentIds field lists all persistent session IDs granted to each user. If AppInstancePersistentId is specified, only users granted that session are returned.</description></item>
-        /// <item><description>When querying by delivery group set: Returns users authorized for the set. The response parameter AppInstanceGroupId is the primary delivery group ID of the set, and AppInstanceGroupSetId is the queried set ID.
-        /// When querying by delivery group, results are sorted in descending order by authorization time, with the most recently authorized users listed first.</description></item>
+        /// <item><description>This operation returns <b>authorization relationships</b>, which does not indicate that the users are currently online or have established connections.</description></item>
+        /// <item><description>In the Cloud Browser product, an app instance group is a cloud browser group, and the app instance group ID is the browser group ID.
+        /// The return scope depends on the authorization mode of the app instance group (the AuthMode response parameter):</description></item>
+        /// <item><description>When the authorization mode is <c>App</c> (application authorization) or <c>AppInstanceGroup</c> (app instance group authorization): returns the users authorized by app instance group through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation and the users authorized by application through the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If AppId is specified, only the users <b>specifically authorized for this application</b> are returned.</description></item>
+        /// <item><description>When the authorization mode is <c>Session</c> (session authorization): returns the users who are granted persistent sessions, and lists all persistent session IDs granted to each user in AppInstancePersistentIds. If AppInstancePersistentId is specified, only the users granted this session are returned.</description></item>
+        /// <item><description>When querying by app instance group set: returns the users authorized to the set. The AppInstanceGroupId response parameter is the primary app instance group ID of the set, and AppInstanceGroupSetId is the ID of the queried set.
+        /// When querying by app instance group, the results are sorted in descending order of authorization time, with the most recently authorized users listed first.</description></item>
         /// </list>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>The target delivery group or delivery group set must be created, belong to the current account, and match the specified ProductType. Otherwise, a resource-not-found error code is returned.</description></item>
-        /// <item><description>Users must have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns normally with an empty Users list and TotalCount of 0.</description></item>
+        /// <item><description>The target app instance group or app instance group set has been created, belongs to the current account, and its product type matches ProductType. Otherwise, a resource not found error code is returned.</description></item>
+        /// <item><description>Users have been authorized through the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> or <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation. If no users have been authorized, the operation returns a normal response with Users as an empty list and TotalCount as 0.</description></item>
         /// </list>
         /// <h2>Parameter description</h2>
         /// <list type="bullet">
-        /// <item><description><b>ProductType, PageNumber, and PageSize are required</b>. If ProductType has an invalid value, the error code <c>ProductTypeInvalid</c> is returned.</description></item>
-        /// <item><description><b>Exactly one of AppInstanceGroupId and AppInstanceGroupSetId must be specified</b>. If both or neither are specified, the error code <c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c> is returned.</description></item>
-        /// <item><description><b>AppId and AppInstancePersistentId are not supported when querying by delivery group set</b>. If specified, the error codes <c>InvalidParameter.AppId</c> and <c>InvalidParameter.AppInstancePersistentId</c> are returned respectively.</description></item>
-        /// <item><description>EndUserId performs <b>exact matching</b> by username. UserIdFuzzy performs <b>fuzzy matching</b> by username (a hit occurs if the username contains the keyword). Both can be specified simultaneously, in which case both conditions must be met.</description></item>
-        /// <item><description>PageNumber starts from 1. Valid values of PageSize: 1 to 100.</description></item>
-        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, TotalCount is the number of <b>authorization records</b> that match the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the records are merged into a single user entry in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <c>Session</c>, TotalCount is the deduplicated user count.</description></item>
+        /// <item><description><b>ProductType, PageNumber, and PageSize are required</b>. If the value of ProductType is invalid, the <c>ProductTypeInvalid</c> error code is returned.</description></item>
+        /// <item><description><b>You must specify either AppInstanceGroupId or AppInstanceGroupSetId, but not both</b>. If both are specified or neither is specified, the <c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c> error code is returned.</description></item>
+        /// <item><description><b>AppId and AppInstancePersistentId are not supported when querying by app instance group set</b>. If either is specified, the <c>InvalidParameter.AppId</c> or <c>InvalidParameter.AppInstancePersistentId</c> error code is returned.</description></item>
+        /// <item><description>EndUserId performs <b>exact match</b> by username, and UserIdFuzzy performs <b>fuzzy match</b> by username (a hit occurs if the username contains the keyword). Both can be specified at the same time, and both conditions must be met.</description></item>
+        /// <item><description>PageNumber starts from 1. The value range of PageSize is 1 to 100.</description></item>
+        /// <item><description>When the authorization mode is <c>App</c> or <c>AppInstanceGroup</c>, TotalCount is the <b>number of authorization records</b> that meet the conditions. If the same user has multiple authorization records (for example, authorized for multiple applications), the user is merged into one in Users. Therefore, the number of users returned on the current page may be less than PageSize. Use TotalCount to determine whether to continue paging. When the authorization mode is <c>Session</c>, TotalCount is the number of deduplicated users.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</description></item>
-        /// <item><description>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize at the delivery group level, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize at the application level.</description></item>
-        /// <item><description>Call this operation to query authorized users. To remove authorization, pass the returned EndUserId values to the UnAuthorizeUserIds parameter of the authorization operations mentioned above.</description></item>
+        /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. For cloud browser groups, call the <a href="~~ListBrowserInstanceGroup~~">ListBrowserInstanceGroup</a> operation.</description></item>
+        /// <item><description>Call the <a href="~~AuthorizeInstanceGroup~~">AuthorizeInstanceGroup</a> operation to authorize by app instance group, or call the <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> operation to authorize by application.</description></item>
+        /// <item><description>Call this operation to query the authorized users. To remove authorization, pass the returned EndUserId to the UnAuthorizeUserIds parameter of the preceding authorization operations.</description></item>
         /// </ol>
         /// <h2>Error codes</h2>
         /// <list type="bullet">
         /// <item><description><c>ProductTypeInvalid</c>: The value of ProductType is invalid.</description></item>
         /// <item><description><c>InvalidParameter.AppInstanceGroupId/AppInstanceGroupSetId</c>: Both AppInstanceGroupId and AppInstanceGroupSetId are specified, or neither is specified.</description></item>
-        /// <item><description><c>InvalidParameter.AppId</c>: AppId is specified when querying by delivery group set.</description></item>
-        /// <item><description><c>InvalidParameter.AppInstancePersistentId</c>: AppInstancePersistentId is specified when querying by delivery group set.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSpecItem.NotFound</c>: The delivery group does not exist, does not belong to the current account, or the product type does not match.</description></item>
+        /// <item><description><c>InvalidParameter.AppId</c>: AppId is specified when querying by app instance group set.</description></item>
+        /// <item><description><c>InvalidParameter.AppInstancePersistentId</c>: AppInstancePersistentId is specified when querying by app instance group set.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSpecItem.NotFound</c>: The app instance group does not exist, does not belong to the current account, or the product type does not match.</description></item>
         /// <item><description><c>InvalidBrowserInstanceGroup.NotFound</c>: When ProductType is <c>CloudBrowser</c>, the cloud browser group does not exist, does not belong to the current account, or the product type does not match.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSet.NotFound</c>: The delivery group set does not exist, does not belong to the current account, the product type does not match, or the set does not have an available primary delivery group.</description></item>
-        /// <item><description><c>InvalidAppInstanceGroupSet.ActivationFailed</c>: The delivery group set is not in an available state.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSet.NotFound</c>: The app instance group set does not exist, does not belong to the current account, the product type does not match, or there is no available primary app instance group in the set.</description></item>
+        /// <item><description><c>InvalidAppInstanceGroupSet.ActivationFailed</c>: The app instance group set is not in an available state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13414,7 +14102,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bindng information between users and resources.</para>
+        /// <para>Queries the binding information between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13480,7 +14168,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bindng information between users and resources.</para>
+        /// <para>Queries the binding information between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13546,7 +14234,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bindng information between users and resources.</para>
+        /// <para>Queries the binding information between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13564,7 +14252,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bindng information between users and resources.</para>
+        /// <para>Queries the binding information between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13582,7 +14270,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the list of bookmarks under a specified cloud browser group or delivery group set.</para>
+        /// <para>Queries the list of bookmarks under a specified cloud browser group or delivery group set by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13640,7 +14328,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the list of bookmarks under a specified cloud browser group or delivery group set.</para>
+        /// <para>Queries the list of bookmarks under a specified cloud browser group or delivery group set by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13698,7 +14386,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the list of bookmarks under a specified cloud browser group or delivery group set.</para>
+        /// <para>Queries the list of bookmarks under a specified cloud browser group or delivery group set by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13716,7 +14404,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query to retrieve the list of bookmarks under a specified cloud browser group or delivery group set.</para>
+        /// <para>Queries the list of bookmarks under a specified cloud browser group or delivery group set by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13734,20 +14422,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of cloud browser groups and their current statuses.</para>
+        /// <para>Queries cloud browser groups and their current status by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how paged query cloud browser groups in the monthly active user (MAU) billing scenario.</para>
+        /// <para>This topic describes the query usage for the monthly active user (MAU) billing scenario.</para>
         /// <h2>Query conditions</h2>
-        /// <para>You can filter cloud browser groups by browser group ID, name, business region, office network, set, authorized user group, and status. You can specify only one status value at a time for status filtering.</para>
+        /// <para>You can filter by browser group ID, name, business region, office network, set, authorized user groups, and status. You can specify only one status value at a time.</para>
         /// <h2>Pagination</h2>
-        /// <para>Use PageNumber and PageSize paged query data by page. You can determine whether paged query the next page based on the returned TotalCount.</para>
+        /// <para>Use <c>PageNumber</c> and <c>PageSize</c> to perform a paged query. Determine whether to query the next page based on the returned <c>TotalCount</c>.</para>
         /// <h2>What to do next</h2>
-        /// <para>To view the detailed configurations of a single browser group, call GetBrowserInstanceGroup by using the returned ID.</para>
-        /// <h2>Example notes</h2>
-        /// <para>The hyphen (<c>-</c>) in the examples indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the API operation. The common resource IDs in the examples are desensitized. Use the actual query results when you use the API operation.</para>
+        /// <para>To view the detailed configuration of a single browser group, call <c>GetBrowserInstanceGroup</c> by using the returned ID.</para>
+        /// <h2>Example description</h2>
+        /// <para>A hyphen (<c>-</c>) in the examples indicates that the field is not applicable or not returned in the current scenario. It is not a string actually returned by the API operation. Common resource ID examples are masked. Use the actual query results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13845,20 +14533,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of cloud browser groups and their current statuses.</para>
+        /// <para>Queries cloud browser groups and their current status by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how paged query cloud browser groups in the monthly active user (MAU) billing scenario.</para>
+        /// <para>This topic describes the query usage for the monthly active user (MAU) billing scenario.</para>
         /// <h2>Query conditions</h2>
-        /// <para>You can filter cloud browser groups by browser group ID, name, business region, office network, set, authorized user group, and status. You can specify only one status value at a time for status filtering.</para>
+        /// <para>You can filter by browser group ID, name, business region, office network, set, authorized user groups, and status. You can specify only one status value at a time.</para>
         /// <h2>Pagination</h2>
-        /// <para>Use PageNumber and PageSize paged query data by page. You can determine whether paged query the next page based on the returned TotalCount.</para>
+        /// <para>Use <c>PageNumber</c> and <c>PageSize</c> to perform a paged query. Determine whether to query the next page based on the returned <c>TotalCount</c>.</para>
         /// <h2>What to do next</h2>
-        /// <para>To view the detailed configurations of a single browser group, call GetBrowserInstanceGroup by using the returned ID.</para>
-        /// <h2>Example notes</h2>
-        /// <para>The hyphen (<c>-</c>) in the examples indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the API operation. The common resource IDs in the examples are desensitized. Use the actual query results when you use the API operation.</para>
+        /// <para>To view the detailed configuration of a single browser group, call <c>GetBrowserInstanceGroup</c> by using the returned ID.</para>
+        /// <h2>Example description</h2>
+        /// <para>A hyphen (<c>-</c>) in the examples indicates that the field is not applicable or not returned in the current scenario. It is not a string actually returned by the API operation. Common resource ID examples are masked. Use the actual query results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13956,20 +14644,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of cloud browser groups and their current statuses.</para>
+        /// <para>Queries cloud browser groups and their current status by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how paged query cloud browser groups in the monthly active user (MAU) billing scenario.</para>
+        /// <para>This topic describes the query usage for the monthly active user (MAU) billing scenario.</para>
         /// <h2>Query conditions</h2>
-        /// <para>You can filter cloud browser groups by browser group ID, name, business region, office network, set, authorized user group, and status. You can specify only one status value at a time for status filtering.</para>
+        /// <para>You can filter by browser group ID, name, business region, office network, set, authorized user groups, and status. You can specify only one status value at a time.</para>
         /// <h2>Pagination</h2>
-        /// <para>Use PageNumber and PageSize paged query data by page. You can determine whether paged query the next page based on the returned TotalCount.</para>
+        /// <para>Use <c>PageNumber</c> and <c>PageSize</c> to perform a paged query. Determine whether to query the next page based on the returned <c>TotalCount</c>.</para>
         /// <h2>What to do next</h2>
-        /// <para>To view the detailed configurations of a single browser group, call GetBrowserInstanceGroup by using the returned ID.</para>
-        /// <h2>Example notes</h2>
-        /// <para>The hyphen (<c>-</c>) in the examples indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the API operation. The common resource IDs in the examples are desensitized. Use the actual query results when you use the API operation.</para>
+        /// <para>To view the detailed configuration of a single browser group, call <c>GetBrowserInstanceGroup</c> by using the returned ID.</para>
+        /// <h2>Example description</h2>
+        /// <para>A hyphen (<c>-</c>) in the examples indicates that the field is not applicable or not returned in the current scenario. It is not a string actually returned by the API operation. Common resource ID examples are masked. Use the actual query results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13987,20 +14675,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of cloud browser groups and their current statuses.</para>
+        /// <para>Queries cloud browser groups and their current status by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how paged query cloud browser groups in the monthly active user (MAU) billing scenario.</para>
+        /// <para>This topic describes the query usage for the monthly active user (MAU) billing scenario.</para>
         /// <h2>Query conditions</h2>
-        /// <para>You can filter cloud browser groups by browser group ID, name, business region, office network, set, authorized user group, and status. You can specify only one status value at a time for status filtering.</para>
+        /// <para>You can filter by browser group ID, name, business region, office network, set, authorized user groups, and status. You can specify only one status value at a time.</para>
         /// <h2>Pagination</h2>
-        /// <para>Use PageNumber and PageSize paged query data by page. You can determine whether paged query the next page based on the returned TotalCount.</para>
+        /// <para>Use <c>PageNumber</c> and <c>PageSize</c> to perform a paged query. Determine whether to query the next page based on the returned <c>TotalCount</c>.</para>
         /// <h2>What to do next</h2>
-        /// <para>To view the detailed configurations of a single browser group, call GetBrowserInstanceGroup by using the returned ID.</para>
-        /// <h2>Example notes</h2>
-        /// <para>The hyphen (<c>-</c>) in the examples indicates that the field is not applicable or not returned in the current scenario, and is not an actual string returned by the API operation. The common resource IDs in the examples are desensitized. Use the actual query results when you use the API operation.</para>
+        /// <para>To view the detailed configuration of a single browser group, call <c>GetBrowserInstanceGroup</c> by using the returned ID.</para>
+        /// <h2>Example description</h2>
+        /// <para>A hyphen (<c>-</c>) in the examples indicates that the field is not applicable or not returned in the current scenario. It is not a string actually returned by the API operation. Common resource ID examples are masked. Use the actual query results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14818,7 +15506,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information of images by using paging and a paged query, including the image name, type, status, and version identity.</para>
+        /// <para>Performs a paged query to retrieve the basic information of images, including the image name, type, status, and version identity, with paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14905,7 +15593,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information of images by using paging and a paged query, including the image name, type, status, and version identity.</para>
+        /// <para>Performs a paged query to retrieve the basic information of images, including the image name, type, status, and version identity, with paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14992,7 +15680,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information of images by using paging and a paged query, including the image name, type, status, and version identity.</para>
+        /// <para>Performs a paged query to retrieve the basic information of images, including the image name, type, status, and version identity, with paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15015,7 +15703,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the basic information of images by using paging and a paged query, including the image name, type, status, and version identity.</para>
+        /// <para>Performs a paged query to retrieve the basic information of images, including the image name, type, status, and version identity, with paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15179,8 +15867,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paging to perform a paged query of the model template list under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by the model group dimension, the default model is automatically pinned to the top.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paging to query the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group, the default model is automatically pinned to the top.
+        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15265,8 +15953,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paging to perform a paged query of the model template list under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by the model group dimension, the default model is automatically pinned to the top.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paging to query the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group, the default model is automatically pinned to the top.
+        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15351,8 +16039,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paging to perform a paged query of the model template list under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by the model group dimension, the default model is automatically pinned to the top.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paging to query the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group, the default model is automatically pinned to the top.
+        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15375,8 +16063,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use paging to perform a paged query of the model template list under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by the model group dimension, the default model is automatically pinned to the top.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the Wuying Agent Management Center.</para>
+        /// <para>You can use paging to query the list of model templates under a model provider template in the Wuying Agent Management Center. You can filter the results by model group ID, model provider template ID, model template ID, and model encoding. When you query by model group, the default model is automatically pinned to the top.
+        /// Before you call this operation, make sure that you fully understand the operations and usage of the Wuying Agent Management Center.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15394,7 +16082,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model provider endpoints.</para>
+        /// <para>Queries a list of model provider endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15448,7 +16136,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model provider endpoints.</para>
+        /// <para>Queries a list of model provider endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15502,7 +16190,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model provider endpoints.</para>
+        /// <para>Queries a list of model provider endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15520,7 +16208,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model provider endpoints.</para>
+        /// <para>Queries a list of model provider endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15538,7 +16226,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available LLM model codes for a specified model provider. It supports filtering by LLM code, model brand, recommendation level, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</para>
+        /// <para>Queries the list of available LLM model codes for a specified model provider. Supports filtering by LLM code, model brand, recommended tier, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15612,7 +16300,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available LLM model codes for a specified model provider. It supports filtering by LLM code, model brand, recommendation level, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</para>
+        /// <para>Queries the list of available LLM model codes for a specified model provider. Supports filtering by LLM code, model brand, recommended tier, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15686,7 +16374,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available LLM model codes for a specified model provider. It supports filtering by LLM code, model brand, recommendation level, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</para>
+        /// <para>Queries the list of available LLM model codes for a specified model provider. Supports filtering by LLM code, model brand, recommended tier, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15704,7 +16392,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available LLM model codes for a specified model provider. It supports filtering by LLM code, model brand, recommendation level, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</para>
+        /// <para>Queries the list of available LLM model codes for a specified model provider. Supports filtering by LLM code, model brand, recommended tier, and recommendation status, and returns model information such as the model name, description, release time, features, inference modality, pricing, credit multiplier, and risk type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15722,13 +16410,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model provider templates.</para>
+        /// <para>Queries a list of model provider templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can use paging to query the list of model provider templates under a specified model group in the Wuying Agent Management Center. You can filter the templates by provider name, model group ID, and provider template ID. Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15804,13 +16491,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model provider templates.</para>
+        /// <para>Queries a list of model provider templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can use paging to query the list of model provider templates under a specified model group in the Wuying Agent Management Center. You can filter the templates by provider name, model group ID, and provider template ID. Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15886,13 +16572,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model provider templates.</para>
+        /// <para>Queries a list of model provider templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can use paging to query the list of model provider templates under a specified model group in the Wuying Agent Management Center. You can filter the templates by provider name, model group ID, and provider template ID. Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15910,13 +16595,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model provider templates.</para>
+        /// <para>Queries a list of model provider templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can perform a paged query to retrieve the list of model provider templates under a specified model group in the WUYING Agent Management Center. You can filter results by provider name, model group ID, and provider template ID. Paging is supported.
-        /// Before you call this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can use paging to query the list of model provider templates under a specified model group in the Wuying Agent Management Center. You can filter the templates by provider name, model group ID, and provider template ID. Make sure that you are fully familiar with the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17034,7 +17718,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account. Supports filtering by delivery group, application, and user authorization during paging.</para>
+        /// <para>Queries published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by page, and supports filtering by delivery group, application, and user authorization status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17045,17 +17729,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
         /// <item><description><b>You must explicitly specify ProductType, PageNumber, and PageSize.</b> The page number starts from 1, and the number of entries per page ranges from 1 to 100.</description></item>
-        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, the same application must meet both conditions.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. The same delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
+        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, they must be met by the same application.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or an empty string is specified, the condition is not used for filtering. The query results are sorted in descending order of the delivery group creation time. A delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
         /// <item><description>ExcludeUserId is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
         /// <item><description>AppId and AppName only filter delivery groups and <b>do not limit the returned Apps list to the matched applications</b>.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with PageNumber=1 and the desired PageSize. For WUYING Cloud App scenarios, set ProductType=CloudApp.</description></item>
-        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
+        /// <item><description>Initiate a query with PageNumber=1 and the required PageSize. For Wuying Cloud App scenarios, set ProductType=CloudApp.</description></item>
+        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still indicates the total number of all matched delivery groups.</description></item>
         /// <item><description>To obtain the details of a single delivery group, pass the complete AppInstanceGroupId returned and the same ProductType to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
+        /// The desensitized identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -17130,7 +17814,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account. Supports filtering by delivery group, application, and user authorization during paging.</para>
+        /// <para>Queries published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by page, and supports filtering by delivery group, application, and user authorization status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17141,17 +17825,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
         /// <item><description><b>You must explicitly specify ProductType, PageNumber, and PageSize.</b> The page number starts from 1, and the number of entries per page ranges from 1 to 100.</description></item>
-        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, the same application must meet both conditions.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. The same delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
+        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, they must be met by the same application.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or an empty string is specified, the condition is not used for filtering. The query results are sorted in descending order of the delivery group creation time. A delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
         /// <item><description>ExcludeUserId is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
         /// <item><description>AppId and AppName only filter delivery groups and <b>do not limit the returned Apps list to the matched applications</b>.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with PageNumber=1 and the desired PageSize. For WUYING Cloud App scenarios, set ProductType=CloudApp.</description></item>
-        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
+        /// <item><description>Initiate a query with PageNumber=1 and the required PageSize. For Wuying Cloud App scenarios, set ProductType=CloudApp.</description></item>
+        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still indicates the total number of all matched delivery groups.</description></item>
         /// <item><description>To obtain the details of a single delivery group, pass the complete AppInstanceGroupId returned and the same ProductType to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
+        /// The desensitized identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -17226,7 +17910,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account. Supports filtering by delivery group, application, and user authorization during paging.</para>
+        /// <para>Queries published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by page, and supports filtering by delivery group, application, and user authorization status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17237,17 +17921,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
         /// <item><description><b>You must explicitly specify ProductType, PageNumber, and PageSize.</b> The page number starts from 1, and the number of entries per page ranges from 1 to 100.</description></item>
-        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, the same application must meet both conditions.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. The same delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
+        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, they must be met by the same application.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or an empty string is specified, the condition is not used for filtering. The query results are sorted in descending order of the delivery group creation time. A delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
         /// <item><description>ExcludeUserId is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
         /// <item><description>AppId and AppName only filter delivery groups and <b>do not limit the returned Apps list to the matched applications</b>.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with PageNumber=1 and the desired PageSize. For WUYING Cloud App scenarios, set ProductType=CloudApp.</description></item>
-        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
+        /// <item><description>Initiate a query with PageNumber=1 and the required PageSize. For Wuying Cloud App scenarios, set ProductType=CloudApp.</description></item>
+        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still indicates the total number of all matched delivery groups.</description></item>
         /// <item><description>To obtain the details of a single delivery group, pass the complete AppInstanceGroupId returned and the same ProductType to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
+        /// The desensitized identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -17266,7 +17950,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the published delivery groups and their application information for a specified product type under the current Alibaba Cloud account. Supports filtering by delivery group, application, and user authorization during paging.</para>
+        /// <para>Queries published delivery groups and their application information for a specified product type under the current Alibaba Cloud account by page, and supports filtering by delivery group, application, and user authorization status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17277,17 +17961,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
         /// <item><description><b>You must explicitly specify ProductType, PageNumber, and PageSize.</b> The page number starts from 1, and the number of entries per page ranges from 1 to 100.</description></item>
-        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, the same application must meet both conditions.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, the results are not filtered by this condition. The query results are sorted in descending order of the delivery group creation time. The same delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
+        /// <item><description>AppInstanceGroupId, AppInstanceGroupName, AppId, and AppName all support fuzzy match. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met. If both AppId and AppName are specified, they must be met by the same application.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or an empty string is specified, the condition is not used for filtering. The query results are sorted in descending order of the delivery group creation time. A delivery group is not returned multiple times even if it contains multiple matched applications.</description></item>
         /// <item><description>ExcludeUserId is used to exclude delivery groups for which all applications have been directly authorized to a specified user. It cannot be used to determine whether the user has no access permissions at all.</description></item>
         /// <item><description>AppId and AppName only filter delivery groups and <b>do not limit the returned Apps list to the matched applications</b>.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with PageNumber=1 and the desired PageSize. For WUYING Cloud App scenarios, set ProductType=CloudApp.</description></item>
-        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still represents the total number of all matched delivery groups.</description></item>
+        /// <item><description>Initiate a query with PageNumber=1 and the required PageSize. For Wuying Cloud App scenarios, set ProductType=CloudApp.</description></item>
+        /// <item><description>Read AppInstanceGroupModels. To retrieve the next page, keep the product type and filter conditions unchanged and increment PageNumber. If no delivery groups match the conditions, the total count is 0 and the list is empty. If the page number exceeds the range of the current results, the list may also be empty, but the total count still indicates the total number of all matched delivery groups.</description></item>
         /// <item><description>To obtain the details of a single delivery group, pass the complete AppInstanceGroupId returned and the same ProductType to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
+        /// The desensitized identity in the examples is used to demonstrate the format. Replace it with your actual identity when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -17306,29 +17990,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries deployed applications in published delivery groups under the current Alibaba Cloud account for a specified product type by paging, and returns each application along with its delivery group and the number of authorized users by application. Supports filtering by delivery group, application, and user authorization status.</para>
+        /// <para>Performs a paging query on applications deployed in published delivery groups of a specified product type under the current Alibaba Cloud account. Returns each application along with its delivery group and the number of users granted authorization for the application. Supports filtering by delivery group, application, and user authorization status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <para>When you call this operation by using a RAM user or Security Token Service (STS) credential, you must have the <c>appstreaming:ListPublishedApps</c> permission.
-        /// Only delivery groups in the published state whose images contain deployed applications are included in the query results. This operation only queries information. It does not create delivery groups or grant or revoke application access permissions.</para>
-        /// <h2>Response granularity</h2>
-        /// <para>Results are returned on a per-delivery-group-plus-application basis. If the same application is deployed in multiple published delivery groups, a separate record is returned for each combination. <c>TotalCount</c> also reflects the number of such combinations. The list is sorted by the creation time of the delivery group in descending order.</para>
+        /// <h2>Prerequisites</h2>
+        /// <para>To call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:ListPublishedApps</c> permission.
+        /// Only applications deployed in the images of published delivery groups are returned in the query results. This operation only queries information. It does not create delivery groups, nor does it grant or revoke application access permissions.</para>
+        /// <h2>Return granularity</h2>
+        /// <para>Results are returned item by item based on the &quot;delivery group + application&quot; combination. If the same application is deployed in multiple published delivery groups, multiple records are returned. <c>TotalCount</c> also counts the number of combinations. The list is sorted in descending order of the creation time of the associated delivery groups.</para>
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
-        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> Page numbers start from <c>1</c>, and the page size ranges from <c>1</c> to <c>100</c>. Invalid values return error codes <c>InvalidParameter.PageNumber</c> and <c>InvalidParameter.PageSize</c>, respectively.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support substring matching. You can specify them individually or in combination. When multiple conditions are specified, all conditions must be met.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, filtering is not applied for that condition.</description></item>
-        /// <item><description><c>ExcludeUserId</c> excludes applications that have been authorized to the specified user by application, which helps you find applications that can still be authorized to that user. <b>Access permissions granted through delivery-group-level authorization or user groups are not evaluated by this condition.</b></description></item>
+        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> The page number starts from <c>1</c>, and the number of entries per page ranges from <c>1</c> to <c>100</c>. If the values are invalid, the error codes <c>InvalidParameter.PageNumber</c> and <c>InvalidParameter.PageSize</c> are returned, respectively.</description></item>
+        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support substring matching. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or an empty string is passed, filtering is not performed based on this condition.</description></item>
+        /// <item><description><c>ExcludeUserId</c> is used to exclude applications that have been authorized for a specified user on a per-application basis, making it easier to filter out applications that can still be authorized for the user. <b>Access permissions obtained through overall delivery group authorization or user groups are not evaluated by this condition.</b></description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For WUYING Cloud Application common scenarios, use <c>ProductType=CloudApp</c>.</description></item>
-        /// <item><description>Read <c>Apps</c>. To retrieve the next page, increment <c>PageNumber</c> while keeping the product type and filter conditions unchanged. If no results match, <c>TotalCount</c> is <c>0</c> and <c>Apps</c> is an empty list. If the page number exceeds the result range, <c>Apps</c> may also be empty, but <c>TotalCount</c> still indicates the total number of matching records.</description></item>
-        /// <item><description>To authorize users for a specific application by application, pass the returned <c>AppInstanceGroupId</c>, <c>AppId</c>, and the same <c>ProductType</c> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <c>AppInstanceGroupId</c> and <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identities in the examples are for format demonstration purposes. Replace them with your actual identities when you invoke the operation.</description></item>
+        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For WUYING Cloud App scenarios, use <c>ProductType=CloudApp</c>.</description></item>
+        /// <item><description>Read <c>Apps</c>. To retrieve the next page, keep the product type and filter conditions unchanged and increment <c>PageNumber</c>. If no matching results are found, <c>TotalCount</c> is <c>0</c> and <c>Apps</c> is an empty list. If the page number exceeds the result range, <c>Apps</c> may also be empty, but <c>TotalCount</c> still indicates the total number of matching records.</description></item>
+        /// <item><description>When you need to grant authorization to a user for an application on a per-application basis, pass the returned <c>AppInstanceGroupId</c>, <c>AppId</c>, and the same <c>ProductType</c> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <c>AppInstanceGroupId</c> and <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you invoke the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -17399,29 +18083,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries deployed applications in published delivery groups under the current Alibaba Cloud account for a specified product type by paging, and returns each application along with its delivery group and the number of authorized users by application. Supports filtering by delivery group, application, and user authorization status.</para>
+        /// <para>Performs a paging query on applications deployed in published delivery groups of a specified product type under the current Alibaba Cloud account. Returns each application along with its delivery group and the number of users granted authorization for the application. Supports filtering by delivery group, application, and user authorization status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <para>When you call this operation by using a RAM user or Security Token Service (STS) credential, you must have the <c>appstreaming:ListPublishedApps</c> permission.
-        /// Only delivery groups in the published state whose images contain deployed applications are included in the query results. This operation only queries information. It does not create delivery groups or grant or revoke application access permissions.</para>
-        /// <h2>Response granularity</h2>
-        /// <para>Results are returned on a per-delivery-group-plus-application basis. If the same application is deployed in multiple published delivery groups, a separate record is returned for each combination. <c>TotalCount</c> also reflects the number of such combinations. The list is sorted by the creation time of the delivery group in descending order.</para>
+        /// <h2>Prerequisites</h2>
+        /// <para>To call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:ListPublishedApps</c> permission.
+        /// Only applications deployed in the images of published delivery groups are returned in the query results. This operation only queries information. It does not create delivery groups, nor does it grant or revoke application access permissions.</para>
+        /// <h2>Return granularity</h2>
+        /// <para>Results are returned item by item based on the &quot;delivery group + application&quot; combination. If the same application is deployed in multiple published delivery groups, multiple records are returned. <c>TotalCount</c> also counts the number of combinations. The list is sorted in descending order of the creation time of the associated delivery groups.</para>
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
-        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> Page numbers start from <c>1</c>, and the page size ranges from <c>1</c> to <c>100</c>. Invalid values return error codes <c>InvalidParameter.PageNumber</c> and <c>InvalidParameter.PageSize</c>, respectively.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support substring matching. You can specify them individually or in combination. When multiple conditions are specified, all conditions must be met.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, filtering is not applied for that condition.</description></item>
-        /// <item><description><c>ExcludeUserId</c> excludes applications that have been authorized to the specified user by application, which helps you find applications that can still be authorized to that user. <b>Access permissions granted through delivery-group-level authorization or user groups are not evaluated by this condition.</b></description></item>
+        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> The page number starts from <c>1</c>, and the number of entries per page ranges from <c>1</c> to <c>100</c>. If the values are invalid, the error codes <c>InvalidParameter.PageNumber</c> and <c>InvalidParameter.PageSize</c> are returned, respectively.</description></item>
+        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support substring matching. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or an empty string is passed, filtering is not performed based on this condition.</description></item>
+        /// <item><description><c>ExcludeUserId</c> is used to exclude applications that have been authorized for a specified user on a per-application basis, making it easier to filter out applications that can still be authorized for the user. <b>Access permissions obtained through overall delivery group authorization or user groups are not evaluated by this condition.</b></description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For WUYING Cloud Application common scenarios, use <c>ProductType=CloudApp</c>.</description></item>
-        /// <item><description>Read <c>Apps</c>. To retrieve the next page, increment <c>PageNumber</c> while keeping the product type and filter conditions unchanged. If no results match, <c>TotalCount</c> is <c>0</c> and <c>Apps</c> is an empty list. If the page number exceeds the result range, <c>Apps</c> may also be empty, but <c>TotalCount</c> still indicates the total number of matching records.</description></item>
-        /// <item><description>To authorize users for a specific application by application, pass the returned <c>AppInstanceGroupId</c>, <c>AppId</c>, and the same <c>ProductType</c> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <c>AppInstanceGroupId</c> and <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identities in the examples are for format demonstration purposes. Replace them with your actual identities when you invoke the operation.</description></item>
+        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For WUYING Cloud App scenarios, use <c>ProductType=CloudApp</c>.</description></item>
+        /// <item><description>Read <c>Apps</c>. To retrieve the next page, keep the product type and filter conditions unchanged and increment <c>PageNumber</c>. If no matching results are found, <c>TotalCount</c> is <c>0</c> and <c>Apps</c> is an empty list. If the page number exceeds the result range, <c>Apps</c> may also be empty, but <c>TotalCount</c> still indicates the total number of matching records.</description></item>
+        /// <item><description>When you need to grant authorization to a user for an application on a per-application basis, pass the returned <c>AppInstanceGroupId</c>, <c>AppId</c>, and the same <c>ProductType</c> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <c>AppInstanceGroupId</c> and <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you invoke the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -17492,29 +18176,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries deployed applications in published delivery groups under the current Alibaba Cloud account for a specified product type by paging, and returns each application along with its delivery group and the number of authorized users by application. Supports filtering by delivery group, application, and user authorization status.</para>
+        /// <para>Performs a paging query on applications deployed in published delivery groups of a specified product type under the current Alibaba Cloud account. Returns each application along with its delivery group and the number of users granted authorization for the application. Supports filtering by delivery group, application, and user authorization status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <para>When you call this operation by using a RAM user or Security Token Service (STS) credential, you must have the <c>appstreaming:ListPublishedApps</c> permission.
-        /// Only delivery groups in the published state whose images contain deployed applications are included in the query results. This operation only queries information. It does not create delivery groups or grant or revoke application access permissions.</para>
-        /// <h2>Response granularity</h2>
-        /// <para>Results are returned on a per-delivery-group-plus-application basis. If the same application is deployed in multiple published delivery groups, a separate record is returned for each combination. <c>TotalCount</c> also reflects the number of such combinations. The list is sorted by the creation time of the delivery group in descending order.</para>
+        /// <h2>Prerequisites</h2>
+        /// <para>To call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:ListPublishedApps</c> permission.
+        /// Only applications deployed in the images of published delivery groups are returned in the query results. This operation only queries information. It does not create delivery groups, nor does it grant or revoke application access permissions.</para>
+        /// <h2>Return granularity</h2>
+        /// <para>Results are returned item by item based on the &quot;delivery group + application&quot; combination. If the same application is deployed in multiple published delivery groups, multiple records are returned. <c>TotalCount</c> also counts the number of combinations. The list is sorted in descending order of the creation time of the associated delivery groups.</para>
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
-        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> Page numbers start from <c>1</c>, and the page size ranges from <c>1</c> to <c>100</c>. Invalid values return error codes <c>InvalidParameter.PageNumber</c> and <c>InvalidParameter.PageSize</c>, respectively.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support substring matching. You can specify them individually or in combination. When multiple conditions are specified, all conditions must be met.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, filtering is not applied for that condition.</description></item>
-        /// <item><description><c>ExcludeUserId</c> excludes applications that have been authorized to the specified user by application, which helps you find applications that can still be authorized to that user. <b>Access permissions granted through delivery-group-level authorization or user groups are not evaluated by this condition.</b></description></item>
+        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> The page number starts from <c>1</c>, and the number of entries per page ranges from <c>1</c> to <c>100</c>. If the values are invalid, the error codes <c>InvalidParameter.PageNumber</c> and <c>InvalidParameter.PageSize</c> are returned, respectively.</description></item>
+        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support substring matching. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or an empty string is passed, filtering is not performed based on this condition.</description></item>
+        /// <item><description><c>ExcludeUserId</c> is used to exclude applications that have been authorized for a specified user on a per-application basis, making it easier to filter out applications that can still be authorized for the user. <b>Access permissions obtained through overall delivery group authorization or user groups are not evaluated by this condition.</b></description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For WUYING Cloud Application common scenarios, use <c>ProductType=CloudApp</c>.</description></item>
-        /// <item><description>Read <c>Apps</c>. To retrieve the next page, increment <c>PageNumber</c> while keeping the product type and filter conditions unchanged. If no results match, <c>TotalCount</c> is <c>0</c> and <c>Apps</c> is an empty list. If the page number exceeds the result range, <c>Apps</c> may also be empty, but <c>TotalCount</c> still indicates the total number of matching records.</description></item>
-        /// <item><description>To authorize users for a specific application by application, pass the returned <c>AppInstanceGroupId</c>, <c>AppId</c>, and the same <c>ProductType</c> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <c>AppInstanceGroupId</c> and <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identities in the examples are for format demonstration purposes. Replace them with your actual identities when you invoke the operation.</description></item>
+        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For WUYING Cloud App scenarios, use <c>ProductType=CloudApp</c>.</description></item>
+        /// <item><description>Read <c>Apps</c>. To retrieve the next page, keep the product type and filter conditions unchanged and increment <c>PageNumber</c>. If no matching results are found, <c>TotalCount</c> is <c>0</c> and <c>Apps</c> is an empty list. If the page number exceeds the result range, <c>Apps</c> may also be empty, but <c>TotalCount</c> still indicates the total number of matching records.</description></item>
+        /// <item><description>When you need to grant authorization to a user for an application on a per-application basis, pass the returned <c>AppInstanceGroupId</c>, <c>AppId</c>, and the same <c>ProductType</c> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <c>AppInstanceGroupId</c> and <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you invoke the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -17533,29 +18217,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries deployed applications in published delivery groups under the current Alibaba Cloud account for a specified product type by paging, and returns each application along with its delivery group and the number of authorized users by application. Supports filtering by delivery group, application, and user authorization status.</para>
+        /// <para>Performs a paging query on applications deployed in published delivery groups of a specified product type under the current Alibaba Cloud account. Returns each application along with its delivery group and the number of users granted authorization for the application. Supports filtering by delivery group, application, and user authorization status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <para>When you call this operation by using a RAM user or Security Token Service (STS) credential, you must have the <c>appstreaming:ListPublishedApps</c> permission.
-        /// Only delivery groups in the published state whose images contain deployed applications are included in the query results. This operation only queries information. It does not create delivery groups or grant or revoke application access permissions.</para>
-        /// <h2>Response granularity</h2>
-        /// <para>Results are returned on a per-delivery-group-plus-application basis. If the same application is deployed in multiple published delivery groups, a separate record is returned for each combination. <c>TotalCount</c> also reflects the number of such combinations. The list is sorted by the creation time of the delivery group in descending order.</para>
+        /// <h2>Prerequisites</h2>
+        /// <para>To call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:ListPublishedApps</c> permission.
+        /// Only applications deployed in the images of published delivery groups are returned in the query results. This operation only queries information. It does not create delivery groups, nor does it grant or revoke application access permissions.</para>
+        /// <h2>Return granularity</h2>
+        /// <para>Results are returned item by item based on the &quot;delivery group + application&quot; combination. If the same application is deployed in multiple published delivery groups, multiple records are returned. <c>TotalCount</c> also counts the number of combinations. The list is sorted in descending order of the creation time of the associated delivery groups.</para>
         /// <h2>Query and pagination</h2>
         /// <list type="bullet">
-        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> Page numbers start from <c>1</c>, and the page size ranges from <c>1</c> to <c>100</c>. Invalid values return error codes <c>InvalidParameter.PageNumber</c> and <c>InvalidParameter.PageSize</c>, respectively.</description></item>
-        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support substring matching. You can specify them individually or in combination. When multiple conditions are specified, all conditions must be met.</description></item>
-        /// <item><description>If an optional filter parameter is not specified or is set to an empty string, filtering is not applied for that condition.</description></item>
-        /// <item><description><c>ExcludeUserId</c> excludes applications that have been authorized to the specified user by application, which helps you find applications that can still be authorized to that user. <b>Access permissions granted through delivery-group-level authorization or user groups are not evaluated by this condition.</b></description></item>
+        /// <item><description><b>You must explicitly specify <c>ProductType</c>, <c>PageNumber</c>, and <c>PageSize</c>.</b> The page number starts from <c>1</c>, and the number of entries per page ranges from <c>1</c> to <c>100</c>. If the values are invalid, the error codes <c>InvalidParameter.PageNumber</c> and <c>InvalidParameter.PageSize</c> are returned, respectively.</description></item>
+        /// <item><description><c>AppInstanceGroupId</c>, <c>AppInstanceGroupName</c>, <c>AppId</c>, and <c>AppName</c> all support substring matching. You can specify them individually or in combination. If multiple conditions are specified, all conditions must be met.</description></item>
+        /// <item><description>If an optional filter parameter is not specified or an empty string is passed, filtering is not performed based on this condition.</description></item>
+        /// <item><description><c>ExcludeUserId</c> is used to exclude applications that have been authorized for a specified user on a per-application basis, making it easier to filter out applications that can still be authorized for the user. <b>Access permissions obtained through overall delivery group authorization or user groups are not evaluated by this condition.</b></description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For WUYING Cloud Application common scenarios, use <c>ProductType=CloudApp</c>.</description></item>
-        /// <item><description>Read <c>Apps</c>. To retrieve the next page, increment <c>PageNumber</c> while keeping the product type and filter conditions unchanged. If no results match, <c>TotalCount</c> is <c>0</c> and <c>Apps</c> is an empty list. If the page number exceeds the result range, <c>Apps</c> may also be empty, but <c>TotalCount</c> still indicates the total number of matching records.</description></item>
-        /// <item><description>To authorize users for a specific application by application, pass the returned <c>AppInstanceGroupId</c>, <c>AppId</c>, and the same <c>ProductType</c> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <c>AppInstanceGroupId</c> and <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
-        /// The masked identities in the examples are for format demonstration purposes. Replace them with your actual identities when you invoke the operation.</description></item>
+        /// <item><description>Initiate a query with <c>PageNumber=1</c> and the desired <c>PageSize</c>. For WUYING Cloud App scenarios, use <c>ProductType=CloudApp</c>.</description></item>
+        /// <item><description>Read <c>Apps</c>. To retrieve the next page, keep the product type and filter conditions unchanged and increment <c>PageNumber</c>. If no matching results are found, <c>TotalCount</c> is <c>0</c> and <c>Apps</c> is an empty list. If the page number exceeds the result range, <c>Apps</c> may also be empty, but <c>TotalCount</c> still indicates the total number of matching records.</description></item>
+        /// <item><description>When you need to grant authorization to a user for an application on a per-application basis, pass the returned <c>AppInstanceGroupId</c>, <c>AppId</c>, and the same <c>ProductType</c> to <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a>. To view delivery group details, pass <c>AppInstanceGroupId</c> and <c>ProductType</c> to <a href="~~GetAppInstanceGroup~~">GetAppInstanceGroup</a>.
+        /// The masked identity in the examples is used to demonstrate the format. Replace it with your actual identity when you invoke the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18162,40 +18846,40 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags bound to one or more delivery groups, or filters delivery groups that have specific tags bound by tag key-value pairs.</para>
+        /// <para>Queries the tags bound to one or more delivery groups, or filters delivery groups that are bound to specified tags by tag keys and values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation complies with the Alibaba Cloud tagging standard and is used to query tags bound to Elastic Cloud Application (China) delivery groups. You can query tags bound to resources by resource ID, or filter resources that have specific tags bound by tag key-value pairs.</para>
+        /// <para>This operation follows the Alibaba Cloud tagging specification and is used to query tags bound to Wuying Cloud App delivery groups. You can view the tags bound to resources by resource ID, or filter resources bound to specified tags by tag keys and values.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>A delivery group is created. You can call the ListAppInstanceGroup operation to obtain the delivery group ID.</description></item>
-        /// <item><description>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or by using the console or the Tag service.</description></item>
+        /// <item><description>A delivery group is created. You can obtain the delivery group ID by calling the ListAppInstanceGroup operation.</description></item>
+        /// <item><description>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or bind them in the console or Tag service.</description></item>
         /// </list>
         /// <h2>Parameter description</h2>
         /// <list type="bullet">
         /// <item><description><b>ResourceType is required</b>. Only <c>APPINSTANCEGROUP</c> (delivery group) is supported. If you specify other values, the error code <c>InvalidResourceType.Invalid</c> is returned.</description></item>
-        /// <item><description><b>Specify at least one of ResourceId.N and Tag.N</b>. If neither is specified, the error code <c>MissingParameter.ResourceIdsOrTags</c> is returned.<list type="bullet">
-        /// <item><description>If only ResourceId.N is specified: all tags attached to the specified resources are returned.</description></item>
-        /// <item><description>If only Tag.N is specified: all resources that have the specified tags attached and their matching tags are returned.</description></item>
-        /// <item><description>If both are specified: only records of the specified resources that have the specified tags attached are returned.</description></item>
+        /// <item><description><b>You must specify at least one of ResourceId.N and Tag.N</b>. If neither is specified, the error code <c>MissingParameter.ResourceIdsOrTags</c> is returned.<list type="bullet">
+        /// <item><description>If only ResourceId.N is specified: all tags bound to these resources are returned.</description></item>
+        /// <item><description>If only Tag.N is specified: all resources bound to the specified tags and their matched tags are returned.</description></item>
+        /// <item><description>If both are specified: only records of the specified resources bound to the specified tags are returned.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Tag.N.Key is required. If it is empty, the error code <c>InvalidTagPolicy.KeyInvalid</c> is returned. Tag.N.Value is optional. If it is not specified, the value of the tag key is not restricted, which means any tag value under the key is matched.</description></item>
-        /// <item><description>Multiple Tag.N conditions have an AND relationship. A resource is returned only if it has all specified tags attached.</description></item>
+        /// <item><description>Tag.N.Key is required. If it is empty, the error code <c>InvalidTagPolicy.KeyInvalid</c> is returned. Tag.N.Value is optional. If it is not specified, the value corresponding to the tag key is not limited.</description></item>
+        /// <item><description>Multiple Tag.N parameters have an AND relationship. A resource is returned only if it is bound to all specified tags.</description></item>
         /// </list>
         /// <h2>Response description</h2>
         /// <list type="bullet">
-        /// <item><description>Each record in the response corresponds to a resource-tag key-value pair. If a resource has multiple tags bound, multiple records are returned.</description></item>
-        /// <item><description>TotalCount indicates the number of records returned.</description></item>
-        /// <item><description>This operation returns all matching results at a time. An empty NextToken value indicates that no more data is available.</description></item>
+        /// <item><description>The response returns one record for each resource and tag key-value pair. If a resource is bound to multiple tags, multiple records are returned.</description></item>
+        /// <item><description>TotalCount indicates the number of records returned in the current request.</description></item>
+        /// <item><description>This operation returns all matched results at once. An empty NextToken in the response indicates that no more data is available.</description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Procedure</h2>
         /// <ol>
-        /// <item><description>Invoke the ListAppInstanceGroup operation to obtain the delivery group ID.</description></item>
-        /// <item><description>Invoke the TagResources operation to attach tags to the delivery group.</description></item>
-        /// <item><description>Invoke this operation to query tag bindings by resource ID or tag conditions.</description></item>
+        /// <item><description>Call ListAppInstanceGroup to obtain the delivery group ID.</description></item>
+        /// <item><description>Call TagResources to bind tags to the delivery group.</description></item>
+        /// <item><description>Call this operation to query the binding relationships by resource ID or tag condition.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18260,40 +18944,40 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags bound to one or more delivery groups, or filters delivery groups that have specific tags bound by tag key-value pairs.</para>
+        /// <para>Queries the tags bound to one or more delivery groups, or filters delivery groups that are bound to specified tags by tag keys and values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation complies with the Alibaba Cloud tagging standard and is used to query tags bound to Elastic Cloud Application (China) delivery groups. You can query tags bound to resources by resource ID, or filter resources that have specific tags bound by tag key-value pairs.</para>
+        /// <para>This operation follows the Alibaba Cloud tagging specification and is used to query tags bound to Wuying Cloud App delivery groups. You can view the tags bound to resources by resource ID, or filter resources bound to specified tags by tag keys and values.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>A delivery group is created. You can call the ListAppInstanceGroup operation to obtain the delivery group ID.</description></item>
-        /// <item><description>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or by using the console or the Tag service.</description></item>
+        /// <item><description>A delivery group is created. You can obtain the delivery group ID by calling the ListAppInstanceGroup operation.</description></item>
+        /// <item><description>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or bind them in the console or Tag service.</description></item>
         /// </list>
         /// <h2>Parameter description</h2>
         /// <list type="bullet">
         /// <item><description><b>ResourceType is required</b>. Only <c>APPINSTANCEGROUP</c> (delivery group) is supported. If you specify other values, the error code <c>InvalidResourceType.Invalid</c> is returned.</description></item>
-        /// <item><description><b>Specify at least one of ResourceId.N and Tag.N</b>. If neither is specified, the error code <c>MissingParameter.ResourceIdsOrTags</c> is returned.<list type="bullet">
-        /// <item><description>If only ResourceId.N is specified: all tags attached to the specified resources are returned.</description></item>
-        /// <item><description>If only Tag.N is specified: all resources that have the specified tags attached and their matching tags are returned.</description></item>
-        /// <item><description>If both are specified: only records of the specified resources that have the specified tags attached are returned.</description></item>
+        /// <item><description><b>You must specify at least one of ResourceId.N and Tag.N</b>. If neither is specified, the error code <c>MissingParameter.ResourceIdsOrTags</c> is returned.<list type="bullet">
+        /// <item><description>If only ResourceId.N is specified: all tags bound to these resources are returned.</description></item>
+        /// <item><description>If only Tag.N is specified: all resources bound to the specified tags and their matched tags are returned.</description></item>
+        /// <item><description>If both are specified: only records of the specified resources bound to the specified tags are returned.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Tag.N.Key is required. If it is empty, the error code <c>InvalidTagPolicy.KeyInvalid</c> is returned. Tag.N.Value is optional. If it is not specified, the value of the tag key is not restricted, which means any tag value under the key is matched.</description></item>
-        /// <item><description>Multiple Tag.N conditions have an AND relationship. A resource is returned only if it has all specified tags attached.</description></item>
+        /// <item><description>Tag.N.Key is required. If it is empty, the error code <c>InvalidTagPolicy.KeyInvalid</c> is returned. Tag.N.Value is optional. If it is not specified, the value corresponding to the tag key is not limited.</description></item>
+        /// <item><description>Multiple Tag.N parameters have an AND relationship. A resource is returned only if it is bound to all specified tags.</description></item>
         /// </list>
         /// <h2>Response description</h2>
         /// <list type="bullet">
-        /// <item><description>Each record in the response corresponds to a resource-tag key-value pair. If a resource has multiple tags bound, multiple records are returned.</description></item>
-        /// <item><description>TotalCount indicates the number of records returned.</description></item>
-        /// <item><description>This operation returns all matching results at a time. An empty NextToken value indicates that no more data is available.</description></item>
+        /// <item><description>The response returns one record for each resource and tag key-value pair. If a resource is bound to multiple tags, multiple records are returned.</description></item>
+        /// <item><description>TotalCount indicates the number of records returned in the current request.</description></item>
+        /// <item><description>This operation returns all matched results at once. An empty NextToken in the response indicates that no more data is available.</description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Procedure</h2>
         /// <ol>
-        /// <item><description>Invoke the ListAppInstanceGroup operation to obtain the delivery group ID.</description></item>
-        /// <item><description>Invoke the TagResources operation to attach tags to the delivery group.</description></item>
-        /// <item><description>Invoke this operation to query tag bindings by resource ID or tag conditions.</description></item>
+        /// <item><description>Call ListAppInstanceGroup to obtain the delivery group ID.</description></item>
+        /// <item><description>Call TagResources to bind tags to the delivery group.</description></item>
+        /// <item><description>Call this operation to query the binding relationships by resource ID or tag condition.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18358,40 +19042,40 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags bound to one or more delivery groups, or filters delivery groups that have specific tags bound by tag key-value pairs.</para>
+        /// <para>Queries the tags bound to one or more delivery groups, or filters delivery groups that are bound to specified tags by tag keys and values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation complies with the Alibaba Cloud tagging standard and is used to query tags bound to Elastic Cloud Application (China) delivery groups. You can query tags bound to resources by resource ID, or filter resources that have specific tags bound by tag key-value pairs.</para>
+        /// <para>This operation follows the Alibaba Cloud tagging specification and is used to query tags bound to Wuying Cloud App delivery groups. You can view the tags bound to resources by resource ID, or filter resources bound to specified tags by tag keys and values.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>A delivery group is created. You can call the ListAppInstanceGroup operation to obtain the delivery group ID.</description></item>
-        /// <item><description>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or by using the console or the Tag service.</description></item>
+        /// <item><description>A delivery group is created. You can obtain the delivery group ID by calling the ListAppInstanceGroup operation.</description></item>
+        /// <item><description>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or bind them in the console or Tag service.</description></item>
         /// </list>
         /// <h2>Parameter description</h2>
         /// <list type="bullet">
         /// <item><description><b>ResourceType is required</b>. Only <c>APPINSTANCEGROUP</c> (delivery group) is supported. If you specify other values, the error code <c>InvalidResourceType.Invalid</c> is returned.</description></item>
-        /// <item><description><b>Specify at least one of ResourceId.N and Tag.N</b>. If neither is specified, the error code <c>MissingParameter.ResourceIdsOrTags</c> is returned.<list type="bullet">
-        /// <item><description>If only ResourceId.N is specified: all tags attached to the specified resources are returned.</description></item>
-        /// <item><description>If only Tag.N is specified: all resources that have the specified tags attached and their matching tags are returned.</description></item>
-        /// <item><description>If both are specified: only records of the specified resources that have the specified tags attached are returned.</description></item>
+        /// <item><description><b>You must specify at least one of ResourceId.N and Tag.N</b>. If neither is specified, the error code <c>MissingParameter.ResourceIdsOrTags</c> is returned.<list type="bullet">
+        /// <item><description>If only ResourceId.N is specified: all tags bound to these resources are returned.</description></item>
+        /// <item><description>If only Tag.N is specified: all resources bound to the specified tags and their matched tags are returned.</description></item>
+        /// <item><description>If both are specified: only records of the specified resources bound to the specified tags are returned.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Tag.N.Key is required. If it is empty, the error code <c>InvalidTagPolicy.KeyInvalid</c> is returned. Tag.N.Value is optional. If it is not specified, the value of the tag key is not restricted, which means any tag value under the key is matched.</description></item>
-        /// <item><description>Multiple Tag.N conditions have an AND relationship. A resource is returned only if it has all specified tags attached.</description></item>
+        /// <item><description>Tag.N.Key is required. If it is empty, the error code <c>InvalidTagPolicy.KeyInvalid</c> is returned. Tag.N.Value is optional. If it is not specified, the value corresponding to the tag key is not limited.</description></item>
+        /// <item><description>Multiple Tag.N parameters have an AND relationship. A resource is returned only if it is bound to all specified tags.</description></item>
         /// </list>
         /// <h2>Response description</h2>
         /// <list type="bullet">
-        /// <item><description>Each record in the response corresponds to a resource-tag key-value pair. If a resource has multiple tags bound, multiple records are returned.</description></item>
-        /// <item><description>TotalCount indicates the number of records returned.</description></item>
-        /// <item><description>This operation returns all matching results at a time. An empty NextToken value indicates that no more data is available.</description></item>
+        /// <item><description>The response returns one record for each resource and tag key-value pair. If a resource is bound to multiple tags, multiple records are returned.</description></item>
+        /// <item><description>TotalCount indicates the number of records returned in the current request.</description></item>
+        /// <item><description>This operation returns all matched results at once. An empty NextToken in the response indicates that no more data is available.</description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Procedure</h2>
         /// <ol>
-        /// <item><description>Invoke the ListAppInstanceGroup operation to obtain the delivery group ID.</description></item>
-        /// <item><description>Invoke the TagResources operation to attach tags to the delivery group.</description></item>
-        /// <item><description>Invoke this operation to query tag bindings by resource ID or tag conditions.</description></item>
+        /// <item><description>Call ListAppInstanceGroup to obtain the delivery group ID.</description></item>
+        /// <item><description>Call TagResources to bind tags to the delivery group.</description></item>
+        /// <item><description>Call this operation to query the binding relationships by resource ID or tag condition.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18410,40 +19094,40 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags bound to one or more delivery groups, or filters delivery groups that have specific tags bound by tag key-value pairs.</para>
+        /// <para>Queries the tags bound to one or more delivery groups, or filters delivery groups that are bound to specified tags by tag keys and values.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation complies with the Alibaba Cloud tagging standard and is used to query tags bound to Elastic Cloud Application (China) delivery groups. You can query tags bound to resources by resource ID, or filter resources that have specific tags bound by tag key-value pairs.</para>
+        /// <para>This operation follows the Alibaba Cloud tagging specification and is used to query tags bound to Wuying Cloud App delivery groups. You can view the tags bound to resources by resource ID, or filter resources bound to specified tags by tag keys and values.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>A delivery group is created. You can call the ListAppInstanceGroup operation to obtain the delivery group ID.</description></item>
-        /// <item><description>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or by using the console or the Tag service.</description></item>
+        /// <item><description>A delivery group is created. You can obtain the delivery group ID by calling the ListAppInstanceGroup operation.</description></item>
+        /// <item><description>Tags are bound to the delivery group. You can bind tags by calling the TagResources operation, or bind them in the console or Tag service.</description></item>
         /// </list>
         /// <h2>Parameter description</h2>
         /// <list type="bullet">
         /// <item><description><b>ResourceType is required</b>. Only <c>APPINSTANCEGROUP</c> (delivery group) is supported. If you specify other values, the error code <c>InvalidResourceType.Invalid</c> is returned.</description></item>
-        /// <item><description><b>Specify at least one of ResourceId.N and Tag.N</b>. If neither is specified, the error code <c>MissingParameter.ResourceIdsOrTags</c> is returned.<list type="bullet">
-        /// <item><description>If only ResourceId.N is specified: all tags attached to the specified resources are returned.</description></item>
-        /// <item><description>If only Tag.N is specified: all resources that have the specified tags attached and their matching tags are returned.</description></item>
-        /// <item><description>If both are specified: only records of the specified resources that have the specified tags attached are returned.</description></item>
+        /// <item><description><b>You must specify at least one of ResourceId.N and Tag.N</b>. If neither is specified, the error code <c>MissingParameter.ResourceIdsOrTags</c> is returned.<list type="bullet">
+        /// <item><description>If only ResourceId.N is specified: all tags bound to these resources are returned.</description></item>
+        /// <item><description>If only Tag.N is specified: all resources bound to the specified tags and their matched tags are returned.</description></item>
+        /// <item><description>If both are specified: only records of the specified resources bound to the specified tags are returned.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Tag.N.Key is required. If it is empty, the error code <c>InvalidTagPolicy.KeyInvalid</c> is returned. Tag.N.Value is optional. If it is not specified, the value of the tag key is not restricted, which means any tag value under the key is matched.</description></item>
-        /// <item><description>Multiple Tag.N conditions have an AND relationship. A resource is returned only if it has all specified tags attached.</description></item>
+        /// <item><description>Tag.N.Key is required. If it is empty, the error code <c>InvalidTagPolicy.KeyInvalid</c> is returned. Tag.N.Value is optional. If it is not specified, the value corresponding to the tag key is not limited.</description></item>
+        /// <item><description>Multiple Tag.N parameters have an AND relationship. A resource is returned only if it is bound to all specified tags.</description></item>
         /// </list>
         /// <h2>Response description</h2>
         /// <list type="bullet">
-        /// <item><description>Each record in the response corresponds to a resource-tag key-value pair. If a resource has multiple tags bound, multiple records are returned.</description></item>
-        /// <item><description>TotalCount indicates the number of records returned.</description></item>
-        /// <item><description>This operation returns all matching results at a time. An empty NextToken value indicates that no more data is available.</description></item>
+        /// <item><description>The response returns one record for each resource and tag key-value pair. If a resource is bound to multiple tags, multiple records are returned.</description></item>
+        /// <item><description>TotalCount indicates the number of records returned in the current request.</description></item>
+        /// <item><description>This operation returns all matched results at once. An empty NextToken in the response indicates that no more data is available.</description></item>
         /// </list>
-        /// <h2>Invocation sequence</h2>
+        /// <h2>Procedure</h2>
         /// <ol>
-        /// <item><description>Invoke the ListAppInstanceGroup operation to obtain the delivery group ID.</description></item>
-        /// <item><description>Invoke the TagResources operation to attach tags to the delivery group.</description></item>
-        /// <item><description>Invoke this operation to query tag bindings by resource ID or tag conditions.</description></item>
+        /// <item><description>Call ListAppInstanceGroup to obtain the delivery group ID.</description></item>
+        /// <item><description>Call TagResources to bind tags to the delivery group.</description></item>
+        /// <item><description>Call this operation to query the binding relationships by resource ID or tag condition.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18468,7 +19152,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
-        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not use the step index as the completion percentage.</para>
+        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then display the task progress based on the current step and step status returned by GetTask. The step sets vary across different task types. Do not use the step index as the completion percentage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18516,7 +19200,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
-        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not use the step index as the completion percentage.</para>
+        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then display the task progress based on the current step and step status returned by GetTask. The step sets vary across different task types. Do not use the step index as the completion percentage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18564,7 +19248,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
-        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not use the step index as the completion percentage.</para>
+        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then display the task progress based on the current step and step status returned by GetTask. The step sets vary across different task types. Do not use the step index as the completion percentage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18588,7 +19272,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
-        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not use the step index as the completion percentage.</para>
+        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then display the task progress based on the current step and step status returned by GetTask. The step sets vary across different task types. Do not use the step index as the completion percentage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18694,12 +19378,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workstations.</para>
+        /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of WUYING workstations.</para>
+        /// <para>Retrieves the list of WUYING workstations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18827,12 +19511,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workstations.</para>
+        /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of WUYING workstations.</para>
+        /// <para>Retrieves the list of WUYING workstations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18960,12 +19644,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workstations.</para>
+        /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of WUYING workstations.</para>
+        /// <para>Retrieves the list of WUYING workstations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18983,12 +19667,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workstations.</para>
+        /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of WUYING workstations.</para>
+        /// <para>Retrieves the list of WUYING workstations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19006,12 +19690,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</para>
+        /// <para>Queries the available Wuying workstation workload templates for a specified virtual node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
+        /// <para>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> under the current account. This operation verifies the ownership of the node pool and returns up to the first 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19061,12 +19745,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</para>
+        /// <para>Queries the available Wuying workstation workload templates for a specified virtual node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
+        /// <para>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> under the current account. This operation verifies the ownership of the node pool and returns up to the first 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19116,12 +19800,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</para>
+        /// <para>Queries the available Wuying workstation workload templates for a specified virtual node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
+        /// <para>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> under the current account. This operation verifies the ownership of the node pool and returns up to the first 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19139,12 +19823,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</para>
+        /// <para>Queries the available Wuying workstation workload templates for a specified virtual node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
+        /// <para>Queries the available workload templates for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> under the current account. This operation verifies the ownership of the node pool and returns up to the first 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19162,26 +19846,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available zone IDs for a specified region, product type, and operating system type.</para>
+        /// <para>Queries the list of available zone IDs for a specified product type and operating system type in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This operation returns the list of available zone IDs for the current Alibaba Cloud account based on the specified region, product type, and operating system type. A typical use case is to check which zones are available before creating a resource that requires a vSwitch, and then select a vSwitch in one of those zones.
+        /// <h2>Usage notes</h2>
+        /// <para>This operation returns a list of available zone IDs that can be selected by the current Alibaba Cloud account based on the region, product type, and operating system type. A typical use case is to confirm which zones are available before creating a resource that requires a specified vSwitch, and then select a vSwitch located in one of these zones.
         /// This operation only queries information. It does not create resources or incur fees.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>When calling this operation with a RAM user or STS credential, the <c>appstreaming:ListAppInstanceType</c> permission is required. If the permission is insufficient, the error code <c>Forbidden.NoPermission</c> is returned.</description></item>
-        /// <item><description><b><c>ProductType</c>, <c>BizRegionId</c>, and <c>OsType</c> are all required.</b> If any of these parameters is missing, empty, or set to an unrecognized value, the error code <c>InvalidParameter.ValueInvalid</c> is returned.</description></item>
-        /// <item><description><c>BizRegionId</c> must be a region ID supported by WUYING Cloud Application. Call <a href="~~ListRegions~~">ListRegions</a> first to obtain the supported region IDs.</description></item>
+        /// <item><description>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:ListAppInstanceType permission. If you do not have the required permissions, the error code Forbidden.NoPermission is returned.</description></item>
+        /// <item><description><b>ProductType, BizRegionId, and OsType are all required.</b> If any of these parameters is missing, empty, or has an unrecognized value, the error code InvalidParameter.ValueInvalid is returned.</description></item>
+        /// <item><description>BizRegionId must be a region ID supported by App Streaming. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</description></item>
-        /// <item><description>Call this operation with the region ID, target product type, and operating system type, and read the returned <c>ListZonesModel.Zones</c>.</description></item>
-        /// <item><description>When creating a resource that requires a vSwitch, select a vSwitch in one of the returned zones. For example, pass the corresponding vSwitch ID when calling <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
-        /// The returned zone list is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching it for extended periods.</description></item>
+        /// <item><description>Call this operation by using the region ID, target product type, and operating system type, and then read the returned ListZonesModel.Zones.</description></item>
+        /// <item><description>When you create a resource and need to specify a vSwitch, select a vSwitch located in one of the returned zones. For example, pass the corresponding vSwitch ID when you call <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
+        /// The returned list of available zones is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching the list for a long time.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -19232,26 +19916,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available zone IDs for a specified region, product type, and operating system type.</para>
+        /// <para>Queries the list of available zone IDs for a specified product type and operating system type in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This operation returns the list of available zone IDs for the current Alibaba Cloud account based on the specified region, product type, and operating system type. A typical use case is to check which zones are available before creating a resource that requires a vSwitch, and then select a vSwitch in one of those zones.
+        /// <h2>Usage notes</h2>
+        /// <para>This operation returns a list of available zone IDs that can be selected by the current Alibaba Cloud account based on the region, product type, and operating system type. A typical use case is to confirm which zones are available before creating a resource that requires a specified vSwitch, and then select a vSwitch located in one of these zones.
         /// This operation only queries information. It does not create resources or incur fees.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>When calling this operation with a RAM user or STS credential, the <c>appstreaming:ListAppInstanceType</c> permission is required. If the permission is insufficient, the error code <c>Forbidden.NoPermission</c> is returned.</description></item>
-        /// <item><description><b><c>ProductType</c>, <c>BizRegionId</c>, and <c>OsType</c> are all required.</b> If any of these parameters is missing, empty, or set to an unrecognized value, the error code <c>InvalidParameter.ValueInvalid</c> is returned.</description></item>
-        /// <item><description><c>BizRegionId</c> must be a region ID supported by WUYING Cloud Application. Call <a href="~~ListRegions~~">ListRegions</a> first to obtain the supported region IDs.</description></item>
+        /// <item><description>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:ListAppInstanceType permission. If you do not have the required permissions, the error code Forbidden.NoPermission is returned.</description></item>
+        /// <item><description><b>ProductType, BizRegionId, and OsType are all required.</b> If any of these parameters is missing, empty, or has an unrecognized value, the error code InvalidParameter.ValueInvalid is returned.</description></item>
+        /// <item><description>BizRegionId must be a region ID supported by App Streaming. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</description></item>
-        /// <item><description>Call this operation with the region ID, target product type, and operating system type, and read the returned <c>ListZonesModel.Zones</c>.</description></item>
-        /// <item><description>When creating a resource that requires a vSwitch, select a vSwitch in one of the returned zones. For example, pass the corresponding vSwitch ID when calling <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
-        /// The returned zone list is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching it for extended periods.</description></item>
+        /// <item><description>Call this operation by using the region ID, target product type, and operating system type, and then read the returned ListZonesModel.Zones.</description></item>
+        /// <item><description>When you create a resource and need to specify a vSwitch, select a vSwitch located in one of the returned zones. For example, pass the corresponding vSwitch ID when you call <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
+        /// The returned list of available zones is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching the list for a long time.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -19302,26 +19986,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available zone IDs for a specified region, product type, and operating system type.</para>
+        /// <para>Queries the list of available zone IDs for a specified product type and operating system type in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This operation returns the list of available zone IDs for the current Alibaba Cloud account based on the specified region, product type, and operating system type. A typical use case is to check which zones are available before creating a resource that requires a vSwitch, and then select a vSwitch in one of those zones.
+        /// <h2>Usage notes</h2>
+        /// <para>This operation returns a list of available zone IDs that can be selected by the current Alibaba Cloud account based on the region, product type, and operating system type. A typical use case is to confirm which zones are available before creating a resource that requires a specified vSwitch, and then select a vSwitch located in one of these zones.
         /// This operation only queries information. It does not create resources or incur fees.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>When calling this operation with a RAM user or STS credential, the <c>appstreaming:ListAppInstanceType</c> permission is required. If the permission is insufficient, the error code <c>Forbidden.NoPermission</c> is returned.</description></item>
-        /// <item><description><b><c>ProductType</c>, <c>BizRegionId</c>, and <c>OsType</c> are all required.</b> If any of these parameters is missing, empty, or set to an unrecognized value, the error code <c>InvalidParameter.ValueInvalid</c> is returned.</description></item>
-        /// <item><description><c>BizRegionId</c> must be a region ID supported by WUYING Cloud Application. Call <a href="~~ListRegions~~">ListRegions</a> first to obtain the supported region IDs.</description></item>
+        /// <item><description>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:ListAppInstanceType permission. If you do not have the required permissions, the error code Forbidden.NoPermission is returned.</description></item>
+        /// <item><description><b>ProductType, BizRegionId, and OsType are all required.</b> If any of these parameters is missing, empty, or has an unrecognized value, the error code InvalidParameter.ValueInvalid is returned.</description></item>
+        /// <item><description>BizRegionId must be a region ID supported by App Streaming. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</description></item>
-        /// <item><description>Call this operation with the region ID, target product type, and operating system type, and read the returned <c>ListZonesModel.Zones</c>.</description></item>
-        /// <item><description>When creating a resource that requires a vSwitch, select a vSwitch in one of the returned zones. For example, pass the corresponding vSwitch ID when calling <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
-        /// The returned zone list is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching it for extended periods.</description></item>
+        /// <item><description>Call this operation by using the region ID, target product type, and operating system type, and then read the returned ListZonesModel.Zones.</description></item>
+        /// <item><description>When you create a resource and need to specify a vSwitch, select a vSwitch located in one of the returned zones. For example, pass the corresponding vSwitch ID when you call <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
+        /// The returned list of available zones is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching the list for a long time.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -19340,26 +20024,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of available zone IDs for a specified region, product type, and operating system type.</para>
+        /// <para>Queries the list of available zone IDs for a specified product type and operating system type in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This operation returns the list of available zone IDs for the current Alibaba Cloud account based on the specified region, product type, and operating system type. A typical use case is to check which zones are available before creating a resource that requires a vSwitch, and then select a vSwitch in one of those zones.
+        /// <h2>Usage notes</h2>
+        /// <para>This operation returns a list of available zone IDs that can be selected by the current Alibaba Cloud account based on the region, product type, and operating system type. A typical use case is to confirm which zones are available before creating a resource that requires a specified vSwitch, and then select a vSwitch located in one of these zones.
         /// This operation only queries information. It does not create resources or incur fees.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>When calling this operation with a RAM user or STS credential, the <c>appstreaming:ListAppInstanceType</c> permission is required. If the permission is insufficient, the error code <c>Forbidden.NoPermission</c> is returned.</description></item>
-        /// <item><description><b><c>ProductType</c>, <c>BizRegionId</c>, and <c>OsType</c> are all required.</b> If any of these parameters is missing, empty, or set to an unrecognized value, the error code <c>InvalidParameter.ValueInvalid</c> is returned.</description></item>
-        /// <item><description><c>BizRegionId</c> must be a region ID supported by WUYING Cloud Application. Call <a href="~~ListRegions~~">ListRegions</a> first to obtain the supported region IDs.</description></item>
+        /// <item><description>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:ListAppInstanceType permission. If you do not have the required permissions, the error code Forbidden.NoPermission is returned.</description></item>
+        /// <item><description><b>ProductType, BizRegionId, and OsType are all required.</b> If any of these parameters is missing, empty, or has an unrecognized value, the error code InvalidParameter.ValueInvalid is returned.</description></item>
+        /// <item><description>BizRegionId must be a region ID supported by App Streaming. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call <a href="~~ListRegions~~">ListRegions</a> to obtain the supported region IDs.</description></item>
-        /// <item><description>Call this operation with the region ID, target product type, and operating system type, and read the returned <c>ListZonesModel.Zones</c>.</description></item>
-        /// <item><description>When creating a resource that requires a vSwitch, select a vSwitch in one of the returned zones. For example, pass the corresponding vSwitch ID when calling <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
-        /// The returned zone list is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching it for extended periods.</description></item>
+        /// <item><description>Call this operation by using the region ID, target product type, and operating system type, and then read the returned ListZonesModel.Zones.</description></item>
+        /// <item><description>When you create a resource and need to specify a vSwitch, select a vSwitch located in one of the returned zones. For example, pass the corresponding vSwitch ID when you call <a href="~~CreateAppInstanceGroup~~">CreateAppInstanceGroup</a> or <a href="~~CreateWuyingServer~~">CreateWuyingServer</a>.
+        /// The returned list of available zones is determined by the available resources in the current region and may change over time. Query the list in real time before creating resources instead of caching the list for a long time.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -19530,6 +20214,154 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LogOffAllSessionsInAppInstanceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the memory feature for specified agent instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call <c>ListAgentInstanceMemory</c> to obtain the target instance IDs. The server validates all instances in the request before updating the memory status. After the update, you can query the memory status of the instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAgentInstanceMemoryConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgentInstanceMemoryConfigResponse
+        /// </returns>
+        public ModifyAgentInstanceMemoryConfigResponse ModifyAgentInstanceMemoryConfigWithOptions(ModifyAgentInstanceMemoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentInstanceIds))
+            {
+                body["AgentInstanceIds"] = request.AgentInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAgentInstanceMemoryConfig",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAgentInstanceMemoryConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the memory feature for specified agent instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call <c>ListAgentInstanceMemory</c> to obtain the target instance IDs. The server validates all instances in the request before updating the memory status. After the update, you can query the memory status of the instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAgentInstanceMemoryConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgentInstanceMemoryConfigResponse
+        /// </returns>
+        public async Task<ModifyAgentInstanceMemoryConfigResponse> ModifyAgentInstanceMemoryConfigWithOptionsAsync(ModifyAgentInstanceMemoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentInstanceIds))
+            {
+                body["AgentInstanceIds"] = request.AgentInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAgentInstanceMemoryConfig",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAgentInstanceMemoryConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the memory feature for specified agent instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call <c>ListAgentInstanceMemory</c> to obtain the target instance IDs. The server validates all instances in the request before updating the memory status. After the update, you can query the memory status of the instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAgentInstanceMemoryConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgentInstanceMemoryConfigResponse
+        /// </returns>
+        public ModifyAgentInstanceMemoryConfigResponse ModifyAgentInstanceMemoryConfig(ModifyAgentInstanceMemoryConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAgentInstanceMemoryConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the memory feature for specified agent instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call <c>ListAgentInstanceMemory</c> to obtain the target instance IDs. The server validates all instances in the request before updating the memory status. After the update, you can query the memory status of the instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAgentInstanceMemoryConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAgentInstanceMemoryConfigResponse
+        /// </returns>
+        public async Task<ModifyAgentInstanceMemoryConfigResponse> ModifyAgentInstanceMemoryConfigAsync(ModifyAgentInstanceMemoryConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAgentInstanceMemoryConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -19774,26 +20606,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a specified delivery group to a target billing method and returns the ID of the billing conversion task to be created.</para>
+        /// <para>Changes the billing method of a specified app instance group to the target billing method and returns the ID of the billing conversion task to be created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
+        /// <para>This operation converts the billing method, which may create an order and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
         /// <b>Prerequisites:</b></para>
         /// <list type="bullet">
-        /// <item><description>The resources belong to the current account, and the product and business region match the request. Only one delivery group can be specified per request.</description></item>
-        /// <item><description>The target billing method must be different from the current billing method, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
-        /// <item><description>Delivery groups that have been added to a valid collection cannot have their Billable methods converted individually.</description></item>
-        /// <item><description>Multiple delivery groups created in the same batch of orders cannot have their Billable methods converted separately.
+        /// <item><description>The resources belong to the current account, and the product and business region match the request. Only one app instance group can be specified per request.</description></item>
+        /// <item><description>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
+        /// <item><description>App instance groups that have been added to a valid collection cannot have their Billable methods converted individually.</description></item>
+        /// <item><description>Multiple app instance groups created in the same batch of orders cannot have their Billable methods converted separately.
         /// <b>Parameter relationships and call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Query the resource details first to confirm the product, business region, and current ChargeType. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</description></item>
-        /// <item><description>Explicitly specify the target ChargeType. If you need to purchase a subscription, specify the purchase duration by combining Period and PeriodUnit. The period combination must comply with the sales rules currently supported by the resource.</description></item>
-        /// <item><description>Set AutoPay based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set AutoRenew.</description></item>
-        /// <item><description>After the call, save the returned AppInstanceGroupModel.TaskId. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
-        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for real task IDs.</description></item>
+        /// <item><description>Query the resource details first to confirm the product, business region, and current <c>ChargeType</c>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud app instance groups.</description></item>
+        /// <item><description>Explicitly specify the target <c>ChargeType</c>. If you need to purchase a subscription, specify the purchase duration by combining <c>Period</c> and <c>PeriodUnit</c>. The period combination must comply with the sales rules currently supported by the resource.</description></item>
+        /// <item><description>Set <c>AutoPay</c> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <c>AutoRenew</c>.</description></item>
+        /// <item><description>After the call, save the returned <c>AppInstanceGroupModel.TaskId</c>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -19874,26 +20706,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a specified delivery group to a target billing method and returns the ID of the billing conversion task to be created.</para>
+        /// <para>Changes the billing method of a specified app instance group to the target billing method and returns the ID of the billing conversion task to be created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
+        /// <para>This operation converts the billing method, which may create an order and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
         /// <b>Prerequisites:</b></para>
         /// <list type="bullet">
-        /// <item><description>The resources belong to the current account, and the product and business region match the request. Only one delivery group can be specified per request.</description></item>
-        /// <item><description>The target billing method must be different from the current billing method, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
-        /// <item><description>Delivery groups that have been added to a valid collection cannot have their Billable methods converted individually.</description></item>
-        /// <item><description>Multiple delivery groups created in the same batch of orders cannot have their Billable methods converted separately.
+        /// <item><description>The resources belong to the current account, and the product and business region match the request. Only one app instance group can be specified per request.</description></item>
+        /// <item><description>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
+        /// <item><description>App instance groups that have been added to a valid collection cannot have their Billable methods converted individually.</description></item>
+        /// <item><description>Multiple app instance groups created in the same batch of orders cannot have their Billable methods converted separately.
         /// <b>Parameter relationships and call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Query the resource details first to confirm the product, business region, and current ChargeType. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</description></item>
-        /// <item><description>Explicitly specify the target ChargeType. If you need to purchase a subscription, specify the purchase duration by combining Period and PeriodUnit. The period combination must comply with the sales rules currently supported by the resource.</description></item>
-        /// <item><description>Set AutoPay based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set AutoRenew.</description></item>
-        /// <item><description>After the call, save the returned AppInstanceGroupModel.TaskId. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
-        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for real task IDs.</description></item>
+        /// <item><description>Query the resource details first to confirm the product, business region, and current <c>ChargeType</c>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud app instance groups.</description></item>
+        /// <item><description>Explicitly specify the target <c>ChargeType</c>. If you need to purchase a subscription, specify the purchase duration by combining <c>Period</c> and <c>PeriodUnit</c>. The period combination must comply with the sales rules currently supported by the resource.</description></item>
+        /// <item><description>Set <c>AutoPay</c> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <c>AutoRenew</c>.</description></item>
+        /// <item><description>After the call, save the returned <c>AppInstanceGroupModel.TaskId</c>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -19974,26 +20806,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a specified delivery group to a target billing method and returns the ID of the billing conversion task to be created.</para>
+        /// <para>Changes the billing method of a specified app instance group to the target billing method and returns the ID of the billing conversion task to be created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
+        /// <para>This operation converts the billing method, which may create an order and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
         /// <b>Prerequisites:</b></para>
         /// <list type="bullet">
-        /// <item><description>The resources belong to the current account, and the product and business region match the request. Only one delivery group can be specified per request.</description></item>
-        /// <item><description>The target billing method must be different from the current billing method, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
-        /// <item><description>Delivery groups that have been added to a valid collection cannot have their Billable methods converted individually.</description></item>
-        /// <item><description>Multiple delivery groups created in the same batch of orders cannot have their Billable methods converted separately.
+        /// <item><description>The resources belong to the current account, and the product and business region match the request. Only one app instance group can be specified per request.</description></item>
+        /// <item><description>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
+        /// <item><description>App instance groups that have been added to a valid collection cannot have their Billable methods converted individually.</description></item>
+        /// <item><description>Multiple app instance groups created in the same batch of orders cannot have their Billable methods converted separately.
         /// <b>Parameter relationships and call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Query the resource details first to confirm the product, business region, and current ChargeType. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</description></item>
-        /// <item><description>Explicitly specify the target ChargeType. If you need to purchase a subscription, specify the purchase duration by combining Period and PeriodUnit. The period combination must comply with the sales rules currently supported by the resource.</description></item>
-        /// <item><description>Set AutoPay based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set AutoRenew.</description></item>
-        /// <item><description>After the call, save the returned AppInstanceGroupModel.TaskId. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
-        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for real task IDs.</description></item>
+        /// <item><description>Query the resource details first to confirm the product, business region, and current <c>ChargeType</c>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud app instance groups.</description></item>
+        /// <item><description>Explicitly specify the target <c>ChargeType</c>. If you need to purchase a subscription, specify the purchase duration by combining <c>Period</c> and <c>PeriodUnit</c>. The period combination must comply with the sales rules currently supported by the resource.</description></item>
+        /// <item><description>Set <c>AutoPay</c> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <c>AutoRenew</c>.</description></item>
+        /// <item><description>After the call, save the returned <c>AppInstanceGroupModel.TaskId</c>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -20012,26 +20844,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a specified delivery group to a target billing method and returns the ID of the billing conversion task to be created.</para>
+        /// <para>Changes the billing method of a specified app instance group to the target billing method and returns the ID of the billing conversion task to be created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
+        /// <para>This operation converts the billing method, which may create an order and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
         /// <b>Prerequisites:</b></para>
         /// <list type="bullet">
-        /// <item><description>The resources belong to the current account, and the product and business region match the request. Only one delivery group can be specified per request.</description></item>
-        /// <item><description>The target billing method must be different from the current billing method, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
-        /// <item><description>Delivery groups that have been added to a valid collection cannot have their Billable methods converted individually.</description></item>
-        /// <item><description>Multiple delivery groups created in the same batch of orders cannot have their Billable methods converted separately.
+        /// <item><description>The resources belong to the current account, and the product and business region match the request. Only one app instance group can be specified per request.</description></item>
+        /// <item><description>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
+        /// <item><description>App instance groups that have been added to a valid collection cannot have their Billable methods converted individually.</description></item>
+        /// <item><description>Multiple app instance groups created in the same batch of orders cannot have their Billable methods converted separately.
         /// <b>Parameter relationships and call sequence:</b></description></item>
         /// </list>
         /// <ol>
-        /// <item><description>Query the resource details first to confirm the product, business region, and current ChargeType. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</description></item>
-        /// <item><description>Explicitly specify the target ChargeType. If you need to purchase a subscription, specify the purchase duration by combining Period and PeriodUnit. The period combination must comply with the sales rules currently supported by the resource.</description></item>
-        /// <item><description>Set AutoPay based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set AutoRenew.</description></item>
-        /// <item><description>After the call, save the returned AppInstanceGroupModel.TaskId. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
-        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for real task IDs.</description></item>
+        /// <item><description>Query the resource details first to confirm the product, business region, and current <c>ChargeType</c>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud app instance groups.</description></item>
+        /// <item><description>Explicitly specify the target <c>ChargeType</c>. If you need to purchase a subscription, specify the purchase duration by combining <c>Period</c> and <c>PeriodUnit</c>. The period combination must comply with the sales rules currently supported by the resource.</description></item>
+        /// <item><description>Set <c>AutoPay</c> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <c>AutoRenew</c>.</description></item>
+        /// <item><description>After the call, save the returned <c>AppInstanceGroupModel.TaskId</c>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -20806,7 +21638,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares an image with other WUYING users or unshares a shared image.</para>
+        /// <para>Shares an image with other WUYING users or cancels image sharing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20864,7 +21696,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares an image with other WUYING users or unshares a shared image.</para>
+        /// <para>Shares an image with other WUYING users or cancels image sharing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20922,7 +21754,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares an image with other WUYING users or unshares a shared image.</para>
+        /// <para>Shares an image with other WUYING users or cancels image sharing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20940,7 +21772,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares an image with other WUYING users or unshares a shared image.</para>
+        /// <para>Shares an image with other WUYING users or cancels image sharing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21074,6 +21906,170 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTenantConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the tenant-level memory configuration for the current account based on the agent provider, business platform, and business type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Changing the switch also updates existing instances that have the corresponding memory feature configured under the same business combination.</em>* After the update, call <c>GetTenantMemoryConfig</c> and pass the same provider, platform, and business type to verify the configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyTenantMemoryConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTenantMemoryConfigResponse
+        /// </returns>
+        public ModifyTenantMemoryConfigResponse ModifyTenantMemoryConfigWithOptions(ModifyTenantMemoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatform))
+            {
+                body["AgentPlatform"] = request.AgentPlatform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
+            {
+                body["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTenantMemoryConfig",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTenantMemoryConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the tenant-level memory configuration for the current account based on the agent provider, business platform, and business type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Changing the switch also updates existing instances that have the corresponding memory feature configured under the same business combination.</em>* After the update, call <c>GetTenantMemoryConfig</c> and pass the same provider, platform, and business type to verify the configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyTenantMemoryConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTenantMemoryConfigResponse
+        /// </returns>
+        public async Task<ModifyTenantMemoryConfigResponse> ModifyTenantMemoryConfigWithOptionsAsync(ModifyTenantMemoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatform))
+            {
+                body["AgentPlatform"] = request.AgentPlatform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
+            {
+                body["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["Enabled"] = request.Enabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyTenantMemoryConfig",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyTenantMemoryConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the tenant-level memory configuration for the current account based on the agent provider, business platform, and business type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Changing the switch also updates existing instances that have the corresponding memory feature configured under the same business combination.</em>* After the update, call <c>GetTenantMemoryConfig</c> and pass the same provider, platform, and business type to verify the configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyTenantMemoryConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTenantMemoryConfigResponse
+        /// </returns>
+        public ModifyTenantMemoryConfigResponse ModifyTenantMemoryConfig(ModifyTenantMemoryConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyTenantMemoryConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the tenant-level memory configuration for the current account based on the agent provider, business platform, and business type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Changing the switch also updates existing instances that have the corresponding memory feature configured under the same business combination.</em>* After the update, call <c>GetTenantMemoryConfig</c> and pass the same provider, platform, and business type to verify the configuration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyTenantMemoryConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyTenantMemoryConfigResponse
+        /// </returns>
+        public async Task<ModifyTenantMemoryConfigResponse> ModifyTenantMemoryConfigAsync(ModifyTenantMemoryConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyTenantMemoryConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21374,12 +22370,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</para>
+        /// <para>Queries delivery group reports by region, delivery group, status, user authorization relationship, or statistical date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <c>AppInstanceGroupId</c> matches the exact ID, and <c>AppInstanceGroupName</c> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <c>StatDate</c> specifies a single day, and <c>StartDate</c> and <c>EndDate</c> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <c>EndUserId</c>, make sure that the user has a valid authorization relationship.</para>
+        /// <para>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. AppInstanceGroupId matches the exact ID, and AppInstanceGroupName filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, StatDate specifies a single day, and StartDate and EndDate must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using EndUserId, make sure that the user has a valid authorization relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21461,12 +22457,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</para>
+        /// <para>Queries delivery group reports by region, delivery group, status, user authorization relationship, or statistical date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <c>AppInstanceGroupId</c> matches the exact ID, and <c>AppInstanceGroupName</c> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <c>StatDate</c> specifies a single day, and <c>StartDate</c> and <c>EndDate</c> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <c>EndUserId</c>, make sure that the user has a valid authorization relationship.</para>
+        /// <para>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. AppInstanceGroupId matches the exact ID, and AppInstanceGroupName filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, StatDate specifies a single day, and StartDate and EndDate must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using EndUserId, make sure that the user has a valid authorization relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21548,12 +22544,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</para>
+        /// <para>Queries delivery group reports by region, delivery group, status, user authorization relationship, or statistical date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <c>AppInstanceGroupId</c> matches the exact ID, and <c>AppInstanceGroupName</c> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <c>StatDate</c> specifies a single day, and <c>StartDate</c> and <c>EndDate</c> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <c>EndUserId</c>, make sure that the user has a valid authorization relationship.</para>
+        /// <para>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. AppInstanceGroupId matches the exact ID, and AppInstanceGroupName filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, StatDate specifies a single day, and StartDate and EndDate must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using EndUserId, make sure that the user has a valid authorization relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21571,12 +22567,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</para>
+        /// <para>Queries delivery group reports by region, delivery group, status, user authorization relationship, or statistical date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <c>AppInstanceGroupId</c> matches the exact ID, and <c>AppInstanceGroupName</c> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <c>StatDate</c> specifies a single day, and <c>StartDate</c> and <c>EndDate</c> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <c>EndUserId</c>, make sure that the user has a valid authorization relationship.</para>
+        /// <para>Queries the delivery group ID, name, and status in delivery group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business region, and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the delivery group. AppInstanceGroupId matches the exact ID, and AppInstanceGroupName filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, StatDate specifies a single day, and StartDate and EndDate must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using EndUserId, make sure that the user has a valid authorization relationship.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21787,7 +22783,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or cannot be recognized, the query defaults to <c>CloudApp</c>. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21858,7 +22854,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or cannot be recognized, the query defaults to <c>CloudApp</c>. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21929,7 +22925,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or cannot be recognized, the query defaults to <c>CloudApp</c>. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21952,7 +22948,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or cannot be recognized, the query defaults to <c>CloudApp</c>. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21975,7 +22971,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the monthly active user (MAU) report. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <c>EndDate</c> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries the monthly active user (MAU) report. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before EndDate as the statistical cutoff date. Results are returned by page, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22046,7 +23042,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the monthly active user (MAU) report. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <c>EndDate</c> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries the monthly active user (MAU) report. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before EndDate as the statistical cutoff date. Results are returned by page, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22117,7 +23113,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the monthly active user (MAU) report. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <c>EndDate</c> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries the monthly active user (MAU) report. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before EndDate as the statistical cutoff date. Results are returned by page, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22140,7 +23136,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the monthly active user (MAU) report. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <c>EndDate</c> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries the monthly active user (MAU) report. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before EndDate as the statistical cutoff date. Results are returned by page, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22158,12 +23154,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network RTT and low-RTT user statistics within a specified time range.</para>
+        /// <para>Queries network RTT and low-RTT user statistics within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries network round-trip time (RTT) reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries network round-trip time (RTT) reports. ProductType, StartDate, and EndDate are required for server-side validation. The statistical interval is [StartDate, EndDate). The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22229,12 +23225,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network RTT and low-RTT user statistics within a specified time range.</para>
+        /// <para>Queries network RTT and low-RTT user statistics within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries network round-trip time (RTT) reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries network round-trip time (RTT) reports. ProductType, StartDate, and EndDate are required for server-side validation. The statistical interval is [StartDate, EndDate). The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22300,12 +23296,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network RTT and low-RTT user statistics within a specified time range.</para>
+        /// <para>Queries network RTT and low-RTT user statistics within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries network round-trip time (RTT) reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries network round-trip time (RTT) reports. ProductType, StartDate, and EndDate are required for server-side validation. The statistical interval is [StartDate, EndDate). The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22323,12 +23319,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network RTT and low-RTT user statistics within a specified time range.</para>
+        /// <para>Queries network RTT and low-RTT user statistics within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries network round-trip time (RTT) reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries network round-trip time (RTT) reports. ProductType, StartDate, and EndDate are required for server-side validation. The statistical interval is [StartDate, EndDate). The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22351,7 +23347,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for <c>1m</c> and <c>30m</c>, up to 15 days for <c>6h</c>, and up to 180 days for <c>1d</c>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22426,7 +23422,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for <c>1m</c> and <c>30m</c>, up to 15 days for <c>6h</c>, and up to 180 days for <c>1d</c>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22501,7 +23497,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for <c>1m</c> and <c>30m</c>, up to 15 days for <c>6h</c>, and up to 180 days for <c>1d</c>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22524,7 +23520,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for <c>1m</c> and <c>30m</c>, up to 15 days for <c>6h</c>, and up to 180 days for <c>1d</c>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22542,15 +23538,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of session counts at various time points on a specified date, returned in 10-minute intervals.</para>
+        /// <para>Queries the session count trend at various time points on a specified date, returned in 10-minute intervals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data is an offline statistical result, organized by day, and returns the session counts at various time points on that date.
-        /// The returned results are aggregated in 10-minute intervals: each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
-        /// You can specify a business region by using BizRegionId and filter session data by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The region actually used to filter session data is subject to BizRegionId.
-        /// StatDate is the statistical date in the yyyyMMdd format. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned, and the return code is NO_DATA.</para>
+        /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data consists of offline statistical results organized by day and returns the session counts at various time points on that date.
+        /// The returned results are aggregated in 10-minute intervals. Each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the aggregated session count within the 10-minute interval for that time point. The results are sorted in ascending order by hour and minute.
+        /// You can specify a business region by using BizRegionId and filter by delivery group by using AppInstanceGroupId. If neither parameter is provided, the aggregated session data for all regions and all delivery groups under the current account is returned. The actual region used to filter session data is determined by BizRegionId.
+        /// StatDate is the statistical date in the yyyyMMdd format. If this parameter is not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned and the return code is NO_DATA.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22604,15 +23600,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of session counts at various time points on a specified date, returned in 10-minute intervals.</para>
+        /// <para>Queries the session count trend at various time points on a specified date, returned in 10-minute intervals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data is an offline statistical result, organized by day, and returns the session counts at various time points on that date.
-        /// The returned results are aggregated in 10-minute intervals: each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
-        /// You can specify a business region by using BizRegionId and filter session data by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The region actually used to filter session data is subject to BizRegionId.
-        /// StatDate is the statistical date in the yyyyMMdd format. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned, and the return code is NO_DATA.</para>
+        /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data consists of offline statistical results organized by day and returns the session counts at various time points on that date.
+        /// The returned results are aggregated in 10-minute intervals. Each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the aggregated session count within the 10-minute interval for that time point. The results are sorted in ascending order by hour and minute.
+        /// You can specify a business region by using BizRegionId and filter by delivery group by using AppInstanceGroupId. If neither parameter is provided, the aggregated session data for all regions and all delivery groups under the current account is returned. The actual region used to filter session data is determined by BizRegionId.
+        /// StatDate is the statistical date in the yyyyMMdd format. If this parameter is not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned and the return code is NO_DATA.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22666,15 +23662,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of session counts at various time points on a specified date, returned in 10-minute intervals.</para>
+        /// <para>Queries the session count trend at various time points on a specified date, returned in 10-minute intervals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data is an offline statistical result, organized by day, and returns the session counts at various time points on that date.
-        /// The returned results are aggregated in 10-minute intervals: each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
-        /// You can specify a business region by using BizRegionId and filter session data by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The region actually used to filter session data is subject to BizRegionId.
-        /// StatDate is the statistical date in the yyyyMMdd format. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned, and the return code is NO_DATA.</para>
+        /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data consists of offline statistical results organized by day and returns the session counts at various time points on that date.
+        /// The returned results are aggregated in 10-minute intervals. Each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the aggregated session count within the 10-minute interval for that time point. The results are sorted in ascending order by hour and minute.
+        /// You can specify a business region by using BizRegionId and filter by delivery group by using AppInstanceGroupId. If neither parameter is provided, the aggregated session data for all regions and all delivery groups under the current account is returned. The actual region used to filter session data is determined by BizRegionId.
+        /// StatDate is the statistical date in the yyyyMMdd format. If this parameter is not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned and the return code is NO_DATA.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22692,15 +23688,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of session counts at various time points on a specified date, returned in 10-minute intervals.</para>
+        /// <para>Queries the session count trend at various time points on a specified date, returned in 10-minute intervals.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data is an offline statistical result, organized by day, and returns the session counts at various time points on that date.
-        /// The returned results are aggregated in 10-minute intervals: each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the total number of sessions within the 10-minute interval of that time point. The results are sorted in ascending order by hour and minute.
-        /// You can specify a business region by using BizRegionId and filter session data by delivery group by using AppInstanceGroupId. If neither is provided, the summary of session data for all regions and all delivery groups under the current account is returned. The region actually used to filter session data is subject to BizRegionId.
-        /// StatDate is the statistical date in the yyyyMMdd format. If not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned, and the return code is NO_DATA.</para>
+        /// <para>Call this operation to query the session count trend data for the current Alibaba Cloud account on a specified date. The data consists of offline statistical results organized by day and returns the session counts at various time points on that date.
+        /// The returned results are aggregated in 10-minute intervals. Each data point is identified by an hour (Hh, values 00-23) and a minute (Mi, values 00, 10, 20, 30, 40, 50) representing a time point, and SessionCntMi is the aggregated session count within the 10-minute interval for that time point. The results are sorted in ascending order by hour and minute.
+        /// You can specify a business region by using BizRegionId and filter by delivery group by using AppInstanceGroupId. If neither parameter is provided, the aggregated session data for all regions and all delivery groups under the current account is returned. The actual region used to filter session data is determined by BizRegionId.
+        /// StatDate is the statistical date in the yyyyMMdd format. If this parameter is not provided, the data for yesterday is queried by default. Only dates within the last 90 days are supported. If there is no session data on the specified date, an empty list is returned and the return code is NO_DATA.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22919,7 +23915,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</para>
+        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22986,7 +23982,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</para>
+        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23053,7 +24049,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</para>
+        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23076,7 +24072,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</para>
+        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to be queried. A maximum of the top five applications by usage duration are returned for each hour.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23279,7 +24275,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <c>yyyyMMdd</c> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</para>
+        /// <para>Queries user usage reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <c>yyyyMMdd</c> format and aggregated in a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine <c>ConnectionStatus</c>, <c>UserId</c>, <c>BizRegionId</c>, and <c>AppInstanceGroupId</c> for filtering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23358,7 +24354,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <c>yyyyMMdd</c> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</para>
+        /// <para>Queries user usage reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <c>yyyyMMdd</c> format and aggregated in a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine <c>ConnectionStatus</c>, <c>UserId</c>, <c>BizRegionId</c>, and <c>AppInstanceGroupId</c> for filtering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23437,7 +24433,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <c>yyyyMMdd</c> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</para>
+        /// <para>Queries user usage reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <c>yyyyMMdd</c> format and aggregated in a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine <c>ConnectionStatus</c>, <c>UserId</c>, <c>BizRegionId</c>, and <c>AppInstanceGroupId</c> for filtering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23460,7 +24456,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <c>yyyyMMdd</c> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</para>
+        /// <para>Queries user usage reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to the <c>yyyyMMdd</c> format and aggregated in a closed interval of natural days. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine <c>ConnectionStatus</c>, <c>UserId</c>, <c>BizRegionId</c>, and <c>AppInstanceGroupId</c> for filtering.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23478,15 +24474,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes model groups from a resource group.</para>
+        /// <para>Removes a model group from resource groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. These model groups serve as inference engines for Agents to execute tasks within the resource group.
-        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the Agent runtime setting.
-        /// When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can authorize model groups for the resources to which agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent belong in the Wuying Agent Management Center. These model groups serve as inference engines for agents in the resource groups to execute tasks.
+        /// If an agent runtime is configured with a model group and its resource group is also configured with a model group, the model group bound to the resource group takes effect. That is, the resource group settings take precedence over the agent runtime settings.
+        /// When you remove the model group from the resource group to which the agent runtime belongs, the model group configured for the agent runtime automatically takes effect.
+        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23532,15 +24528,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes model groups from a resource group.</para>
+        /// <para>Removes a model group from resource groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. These model groups serve as inference engines for Agents to execute tasks within the resource group.
-        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the Agent runtime setting.
-        /// When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can authorize model groups for the resources to which agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent belong in the Wuying Agent Management Center. These model groups serve as inference engines for agents in the resource groups to execute tasks.
+        /// If an agent runtime is configured with a model group and its resource group is also configured with a model group, the model group bound to the resource group takes effect. That is, the resource group settings take precedence over the agent runtime settings.
+        /// When you remove the model group from the resource group to which the agent runtime belongs, the model group configured for the agent runtime automatically takes effect.
+        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23586,15 +24582,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes model groups from a resource group.</para>
+        /// <para>Removes a model group from resource groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. These model groups serve as inference engines for Agents to execute tasks within the resource group.
-        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the Agent runtime setting.
-        /// When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can authorize model groups for the resources to which agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent belong in the Wuying Agent Management Center. These model groups serve as inference engines for agents in the resource groups to execute tasks.
+        /// If an agent runtime is configured with a model group and its resource group is also configured with a model group, the model group bound to the resource group takes effect. That is, the resource group settings take precedence over the agent runtime settings.
+        /// When you remove the model group from the resource group to which the agent runtime belongs, the model group configured for the agent runtime automatically takes effect.
+        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23612,15 +24608,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes model groups from a resource group.</para>
+        /// <para>Removes a model group from resource groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can authorize model groups for resources that belong to Agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. These model groups serve as inference engines for Agents to execute tasks within the resource group.
-        /// When an Agent runtime has its own model group configured and the resource group it belongs to also has a model group configured, the model group bound to the resource group takes effect. The resource group setting has a higher priority than the Agent runtime setting.
-        /// When you remove the model group from the resource group to which an Agent runtime belongs, the model group configured on the Agent runtime itself automatically takes effect.
-        /// Before calling this operation, make sure that you are familiar with the operations and usage of the WUYING Agent Management Center.</para>
+        /// <para>You can authorize model groups for the resources to which agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent belong in the Wuying Agent Management Center. These model groups serve as inference engines for agents in the resource groups to execute tasks.
+        /// If an agent runtime is configured with a model group and its resource group is also configured with a model group, the model group bound to the resource group takes effect. That is, the resource group settings take precedence over the agent runtime settings.
+        /// When you remove the model group from the resource group to which the agent runtime belongs, the model group configured for the agent runtime automatically takes effect.
+        /// Make sure that you fully understand the operations and usage of the Wuying Agent Management Center before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23645,12 +24641,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>You can call this operation to remove the specific third-party channel configuration for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. After the configuration is removed, the agent cannot use the third-party channel for conversations.
         /// Make sure that you are fully familiar with the operations and usage of the WUYING Agent Management Center before you call this operation.
-        /// Before you begin:</para>
+        /// Prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The cloud desktops that host these runtimes must be created by using API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use the DesktopId as RuntimeIds.</description></item>
+        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The hosted cloud desktops are created by API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use DesktopId as RuntimeIds.</description></item>
         /// <item><description>OpenClaw scenario: RuntimeIds are cloud desktop IDs in the format of ecd-xxxx, which are the DesktopId values returned by the ListDesktops operation of the EDS product.</description></item>
-        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The cloud desktops that host these runtimes are also created by using API operations such as CreateDesktop of the EDS product.</description></item>
-        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, it indicates that the corresponding cloud desktop is not managed. In this case, you must first call the CreateDesktop operation of the EDS product to create the cloud desktop. The WUYING Agent Management Center automatically manages the cloud desktop after it receives a desktop lifecycle event. After that, you can call this operation.</description></item>
+        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The hosted cloud desktops are also created by API operations such as CreateDesktop of the EDS product.</description></item>
+        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, the corresponding cloud desktop is not managed. You must first call the CreateDesktop operation of the EDS product to create the desktop. The WUYING Agent Management Center automatically manages the desktop after receiving the desktop lifecycle event. Then, you can call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23716,12 +24712,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>You can call this operation to remove the specific third-party channel configuration for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. After the configuration is removed, the agent cannot use the third-party channel for conversations.
         /// Make sure that you are fully familiar with the operations and usage of the WUYING Agent Management Center before you call this operation.
-        /// Before you begin:</para>
+        /// Prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The cloud desktops that host these runtimes must be created by using API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use the DesktopId as RuntimeIds.</description></item>
+        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The hosted cloud desktops are created by API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use DesktopId as RuntimeIds.</description></item>
         /// <item><description>OpenClaw scenario: RuntimeIds are cloud desktop IDs in the format of ecd-xxxx, which are the DesktopId values returned by the ListDesktops operation of the EDS product.</description></item>
-        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The cloud desktops that host these runtimes are also created by using API operations such as CreateDesktop of the EDS product.</description></item>
-        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, it indicates that the corresponding cloud desktop is not managed. In this case, you must first call the CreateDesktop operation of the EDS product to create the cloud desktop. The WUYING Agent Management Center automatically manages the cloud desktop after it receives a desktop lifecycle event. After that, you can call this operation.</description></item>
+        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The hosted cloud desktops are also created by API operations such as CreateDesktop of the EDS product.</description></item>
+        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, the corresponding cloud desktop is not managed. You must first call the CreateDesktop operation of the EDS product to create the desktop. The WUYING Agent Management Center automatically manages the desktop after receiving the desktop lifecycle event. Then, you can call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23787,12 +24783,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>You can call this operation to remove the specific third-party channel configuration for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. After the configuration is removed, the agent cannot use the third-party channel for conversations.
         /// Make sure that you are fully familiar with the operations and usage of the WUYING Agent Management Center before you call this operation.
-        /// Before you begin:</para>
+        /// Prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The cloud desktops that host these runtimes must be created by using API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use the DesktopId as RuntimeIds.</description></item>
+        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The hosted cloud desktops are created by API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use DesktopId as RuntimeIds.</description></item>
         /// <item><description>OpenClaw scenario: RuntimeIds are cloud desktop IDs in the format of ecd-xxxx, which are the DesktopId values returned by the ListDesktops operation of the EDS product.</description></item>
-        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The cloud desktops that host these runtimes are also created by using API operations such as CreateDesktop of the EDS product.</description></item>
-        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, it indicates that the corresponding cloud desktop is not managed. In this case, you must first call the CreateDesktop operation of the EDS product to create the cloud desktop. The WUYING Agent Management Center automatically manages the cloud desktop after it receives a desktop lifecycle event. After that, you can call this operation.</description></item>
+        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The hosted cloud desktops are also created by API operations such as CreateDesktop of the EDS product.</description></item>
+        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, the corresponding cloud desktop is not managed. You must first call the CreateDesktop operation of the EDS product to create the desktop. The WUYING Agent Management Center automatically manages the desktop after receiving the desktop lifecycle event. Then, you can call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23818,12 +24814,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <description>
         /// <para>You can call this operation to remove the specific third-party channel configuration for agent runtimes such as JVS Computer, OpenClaw, and Hermes Agent in the WUYING Agent Management Center. After the configuration is removed, the agent cannot use the third-party channel for conversations.
         /// Make sure that you are fully familiar with the operations and usage of the WUYING Agent Management Center before you call this operation.
-        /// Before you begin:</para>
+        /// Prerequisites:</para>
         /// <list type="bullet">
-        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The cloud desktops that host these runtimes must be created by using API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use the DesktopId as RuntimeIds.</description></item>
+        /// <item><description>The RuntimeIds passed to this operation must be agent runtimes managed by the WUYING Agent Management Center. The hosted cloud desktops are created by API operations such as CreateDesktop of the Elastic Desktop Service (EDS) product. Example of a cross-product call chain: CreateDesktop → ListDesktops → Use DesktopId as RuntimeIds.</description></item>
         /// <item><description>OpenClaw scenario: RuntimeIds are cloud desktop IDs in the format of ecd-xxxx, which are the DesktopId values returned by the ListDesktops operation of the EDS product.</description></item>
-        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The cloud desktops that host these runtimes are also created by using API operations such as CreateDesktop of the EDS product.</description></item>
-        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, it indicates that the corresponding cloud desktop is not managed. In this case, you must first call the CreateDesktop operation of the EDS product to create the cloud desktop. The WUYING Agent Management Center automatically manages the cloud desktop after it receives a desktop lifecycle event. After that, you can call this operation.</description></item>
+        /// <item><description>JVS Computer and Hermes Agent scenarios: RuntimeIds are the corresponding JVS IDs in the format of jvs-xxxx. The hosted cloud desktops are also created by API operations such as CreateDesktop of the EDS product.</description></item>
+        /// <item><description>You can call the ListDesktopAgentRuntime operation of this product to query the agent runtimes managed by the WUYING Agent Management Center. If the query result is empty, the corresponding cloud desktop is not managed. You must first call the CreateDesktop operation of the EDS product to create the desktop. The WUYING Agent Management Center automatically manages the desktop after receiving the desktop lifecycle event. Then, you can call this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24534,6 +25530,178 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Sets user profile path rules for an app instance group or an app instance group set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call <c>DescribeUserProfilePathRules</c> to query the target rules before you submit the complete list of rules to retain. <b>The submission overwrites the existing rules of the target. Passing an empty array or omitting the rule list sets the target rules to an empty list.</b> When a set ID is used, the rules apply to the members of the set. After the rules are set, you can call the query operation to verify the settings.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetUserProfilePathRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetUserProfilePathRulesResponse
+        /// </returns>
+        public SetUserProfilePathRulesResponse SetUserProfilePathRulesWithOptions(SetUserProfilePathRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupSetId))
+            {
+                body["AppInstanceGroupSetId"] = request.AppInstanceGroupSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProfilePathRules))
+            {
+                body["UserProfilePathRules"] = request.UserProfilePathRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProfileRuleType))
+            {
+                body["UserProfileRuleType"] = request.UserProfileRuleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetUserProfilePathRules",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetUserProfilePathRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets user profile path rules for an app instance group or an app instance group set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call <c>DescribeUserProfilePathRules</c> to query the target rules before you submit the complete list of rules to retain. <b>The submission overwrites the existing rules of the target. Passing an empty array or omitting the rule list sets the target rules to an empty list.</b> When a set ID is used, the rules apply to the members of the set. After the rules are set, you can call the query operation to verify the settings.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetUserProfilePathRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetUserProfilePathRulesResponse
+        /// </returns>
+        public async Task<SetUserProfilePathRulesResponse> SetUserProfilePathRulesWithOptionsAsync(SetUserProfilePathRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupSetId))
+            {
+                body["AppInstanceGroupSetId"] = request.AppInstanceGroupSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProfilePathRules))
+            {
+                body["UserProfilePathRules"] = request.UserProfilePathRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProfileRuleType))
+            {
+                body["UserProfileRuleType"] = request.UserProfileRuleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetUserProfilePathRules",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetUserProfilePathRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets user profile path rules for an app instance group or an app instance group set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call <c>DescribeUserProfilePathRules</c> to query the target rules before you submit the complete list of rules to retain. <b>The submission overwrites the existing rules of the target. Passing an empty array or omitting the rule list sets the target rules to an empty list.</b> When a set ID is used, the rules apply to the members of the set. After the rules are set, you can call the query operation to verify the settings.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetUserProfilePathRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetUserProfilePathRulesResponse
+        /// </returns>
+        public SetUserProfilePathRulesResponse SetUserProfilePathRules(SetUserProfilePathRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetUserProfilePathRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets user profile path rules for an app instance group or an app instance group set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call <c>DescribeUserProfilePathRules</c> to query the target rules before you submit the complete list of rules to retain. <b>The submission overwrites the existing rules of the target. Passing an empty array or omitting the rule list sets the target rules to an empty list.</b> When a set ID is used, the rules apply to the members of the set. After the rules are set, you can call the query operation to verify the settings.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetUserProfilePathRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetUserProfilePathRulesResponse
+        /// </returns>
+        public async Task<SetUserProfilePathRulesResponse> SetUserProfilePathRulesAsync(SetUserProfilePathRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetUserProfilePathRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts an image creation task for an existing image version, or resumes an existing creation task.</para>
         /// </summary>
         /// 
@@ -24910,7 +26078,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a workstation.</para>
+        /// <para>Starts one or more workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24962,7 +26130,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a workstation.</para>
+        /// <para>Starts one or more workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25014,7 +26182,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a workstation.</para>
+        /// <para>Starts one or more workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25032,7 +26200,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a workstation.</para>
+        /// <para>Starts one or more workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25462,34 +26630,34 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and binds tags to specified China Office (Chinese: Wuying) delivery groups in compliance with Alibaba Cloud tag specifications. If a tag key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only delivery group (<c>APPINSTANCEGROUP</c>) resource types are supported.</para>
+        /// <para>Creates and binds tags to specified app instance groups according to Alibaba Cloud tag specifications. If a tag with the same key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only the app instance group (<c>APPINSTANCEGROUP</c>) resource type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <para>When you use a RAM user or Security Token Service (STS) credential to call this operation, you must have the <c>appstreaming:TagResources</c> permission.
-        /// The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only delivery group resources.</b> You can set <c>ResourceType</c> only to <c>APPINSTANCEGROUP</c>. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs.</para>
+        /// <h2>Prerequisites</h2>
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:TagResources</c> permission.
+        /// The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set ResourceType to <c>APPINSTANCEGROUP</c>. You can obtain the app instance group ID by calling <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a>.</para>
         /// <h2>Tag rules</h2>
         /// <list type="bullet">
-        /// <item><description>In a single request, you can bind up to <b>20 tags</b> to up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
-        /// <item><description>A tag key must be 1 to 128 characters in length. A tag value must be 0 to 256 characters in length. Both are case-sensitive.</description></item>
+        /// <item><description>A single request can bind up to <b>20 tags</b> to up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
+        /// <item><description>A tag key must be 1 to 128 characters in length, and a tag value must be 0 to 256 characters in length. Both are case-sensitive.</description></item>
         /// <item><description>A tag key cannot start with <c>aliyun</c> or <c>acs:</c> (case-insensitive). Neither tag keys nor tag values can contain <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>Tag keys in the same request must be unique. Otherwise, the error code <c>InvalidTag.Duplicated</c> is returned.</description></item>
-        /// <item><description>Each tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</description></item>
-        /// <item><description>A maximum of 20 custom tags can be bound to a single resource. If this limit is exceeded, the error code <c>ResourceTag.CustomTagCountExceed</c> is returned.</description></item>
+        /// <item><description>Tag keys in the same request cannot be duplicate. Otherwise, the error code <c>InvalidTag.Duplicated</c> is returned.</description></item>
+        /// <item><description>A tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</description></item>
+        /// <item><description>A single resource can be bound to up to 20 custom tags. If this limit is exceeded, the error code <c>ResourceTag.CustomTagCountExceed</c> is returned.</description></item>
         /// </list>
-        /// <h2>Results</h2>
+        /// <h2>Execution results</h2>
         /// <list type="bullet">
-        /// <item><description><b>If any specified delivery group does not exist or does not belong to the current account, the entire request fails.</b> The error code <c>InvalidAppInstanceGroup.NotFound</c> is returned, and no tags are bound to any resource.</description></item>
-        /// <item><description>If the binding succeeds, the response contains only <c>RequestId</c> and does not return tag details.</description></item>
-        /// <item><description>If multiple resources are specified and only some of them fail to be bound, the operation still returns a success response without failure details. Call <c>ListTagResources</c> to verify the binding results. If only one resource is specified and the binding fails, the operation returns the corresponding error code.</description></item>
+        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the error code <c>InvalidAppInstanceGroup.NotFound</c> is returned. No tags are bound to any resources.</description></item>
+        /// <item><description>If the binding is successful, the response contains only RequestId and does not return tag details.</description></item>
+        /// <item><description>If multiple resources are specified and the binding fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call ListTagResources to verify the binding results. If only one resource is specified and the binding fails, the operation directly returns the corresponding error code.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the delivery groups to which you want to add tags.</description></item>
-        /// <item><description>Call this operation with <c>ResourceType=APPINSTANCEGROUP</c>, <c>ResourceId.N</c>, and <c>Tag.N.Key</c>/<c>Tag.N.Value</c>.</description></item>
-        /// <item><description>To view the tags bound to resources, call <c>ListTagResources</c>. To unbind tags, call <c>UntagResources</c>.
+        /// <item><description>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the app instance groups to which you want to bind tags.</description></item>
+        /// <item><description>Call this operation and specify ResourceType=<c>APPINSTANCEGROUP</c>, ResourceId.N, and Tag.N.Key/Tag.N.Value.</description></item>
+        /// <item><description>To view the tags bound to a resource, call ListTagResources. To unbind tags, call UntagResources.
         /// The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
         /// </ol>
         /// </description>
@@ -25545,34 +26713,34 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and binds tags to specified China Office (Chinese: Wuying) delivery groups in compliance with Alibaba Cloud tag specifications. If a tag key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only delivery group (<c>APPINSTANCEGROUP</c>) resource types are supported.</para>
+        /// <para>Creates and binds tags to specified app instance groups according to Alibaba Cloud tag specifications. If a tag with the same key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only the app instance group (<c>APPINSTANCEGROUP</c>) resource type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <para>When you use a RAM user or Security Token Service (STS) credential to call this operation, you must have the <c>appstreaming:TagResources</c> permission.
-        /// The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only delivery group resources.</b> You can set <c>ResourceType</c> only to <c>APPINSTANCEGROUP</c>. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs.</para>
+        /// <h2>Prerequisites</h2>
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:TagResources</c> permission.
+        /// The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set ResourceType to <c>APPINSTANCEGROUP</c>. You can obtain the app instance group ID by calling <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a>.</para>
         /// <h2>Tag rules</h2>
         /// <list type="bullet">
-        /// <item><description>In a single request, you can bind up to <b>20 tags</b> to up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
-        /// <item><description>A tag key must be 1 to 128 characters in length. A tag value must be 0 to 256 characters in length. Both are case-sensitive.</description></item>
+        /// <item><description>A single request can bind up to <b>20 tags</b> to up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
+        /// <item><description>A tag key must be 1 to 128 characters in length, and a tag value must be 0 to 256 characters in length. Both are case-sensitive.</description></item>
         /// <item><description>A tag key cannot start with <c>aliyun</c> or <c>acs:</c> (case-insensitive). Neither tag keys nor tag values can contain <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>Tag keys in the same request must be unique. Otherwise, the error code <c>InvalidTag.Duplicated</c> is returned.</description></item>
-        /// <item><description>Each tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</description></item>
-        /// <item><description>A maximum of 20 custom tags can be bound to a single resource. If this limit is exceeded, the error code <c>ResourceTag.CustomTagCountExceed</c> is returned.</description></item>
+        /// <item><description>Tag keys in the same request cannot be duplicate. Otherwise, the error code <c>InvalidTag.Duplicated</c> is returned.</description></item>
+        /// <item><description>A tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</description></item>
+        /// <item><description>A single resource can be bound to up to 20 custom tags. If this limit is exceeded, the error code <c>ResourceTag.CustomTagCountExceed</c> is returned.</description></item>
         /// </list>
-        /// <h2>Results</h2>
+        /// <h2>Execution results</h2>
         /// <list type="bullet">
-        /// <item><description><b>If any specified delivery group does not exist or does not belong to the current account, the entire request fails.</b> The error code <c>InvalidAppInstanceGroup.NotFound</c> is returned, and no tags are bound to any resource.</description></item>
-        /// <item><description>If the binding succeeds, the response contains only <c>RequestId</c> and does not return tag details.</description></item>
-        /// <item><description>If multiple resources are specified and only some of them fail to be bound, the operation still returns a success response without failure details. Call <c>ListTagResources</c> to verify the binding results. If only one resource is specified and the binding fails, the operation returns the corresponding error code.</description></item>
+        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the error code <c>InvalidAppInstanceGroup.NotFound</c> is returned. No tags are bound to any resources.</description></item>
+        /// <item><description>If the binding is successful, the response contains only RequestId and does not return tag details.</description></item>
+        /// <item><description>If multiple resources are specified and the binding fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call ListTagResources to verify the binding results. If only one resource is specified and the binding fails, the operation directly returns the corresponding error code.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the delivery groups to which you want to add tags.</description></item>
-        /// <item><description>Call this operation with <c>ResourceType=APPINSTANCEGROUP</c>, <c>ResourceId.N</c>, and <c>Tag.N.Key</c>/<c>Tag.N.Value</c>.</description></item>
-        /// <item><description>To view the tags bound to resources, call <c>ListTagResources</c>. To unbind tags, call <c>UntagResources</c>.
+        /// <item><description>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the app instance groups to which you want to bind tags.</description></item>
+        /// <item><description>Call this operation and specify ResourceType=<c>APPINSTANCEGROUP</c>, ResourceId.N, and Tag.N.Key/Tag.N.Value.</description></item>
+        /// <item><description>To view the tags bound to a resource, call ListTagResources. To unbind tags, call UntagResources.
         /// The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
         /// </ol>
         /// </description>
@@ -25628,34 +26796,34 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and binds tags to specified China Office (Chinese: Wuying) delivery groups in compliance with Alibaba Cloud tag specifications. If a tag key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only delivery group (<c>APPINSTANCEGROUP</c>) resource types are supported.</para>
+        /// <para>Creates and binds tags to specified app instance groups according to Alibaba Cloud tag specifications. If a tag with the same key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only the app instance group (<c>APPINSTANCEGROUP</c>) resource type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <para>When you use a RAM user or Security Token Service (STS) credential to call this operation, you must have the <c>appstreaming:TagResources</c> permission.
-        /// The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only delivery group resources.</b> You can set <c>ResourceType</c> only to <c>APPINSTANCEGROUP</c>. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs.</para>
+        /// <h2>Prerequisites</h2>
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:TagResources</c> permission.
+        /// The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set ResourceType to <c>APPINSTANCEGROUP</c>. You can obtain the app instance group ID by calling <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a>.</para>
         /// <h2>Tag rules</h2>
         /// <list type="bullet">
-        /// <item><description>In a single request, you can bind up to <b>20 tags</b> to up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
-        /// <item><description>A tag key must be 1 to 128 characters in length. A tag value must be 0 to 256 characters in length. Both are case-sensitive.</description></item>
+        /// <item><description>A single request can bind up to <b>20 tags</b> to up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
+        /// <item><description>A tag key must be 1 to 128 characters in length, and a tag value must be 0 to 256 characters in length. Both are case-sensitive.</description></item>
         /// <item><description>A tag key cannot start with <c>aliyun</c> or <c>acs:</c> (case-insensitive). Neither tag keys nor tag values can contain <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>Tag keys in the same request must be unique. Otherwise, the error code <c>InvalidTag.Duplicated</c> is returned.</description></item>
-        /// <item><description>Each tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</description></item>
-        /// <item><description>A maximum of 20 custom tags can be bound to a single resource. If this limit is exceeded, the error code <c>ResourceTag.CustomTagCountExceed</c> is returned.</description></item>
+        /// <item><description>Tag keys in the same request cannot be duplicate. Otherwise, the error code <c>InvalidTag.Duplicated</c> is returned.</description></item>
+        /// <item><description>A tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</description></item>
+        /// <item><description>A single resource can be bound to up to 20 custom tags. If this limit is exceeded, the error code <c>ResourceTag.CustomTagCountExceed</c> is returned.</description></item>
         /// </list>
-        /// <h2>Results</h2>
+        /// <h2>Execution results</h2>
         /// <list type="bullet">
-        /// <item><description><b>If any specified delivery group does not exist or does not belong to the current account, the entire request fails.</b> The error code <c>InvalidAppInstanceGroup.NotFound</c> is returned, and no tags are bound to any resource.</description></item>
-        /// <item><description>If the binding succeeds, the response contains only <c>RequestId</c> and does not return tag details.</description></item>
-        /// <item><description>If multiple resources are specified and only some of them fail to be bound, the operation still returns a success response without failure details. Call <c>ListTagResources</c> to verify the binding results. If only one resource is specified and the binding fails, the operation returns the corresponding error code.</description></item>
+        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the error code <c>InvalidAppInstanceGroup.NotFound</c> is returned. No tags are bound to any resources.</description></item>
+        /// <item><description>If the binding is successful, the response contains only RequestId and does not return tag details.</description></item>
+        /// <item><description>If multiple resources are specified and the binding fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call ListTagResources to verify the binding results. If only one resource is specified and the binding fails, the operation directly returns the corresponding error code.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the delivery groups to which you want to add tags.</description></item>
-        /// <item><description>Call this operation with <c>ResourceType=APPINSTANCEGROUP</c>, <c>ResourceId.N</c>, and <c>Tag.N.Key</c>/<c>Tag.N.Value</c>.</description></item>
-        /// <item><description>To view the tags bound to resources, call <c>ListTagResources</c>. To unbind tags, call <c>UntagResources</c>.
+        /// <item><description>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the app instance groups to which you want to bind tags.</description></item>
+        /// <item><description>Call this operation and specify ResourceType=<c>APPINSTANCEGROUP</c>, ResourceId.N, and Tag.N.Key/Tag.N.Value.</description></item>
+        /// <item><description>To view the tags bound to a resource, call ListTagResources. To unbind tags, call UntagResources.
         /// The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
         /// </ol>
         /// </description>
@@ -25675,34 +26843,34 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and binds tags to specified China Office (Chinese: Wuying) delivery groups in compliance with Alibaba Cloud tag specifications. If a tag key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only delivery group (<c>APPINSTANCEGROUP</c>) resource types are supported.</para>
+        /// <para>Creates and binds tags to specified app instance groups according to Alibaba Cloud tag specifications. If a tag with the same key already exists on a resource, the tag value is updated to the value specified in the current request. Currently, only the app instance group (<c>APPINSTANCEGROUP</c>) resource type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <para>When you use a RAM user or Security Token Service (STS) credential to call this operation, you must have the <c>appstreaming:TagResources</c> permission.
-        /// The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only delivery group resources.</b> You can set <c>ResourceType</c> only to <c>APPINSTANCEGROUP</c>. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain delivery group IDs.</para>
+        /// <h2>Prerequisites</h2>
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:TagResources</c> permission.
+        /// The resources to which you want to bind tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set ResourceType to <c>APPINSTANCEGROUP</c>. You can obtain the app instance group ID by calling <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a>.</para>
         /// <h2>Tag rules</h2>
         /// <list type="bullet">
-        /// <item><description>In a single request, you can bind up to <b>20 tags</b> to up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
-        /// <item><description>A tag key must be 1 to 128 characters in length. A tag value must be 0 to 256 characters in length. Both are case-sensitive.</description></item>
+        /// <item><description>A single request can bind up to <b>20 tags</b> to up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
+        /// <item><description>A tag key must be 1 to 128 characters in length, and a tag value must be 0 to 256 characters in length. Both are case-sensitive.</description></item>
         /// <item><description>A tag key cannot start with <c>aliyun</c> or <c>acs:</c> (case-insensitive). Neither tag keys nor tag values can contain <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>Tag keys in the same request must be unique. Otherwise, the error code <c>InvalidTag.Duplicated</c> is returned.</description></item>
-        /// <item><description>Each tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</description></item>
-        /// <item><description>A maximum of 20 custom tags can be bound to a single resource. If this limit is exceeded, the error code <c>ResourceTag.CustomTagCountExceed</c> is returned.</description></item>
+        /// <item><description>Tag keys in the same request cannot be duplicate. Otherwise, the error code <c>InvalidTag.Duplicated</c> is returned.</description></item>
+        /// <item><description>A tag key on a resource can correspond to only one tag value. If the tag key already exists on the resource, the tag value is updated to the new value.</description></item>
+        /// <item><description>A single resource can be bound to up to 20 custom tags. If this limit is exceeded, the error code <c>ResourceTag.CustomTagCountExceed</c> is returned.</description></item>
         /// </list>
-        /// <h2>Results</h2>
+        /// <h2>Execution results</h2>
         /// <list type="bullet">
-        /// <item><description><b>If any specified delivery group does not exist or does not belong to the current account, the entire request fails.</b> The error code <c>InvalidAppInstanceGroup.NotFound</c> is returned, and no tags are bound to any resource.</description></item>
-        /// <item><description>If the binding succeeds, the response contains only <c>RequestId</c> and does not return tag details.</description></item>
-        /// <item><description>If multiple resources are specified and only some of them fail to be bound, the operation still returns a success response without failure details. Call <c>ListTagResources</c> to verify the binding results. If only one resource is specified and the binding fails, the operation returns the corresponding error code.</description></item>
+        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the error code <c>InvalidAppInstanceGroup.NotFound</c> is returned. No tags are bound to any resources.</description></item>
+        /// <item><description>If the binding is successful, the response contains only RequestId and does not return tag details.</description></item>
+        /// <item><description>If multiple resources are specified and the binding fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call ListTagResources to verify the binding results. If only one resource is specified and the binding fails, the operation directly returns the corresponding error code.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
-        /// <item><description>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the delivery groups to which you want to add tags.</description></item>
-        /// <item><description>Call this operation with <c>ResourceType=APPINSTANCEGROUP</c>, <c>ResourceId.N</c>, and <c>Tag.N.Key</c>/<c>Tag.N.Value</c>.</description></item>
-        /// <item><description>To view the tags bound to resources, call <c>ListTagResources</c>. To unbind tags, call <c>UntagResources</c>.
+        /// <item><description>Call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the IDs of the app instance groups to which you want to bind tags.</description></item>
+        /// <item><description>Call this operation and specify ResourceType=<c>APPINSTANCEGROUP</c>, ResourceId.N, and Tag.N.Key/Tag.N.Value.</description></item>
+        /// <item><description>To view the tags bound to a resource, call ListTagResources. To unbind tags, call UntagResources.
         /// The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
         /// </ol>
         /// </description>
@@ -25722,7 +26890,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds secondary private IP addresses from a development host.</para>
+        /// <para>Disassociates secondary private IP addresses from a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25768,7 +26936,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds secondary private IP addresses from a development host.</para>
+        /// <para>Disassociates secondary private IP addresses from a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25814,7 +26982,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds secondary private IP addresses from a development host.</para>
+        /// <para>Disassociates secondary private IP addresses from a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25832,7 +27000,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds secondary private IP addresses from a development host.</para>
+        /// <para>Disassociates secondary private IP addresses from a development host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26002,12 +27170,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates applications from a specified image version in batches.</para>
+        /// <para>Disassociates multiple applications from a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId. Verify the association between the applications and the version through the image query results before submitting AppIdList. <b>Dissociating applications does not directly delete application records.</b> To delete applications, call DeleteApp separately.</para>
+        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId.
+        /// Verify the association between the applications and the version through image query results before submitting AppIdList. <b>Disassociating an application does not delete the application record.</b> To delete an application, call DeleteApp.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26063,12 +27232,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates applications from a specified image version in batches.</para>
+        /// <para>Disassociates multiple applications from a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId. Verify the association between the applications and the version through the image query results before submitting AppIdList. <b>Dissociating applications does not directly delete application records.</b> To delete applications, call DeleteApp separately.</para>
+        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId.
+        /// Verify the association between the applications and the version through image query results before submitting AppIdList. <b>Disassociating an application does not delete the application record.</b> To delete an application, call DeleteApp.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26124,12 +27294,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates applications from a specified image version in batches.</para>
+        /// <para>Disassociates multiple applications from a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId. Verify the association between the applications and the version through the image query results before submitting AppIdList. <b>Dissociating applications does not directly delete application records.</b> To delete applications, call DeleteApp separately.</para>
+        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId.
+        /// Verify the association between the applications and the version through image query results before submitting AppIdList. <b>Disassociating an application does not delete the application record.</b> To delete an application, call DeleteApp.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26147,12 +27318,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates applications from a specified image version in batches.</para>
+        /// <para>Disassociates multiple applications from a specified image version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId. Verify the association between the applications and the version through the image query results before submitting AppIdList. <b>Dissociating applications does not directly delete application records.</b> To delete applications, call DeleteApp separately.</para>
+        /// <para>Only custom images and community images manageable by the current account are supported. If VersionId is omitted, the current active version is used. If specified, the version must belong to the image specified by ImageId.
+        /// Verify the association between the applications and the version through image query results before submitting AppIdList. <b>Disassociating an application does not delete the application record.</b> To delete an application, call DeleteApp.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26170,7 +27342,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds tags from cloud resources in a unified manner.</para>
+        /// <para>Dissociates tags from cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26220,7 +27392,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds tags from cloud resources in a unified manner.</para>
+        /// <para>Dissociates tags from cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26270,7 +27442,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds tags from cloud resources in a unified manner.</para>
+        /// <para>Dissociates tags from cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26288,7 +27460,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds tags from cloud resources in a unified manner.</para>
+        /// <para>Dissociates tags from cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26306,37 +27478,37 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Untags the specified Wuying app instance groups according to Alibaba Cloud tagging specifications. You can remove specific tags by specifying tag keys, or remove all custom tags from the resources at once by setting <c>All=true</c> without specifying tag keys. Currently, only the app instance group (<c>APPINSTANCEGROUP</c>) resource type is supported.</para>
+        /// <para>Removes tags from the specified Wuying app instance groups according to Alibaba Cloud tag specifications. You can remove specific tags by tag key, or remove all custom tags from the resources at once by setting All to true without specifying tag keys. Currently, only the app instance group (APPINSTANCEGROUP) resource type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
-        /// <para>To call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:UntagResources</c> permission.
-        /// The resources to be untagged must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set <c>ResourceType</c> to <c>APPINSTANCEGROUP</c>. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</para>
-        /// <h2>Metric description</h2>
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:UntagResources permission.
+        /// The resources from which you want to remove tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set ResourceType to APPINSTANCEGROUP. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</para>
+        /// <h2>metric description</h2>
         /// <list type="bullet">
-        /// <item><description>A single request can detach labels from up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
-        /// <item><description><b>You must specify at least one of <c>TagKey.N</c> and <c>All</c></b>: If neither is specified, or if <c>TagKey.N</c> is not specified and <c>All</c> is set to <c>false</c>, the operation returns the error code <c>InvalidParameter.TagKeyListOrAll</c>.<list type="bullet">
-        /// <item><description>If <c>TagKey.N</c> is specified: Only the labels corresponding to these label keys are detached. A maximum of 20 label keys can be specified in a single request. In this case, the <c>All</c> parameter is ignored.</description></item>
-        /// <item><description>If <c>TagKey.N</c> is not specified and <c>All</c> is set to <c>true</c>: All custom labels on the resources are detached, including Wuying system labels that start with <c>System/</c> and were attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</description></item>
+        /// <item><description>A single request can remove labels from up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
+        /// <item><description><b>You must specify at least one of TagKey.N and All</b>: If neither is specified, or if TagKey.N is not specified and All is set to false, the error code InvalidParameter.TagKeyListOrAll is returned.<list type="bullet">
+        /// <item><description>If TagKey.N is specified: Only the labels corresponding to these label keys are removed. A maximum of 20 label keys can be specified in a single request. In this case, the All parameter is ignored.</description></item>
+        /// <item><description>If TagKey.N is not specified and All is set to true: All custom labels on the resources are removed, including Wuying system labels that start with <c>System/</c> and are attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>If a specified label key does not exist on a resource, the label key is skipped and no fault is returned.</description></item>
-        /// <item><description>Label keys that start with <c>System/</c> are Wuying system labels. Only <c>System/Scheduler/GRAYSCALE</c> and <c>System/Scheduler/STOP_NEW_USER_CONNECTION</c> are supported. If you specify other label keys that start with <c>System/</c>, the operation returns the error code <c>InvalidTagPolicy.KeyInvalid</c> or <c>InvalidTag.SystemKeyNotAllow</c>.</description></item>
+        /// <item><description>Label keys that start with <c>System/</c> are Wuying system labels. Only System/Scheduler/GRAYSCALE and System/Scheduler/STOP_NEW_USER_CONNECTION are supported. If you specify other label keys that start with <c>System/</c>, the error code InvalidTagPolicy.KeyInvalid or InvalidTag.SystemKeyNotAllow is returned.</description></item>
         /// </list>
         /// <h2>Execution results</h2>
         /// <list type="bullet">
-        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the operation returns the error code <c>InvalidAppInstanceGroup.NotFound</c>. No resources are untagged.</description></item>
-        /// <item><description>If the untagging is successful, the response contains only <c>RequestId</c> and does not return tag details.</description></item>
-        /// <item><description>If multiple resources are specified and the untagging fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the untagging results. If only one resource is specified and the untagging fails, the operation directly returns the corresponding error code.</description></item>
+        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the error code InvalidAppInstanceGroup.NotFound is returned. No tags are removed from any resources.</description></item>
+        /// <item><description>If tags are successfully removed, the response contains only RequestId and does not return tag details.</description></item>
+        /// <item><description>If multiple resources are specified and tags are removed from only some of the resources, the operation still returns a success response, and the response does not contain failure details. You can call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the tag removal results. If only one resource is specified and tag removal fails, the operation directly returns the corresponding error code.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. To confirm the tag keys bound to the resources, call the <a href="~~ListTagResources~~">ListTagResources</a> operation.</description></item>
-        /// <item><description>Call this operation, specify <c>ResourceType=APPINSTANCEGROUP</c> and <c>ResourceId.N</c>, and specify <c>TagKey.N</c> or set <c>All=true</c> to indicate the tags to be removed.</description></item>
-        /// <item><description>To rebind tags, call the <a href="~~TagResources~~">TagResources</a> operation.
-        /// The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
+        /// <item><description>Call this operation, set ResourceType to APPINSTANCEGROUP, specify ResourceId.N, and specify TagKey.N or set All to true to indicate the tags to be removed.</description></item>
+        /// <item><description>To bind tags again, call the <a href="~~TagResources~~">TagResources</a> operation.
+        /// The desensitized identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -26395,37 +27567,37 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Untags the specified Wuying app instance groups according to Alibaba Cloud tagging specifications. You can remove specific tags by specifying tag keys, or remove all custom tags from the resources at once by setting <c>All=true</c> without specifying tag keys. Currently, only the app instance group (<c>APPINSTANCEGROUP</c>) resource type is supported.</para>
+        /// <para>Removes tags from the specified Wuying app instance groups according to Alibaba Cloud tag specifications. You can remove specific tags by tag key, or remove all custom tags from the resources at once by setting All to true without specifying tag keys. Currently, only the app instance group (APPINSTANCEGROUP) resource type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
-        /// <para>To call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:UntagResources</c> permission.
-        /// The resources to be untagged must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set <c>ResourceType</c> to <c>APPINSTANCEGROUP</c>. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</para>
-        /// <h2>Metric description</h2>
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:UntagResources permission.
+        /// The resources from which you want to remove tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set ResourceType to APPINSTANCEGROUP. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</para>
+        /// <h2>metric description</h2>
         /// <list type="bullet">
-        /// <item><description>A single request can detach labels from up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
-        /// <item><description><b>You must specify at least one of <c>TagKey.N</c> and <c>All</c></b>: If neither is specified, or if <c>TagKey.N</c> is not specified and <c>All</c> is set to <c>false</c>, the operation returns the error code <c>InvalidParameter.TagKeyListOrAll</c>.<list type="bullet">
-        /// <item><description>If <c>TagKey.N</c> is specified: Only the labels corresponding to these label keys are detached. A maximum of 20 label keys can be specified in a single request. In this case, the <c>All</c> parameter is ignored.</description></item>
-        /// <item><description>If <c>TagKey.N</c> is not specified and <c>All</c> is set to <c>true</c>: All custom labels on the resources are detached, including Wuying system labels that start with <c>System/</c> and were attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</description></item>
+        /// <item><description>A single request can remove labels from up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
+        /// <item><description><b>You must specify at least one of TagKey.N and All</b>: If neither is specified, or if TagKey.N is not specified and All is set to false, the error code InvalidParameter.TagKeyListOrAll is returned.<list type="bullet">
+        /// <item><description>If TagKey.N is specified: Only the labels corresponding to these label keys are removed. A maximum of 20 label keys can be specified in a single request. In this case, the All parameter is ignored.</description></item>
+        /// <item><description>If TagKey.N is not specified and All is set to true: All custom labels on the resources are removed, including Wuying system labels that start with <c>System/</c> and are attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>If a specified label key does not exist on a resource, the label key is skipped and no fault is returned.</description></item>
-        /// <item><description>Label keys that start with <c>System/</c> are Wuying system labels. Only <c>System/Scheduler/GRAYSCALE</c> and <c>System/Scheduler/STOP_NEW_USER_CONNECTION</c> are supported. If you specify other label keys that start with <c>System/</c>, the operation returns the error code <c>InvalidTagPolicy.KeyInvalid</c> or <c>InvalidTag.SystemKeyNotAllow</c>.</description></item>
+        /// <item><description>Label keys that start with <c>System/</c> are Wuying system labels. Only System/Scheduler/GRAYSCALE and System/Scheduler/STOP_NEW_USER_CONNECTION are supported. If you specify other label keys that start with <c>System/</c>, the error code InvalidTagPolicy.KeyInvalid or InvalidTag.SystemKeyNotAllow is returned.</description></item>
         /// </list>
         /// <h2>Execution results</h2>
         /// <list type="bullet">
-        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the operation returns the error code <c>InvalidAppInstanceGroup.NotFound</c>. No resources are untagged.</description></item>
-        /// <item><description>If the untagging is successful, the response contains only <c>RequestId</c> and does not return tag details.</description></item>
-        /// <item><description>If multiple resources are specified and the untagging fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the untagging results. If only one resource is specified and the untagging fails, the operation directly returns the corresponding error code.</description></item>
+        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the error code InvalidAppInstanceGroup.NotFound is returned. No tags are removed from any resources.</description></item>
+        /// <item><description>If tags are successfully removed, the response contains only RequestId and does not return tag details.</description></item>
+        /// <item><description>If multiple resources are specified and tags are removed from only some of the resources, the operation still returns a success response, and the response does not contain failure details. You can call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the tag removal results. If only one resource is specified and tag removal fails, the operation directly returns the corresponding error code.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. To confirm the tag keys bound to the resources, call the <a href="~~ListTagResources~~">ListTagResources</a> operation.</description></item>
-        /// <item><description>Call this operation, specify <c>ResourceType=APPINSTANCEGROUP</c> and <c>ResourceId.N</c>, and specify <c>TagKey.N</c> or set <c>All=true</c> to indicate the tags to be removed.</description></item>
-        /// <item><description>To rebind tags, call the <a href="~~TagResources~~">TagResources</a> operation.
-        /// The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
+        /// <item><description>Call this operation, set ResourceType to APPINSTANCEGROUP, specify ResourceId.N, and specify TagKey.N or set All to true to indicate the tags to be removed.</description></item>
+        /// <item><description>To bind tags again, call the <a href="~~TagResources~~">TagResources</a> operation.
+        /// The desensitized identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -26484,37 +27656,37 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Untags the specified Wuying app instance groups according to Alibaba Cloud tagging specifications. You can remove specific tags by specifying tag keys, or remove all custom tags from the resources at once by setting <c>All=true</c> without specifying tag keys. Currently, only the app instance group (<c>APPINSTANCEGROUP</c>) resource type is supported.</para>
+        /// <para>Removes tags from the specified Wuying app instance groups according to Alibaba Cloud tag specifications. You can remove specific tags by tag key, or remove all custom tags from the resources at once by setting All to true without specifying tag keys. Currently, only the app instance group (APPINSTANCEGROUP) resource type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
-        /// <para>To call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:UntagResources</c> permission.
-        /// The resources to be untagged must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set <c>ResourceType</c> to <c>APPINSTANCEGROUP</c>. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</para>
-        /// <h2>Metric description</h2>
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:UntagResources permission.
+        /// The resources from which you want to remove tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set ResourceType to APPINSTANCEGROUP. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</para>
+        /// <h2>metric description</h2>
         /// <list type="bullet">
-        /// <item><description>A single request can detach labels from up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
-        /// <item><description><b>You must specify at least one of <c>TagKey.N</c> and <c>All</c></b>: If neither is specified, or if <c>TagKey.N</c> is not specified and <c>All</c> is set to <c>false</c>, the operation returns the error code <c>InvalidParameter.TagKeyListOrAll</c>.<list type="bullet">
-        /// <item><description>If <c>TagKey.N</c> is specified: Only the labels corresponding to these label keys are detached. A maximum of 20 label keys can be specified in a single request. In this case, the <c>All</c> parameter is ignored.</description></item>
-        /// <item><description>If <c>TagKey.N</c> is not specified and <c>All</c> is set to <c>true</c>: All custom labels on the resources are detached, including Wuying system labels that start with <c>System/</c> and were attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</description></item>
+        /// <item><description>A single request can remove labels from up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
+        /// <item><description><b>You must specify at least one of TagKey.N and All</b>: If neither is specified, or if TagKey.N is not specified and All is set to false, the error code InvalidParameter.TagKeyListOrAll is returned.<list type="bullet">
+        /// <item><description>If TagKey.N is specified: Only the labels corresponding to these label keys are removed. A maximum of 20 label keys can be specified in a single request. In this case, the All parameter is ignored.</description></item>
+        /// <item><description>If TagKey.N is not specified and All is set to true: All custom labels on the resources are removed, including Wuying system labels that start with <c>System/</c> and are attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>If a specified label key does not exist on a resource, the label key is skipped and no fault is returned.</description></item>
-        /// <item><description>Label keys that start with <c>System/</c> are Wuying system labels. Only <c>System/Scheduler/GRAYSCALE</c> and <c>System/Scheduler/STOP_NEW_USER_CONNECTION</c> are supported. If you specify other label keys that start with <c>System/</c>, the operation returns the error code <c>InvalidTagPolicy.KeyInvalid</c> or <c>InvalidTag.SystemKeyNotAllow</c>.</description></item>
+        /// <item><description>Label keys that start with <c>System/</c> are Wuying system labels. Only System/Scheduler/GRAYSCALE and System/Scheduler/STOP_NEW_USER_CONNECTION are supported. If you specify other label keys that start with <c>System/</c>, the error code InvalidTagPolicy.KeyInvalid or InvalidTag.SystemKeyNotAllow is returned.</description></item>
         /// </list>
         /// <h2>Execution results</h2>
         /// <list type="bullet">
-        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the operation returns the error code <c>InvalidAppInstanceGroup.NotFound</c>. No resources are untagged.</description></item>
-        /// <item><description>If the untagging is successful, the response contains only <c>RequestId</c> and does not return tag details.</description></item>
-        /// <item><description>If multiple resources are specified and the untagging fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the untagging results. If only one resource is specified and the untagging fails, the operation directly returns the corresponding error code.</description></item>
+        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the error code InvalidAppInstanceGroup.NotFound is returned. No tags are removed from any resources.</description></item>
+        /// <item><description>If tags are successfully removed, the response contains only RequestId and does not return tag details.</description></item>
+        /// <item><description>If multiple resources are specified and tags are removed from only some of the resources, the operation still returns a success response, and the response does not contain failure details. You can call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the tag removal results. If only one resource is specified and tag removal fails, the operation directly returns the corresponding error code.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. To confirm the tag keys bound to the resources, call the <a href="~~ListTagResources~~">ListTagResources</a> operation.</description></item>
-        /// <item><description>Call this operation, specify <c>ResourceType=APPINSTANCEGROUP</c> and <c>ResourceId.N</c>, and specify <c>TagKey.N</c> or set <c>All=true</c> to indicate the tags to be removed.</description></item>
-        /// <item><description>To rebind tags, call the <a href="~~TagResources~~">TagResources</a> operation.
-        /// The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
+        /// <item><description>Call this operation, set ResourceType to APPINSTANCEGROUP, specify ResourceId.N, and specify TagKey.N or set All to true to indicate the tags to be removed.</description></item>
+        /// <item><description>To bind tags again, call the <a href="~~TagResources~~">TagResources</a> operation.
+        /// The desensitized identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -26533,37 +27705,37 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Untags the specified Wuying app instance groups according to Alibaba Cloud tagging specifications. You can remove specific tags by specifying tag keys, or remove all custom tags from the resources at once by setting <c>All=true</c> without specifying tag keys. Currently, only the app instance group (<c>APPINSTANCEGROUP</c>) resource type is supported.</para>
+        /// <para>Removes tags from the specified Wuying app instance groups according to Alibaba Cloud tag specifications. You can remove specific tags by tag key, or remove all custom tags from the resources at once by setting All to true without specifying tag keys. Currently, only the app instance group (APPINSTANCEGROUP) resource type is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Prerequisites</h2>
-        /// <para>To call this operation as a RAM user or by using STS credentials, you must have the <c>appstreaming:UntagResources</c> permission.
-        /// The resources to be untagged must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set <c>ResourceType</c> to <c>APPINSTANCEGROUP</c>. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</para>
-        /// <h2>Metric description</h2>
+        /// <para>When you call this operation as a RAM user or by using STS credentials, you must have the appstreaming:UntagResources permission.
+        /// The resources from which you want to remove tags must belong to the current Alibaba Cloud account. <b>This operation currently supports only app instance group resources</b>. You must set ResourceType to APPINSTANCEGROUP. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID, and call the <a href="~~ListTagResources~~">ListTagResources</a> operation to query the tags bound to the resources.</para>
+        /// <h2>metric description</h2>
         /// <list type="bullet">
-        /// <item><description>A single request can detach labels from up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
-        /// <item><description><b>You must specify at least one of <c>TagKey.N</c> and <c>All</c></b>: If neither is specified, or if <c>TagKey.N</c> is not specified and <c>All</c> is set to <c>false</c>, the operation returns the error code <c>InvalidParameter.TagKeyListOrAll</c>.<list type="bullet">
-        /// <item><description>If <c>TagKey.N</c> is specified: Only the labels corresponding to these label keys are detached. A maximum of 20 label keys can be specified in a single request. In this case, the <c>All</c> parameter is ignored.</description></item>
-        /// <item><description>If <c>TagKey.N</c> is not specified and <c>All</c> is set to <c>true</c>: All custom labels on the resources are detached, including Wuying system labels that start with <c>System/</c> and were attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</description></item>
+        /// <item><description>A single request can remove labels from up to <b>50 resources</b>. Duplicate resource IDs are automatically deduplicated.</description></item>
+        /// <item><description><b>You must specify at least one of TagKey.N and All</b>: If neither is specified, or if TagKey.N is not specified and All is set to false, the error code InvalidParameter.TagKeyListOrAll is returned.<list type="bullet">
+        /// <item><description>If TagKey.N is specified: Only the labels corresponding to these label keys are removed. A maximum of 20 label keys can be specified in a single request. In this case, the All parameter is ignored.</description></item>
+        /// <item><description>If TagKey.N is not specified and All is set to true: All custom labels on the resources are removed, including Wuying system labels that start with <c>System/</c> and are attached by calling the <a href="~~TagResources~~">TagResources</a> operation.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>If a specified label key does not exist on a resource, the label key is skipped and no fault is returned.</description></item>
-        /// <item><description>Label keys that start with <c>System/</c> are Wuying system labels. Only <c>System/Scheduler/GRAYSCALE</c> and <c>System/Scheduler/STOP_NEW_USER_CONNECTION</c> are supported. If you specify other label keys that start with <c>System/</c>, the operation returns the error code <c>InvalidTagPolicy.KeyInvalid</c> or <c>InvalidTag.SystemKeyNotAllow</c>.</description></item>
+        /// <item><description>Label keys that start with <c>System/</c> are Wuying system labels. Only System/Scheduler/GRAYSCALE and System/Scheduler/STOP_NEW_USER_CONNECTION are supported. If you specify other label keys that start with <c>System/</c>, the error code InvalidTagPolicy.KeyInvalid or InvalidTag.SystemKeyNotAllow is returned.</description></item>
         /// </list>
         /// <h2>Execution results</h2>
         /// <list type="bullet">
-        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the operation returns the error code <c>InvalidAppInstanceGroup.NotFound</c>. No resources are untagged.</description></item>
-        /// <item><description>If the untagging is successful, the response contains only <c>RequestId</c> and does not return tag details.</description></item>
-        /// <item><description>If multiple resources are specified and the untagging fails for only some of the resources, the operation still returns a success response, and the response does not contain failure details. Call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the untagging results. If only one resource is specified and the untagging fails, the operation directly returns the corresponding error code.</description></item>
+        /// <item><description><b>If any specified app instance group does not exist or does not belong to the current account, the entire request fails</b>, and the error code InvalidAppInstanceGroup.NotFound is returned. No tags are removed from any resources.</description></item>
+        /// <item><description>If tags are successfully removed, the response contains only RequestId and does not return tag details.</description></item>
+        /// <item><description>If multiple resources are specified and tags are removed from only some of the resources, the operation still returns a success response, and the response does not contain failure details. You can call the <a href="~~ListTagResources~~">ListTagResources</a> operation to verify the tag removal results. If only one resource is specified and tag removal fails, the operation directly returns the corresponding error code.</description></item>
         /// </list>
         /// <h2>Call sequence</h2>
         /// <ol>
         /// <item><description>Call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the app instance group ID. To confirm the tag keys bound to the resources, call the <a href="~~ListTagResources~~">ListTagResources</a> operation.</description></item>
-        /// <item><description>Call this operation, specify <c>ResourceType=APPINSTANCEGROUP</c> and <c>ResourceId.N</c>, and specify <c>TagKey.N</c> or set <c>All=true</c> to indicate the tags to be removed.</description></item>
-        /// <item><description>To rebind tags, call the <a href="~~TagResources~~">TagResources</a> operation.
-        /// The masked identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
+        /// <item><description>Call this operation, set ResourceType to APPINSTANCEGROUP, specify ResourceId.N, and specify TagKey.N or set All to true to indicate the tags to be removed.</description></item>
+        /// <item><description>To bind tags again, call the <a href="~~TagResources~~">TagResources</a> operation.
+        /// The desensitized identifiers in the examples are used to demonstrate the format. Replace them with your actual identifiers when you call the operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -26963,8 +28135,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can only modify images that are owned by the current account and allow modifications. Images shared with the current account cannot be modified.
-        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations for the selected version based on the complete list. Make sure to include the adapters that you still want to retain.</para>
+        /// <para>You can only modify images that are owned by the current account and allow modifications. Shared images cannot be modified.
+        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations of the selected version based on the complete list. Make sure to include the adapters that you want to retain.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27039,8 +28211,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can only modify images that are owned by the current account and allow modifications. Images shared with the current account cannot be modified.
-        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations for the selected version based on the complete list. Make sure to include the adapters that you still want to retain.</para>
+        /// <para>You can only modify images that are owned by the current account and allow modifications. Shared images cannot be modified.
+        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations of the selected version based on the complete list. Make sure to include the adapters that you want to retain.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27115,8 +28287,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can only modify images that are owned by the current account and allow modifications. Images shared with the current account cannot be modified.
-        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations for the selected version based on the complete list. Make sure to include the adapters that you still want to retain.</para>
+        /// <para>You can only modify images that are owned by the current account and allow modifications. Shared images cannot be modified.
+        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations of the selected version based on the complete list. Make sure to include the adapters that you want to retain.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27139,8 +28311,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can only modify images that are owned by the current account and allow modifications. Images shared with the current account cannot be modified.
-        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations for the selected version based on the complete list. Make sure to include the adapters that you still want to retain.</para>
+        /// <para>You can only modify images that are owned by the current account and allow modifications. Shared images cannot be modified.
+        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adapter associations of the selected version based on the complete list. Make sure to include the adapters that you want to retain.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27163,8 +28335,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task.
-        /// <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</para>
+        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task. <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27235,8 +28406,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task.
-        /// <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</para>
+        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task. <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27307,8 +28477,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task.
-        /// <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</para>
+        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task. <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27331,8 +28500,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task.
-        /// <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</para>
+        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. The TaskType must match the actual type of the task. <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that the status update call is completed. To query the final status of the task, call GetTask.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryUserAppUsageTimeRankRequest : TeaModel {
         /// <summary>
-        /// <para>The app instance group ID, which is used to filter data for a specified app instance group. If this parameter is not provided, data is not filtered by app instance group.</para>
+        /// <para>The ID of the app instance group, which is used to filter data for a specified app instance group. If this parameter is not provided, data is not filtered by app instance group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The end date of the statistical period, in <c>yyyyMMdd</c> format. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than <c>StartDate</c>, and cannot be earlier than 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</para>
+        /// <para>The end date of the statistical period, in <c>yyyyMMdd</c> format. If this parameter is not provided, it defaults to yesterday. The date cannot be earlier than <c>StartDate</c> and cannot be earlier than 90 days before the call date. The query range includes this date. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20260907</para>

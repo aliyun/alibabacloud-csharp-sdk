@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryUserUsageReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</para>
+        /// <para>The business status code. A value of <c>200</c> indicates that the request was successful. Other values indicate that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The description of the request processing result. Typically, success is returned when the request is successful.</para>
+        /// <para>The description of the request processing result. Typically, <c>success</c> is returned when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can use this ID to troubleshoot request issues.</para>
+        /// <para>The unique identifier of the request, which can be used to troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The last connection time. Format: <c>yyyy-MM-dd HH:mm:ss</c>. If no current or historical connection record exists, - is returned. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</para>
+            /// <para>The last connection time. Format: <c>yyyy-MM-dd HH:mm:ss</c>. If no current or historical connection record exists, <c>-</c> is returned. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01 10:00:00</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string LastConnectedTime { get; set; }
 
             /// <summary>
-            /// <para>The current version does not return a valid region ID. Callers should not rely on this field. To filter by business region, use the BizRegionId request parameter.</para>
+            /// <para>The current version does not return a valid region ID. Callers should not rely on this field. To filter by business region, use the <c>BizRegionId</c> request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The cumulative session persistence duration within the query range. This is the duration during which the user occupies the session from session attach to session release. Multiple sessions under the same app instance group are accumulated. Unit: hours.</para>
+            /// <para>The cumulative session persistence duration within the query range, which refers to the time a user occupies a session from attach to release. If multiple sessions exist under the same app instance group, their durations are accumulated. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.5</para>

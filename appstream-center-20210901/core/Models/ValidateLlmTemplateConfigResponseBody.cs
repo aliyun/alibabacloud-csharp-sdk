@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ValidateLlmTemplateConfigResponseBodyData Data { get; set; }
         public class ValidateLlmTemplateConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the configuration is valid. The value is true if all validation checks pass.</para>
+            /// <para>Indicates whether the configuration is valid. The value is true if all validation items pass.</para>
             /// </summary>
             [NameInMap("Valid")]
             [Validation(Required=false)]
             public bool? Valid { get; set; }
 
             /// <summary>
-            /// <para>The list of validation errors. This list is empty when Valid is true.</para>
+            /// <para>The list of validation errors. This list is empty if Valid is true.</para>
             /// </summary>
             [NameInMap("ValidationErrors")]
             [Validation(Required=false)]

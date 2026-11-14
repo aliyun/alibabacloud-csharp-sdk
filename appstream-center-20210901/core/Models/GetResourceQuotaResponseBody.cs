@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetResourceQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned when an error occurs during the call. A normal result is not guaranteed to contain this field. You should not use the return of a specific success code as a prerequisite for obtaining the quota.</para>
+        /// <para>The error code returned when the call fails. A normal result is not guaranteed to contain this field. You should not use the return of a specific success code as a prerequisite for obtaining the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidProductType.ValueNotSupported</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The maximum resource count quota applicable to the current query conditions. This is not the usage or remaining quota.</para>
+        /// <para>The maximum resource count quota applicable under the current query conditions. It is not the usage or remaining quota.</para>
         /// <list type="bullet">
-        /// <item><description><c>ResourceType=AppInstanceGroup</c>: Unit: count.</description></item>
+        /// <item><description><c>ResourceType=AppInstanceGroup</c>: Unit: groups.</description></item>
         /// <item><description><c>ResourceType=AppAuthUser</c>: Unit: users.</description></item>
-        /// <item><description><c>ResourceType=PoolNodeAmount</c>: Unit: count.</description></item>
+        /// <item><description><c>ResourceType=PoolNodeAmount</c>: Unit: nodes.</description></item>
         /// </list>
         /// <para>If no smaller limit is obtained, <c>2147483647</c> is returned. This does not mean that the resource inventory is unlimited.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when an error occurs during the call. This message and the error code help you identify the cause of the error.</para>
+        /// <para>The error message returned when the call fails. It is used together with the error code to help locate the cause.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The ProductType is not supported.</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The unique identifier of the request, which can be used to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

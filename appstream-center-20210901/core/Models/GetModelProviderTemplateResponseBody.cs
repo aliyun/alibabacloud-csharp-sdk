@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public GetModelProviderTemplateResponseBodyData Data { get; set; }
         public class GetModelProviderTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The JSON configuration object of the model provider template.</para>
+            /// <para>The JSON object for the model provider template configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The description of the model provider template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>阿里云百炼服务商。</para>
+            /// <para>Alibaba Cloud Model Studio provider</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the WUYING secure gateway proxy is enabled.</para>
+            /// <para>Indicates whether the Wuying security gateway proxy is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The name of the model provider template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>阿里云百炼。</para>
+            /// <para>Alibaba Cloud Model Studio</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

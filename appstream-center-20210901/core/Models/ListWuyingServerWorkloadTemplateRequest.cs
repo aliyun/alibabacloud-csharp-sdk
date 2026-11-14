@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListWuyingServerWorkloadTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>A compatibility field. The current version does not read this parameter. The operation returns a fixed maximum of the first 100 templates.</para>
+        /// <para>The compatibility field. The current version does not read this parameter. This operation returns a fixed maximum of the first 100 templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A compatibility field. The current version does not read this parameter and does not support token-based pagination.</para>
+        /// <para>The compatibility field. The current version does not read this parameter and does not support token-based pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unused</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of data entries that can be returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListNodesResponseBodyNodeModels> NodeModels { get; set; }
         public class ListNodesResponseBodyNodeModels : TeaModel {
             /// <summary>
-            /// <para>The billing type of the resource node.</para>
+            /// <para>The billing method of the resource node.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the billing mode of the delivery group is resource-based billing (ChargeResourceMode=Node).</para>
+            /// <para>This parameter is returned only when the billing mode of the associated app instance group is set to resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The resource node ID.</para>
+            /// <para>The ID of the resource node.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the billing mode of the delivery group is resource-based billing (ChargeResourceMode=Node).</para>
+            /// <para>This parameter is returned only when the billing mode of the associated app instance group is set to resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page size of the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the currently returned data.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

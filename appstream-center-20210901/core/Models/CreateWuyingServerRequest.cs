@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateWuyingServerRequest : TeaModel {
         /// <summary>
-        /// <para>The quantity.</para>
+        /// <para>The number of workstations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing type.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<CreateWuyingServerRequestDataDisk> DataDisk { get; set; }
         public class CreateWuyingServerRequestDataDisk : TeaModel {
             /// <summary>
-            /// <para>The data cloud disk type.</para>
+            /// <para>The category of the data cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_auto</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DataDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The data cloud disk performance level.</para>
+            /// <para>The performance level of the data cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL0</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DataDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The data cloud disk size.</para>
+            /// <para>The size of the data cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? ErdmaEnabled { get; set; }
 
         /// <summary>
-        /// <para>The GPU driver configuration version, such as grid19.</para>
+        /// <para>The version of the GPU driver, such as grid19.</para>
         /// 
         /// <b>Example:</b>
         /// <para>grid19</para>
@@ -129,33 +129,33 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string GpuDriverVersion { get; set; }
 
         /// <summary>
-        /// <para>The hostname. The following limits apply:</para>
+        /// <para>The hostname. The hostname must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>A period (.) or hyphen (-) cannot be used as the first or last character, and consecutive use is not allowed.</para>
+        /// <item><description><para>The hostname cannot start or end with a period (.) or a hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-).</para>
         /// </description></item>
-        /// <item><description><para>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.), consecutive hyphens, or consist entirely of digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</para>
+        /// <item><description><para>For a Windows workstation: The hostname must be 2 to 15 characters in length. It cannot contain periods (.) or consecutive hyphens (-), and cannot contain only digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</para>
         /// </description></item>
-        /// <item><description><para>Linux workstations:</para>
+        /// <item><description><para>For a Linux workstation:</para>
         /// <list type="bullet">
-        /// <item><description><para>The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment between periods can contain uppercase and lowercase letters, digits, and hyphens (-).</para>
+        /// <item><description><para>The hostname must be 2 to 64 characters in length. It can contain multiple periods (.). The string between two consecutive periods is a segment. Each segment can contain uppercase and lowercase letters, digits, and hyphens (-).</para>
         /// </description></item>
-        /// <item><description><para>You can use the placeholder <c>${instance_id}</c> to include the instance ID in the HostName parameter. For example, if you set <c>HostName=k8s-${instance_id}</c> and the created ECS instance ID is <c>i-123abc****</c>, the hostname of the instance is <c>k8s-i-123abc****</c>.</para>
+        /// <item><description><para>You can use the <c>${instance_id}</c> placeholder to pass the instance ID to the HostName parameter. For example, if you set HostName to <c>k8s-${instance_id}</c> and the created ECS instance ID is <c>i-123abc****</c>, the hostname of the instance is <c>k8s-i-123abc****</c>.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>When creating multiple workstation instances at a time, you can use the <c>name_prefix[begin_number,bits]name_suffix</c> naming format to uniformly name multiple workstations. For example, if you set Hostname to <c>ecd-[1,4]-test</c>, the hostname of the first workstation is <c>ecd-0001-test</c>, the hostname of the second workstation is <c>ecd-0002-test</c>, and so on.</para>
+        /// <item><description><para>When you create multiple workstations at a time, you can use the <c>name_prefix[begin_number,bits]name_suffix</c> naming format to name the workstations in a unified manner. For example, if you set HostName to <c>ecd-[1,4]-test</c>, the hostname of the first workstation is <c>ecd-0001-test</c>, the hostname of the second workstation is <c>ecd-0002-test</c>, and so on.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>name_prefix</c>: The prefix of the hostname.</para>
+        /// <item><description><para><c>name_prefix</c>: the prefix of the hostname.</para>
         /// </description></item>
-        /// <item><description><para><c>[begin_number,bits]</c>: The sequential number in the hostname.</para>
+        /// <item><description><para><c>[begin_number,bits]</c>: the sequential number in the hostname.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>begin_number</c>: The starting number. Valid values: 0 to 999999. Default value: 0. If an invalid value is specified, the value is set to 0.</para>
+        /// <item><description><para><c>begin_number</c>: the start number. Valid values: 0 to 999999. Default value: 0. If the specified value is invalid, the default value 0 is used.</para>
         /// </description></item>
-        /// <item><description><para><c>bits</c>: The number of digits. Valid values: 1 to 6. Default value: 6. If an invalid value is specified, the value is set to 6.</para>
+        /// <item><description><para><c>bits</c>: the number of digits. Valid values: 1 to 6. Default value: 6. If the specified value is invalid, the default value 6 is used.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>name_suffix</c>: The suffix of the hostname.</para>
+        /// <item><description><para><c>name_suffix</c>: the suffix of the hostname.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token that ensures operation uniqueness.</para>
+        /// <para>The idempotence token that is used to ensure the uniqueness of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6a1b8c3d</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public float? MaxPrice { get; set; }
 
         /// <summary>
-        /// <para>The network policy type (invite-only preview).</para>
+        /// <para>The network policy type. This feature is in invitational preview.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DirectIp</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The workstation logon password.</para>
+        /// <para>The logon password of the workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YourPassword123</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The time unit.</para>
+        /// <para>The unit of the subscription duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -249,9 +249,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The discount ID.</para>
+        /// <para>The promotion ID.</para>
         /// <remarks>
-        /// <para>If PromotionId is specified, the corresponding discount is applied.</para>
+        /// <para>If PromotionId is specified, the system attempts to apply the corresponding discount.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SavingPlanId { get; set; }
 
         /// <summary>
-        /// <para>The workstation instance type.</para>
+        /// <para>The instance type of the workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ServerPortRange { get; set; }
 
         /// <summary>
-        /// <para>The sub-billing type.</para>
+        /// <para>The sub-billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>postPaid</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SubPayType { get; set; }
 
         /// <summary>
-        /// <para>The system cloud disk type.</para>
+        /// <para>The category of the system cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_auto</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SystemDiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The system cloud disk performance level.</para>
+        /// <para>The performance level of the system cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SystemDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The system cloud disk size. Unit: GB.</para>
+        /// <para>The size of the system cloud disk. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? SystemDiskSize { get; set; }
 
         /// <summary>
-        /// <para>The list of office network vSwitches.</para>
+        /// <para>The list of vSwitches in the office network.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string VirtualNodePoolId { get; set; }
 
         /// <summary>
-        /// <para>The workstation name. When creating multiple workstations, a numeric suffix is automatically appended.</para>
+        /// <para>The name of the workstation. When you create multiple workstations, a numeric suffix is automatically added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleServerName</para>

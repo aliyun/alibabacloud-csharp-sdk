@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupSetId { get; set; }
 
         /// <summary>
-        /// <para>Filters cloud browser groups by business region.</para>
+        /// <para>Filters browser groups by business region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BrowserInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>Filters cloud browser groups by name or ID based on partial match.</para>
+        /// <para>Filters by browser group name or ID by using partial match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Office</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CloudBrowserName { get; set; }
 
         /// <summary>
-        /// <para>Excludes cloud browser groups that are authorized to the specified user groups.</para>
+        /// <para>Excludes browser groups that are authorized to the specified user groups.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> ExcludedUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>Filters cloud browser groups by the ID of the office network to which they belong.</para>
+        /// <para>Filters browser groups by the ID of the office network to which they belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-843734****</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters cloud browser groups by status.</para>
+        /// <para>Filters by browser group status.</para>
         /// <para><b>Limit:</b> You can specify only one status at a time.</para>
         /// </summary>
         [NameInMap("Status")]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The tag filtering parameter. This parameter is not supported in customer-facing scenarios. Do not specify this parameter.</para>
+        /// <para>The tag filter parameter. This parameter is not supported in customer-facing scenarios. Do not specify this parameter.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>Filters cloud browser groups by browser version. Valid values:</para>
+        /// <para>Filters by the version of the browser. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>Basic</c>: Basic Edition.</description></item>
         /// <item><description><c>Pro</c>: Premium Edition.</description></item>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Tier { get; set; }
 
         /// <summary>
-        /// <para>Filters cloud browser groups by the IDs of authorized user groups.</para>
+        /// <para>Filters by the IDs of authorized user groups.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public CreateModelTemplateResponseBodyData Data { get; set; }
         public class CreateModelTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The model group ID.</para>
+            /// <para>The ID of the model group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mt-xxxx</para>

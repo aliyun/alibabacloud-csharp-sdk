@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetImageByIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success. If the call fails, the corresponding error code is returned.</para>
+        /// <para>The response code. 200 indicates success. If the call fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<GetImageByIdResponseBodyDataAdaptorInfoBOList> AdaptorInfoBOList { get; set; }
             public class GetImageByIdResponseBodyDataAdaptorInfoBOList : TeaModel {
                 /// <summary>
-                /// <para>The adapter ID.</para>
+                /// <para>The adaptor ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>adt-13ff3****</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AppVersionNumber { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the business line to which the application belongs.</para>
+                /// <para>The number of the business line to which the application belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? BizType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the OSS bucket where the application files are stored.</para>
+                /// <para>The name of the OSS bucket where the application file is stored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>appstream-example</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ControlParam { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the disk where the application files are stored.</para>
+                /// <para>The ID of the disk where the application file is stored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d-bp1example****</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ExecuteFileAddress { get; set; }
 
                 /// <summary>
-                /// <para>The extended information of the adapted application.</para>
+                /// <para>The extension information of the adapted application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The optimization parameters configured in the administrator backend.</para>
+                /// <para>The optimization parameters that can be configured by administrators in the backend.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string OriginAppType { get; set; }
 
                 /// <summary>
-                /// <para>The operating system type supported by the application.</para>
+                /// <para>The operating system type applicable to the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Windows</para>
@@ -406,7 +406,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the image belongs. The account ID for a system image is 0.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the image belongs. The account ID for system images is 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789</para>
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string BaseImageId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the base image version.</para>
+            /// <para>The base image version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iv-xxx</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? BizType { get; set; }
 
             /// <summary>
-            /// <para>The name of the OSS bucket where the image files are stored.</para>
+            /// <para>The name of the OSS bucket where the image file is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appstream-example</para>
@@ -520,14 +520,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageCreateMode { get; set; }
 
             /// <summary>
-            /// <para>The image extended information, including disk specifications and GPU driver information. For VHD or container images, the extended information of the base image and base version is used.</para>
+            /// <para>The image extended information, which includes cloud disk specifications and GPU driver information. For VHD or container images, the extended information of the base image and base version is used.</para>
             /// </summary>
             [NameInMap("ImageExtendInfoModel")]
             [Validation(Required=false)]
             public GetImageByIdResponseBodyDataImageExtendInfoModel ImageExtendInfoModel { get; set; }
             public class GetImageByIdResponseBodyDataImageExtendInfoModel : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account to which the image belongs. The account ID for a system image is 0.</para>
+                /// <para>The ID of the Alibaba Cloud account to which the image belongs. The account ID for system images is 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789</para>
@@ -599,11 +599,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 /// <summary>
                 /// <para>The image package type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Ecs: ECS image.</description></item>
-                /// <item><description>Vhd: Virtual disk image.</description></item>
-                /// <item><description>Container: Container image.</description></item>
-                /// <item><description>Ecs_Container: ECS and container combined image.</description></item>
-                /// <item><description>K8s_Node: Kubernetes node image.</description></item>
+                /// <item><description>Ecs: ECS image</description></item>
+                /// <item><description>Vhd: Virtual disk image</description></item>
+                /// <item><description>Container: Container image</description></item>
+                /// <item><description>Ecs_Container: ECS and container composite image</description></item>
+                /// <item><description>K8s_Node: Kubernetes node image</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -663,7 +663,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<GetImageByIdResponseBodyDataImageRegionDistributeList> ImageRegionDistributeList { get; set; }
             public class GetImageByIdResponseBodyDataImageRegionDistributeList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account to which the image belongs. The account ID for a system image is 0.</para>
+                /// <para>The ID of the Alibaba Cloud account to which the image belongs. The account ID for system images is 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789</para>
@@ -713,7 +713,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// <para>The processing information reported by the region distribution task.</para>
+                /// <para>The processing message reported by the region distribution task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
@@ -745,10 +745,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 /// <summary>
                 /// <para>The region distribution status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CREATING: Distributing.</description></item>
-                /// <item><description>AVAILABLE: Available.</description></item>
-                /// <item><description>CREATE_FAILED: Distribution failed.</description></item>
-                /// <item><description>DELETE: Deleted.</description></item>
+                /// <item><description>CREATING: Distributing</description></item>
+                /// <item><description>AVAILABLE: Available</description></item>
+                /// <item><description>CREATE_FAILED: Distribution failed</description></item>
+                /// <item><description>DELETE: Deleted</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -814,7 +814,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The image language. If the encapsulation type is VHD or Container, this property is inherited from the image with the ECS encapsulation type in the image combination.</para>
+            /// <para>The image language. If the packaging type is VHD or Container, this property is inherited from the image with the ECS packaging type in the same image combination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-CN</para>
@@ -834,7 +834,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string LatestVersionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the returned version is the active version. Valid values:</para>
+            /// <para>Indicates whether the returned version is the online version. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Yes.</description></item>
             /// <item><description>false: No.</description></item>
@@ -873,11 +873,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The image package type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Ecs: ECS image.</description></item>
-            /// <item><description>Vhd: Virtual disk image.</description></item>
-            /// <item><description>Container: Container image.</description></item>
-            /// <item><description>Ecs_Container: ECS and container combined image.</description></item>
-            /// <item><description>K8s_Node: Kubernetes node image.</description></item>
+            /// <item><description>Ecs: ECS image</description></item>
+            /// <item><description>Vhd: Virtual disk image</description></item>
+            /// <item><description>Container: Container image</description></item>
+            /// <item><description>Ecs_Container: ECS and container composite image</description></item>
+            /// <item><description>K8s_Node: Kubernetes node image</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -898,7 +898,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ParentImageId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent image version.</para>
+            /// <para>The parent image version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iv-xxx</para>
@@ -928,7 +928,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PlatformName { get; set; }
 
             /// <summary>
-            /// <para>The product type to which the image belongs, such as CloudDesktop (Cloud Desktop), CloudApp (Cloud Application), or WuyingServer (WUYING Workspace Enterprise Edition workstation).</para>
+            /// <para>The product type to which the image belongs, such as CloudDesktop (Cloud Desktop), CloudApp (cloud application), and WuyingServer (WUYING Workspace Enterprise Edition workstation).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CloudApp</para>
@@ -938,7 +938,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The extended properties of the image version, in key-value pair format.</para>
+            /// <para>The extended properties of the image version in key-value pairs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -964,7 +964,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The image status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: Initialized.</description></item>
+            /// <item><description>INIT: Initial.</description></item>
             /// <item><description>CREATING: Creating.</description></item>
             /// <item><description>AVAILABLE: Available.</description></item>
             /// <item><description>CREATE_FAILED: Creation failed.</description></item>
@@ -991,7 +991,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

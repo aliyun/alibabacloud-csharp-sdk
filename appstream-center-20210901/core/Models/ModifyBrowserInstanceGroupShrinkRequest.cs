@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyBrowserInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to send notification emails for authorization and deauthorization.</para>
+        /// <para>Specifies whether to send notification emails for authorization and revocation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CloudBrowserName { get; set; }
 
         /// <summary>
-        /// <para>The maximum resource count. This parameter takes effect only for the pay-as-you-go billing method based on monthly active users.</para>
+        /// <para>The maximum resource count. This parameter takes effect for the pay-as-you-go billing method based on monthly active users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

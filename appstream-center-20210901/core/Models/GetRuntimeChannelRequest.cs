@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetRuntimeChannelRequest : TeaModel {
         /// <summary>
-        /// <para>The Agent platform.</para>
+        /// <para>The agent platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The Agent provider.</para>
+        /// <para>The agent provider.</para>
         /// <list type="bullet">
-        /// <item><description>JVS Computer: Set to OpenClaw.</description></item>
-        /// <item><description>OpenClaw: Set to OpenClaw.</description></item>
-        /// <item><description>Hermes Agent: Set to HermesAgent.</description></item>
+        /// <item><description>JVS Computer: Enter OpenClaw.</description></item>
+        /// <item><description>OpenClaw: Enter OpenClaw.</description></item>
+        /// <item><description>Hermes Agent: Enter HermesAgent.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? IncludeRiskInfo { get; set; }
 
         /// <summary>
-        /// <para>The Agent runtime ID. The ID mapping is as follows:</para>
+        /// <para>The agent runtime ID. The ID mappings are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</description></item>
-        /// <item><description>OpenClaw: Cloud computer ID, in the format of ecd-xxxx.</description></item>
-        /// <item><description>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</description></item>
+        /// <item><description>JVS Computer: the JVS Computer ID, in the format of jvs-xxxx.</description></item>
+        /// <item><description>OpenClaw: the cloud desktop ID, in the format of ecd-xxxx.</description></item>
+        /// <item><description>Hermes Agent: the Hermes Agent ID, in the format of jvs-xxxx.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RuntimeId { get; set; }
 
         /// <summary>
-        /// <para>The Agent runtime type.</para>
+        /// <para>The agent runtime type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

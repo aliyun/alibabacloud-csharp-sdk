@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RetryType { get; set; }
 
         /// <summary>
-        /// <para>The source region from which the image is copied. If this parameter is not specified, a random region is selected.</para>
+        /// <para>The source region from which the image is copied. If you do not specify this parameter, a region is randomly selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SourceRegion { get; set; }
 
         /// <summary>
-        /// <para>The image version ID. If this parameter is not specified, the latest image version is used.</para>
+        /// <para>The image version ID. If you do not specify this parameter, the latest image version is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iv-07jyldnd9i****</para>

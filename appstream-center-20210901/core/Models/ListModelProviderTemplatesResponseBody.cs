@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListModelProviderTemplatesResponseBodyData> Data { get; set; }
         public class ListModelProviderTemplatesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The model provider configuration JSON object.</para>
+            /// <para>The JSON object for the model provider configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The model provider template description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud Bailian provider</para>
+            /// <para>Alibaba Cloud Model Studio provider</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the WUYING secure gateway proxy is enabled.</para>
+            /// <para>Specifies whether the Wuying security gateway proxy is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The model provider template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud Bailian</para>
+            /// <para>Alibaba Cloud Model Studio</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProviderType { get; set; }
 
             /// <summary>
-            /// <para>The ProviderKey of the WUYING secure gateway proxy.</para>
+            /// <para>The ProviderKey of the Wuying security gateway proxy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wuying-key-12345</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number of the current query result.</para>
+        /// <para>The page number of the current returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in the query result.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of query results.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

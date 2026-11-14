@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class FinishValidateRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID used for exact match queries. If omitted, the results are not filtered by application ID.</para>
+        /// <para>The application ID for exact match queries. If this parameter is omitted, the results are not filtered by application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-0aae4rxw7ql*****</para>

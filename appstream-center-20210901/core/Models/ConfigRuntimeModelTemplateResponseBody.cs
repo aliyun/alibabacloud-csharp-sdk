@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The agent runtime ID. The ID mappings are as follows:</para>
-            /// <para>JVS Computer: the JVS Computer ID, in the format of jvs-xxxx.</para>
-            /// <para>OpenClaw: the cloud desktop ID, in the format of ecd-xxxx.</para>
-            /// <para>Hermes Agent: the Hermes Agent ID, in the format of jvs-xxxx.</para>
+            /// <para>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</para>
+            /// <para>OpenClaw: Cloud desktop ID, in the format of ecd-xxxx.</para>
+            /// <para>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jvs-xxxxxxxx</para>

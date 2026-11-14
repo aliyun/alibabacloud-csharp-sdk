@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The credit consumption multiplier. An empty value indicates that the model does not participate in credit billing.</para>
+            /// <para>The credit consumption multiplier. An empty value indicates that the model is not billed by credits.</para>
             /// </summary>
             [NameInMap("CreditMultiplier")]
             [Validation(Required=false)]
             public ListLlmTemplatesResponseBodyDataCreditMultiplier CreditMultiplier { get; set; }
             public class ListLlmTemplatesResponseBodyDataCreditMultiplier : TeaModel {
                 /// <summary>
-                /// <para>The maximum multiplier. An empty value indicates no upper limit. For example, if Min is 1 and Max is empty, it is displayed as starting from 1x.</para>
+                /// <para>The upper limit of the multiplier. An empty value indicates no upper limit. For example, if Min=1 and Max is empty, it is displayed as starting from 1x.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public float? Max { get; set; }
 
                 /// <summary>
-                /// <para>The minimum multiplier. When it is equal to Max, it is a fixed multiplier. For example, if Min and Max are both 2, it is displayed as 2x.</para>
+                /// <para>The lower limit of the multiplier. When it is equal to the maximum value, it is a fixed multiplier. For example, if Min=Max=2, it is displayed as 2x.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the model is the default model in the associated model group.</para>
+            /// <para>Specifies whether the model is the default model in the associated model group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -143,6 +143,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The model information, such as the context window size and the maximum number of input/output tokens.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;contextWindow&quot;:1000000,&quot;maxInputTokens&quot;:1048576,&quot;maxOutputTokens&quot;:1048576,&quot;maxReasoningTokens&quot;:1048576,&quot;reasoningMaxInputTokens&quot;:1048576,&quot;reasoningMaxOutputTokens&quot;:1048576}</para>
             /// </summary>
             [NameInMap("ModelInfo")]
             [Validation(Required=false)]
@@ -183,7 +186,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string Price { get; set; }
 
                     /// <summary>
-                    /// <para>The price name, such as input, output, or image generation.</para>
+                    /// <para>The name of the price, such as input, output, or image generation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Input</para>
@@ -205,7 +208,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The range name, such as Default or 0-1M tokens.</para>
+                /// <para>The name of the range, such as Default or 0-1M tokens.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Default</para>
@@ -227,7 +230,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProviderTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The published time in ISO 8601 format, such as 2026-03-04T06:25:17.000+00:00.</para>
+            /// <para>The time when the model was published. The time follows the ISO 8601 standard, such as 2026-03-04T06:25:17.000+00:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-04T06:25:17.000+00:00</para>
@@ -247,7 +250,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RefScope { get; set; }
 
             /// <summary>
-            /// <para>The number of route policies configured for the model tier. This parameter is returned only when SmartModel is true. If no policies are configured for the tier, 0 is returned.</para>
+            /// <para>The number of route policies. This is the number of route policies configured for the model tier. This parameter is returned only when SmartModel is true. If no policies are configured for the tier, 0 is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -259,7 +262,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned query results.</para>
+        /// <para>The current page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

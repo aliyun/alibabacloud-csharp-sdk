@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListPublishedAppsRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID used for filtering. Substring matching is supported. You can specify a complete ID or a consecutive segment of it. If this parameter is not specified or is set to an empty string, filtering by application ID is not applied. If both this parameter and <c>AppName</c> are specified, both conditions must be met by the same application.</para>
+        /// <para>The ID of the application used for filtering. Substring matching is supported. You can pass the complete ID or a continuous segment of it. If this parameter is not specified or an empty string is passed, filtering is not performed based on the application ID. If this parameter and <c>AppName</c> are specified at the same time, both conditions must be met by the same application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-i87mycyn419nu****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group ID used for filtering. Substring matching is supported. You can specify a complete ID or a consecutive segment of it. If this parameter is not specified or is set to an empty string, filtering by delivery group ID is not applied. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain delivery group IDs. This parameter can be used together with other filter conditions, and all conditions must be met simultaneously.</para>
+        /// <para>The ID of the delivery group used for filtering. Substring matching is supported. You can pass the complete ID or a continuous segment of it. If this parameter is not specified or an empty string is passed, filtering is not performed based on the delivery group ID. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID. This parameter can be used together with other filter conditions, and all conditions must be met.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -30,28 +30,28 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The delivery group name used for filtering. Substring matching is supported. For example, if you specify <c>OfficeApps</c>, delivery groups whose names contain this text are matched. If this parameter is not specified or is set to an empty string, filtering by delivery group name is not applied. If both this parameter and the delivery group ID are specified, both conditions must be met.</para>
+        /// <para>The name of the delivery group used for filtering. Substring matching is supported. For example, if you pass <c>Office applications</c>, delivery groups whose names contain this text are matched. If this parameter is not specified or an empty string is passed, filtering is not performed based on the delivery group name. If this parameter and the delivery group ID are specified at the same time, both conditions must be met.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OfficeApps</para>
+        /// <para>Office applications</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The application name used for filtering. Substring matching is supported. For example, if you specify <c>OfficeApps</c>, applications whose names contain this text are matched. If this parameter is not specified or is set to an empty string, filtering by application name is not applied. If both this parameter and <c>AppId</c> are specified, both conditions must be met by the same application.</para>
+        /// <para>The name of the application used for filtering. Substring matching is supported. For example, if you pass <c>Office applications</c>, applications whose names contain this text are matched. If this parameter is not specified or an empty string is passed, filtering is not performed based on the application name. If this parameter and <c>AppId</c> are specified at the same time, both conditions must be met by the same application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OfficeApps</para>
+        /// <para>Office applications</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The username to exclude. Exact username matching is used. For example, <c>alice</c>. When specified, applications that have been authorized to this user through <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> by application are not returned. This helps you find applications that can still be authorized to the user. If this parameter is not specified or is set to an empty string, no exclusion based on user authorization is applied.</para>
-        /// <para><b>Access permissions granted through delivery-group-level authorization or user groups are not evaluated by this condition.</b> The returned results cannot be treated as a complete list of applications that the user has no access to.</para>
+        /// <para>The username to be excluded. Exact matching is performed based on the full username, such as <c>alice</c>. If this parameter is specified, applications that have been authorized for this user on a per-application basis through <a href="~~AuthorizeUsersForApp~~">AuthorizeUsersForApp</a> are not returned. This can be used to find applications that can still be authorized for the user. If this parameter is not specified or an empty string is passed, filtering is not performed based on user authorization.</para>
+        /// <para><b>Access permissions obtained through overall delivery group authorization or user groups are not evaluated by this condition.</b> Do not equate the returned results with a list of applications that the user has absolutely no access to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ExcludeUserId { get; set; }
 
         /// <summary>
-        /// <para>The page number. This parameter is required. Start from page <c>1</c> and use this parameter together with <c>PageSize</c>. Keep other filter conditions unchanged when querying subsequent pages. If an invalid value is specified, the error code <c>InvalidParameter.PageNumber</c> is returned.</para>
+        /// <para>The page number. This parameter is required. Start the query from page <c>1</c> and use it in conjunction with <c>PageSize</c>. Keep other filter conditions unchanged when querying subsequent pages. If the value is invalid, the error code <c>InvalidParameter.PageNumber</c> is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,16 +83,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product type. This parameter is required. The value is case-insensitive. Only applications in published delivery groups of the specified product type are returned. If an unrecognized value is specified, the error code <c>InvalidParameter.ProductType</c> is returned. Filtering and statistics related to per-application authorization (<c>ExcludeUserId</c> and <c>AuthorizedUserCount</c>) are primarily used in WUYING Cloud Application common scenarios.</para>
+        /// <para>The product type. This parameter is required and is not case-sensitive. Only applications in published delivery groups of this product type are returned. If an unrecognized value is passed, the error code <c>InvalidParameter.ProductType</c> is returned. Filtering and statistics related to per-application authorization (<c>ExcludeUserId</c> and <c>AuthorizedUserCount</c>) are primarily used in WUYING Cloud App scenarios.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>CloudApp</c>: WUYING Cloud Application.</description></item>
-        /// <item><description><c>CloudBrowser</c>: Cloud Browser.</description></item>
-        /// <item><description><c>WuyingServer</c>: Enterprise Workstation.</description></item>
-        /// <item><description><c>WuyingWorkstation</c>: Personal Edition Lingjou Container Workstation.</description></item>
-        /// <item><description><c>WuyingWorkstationTeam</c>: Team Edition Lingjou Container Workstation.</description></item>
-        /// <item><description><c>WuyingWorkstationBusiness</c>: Dedicated Edition Lingjou Container Workstation.</description></item>
-        /// <item><description><c>AndroidCloud</c>: Cloud Phone.</description></item>
+        /// <item><description><c>CloudApp</c>: WUYING Cloud App.</description></item>
+        /// <item><description><c>CloudBrowser</c>: Cloud browser.</description></item>
+        /// <item><description><c>WuyingServer</c>: Enterprise Edition workstation.</description></item>
+        /// <item><description><c>WuyingWorkstation</c>: Personal Edition Linggou container workstation.</description></item>
+        /// <item><description><c>WuyingWorkstationTeam</c>: Team Edition Linggou container workstation.</description></item>
+        /// <item><description><c>WuyingWorkstationBusiness</c>: Dedicated Edition Linggou container workstation.</description></item>
+        /// <item><description><c>AndroidCloud</c>: Cloud phone.</description></item>
         /// <item><description><c>AIAgent</c>: AgentBay (AI agent).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

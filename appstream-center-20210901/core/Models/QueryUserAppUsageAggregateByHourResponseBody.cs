@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryUserAppUsageAggregateByHourResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</para>
+        /// <para>The business status code. A value of 200 indicates that the request was processed successfully. Other values indicate that the processing failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of hourly aggregated user application usage data. A maximum of five records are returned for each hour.</para>
+        /// <para>The list of user application usage data aggregated by hour. A maximum of five records are returned for each hour.</para>
         /// </summary>
         [NameInMap("IndexData")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppTimeCnt { get; set; }
 
             /// <summary>
-            /// <para>The statistical hour in a two-digit 24-hour format string. Valid values: 00 to 23. Hour boundaries are divided based on the Asia/Shanghai (UTC+8) time zone.</para>
+            /// <para>The statistical hour, represented as a two-digit 24-hour format string with values ranging from 00 to 23. Hour boundaries are divided based on the Asia/Shanghai (UTC+8) time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>02</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The description of the request processing result. A value of success is usually returned when the request is successful.</para>
+        /// <para>The description of the request processing result. The value success is usually returned when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

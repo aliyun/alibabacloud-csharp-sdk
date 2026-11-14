@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of user group information.</para>
+        /// <para>The list of user groups.</para>
         /// </summary>
         [NameInMap("UserGroups")]
         [Validation(Required=false)]
         public List<ListAuthorizedUserGroupsResponseBodyUserGroups> UserGroups { get; set; }
         public class ListAuthorizedUserGroupsResponseBodyUserGroups : TeaModel {
             /// <summary>
-            /// <para>The ID of the delivery group.</para>
+            /// <para>The ID of the app instance group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the delivery group set.</para>
+            /// <para>The ID of the app instance group set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>set-3jm9d0abc00example</para>

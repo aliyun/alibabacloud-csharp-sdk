@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageByInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is currently applicable only to cloud desktop scenarios. Specifies whether to clear user personal data. If you set this parameter to true, the created image clears data in all directories under C:\Users except the Administrator and Public directories.</para>
+        /// <para>This parameter is applicable only to cloud desktop instances. Specifies whether to clear personal user data. If you set this parameter to true, the created image clears the data in all directories under C:\Users except the Administrator and Public directories.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to copy user profile data.</para>
+        /// <para>Specifies whether to copy personal user data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? CopyProfile { get; set; }
 
         /// <summary>
-        /// <para>The image description.</para>
+        /// <para>The description of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my test image v1.0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of disk data included in the image. By default, the image includes both the system cloud disk and data cloud disk of the instance.</para>
+        /// <para>The types of disk data included in the image. By default, the image includes the system cloud disk and data cloud disks of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The image name.</para>
+        /// <para>The name of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type.</para>
+        /// <para>The type of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WuyingServer</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The sub-instance ID. This parameter does not apply to cloud desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</para>
+        /// <para>The sub-instance ID. This parameter is not applicable to cloud desktop scenarios. In workstation scenarios, you must specify the persistent session ID to locate a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0cc7s3n1l*****</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SubInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The tag list.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]

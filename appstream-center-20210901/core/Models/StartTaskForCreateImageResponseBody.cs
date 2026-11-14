@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class StartTaskForCreateImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates that the request is processed successfully. Other values indicate that the request fails.</para>
+        /// <para>The business status code. A value of <c>200</c> indicates that the request is processed. Other values indicate that the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

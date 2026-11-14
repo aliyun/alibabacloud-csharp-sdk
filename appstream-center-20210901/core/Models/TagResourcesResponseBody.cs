@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which can be used to troubleshoot issues.</para>
+        /// <para>The request ID. You can use the request ID to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

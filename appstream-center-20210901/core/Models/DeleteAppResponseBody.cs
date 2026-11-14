@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error or result message. This field describes the cause when a request fails. A successful response may not contain this field.</para>
+        /// <para>The error message or result prompt. This field describes the cause when a request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>

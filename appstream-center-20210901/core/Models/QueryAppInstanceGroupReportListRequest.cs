@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryAppInstanceGroupReportListRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition for the app instance group ID, which matches the exact ID. If this parameter is not specified, the results are not filtered by ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</para>
+        /// <para>The filter condition for the delivery group ID, which matches the exact ID. If this parameter is not specified, the results are not filtered by ID. You can call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for the app instance group name, which supports inclusion matching. If this parameter is not specified, the results are not filtered by name.</para>
+        /// <para>The filter condition for the delivery group name, which supports inclusion matching. If this parameter is not specified, the results are not filtered by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>R&amp;D workstation</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the business region to which the app instance group belongs. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the ID. If this parameter is not specified, the results are not filtered by business region.</para>
+        /// <para>The business region ID of the delivery group. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the ID. If this parameter is not specified, the results are not filtered by business region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The end date of the statistics. Format: <c>yyyyMMdd</c>. This parameter must be specified in pairs with <c>StartDate</c> and cannot be earlier than the start date. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
+        /// <para>The end date of the statistics. Format: <c>yyyyMMdd</c>. This parameter must be specified in pairs with StartDate and cannot be earlier than the start date. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20260930</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user, which is used to filter app instance groups based on the current valid authorization relationship. Before the call, make sure that the user has at least one valid authorization. If no valid authorization exists, the current version does not narrow down the results based on this parameter. If this parameter is not specified, the results are not filtered by user.</para>
+        /// <para>The ID of the end user, which is used to filter delivery groups based on the current valid authorization relationship. Before calling this operation, make sure that the user has at least one valid authorization. If the user does not have a valid authorization, the current version does not narrow down the results based on this parameter. If this parameter is not specified, the results are not filtered by user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user01</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The page number to query. Specify a value starting from <c>1</c>. If this parameter is not specified, the service processes the request as the first page, but the response may return <c>0</c>.</para>
+        /// <para>The page number to query. Specify this parameter starting from <c>1</c>. If this parameter is not specified, the service processes the request as the first page, but the response may return <c>0</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID for OpenAPI access, which is used for request authentication and routing. To filter business data by region, use <c>BizRegionId</c>.</para>
+        /// <para>The region ID for OpenAPI access, which is used for request authentication and routing. To filter business data by region, use BizRegionId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start date of the statistics. Format: <c>yyyyMMdd</c>. This parameter must be specified in pairs with <c>EndDate</c>, and the interval includes the start and end dates. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
+        /// <para>The start date of the statistics. Format: <c>yyyyMMdd</c>. This parameter must be specified in pairs with EndDate, and the interval includes the start and end dates. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20260901</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The statistical date for a single day. Format: <c>yyyyMMdd</c>. If this parameter is specified along with <c>StartDate</c> and <c>EndDate</c>, the results must meet both the single-day and interval conditions. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
+        /// <para>The statistical date for a single day. Format: <c>yyyyMMdd</c>. If this parameter is specified together with StartDate and EndDate, the results must meet both the single-day and interval conditions. The string itself does not carry a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20260901</para>
@@ -110,19 +110,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StatDate { get; set; }
 
         /// <summary>
-        /// <para>The list of app instance group statuses. Multiple values have an OR relationship. Unrecognized values do not participate in filtering. If all values are unrecognized, the results are not filtered by status.</para>
-        /// <para>Valid values:</para>
+        /// <para>The list of delivery group statuses. Multiple values have an OR relationship. Unrecognized values do not participate in filtering. If all values are unrecognized, it is equivalent to not filtering by status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>DEPLOYING</c>: Deploying.</description></item>
-        /// <item><description><c>DEPLOYED</c>: Deployed but not published.</description></item>
-        /// <item><description><c>PUBLISHED</c>: Published and available to provide services based on the current configurations.</description></item>
-        /// <item><description><c>STOPPING</c>: Stopping.</description></item>
-        /// <item><description><c>STOPPED</c>: Stopped.</description></item>
-        /// <item><description><c>MAINTAINING</c>: Maintaining.</description></item>
-        /// <item><description><c>FAILED</c>: Deployment or running failed.</description></item>
-        /// <item><description><c>MAINTAIN_FAILED</c>: Maintenance failed.</description></item>
-        /// <item><description><c>DELETING</c>: Deleting.</description></item>
-        /// <item><description><c>DELETED</c>: Deleted.</description></item>
+        /// <item><description><c>DEPLOYING</c>: deploying</description></item>
+        /// <item><description><c>DEPLOYED</c>: deployed but not published</description></item>
+        /// <item><description><c>PUBLISHED</c>: published and available to provide services based on the current configuration</description></item>
+        /// <item><description><c>STOPPING</c>: stopping</description></item>
+        /// <item><description><c>STOPPED</c>: stopped</description></item>
+        /// <item><description><c>MAINTAINING</c>: maintaining</description></item>
+        /// <item><description><c>FAILED</c>: deployment or execution failed</description></item>
+        /// <item><description><c>MAINTAIN_FAILED</c>: maintenance failed</description></item>
+        /// <item><description><c>DELETING</c>: deleting</description></item>
+        /// <item><description><c>DELETED</c>: deleted</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Status")]

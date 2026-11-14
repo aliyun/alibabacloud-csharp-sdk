@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the statistics. This parameter is required. Format: <c>yyyy-MM-dd HH:mm:ss</c>. The end time cannot be earlier than <c>StartDate</c>. The query span must meet the limit corresponding to <c>StatDateType</c>. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</para>
+        /// <para>The end time of the statistics. <b>Required</b>. Format: <c>yyyy-MM-dd HH:mm:ss</c>. The end time cannot be earlier than <c>StartDate</c>. The query span must meet the limits corresponding to <c>StatDateType</c>. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-09-02 00:00:00</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to query. Specify this parameter starting from <c>1</c>. If you do not specify this parameter, the first page is queried, but the response may return <c>0</c>.</para>
+        /// <para>The page number to query. We recommend that you explicitly specify a value starting from <c>1</c>. If you do not specify this parameter, the service processes the request as the first page, but the response may return <c>0</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 200. If the specified value is greater than 1500, 1500 is used.</para>
+        /// <para>The number of entries per page. Default value: 200. If the value exceeds 1,500, it is processed as 1,500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -60,8 +60,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product type. This parameter is optional. If you do not specify this parameter, data is queried based on the Wuying Cloud App caliber.</para>
-        /// <para>Specify the value in the exact case shown below. Data that does not match the specified value is not returned.</para>
+        /// <para>The product type. Optional. If you do not specify this parameter, data is queried based on the Wuying Cloud App scope.</para>
+        /// <para>Specify the value in the exact case as follows. Data that cannot be matched is not returned.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>CloudApp</c>: Wuying Cloud App.</description></item>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the statistics. This parameter is required. Format: <c>yyyy-MM-dd HH:mm:ss</c>. The <c>1d</c> granularity aggregates data by date, while other granularities aggregate data down to the minute. The query includes both the start and end boundaries. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</para>
+        /// <para>The start time of the statistics. <b>Required</b>. Format: <c>yyyy-MM-dd HH:mm:ss</c>. The <c>1d</c> granularity aggregates data by date, while other granularities are accurate to the minute. The query includes both the start and end boundaries. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-09-01 00:00:00</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The statistical granularity. This parameter is required.</para>
+        /// <para>The statistical granularity. <b>Required</b>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>1m</c>: aggregates data by 1 minute. The maximum query span is 1 day.</description></item>

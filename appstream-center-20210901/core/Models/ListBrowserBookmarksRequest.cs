@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BrowserInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the browser delivery group set. You must specify either this parameter or BrowserInstanceGroupId, but not both.</para>
+        /// <para>The ID of the browser delivery group set. You must specify either BrowserInstanceGroupSetId or BrowserInstanceGroupId, but not both.</para>
         /// 
         /// <b>Example:</b>
         /// <para>set-3jm9d0abc00example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BrowserInstanceGroupSetId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for partial matching of the bookmark name or URL. The matching is case-insensitive for English characters. The keyword can be up to 1,024 characters in length after leading and trailing spaces are removed. If this parameter is not specified or contains only spaces, no filtering is performed. Special characters are matched literally.</para>
+        /// <para>The keyword used for substring matching in the bookmark name or URL. Matching is case-insensitive for English letters. The value can contain up to 1,024 characters after leading and trailing whitespace is trimmed. If this parameter is not specified or contains only whitespace, no filtering is applied. Special characters are matched literally.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Pages start from page 1.</para>
+        /// <para>The number of the page to return. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

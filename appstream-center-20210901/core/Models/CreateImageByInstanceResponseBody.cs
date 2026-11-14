@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageByInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public CreateImageByInstanceResponseBodyData Data { get; set; }
         public class CreateImageByInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The WUYING image ID.</para>
+            /// <para>The ID of the WUYING image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-07hnjj5fp****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NULL</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the request is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

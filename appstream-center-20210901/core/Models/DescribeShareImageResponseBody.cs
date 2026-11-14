@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned object.</para>
+        /// <para>The response object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public DescribeShareImageResponseBodyData Data { get; set; }
         public class DescribeShareImageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of Alibaba Cloud account IDs to which the image is shared.</para>
+            /// <para>The list of Alibaba Cloud account IDs with which the image is shared.</para>
             /// </summary>
             [NameInMap("AliUidList")]
             [Validation(Required=false)]

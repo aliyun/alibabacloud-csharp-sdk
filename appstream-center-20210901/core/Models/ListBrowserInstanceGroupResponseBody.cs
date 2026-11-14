@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string BizRegionId { get; set; }
 
             /// <summary>
-            /// <para>The current configuration of the browser.</para>
+            /// <para>The current configurations of the browser.</para>
             /// </summary>
             [NameInMap("BrowserConfig")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string CookiesSync { get; set; }
 
                 /// <summary>
-                /// <para>The homepage URL that opens when the browser starts.</para>
+                /// <para>The URL of the homepage that opens when the browser starts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 /// <item><description><c>ALLOW_ALL</c>: Allows all domain names.</description></item>
                 /// <item><description><c>ALLOW_LIST</c>: Allows only websites in the whitelist.</description></item>
                 /// </list>
-                /// <para>The returned value reflects the existing configuration of the browser instance group.</para>
+                /// <para>The returned value reflects the existing configurations of the browser instance group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALLOW_ALL</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string OfficeSiteId { get; set; }
 
                 /// <summary>
-                /// <para>The list of vSwitch IDs used by the browser instance group. This parameter is available for scenarios where a custom network is configured.</para>
+                /// <para>The list of vSwitch IDs used by the browser instance group. This parameter is available for scenarios where custom networks are configured.</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The policy configuration returned for the browser instance group. The policy fields are used to view existing settings and do not indicate that all corresponding creation parameters are configurable.</para>
+            /// <para>The policy configurations returned for the browser instance group. The policy fields are used to view existing settings and do not indicate that all corresponding creation parameters are configurable.</para>
             /// </summary>
             [NameInMap("Policy")]
             [Validation(Required=false)]
@@ -440,12 +440,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public ListBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelsPolicyClipboardPolicy ClipboardPolicy { get; set; }
                 public class ListBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelsPolicyClipboardPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The clipboard transfer direction. The value is not case-sensitive. Valid values:</para>
+                    /// <para>The clipboard transfer direction. The value is case-insensitive. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><c>off</c>: Prohibits transfer in both directions.</description></item>
+                    /// <item><description><c>off</c>: Disables transfer in both directions.</description></item>
                     /// <item><description><c>read</c>: Allows copy and paste from the local PC to the cloud browser.</description></item>
                     /// <item><description><c>write</c>: Allows copy and paste from the cloud browser to the local PC.</description></item>
-                    /// <item><description><c>readwrite</c>: Allows transfer in both directions.</description></item>
+                    /// <item><description><c>readwrite</c>: Enables transfer in both directions.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The dual-screen switch for the cloud browser.</para>
+                /// <para>The dual-screen switch for cloud browsers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>off</para>
@@ -494,12 +494,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public ListBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelsPolicyWatermarkPolicy WatermarkPolicy { get; set; }
                 public class ListBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelsPolicyWatermarkPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The watermark switch. The value is case-insensitive. Valid values:</para>
+                    /// <para>Specifies whether to enable the watermark. Values are case-insensitive. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><c>ON</c>: Enables the watermark.</description></item>
                     /// <item><description><c>OFF</c>: Disables the watermark.</description></item>
                     /// </list>
-                    /// <para>If the watermark is disabled, the watermark content type list is not used.</para>
+                    /// <para>When the watermark is disabled, the watermark content type list is not used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ON</para>
@@ -511,9 +511,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     /// <summary>
                     /// <para>The list of watermark content types. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><c>EndUserId</c>: The user identifier.</description></item>
-                    /// <item><description><c>InstanceGroupId</c>: The delivery group identifier.</description></item>
-                    /// <item><description><c>ClientTime</c>: The current time of the client.</description></item>
+                    /// <item><description><c>EndUserId</c>: the user identifier.</description></item>
+                    /// <item><description><c>InstanceGroupId</c>: the delivery group identifier.</description></item>
+                    /// <item><description><c>ClientTime</c>: the current time of the client.</description></item>
                     /// </list>
                     /// <para>Use the watermark types supported by the browser and the client.</para>
                     /// </summary>
@@ -526,7 +526,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The status of the browser group. Valid values:</para>
+            /// <para>The browser group status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>DEPLOYING</c>: Deploying.</description></item>
             /// <item><description><c>PUBLISHED</c>: Published.</description></item>
@@ -547,7 +547,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The sub-billing method. In the MAU scenario, <c>mau</c> is returned, which indicates billing by monthly active users.</para>
+            /// <para>The sub-billing type. In the MAU scenario, <c>mau</c> is returned, which indicates billing by monthly active users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mau</para>
@@ -557,7 +557,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SubPayType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether mixed authorization of users and user groups is supported. A value of <c>true</c> indicates that it is supported, and a value of <c>false</c> indicates that it is not supported. Evaluate this parameter based on the current authorization mode.</para>
+            /// <para>Specifies whether mixed authorization of users and user groups is supported. A value of <c>true</c> indicates that mixed authorization is supported, and a value of <c>false</c> indicates that mixed authorization is not supported. Evaluate this parameter based on the current authorization mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -611,7 +611,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Tier { get; set; }
 
             /// <summary>
-            /// <para>The session timer configuration returned. This is used to view the effective settings and does not indicate that the create operation supports configuring this parameter.</para>
+            /// <para>The session timer configuration returned. This parameter is used to view the effective settings and does not indicate that the create operation supports configuring this parameter.</para>
             /// </summary>
             [NameInMap("Timers")]
             [Validation(Required=false)]
@@ -642,9 +642,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The current authorization mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Mixed</c>: Mixed authorization of users and user groups.</description></item>
-            /// <item><description><c>User</c>: User authorization.</description></item>
-            /// <item><description><c>UserGroup</c>: User group authorization.</description></item>
+            /// <item><description><c>Mixed</c>: mixed authorization of users and user groups.</description></item>
+            /// <item><description><c>User</c>: user authorization.</description></item>
+            /// <item><description><c>UserGroup</c>: user group authorization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -662,7 +662,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public ListBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelsUserLimit UserLimit { get; set; }
             public class ListBrowserInstanceGroupResponseBodyBrowserInstanceGroupModelsUserLimit : TeaModel {
                 /// <summary>
-                /// <para>The number of user quotas.</para>
+                /// <para>The user quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -696,7 +696,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01A0C2ED-95F2-1A37-9FC6-4A395179****</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of app instance group report data.</para>
+        /// <para>The list of delivery group report data.</para>
         /// </summary>
         [NameInMap("IndexData")]
         [Validation(Required=false)]
         public List<QueryAppInstanceGroupReportListResponseBodyIndexData> IndexData { get; set; }
         public class QueryAppInstanceGroupReportListResponseBodyIndexData : TeaModel {
             /// <summary>
-            /// <para>The ID of the app instance group.</para>
+            /// <para>The delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the app instance group.</para>
+            /// <para>The delivery group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>R&amp;D workstation group</para>
@@ -47,19 +47,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The current status of the app instance group.</para>
-            /// <para>Valid values:</para>
+            /// <para>The current status of the delivery group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>DEPLOYING</c>: Deploying.</description></item>
-            /// <item><description><c>DEPLOYED</c>: Deployed but not published.</description></item>
-            /// <item><description><c>PUBLISHED</c>: Published and available to provide services based on the current configurations.</description></item>
-            /// <item><description><c>STOPPING</c>: Stopping.</description></item>
-            /// <item><description><c>STOPPED</c>: Stopped.</description></item>
-            /// <item><description><c>MAINTAINING</c>: Maintaining.</description></item>
-            /// <item><description><c>FAILED</c>: Deployment or running failed.</description></item>
-            /// <item><description><c>MAINTAIN_FAILED</c>: Maintenance failed.</description></item>
-            /// <item><description><c>DELETING</c>: Deleting.</description></item>
-            /// <item><description><c>DELETED</c>: Deleted.</description></item>
+            /// <item><description><c>DEPLOYING</c>: deploying</description></item>
+            /// <item><description><c>DEPLOYED</c>: deployed but not published</description></item>
+            /// <item><description><c>PUBLISHED</c>: published and available to provide services based on the current configuration</description></item>
+            /// <item><description><c>STOPPING</c>: stopping</description></item>
+            /// <item><description><c>STOPPED</c>: stopped</description></item>
+            /// <item><description><c>MAINTAINING</c>: maintaining</description></item>
+            /// <item><description><c>FAILED</c>: deployment or execution failed</description></item>
+            /// <item><description><c>MAINTAIN_FAILED</c>: maintenance failed</description></item>
+            /// <item><description><c>DELETING</c>: deleting</description></item>
+            /// <item><description><c>DELETED</c>: deleted</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

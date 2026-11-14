@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UntagCloudResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</para>
+        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported. This parameter is not required when the resource type is tenant ID.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. System tags and custom tags are supported. You can specify up to 10 tags.</para>
-        /// <para>Enumerated values for system tags:</para>
+        /// <para>The list of tag keys. Both system tags and custom tags are supported. A maximum of 10 tag keys can be passed.</para>
+        /// <para>Valid values for system tags:</para>
         /// <list type="bullet">
-        /// <item><description><c>System/Scheduler/GRAYSCALE</c>: canary release tag.</description></item>
-        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents newly bound users in a delivery group from establishing connections.</description></item>
+        /// <item><description><c>System/Scheduler/GRAYSCALE</c>: Canary release tag.</description></item>
+        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: Tag that prevents new users bound to the delivery group from establishing connections.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>

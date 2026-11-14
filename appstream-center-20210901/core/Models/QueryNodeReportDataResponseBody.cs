@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryNodeReportDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</para>
+        /// <para>The business status code. A value of <c>200</c> indicates that the request is successful. Other values indicate that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The description of the request processing result. If the request is successful, success is usually returned.</para>
+        /// <para>The description of the request processing result. If the request is successful, <c>success</c> is usually returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number corresponding to the current response.</para>
+        /// <para>The page number of the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page used in the current response.</para>
+        /// <para>The number of entries per page in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? NodeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of pay-as-you-go nodes in the record.</para>
+            /// <para>The number of pay-as-you-go nodes for the record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? PostpaidNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of subscription nodes in the record.</para>
+            /// <para>The number of subscription nodes for the record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? PrepaidNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The statistical time. The 1d granularity returns the time in the yyyy-MM-dd format. The 1m, 30m, and 6h granularities return the time in the yyyy-MM-dd HH:mm format. The string itself does not carry a time zone and is interpreted in the Asia/Shanghai (UTC+8) time zone.</para>
+            /// <para>The statistical time. The <c>1d</c> granularity returns <c>yyyy-MM-dd</c>. The <c>1m</c>, <c>30m</c>, and <c>6h</c> granularities return <c>yyyy-MM-dd HH:mm</c>. The string itself does not carry a time zone and is interpreted as Asia/Shanghai (UTC+8).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01</para>

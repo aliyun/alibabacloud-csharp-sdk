@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListModelProviderTemplatesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The agent platform.</para>
+        /// <para>The Agent platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The name of the agent provider.</para>
+        /// <para>The name of the Agent provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
-        /// <para>The business type. Not all business types are supported. Only business types within the supported range are valid. Refer to the listed enumeration values.</para>
+        /// <para>The business type. Not all business types are supported. Only specific BizType values are supported. Refer to the valid values for the supported scope.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The model group ID to filter by.</para>
+        /// <para>The model group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mt-xxxx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Values 0 and 1 return the same result.</para>
+        /// <para>The page number. The value starts from 1. Entering 0 or 1 returns the same result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The model provider name to filter by.</para>
+        /// <para>The model provider name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bailian</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProviderName { get; set; }
 
         /// <summary>
-        /// <para>The model provider template IDs to filter by.</para>
+        /// <para>The model provider template IDs.</para>
         /// </summary>
         [NameInMap("ProviderTemplateIds")]
         [Validation(Required=false)]

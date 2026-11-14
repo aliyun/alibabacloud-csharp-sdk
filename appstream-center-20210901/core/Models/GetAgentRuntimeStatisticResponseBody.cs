@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<GetAgentRuntimeStatisticResponseBodyData> Data { get; set; }
         public class GetAgentRuntimeStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The agent display name, which is determined by both the agent platform and the agent provider. For example, OpenClaw under the ENTERPRISE platform is displayed as OpenClaw, and OpenClaw under the JVS platform is displayed as JVS Claw.</para>
+            /// <para>The display name of the agent, which is determined by both the agent platform and the agent provider. For example, OpenClaw under the ENTERPRISE platform is displayed as OpenClaw, and OpenClaw under the JVS platform is displayed as JVS Claw.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Agentic Computer</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AgentProvider { get; set; }
 
             /// <summary>
-            /// <para>The number of expired runtime resources in the group. A runtime is counted as expired if its resource status is Expired or Ceased, case-insensitive.</para>
+            /// <para>The number of expired runtime resources in this group. A runtime is counted as expired if its resource status is Expired or Ceased, case-insensitive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? ExpiredCount { get; set; }
 
             /// <summary>
-            /// <para>The number of runtime resources without channel configurations in the group, which is the total number of runtime resources minus the number of runtime resources with channel configurations.</para>
+            /// <para>The number of runtime resources without a configured channel in this group, which is the total number of runtime resources minus the number of runtime resources with a configured channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NoChannelConfiguredRuntimeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of runtime resources without model configurations in the group. A runtime is considered to have a model configured if a model is configured for the runtime itself or its associated resource group.</para>
+            /// <para>The number of runtime resources without a configured model in this group. A runtime is considered to have a configured model if either the runtime itself or its associated resource group has a model configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NoModelConfiguredRuntimeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of risky runtime resources in the group, deduplicated by runtime ID. A runtime is counted as risky if it has any of the following risks: model configuration modified, third-party channel configuration modified, or agent being uninstalled.</para>
+            /// <para>The number of risky runtime resources in this group, deduplicated by runtime ID. A runtime is counted as risky if it has any of the following risks: the model configuration is modified, the third-party channel configuration is modified, or the agent is being uninstalled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? RiskyRuntimeCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of runtime resources in the group, deduplicated by runtime ID.</para>
+            /// <para>The total number of runtime resources in this group, deduplicated by runtime ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID, which is used to uniquely identify the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

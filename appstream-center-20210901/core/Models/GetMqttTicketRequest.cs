@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetMqttTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The client operating system.</para>
+        /// <para>The operating system of the client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,16 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ClientOS { get; set; }
 
         /// <summary>
-        /// <para>The client type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: hardware terminal</description></item>
-        /// <item><description>1: Windows software terminal</description></item>
-        /// <item><description>2: macOS software terminal</description></item>
-        /// <item><description>3: iOS client</description></item>
-        /// <item><description>4: Android client</description></item>
-        /// <item><description>5: web client</description></item>
-        /// <item><description>6: tenant console</description></item>
-        /// </list>
+        /// <para>The client type. Valid values: 0: hardware terminal; 1: Windows software terminal; 2: macOS software terminal; 3: iOS client; 4: Android client; 5: web client; 6: tenant console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? ClientType { get; set; }
 
         /// <summary>
-        /// <para>The client version.</para>
+        /// <para>The version number of the client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

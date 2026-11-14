@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Data { get; set; }
 
         /// <summary>
-        /// <para>The error or result message. This parameter describes the cause when a request fails. A successful response may not contain this field.</para>
+        /// <para>The error or result message. This parameter is used to describe the cause when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can provide this value for troubleshooting.</para>
+        /// <para>The unique identifier of the request. You can provide this value when you troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01A1A962-5503-107B-AC8F-EBA85DF905AC</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, you must query the task status separately.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To determine whether an asynchronous task is completed, you must query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

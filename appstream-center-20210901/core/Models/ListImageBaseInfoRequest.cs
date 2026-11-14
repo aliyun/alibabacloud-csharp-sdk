@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The image query keyword. Fuzzy matching is performed on both the image name and the image ID.</para>
+        /// <para>The keyword for querying images. Fuzzy matching is performed on both the image name and the image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The image package type. Valid values: Ecs (ECS image), Vhd (VHD image), Container (container image), Ecs_Container (ECS and container composite image), and K8s_Node (Kubernetes node image).</para>
+        /// <para>The image package type. Valid values: Ecs (ECS image), Vhd (VHD image), Container (container image), Ecs_Container (ECS and container combined image), and K8s_Node (Kubernetes node image).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ecs</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. If you do not specify this parameter or specify a value less than 1, the first page is returned.</para>
+        /// <para>The page number of the page to return. Pages start from page 1. If you do not specify this parameter or specify a value less than 1, the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100. If the value is less than 1, 10 entries are returned. If the value is greater than 100, 100 entries are returned.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100. If the value is less than 1, 10 is used. If the value is greater than 100, 100 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The product type, which is used to filter the products to which the images belong. Examples: CloudDesktop (WUYING Workspace), CloudApp (WUYING Cloud App), and WuyingServer (WUYING Workstation).</para>
+        /// <para>The product type, used to filter the products to which the images belong. Examples: CloudDesktop (WUYING Workspace), CloudApp (WUYING Cloud App), and WuyingServer (WUYING Workstation).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudDesktop</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The image protocol type. Valid values: ASP (Alibaba Cloud self-developed ASP protocol) and HDX (HDX protocol).</para>
+        /// <para>The image protocol type. Valid values: ASP (Alibaba Cloud proprietary ASP protocol) and HDX (HDX protocol).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASP</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The image status. Valid values: INIT (initialization), CREATING (creating), AVAILABLE (available), and CREATE_FAILED (creation failed). If you do not specify this parameter, all non-deleted images are queried. Deleted images are not returned.</para>
+        /// <para>The image status. Valid values: INIT (initializing), CREATING (creating), AVAILABLE (available), and CREATE_FAILED (creation failed). If you do not specify this parameter, all non-deleted images are queried. Deleted images are not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>

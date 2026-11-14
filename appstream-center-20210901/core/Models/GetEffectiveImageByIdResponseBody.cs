@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetEffectiveImageByIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned by the API. A value of 200 indicates success. If the call fails, the corresponding error code is returned.</para>
+        /// <para>The status code returned by the API. A value of 200 indicates success. If the call fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,14 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The business line to which the image belongs. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>1: Basic business.</description></item>
-            /// <item><description>2: Personal Edition.</description></item>
-            /// <item><description>3: Cloud Office.</description></item>
-            /// <item><description>4: Cloud Streaming.</description></item>
-            /// <item><description>10: Standard Edition.</description></item>
-            /// </list>
+            /// <para>The business line to which the image belongs. 1: basic business. 2: Personal Edition. 3: Cloud Office. 4: Cloud Streaming. 10: Standard Edition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +90,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last update time. The time follows the RFC 3339 format. The Z in the example indicates the UTC time zone.</para>
+            /// <para>The last update time. The time is in RFC 3339 format. The Z in the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11T02:19:27Z</para>
@@ -127,7 +120,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The details of the image version that actually takes effect in each region. For the same region, the configured newer version takes precedence.</para>
+            /// <para>The details of the image versions that actually take effect in each region. For the same region, the configured newer version takes precedence.</para>
             /// </summary>
             [NameInMap("ImageInfoRegionModelList")]
             [Validation(Required=false)]
@@ -151,7 +144,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string AdaptorId { get; set; }
 
                     /// <summary>
-                    /// <para>The adapter message.</para>
+                    /// <para>The adaptor message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>success</para>
@@ -271,7 +264,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public int? BizType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the OSS bucket where the application files are stored.</para>
+                    /// <para>The name of the OSS bucket where the application files are located.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xiaowutest-j</para>
@@ -281,7 +274,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string BucketName { get; set; }
 
                     /// <summary>
-                    /// <para>The level-2 application category, such as design software, office, or browser. This parameter is not available to the public.</para>
+                    /// <para>The level-2 application category, such as design software, office, and browsers. This parameter is not available to the public.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -291,7 +284,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public int? CategoryId { get; set; }
 
                     /// <summary>
-                    /// <para>The level-1 application category, such as cloud application or cloud game. This parameter is not available to the public.</para>
+                    /// <para>The level-1 application category, such as cloud applications and cloud games. This parameter is not available to the public.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -301,7 +294,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public int? CategoryType { get; set; }
 
                     /// <summary>
-                    /// <para>The control parameter. This parameter can be configured by tenants and internal administrators and is not available to the public.</para>
+                    /// <para>The control parameters that can be configured by tenants and administrators. This parameter is not available to the public.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{}</para>
@@ -351,7 +344,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public long? FileSize { get; set; }
 
                     /// <summary>
-                    /// <para>The optimization parameter configured in the backend by internal administrators.</para>
+                    /// <para>The optimization parameters configured in the backend by administrators.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{}</para>
@@ -411,7 +404,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string RuntimeEnv { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether silent installation is enabled. This parameter can be configured by tenants and internal administrators and is not available to the public.</para>
+                    /// <para>Specifies whether silent installation is enabled. This parameter can be configured by tenants and administrators, but is not available to the public.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{}</para>
@@ -421,7 +414,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string SilenceFlag { get; set; }
 
                     /// <summary>
-                    /// <para>The silent installation parameter. This parameter is not available to the public.</para>
+                    /// <para>The silent installation parameters. This parameter is not available to the public.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{}</para>
@@ -431,7 +424,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string SilenceParam { get; set; }
 
                     /// <summary>
-                    /// <para>The application adaptation status. For example, ADAPT_DONE indicates that the adaptation is complete.</para>
+                    /// <para>The application adaptation status. For example, ADAPT_DONE indicates that the adaptation is completed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ADAPT_DONE</para>
@@ -525,14 +518,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string BaseImageVersion { get; set; }
 
                 /// <summary>
-                /// <para>The business line to which the image belongs. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>1: Basic business.</description></item>
-                /// <item><description>2: Personal Edition.</description></item>
-                /// <item><description>3: Cloud Office.</description></item>
-                /// <item><description>4: Cloud Streaming.</description></item>
-                /// <item><description>10: Standard Edition.</description></item>
-                /// </list>
+                /// <para>The business line to which the image belongs. 1: basic business. 2: Personal Edition. 3: Cloud Office. 4: Cloud Streaming. 10: Standard Edition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -589,7 +575,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The last update time. The time follows the RFC 3339 format. The Z in the example indicates the UTC time zone.</para>
+                /// <para>The last update time. The time is in RFC 3339 format. The Z in the example indicates the UTC time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-16T07:39:43Z</para>
@@ -609,7 +595,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ImageCreateMode { get; set; }
 
                 /// <summary>
-                /// <para>The image extension information, including disk specifications and GPU driver information. VHD or Container images use the extension information of their base image and base version.</para>
+                /// <para>The image extended information, including disk specifications and GPU driver information. VHD or Container images use the extended information of their base image and base version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -752,10 +738,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 /// <summary>
                 /// <para>The image type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>System: System image.</description></item>
-                /// <item><description>User: Custom image.</description></item>
-                /// <item><description>Shared: Shared image.</description></item>
-                /// <item><description>Community: Community image.</description></item>
+                /// <item><description>System: system images.</description></item>
+                /// <item><description>User: custom images.</description></item>
+                /// <item><description>Shared: shared images.</description></item>
+                /// <item><description>Community: community images.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -786,7 +772,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string LatestVersionId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the returned version is the active version. Valid values: true: Yes. false: No.</para>
+                /// <para>Indicates whether the returned version is the online version. Valid values: true: Yes. false: No.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -806,13 +792,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string OnlineVersionId { get; set; }
 
                 /// <summary>
-                /// <para>The operating system type of the image. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Windows: Windows operating system.</description></item>
-                /// <item><description>Linux: Linux operating system.</description></item>
-                /// <item><description>Android: Android operating system.</description></item>
-                /// <item><description>Unknown: Unknown operating system.</description></item>
-                /// </list>
+                /// <para>The operating system type of the image. Windows: Windows system. Linux: Linux system. Android: Android system. Unknown: unknown system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Windows</para>
@@ -822,14 +802,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string OsType { get; set; }
 
                 /// <summary>
-                /// <para>The image packaging type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Ecs: ECS image.</description></item>
-                /// <item><description>Vhd: Virtual disk image.</description></item>
-                /// <item><description>Container: Container image.</description></item>
-                /// <item><description>Ecs_Container: Combined ECS and container image.</description></item>
-                /// <item><description>K8s_Node: Kubernetes node image.</description></item>
-                /// </list>
+                /// <para>The image packaging type. Ecs: ECS image. Vhd: virtual disk image. Container: container image. Ecs_Container: combined ECS and container image. K8s_Node: Kubernetes node image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ECS</para>
@@ -869,7 +842,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? Platform { get; set; }
 
                 /// <summary>
-                /// <para>The name of the operating system platform, which corresponds to Platform.</para>
+                /// <para>The operating system platform name, which corresponds to Platform.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Windows Server 2022</para>
@@ -879,7 +852,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string PlatformName { get; set; }
 
                 /// <summary>
-                /// <para>The product type to which the image belongs, such as CloudDesktop (Cloud Desktop), CloudApp (Cloud App), or WuyingServer (WUYING Workspace Enterprise Edition workstation).</para>
+                /// <para>The product type to which the image belongs, such as CloudDesktop (Cloud Desktop), CloudApp (Cloud App), and WuyingServer (WUYING Workspace Enterprise Edition workstation).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CloudApp</para>
@@ -899,11 +872,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public Dictionary<string, string> PropertyMap { get; set; }
 
                 /// <summary>
-                /// <para>The connection protocol used by the image. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ASP: Alibaba Cloud Streaming Protocol.</description></item>
-                /// <item><description>HDX: HDX protocol.</description></item>
-                /// </list>
+                /// <para>The connection protocol used by the image. ASP: Alibaba Cloud Streaming Protocol. HDX: HDX protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ASP</para>
@@ -923,14 +892,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The image status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>INIT: Initializing.</description></item>
-                /// <item><description>CREATING: Creating.</description></item>
-                /// <item><description>AVAILABLE: Available.</description></item>
-                /// <item><description>CREATE_FAILED: Creation failed.</description></item>
-                /// <item><description>DELETE: Deleted.</description></item>
-                /// </list>
+                /// <para>The image status. INIT: initializing. CREATING: creating. AVAILABLE: available. CREATE_FAILED: creation failed. DELETE: deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INIT</para>
@@ -971,10 +933,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The image type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>System: System image.</description></item>
-            /// <item><description>User: Custom image.</description></item>
-            /// <item><description>Shared: Shared image.</description></item>
-            /// <item><description>Community: Community image.</description></item>
+            /// <item><description>System: system images.</description></item>
+            /// <item><description>User: custom images.</description></item>
+            /// <item><description>Shared: shared images.</description></item>
+            /// <item><description>Community: community images.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1042,13 +1004,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OnlineVersionVolumeEncryptionKey { get; set; }
 
             /// <summary>
-            /// <para>The operating system type of the image. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Windows: Windows operating system.</description></item>
-            /// <item><description>Linux: Linux operating system.</description></item>
-            /// <item><description>Android: Android operating system.</description></item>
-            /// <item><description>Unknown: Unknown operating system.</description></item>
-            /// </list>
+            /// <para>The operating system type of the image. Windows: Windows system. Linux: Linux system. Android: Android system. Unknown: unknown system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
@@ -1058,14 +1014,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The image packaging type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Ecs: ECS image.</description></item>
-            /// <item><description>Vhd: Virtual disk image.</description></item>
-            /// <item><description>Container: Container image.</description></item>
-            /// <item><description>Ecs_Container: Combined ECS and container image.</description></item>
-            /// <item><description>K8s_Node: Kubernetes node image.</description></item>
-            /// </list>
+            /// <para>The image packaging type. Ecs: ECS image. Vhd: virtual disk image. Container: container image. Ecs_Container: combined ECS and container image. K8s_Node: Kubernetes node image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS</para>
@@ -1085,7 +1034,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ParentImageId { get; set; }
 
             /// <summary>
-            /// <para>The product type to which the image belongs, such as CloudDesktop (Cloud Desktop), CloudApp (Cloud App), or WuyingServer (WUYING Workspace Enterprise Edition workstation).</para>
+            /// <para>The product type to which the image belongs, such as CloudDesktop (Cloud Desktop), CloudApp (Cloud App), and WuyingServer (WUYING Workspace Enterprise Edition workstation).</para>
             /// 
             /// <b>Example:</b>
             /// <para>WuyingServer</para>
@@ -1095,11 +1044,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The connection protocol used by the image. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ASP: Alibaba Cloud Streaming Protocol.</description></item>
-            /// <item><description>HDX: HDX protocol.</description></item>
-            /// </list>
+            /// <para>The connection protocol used by the image. ASP: Alibaba Cloud Streaming Protocol. HDX: HDX protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ASP</para>
@@ -1109,7 +1054,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The rating score of the image, out of 100.</para>
+            /// <para>The rating score of the image, with a maximum score of 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>95</para>
@@ -1119,14 +1064,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? Rating { get; set; }
 
             /// <summary>
-            /// <para>The image status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>INIT: Initializing.</description></item>
-            /// <item><description>CREATING: Creating.</description></item>
-            /// <item><description>AVAILABLE: Available.</description></item>
-            /// <item><description>CREATE_FAILED: Creation failed.</description></item>
-            /// <item><description>DELETE: Deleted.</description></item>
-            /// </list>
+            /// <para>The image status. INIT: initializing. CREATING: creating. AVAILABLE: available. CREATE_FAILED: creation failed. DELETE: deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INIT</para>
@@ -1187,7 +1125,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID used to locate and troubleshoot the request.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50158E8B-992E-1286-B174-**********</para>

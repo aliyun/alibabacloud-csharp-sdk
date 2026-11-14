@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryDauReportDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates that the request is processed successfully. Other values indicate that the processing failed.</para>
+        /// <para>The business status code. A value of <c>200</c> indicates that the request is successful. Other values indicate that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? Dau { get; set; }
 
             /// <summary>
-            /// <para>The statistics date. Format: yyyy-MM-dd. The string does not contain a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
+            /// <para>The statistics date. Format: <c>yyyy-MM-dd</c>. The string does not contain a time zone and is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The description of the request processing result. Typically, success is returned if the request is successful.</para>
+        /// <para>The description of the request processing result. Typically, <c>success</c> is returned when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

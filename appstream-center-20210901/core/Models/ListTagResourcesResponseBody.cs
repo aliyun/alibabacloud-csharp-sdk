@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next query. An empty value indicates that no more data is available. This operation returns all matching results at a time, so this field is typically empty.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more data is available. This operation returns all matched results at once, so this field is usually empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource-tag binding records. Each record corresponds to a tag key-value pair on a resource.</para>
+        /// <para>The list of binding records between resources and tags. Each record corresponds to a tag key-value pair on a resource.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The resource ID. If the resource type is delivery group, this is the delivery group ID.</para>
+            /// <para>The resource ID. If the resource type is delivery group, this parameter specifies the delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The number of tag records returned. If a resource has multiple tags bound, each tag key-value pair counts as one record.</para>
+        /// <para>The number of tag records returned in the current request. If a resource is bound to multiple tags, each tag key-value pair is counted as one record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

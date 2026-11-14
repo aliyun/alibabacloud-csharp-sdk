@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UnassignWuyingServerPrivateAddressesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of secondary private IP addresses to unbind.</para>
+        /// <para>The list of secondary private IP addresses to disassociate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

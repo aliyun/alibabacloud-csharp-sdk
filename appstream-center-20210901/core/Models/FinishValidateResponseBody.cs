@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error or result message. This field describes the cause of a failed request and may not be included in a successful response.</para>
+        /// <para>The error or result message. It describes the cause of a failed request. This field may not be included in a successful response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

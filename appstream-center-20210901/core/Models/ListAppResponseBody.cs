@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppIconUrl { get; set; }
 
             /// <summary>
-            /// <para>The application ID, which is used to query the application or unbind an image later.</para>
+            /// <para>The application ID, which is used for subsequent application queries or unbinding images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-bp1example****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The theme color saved for the application. If no theme color is specified when the application is created, #FFFFFF (white) is saved by default. The saved value is returned during a query. This field may not be configured for legacy applications.</para>
+            /// <para>The theme color saved for the application. If no theme color is specified when the application is created, #FFFFFF (white) is saved by default. The saved value is returned during queries. This field may not be configured for legacy applications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>#FFFFFF</para>
@@ -89,9 +89,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The source type of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>USER_APP</b>: User-created applications.</description></item>
-            /// <item><description><b>SYS_APP</b>: System-provided applications.</description></item>
-            /// <item><description><b>VIRTUAL_APP</b>: Virtual applications.</description></item>
+            /// <item><description><b>USER_APP</b>: user-created applications</description></item>
+            /// <item><description><b>SYS_APP</b>: system-provided applications</description></item>
+            /// <item><description><b>VIRTUAL_APP</b>: virtual applications</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,13 +104,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The business type to which the application belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Basic products.</description></item>
-            /// <item><description><b>2</b>: Personal cloud.</description></item>
-            /// <item><description><b>3</b>: Cloud office.</description></item>
-            /// <item><description><b>4</b>: Cloud Flow.</description></item>
-            /// <item><description><b>10</b>: Personal Edition.</description></item>
-            /// <item><description><b>20</b>: Business Edition.</description></item>
-            /// <item><description><b>60</b>: Linggou Team Edition.</description></item>
+            /// <item><description><b>1</b>: basic products</description></item>
+            /// <item><description><b>2</b>: personal cloud</description></item>
+            /// <item><description><b>3</b>: cloud office</description></item>
+            /// <item><description><b>4</b>: Cloud Flow</description></item>
+            /// <item><description><b>10</b>: Personal Edition</description></item>
+            /// <item><description><b>20</b>: Business Edition</description></item>
+            /// <item><description><b>60</b>: Linggou Team Edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? BizType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current application is not referenced by any image. A value of true indicates that no image references the application. A value of false indicates that the application is still referenced by an image. You must remove the reference before deleting the application.</para>
+            /// <para>Indicates whether the current application is not referenced by any image. A value of true indicates that no image references the application. A value of false indicates that the application is still referenced by an image, and you must remove the reference before deleting the application.</para>
             /// </summary>
             [NameInMap("Deletable")]
             [Validation(Required=false)]
@@ -160,11 +160,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The form of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CLIENT_BASE</b>: Client applications.</description></item>
-            /// <item><description><b>WEB_BASE</b>: Browser applications.</description></item>
-            /// <item><description><b>CLOUD_NATIVE_BASE</b>: Cloud-native applications.</description></item>
-            /// <item><description><b>PORT_SERVICE_BASE</b>: Port service applications.</description></item>
-            /// <item><description><b>AGENT_SERVICE_BASE</b>: Agent applications.</description></item>
+            /// <item><description><b>CLIENT_BASE</b>: client applications</description></item>
+            /// <item><description><b>WEB_BASE</b>: browser applications</description></item>
+            /// <item><description><b>CLOUD_NATIVE_BASE</b>: cloud-native applications</description></item>
+            /// <item><description><b>PORT_SERVICE_BASE</b>: port service applications</description></item>
+            /// <item><description><b>AGENT_SERVICE_BASE</b>: agent applications</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,10 +177,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The type of operating system used by the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Unknown</b>: The operating system is unknown.</description></item>
-            /// <item><description><b>Windows</b>: Windows operating system.</description></item>
-            /// <item><description><b>Linux</b>: Linux operating system.</description></item>
-            /// <item><description><b>Android</b>: Android operating system.</description></item>
+            /// <item><description><b>Unknown</b>: unknown operating system</description></item>
+            /// <item><description><b>Windows</b>: Windows operating system</description></item>
+            /// <item><description><b>Linux</b>: Linux operating system</description></item>
+            /// <item><description><b>Android</b>: Android operating system</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,23 +193,23 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The product to which the resource belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CloudGame</b>: Cloud game.</description></item>
-            /// <item><description><b>CloudApp</b>: Wuying cloud application.</description></item>
-            /// <item><description><b>CloudBrowser</b>: Secure browser.</description></item>
-            /// <item><description><b>CloudDesktop</b>: Wuying cloud desktop.</description></item>
-            /// <item><description><b>ImageBuilder</b>: Image builder resources.</description></item>
-            /// <item><description><b>ImageValidate</b>: Image validation resources.</description></item>
-            /// <item><description><b>AndroidCloud</b>: Android cloud.</description></item>
-            /// <item><description><b>GpuRender</b>: GPU rendering.</description></item>
-            /// <item><description><b>AndroidGpuRender</b>: Android cloud GPU rendering.</description></item>
-            /// <item><description><b>WuyingServer</b>: Enterprise Edition workstation.</description></item>
-            /// <item><description><b>GpuProxy</b>: GPU remote rendering proxy.</description></item>
-            /// <item><description><b>GpuCache</b>: GPU remote rendering cache.</description></item>
-            /// <item><description><b>AIAgent</b>: AI Agent service.</description></item>
-            /// <item><description><b>HostedDesktop</b>: Hosted desktop.</description></item>
-            /// <item><description><b>WuyingWorkstation</b>: Personal Edition container workstation.</description></item>
-            /// <item><description><b>WuyingWorkstationBusiness</b>: Business Edition container workstation.</description></item>
-            /// <item><description><b>WuyingWorkstationTeam</b>: Linggou Team Edition container workstation.</description></item>
+            /// <item><description><b>CloudGame</b>: cloud gaming</description></item>
+            /// <item><description><b>CloudApp</b>: Wuying Cloud Application</description></item>
+            /// <item><description><b>CloudBrowser</b>: secure browser</description></item>
+            /// <item><description><b>CloudDesktop</b>: Wuying Cloud Computer</description></item>
+            /// <item><description><b>ImageBuilder</b>: image builder resources</description></item>
+            /// <item><description><b>ImageValidate</b>: image validation resources</description></item>
+            /// <item><description><b>AndroidCloud</b>: Android cloud</description></item>
+            /// <item><description><b>GpuRender</b>: GPU rendering</description></item>
+            /// <item><description><b>AndroidGpuRender</b>: Android cloud GPU rendering</description></item>
+            /// <item><description><b>WuyingServer</b>: Enterprise Edition workstation</description></item>
+            /// <item><description><b>GpuProxy</b>: GPU remote rendering proxy</description></item>
+            /// <item><description><b>GpuCache</b>: GPU remote rendering cache</description></item>
+            /// <item><description><b>AIAgent</b>: AI agent service</description></item>
+            /// <item><description><b>HostedDesktop</b>: hosted computer</description></item>
+            /// <item><description><b>WuyingWorkstation</b>: Personal Edition container workstation</description></item>
+            /// <item><description><b>WuyingWorkstationBusiness</b>: Business Edition container workstation</description></item>
+            /// <item><description><b>WuyingWorkstationTeam</b>: Linggou Team Edition container workstation</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The command-line parameters used when the application is started.</para>
+            /// <para>The command-line arguments used when the application starts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--lang=zh-CN</para>
@@ -242,10 +242,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The subtype of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PWA</b>: Progressive web applications.</description></item>
-            /// <item><description><b>SAAS</b>: Software as a Service (SaaS) applications.</description></item>
-            /// <item><description><b>SANDBOX</b>: Sandbox applications.</description></item>
-            /// <item><description><b>CONTAINER</b>: Container applications.</description></item>
+            /// <item><description><b>PWA</b>: progressive web applications</description></item>
+            /// <item><description><b>SAAS</b>: SaaS applications</description></item>
+            /// <item><description><b>SANDBOX</b>: sandbox applications</description></item>
+            /// <item><description><b>CONTAINER</b>: container applications</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The error or result message. This field describes the cause when a request fails. A successful response may not contain this field.</para>
+        /// <para>The error or result message. This field describes the cause when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of this query. The name of this response field is PageNmuber.</para>
+        /// <para>The page number of the current query. Note that the name of this response field is PageNmuber.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNmuber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page in this paged query.</para>
+        /// <para>The number of entries returned per page in the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, query the task status separately.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the current request was processed successfully. To check whether an asynchronous task is completed, you must query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

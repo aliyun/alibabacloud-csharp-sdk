@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ImportImageRequest : TeaModel {
         /// <summary>
-        /// <para>The business region ID. Example: cn-hangzhou.</para>
+        /// <para>The business region ID, such as cn-hangzhou.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The boot mode of the image. Valid values:</para>
+        /// <para>The image boot mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BIOS: legacy BIOS boot.</description></item>
+        /// <item><description>BIOS: Legacy BIOS boot.</description></item>
         /// <item><description>UEFI: UEFI boot.</description></item>
         /// </list>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The description of the image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom cloud desktop image</para>
+        /// <para>Custom Cloud Desktop image</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>Specifies whether to enable the image security check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the security check.</description></item>
-        /// <item><description>false: disables the security check.</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("EnableSecurityCheck")]
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>Specifies whether the image is a GPU image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: yes.</description></item>
-        /// <item><description>false: no.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("GpuCategory")]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <list type="bullet">
         /// <item><description>gpu_grid9: GRID 9 driver.</description></item>
         /// <item><description>gpu_grid12: GRID 12 driver.</description></item>
-        /// <item><description>gpu_custom: custom driver.</description></item>
+        /// <item><description>gpu_custom: Custom driver.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,9 +103,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The operating system license type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Auto: automatically selected.</description></item>
-        /// <item><description>Aliyun: provided by Alibaba Cloud.</description></item>
-        /// <item><description>BYOL: Bring Your Own License.
+        /// <item><description>Auto: Automatically selected.</description></item>
+        /// <item><description>Aliyun: Provided by Alibaba Cloud.</description></item>
+        /// <item><description>BYOL: Bring your own license.
         /// Default value: Auto.</description></item>
         /// </list>
         /// 
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OssObjectPath { get; set; }
 
         /// <summary>
-        /// <para>The product type. Currently, only CloudDesktop (cloud desktop) is supported.</para>
+        /// <para>The product type. Currently, only CloudDesktop (Cloud Desktop) is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudDesktop</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The connection protocol of the image. Valid values: ASP and HDX. Default value: ASP.</para>
+        /// <para>The image connection protocol. Valid values: ASP and HDX. Default value: ASP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASP</para>

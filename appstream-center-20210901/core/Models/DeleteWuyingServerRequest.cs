@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteWuyingServerRequest : TeaModel {
         /// <summary>
-        /// <para>The workstation ID.</para>
+        /// <para>The ID of the workstation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UpdateImageTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. Returned when the request fails. A successful response may not contain this field.</para>
+        /// <para>The error code. This field is returned when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error or result message. Used to describe the cause when the request fails. A successful response may not contain this field.</para>
+        /// <para>The error or result message. This field describes the cause when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A value of true indicates that the request is successful. To check whether an asynchronous task is completed, you must query the task status separately.</para>
+        /// <para>Indicates whether the request is successful. A value of true indicates that the request is successful. To check whether an asynchronous task is completed, query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

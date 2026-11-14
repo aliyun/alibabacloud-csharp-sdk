@@ -13,22 +13,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The product type for querying available image regions. If this parameter is omitted, the query is performed based on CloudApp. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>CloudGame</b>: cloud gaming</description></item>
-        /// <item><description><b>CloudApp</b>: WUYING Cloud App</description></item>
+        /// <item><description><b>CloudApp</b>: WUYING cloud application</description></item>
         /// <item><description><b>CloudBrowser</b>: secure browser</description></item>
-        /// <item><description><b>CloudDesktop</b>: WUYING Cloud Desktop</description></item>
-        /// <item><description><b>ImageBuilder</b>: image creation resources</description></item>
-        /// <item><description><b>ImageValidate</b>: image validation resources</description></item>
+        /// <item><description><b>CloudDesktop</b>: WUYING cloud desktop</description></item>
+        /// <item><description><b>ImageBuilder</b>: image creation resource</description></item>
+        /// <item><description><b>ImageValidate</b>: image validation resource</description></item>
         /// <item><description><b>AndroidCloud</b>: Android cloud</description></item>
         /// <item><description><b>GpuRender</b>: GPU rendering</description></item>
         /// <item><description><b>AndroidGpuRender</b>: Android cloud GPU rendering</description></item>
-        /// <item><description><b>WuyingServer</b>: Enterprise Edition workstation</description></item>
+        /// <item><description><b>WuyingServer</b>: enterprise workstation</description></item>
         /// <item><description><b>GpuProxy</b>: GPU remote rendering proxy</description></item>
         /// <item><description><b>GpuCache</b>: GPU remote rendering cache</description></item>
         /// <item><description><b>AIAgent</b>: AI agent service</description></item>
-        /// <item><description><b>HostedDesktop</b>: hosted desktop</description></item>
-        /// <item><description><b>WuyingWorkstation</b>: Personal Edition container workstation</description></item>
-        /// <item><description><b>WuyingWorkstationBusiness</b>: Business Edition container workstation</description></item>
-        /// <item><description><b>WuyingWorkstationTeam</b>: Linggou container workstation Team Edition</description></item>
+        /// <item><description><b>HostedDesktop</b>: hosted computer</description></item>
+        /// <item><description><b>WuyingWorkstation</b>: personal container workstation</description></item>
+        /// <item><description><b>WuyingWorkstationBusiness</b>: business container workstation</description></item>
+        /// <item><description><b>WuyingWorkstationTeam</b>: LingGou container workstation team edition</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

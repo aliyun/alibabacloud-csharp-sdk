@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetResourceGroupAgentModelSettingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of model settings for resource groups. One record is returned for each resource group ID specified in the request. If a resource group is not associated with a model group under the specified agent platform and provider, ModelTemplateId and ModelTemplateName are empty.</para>
+        /// <para>The list of model settings for resource groups. A record is returned for each resource group ID in the request. If a resource group is not bound to a model group under the specified agent platform and provider, ModelTemplateId and ModelTemplateName are empty.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListModelProviderLlmCodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paginated data object that contains a list of LLM information.</para>
+        /// <para>The paginated data object that contains the list of LLM information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListModelProviderLlmCodesResponseBodyData Data { get; set; }
         public class ListModelProviderLlmCodesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The LLM information list.</para>
+            /// <para>The list of LLM information.</para>
             /// </summary>
             [NameInMap("LlmInfoList")]
             [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public ListModelProviderLlmCodesResponseBodyDataLlmInfoListCreditMultiplier CreditMultiplier { get; set; }
                 public class ListModelProviderLlmCodesResponseBodyDataLlmInfoListCreditMultiplier : TeaModel {
                     /// <summary>
-                    /// <para>The upper limit of the multiplier. An empty value indicates no upper limit. For example, if the minimum value is 1 and the maximum value is empty, it is displayed as starting from 1x.</para>
+                    /// <para>The upper limit of the multiplier. An empty value indicates no upper limit. For example, if the minimum multiplier is 1 and the maximum multiplier is empty, it is displayed as starting from 1x.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public float? Max { get; set; }
 
                     /// <summary>
-                    /// <para>The lower limit of the multiplier. If this value is equal to the maximum value, the multiplier is fixed. For example, if both the minimum and maximum values are 2, it is displayed as 2x.</para>
+                    /// <para>The lower limit of the multiplier. When this value is equal to the maximum multiplier, it represents a fixed multiplier. For example, if both the minimum and maximum multipliers are 2, it is displayed as 2x.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 /// <para>The model description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Qwen image generation model that supports text-to-image generation and image editing</para>
+                /// <para>Qwen image generation model, supporting text-to-image and image editing capabilities</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                         public string Price { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the price item, such as input, output, or image generation.</para>
+                        /// <para>The name of the price, such as input, output, or image generation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Input</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string PublishedTime { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model is recommended. This is a tri-state value: true indicates that the model is recommended for display, false indicates that the model is explicitly not recommended, and null indicates that the status is not applicable, such as for non-Bailian models or unannotated models.</para>
+                /// <para>Specifies whether the model is recommended. This is a tri-state parameter. A value of true indicates that the model is recommended for display. A value of false indicates that the model is explicitly not recommended. A value of null indicates that the parameter is not applicable, such as for non-Bailian models or unannotated models.</para>
                 /// </summary>
                 [NameInMap("Recommended")]
                 [Validation(Required=false)]
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID, which is used to uniquely identify the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</para>

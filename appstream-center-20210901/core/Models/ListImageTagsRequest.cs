@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListImageTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The label categorization to query.</para>
+        /// <para>The tag categorization to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Gpu</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to determine whether a next query is available. This parameter is not currently supported.</para>
+        /// <para>The token used to determine whether the next query is available. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kEmoGlTNe3ekUrwnesWV1Vn+tWdc+4WoaoMP/kUNF7Gg==</para>

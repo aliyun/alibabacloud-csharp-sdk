@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QuerySessionDataRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery group ID, used to filter session data for a specified delivery group. If not provided, the summary of session data for all delivery groups under the current account is returned.</para>
+        /// <para>The delivery group ID, used to filter session data for a specified delivery group. If not provided, the aggregated session data for all delivery groups under the current account is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-89ibriac2wudyph38</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The business region ID, which specifies the region for which to query session data. The server uses this value as the region filter condition for session data. If not provided, no region filtering is applied, and the summary of session data for all regions is returned.</para>
+        /// <para>The business region ID, which specifies the region for which to query session data. The server uses this value as the region filter condition for session data. If not provided, no region filtering is applied and the aggregated session data for all regions is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID, which is a common request parameter for the gateway. The region actually used to filter session data in this operation is specified by BizRegionId.</para>
+        /// <para>The region ID, which is a common request parameter for the gateway. The actual region used to filter session data in this operation is specified by BizRegionId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

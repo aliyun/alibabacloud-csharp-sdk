@@ -20,14 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The display language of the model. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh-CN: Simplified Chinese.</description></item>
-        /// <item><description>en-US: English.</description></item>
-        /// <item><description>ja-JP: Japanese.</description></item>
-        /// <item><description>zh-TW: Traditional Chinese.
-        /// Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the model is not included in Alibaba Cloud Model Studio or the English text is missing, the original source text is retained without automatic translation.</description></item>
-        /// </list>
+        /// <para>The display language of the model. Valid values: zh-CN (Simplified Chinese), en-US (English), ja-JP (Japanese), and zh-TW (Traditional Chinese). Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the model is not recorded in Model Studio or the English copy is missing, the original source copy is retained without automatic translation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en-US</para>
@@ -64,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. A value of 0 returns the same result as 1.</para>
+        /// <para>The page number. Pages start from page 1. If you set this parameter to 0, the system returns the same result as when you set it to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,12 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProviderTemplateId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query smart models. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Only LLMs under system-preset smart models are returned. In this case, BizType is required.</description></item>
-        /// <item><description>false: Smart models are not specifically filtered.
-        /// Default value: false.</description></item>
-        /// </list>
+        /// <para>Specifies whether to query smart models. If you set this parameter to true, only LLMs under system-preset smart models are returned, and BizType is required. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

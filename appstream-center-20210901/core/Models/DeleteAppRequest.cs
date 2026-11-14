@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteAppRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application to be deleted. <b>This parameter is required</b>, and the application must belong to the current account. You must dissociate the image references from the target application or version before deletion.</para>
+        /// <para>The ID of the application to be deleted. <b>This parameter is required</b>, and the application must belong to the current account. You must disassociate the image references from the target application or version before deletion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-bp1example****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application version to be deleted. If specified, only the adapter corresponding to this application version is deleted. If omitted, the entire application and its adapters are deleted. If the application has no other adapters after the version is deleted, the application record is also deleted.</para>
+        /// <para>The ID of the application version to be deleted. If specified, only the adapters corresponding to this application version are deleted. If omitted, the entire application and its adapters are deleted. If the application has no other adapters after the version is deleted, the application record is also deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apv-bp1example****</para>

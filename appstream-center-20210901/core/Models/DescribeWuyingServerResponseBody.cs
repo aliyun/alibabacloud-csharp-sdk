@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public DescribeWuyingServerResponseBodyData Data { get; set; }
         public class DescribeWuyingServerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The bandwidth size, in Mbit/s.</para>
+            /// <para>The bandwidth. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string BizRegionId { get; set; }
 
             /// <summary>
-            /// <para>The billing type.</para>
+            /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in US English date and time format with a 12-hour clock.</para>
+            /// <para>The creation time. The time is displayed in the 12-hour US English date and time format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sep 2, 2026 1:46:41 PM</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of private IP addresses per NIC, including the primary IP address.</para>
+            /// <para>The maximum number of private IP addresses per elastic network interface (ENI), including the primary IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? EniPrivateIpAddressQuantity { get; set; }
 
             /// <summary>
-            /// <para>The expiration time, in US English date and time format with a 12-hour clock.</para>
+            /// <para>The expiration time. The time is displayed in the 12-hour US English date and time format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Oct 3, 2026 12:00:00 AM</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Default Workspace</para>
+            /// <para>Default workspace</para>
             /// </summary>
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
@@ -154,11 +154,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<DescribeWuyingServerResponseBodyDataPrivateIpSets> PrivateIpSets { get; set; }
             public class DescribeWuyingServerResponseBodyDataPrivateIpSets : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the IP address is the primary private IP address. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: The IP address is the primary private IP address.</description></item>
-                /// <item><description>false: The IP address is a secondary private IP address.</description></item>
-                /// </list>
+                /// <para>Indicates whether the IP address is the primary private IP address. Valid values: true: The IP address is the primary private IP address. false: The IP address is a secondary private IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -200,7 +196,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? SupportASP { get; set; }
 
             /// <summary>
-            /// <para>The type of the system cloud disk.</para>
+            /// <para>The category of the system cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_essd</para>
@@ -210,7 +206,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The size of the system cloud disk, in GB.</para>
+            /// <para>The size of the system cloud disk. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

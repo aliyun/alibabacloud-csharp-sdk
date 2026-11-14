@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetFileUploadInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The file type. Currently supported values: BrowserBookmarks and BrowserRestrictionUrls.</para>
+        /// <para>The file type. Valid values: BrowserBookmarks and BrowserRestrictionUrls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

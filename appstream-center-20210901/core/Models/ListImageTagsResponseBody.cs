@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListImageTagsResponseBodyData> Data { get; set; }
         public class ListImageTagsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The label categorization.</para>
+            /// <para>The tag categorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Solution</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ptnJAAAAAAAxNzE5OTEwNQ==</para>

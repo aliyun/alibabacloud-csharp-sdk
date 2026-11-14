@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The billing type.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the creation time range, in ISO 8601 format. This time point is exclusive.</para>
+        /// <para>The end time of the creation time range. The time is in ISO 8601 format and exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-01T00:00:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of the creation time range, in ISO 8601 format. This time point is inclusive.</para>
+        /// <para>The start time of the creation time range. The time is in ISO 8601 format and inclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-01T00:00:00Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The end time of the expiration time range, in ISO 8601 format. This time point is exclusive.</para>
+        /// <para>The end time of the expiration time range. The time is in ISO 8601 format and exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-01T00:00:00Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ExpiredTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of the expiration time range, in ISO 8601 format. This time point is inclusive.</para>
+        /// <para>The start time of the expiration time range. The time is in ISO 8601 format and inclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-01T00:00:00Z</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The workstation instance type.</para>
+        /// <para>The workstation specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.proworkstation_flagship_elite.32c64g.48g1x</para>

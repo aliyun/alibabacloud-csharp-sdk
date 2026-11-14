@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ListZonesResponseBodyListZonesModel ListZonesModel { get; set; }
         public class ListZonesResponseBodyListZonesModel : TeaModel {
             /// <summary>
-            /// <para>The list of available zone IDs for the specified product type and operating system type in the current region. When creating a resource that requires a vSwitch, select a vSwitch in one of these zones.</para>
+            /// <para>The list of available zone IDs for the specified product type and operating system type in the current region. When you create a resource and specify a vSwitch, select a vSwitch located in one of these zones.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate and troubleshoot issues.</para>
+        /// <para>The unique identifier of the request, which can be used to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

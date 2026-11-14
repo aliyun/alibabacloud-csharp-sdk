@@ -1,3 +1,14 @@
+2026-11-14 Version: 5.15.0
+- Support API ClearAgentInstanceMemory.
+- Support API DescribeUserProfilePathRules.
+- Support API GetTenantMemoryConfig.
+- Support API ListAgentInstanceMemory.
+- Support API ModifyAgentInstanceMemoryConfig.
+- Support API ModifyTenantMemoryConfig.
+- Support API SetUserProfilePathRules.
+- Update API GetRuntimeModelConfig: add request parameters Language.
+
+
 2026-11-11 Version: 5.14.0
 - Support API DescribeShareImage.
 - Support API FinishValidate.

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAuthorizedAppsByUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of applications authorized to the user. Each record corresponds to one application within one delivery group.</para>
+        /// <para>The list of applications authorized for the user. Each record corresponds to an application within an app instance group.</para>
         /// </summary>
         [NameInMap("Apps")]
         [Validation(Required=false)]
         public List<ListAuthorizedAppsByUserResponseBodyApps> Apps { get; set; }
         public class ListAuthorizedAppsByUserResponseBodyApps : TeaModel {
             /// <summary>
-            /// <para>The URL of the application icon. This value is empty if the deployment details of the application cannot be obtained.</para>
+            /// <para>The access URL of the application icon. This parameter is empty when the deployment details of the application cannot be obtained.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the delivery group to which the application belongs.</para>
+            /// <para>The ID of the app instance group to which the application belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -47,27 +47,27 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the delivery group to which the application belongs. If the delivery group information cannot be obtained, the value is the same as AppInstanceGroupId.</para>
+            /// <para>The name of the app instance group to which the application belongs. If the app instance group information cannot be obtained, the returned value is the same as the AppInstanceGroupId.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OfficeApp</para>
+            /// <para>Office applications</para>
             /// </summary>
             [NameInMap("AppInstanceGroupName")]
             [Validation(Required=false)]
             public string AppInstanceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The application name. If the deployment details of the application cannot be obtained, the value is the same as AppId.</para>
+            /// <para>The application name. If the deployment details of the application cannot be obtained, the returned value is the same as the AppId.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OfficeApp</para>
+            /// <para>Office applications</para>
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The application version. This value is empty if the deployment details of the application cannot be obtained.</para>
+            /// <para>The application version. This parameter is empty when the deployment details of the application cannot be obtained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -77,17 +77,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// <para>The application version name. This value is empty if the deployment details of the application cannot be obtained.</para>
+            /// <para>The application version name. This parameter is empty when the deployment details of the application cannot be obtained.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>InitialVersion</para>
+            /// <para>Initial version</para>
             /// </summary>
             [NameInMap("AppVersionName")]
             [Validation(Required=false)]
             public string AppVersionName { get; set; }
 
             /// <summary>
-            /// <para>The number of authorized users for the application within its delivery group. This value is empty if the deployment details of the application cannot be obtained.</para>
+            /// <para>The number of users authorized to access the application in the app instance group to which the application belongs. This parameter is empty when the deployment details of the application cannot be obtained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of authorization records that match the query conditions.</para>
+        /// <para>The total number of authorization records that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

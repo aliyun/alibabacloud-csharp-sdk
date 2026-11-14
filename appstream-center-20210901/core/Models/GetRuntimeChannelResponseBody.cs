@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The channel configuration JSON string.</para>
-            /// <para>Currently, only the simple configuration mode is supported. You must pass AppKey and AppSecret.</para>
+            /// <para>Currently, only the simple configuration mode is supported. You must specify the AppKey and AppSecret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ConfigMode { get; set; }
 
             /// <summary>
-            /// <para>The QR code configuration notification page URL (returned only for ENTERPRISE/ENTERPRISE_JVS platforms).</para>
+            /// <para>The QR code configuration notification page URL (returned only for the ENTERPRISE or ENTERPRISE_JVS platform).</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&code=dingtalk-connector&region=cn-shanghai">https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&amp;code=dingtalk-connector&amp;region=cn-shanghai</a></para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string QrCodeNotifyUrl { get; set; }
 
             /// <summary>
-            /// <para>The QR code configuration status (returned only when not in a desired state).</para>
+            /// <para>The QR code configuration status (returned only in non-terminal states).</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58">https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58</a></para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

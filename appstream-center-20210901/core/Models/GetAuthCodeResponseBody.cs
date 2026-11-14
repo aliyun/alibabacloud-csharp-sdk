@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetAuthCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. It is returned when the request fails. A success response may not contain this field.</para>
+        /// <para>The error code. It is returned when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -20,18 +20,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data returned by the operation.</para>
+        /// <para>The business data returned by this operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAuthCodeResponseBodyData Data { get; set; }
         public class GetAuthCodeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The network access type supported by the connection resource.</para>
+            /// <para>The network access type supported by the connection resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INTERNET</b>: Supports Internet access.</description></item>
-            /// <item><description><b>VPC</b>: Supports virtual private cloud (VPC) access.</description></item>
-            /// <item><description><b>ANY</b>: Supports both Internet and VPC access.</description></item>
+            /// <item><description><b>INTERNET</b>: supports Internet access</description></item>
+            /// <item><description><b>VPC</b>: supports VPC access</description></item>
+            /// <item><description><b>ANY</b>: supports both Internet and VPC access</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The application ID, which is used for subsequent application queries or unbinding the image.</para>
+            /// <para>The application ID, used to query the application or unbind the image later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-bp1example****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The delivery group ID of the creation or validation resource. It is used together with the user and application information in this response during connection.</para>
+            /// <para>The delivery group ID of the creation or validation resource. It is used together with the user and application information in this response when connecting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-bp1example****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The application version ID, which is used to locate a specific version of the application. This field is not the image version ID.</para>
+            /// <para>The application version ID, used to locate the specified version of the application. This field is not the image version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apv-bp1example****</para>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppVersionId { get; set; }
 
             /// <summary>
-            /// <para>The authorization code used to connect to the creation or validation resource. <b>The validity period is 180 seconds (3 minutes) from the time of issuance. Use it promptly after obtaining it.</b> Use it together with the user, delivery group, and application information in the same response, and keep it confidential as a connection credential.</para>
-            /// <para>Do not reuse the authorization code after it is redeemed. If it has been used or expired, call this operation again to obtain a new one.</para>
+            /// <para>The authorization code used to connect to the creation or validation resource. <b>It is valid for 180 seconds (3 minutes) from the time of issuance. Use it promptly after obtaining it.</b> Use it together with the user, delivery group, and application information in the same response, and keep it confidential as a connection credential.</para>
+            /// <para>Do not reuse the authorization code after it is successfully redeemed. If it has been used or has expired, call this operation again to obtain a new one.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e4e169bea1cc48e8afac53**********</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AuthCode { get; set; }
 
             /// <summary>
-            /// <para>The purpose type of the connection resource.</para>
+            /// <para>The purpose type of the connection resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ImageBuilder</b>: Image or application creation resource.</description></item>
-            /// <item><description><b>ImageValidate</b>: Image or application validation resource.</description></item>
+            /// <item><description><b>ImageBuilder</b>: image or application creation resource</description></item>
+            /// <item><description><b>ImageValidate</b>: image or application validation resource</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The error or result message. It describes the cause when the request fails. A success response may not contain this field.</para>
+        /// <para>The error or result message. It is used to describe the cause when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, you must query the task status separately.</para>
+        /// <para>Indicates whether the request was processed successfully. true indicates that the request was processed successfully. To check whether an asynchronous task is completed, query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

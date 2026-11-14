@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AdaptorId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application. <b>Required</b>. It must match the application corresponding to AdaptorId.</para>
+        /// <para>The application ID. <b>Required</b>. It must correspond to the same application as AdaptorId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-bp1example****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application version. <b>Required</b>. It must match the application version corresponding to AdaptorId. This parameter is not the image version ID.</para>
+        /// <para>The application version ID. <b>Required</b>. It must correspond to the same application version as AdaptorId. This parameter is not the image version ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apv-bp1example****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppVersionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image to be dissociated. <b>Must be provided together with VersionId</b>. If both parameters are not specified at the same time, the adaptation deletion process starts.</para>
+        /// <para>The ID of the image to be dissociated. <b>Must be provided together with VersionId</b>. If they are not both specified, the adaptation deletion process is initiated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imgc-bp1example****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image version to be dissociated. It must be provided together with ImageId and belong to the specified image.</para>
+        /// <para>The ID of the image version to be dissociated. It must be provided together with ImageId and belong to the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iv-bp1example****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is returned when the request fails. A successful response may not contain this parameter.</para>
+        /// <para>The error code. Returned when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The prompt or execution result description of the current step of the task.</para>
+            /// <para>The prompt or execution result description of the current task step.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[code=Builder.Failed,httpStatusCode=<null>,message=Builder environment deploy failed.]</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string CurrentTaskMessage { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the step that the task is currently executing. You can call the ListTaskStep operation to query the image creation and application adaptation steps.</para>
+            /// <para>The identifier of the step currently being executed in the task. You can call ListTaskStep to query the image creation and application adaptation steps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE_BUILDER_ENV</para>
@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The compute type of the task creation resource.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CPU</b>: CPU compute resource</description></item>
-            /// <item><description><b>GPU</b>: GPU compute resource</description></item>
+            /// <item><description><b>CPU</b>: CPU compute resource.</description></item>
+            /// <item><description><b>GPU</b>: GPU compute resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,8 +102,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PerformanceType { get; set; }
 
             /// <summary>
-            /// <para><b>Not enabled. The system does not return valid task progress.</b> Determine the task execution status based on the Status, CurrentTaskStep, and TaskStepList parameters.</para>
-            /// <para>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status, not an actual API response example.</para>
+            /// <para><b>Not enabled. Currently, no valid task progress is returned.</b> Determine the task execution status based on Status, CurrentTaskStep, and TaskStepList.</para>
+            /// <para>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status, not an actual API return sample.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Not applicable (not enabled)</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<GetTaskResponseBodyDataResourceList> ResourceList { get; set; }
             public class GetTaskResponseBodyDataResourceList : TeaModel {
                 /// <summary>
-                /// <para>The resource content corresponding to ResourceType. For the URL type, specify or return an accessible resource address.</para>
+                /// <para>The resource content corresponding to ResourceType. For the URL type, enter or return an accessible resource address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/apps/business/setup.exe">https://example.com/apps/business/setup.exe</a></para>
@@ -130,12 +130,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Resource { get; set; }
 
                 /// <summary>
-                /// <para>The provision method of the resource content.</para>
-                /// <para>Valid values:</para>
+                /// <para>The provision method of the resource content.
+                /// Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>HOSTED</b>: hosted resource</description></item>
-                /// <item><description><b>TEXT</b>: text resource</description></item>
-                /// <item><description><b>URL</b>: resource provided through a URL</description></item>
+                /// <item><description><b>HOSTED</b>: Hosted resource.</description></item>
+                /// <item><description><b>TEXT</b>: Text resource.</description></item>
+                /// <item><description><b>URL</b>: Resource provided through a URL.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -148,11 +148,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The running mode of the task creation environment.</para>
-            /// <para>Valid values:</para>
+            /// <para>The running mode of the task creation environment.
+            /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NORMAL</b>: normal running mode</description></item>
-            /// <item><description><b>COMPATIBLE</b>: compatible running mode</description></item>
+            /// <item><description><b>NORMAL</b>: Normal running mode.</description></item>
+            /// <item><description><b>COMPATIBLE</b>: Compatible running mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The system disk capacity of the task creation environment. Unit: GiB.</para>
+            /// <para>The system cloud disk capacity of the task creation environment. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemImageId { get; set; }
 
             /// <summary>
-            /// <para>The task ID. You can use this ID to call the GetTask operation to query the task status.</para>
+            /// <para>The task ID. You can use it to call GetTask to query the task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tid-bp1example****</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<GetTaskResponseBodyDataTaskStepList> TaskStepList { get; set; }
             public class GetTaskResponseBodyDataTaskStepList : TeaModel {
                 /// <summary>
-                /// <para>The end time of the step. The time is a UNIX timestamp calculated from 1970-01-01T00:00:00Z. Unit: milliseconds. This parameter may not be returned if the step has not ended.</para>
+                /// <para>The end time of the step. It is a UNIX timestamp calculated from 1970-01-01T00:00:00Z. Unit: milliseconds. This field may not be returned if the step has not ended.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1790130491000</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the step. The time is a UNIX timestamp calculated from 1970-01-01T00:00:00Z. Unit: milliseconds.</para>
+                /// <para>The start time of the step. It is a UNIX timestamp calculated from 1970-01-01T00:00:00Z. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1790130490000</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The ISO 8601 string of the step end time, including the time zone offset. In the example, +08:00 indicates UTC+8. This parameter represents the same time as EndTime and is parsed according to the offset in the returned value. This parameter may not be returned if the step has not ended.</para>
+                /// <para>The ISO 8601 string of the step end time, including the time zone offset. In the example, +08:00 indicates UTC+8. It represents the same time as EndTime and is parsed according to the offset in the return value. This field may not be returned if the step has not ended.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-09-23T10:28:11+08:00</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string StepEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The ISO 8601 string of the step start time, including the time zone offset. In the example, +08:00 indicates UTC+8. This parameter represents the same time as StartTime and is parsed according to the offset in the returned value.</para>
+                /// <para>The ISO 8601 string of the step start time, including the time zone offset. In the example, +08:00 indicates UTC+8. It represents the same time as StartTime and is parsed according to the offset in the return value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-09-23T10:28:10+08:00</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string TaskMessage { get; set; }
 
                 /// <summary>
-                /// <para>The task step identifier corresponding to this record. You can call the ListTaskStep operation to query the image creation and application adaptation steps.</para>
+                /// <para>The task step identifier corresponding to this record. You can call ListTaskStep to query the image creation and application adaptation steps.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CREATE_BUILDER_ENV</para>
@@ -300,44 +300,44 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The actual type of the task.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AUTO_ADAPT</b>: automatic adaptation</description></item>
-            /// <item><description><b>AUTO_CREATE_IMAGE</b>: automatic image creation</description></item>
-            /// <item><description><b>RETRY_ADAPT</b>: retry of automatic adaptation</description></item>
-            /// <item><description><b>RETRY_CREATE_IMAGE</b>: retry of automatic image creation</description></item>
-            /// <item><description><b>AUTO_OTA_IMAGE</b>: automatic image OTA</description></item>
-            /// <item><description><b>AUTO_CREATE_VHD</b>: automatic VHD creation</description></item>
-            /// <item><description><b>RETRY_VHD</b>: retry of VHD creation</description></item>
-            /// <item><description><b>AUTO_CREATE_IMAGE_VHD</b>: automatic VHD image creation</description></item>
-            /// <item><description><b>RETRY_CREATE_IMAGE_VHD</b>: retry of VHD image creation</description></item>
-            /// <item><description><b>AUTO_VALIDATE_VHD</b>: automatic VHD validation</description></item>
-            /// <item><description><b>RETRY_VALIDATE_VHD</b>: retry of VHD validation</description></item>
-            /// <item><description><b>SYNCHRONIZE_APP_IMAGE</b>: application image synchronization</description></item>
-            /// <item><description><b>APPLY_VHD_BUILDER</b>: application for VHD application recording environment</description></item>
-            /// <item><description><b>RETRY_VHD_BUILDER</b>: retry of application for VHD recording environment</description></item>
-            /// <item><description><b>ADAPT_AUTO</b>: automatic application adaptation creation</description></item>
-            /// <item><description><b>ADAPT_AUTO_RETRY</b>: retry of automatic application adaptation creation</description></item>
-            /// <item><description><b>ADAPT_MANUAL</b>: manual application adaptation creation</description></item>
-            /// <item><description><b>ADAPT_MANUAL_RETRY</b>: retry of manual application adaptation creation</description></item>
-            /// <item><description><b>IMAGE_AUTO</b>: automatic image creation</description></item>
-            /// <item><description><b>IMAGE_AUTO_RETRY</b>: retry of automatic image creation</description></item>
-            /// <item><description><b>IMAGE_AUTO_VALIDATE</b>: automatic image validation</description></item>
-            /// <item><description><b>IMAGE_AUTO_VALIDATE_RETRY</b>: retry of automatic image validation</description></item>
-            /// <item><description><b>IMAGE_MANUAL</b>: manual image creation</description></item>
-            /// <item><description><b>IMAGE_MANUAL_RETRY</b>: retry of manual image creation</description></item>
-            /// <item><description><b>DESKTOP_CUSTOM_IMAGE</b>: cloud desktop custom image creation</description></item>
-            /// <item><description><b>DESKTOP_CUSTOM_IMAGE_RETRY</b>: retry of cloud desktop custom image creation</description></item>
-            /// <item><description><b>DESKTOP_SYNC_IMAGE</b>: cloud desktop image synchronization across regions</description></item>
-            /// <item><description><b>DESKTOP_SYNC_IMAGE_RETRY</b>: retry of cloud desktop image synchronization across regions</description></item>
-            /// <item><description><b>IMAGE_DISTRIBUTE</b>: image distribution to multiple regions</description></item>
-            /// <item><description><b>IMAGE_DISTRIBUTE_RETRY</b>: retry of image distribution</description></item>
-            /// <item><description><b>IMAGE_FROM_INSTANCE</b>: image creation based on an instance</description></item>
-            /// <item><description><b>IMAGE_FROM_INSTANCE_RETRY</b>: retry of image creation based on an instance</description></item>
-            /// <item><description><b>SNAPSHOT_DISTRIBUTE</b>: snapshot distribution to multiple regions</description></item>
-            /// <item><description><b>SNAPSHOT_DISTRIBUTE_RETRY</b>: retry of snapshot distribution</description></item>
-            /// <item><description><b>SNAPSHOT_FROM_DISK</b>: snapshot creation based on a disk</description></item>
-            /// <item><description><b>SNAPSHOT_FROM_DISK_RETRY</b>: retry of snapshot creation based on a disk</description></item>
-            /// <item><description><b>IMAGE_CLEAN_AND_CREATE</b>: temporary instance creation based on an image, cleanup, and final image creation</description></item>
-            /// <item><description><b>IMAGE_CLEAN_AND_CREATE_RETRY</b>: retry of final image creation after cleanup</description></item>
+            /// <item><description><b>AUTO_ADAPT</b>: Automatic adaptation.</description></item>
+            /// <item><description><b>AUTO_CREATE_IMAGE</b>: Automatic image creation.</description></item>
+            /// <item><description><b>RETRY_ADAPT</b>: Retry automatic adaptation.</description></item>
+            /// <item><description><b>RETRY_CREATE_IMAGE</b>: Retry automatic image creation.</description></item>
+            /// <item><description><b>AUTO_OTA_IMAGE</b>: Automatic image OTA.</description></item>
+            /// <item><description><b>AUTO_CREATE_VHD</b>: Automatic VHD creation.</description></item>
+            /// <item><description><b>RETRY_VHD</b>: Retry VHD creation.</description></item>
+            /// <item><description><b>AUTO_CREATE_IMAGE_VHD</b>: Automatic VHD image creation.</description></item>
+            /// <item><description><b>RETRY_CREATE_IMAGE_VHD</b>: Retry VHD image creation.</description></item>
+            /// <item><description><b>AUTO_VALIDATE_VHD</b>: Automatic VHD validation.</description></item>
+            /// <item><description><b>RETRY_VALIDATE_VHD</b>: Retry VHD validation.</description></item>
+            /// <item><description><b>SYNCHRONIZE_APP_IMAGE</b>: Synchronize application image.</description></item>
+            /// <item><description><b>APPLY_VHD_BUILDER</b>: Apply for VHD application recording environment.</description></item>
+            /// <item><description><b>RETRY_VHD_BUILDER</b>: Retry applying for VHD recording environment.</description></item>
+            /// <item><description><b>ADAPT_AUTO</b>: Automatic application adaptation creation.</description></item>
+            /// <item><description><b>ADAPT_AUTO_RETRY</b>: Retry automatic application adaptation creation.</description></item>
+            /// <item><description><b>ADAPT_MANUAL</b>: Manual application adaptation creation.</description></item>
+            /// <item><description><b>ADAPT_MANUAL_RETRY</b>: Retry manual application adaptation creation.</description></item>
+            /// <item><description><b>IMAGE_AUTO</b>: Automatic image creation.</description></item>
+            /// <item><description><b>IMAGE_AUTO_RETRY</b>: Retry automatic image creation.</description></item>
+            /// <item><description><b>IMAGE_AUTO_VALIDATE</b>: Automatic image validation.</description></item>
+            /// <item><description><b>IMAGE_AUTO_VALIDATE_RETRY</b>: Retry automatic image validation.</description></item>
+            /// <item><description><b>IMAGE_MANUAL</b>: Manual image creation.</description></item>
+            /// <item><description><b>IMAGE_MANUAL_RETRY</b>: Retry manual image creation.</description></item>
+            /// <item><description><b>DESKTOP_CUSTOM_IMAGE</b>: Create cloud desktop custom image.</description></item>
+            /// <item><description><b>DESKTOP_CUSTOM_IMAGE_RETRY</b>: Retry creating cloud desktop custom image.</description></item>
+            /// <item><description><b>DESKTOP_SYNC_IMAGE</b>: Synchronize cloud desktop image across regions.</description></item>
+            /// <item><description><b>DESKTOP_SYNC_IMAGE_RETRY</b>: Retry synchronizing cloud desktop image across regions.</description></item>
+            /// <item><description><b>IMAGE_DISTRIBUTE</b>: Distribute image to multiple regions.</description></item>
+            /// <item><description><b>IMAGE_DISTRIBUTE_RETRY</b>: Retry image distribution.</description></item>
+            /// <item><description><b>IMAGE_FROM_INSTANCE</b>: Create image based on instance.</description></item>
+            /// <item><description><b>IMAGE_FROM_INSTANCE_RETRY</b>: Retry creating image based on instance.</description></item>
+            /// <item><description><b>SNAPSHOT_DISTRIBUTE</b>: Distribute snapshot to multiple regions.</description></item>
+            /// <item><description><b>SNAPSHOT_DISTRIBUTE_RETRY</b>: Retry snapshot distribution.</description></item>
+            /// <item><description><b>SNAPSHOT_FROM_DISK</b>: Create snapshot based on disk.</description></item>
+            /// <item><description><b>SNAPSHOT_FROM_DISK_RETRY</b>: Retry creating snapshot based on disk.</description></item>
+            /// <item><description><b>IMAGE_CLEAN_AND_CREATE</b>: Create a temporary instance based on an image, and create the final image after cleanup.</description></item>
+            /// <item><description><b>IMAGE_CLEAN_AND_CREATE_RETRY</b>: Retry creating the final image after cleanup.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The error or result message. This parameter is used to describe the cause when the request fails. A successful response may not contain this parameter.</para>
+        /// <para>The error or result message. Used to explain the cause when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can provide this value when you troubleshoot issues.</para>
+        /// <para>The unique identifier of this request. You can provide this value for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01A1A962-5503-107B-AC8F-EBA85DF905AC</para>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To determine whether an asynchronous task is completed, you must query the task status separately.</para>
+        /// <para>Indicates whether the request is processed successfully. A value of true indicates that the request is processed successfully. To determine whether an asynchronous task is completed, you must query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

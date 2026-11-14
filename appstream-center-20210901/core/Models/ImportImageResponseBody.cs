@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ImportImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code of the API. A value of 200 indicates success. If the call fails, the corresponding error code is returned.</para>
+        /// <para>The response code. A value of 200 indicates success. If the call fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: successful.</description></item>
-        /// <item><description>false: failed.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Success")]

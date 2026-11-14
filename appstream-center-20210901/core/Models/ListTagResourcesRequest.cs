@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query token. You do not need to specify this parameter for the first request. If the previous invoke returned a non-empty NextToken value, pass it in as-is to retrieve subsequent paging results.</para>
+        /// <para>The pagination token for paged queries. You do not need to specify this parameter when you call this operation for the first time. If a non-empty NextToken is returned in the previous call, pass it as is to obtain subsequent results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</para>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported.</para>
-        /// <para>If the resource type is delivery group, specify the delivery group ID (prefixed with <c>aig-</c>). You can call the ListAppInstanceGroup operation to obtain the delivery group ID.</para>
+        /// <para>The list of resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>If the resource type is delivery group, specify the delivery group ID, which starts with <c>aig-</c>. You can obtain the ID by calling the ListAppInstanceGroup operation.</para>
         /// <remarks>
-        /// <para>Specify at least one of ResourceId.N and Tag.N. If only ResourceId.N is specified, all tags bound to the specified resources are returned.</para>
+        /// <para>You must specify at least one of ResourceId.N and Tag.N. If only ResourceId.N is specified, all tags bound to these resources are returned.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <list type="bullet">
         /// <item><description>APPINSTANCEGROUP: delivery group.</description></item>
         /// </list>
-        /// <para>This parameter is case-insensitive. Only this value is supported. If you specify other values, the error code <c>InvalidResourceType.Invalid</c> is returned.</para>
+        /// <para>The value is not case-sensitive. Only this value is supported. If you specify other values, the error code <c>InvalidResourceType.Invalid</c> is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tag conditions. A maximum of 20 tag conditions are supported.</para>
+        /// <para>The list of tag conditions. You can specify up to 20 tag conditions.</para>
         /// <remarks>
-        /// <para>Specify at least one of ResourceId.N and Tag.N. Multiple tags have an AND relationship. Only resources that have all specified tags bound are returned.</para>
+        /// <para>You must specify at least one of ResourceId.N and Tag.N. Multiple tags have an AND relationship. Only resources bound to all specified tags are returned.</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. This parameter is required. The tag key is case-sensitive and must be 1 to 128 characters in length.</para>
+            /// <para>The tag key. This parameter is required. The value is case-sensitive and must be 1 to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value is case-sensitive and can be up to 256 characters in length. If this parameter is not specified, the value of the tag key is not restricted, which means any tag value under the key is matched.</para>
+            /// <para>The tag value. The value is case-sensitive and can be up to 256 characters in length. If this parameter is not specified, the value corresponding to the tag key is not limited, which means any tag value under the key is matched.</para>
             /// 
             /// <b>Example:</b>
             /// <para>720p</para>

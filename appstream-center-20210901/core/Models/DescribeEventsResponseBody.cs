@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The event detail text. The content varies based on the <c>EventType</c> and may be empty. For example, a session release event may return a JSON text that describes the release cause.</para>
+            /// <para>The event detail text. The content varies with <c>EventType</c> and may be empty. For example, a session release event may return JSON text that describes the release reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Reason&quot;:&quot;ByUser&quot;}</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of events that meet all filter conditions within the 30-day retrievable window. Unit: entries.</para>
+        /// <para>The total number of events that meet all filter conditions within the 30-day retrievable window. Unit: records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36</para>

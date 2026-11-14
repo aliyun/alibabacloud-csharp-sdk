@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryNetworkRttReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. <c>200</c> indicates that the request is processed successfully. Other values indicate that the processing failed.</para>
+        /// <para>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The description of the request processing result. If the request is successful, <c>success</c> is usually returned.</para>
+        /// <para>The description of the request processing result. The value success is usually returned when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? LowRttUserCount { get; set; }
 
             /// <summary>
-            /// <para>The ratio of low-RTT users to the total number of users involved in the statistics. Valid values: 0 to 1. To obtain the percentage, multiply the value by 100.</para>
+            /// <para>The ratio of low-RTT users to the total number of users included in the statistics. Valid values: 0 to 1. To obtain the percentage, multiply the value by 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.85</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The average RTT of all users involved in the statistics. Unit: milliseconds.</para>
+            /// <para>The average RTT of all users included in the statistics. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35.8</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string StatStartDate { get; set; }
 
             /// <summary>
-            /// <para>The total number of users involved in the RTT calculation for the current statistical window. Unit: users.</para>
+            /// <para>The total number of users included in the RTT calculation for the current statistical window. Unit: users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

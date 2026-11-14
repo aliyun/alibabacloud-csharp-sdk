@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class StartTaskForCreateImageRequest : TeaModel {
         /// <summary>
-        /// <para>The image creation mode. Currently, use the following mode:</para>
+        /// <para>The image creation mode. Use the following mode:</para>
         /// <list type="bullet">
         /// <item><description><b>BUILDER_MANUAL</b>: Manually enter the creation environment to install applications and configure the image.</description></item>
         /// </list>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The WUYING instance ID. The instance can be a cloud desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before initiating image creation.</para>
+        /// <para>The WUYING instance ID. The instance can be a cloud desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before starting the image creation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-5u87dainamz54yk10</para>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PerformanceType { get; set; }
 
         /// <summary>
-        /// <para>The product type. Set this parameter to the following fixed value when you call the operation:</para>
+        /// <para>The product type. Set this parameter to the following value when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>CloudApp: WUYING Cloud App.</description></item>
+        /// <item><description><c>CloudApp</c>: WUYING Cloud App.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SourceRegion { get; set; }
 
         /// <summary>
-        /// <para>The sub-instance ID. This parameter is not applicable to cloud desktop scenarios. In workstation scenarios, pass the persistent session ID to ensure that a specific instance is located.</para>
+        /// <para>The sub-instance ID. This parameter is not applicable to cloud desktop scenarios. In workstation scenarios, you must specify the persistent session ID to locate a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0cc7s3n1l*****</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? SystemDiskSize { get; set; }
 
         /// <summary>
-        /// <para>The image version. This parameter is currently not exposed.</para>
+        /// <para>The ID of the image version. This parameter is not exposed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iv-bp1example****</para>

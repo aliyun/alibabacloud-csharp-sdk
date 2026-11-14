@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetEffectiveImageByIdRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the business region to query. If this parameter is not specified, regions are not filtered by this parameter. The returned regions are still constrained by the product and the visible scope of the account.</para>
+        /// <para>The ID of the business region to query. If this parameter is not specified, regions are not filtered by this parameter. The returned regions are still constrained by the product type and the visible scope of the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The content language of the community image document in BCP 47 format, such as zh-CN or en-US. Default value: zh-CN.</para>
+        /// <para>The content language of the community image documentation in BCP 47 format, such as zh-CN and en-US. Default value: zh-CN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ContentLocale { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip filtering by the operating system and adaptation status of applications. Default value: false. A value of false retains only applications that match the image operating system and have completed adaptation. A value of true skips these two filters. Application type filtering is still controlled by the API operation and the ShowHidden parameter.</para>
+        /// <para>Specifies whether to skip filtering based on the operating system and adaptation status of adapted applications. Default value: false. A value of false retains only applications that match the image operating system and have completed adaptation. A value of true skips these two filters. Application type filtering is still controlled by the API operation and the ShowHidden parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? IgnoreFilter { get; set; }
 
         /// <summary>
-        /// <para>The image ID. Required when querying effective versions.</para>
+        /// <para>The image ID. This parameter is required when querying effective versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imgc-bp1example****</para>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The image type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>System: System image.</description></item>
-        /// <item><description>User: Custom image.</description></item>
-        /// <item><description>Shared: Shared image.</description></item>
-        /// <item><description>Community: Community image.</description></item>
+        /// <item><description>System: system images.</description></item>
+        /// <item><description>User: custom images.</description></item>
+        /// <item><description>Shared: shared images.</description></item>
+        /// <item><description>Community: community images.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageType { get; set; }
 
         /// <summary>
-        /// <para>The product type, such as CloudDesktop, CloudApp, or WuyingServer.</para>
+        /// <para>The product type, such as CloudDesktop (Cloud Desktop), CloudApp (Cloud App), and WuyingServer (workstation).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudDesktop</para>
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The additional types of virtual applications to include, in addition to the user and system applications returned by default. Valid values:</para>
+        /// <para>Specifies the additional virtual application types to include in the response besides the default user and system applications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>VIRTUAL_DESKTOP_APP: Desktop virtual applications.</description></item>
-        /// <item><description>ALL_VIRTUAL_APP: All virtual applications.</description></item>
+        /// <item><description>VIRTUAL_DESKTOP_APP: desktop virtual applications.</description></item>
+        /// <item><description>ALL_VIRTUAL_APP: all virtual applications.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

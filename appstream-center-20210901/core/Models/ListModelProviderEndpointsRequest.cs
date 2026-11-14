@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListModelProviderEndpointsRequest : TeaModel {
         /// <summary>
-        /// <para>The agent platform name. This parameter is not processed and is only passed through as a redundant field, such as ENTERPRISE.</para>
+        /// <para>The name of the agent platform. This parameter is not processed and is only passed through for redundancy, such as ENTERPRISE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE_AGENTIC_COMPUTER</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The agent provider name, such as HermesAgent or OpenClaw. If this parameter is specified, the providerName in the returned endpoints is the alias from the perspective of the specified agent provider.</para>
+        /// <para>The name of the agent provider, such as HermesAgent or OpenClaw. If this parameter is specified, the providerName of the returned endpoint is the alias from the perspective of the specified agent provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AgenticComputer</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The name of the model provider, such as bailian, moonshot, or siliconflow. If this parameter is not specified, the endpoint configurations of all managed providers are returned.</para>
+        /// <para>The name of the model provider, such as bailian, moonshot, or siliconflow. If you do not specify this parameter, the endpoint configurations of all managed providers are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bailian</para>

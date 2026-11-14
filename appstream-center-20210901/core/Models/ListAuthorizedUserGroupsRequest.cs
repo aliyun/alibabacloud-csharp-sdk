@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAuthorizedUserGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery group.</para>
+        /// <para>The ID of the app instance group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the delivery group set. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</para>
+        /// <para>The ID of the app instance group set. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</para>
         /// 
         /// <b>Example:</b>
         /// <para>set-3jm9d0abc00example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupSetId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user group. This parameter is used for exact match.</para>
+        /// <para>The ID of the user group. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ug-00001</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the user group. This parameter is used for fuzzy match.</para>
+        /// <para>The name of the user group. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UserGroup001</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

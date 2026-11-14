@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration.</para>
+        /// <para>The unit for the renewal period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The discount ID.</para>
+        /// <para>The promotion ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17440009****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The workstation ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The workstation must have a completed order payment (AutoPay=true during creation or manually paid through the console payment page) before it can be renewed. Calling this API for an unpaid workstation returns WuyingServerError.NotFound.</description></item>
+        /// <item><description>A workstation can be renewed only after the order payment is completed (AutoPay=true during creation or manual payment is made through the console payment page). Calling this API for an unpaid workstation returns WuyingServerError.NotFound.</description></item>
         /// </list>
         /// </remarks>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryMauReportDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of <c>200</c> indicates that the request is processed successfully. Other values indicate that the request fails to be processed.</para>
+        /// <para>The business status code. A value of 200 indicates that the request is successful. Other values indicate that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<QueryMauReportDataResponseBodyMauReportDataModel> MauReportDataModel { get; set; }
         public class QueryMauReportDataResponseBodyMauReportDataModel : TeaModel {
             /// <summary>
-            /// <para>The app instance group ID.</para>
+            /// <para>The ID of the app instance group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? Mau { get; set; }
 
             /// <summary>
-            /// <para>The business region ID to which the report data belongs.</para>
+            /// <para>The ID of the business region to which the report data belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The statistical cutoff date used for the month. Format: <c>yyyy-MM-dd</c>. For the last month, this is usually the day before the requested <c>EndDate</c>. The date is interpreted as a calendar date in the Asia/Shanghai (UTC+8) time zone.</para>
+            /// <para>The statistical cutoff date used for the month. Format: <c>yyyy-MM-dd</c>. For the last month, the date is usually the day before the requested EndDate. The date is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-29</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string StatDate { get; set; }
 
             /// <summary>
-            /// <para>The statistical month. Format: <c>yyyy-MM</c>. The month is interpreted as a calendar month in the Asia/Shanghai (UTC+8) time zone.</para>
+            /// <para>The statistical month. Format: <c>yyyy-MM</c>. The month is interpreted as a natural month in the Asia/Shanghai (UTC+8) time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string BrowserInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The order ID generated for this creation.</para>
+            /// <para>The ID of the order generated for this creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345****</para>

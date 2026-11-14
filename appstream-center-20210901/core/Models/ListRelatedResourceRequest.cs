@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of delivery groups returned per page, which is the same as the PageSize request parameter.</para>
+        /// <para>The number of delivery groups returned per page. This value is the same as the PageSize request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
