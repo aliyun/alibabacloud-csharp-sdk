@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a template. runtimeConfig.vpcBindings is supported only for second-generation templates. A null value is treated as omitted. First-generation templates return a 400 error if an empty or non-empty array is explicitly provided. Inbound bindings are independent of the egress vpcConfig and API key source policies. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of the E2B sandbox are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// <para>Creates a template. If runtimeConfig.vpcBindings is null, it is treated as omitted. Inbound bindings are independent of the egress vpcConfig and API key source policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a template. runtimeConfig.vpcBindings is supported only for second-generation templates. A null value is treated as omitted. First-generation templates return a 400 error if an empty or non-empty array is explicitly provided. Inbound bindings are independent of the egress vpcConfig and API key source policies. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of the E2B sandbox are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// <para>Creates a template. If runtimeConfig.vpcBindings is null, it is treated as omitted. Inbound bindings are independent of the egress vpcConfig and API key source policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a template. runtimeConfig.vpcBindings is supported only for second-generation templates. A null value is treated as omitted. First-generation templates return a 400 error if an empty or non-empty array is explicitly provided. Inbound bindings are independent of the egress vpcConfig and API key source policies. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of the E2B sandbox are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// <para>Creates a template. If runtimeConfig.vpcBindings is null, it is treated as omitted. Inbound bindings are independent of the egress vpcConfig and API key source policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a template. runtimeConfig.vpcBindings is supported only for second-generation templates. A null value is treated as omitted. First-generation templates return a 400 error if an empty or non-empty array is explicitly provided. Inbound bindings are independent of the egress vpcConfig and API key source policies. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of the E2B sandbox are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// <para>Creates a template. If runtimeConfig.vpcBindings is null, it is treated as omitted. Inbound bindings are independent of the egress vpcConfig and API key source policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -658,6 +658,126 @@ namespace AlibabaCloud.SDK.Sandbox20260820
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateVolumeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWarmPoolRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWarmPoolResponse
+        /// </returns>
+        public CreateWarmPoolResponse CreateWarmPoolWithOptions(string teamID, CreateWarmPoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWarmPool",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWarmPoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWarmPoolRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWarmPoolResponse
+        /// </returns>
+        public async Task<CreateWarmPoolResponse> CreateWarmPoolWithOptionsAsync(string teamID, CreateWarmPoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWarmPool",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWarmPoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWarmPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWarmPoolResponse
+        /// </returns>
+        public CreateWarmPoolResponse CreateWarmPool(string teamID, CreateWarmPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateWarmPoolWithOptions(teamID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWarmPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWarmPoolResponse
+        /// </returns>
+        public async Task<CreateWarmPoolResponse> CreateWarmPoolAsync(string teamID, CreateWarmPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateWarmPoolWithOptionsAsync(teamID, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1418,6 +1538,124 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWarmPoolRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWarmPoolResponse
+        /// </returns>
+        public DeleteWarmPoolResponse DeleteWarmPoolWithOptions(string teamID, string templateID, DeleteWarmPoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWarmPool",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteWarmPoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWarmPoolRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWarmPoolResponse
+        /// </returns>
+        public async Task<DeleteWarmPoolResponse> DeleteWarmPoolWithOptionsAsync(string teamID, string templateID, DeleteWarmPoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWarmPool",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteWarmPoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWarmPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWarmPoolResponse
+        /// </returns>
+        public DeleteWarmPoolResponse DeleteWarmPool(string teamID, string templateID, DeleteWarmPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteWarmPoolWithOptions(teamID, templateID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWarmPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWarmPoolResponse
+        /// </returns>
+        public async Task<DeleteWarmPoolResponse> DeleteWarmPoolAsync(string teamID, string templateID, DeleteWarmPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteWarmPoolWithOptionsAsync(teamID, templateID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a specified API key.</para>
         /// </summary>
         /// 
@@ -1792,6 +2030,124 @@ namespace AlibabaCloud.SDK.Sandbox20260820
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeTemplateCacheWithOptionsAsync(templateID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWarmPoolRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWarmPoolResponse
+        /// </returns>
+        public DescribeWarmPoolResponse DescribeWarmPoolWithOptions(string teamID, string templateID, DescribeWarmPoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWarmPool",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWarmPoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWarmPoolRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWarmPoolResponse
+        /// </returns>
+        public async Task<DescribeWarmPoolResponse> DescribeWarmPoolWithOptionsAsync(string teamID, string templateID, DescribeWarmPoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWarmPool",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWarmPoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWarmPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWarmPoolResponse
+        /// </returns>
+        public DescribeWarmPoolResponse DescribeWarmPool(string teamID, string templateID, DescribeWarmPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeWarmPoolWithOptions(teamID, templateID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWarmPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWarmPoolResponse
+        /// </returns>
+        public async Task<DescribeWarmPoolResponse> DescribeWarmPoolAsync(string teamID, string templateID, DescribeWarmPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeWarmPoolWithOptionsAsync(teamID, templateID, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3634,6 +3990,144 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of warm pools.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWarmPoolsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWarmPoolsResponse
+        /// </returns>
+        public ListWarmPoolsResponse ListWarmPoolsWithOptions(string teamID, ListWarmPoolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWarmPools",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWarmPoolsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of warm pools.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWarmPoolsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWarmPoolsResponse
+        /// </returns>
+        public async Task<ListWarmPoolsResponse> ListWarmPoolsWithOptionsAsync(string teamID, ListWarmPoolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWarmPools",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWarmPoolsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of warm pools.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWarmPoolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWarmPoolsResponse
+        /// </returns>
+        public ListWarmPoolsResponse ListWarmPools(string teamID, ListWarmPoolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListWarmPoolsWithOptions(teamID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of warm pools.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWarmPoolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWarmPoolsResponse
+        /// </returns>
+        public async Task<ListWarmPoolsResponse> ListWarmPoolsAsync(string teamID, ListWarmPoolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListWarmPoolsWithOptionsAsync(teamID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Resets a specified API key.</para>
         /// </summary>
         /// 
@@ -4157,7 +4651,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a template. For Generation 2 templates, runtimeConfig.vpcBindings supports omission or null retention, full replacement with a non-empty array, or clearing with an empty array. The new list takes effect upon a successful build of the new version. Existing sandboxes continue to use the original functions and policies. If the build fails, the previously effective version is retained. For Generation 1 templates, explicitly passing an empty or non-empty array returns a 400 error. Before switching to Generation 1, you must clear the bindings and wait for the update to succeed. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of E2B sandboxes are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// <para>Updates a template. For runtimeConfig.vpcBindings, you can omit the field or set it to null to retain the current bindings, provide a non-empty array to replace the entire list, or provide an empty array [] to clear the list. The new list takes effect when the new version is successfully built. Existing sandboxes continue to use the original configuration. If the build fails, the original effective version is retained.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4209,7 +4703,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a template. For Generation 2 templates, runtimeConfig.vpcBindings supports omission or null retention, full replacement with a non-empty array, or clearing with an empty array. The new list takes effect upon a successful build of the new version. Existing sandboxes continue to use the original functions and policies. If the build fails, the previously effective version is retained. For Generation 1 templates, explicitly passing an empty or non-empty array returns a 400 error. Before switching to Generation 1, you must clear the bindings and wait for the update to succeed. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of E2B sandboxes are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// <para>Updates a template. For runtimeConfig.vpcBindings, you can omit the field or set it to null to retain the current bindings, provide a non-empty array to replace the entire list, or provide an empty array [] to clear the list. The new list takes effect when the new version is successfully built. Existing sandboxes continue to use the original configuration. If the build fails, the original effective version is retained.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4261,7 +4755,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a template. For Generation 2 templates, runtimeConfig.vpcBindings supports omission or null retention, full replacement with a non-empty array, or clearing with an empty array. The new list takes effect upon a successful build of the new version. Existing sandboxes continue to use the original functions and policies. If the build fails, the previously effective version is retained. For Generation 1 templates, explicitly passing an empty or non-empty array returns a 400 error. Before switching to Generation 1, you must clear the bindings and wait for the update to succeed. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of E2B sandboxes are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// <para>Updates a template. For runtimeConfig.vpcBindings, you can omit the field or set it to null to retain the current bindings, provide a non-empty array to replace the entire list, or provide an empty array [] to clear the list. The new list takes effect when the new version is successfully built. Existing sandboxes continue to use the original configuration. If the build fails, the original effective version is retained.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4285,7 +4779,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a template. For Generation 2 templates, runtimeConfig.vpcBindings supports omission or null retention, full replacement with a non-empty array, or clearing with an empty array. The new list takes effect upon a successful build of the new version. Existing sandboxes continue to use the original functions and policies. If the build fails, the previously effective version is retained. For Generation 1 templates, explicitly passing an empty or non-empty array returns a 400 error. Before switching to Generation 1, you must clear the bindings and wait for the update to succeed. When the feature switch is enabled, POST /init requests without query parameters to the standard envd port 49983 of E2B sandboxes are temporarily exempt from VPC source checks, while other authentication mechanisms remain in effect.</para>
+        /// <para>Updates a template. For runtimeConfig.vpcBindings, you can omit the field or set it to null to retain the current bindings, provide a non-empty array to replace the entire list, or provide an empty array [] to clear the list. The new list takes effect when the new version is successfully built. Existing sandboxes continue to use the original configuration. If the build fails, the original effective version is retained.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4432,6 +4926,126 @@ namespace AlibabaCloud.SDK.Sandbox20260820
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateVolumeWithOptionsAsync(volumeID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the capacity policy of a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWarmPoolRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWarmPoolResponse
+        /// </returns>
+        public UpdateWarmPoolResponse UpdateWarmPoolWithOptions(string teamID, string templateID, UpdateWarmPoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWarmPool",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWarmPoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the capacity policy of a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWarmPoolRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWarmPoolResponse
+        /// </returns>
+        public async Task<UpdateWarmPoolResponse> UpdateWarmPoolWithOptionsAsync(string teamID, string templateID, UpdateWarmPoolRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWarmPool",
+                Version = "2026-08-20",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-08-20/teams/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(teamID) + "/warmPools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWarmPoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the capacity policy of a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWarmPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWarmPoolResponse
+        /// </returns>
+        public UpdateWarmPoolResponse UpdateWarmPool(string teamID, string templateID, UpdateWarmPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateWarmPoolWithOptions(teamID, templateID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the capacity policy of a warm pool.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWarmPoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWarmPoolResponse
+        /// </returns>
+        public async Task<UpdateWarmPoolResponse> UpdateWarmPoolAsync(string teamID, string templateID, UpdateWarmPoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateWarmPoolWithOptionsAsync(teamID, templateID, request, headers, runtime);
         }
 
     }

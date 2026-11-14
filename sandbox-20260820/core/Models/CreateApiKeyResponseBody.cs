@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         /// <para>The API key information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[Replace with a masked API key example]</para>
+        /// <para>[Replace with a redacted API key example]</para>
         /// </summary>
         [NameInMap("apiKey")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<IPConfig> IpWhitelist { get; set; }
 
         /// <summary>
-        /// <para>The response message. The value is success if the request is successful.</para>
+        /// <para>The response message. The value is success for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

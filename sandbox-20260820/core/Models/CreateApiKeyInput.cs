@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ApiKeyName { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the API key in UTC. The time must be in RFC 3339 format. If this parameter is left empty, the API key never expires.</para>
+        /// <para>The expiration time of the API key. The time must be in UTC and follow the RFC 3339 format. If this parameter is left empty, the API key never expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2099-12-31T23:59:59Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<IPConfig> IpWhitelist { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team to which the API key belongs. The ID must be in UUID format. If this parameter is not specified, the default team of the current account is used.</para>
+        /// <para>The ID of the team to which the API key belongs. The ID must be in the UUID format. If this parameter is not specified, the default team of the current account is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5f4a2c18-****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamID { get; set; }
 
         /// <summary>
-        /// <para>The list of source VPC IDs that are allowed to use this API key to initiate management requests. The list is matched as a set. If this parameter is omitted, set to null, or set to an empty array, no restrictions are applied to source VPCs. If this parameter is not empty, only requests from trusted source VPCs that match the list are allowed. Requests from the Internet or from unverified source VPCs are rejected. You can configure this parameter together with an IP address whitelist or blacklist. Requests must meet both restrictions. This field does not create VPC bindings for underlying functions.</para>
+        /// <para>The list of source VPC IDs that are allowed to use this API key to initiate management and control requests. The list is matched as a set. If this parameter is omitted, set to null, or set to an empty array, no restrictions are imposed on the source VPCs. If this parameter is not empty, only requests from trusted source VPCs that match the list are allowed. Requests from the Internet or from unverified source VPCs are rejected. This parameter can be configured together with the IP address whitelist or blacklist. Requests must meet both restrictions. This field is independent of the vpcBindings field of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;vpc-examplea&quot;,&quot;vpc-exampleb&quot;]</para>

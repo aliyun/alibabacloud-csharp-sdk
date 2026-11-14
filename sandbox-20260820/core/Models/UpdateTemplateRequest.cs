@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The request struct for updating the template. Specify only the fields that you want to modify.</para>
+        /// <para>The request struct for updating a template. Specify only the fields that you want to update.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

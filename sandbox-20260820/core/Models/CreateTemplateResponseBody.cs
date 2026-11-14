@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the created template.</para>
+        /// <para>The unique ID of the created template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>us7dxqaezw5uu7aa2cm5</para>
