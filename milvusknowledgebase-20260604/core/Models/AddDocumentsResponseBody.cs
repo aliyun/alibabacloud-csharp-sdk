@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
 {
     public class AddDocumentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission verification failure.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;1234567890123456&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;1234567890123456&quot;,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;AuthAction&quot;:&quot;milvusknowledgebase:ListDatasets&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public List<AddDocumentsResponseBodyDataDocuments> Documents { get; set; }
             public class AddDocumentsResponseBodyDataDocuments : TeaModel {
                 /// <summary>
-                /// <para>The chunk count.</para>
+                /// <para>The number of chunks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public int? ChunkCount { get; set; }
 
                 /// <summary>
-                /// <para>The chunk method.</para>
+                /// <para>The chunking method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>naive</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public string ChunkMethod { get; set; }
 
                 /// <summary>
-                /// <para>The knowledge base ID.</para>
+                /// <para>The ID of the knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kb-123</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// <para>The document name.</para>
+                /// <para>The name of the document.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example.pdf</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public string Run { get; set; }
 
                 /// <summary>
-                /// <para>The file size.</para>
+                /// <para>The size of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public string Thumbnail { get; set; }
 
                 /// <summary>
-                /// <para>The token count.</para>
+                /// <para>The number of tokens.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

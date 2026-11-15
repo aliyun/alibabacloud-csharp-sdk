@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
 {
     public class GetKnowledgeBasePreSignedUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission verification failure.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;1234567890123456&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;1234567890123456&quot;,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;AuthAction&quot;:&quot;milvusknowledgebase:ListDatasets&quot;}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public GetKnowledgeBasePreSignedUrlResponseBodyData Data { get; set; }
         public class GetKnowledgeBasePreSignedUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The bucket name.</para>
+            /// <para>The name of the bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>knowledgebase-fileupload</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public int? ExpiresIn { get; set; }
 
             /// <summary>
-            /// <para>The list of pre-signed PUT URLs. <b>The order corresponds one-to-one with the <c>Documents</c> in the request.</b></para>
+            /// <para>The list of pre-signed PUT URLs. <b>The order corresponds one-to-one with the <c>Documents</c> in the request</b>.</para>
             /// </summary>
             [NameInMap("preSignedUrls")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

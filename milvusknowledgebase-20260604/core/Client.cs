@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "MilvusKnowledgeBase";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("milvusknowledgebase", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,11 +42,11 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <para>Registers files that have been uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Supports two types of import:</para>
         /// <list type="bullet">
-        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
-        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
-        /// A maximum of 100 files can be imported in a single request.</description></item>
+        /// <item><description><c>LOCAL_UPLOAD</c>: Used with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload process. This operation only registers the files and does not verify whether the files have been actually uploaded. Therefore, you must complete the PUT upload first.</description></item>
+        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. This operation creates an asynchronous import task and returns the <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
+        /// A maximum of 100 files can be processed at a time.</description></item>
         /// </list>
         /// </summary>
         /// 
@@ -118,11 +121,11 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <para>Registers files that have been uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Supports two types of import:</para>
         /// <list type="bullet">
-        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
-        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
-        /// A maximum of 100 files can be imported in a single request.</description></item>
+        /// <item><description><c>LOCAL_UPLOAD</c>: Used with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload process. This operation only registers the files and does not verify whether the files have been actually uploaded. Therefore, you must complete the PUT upload first.</description></item>
+        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. This operation creates an asynchronous import task and returns the <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
+        /// A maximum of 100 files can be processed at a time.</description></item>
         /// </list>
         /// </summary>
         /// 
@@ -197,11 +200,11 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <para>Registers files that have been uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Supports two types of import:</para>
         /// <list type="bullet">
-        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
-        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
-        /// A maximum of 100 files can be imported in a single request.</description></item>
+        /// <item><description><c>LOCAL_UPLOAD</c>: Used with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload process. This operation only registers the files and does not verify whether the files have been actually uploaded. Therefore, you must complete the PUT upload first.</description></item>
+        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. This operation creates an asynchronous import task and returns the <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
+        /// A maximum of 100 files can be processed at a time.</description></item>
         /// </list>
         /// </summary>
         /// 
@@ -221,11 +224,11 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <para>Registers files that have been uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Supports two types of import:</para>
         /// <list type="bullet">
-        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
-        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
-        /// A maximum of 100 files can be imported in a single request.</description></item>
+        /// <item><description><c>LOCAL_UPLOAD</c>: Used with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload process. This operation only registers the files and does not verify whether the files have been actually uploaded. Therefore, you must complete the PUT upload first.</description></item>
+        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. This operation creates an asynchronous import task and returns the <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
+        /// A maximum of 100 files can be processed at a time.</description></item>
         /// </list>
         /// </summary>
         /// 
@@ -245,7 +248,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an <b>OSS pre-signed PUT URL</b> pointing to the knowledge base dedicated storage for each file in <c>Documents</c>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <c>AddDocuments</c> to register the files. A maximum of 100 files can be processed per request.</para>
+        /// <para>Generates an <b>Object Storage Service (OSS) pre-signed PUT URL</b> pointing to the dedicated storage of the knowledge base for each file in <c>Documents</c>. Callers use the URL to upload file content directly to OSS and then call <c>AddDocuments</c> to complete the registration. A maximum of 100 files can be processed at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -299,7 +302,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an <b>OSS pre-signed PUT URL</b> pointing to the knowledge base dedicated storage for each file in <c>Documents</c>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <c>AddDocuments</c> to register the files. A maximum of 100 files can be processed per request.</para>
+        /// <para>Generates an <b>Object Storage Service (OSS) pre-signed PUT URL</b> pointing to the dedicated storage of the knowledge base for each file in <c>Documents</c>. Callers use the URL to upload file content directly to OSS and then call <c>AddDocuments</c> to complete the registration. A maximum of 100 files can be processed at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -353,7 +356,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an <b>OSS pre-signed PUT URL</b> pointing to the knowledge base dedicated storage for each file in <c>Documents</c>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <c>AddDocuments</c> to register the files. A maximum of 100 files can be processed per request.</para>
+        /// <para>Generates an <b>Object Storage Service (OSS) pre-signed PUT URL</b> pointing to the dedicated storage of the knowledge base for each file in <c>Documents</c>. Callers use the URL to upload file content directly to OSS and then call <c>AddDocuments</c> to complete the registration. A maximum of 100 files can be processed at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -372,7 +375,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an <b>OSS pre-signed PUT URL</b> pointing to the knowledge base dedicated storage for each file in <c>Documents</c>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <c>AddDocuments</c> to register the files. A maximum of 100 files can be processed per request.</para>
+        /// <para>Generates an <b>Object Storage Service (OSS) pre-signed PUT URL</b> pointing to the dedicated storage of the knowledge base for each file in <c>Documents</c>. Callers use the URL to upload file content directly to OSS and then call <c>AddDocuments</c> to complete the registration. A maximum of 100 files can be processed at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -391,12 +394,12 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves documents from a knowledge base.</para>
+        /// <para>Searches a knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves documents from a specified knowledge base by question or image. Use DRAFT, LATEST_PUBLISHED, or vN display names for the version. Pass tag filter conditions using the actual backend operators.</para>
+        /// <para>Searches a specified knowledge base by using a text query or an image. For the version parameter, use the display name DRAFT, LATEST_PUBLISHED, or vN. Pass tag filter conditions based on the actual operators used by the backend.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -424,9 +427,17 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
             {
                 body["enableKnowledgeGraph"] = request.EnableKnowledgeGraph;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvidencePageToken))
+            {
+                body["evidencePageToken"] = request.EvidencePageToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
             {
                 body["image"] = request.Image;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeWiki))
+            {
+                body["includeWiki"] = request.IncludeWiki;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -482,12 +493,12 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves documents from a knowledge base.</para>
+        /// <para>Searches a knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves documents from a specified knowledge base by question or image. Use DRAFT, LATEST_PUBLISHED, or vN display names for the version. Pass tag filter conditions using the actual backend operators.</para>
+        /// <para>Searches a specified knowledge base by using a text query or an image. For the version parameter, use the display name DRAFT, LATEST_PUBLISHED, or vN. Pass tag filter conditions based on the actual operators used by the backend.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -515,9 +526,17 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
             {
                 body["enableKnowledgeGraph"] = request.EnableKnowledgeGraph;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvidencePageToken))
+            {
+                body["evidencePageToken"] = request.EvidencePageToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
             {
                 body["image"] = request.Image;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeWiki))
+            {
+                body["includeWiki"] = request.IncludeWiki;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -573,12 +592,12 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves documents from a knowledge base.</para>
+        /// <para>Searches a knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves documents from a specified knowledge base by question or image. Use DRAFT, LATEST_PUBLISHED, or vN display names for the version. Pass tag filter conditions using the actual backend operators.</para>
+        /// <para>Searches a specified knowledge base by using a text query or an image. For the version parameter, use the display name DRAFT, LATEST_PUBLISHED, or vN. Pass tag filter conditions based on the actual operators used by the backend.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -597,12 +616,12 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves documents from a knowledge base.</para>
+        /// <para>Searches a knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves documents from a specified knowledge base by question or image. Use DRAFT, LATEST_PUBLISHED, or vN display names for the version. Pass tag filter conditions using the actual backend operators.</para>
+        /// <para>Searches a specified knowledge base by using a text query or an image. For the version parameter, use the display name DRAFT, LATEST_PUBLISHED, or vN. Pass tag filter conditions based on the actual operators used by the backend.</para>
         /// </description>
         /// 
         /// <param name="request">

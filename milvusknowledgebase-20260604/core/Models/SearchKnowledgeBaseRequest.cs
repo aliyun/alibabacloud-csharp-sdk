@@ -27,7 +27,17 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public bool? EnableKnowledgeGraph { get; set; }
 
         /// <summary>
-        /// <para>The image retrieval input.</para>
+        /// <para>The evidence page token. This parameter is optional and conditionally returned. It can only be passed when includeWiki is set to true. Omit this parameter for the first evidence page, and pass the evidenceNextToken from the previous page as is for subsequent pages. The candidate pool, subject, parameters, and page size are fixed, and the token expires in 5 minutes without renewal. An expired token returns a 409 error and does not trigger an automatic re-search. The pageNumber parameter only controls the legacy results. Constraint: {&quot;minLength&quot;:1,&quot;maxLength&quot;:4096}.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example-opaque-next-token</para>
+        /// </summary>
+        [NameInMap("evidencePageToken")]
+        [Validation(Required=false)]
+        public string EvidencePageToken { get; set; }
+
+        /// <summary>
+        /// <para>The image search input.</para>
         /// </summary>
         [NameInMap("image")]
         [Validation(Required=false)]
@@ -66,6 +76,16 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         }
 
         /// <summary>
+        /// <para>Specifies whether to use Wiki evidence. This parameter is optional and conditionally returned, and is added for backward compatibility. Default value: false. If set to true, a unified evidenceResults field is additionally returned without disguising Wiki content as original text. Constraint: {&quot;default&quot;:false}.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("includeWiki")]
+        [Validation(Required=false)]
+        public bool? IncludeWiki { get; set; }
+
+        /// <summary>
         /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +96,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -86,7 +106,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The retrieval query.</para>
+        /// <para>The search query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>What is the tax amount on the invoice?</para>
@@ -96,7 +116,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The reranking model ID.</para>
+        /// <para>The rerank model ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -106,7 +126,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public long? RerankModelId { get; set; }
 
         /// <summary>
-        /// <para>The name of a reranking model that the tenant has activated. If both rerankModelName and rerankModelId are specified, this parameter takes precedence.</para>
+        /// <para>The name of the rerank model activated for the tenant. If both rerankModelId and this parameter are specified, this parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-rerank</para>
@@ -123,7 +143,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public SearchKnowledgeBaseRequestRetrievalConfig RetrievalConfig { get; set; }
         public class SearchKnowledgeBaseRequestRetrievalConfig : TeaModel {
             /// <summary>
-            /// <para>The number of candidate recall results.</para>
+            /// <para>The number of candidates to recall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -131,6 +151,16 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             [NameInMap("candidateCount")]
             [Validation(Required=false)]
             public int? CandidateCount { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether to enable multi-hop evidence completion. Default value: false. For pilot knowledge bases, this feature can be used on the first page of DRAFT text retrieval. The pageSize can be 5, 10, or 20, which requires a minimum candidateCount of 40, 48, or 64, respectively. When enabled, results are returned by document.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("enableEvidenceCompletion")]
+            [Validation(Required=false)]
+            public bool? EnableEvidenceCompletion { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to enable query expansion.</para>
@@ -153,7 +183,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public float? MinScore { get; set; }
 
             /// <summary>
-            /// <para>The weight of semantic relevance.</para>
+            /// <para>The weight for semantic relevance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -218,7 +248,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             }
 
             /// <summary>
-            /// <para>The logical relation between conditions.</para>
+            /// <para>The condition relation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>or</para>
