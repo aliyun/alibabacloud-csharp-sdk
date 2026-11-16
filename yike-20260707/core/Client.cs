@@ -42,12 +42,161 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about multiple media assets in a batch.</para>
+        /// <para>Adds members to a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <para>Adds users under the same Alibaba Cloud account to a specified project in the default workspace of the Alibaba Cloud account, and grants the Edit permission by default. ProjectId specifies the project ID. YikeUserIds specifies a comma-separated list of Yike user IDs, which are not Alibaba Cloud UIDs. Currently, only the default workspace of the Alibaba Cloud account is supported, and projects in newly created workspaces are not supported. This operation follows the behavior of the original member API operation: adding an existing member resets the project permissions. Regular members are assigned the Edit permission, and SuperAdmins of the default workspace retain the Manage permission. Only Alibaba Cloud accounts that have activated ProductionOpenAPI are supported. Default Alibaba Cloud account projects (pd_Alibaba Cloud account ID) are not supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddProjectMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddProjectMembersResponse
+        /// </returns>
+        public AddProjectMembersResponse AddProjectMembersWithOptions(AddProjectMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeUserIds))
+            {
+                query["YikeUserIds"] = request.YikeUserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddProjectMembers",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddProjectMembersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds users under the same Alibaba Cloud account to a specified project in the default workspace of the Alibaba Cloud account, and grants the Edit permission by default. ProjectId specifies the project ID. YikeUserIds specifies a comma-separated list of Yike user IDs, which are not Alibaba Cloud UIDs. Currently, only the default workspace of the Alibaba Cloud account is supported, and projects in newly created workspaces are not supported. This operation follows the behavior of the original member API operation: adding an existing member resets the project permissions. Regular members are assigned the Edit permission, and SuperAdmins of the default workspace retain the Manage permission. Only Alibaba Cloud accounts that have activated ProductionOpenAPI are supported. Default Alibaba Cloud account projects (pd_Alibaba Cloud account ID) are not supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddProjectMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddProjectMembersResponse
+        /// </returns>
+        public async Task<AddProjectMembersResponse> AddProjectMembersWithOptionsAsync(AddProjectMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeUserIds))
+            {
+                query["YikeUserIds"] = request.YikeUserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddProjectMembers",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddProjectMembersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds users under the same Alibaba Cloud account to a specified project in the default workspace of the Alibaba Cloud account, and grants the Edit permission by default. ProjectId specifies the project ID. YikeUserIds specifies a comma-separated list of Yike user IDs, which are not Alibaba Cloud UIDs. Currently, only the default workspace of the Alibaba Cloud account is supported, and projects in newly created workspaces are not supported. This operation follows the behavior of the original member API operation: adding an existing member resets the project permissions. Regular members are assigned the Edit permission, and SuperAdmins of the default workspace retain the Manage permission. Only Alibaba Cloud accounts that have activated ProductionOpenAPI are supported. Default Alibaba Cloud account projects (pd_Alibaba Cloud account ID) are not supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddProjectMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddProjectMembersResponse
+        /// </returns>
+        public AddProjectMembersResponse AddProjectMembers(AddProjectMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddProjectMembersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds members to a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds users under the same Alibaba Cloud account to a specified project in the default workspace of the Alibaba Cloud account, and grants the Edit permission by default. ProjectId specifies the project ID. YikeUserIds specifies a comma-separated list of Yike user IDs, which are not Alibaba Cloud UIDs. Currently, only the default workspace of the Alibaba Cloud account is supported, and projects in newly created workspaces are not supported. This operation follows the behavior of the original member API operation: adding an existing member resets the project permissions. Regular members are assigned the Edit permission, and SuperAdmins of the default workspace retain the Manage permission. Only Alibaba Cloud accounts that have activated ProductionOpenAPI are supported. Default Alibaba Cloud account projects (pd_Alibaba Cloud account ID) are not supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddProjectMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddProjectMembersResponse
+        /// </returns>
+        public async Task<AddProjectMembersResponse> AddProjectMembersAsync(AddProjectMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddProjectMembersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the information of multiple media assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -101,12 +250,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about multiple media assets in a batch.</para>
+        /// <para>Retrieves the information of multiple media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -160,12 +310,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about multiple media assets in a batch.</para>
+        /// <para>Retrieves the information of multiple media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -183,12 +334,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about multiple media assets in a batch.</para>
+        /// <para>Retrieves the information of multiple media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -206,7 +358,147 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an AI generation task.</para>
+        /// <para>Queries video character replacement jobs in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and results of video character replacement jobs in batches. JobIds is a comma-separated string of job IDs. The response includes a JobList. The input parameters for each job are located in the AppInputConfig field. For the single query operation GetVideoCharacterReplaceJob, the corresponding field is AppParams. When the Status is Finished, you can retrieve the output media assets from Result.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchGetVideoCharacterReplaceJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetVideoCharacterReplaceJobsResponse
+        /// </returns>
+        public BatchGetVideoCharacterReplaceJobsResponse BatchGetVideoCharacterReplaceJobsWithOptions(BatchGetVideoCharacterReplaceJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetVideoCharacterReplaceJobs",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetVideoCharacterReplaceJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries video character replacement jobs in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and results of video character replacement jobs in batches. JobIds is a comma-separated string of job IDs. The response includes a JobList. The input parameters for each job are located in the AppInputConfig field. For the single query operation GetVideoCharacterReplaceJob, the corresponding field is AppParams. When the Status is Finished, you can retrieve the output media assets from Result.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchGetVideoCharacterReplaceJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetVideoCharacterReplaceJobsResponse
+        /// </returns>
+        public async Task<BatchGetVideoCharacterReplaceJobsResponse> BatchGetVideoCharacterReplaceJobsWithOptionsAsync(BatchGetVideoCharacterReplaceJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobIds))
+            {
+                query["JobIds"] = request.JobIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetVideoCharacterReplaceJobs",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetVideoCharacterReplaceJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries video character replacement jobs in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and results of video character replacement jobs in batches. JobIds is a comma-separated string of job IDs. The response includes a JobList. The input parameters for each job are located in the AppInputConfig field. For the single query operation GetVideoCharacterReplaceJob, the corresponding field is AppParams. When the Status is Finished, you can retrieve the output media assets from Result.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchGetVideoCharacterReplaceJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetVideoCharacterReplaceJobsResponse
+        /// </returns>
+        public BatchGetVideoCharacterReplaceJobsResponse BatchGetVideoCharacterReplaceJobs(BatchGetVideoCharacterReplaceJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchGetVideoCharacterReplaceJobsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries video character replacement jobs in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and results of video character replacement jobs in batches. JobIds is a comma-separated string of job IDs. The response includes a JobList. The input parameters for each job are located in the AppInputConfig field. For the single query operation GetVideoCharacterReplaceJob, the corresponding field is AppParams. When the Status is Finished, you can retrieve the output media assets from Result.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchGetVideoCharacterReplaceJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetVideoCharacterReplaceJobsResponse
+        /// </returns>
+        public async Task<BatchGetVideoCharacterReplaceJobsResponse> BatchGetVideoCharacterReplaceJobsAsync(BatchGetVideoCharacterReplaceJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchGetVideoCharacterReplaceJobsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -248,7 +540,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an AI generation task.</para>
+        /// <para>Cancels a generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -290,7 +582,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an AI generation task.</para>
+        /// <para>Cancels a generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -308,7 +600,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an AI generation task.</para>
+        /// <para>Cancels a generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -331,7 +623,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
+        /// <para>Categories support up to three levels of hierarchy, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -382,7 +674,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
+        /// <para>Categories support up to three levels of hierarchy, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -433,7 +725,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
+        /// <para>Categories support up to three levels of hierarchy, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -456,7 +748,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
+        /// <para>Categories support up to three levels of hierarchy, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -479,8 +771,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -504,6 +796,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
             {
                 query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
@@ -539,8 +835,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -564,6 +860,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
             {
                 query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
@@ -599,8 +899,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -623,8 +923,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -642,12 +942,308 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a project in a specified workspace and returns the ProjectId. If WorkspaceId is not specified, the default workspace of the current account is used. After the project is created, you can call GetProject to query the details or call ListProjects to list projects.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectResponse
+        /// </returns>
+        public CreateProjectResponse CreateProjectWithOptions(CreateProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProject",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a project in a specified workspace and returns the ProjectId. If WorkspaceId is not specified, the default workspace of the current account is used. After the project is created, you can call GetProject to query the details or call ListProjects to list projects.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectResponse
+        /// </returns>
+        public async Task<CreateProjectResponse> CreateProjectWithOptionsAsync(CreateProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateProject",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a project in a specified workspace and returns the ProjectId. If WorkspaceId is not specified, the default workspace of the current account is used. After the project is created, you can call GetProject to query the details or call ListProjects to list projects.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectResponse
+        /// </returns>
+        public CreateProjectResponse CreateProject(CreateProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a project in a specified workspace and returns the ProjectId. If WorkspaceId is not specified, the default workspace of the current account is used. After the project is created, you can call GetProject to query the details or call ListProjects to list projects.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateProjectResponse
+        /// </returns>
+        public async Task<CreateProjectResponse> CreateProjectAsync(CreateProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a studio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a studio and triggers automatic creation of a default project for the studio. Returns the WorkspaceId and the ProjectId of the default project. You can directly use the ProjectId without creating the default project again.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public CreateWorkspaceResponse CreateWorkspaceWithOptions(CreateWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCountLimit))
+            {
+                query["UserCountLimit"] = request.UserCountLimit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspace",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a studio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a studio and triggers automatic creation of a default project for the studio. Returns the WorkspaceId and the ProjectId of the default project. You can directly use the ProjectId without creating the default project again.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceWithOptionsAsync(CreateWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCountLimit))
+            {
+                query["UserCountLimit"] = request.UserCountLimit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspace",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a studio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a studio and triggers automatic creation of a default project for the studio. Returns the WorkspaceId and the ProjectId of the default project. You can directly use the ProjectId without creating the default project again.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public CreateWorkspaceResponse CreateWorkspace(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a studio.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a studio and triggers automatic creation of a default project for the studio. Returns the WorkspaceId and the ProjectId of the default project. You can directly use the ProjectId without creating the default project again.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceAsync(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</para>
+        /// <para>This operation also deletes its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -694,7 +1290,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</para>
+        /// <para>This operation also deletes its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -741,7 +1337,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</para>
+        /// <para>This operation also deletes its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -764,7 +1360,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</para>
+        /// <para>This operation also deletes its subcategories, including level-2 and level-3 subcategories. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -787,8 +1383,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -835,8 +1431,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -883,8 +1479,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -907,8 +1503,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1070,13 +1666,157 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a login token for an enterprise account.</para>
+        /// <para>Deletes a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a project by ProjectId. The caller must have project management permissions.
+        /// Default projects cannot be deleted. If you attempt to delete a default project, DefaultProductionNotSupported is returned. This operation marks the project as deleted and does not physically delete all assets in the project.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public DeleteProjectResponse DeleteProjectWithOptions(DeleteProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProject",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a project by ProjectId. The caller must have project management permissions.
+        /// Default projects cannot be deleted. If you attempt to delete a default project, DefaultProductionNotSupported is returned. This operation marks the project as deleted and does not physically delete all assets in the project.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public async Task<DeleteProjectResponse> DeleteProjectWithOptionsAsync(DeleteProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProject",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a project by ProjectId. The caller must have project management permissions.
+        /// Default projects cannot be deleted. If you attempt to delete a default project, DefaultProductionNotSupported is returned. This operation marks the project as deleted and does not physically delete all assets in the project.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public DeleteProjectResponse DeleteProject(DeleteProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a project by ProjectId. The caller must have project management permissions.
+        /// Default projects cannot be deleted. If you attempt to delete a default project, DefaultProductionNotSupported is returned. This operation marks the project as deleted and does not physically delete all assets in the project.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public async Task<DeleteProjectResponse> DeleteProjectAsync(DeleteProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the logon token for an enterprise account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></para>
+        /// <para>Notice:  The AI generation-related API operations in the current 2026-03-19 API version will be retired soon. Upgrade to the 2026-07-07 API version.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1147,13 +1887,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a login token for an enterprise account.</para>
+        /// <para>Retrieves the logon token for an enterprise account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></para>
+        /// <para>Notice:  The AI generation-related API operations in the current 2026-03-19 API version will be retired soon. Upgrade to the 2026-07-07 API version.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1224,13 +1964,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a login token for an enterprise account.</para>
+        /// <para>Retrieves the logon token for an enterprise account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></para>
+        /// <para>Notice:  The AI generation-related API operations in the current 2026-03-19 API version will be retired soon. Upgrade to the 2026-07-07 API version.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1249,13 +1989,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a login token for an enterprise account.</para>
+        /// <para>Retrieves the logon token for an enterprise account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></para>
+        /// <para>Notice:  The AI generation-related API operations in the current 2026-03-19 API version will be retired soon. Upgrade to the 2026-07-07 API version.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1274,7 +2014,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an agent asynchronous task.</para>
+        /// <para>Queries an asynchronous task of the agent node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1316,7 +2056,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an agent asynchronous task.</para>
+        /// <para>Queries an asynchronous task of the agent node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1358,7 +2098,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an agent asynchronous task.</para>
+        /// <para>Queries an asynchronous task of the agent node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1376,7 +2116,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an agent asynchronous task.</para>
+        /// <para>Queries an asynchronous task of the agent node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1394,7 +2134,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</para>
+        /// <para>Retrieves the details of a specified category and a list of its subcategories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1436,7 +2176,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</para>
+        /// <para>Retrieves the details of a specified category and a list of its subcategories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1478,7 +2218,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</para>
+        /// <para>Retrieves the details of a specified category and a list of its subcategories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1496,7 +2236,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</para>
+        /// <para>Retrieves the details of a specified category and a list of its subcategories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1639,8 +2379,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1687,8 +2427,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1735,8 +2475,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1759,8 +2499,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1778,13 +2518,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media asset.</para>
+        /// <para>Queries media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query a media content analysis job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1838,13 +2578,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media asset.</para>
+        /// <para>Queries media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query a media content analysis job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1898,13 +2638,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media asset.</para>
+        /// <para>Queries media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query a media content analysis job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1922,13 +2662,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media asset.</para>
+        /// <para>Queries media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query a media content analysis job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2090,6 +2830,146 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the basic information of a project and the project permissions of the current caller by ProjectId. The project information is located in the Project object of the response and does not include the project asset list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectResponse
+        /// </returns>
+        public GetProjectResponse GetProjectWithOptions(GetProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProject",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the basic information of a project and the project permissions of the current caller by ProjectId. The project information is located in the Project object of the response and does not include the project asset list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectResponse
+        /// </returns>
+        public async Task<GetProjectResponse> GetProjectWithOptionsAsync(GetProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetProject",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the basic information of a project and the project permissions of the current caller by ProjectId. The project information is located in the Project object of the response and does not include the project asset list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectResponse
+        /// </returns>
+        public GetProjectResponse GetProject(GetProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the basic information of a project and the project permissions of the current caller by ProjectId. The project information is located in the Project object of the response and does not include the project asset list.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetProjectResponse
+        /// </returns>
+        public async Task<GetProjectResponse> GetProjectAsync(GetProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a creative script generation task.</para>
         /// </summary>
         /// 
@@ -2210,7 +3090,151 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video creative generation job.</para>
+        /// <para>Queries a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and result of a single task by using the JobId returned by the submit operation. When Status is Finished, you can read the output media assets in Result. Executing indicates that the task is still running.
+        /// This operation uses AppParams to return the task input parameters. The corresponding field name in the batch query operation is AppInputConfig. The output results are categorized into ImageResult, VideoResult, and AudioResult. Each item contains MediaId and OutputUrl.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoCharacterReplaceJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCharacterReplaceJobResponse
+        /// </returns>
+        public GetVideoCharacterReplaceJobResponse GetVideoCharacterReplaceJobWithOptions(GetVideoCharacterReplaceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoCharacterReplaceJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoCharacterReplaceJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and result of a single task by using the JobId returned by the submit operation. When Status is Finished, you can read the output media assets in Result. Executing indicates that the task is still running.
+        /// This operation uses AppParams to return the task input parameters. The corresponding field name in the batch query operation is AppInputConfig. The output results are categorized into ImageResult, VideoResult, and AudioResult. Each item contains MediaId and OutputUrl.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoCharacterReplaceJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCharacterReplaceJobResponse
+        /// </returns>
+        public async Task<GetVideoCharacterReplaceJobResponse> GetVideoCharacterReplaceJobWithOptionsAsync(GetVideoCharacterReplaceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoCharacterReplaceJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoCharacterReplaceJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and result of a single task by using the JobId returned by the submit operation. When Status is Finished, you can read the output media assets in Result. Executing indicates that the task is still running.
+        /// This operation uses AppParams to return the task input parameters. The corresponding field name in the batch query operation is AppInputConfig. The output results are categorized into ImageResult, VideoResult, and AudioResult. Each item contains MediaId and OutputUrl.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoCharacterReplaceJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCharacterReplaceJobResponse
+        /// </returns>
+        public GetVideoCharacterReplaceJobResponse GetVideoCharacterReplaceJob(GetVideoCharacterReplaceJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVideoCharacterReplaceJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status and result of a single task by using the JobId returned by the submit operation. When Status is Finished, you can read the output media assets in Result. Executing indicates that the task is still running.
+        /// This operation uses AppParams to return the task input parameters. The corresponding field name in the batch query operation is AppInputConfig. The output results are categorized into ImageResult, VideoResult, and AudioResult. Each item contains MediaId and OutputUrl.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoCharacterReplaceJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCharacterReplaceJobResponse
+        /// </returns>
+        public async Task<GetVideoCharacterReplaceJobResponse> GetVideoCharacterReplaceJobAsync(GetVideoCharacterReplaceJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVideoCharacterReplaceJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries video creative generation jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2252,7 +3276,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video creative generation job.</para>
+        /// <para>Queries video creative generation jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2294,7 +3318,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video creative generation job.</para>
+        /// <para>Queries video creative generation jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2312,7 +3336,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video creative generation job.</para>
+        /// <para>Queries video creative generation jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2330,12 +3354,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status, input parameters, and video result of a video text erasure task.</para>
+        /// <para>Queries the status, input parameters, and video results of a video text removal job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and desired state result of a video text erasure task based on <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video text removal job based on the <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2377,12 +3401,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status, input parameters, and video result of a video text erasure task.</para>
+        /// <para>Queries the status, input parameters, and video results of a video text removal job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and desired state result of a video text erasure task based on <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video text removal job based on the <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2424,12 +3448,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status, input parameters, and video result of a video text erasure task.</para>
+        /// <para>Queries the status, input parameters, and video results of a video text removal job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and desired state result of a video text erasure task based on <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video text removal job based on the <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2447,12 +3471,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status, input parameters, and video result of a video text erasure task.</para>
+        /// <para>Queries the status, input parameters, and video results of a video text removal job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and desired state result of a video text erasure task based on <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video text removal job based on the <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2470,7 +3494,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video generation task.</para>
+        /// <para>Queries a video generation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2516,7 +3540,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video generation task.</para>
+        /// <para>Queries a video generation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2562,7 +3586,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video generation task.</para>
+        /// <para>Queries a video generation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2580,7 +3604,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video generation task.</para>
+        /// <para>Queries a video generation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2594,6 +3618,146 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetVideoGenerationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a content understanding and creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task status based on the JobId returned by SubmitVideoRemakeJob. Upon completion, returns the download URLs of the JSON files for the video content understanding results and the creative script. If the task fails, returns ErrorCode and ErrorMessage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoRemakeJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoRemakeJobResponse
+        /// </returns>
+        public GetVideoRemakeJobResponse GetVideoRemakeJobWithOptions(GetVideoRemakeJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoRemakeJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoRemakeJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a content understanding and creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task status based on the JobId returned by SubmitVideoRemakeJob. Upon completion, returns the download URLs of the JSON files for the video content understanding results and the creative script. If the task fails, returns ErrorCode and ErrorMessage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoRemakeJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoRemakeJobResponse
+        /// </returns>
+        public async Task<GetVideoRemakeJobResponse> GetVideoRemakeJobWithOptionsAsync(GetVideoRemakeJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoRemakeJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoRemakeJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a content understanding and creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task status based on the JobId returned by SubmitVideoRemakeJob. Upon completion, returns the download URLs of the JSON files for the video content understanding results and the creative script. If the task fails, returns ErrorCode and ErrorMessage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoRemakeJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoRemakeJobResponse
+        /// </returns>
+        public GetVideoRemakeJobResponse GetVideoRemakeJob(GetVideoRemakeJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVideoRemakeJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a content understanding and creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task status based on the JobId returned by SubmitVideoRemakeJob. Upon completion, returns the download URLs of the JSON files for the video content understanding results and the creative script. If the task fails, returns ErrorCode and ErrorMessage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoRemakeJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoRemakeJobResponse
+        /// </returns>
+        public async Task<GetVideoRemakeJobResponse> GetVideoRemakeJobAsync(GetVideoRemakeJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVideoRemakeJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2723,7 +3887,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and final results of a video translation job by <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video translation job based on JobId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2770,7 +3934,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and final results of a video translation job by <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video translation job based on JobId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2817,7 +3981,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and final results of a video translation job by <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video translation job based on JobId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2840,7 +4004,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and final results of a video translation job by <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video translation job based on JobId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2858,7 +4022,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the membership plan and credit information for a Yike primary account.</para>
+        /// <para>Retrieves the membership plan and credit information of the Yike main account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2892,7 +4056,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the membership plan and credit information for a Yike primary account.</para>
+        /// <para>Retrieves the membership plan and credit information of the Yike main account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2926,7 +4090,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the membership plan and credit information for a Yike primary account.</para>
+        /// <para>Retrieves the membership plan and credit information of the Yike main account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2944,7 +4108,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the membership plan and credit information for a Yike primary account.</para>
+        /// <para>Retrieves the membership plan and credit information of the Yike main account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2962,7 +4126,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the actual credit consumption of a task.</para>
+        /// <para>Queries the actual credits consumed by a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3004,7 +4168,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the actual credit consumption of a task.</para>
+        /// <para>Queries the actual credits consumed by a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3046,7 +4210,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the actual credit consumption of a task.</para>
+        /// <para>Queries the actual credits consumed by a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3064,7 +4228,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the actual credit consumption of a task.</para>
+        /// <para>Queries the actual credits consumed by a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3082,13 +4246,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a media asset.</para>
+        /// <para>Imports media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API is used to query media content analysis jobs.</para>
+        /// <para>This API operation queries media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3149,6 +4313,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["Overwrite"] = request.Overwrite;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegisterConfig))
             {
                 query["RegisterConfig"] = request.RegisterConfig;
@@ -3186,13 +4354,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a media asset.</para>
+        /// <para>Imports media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API is used to query media content analysis jobs.</para>
+        /// <para>This API operation queries media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3253,6 +4421,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["Overwrite"] = request.Overwrite;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegisterConfig))
             {
                 query["RegisterConfig"] = request.RegisterConfig;
@@ -3290,13 +4462,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a media asset.</para>
+        /// <para>Imports media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API is used to query media content analysis jobs.</para>
+        /// <para>This API operation queries media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3314,13 +4486,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a media asset.</para>
+        /// <para>Imports media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API is used to query media content analysis jobs.</para>
+        /// <para>This API operation queries media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3338,7 +4510,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paged list of categories.</para>
+        /// <para>Retrieves a paginated list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3384,7 +4556,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paged list of categories.</para>
+        /// <para>Retrieves a paginated list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3430,7 +4602,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paged list of categories.</para>
+        /// <para>Retrieves a paginated list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3448,7 +4620,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paged list of categories.</para>
+        /// <para>Retrieves a paginated list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3472,7 +4644,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API operation queries media asset content understanding jobs.</para>
+        /// <para>This operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3544,7 +4716,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API operation queries media asset content understanding jobs.</para>
+        /// <para>This operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3616,7 +4788,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API operation queries media asset content understanding jobs.</para>
+        /// <para>This operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3640,7 +4812,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API operation queries media asset content understanding jobs.</para>
+        /// <para>This operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3658,7 +4830,467 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media assets that match the specified parameters.</para>
+        /// <para>Queries the list of projects.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of projects accessible to the current caller. You can use WorkspaceId to filter projects by workspace.
+        /// For pagination, specify both PageNo and PageSize with valid positive integers starting from 1. If valid values are not provided for both parameters, the query defaults to page 1 with 10 entries per page. The response returns ProjectList but does not return TotalCount. MaxResults and NextToken are retained for compatibility and are not used for current pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
+        public ListProjectsResponse ListProjectsWithOptions(ListProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProjects",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of projects.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of projects accessible to the current caller. You can use WorkspaceId to filter projects by workspace.
+        /// For pagination, specify both PageNo and PageSize with valid positive integers starting from 1. If valid values are not provided for both parameters, the query defaults to page 1 with 10 entries per page. The response returns ProjectList but does not return TotalCount. MaxResults and NextToken are retained for compatibility and are not used for current pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
+        public async Task<ListProjectsResponse> ListProjectsWithOptionsAsync(ListProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListProjects",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListProjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of projects.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of projects accessible to the current caller. You can use WorkspaceId to filter projects by workspace.
+        /// For pagination, specify both PageNo and PageSize with valid positive integers starting from 1. If valid values are not provided for both parameters, the query defaults to page 1 with 10 entries per page. The response returns ProjectList but does not return TotalCount. MaxResults and NextToken are retained for compatibility and are not used for current pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
+        public ListProjectsResponse ListProjects(ListProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListProjectsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of projects.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of projects accessible to the current caller. You can use WorkspaceId to filter projects by workspace.
+        /// For pagination, specify both PageNo and PageSize with valid positive integers starting from 1. If valid values are not provided for both parameters, the query defaults to page 1 with 10 entries per page. The response returns ProjectList but does not return TotalCount. MaxResults and NextToken are retained for compatibility and are not used for current pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProjectsResponse
+        /// </returns>
+        public async Task<ListProjectsResponse> ListProjectsAsync(ListProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListProjectsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workspaces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of workspaces accessible to the current caller. Pagination is supported by using PageNo and PageSize. The default value of PageNo is 1, and the default value of PageSize is 10. The response includes WorkspaceList and TotalCount. The ID of the default project for a workspace is returned in the DefaultProjectId field.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
+        public ListWorkspacesResponse ListWorkspacesWithOptions(ListWorkspacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkspaces",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkspacesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workspaces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of workspaces accessible to the current caller. Pagination is supported by using PageNo and PageSize. The default value of PageNo is 1, and the default value of PageSize is 10. The response includes WorkspaceList and TotalCount. The ID of the default project for a workspace is returned in the DefaultProjectId field.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
+        public async Task<ListWorkspacesResponse> ListWorkspacesWithOptionsAsync(ListWorkspacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkspaces",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkspacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workspaces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of workspaces accessible to the current caller. Pagination is supported by using PageNo and PageSize. The default value of PageNo is 1, and the default value of PageSize is 10. The response includes WorkspaceList and TotalCount. The ID of the default project for a workspace is returned in the DefaultProjectId field.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
+        public ListWorkspacesResponse ListWorkspaces(ListWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkspacesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workspaces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of workspaces accessible to the current caller. Pagination is supported by using PageNo and PageSize. The default value of PageNo is 1, and the default value of PageSize is 10. The response includes WorkspaceList and TotalCount. The ID of the default project for a workspace is returned in the DefaultProjectId field.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
+        public async Task<ListWorkspacesResponse> ListWorkspacesAsync(ListWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkspacesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pre-validates a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates the input materials of a specified application before submitting a task. AppParams is a JSON-serialized string. The field names must be consistent with the input definition of the application corresponding to AppId. Image, audio, and video materials must match the input types and be accessible.
+        /// If Status is Success, the validation passes and Result is an empty array. If Status is Failed, Result returns the failed parameter Key and ErrorCode for each item. This operation does not create a task. After the validation passes, call SubmitVideoCharacterReplaceJob to submit the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PrecheckVideoCharacterReplaceJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckVideoCharacterReplaceJobResponse
+        /// </returns>
+        public PrecheckVideoCharacterReplaceJobResponse PrecheckVideoCharacterReplaceJobWithOptions(PrecheckVideoCharacterReplaceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppParams))
+            {
+                query["AppParams"] = request.AppParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrecheckVideoCharacterReplaceJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrecheckVideoCharacterReplaceJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pre-validates a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates the input materials of a specified application before submitting a task. AppParams is a JSON-serialized string. The field names must be consistent with the input definition of the application corresponding to AppId. Image, audio, and video materials must match the input types and be accessible.
+        /// If Status is Success, the validation passes and Result is an empty array. If Status is Failed, Result returns the failed parameter Key and ErrorCode for each item. This operation does not create a task. After the validation passes, call SubmitVideoCharacterReplaceJob to submit the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PrecheckVideoCharacterReplaceJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckVideoCharacterReplaceJobResponse
+        /// </returns>
+        public async Task<PrecheckVideoCharacterReplaceJobResponse> PrecheckVideoCharacterReplaceJobWithOptionsAsync(PrecheckVideoCharacterReplaceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppParams))
+            {
+                query["AppParams"] = request.AppParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrecheckVideoCharacterReplaceJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrecheckVideoCharacterReplaceJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pre-validates a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates the input materials of a specified application before submitting a task. AppParams is a JSON-serialized string. The field names must be consistent with the input definition of the application corresponding to AppId. Image, audio, and video materials must match the input types and be accessible.
+        /// If Status is Success, the validation passes and Result is an empty array. If Status is Failed, Result returns the failed parameter Key and ErrorCode for each item. This operation does not create a task. After the validation passes, call SubmitVideoCharacterReplaceJob to submit the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PrecheckVideoCharacterReplaceJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckVideoCharacterReplaceJobResponse
+        /// </returns>
+        public PrecheckVideoCharacterReplaceJobResponse PrecheckVideoCharacterReplaceJob(PrecheckVideoCharacterReplaceJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PrecheckVideoCharacterReplaceJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pre-validates a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates the input materials of a specified application before submitting a task. AppParams is a JSON-serialized string. The field names must be consistent with the input definition of the application corresponding to AppId. Image, audio, and video materials must match the input types and be accessible.
+        /// If Status is Success, the validation passes and Result is an empty array. If Status is Failed, Result returns the failed parameter Key and ErrorCode for each item. This operation does not create a task. After the validation passes, call SubmitVideoCharacterReplaceJob to submit the task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PrecheckVideoCharacterReplaceJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckVideoCharacterReplaceJobResponse
+        /// </returns>
+        public async Task<PrecheckVideoCharacterReplaceJobResponse> PrecheckVideoCharacterReplaceJobAsync(PrecheckVideoCharacterReplaceJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PrecheckVideoCharacterReplaceJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves media asset information that matches the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3695,6 +5327,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollToken))
             {
                 query["ScrollToken"] = request.ScrollToken;
@@ -3724,7 +5360,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media assets that match the specified parameters.</para>
+        /// <para>Retrieves media asset information that matches the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3761,6 +5397,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollToken))
             {
                 query["ScrollToken"] = request.ScrollToken;
@@ -3790,7 +5430,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media assets that match the specified parameters.</para>
+        /// <para>Retrieves media asset information that matches the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3808,7 +5448,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media assets that match the specified parameters.</para>
+        /// <para>Retrieves media asset information that matches the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3826,7 +5466,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an agent asynchronous node.</para>
+        /// <para>Submits an asynchronous task for an agent node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3888,7 +5528,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an agent asynchronous node.</para>
+        /// <para>Submits an asynchronous task for an agent node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3950,7 +5590,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an agent asynchronous node.</para>
+        /// <para>Submits an asynchronous task for an agent node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3968,7 +5608,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an agent asynchronous node.</para>
+        /// <para>Submits an asynchronous task for an agent node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3986,7 +5626,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image generation request.</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4064,7 +5704,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image generation request.</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4142,7 +5782,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image generation request.</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4160,7 +5800,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image generation request.</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4351,7 +5991,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</para>
+        /// <para>This API generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4406,7 +6046,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</para>
+        /// <para>This API generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4461,7 +6101,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</para>
+        /// <para>This API generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4484,7 +6124,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</para>
+        /// <para>This API generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4498,6 +6138,174 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitRemakeScriptJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits a video character replacement node via asynchronous commit. Invoke PrecheckVideoCharacterReplaceJob with the same AppId and AppParams to validate the input assets first.
+        /// The returned JobId only indicates that the node is submitted, not completed. Use GetVideoCharacterReplaceJob or BatchGetVideoCharacterReplaceJobs to query the status and output results. ProjectId specifies the project, and FolderId specifies the file folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoCharacterReplaceJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoCharacterReplaceJobResponse
+        /// </returns>
+        public SubmitVideoCharacterReplaceJobResponse SubmitVideoCharacterReplaceJobWithOptions(SubmitVideoCharacterReplaceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppParams))
+            {
+                body["AppParams"] = request.AppParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                body["FolderId"] = request.FolderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoCharacterReplaceJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoCharacterReplaceJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits a video character replacement node via asynchronous commit. Invoke PrecheckVideoCharacterReplaceJob with the same AppId and AppParams to validate the input assets first.
+        /// The returned JobId only indicates that the node is submitted, not completed. Use GetVideoCharacterReplaceJob or BatchGetVideoCharacterReplaceJobs to query the status and output results. ProjectId specifies the project, and FolderId specifies the file folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoCharacterReplaceJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoCharacterReplaceJobResponse
+        /// </returns>
+        public async Task<SubmitVideoCharacterReplaceJobResponse> SubmitVideoCharacterReplaceJobWithOptionsAsync(SubmitVideoCharacterReplaceJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppParams))
+            {
+                body["AppParams"] = request.AppParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FolderId))
+            {
+                body["FolderId"] = request.FolderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoCharacterReplaceJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoCharacterReplaceJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits a video character replacement node via asynchronous commit. Invoke PrecheckVideoCharacterReplaceJob with the same AppId and AppParams to validate the input assets first.
+        /// The returned JobId only indicates that the node is submitted, not completed. Use GetVideoCharacterReplaceJob or BatchGetVideoCharacterReplaceJobs to query the status and output results. ProjectId specifies the project, and FolderId specifies the file folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoCharacterReplaceJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoCharacterReplaceJobResponse
+        /// </returns>
+        public SubmitVideoCharacterReplaceJobResponse SubmitVideoCharacterReplaceJob(SubmitVideoCharacterReplaceJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitVideoCharacterReplaceJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video character replacement task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits a video character replacement node via asynchronous commit. Invoke PrecheckVideoCharacterReplaceJob with the same AppId and AppParams to validate the input assets first.
+        /// The returned JobId only indicates that the node is submitted, not completed. Use GetVideoCharacterReplaceJob or BatchGetVideoCharacterReplaceJobs to query the status and output results. ProjectId specifies the project, and FolderId specifies the file folder.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoCharacterReplaceJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoCharacterReplaceJobResponse
+        /// </returns>
+        public async Task<SubmitVideoCharacterReplaceJobResponse> SubmitVideoCharacterReplaceJobAsync(SubmitVideoCharacterReplaceJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitVideoCharacterReplaceJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4686,12 +6494,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</para>
+        /// <para>Submits an asynchronous video text erasure task that supports full-area erasure, time ranges, and specified regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</para>
+        /// <para>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4749,12 +6557,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</para>
+        /// <para>Submits an asynchronous video text erasure task that supports full-area erasure, time ranges, and specified regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</para>
+        /// <para>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4812,12 +6620,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</para>
+        /// <para>Submits an asynchronous video text erasure task that supports full-area erasure, time ranges, and specified regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</para>
+        /// <para>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4835,12 +6643,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</para>
+        /// <para>Submits an asynchronous video text erasure task that supports full-area erasure, time ranges, and specified regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</para>
+        /// <para>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5066,6 +6874,162 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Submits a content understanding and creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits the original video and remake information such as new products and characters to asynchronously complete video content understanding and creative script generation. Uses the returned JobId to call GetVideoRemakeJob to query the progress and outputs. Video rendering requires a separate call to SubmitVideoRenderJob.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoRemakeJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoRemakeJobResponse
+        /// </returns>
+        public SubmitVideoRemakeJobResponse SubmitVideoRemakeJobWithOptions(SubmitVideoRemakeJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemakeParams))
+            {
+                query["RemakeParams"] = request.RemakeParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoRemakeJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoRemakeJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a content understanding and creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits the original video and remake information such as new products and characters to asynchronously complete video content understanding and creative script generation. Uses the returned JobId to call GetVideoRemakeJob to query the progress and outputs. Video rendering requires a separate call to SubmitVideoRenderJob.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoRemakeJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoRemakeJobResponse
+        /// </returns>
+        public async Task<SubmitVideoRemakeJobResponse> SubmitVideoRemakeJobWithOptionsAsync(SubmitVideoRemakeJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemakeParams))
+            {
+                query["RemakeParams"] = request.RemakeParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoRemakeJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoRemakeJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a content understanding and creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits the original video and remake information such as new products and characters to asynchronously complete video content understanding and creative script generation. Uses the returned JobId to call GetVideoRemakeJob to query the progress and outputs. Video rendering requires a separate call to SubmitVideoRenderJob.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoRemakeJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoRemakeJobResponse
+        /// </returns>
+        public SubmitVideoRemakeJobResponse SubmitVideoRemakeJob(SubmitVideoRemakeJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitVideoRemakeJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a content understanding and creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits the original video and remake information such as new products and characters to asynchronously complete video content understanding and creative script generation. Uses the returned JobId to call GetVideoRemakeJob to query the progress and outputs. Video rendering requires a separate call to SubmitVideoRenderJob.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoRemakeJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoRemakeJobResponse
+        /// </returns>
+        public async Task<SubmitVideoRemakeJobResponse> SubmitVideoRemakeJobAsync(SubmitVideoRemakeJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitVideoRemakeJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
@@ -5202,12 +7166,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle removal, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</para>
+        /// <para>Submits an asynchronous video translation task. The input supports a media URL or a Yike media asset ID. The task parameters are used to select the source language, target language, and the translation capabilities to be enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5277,12 +7241,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle removal, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</para>
+        /// <para>Submits an asynchronous video translation task. The input supports a media URL or a Yike media asset ID. The task parameters are used to select the source language, target language, and the translation capabilities to be enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5352,12 +7316,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle removal, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</para>
+        /// <para>Submits an asynchronous video translation task. The input supports a media URL or a Yike media asset ID. The task parameters are used to select the source language, target language, and the translation capabilities to be enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5375,12 +7339,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle removal, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</para>
+        /// <para>Submits an asynchronous video translation task. The input supports a media URL or a Yike media asset ID. The task parameters are used to select the source language, target language, and the translation capabilities to be enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5403,7 +7367,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</para>
+        /// <para>After you create a media asset category, you can call this operation to update the name of the category by specifying its ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5454,7 +7418,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</para>
+        /// <para>After you create a media asset category, you can call this operation to update the name of the category by specifying its ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5505,7 +7469,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</para>
+        /// <para>After you create a media asset category, you can call this operation to update the name of the category by specifying its ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5528,7 +7492,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</para>
+        /// <para>After you create a media asset category, you can call this operation to update the name of the category by specifying its ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5551,8 +7515,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5607,8 +7571,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5663,8 +7627,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5687,8 +7651,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5711,8 +7675,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5799,8 +7763,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5887,8 +7851,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5911,8 +7875,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation is used to query media content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5926,6 +7890,154 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateMediaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name of a project specified by ProjectId. Use Title to specify the new name. This operation only supports modifying the project name. You cannot modify the description or cover image. The caller must have edit permissions for the project.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectResponse
+        /// </returns>
+        public UpdateProjectResponse UpdateProjectWithOptions(UpdateProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProject",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name of a project specified by ProjectId. Use Title to specify the new name. This operation only supports modifying the project name. You cannot modify the description or cover image. The caller must have edit permissions for the project.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectResponse
+        /// </returns>
+        public async Task<UpdateProjectResponse> UpdateProjectWithOptionsAsync(UpdateProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProject",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name of a project specified by ProjectId. Use Title to specify the new name. This operation only supports modifying the project name. You cannot modify the description or cover image. The caller must have edit permissions for the project.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectResponse
+        /// </returns>
+        public UpdateProjectResponse UpdateProject(UpdateProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name of a project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name of a project specified by ProjectId. Use Title to specify the new name. This operation only supports modifying the project name. You cannot modify the description or cover image. The caller must have edit permissions for the project.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectResponse
+        /// </returns>
+        public async Task<UpdateProjectResponse> UpdateProjectAsync(UpdateProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateProjectWithOptionsAsync(request, runtime);
         }
 
     }

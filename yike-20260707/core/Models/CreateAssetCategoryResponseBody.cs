@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The category level. The first-level category has a level of 0, the second-level category has a level of 1, and the third-level category has a level of 2.</para>
+            /// <para>The level of the category. The level is 0 for level-1 categories, 1 for level-2 categories, and 2 for level-3 categories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? Level { get; set; }
 
             /// <summary>
-            /// <para>The parent category ID. If the ParentId parameter is set to empty or a value less than 1, the default return value is -1, which indicates that the created category is a root directory.</para>
+            /// <para>The ID of the parent category. If the ParentId parameter is left empty or set to a value less than 1, the default return value is -1, which indicates that the created category is the root folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>

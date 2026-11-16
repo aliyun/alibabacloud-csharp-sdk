@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public double? Duration { get; set; }
 
             /// <summary>
-            /// <para>The editing project ID for single-target-language jobs. For multi-target-language results, retrieve the value from Output.AiResult.ResultMap.</para>
+            /// <para>The ID of the editing project for a single-target-language job. For multi-target-language results, obtain the IDs from Output.AiResult.ResultMap.</para>
             /// 
             /// <b>Example:</b>
             /// <para>editing-project-001</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string EditingProjectId { get; set; }
 
             /// <summary>
-            /// <para>The business error code returned when the job fails. This field is not returned when the job is not in a failed state.</para>
+            /// <para>The business error code returned when the job fails. This parameter is usually not returned for non-failed states.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidInput</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The business error message returned when the job fails. This field is not returned when the job is not in a failed state.</para>
+            /// <para>The business error message returned when the job fails. This parameter is usually not returned for non-failed states.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Input video is invalid.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The normalized input configuration JSON string saved at submission time.</para>
+            /// <para>The normalized JSON string of the input configuration saved upon submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Input { get; set; }
 
             /// <summary>
-            /// <para>The video translation job ID.</para>
+            /// <para>The ID of the video translation job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtj_0123456789abcdef0123456789abcdef</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The normalized job parameters JSON string, including default values supplemented by the service.</para>
+            /// <para>The normalized JSON string of the job parameters, including the default values supplemented by the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;SubtitleFrom&quot;:&quot;default&quot;,&quot;NeedDetext&quot;:false,&quot;NeedVisualTranslate&quot;:false}</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The job output JSON string. On success, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</para>
+            /// <para>The JSON string of the job output. If the job is successful, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;AiResult&quot;:{&quot;ResultMap&quot;:{&quot;en&quot;:{&quot;EditingProjectId&quot;:&quot;editing-project-001&quot;,&quot;MediaURL&quot;:&quot;<a href="https://example.com/video-translation/en/result.mp4%22,%22MediaId%22:%22media-output-001%22%7D%7D%7D%7D">https://example.com/video-translation/en/result.mp4&quot;,&quot;MediaId&quot;:&quot;media-output-001&quot;}}}}</a></para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         }
 
         /// <summary>
-        /// <para>The request ID, used for Tracing Analysis and troubleshooting.</para>
+        /// <para>The request ID used for Tracing Analysis and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>req-vt-get-20260820-001</para>

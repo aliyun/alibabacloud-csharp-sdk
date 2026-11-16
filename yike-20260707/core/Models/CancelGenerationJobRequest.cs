@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class CancelGenerationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID. Only queued tasks can be canceled.</para>
+        /// <para>The ID of the task. Only queued tasks can be canceled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

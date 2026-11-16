@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task status. The value is Canceled.</para>
+        /// <para>The task status, which is Canceled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Canceled</para>

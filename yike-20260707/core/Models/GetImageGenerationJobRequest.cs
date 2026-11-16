@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetImageGenerationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag_68ca759b4903b255*******</para>

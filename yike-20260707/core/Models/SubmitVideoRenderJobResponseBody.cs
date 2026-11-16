@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoRenderJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is returned when the task is in the Failed state.</para>
+        /// <para>The error code. This parameter is returned when the job is in the Failed state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

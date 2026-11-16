@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string BizConfig { get; set; }
 
         /// <summary>
+        /// <para>The category ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,7 +24,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The cover image URL. This parameter is valid only for video media assets.</para>
+        /// <para>The URL of the cover image. This parameter is valid only for video media assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png">https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png</a></para>
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string CoverURL { get; set; }
 
         /// <summary>
-        /// <para>The description of the media asset.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -82,10 +84,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string InputURL { get; set; }
 
         /// <summary>
-        /// <para>The tags of the media asset. Separate multiple tags with commas (,).</para>
+        /// <para>The tags. Separate multiple tags with commas.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AdvancedImageToVideo,AIGenerated</para>
+        /// <para>Advanced image-to-video, AI-generated</para>
         /// </summary>
         [NameInMap("MediaTags")]
         [Validation(Required=false)]
@@ -112,6 +114,16 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public bool? Overwrite { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pd_123456</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
+        /// <summary>
         /// <para>The configuration for registering the media asset.</para>
         /// 
         /// <b>Example:</b>
@@ -122,7 +134,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string RegisterConfig { get; set; }
 
         /// <summary>
-        /// <para>The title of the media asset.</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title</para>
@@ -132,7 +144,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user data. Maximum length: 1024 bytes.</para>
+        /// <para>The user data. Maximum size: 1024 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

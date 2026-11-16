@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public GetYikeAccountCreditResponseBodyCreditInfo CreditInfo { get; set; }
         public class GetYikeAccountCreditResponseBodyCreditInfo : TeaModel {
             /// <summary>
-            /// <para>The total granted credits.</para>
+            /// <para>The total granted credit quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public double? GrantedCreditQuota { get; set; }
 
             /// <summary>
-            /// <para>The remaining granted credits.</para>
+            /// <para>The granted credit balance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public double? GrantedCreditQuotaUsage { get; set; }
 
             /// <summary>
-            /// <para>The total credits of the booster pack.</para>
+            /// <para>The total credit quota of the top-up package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public double? PackCreditQuota { get; set; }
 
             /// <summary>
-            /// <para>The remaining credits of the booster pack.</para>
+            /// <para>The credit balance of the top-up package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public double? PackCreditQuotaUsage { get; set; }
 
             /// <summary>
-            /// <para>The total credits of the membership plan.</para>
+            /// <para>The total credit quota of the membership plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public double? ResourceCreditQuota { get; set; }
 
             /// <summary>
-            /// <para>The remaining credits of the membership plan.</para>
+            /// <para>The credit balance of the membership plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             /// <summary>
             /// <para>The membership level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>basic: Basic Edition.</description></item>
-            /// <item><description>standard: Standard Edition.</description></item>
-            /// <item><description>professional: Ultimate Edition.</description></item>
-            /// <item><description>ultra: Ultra Edition.</description></item>
+            /// <item><description>basic: Basic Edition</description></item>
+            /// <item><description>standard: Standard Edition</description></item>
+            /// <item><description>professional: Ultimate Edition</description></item>
+            /// <item><description>ultra: Supreme Edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

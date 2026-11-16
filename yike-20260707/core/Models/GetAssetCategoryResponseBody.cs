@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             /// <summary>
             /// <para>The category level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: level-1 category.</description></item>
-            /// <item><description><b>1</b>: level-2 category.</description></item>
-            /// <item><description><b>2</b>: level-3 category.</description></item>
+            /// <item><description><b>0</b>: Level-1 category.</description></item>
+            /// <item><description><b>1</b>: Level-2 category.</description></item>
+            /// <item><description><b>2</b>: Level-3 category.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? Level { get; set; }
 
             /// <summary>
-            /// <para>The parent category ID.</para>
+            /// <para>The ID of the parent category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? Level { get; set; }
 
             /// <summary>
-            /// <para>The parent category ID.</para>
+            /// <para>The ID of the parent category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>

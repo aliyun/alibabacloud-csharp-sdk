@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GenerateYikeLoginTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The session expiration time (millisecond timestamp).</para>
+        /// <para>The session expiration time (timestamp in milliseconds).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782008128000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The login token.</para>
+        /// <para>The logon token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*<em><b><b>d6931ff7e89b5eb19484</b></b></em></para>

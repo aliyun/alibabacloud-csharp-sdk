@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string CoverUrl { get; set; }
 
         /// <summary>
-        /// <para>The project ID.</para>
+        /// <para>The project ID. <b>[Deprecated]</b> Use ProjectId instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pd_061716****</para>
@@ -28,6 +28,16 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [NameInMap("ProductionId")]
         [Validation(Required=false)]
         public string ProductionId { get; set; }
+
+        /// <summary>
+        /// <para>The project ID. This field takes precedence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pd_061716****</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
 
         /// <summary>
         /// <para>The project title.</para>

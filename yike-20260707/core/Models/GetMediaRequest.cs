@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetMediaRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the signed file URL. Unit: seconds.</para>
+        /// <para>Specifies the validity period, in seconds, of the file URL that requires authentication for access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string BizConfig { get; set; }
 
         /// <summary>
-        /// <para>Currently unavailable.</para>
+        /// <para>This parameter is currently unavailable.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string InputURL { get; set; }
 
         /// <summary>
-        /// <para>The media asset ID. If this parameter is not empty, the query is performed based on this parameter, and the system verifies whether the value is a valid MediaId.</para>
+        /// <para>The ID of the media asset. If this parameter is specified, the query is performed based on this ID and the system verifies whether it is a valid media asset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>

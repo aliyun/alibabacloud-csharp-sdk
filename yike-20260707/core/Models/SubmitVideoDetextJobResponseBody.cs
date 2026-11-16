@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoDetextJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the video text removal job. Use this ID to call GetVideoDetextJob to query the job.</para>
+        /// <para>The video text erasure task ID, which is used to call GetVideoDetextJob to query the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vdt_0123456789abcdef0123456789abcdef</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used for Tracing Analysis and troubleshooting.</para>
+        /// <para>The request ID, which is used for Tracing Analysis and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>req-detext-20260820-001</para>

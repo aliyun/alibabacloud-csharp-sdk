@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetImageGenerationJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The image generation task.</para>
+        /// <para>The image generation job.</para>
         /// </summary>
         [NameInMap("ImageGenerationJob")]
         [Validation(Required=false)]
         public GetImageGenerationJobResponseBodyImageGenerationJob ImageGenerationJob { get; set; }
         public class GetImageGenerationJobResponseBodyImageGenerationJob : TeaModel {
             /// <summary>
-            /// <para>The video aspect ratio.</para>
+            /// <para>The aspect ratio of the video.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16:9</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string AspectRatio { get; set; }
 
             /// <summary>
-            /// <para>The error message. This parameter is returned only when the task is in the Failed state.</para>
+            /// <para>The error message. The value is a string. This field is returned when the job status is Failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Input file not found.</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The task input.</para>
+            /// <para>The job input.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;Prompt&quot;:&quot;Image 1 is on a basketball court, using Image 2 to perform a slam dunk&quot;}</para>
+            /// <para>{&quot;Prompt&quot;:&quot;Image 1 is on the basketball court, performing a slam dunk using Image 2&quot;}</para>
             /// </summary>
             [NameInMap("Input")]
             [Validation(Required=false)]
             public string Input { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ag_68ca759b4903b255*******</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The task feature configuration. No configuration is required at this time.</para>
+            /// <para>The job feature configurations. No configuration is required at this time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobParameters { get; set; }
 
             /// <summary>
-            /// <para>The task type.</para>
+            /// <para>The job type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text_to_image</para>
@@ -97,11 +97,11 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string N { get; set; }
 
             /// <summary>
-            /// <para>The generation result in JSON string format. Fields:</para>
+            /// <para>The generation result. The value is a JSON string that contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description>Medias: a list of media information (Media objects). Fields of a Media object:<list type="bullet">
+            /// <item><description>Medias: the list of media information (Media objects). A Media object contains the following fields:<list type="bullet">
             /// <item><description>MediaId: String. The media asset ID.</description></item>
-            /// <item><description>OutputUrl: String. The media URL (with authentication string).</description></item>
+            /// <item><description>OutputUrl: String. The media URL, including the authentication string.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Resolution { get; set; }
 
             /// <summary>
-            /// <para>The scene type. Currently only <c>general</c> is supported.</para>
+            /// <para>The scene type. Currently, only <c>general</c> is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>general</para>
@@ -134,13 +134,13 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Created: The task is created.</description></item>
-            /// <item><description>Queuing: The task is queuing.</description></item>
-            /// <item><description>Executing: The task is being executed.</description></item>
-            /// <item><description>Finished: The task is completed.</description></item>
-            /// <item><description>Failed: The task failed.</description></item>
+            /// <item><description>Created: The job is created.</description></item>
+            /// <item><description>Queuing: The job is queuing.</description></item>
+            /// <item><description>Executing: The job is executing.</description></item>
+            /// <item><description>Finished: The job succeeded.</description></item>
+            /// <item><description>Failed: The job failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

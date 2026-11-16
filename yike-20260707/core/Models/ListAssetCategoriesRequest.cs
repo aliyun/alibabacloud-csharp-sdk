@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

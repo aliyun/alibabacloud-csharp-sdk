@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <summary>
         /// <para>The category ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>When you create a category by calling the CreateAssetCategory operation, the category ID is the value of CategoryId in the response.</description></item>
-        /// <item><description>When you query categories by calling the ListAssetCategories operation, the category ID is the value of CategoryId in the corresponding entry in the response.</description></item>
+        /// <item><description>When you create a category by calling the CreateAssetCategory operation, the category ID is the value of the CategoryId response parameter.</description></item>
+        /// <item><description>When you query categories by calling the ListAssetCategories operation, the category ID is the value of the CategoryId parameter in the corresponding returned entry.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class DeleteMediasRequest : TeaModel {
         /// <summary>
-        /// <para>The business configuration. It is a JSON string that can contain ProductionId (the project ID).</para>
+        /// <para>The business configuration. A JSON string that can include ProductionId (the project ID).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ProductionId&quot;:&quot;pd_abc1234567&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string BizConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete physical files at the same time.</para>
+        /// <para>Specifies whether to delete the physical files at the same time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public bool? DeletePhysicalFiles { get; set; }
 
         /// <summary>
-        /// <para>Not supported.</para>
+        /// <para>This parameter is not supported.</para>
         /// </summary>
         [NameInMap("InputURLs")]
         [Validation(Required=false)]
         public string InputURLs { get; set; }
 
         /// <summary>
-        /// <para>The media asset IDs, separated by commas. Invalid IDs are added to IgnoredList.</para>
+        /// <para>The media asset IDs, separated by commas. Invalid IDs are added to the IgnoredList.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>b48fb04483915d4f2cd8</b></b></b>,<b><b><b>c48fb37407365d4f2cd8</b></b></b></para>

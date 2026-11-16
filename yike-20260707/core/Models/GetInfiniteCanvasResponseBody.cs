@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetInfiniteCanvasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The infinite canvas details.</para>
+        /// <para>The details of the infinite canvas.</para>
         /// </summary>
         [NameInMap("InfiniteCanvas")]
         [Validation(Required=false)]

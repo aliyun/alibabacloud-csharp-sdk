@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class ListInfiniteCanvasesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword used to query site monitoring tasks. Note: Fuzzy match is supported based on the task name or task address.</para>
+        /// <para>The keyword used to query site monitoring tasks. Note: Fuzzy match is supported based on the task name or task URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2_</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ProductionId { get; set; }
 
         /// <summary>
-        /// <para>The sort field and sort order. Separate multiple values with commas (,).</para>
+        /// <para>The sort fields and sort orders. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>utcCreate:Desc</para>
@@ -60,10 +60,11 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort direction. Valid values:</para>
+        /// <para>The sort direction.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending order</description></item>
-        /// <item><description>Desc: descending order</description></item>
+        /// <item><description>Asc: Ascending order.</description></item>
+        /// <item><description>Desc: Descending order.</description></item>
         /// </list>
         /// <para>Default value: Desc.</para>
         /// 

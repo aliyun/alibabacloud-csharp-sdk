@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoTranslationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The user-level idempotency token, which can be up to 40 characters in length. If the same user submits the request repeatedly with the same token, the original task is returned.</para>
+        /// <para>The user-level idempotency token, which can be up to 40 characters in length. If the same user repeatedly submits a request with the same token, the original task is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vt-client-20260820-001</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Input { get; set; }
 
         /// <summary>
-        /// <para>The job parameters JSON string. It must include at least SourceLanguage and TargetLanguage. You can also configure primary subtitle erasure, voice translation, on-screen text translation, and final editing.</para>
+        /// <para>The job parameters JSON string. It must include at least SourceLanguage and TargetLanguage. You can also configure primary subtitle removal, voice translation, on-screen text translation, lip sync, and final editing.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The output configuration JSON string. OssUri is the optional customer OSS output directory. If OssUri is not specified, a signed URL for the service-owned output is returned.</para>
+        /// <para>The output configuration JSON string. OssUri is the optional OSS output directory for the customer. If OssUri is not specified, a signed URL for the service-owned output is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;OssUri&quot;:&quot;oss://example-bucket/video-translation/output/&quot;}</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <para>The job title. If not specified, the service generates a default title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>English translation of product introduction video</para>
+        /// <para>Product introduction video English translation</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data JSON string. When specifying an MNS queue to receive asynchronous notifications, set <c>NotifyAddress</c> to the pure queue name starting with <c>yike-callback-</c> instead of the full queue URL. You can optionally set <c>NotifyMnsEndpoint</c> to the MNS endpoint of the task account.</para>
+        /// <para>The user-defined data JSON string. When specifying a Message Service (MNS) queue to receive asynchronous notifications, set NotifyAddress to the pure queue name starting with yike-callback- instead of the full queue URL. You can optionally set NotifyMnsEndpoint to the MNS endpoint of the task account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NotifyAddress&quot;:&quot;yike-callback-test&quot;,&quot;NotifyMnsEndpoint&quot;:&quot;<a href="https://1234567890123456.mns.cn-shanghai.aliyuncs.com%22%7D">https://1234567890123456.mns.cn-shanghai.aliyuncs.com&quot;}</a></para>

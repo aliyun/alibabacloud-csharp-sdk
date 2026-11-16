@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetVideoTranslationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The video translation job ID returned by SubmitVideoTranslationJob.</para>
+        /// <para>The ID of the video translation job returned by SubmitVideoTranslationJob.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

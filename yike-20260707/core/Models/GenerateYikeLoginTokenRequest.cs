@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string AutoCreateProduction { get; set; }
 
         /// <summary>
-        /// <para>The token expiration time, in seconds. Default value: 30 days.</para>
+        /// <para>The expiration time of the token, in seconds. Default value: 30 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <para>The nickname.</para>
         /// <list type="bullet">
         /// <item><description>Format check: The maximum length is 50 characters.</description></item>
-        /// <item><description>Special format validation: Chinese characters, English characters, digits, _ \ / () ] [</description></item>
+        /// <item><description>Special format check: Chinese and English characters, digits, and _ \ / () ] [.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>冯凯</para>
+        /// <para>Feng Kai</para>
         /// </summary>
         [NameInMap("NickName")]
         [Validation(Required=false)]

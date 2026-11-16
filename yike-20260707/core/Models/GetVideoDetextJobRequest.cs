@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetVideoDetextJobRequest : TeaModel {
         /// <summary>
-        /// <para>The video text erasure task ID returned by SubmitVideoDetextJob.</para>
+        /// <para>The ID of the video text removal job returned by SubmitVideoDetextJob.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

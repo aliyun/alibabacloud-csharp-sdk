@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The callback URL. Currently, only HTTP and HTTPS addresses are supported.</para>
+        /// <para>The callback URL. Only HTTP and HTTPS URLs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://api.ai-x.vip/callback">https://api.ai-x.vip/callback</a></para>
@@ -30,18 +30,18 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string NotifyUrl { get; set; }
 
         /// <summary>
-        /// <para>The prompt. Defined by the business as needed.</para>
+        /// <para>The prompt. The specific content is defined by your business.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Compare the battle records of Yue Jin and Guan Yu in real history to determine who was stronger</para>
+        /// <para>Compare the military records of Yue Jin and Guan Yu in real history to determine who was stronger</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>The skill identifier, provided by the skill provider.</para>
+        /// <para>The skill identifier used for the task, which is provided by the skill provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wf://xxx</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Skill { get; set; }
 
         /// <summary>
-        /// <para>The custom user data. This value is returned as-is in the callback.</para>
+        /// <para>The user-defined information. This information is returned as-is in the callback.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{“x”: 1}</para>

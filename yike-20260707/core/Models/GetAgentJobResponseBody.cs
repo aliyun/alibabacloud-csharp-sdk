@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetAgentJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task information.</para>
+        /// <para>The job information.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public GetAgentJobResponseBodyJob Job { get; set; }
         public class GetAgentJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bc30a1080b21434f961a0d9a391b30b9</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The task output JSON string. Different tasks return different structures, which are defined by the business side.</para>
+            /// <para>The output JSON string of the job. The returned structure varies by job and is defined by the service provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;OssUri\&quot;:\&quot;oss://ice-ai-saas/ice-ai-saas-prd/1123668546389636/210606863/generate/ag_3a506706a33f44008aec6274d2e38d58/\&quot;}</para>
@@ -37,14 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Output { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Created</description></item>
-            /// <item><description>Queuing</description></item>
-            /// <item><description>Executing</description></item>
-            /// <item><description>Finished</description></item>
-            /// <item><description>Failed</description></item>
-            /// </list>
+            /// <para>The job status. Valid values: Created, Queuing, Executing, Finished, and Failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Finished</para>

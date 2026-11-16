@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public GetRemakeScriptJobResponseBodyJob Job { get; set; }
         public class GetRemakeScriptJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>The error code. Returned when the status is Failed.</para>
+            /// <para>The error code. This parameter is returned when the status is Failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message. Returned when the status is Failed.</para>
+            /// <para>The error message. This parameter is of the String type and is returned when the status is Failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The specified product does not exist.</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68ca759e798b40b4903b255*******</para>
@@ -57,13 +57,13 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The status. Valid values:</para>
+            /// <para>The file status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Created: The task is created.</description></item>
-            /// <item><description>Executing: The task is executing.</description></item>
-            /// <item><description>Finished: The task is finished.</description></item>
-            /// <item><description>Failed: The task failed.</description></item>
-            /// <item><description>Deleted: The task is deleted.</description></item>
+            /// <item><description>Created: Created.</description></item>
+            /// <item><description>Executing: Executing.</description></item>
+            /// <item><description>Finished: Finished.</description></item>
+            /// <item><description>Failed: Failed.</description></item>
+            /// <item><description>Deleted: Deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetVideoCreativeGenerationJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job creation time in UTC format (yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;).</para>
+        /// <para>The time when the job was created. The time is displayed in UTC in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-02-06T18:53:34.001+08:00</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The error code. This parameter is returned only when the job status is Failed.</para>
+        /// <para>The error code. This field is returned only when the job status is Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WorkflowTaskFailed</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The job completion time in UTC format.</para>
+        /// <para>The time when the job was completed. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-02-06T18:53:34.001+08:00</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The task results of the node. This parameter is valid only when the job status is Succeeded. Each element represents the output for a single language.</para>
+        /// <para>The task result. This field is valid only when the node status is Succeeded. Each element represents a single-language video output.</para>
         /// </summary>
         [NameInMap("JobResult")]
         [Validation(Required=false)]
         public List<GetVideoCreativeGenerationJobResponseBodyJobResult> JobResult { get; set; }
         public class GetVideoCreativeGenerationJobResponseBodyJobResult : TeaModel {
             /// <summary>
-            /// <para>The online editing project ID.</para>
+            /// <para>The ID of the online editing project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>01a6adbbd181437eb5030d3d93e0182d</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string EditingProjectId { get; set; }
 
             /// <summary>
-            /// <para>The media asset ID of the output video.</para>
+            /// <para>The media asset ID of the produced video.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9d7e982012c671f1b803e7f6d75a6302</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string OutputLanguage { get; set; }
 
             /// <summary>
-            /// <para>The signed download URL of the output video. The URL is time-limited.</para>
+            /// <para>The download URL of the produced video. The URL is signed and time-sensitive.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://test.oss-cn-shanghai.aliyuncs.com/test.mp4">https://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The custom user data, which is returned as-is.</para>
+        /// <para>The user-defined parameter. This value is returned as is.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12374214127312673137132</para>

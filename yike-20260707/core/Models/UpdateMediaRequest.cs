@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string BizConfig { get; set; }
 
         /// <summary>
+        /// <para>The category ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The cover image URL. This parameter is valid only for video media assets.</para>
+        /// <para>The URL of the cover image. This parameter is valid only for video media assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg">https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg</a></para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string InputURL { get; set; }
 
         /// <summary>
-        /// <para>The media asset ID.</para>
+        /// <para>The ID of the media asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -79,10 +81,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The tags. Separate multiple tags with commas (,).</para>
+        /// <para>The tags. Separate multiple tags with commas.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>剪映动画</para>
+        /// <para>CapCut Animation</para>
         /// </summary>
         [NameInMap("MediaTags")]
         [Validation(Required=false)]
@@ -99,7 +101,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user data. Maximum length: 1024 bytes.</para>
+        /// <para>The user data. Maximum size: 1,024 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SearchMediaRequest : TeaModel {
         /// <summary>
-        /// <para>The business configuration. The value is a JSON string that can contain ProductionId (project ID).</para>
+        /// <para>The business configuration. A JSON string that can contain ProductionId (project ID).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ProductionId&quot;:&quot;pd_abc1234567&quot;}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions. For the syntax rules, see <a href="https://www.alibabacloud.com/help/en/ims/developer-reference/media-asset-search-filter-description">Media asset search protocol</a>.</para>
+        /// <para>The filter conditions. For syntax rules, see <a href="https://www.alibabacloud.com/help/en/ims/developer-reference/media-asset-search-filter-description">Media asset search protocol</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title = \&quot;China\&quot; and utcCreate = [\&quot;1693367158561\&quot;,\&quot;1693367158562\&quot;]</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Match { get; set; }
 
         /// <summary>
-        /// <para>The current page number. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,17 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The pagination token, which is a 32-character string. You do not need to specify this parameter when you send a search request for the first time. If the search request returns data, the server returns this parameter to record the position of the current search data. Record the returned value and specify this parameter in subsequent searches based on the following requirements or recommendations: This parameter is required if you need to traverse all data that matches the search conditions. If the value of the PageNo parameter exceeds 200, specify this parameter to optimize search performance. You can only page forward, and the maximum paging distance is 1,000 media assets.</para>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pd_123456</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public string ProjectId { get; set; }
+
+        /// <summary>
+        /// <para>The scroll token, which is a 32-character string. You do not need to specify this parameter when you make a search request for the first time. If the search request returns data, the server returns this parameter to record the position of the current search data. Record the returned value and specify this parameter in subsequent searches based on the following requirements or suggestions: This parameter is required to traverse all data that matches the search conditions. If the value of the PageNo parameter exceeds 200, specify this parameter to optimize search performance. You can only scroll forward. The maximum scroll distance is 1,000 media assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8C4F642184DBDA5D93907A70AAE****</para>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ScrollToken { get; set; }
 
         /// <summary>
-        /// <para>The sort fields and sort orders. Separate multiple values with commas (,). Format: field1:Desc,field2:Asc. The sort direction can only be Asc or Desc.</para>
+        /// <para>The sort fields and sort order. Separate multiple fields with commas (,). Format: field1:Desc,field2:Asc. The sort direction can only be Asc or Desc.</para>
         /// 
         /// <b>Example:</b>
         /// <para>utcCreate:Desc</para>

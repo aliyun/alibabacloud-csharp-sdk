@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetVideoDetextJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The video text erasure task.</para>
+        /// <para>The video text removal job.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public GetVideoDetextJobResponseBodyJob Job { get; set; }
         public class GetVideoDetextJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>The business error code returned when the task fails. This field is typically not returned for non-failure states.</para>
+            /// <para>The business error code returned when the job fails. This field is typically not returned when the job is not in a failed state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidInput</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The business error message returned when the task fails. This field is typically not returned for non-failure states.</para>
+            /// <para>The business error message returned when the job fails. This field is typically not returned when the job is not in a failed state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Input video is invalid.</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The normalized input configuration JSON string saved at submission time.</para>
+            /// <para>The normalized JSON string of the input configuration saved during submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;VideoUrl&quot;:&quot;<a href="https://example.com/input.mp4%22%7D">https://example.com/input.mp4&quot;}</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Input { get; set; }
 
             /// <summary>
-            /// <para>The video text erasure task ID.</para>
+            /// <para>The ID of the video text removal job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vdt_0123456789abcdef0123456789abcdef</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The normalized text erasure parameter JSON string.</para>
+            /// <para>The normalized JSON string of the text removal parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;EraseAllText&quot;:false,&quot;TextTargets&quot;:[{&quot;Box&quot;:[0.1,0.8,0.8,0.15],&quot;TimeRanges&quot;:[[0,30]]}]}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobParameters { get; set; }
 
             /// <summary>
-            /// <para>The task type. The value is fixed to VIDEO_DETEXT.</para>
+            /// <para>The job type. The value is fixed as VIDEO_DETEXT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VIDEO_DETEXT</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The task result JSON string. When Status is Finished, deserialize this field and read AiResult.DetextVideoURL to obtain the URL of the video after text erasure. The video URL is not guaranteed to be included when the task has not completed successfully. If Output.OssUri is specified at submission time, the result is stored in the specified OSS location. Otherwise, a signed URL is returned.</para>
+            /// <para>The JSON character string of the task result. When Status is Finished, deserialize the sequence of this field and read AiResult.DetextVideoURL to obtain the URL of the video with text removed. If the node is not successfully completed, the video URL is not guaranteed to be included. If Output.OssUri is specified during commit, the result is stored in the specified OSS bucket. Otherwise, a signed URL is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;AiResult&quot;:{&quot;DetextVideoURL&quot;:&quot;<a href="https://example.com/detext/detext.mp4%22%7D%7D">https://example.com/detext/detext.mp4&quot;}}</a></para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Output { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values: Created, Queuing, Executing, Finished, and Failed.</para>
+            /// <para>The job status. Valid values: Created, Queuing, Executing, Finished, and Failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Finished</para>
