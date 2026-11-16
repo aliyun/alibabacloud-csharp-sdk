@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The data list.</para>
+        /// <para>The list of data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public double? AvailableRate { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the damaged record, which is used to call the applyCoupon operation for targeted claim.</para>
+            /// <para>The unique identifier of the damage record, which is used for targeted claims.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9b7***9413</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string DamagedId { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSSBAG-cn-0xl0n****003</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public int? Month { get; set; }
 
             /// <summary>
-            /// <para>The monthly service charge.</para>
+            /// <para>The monthly service fee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>365.00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string PayDescription { get; set; }
 
             /// <summary>
-            /// <para>The compensation ratio, in percentage (%).</para>
+            /// <para>The compensation ratio, in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,12 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public double? PayRate { get; set; }
 
             /// <summary>
-            /// <para>The compensation status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: not compensated.</description></item>
-            /// <item><description>1: compensated.</description></item>
-            /// <item><description>2: no compensation required.</description></item>
-            /// </list>
+            /// <para>The compensation status. Valid values: 0: Not compensated. 1: Compensated. 2: No compensation required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -112,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public int? PayStatus { get; set; }
 
             /// <summary>
-            /// <para>The product code.</para>
+            /// <para>The code of the product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss</para>
@@ -122,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The compensation amount that should be paid.</para>
+            /// <para>The compensation amount to be paid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36.5</para>
@@ -134,7 +129,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The response metadata.</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -154,7 +149,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>

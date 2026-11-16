@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class SubmitSlaCouponApplyRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. The IDs of the damaged records.</para>
+        /// <para>The damaged record IDs.</para>
         /// </summary>
         [NameInMap("DamagedIds")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<SubmitSlaCouponApplyRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class SubmitSlaCouponApplyRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the enterprise entity.</para>
+            /// <para>The enterprise entity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1501603440974415</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? Month { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2084210001</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BillNumber { get; set; }
 
         /// <summary>
-        /// <para>The payment reference No.</para>
+        /// <para>The transaction channel serial number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20250312334312322</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp for the query. Unit: milliseconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735664561000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the fund account. If you do not specify this parameter, the ID of the account owned by the current user is used by default.</para>
+        /// <para>The ID of the fund account. If this parameter is not specified, the ID of the fund account owned by the current account is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123221232</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp for the query. Unit: milliseconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735664461000</para>
@@ -80,16 +80,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of transaction channels. If you specify this parameter, transactions are queried by channel. If you do not specify this parameter, all channels are queried by default. Valid values:</para>
+        /// <para>The list of transaction channels. If you specify transaction channels, the query returns results of the specified channels. If this parameter is not specified, all transaction channels are queried by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ACCT_CASH: User balance.</description></item>
+        /// <item><description>ACCT_CASH: Account balance.</description></item>
         /// <item><description>ALIPAY: Alipay.</description></item>
         /// <item><description>ALIPAY_ZHIFUTONG: Alipay Zhifutong.</description></item>
-        /// <item><description>OFFLINE_REMIT: Corporate remittance.</description></item>
+        /// <item><description>OFFLINE_REMIT: Offline remittance.</description></item>
         /// <item><description>REFUND: Credit limit refund.</description></item>
         /// <item><description>UNION_PAY_BANK: Online banking.</description></item>
-        /// <item><description>CREDIT_CARD: Credit card. Available only on the international site.</description></item>
-        /// <item><description>AYPAL: PayPal. Available only on the international site.</description></item>
+        /// <item><description>CREDIT_CARD: Credit card. (Available only on the international site.)</description></item>
+        /// <item><description>PAYPAL: PayPal. (Available only on the international site.)</description></item>
         /// </list>
         /// </summary>
         [NameInMap("TransactionChannelList")]
@@ -97,7 +97,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string TransactionChannelListShrink { get; set; }
 
         /// <summary>
-        /// <para>The direction of the transaction.</para>
+        /// <para>The direction of the transaction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>IN: Fund inflow.</description></item>
+        /// <item><description>OUT: Fund outflow.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>IN</para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? TransactionNumber { get; set; }
 
         /// <summary>
-        /// <para>The transaction type. If you specify a transaction type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
+        /// <para>The transaction type. If you specify a transaction type, the query returns results of the specified type. If no results exist, an empty result is returned. If this parameter is not specified, all transaction types are returned by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CHARGE: Top-up.</description></item>
         /// <item><description>WITHDRAW: Withdrawal.</description></item>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <item><description>PAY: Payment.</description></item>
         /// <item><description>TRANSFER: Transfer.</description></item>
         /// <item><description>ADJUST: Adjustment.</description></item>
-        /// <item><description>PAY_FAILED: Refund for failed order.</description></item>
+        /// <item><description>PAY_FAILED: Refund for an invalid order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,7 +140,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string TransactionType { get; set; }
 
         /// <summary>
-        /// <para>The list of transaction types. You can specify multiple parameters for a parameter query.</para>
+        /// <para>The list of transaction types. Supports multiple parameter query.</para>
         /// </summary>
         [NameInMap("TransactionTypeList")]
         [Validation(Required=false)]

@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 
             /// <summary>
             /// <para>CertainAmount</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100.00</para>
             /// </summary>
             [NameInMap("CertainAmount")]
             [Validation(Required=false)]
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The end time in ISO 8601 format. The time is displayed in UTC.</para>
+            /// <para>The end time in ISO 8601 format. The time zone is UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-06T15:12Z</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the coupon is limited to first-time purchases.</para>
+            /// <para>Indicates whether a first-purchase limit applies.</para>
             /// </summary>
             [NameInMap("FirstBuy")]
             [Validation(Required=false)]
@@ -141,7 +144,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The order duration limit rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Subscription rule: The coupon can be used only for purchase orders with a duration greater than 3,600 seconds</para>
+            /// <para>Subscription rule: The coupon can be used only for orders with a duration greater than 3,600 seconds</para>
             /// </summary>
             [NameInMap("OrderTimeRule")]
             [Validation(Required=false)]
@@ -197,7 +200,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the tag deduction button is displayed.</para>
+            /// <para>Indicates whether the tag deduction button is displayed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -227,7 +230,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>The start time in ISO 8601 format. The time is displayed in UTC.</para>
+            /// <para>The start time in ISO 8601 format. The time zone is UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-02T15:12Z</para>
@@ -257,7 +260,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string SuitAccount { get; set; }
 
             /// <summary>
-            /// <para>The applicable product type: all for all products, white for specified applicable products, and black for specified inapplicable products.</para>
+            /// <para>The applicable product type. Valid values: all: Applicable to all products. white: Applicable to specified products. black: Not applicable to specified products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>all</para>
@@ -286,7 +289,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

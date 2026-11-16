@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeFrInstancesResponseBodyDataAutoPurchase AutoPurchase { get; set; }
             public class DescribeFrInstancesResponseBodyDataAutoPurchase : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the resource has been auto-purchased.</para>
+                /// <para>Indicates whether auto-purchase is already applied.</para>
                 /// </summary>
                 [NameInMap("AlreadyAutoPurchase")]
                 [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The capacity type name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Decreasing total capacity</para>
+            /// <para>Total decreasing type</para>
             /// </summary>
             [NameInMap("CapacitiyTypeName")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeFrInstancesResponseBodyDataCapacityType CapacityType { get; set; }
             public class DescribeFrInstancesResponseBodyDataCapacityType : TeaModel {
                 /// <summary>
-                /// <para>The attribute code.</para>
+                /// <para>The property code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deadlineAcc</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The attribute name.</para>
+                /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Decreasing total capacity</para>
+                /// <para>Total decreasing type</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeFrInstancesResponseBodyDataCommodity Commodity { get; set; }
             public class DescribeFrInstancesResponseBodyDataCommodity : TeaModel {
                 /// <summary>
-                /// <para>The attribute code.</para>
+                /// <para>The property code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>slb_albcubag_dp_cn</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The attribute name.</para>
+                /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALB resource plan</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The commodity name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Performance Testing</para>
+            /// <para>Performance testing</para>
             /// </summary>
             [NameInMap("CommodityName")]
             [Validation(Required=false)]
@@ -264,14 +264,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CycleTypeName { get; set; }
 
             /// <summary>
-            /// <para>The list of regions where deductions are applicable.</para>
+            /// <para>The list of deductible regions.</para>
             /// </summary>
             [NameInMap("DeductRegions")]
             [Validation(Required=false)]
             public List<DescribeFrInstancesResponseBodyDataDeductRegions> DeductRegions { get; set; }
             public class DescribeFrInstancesResponseBodyDataDeductRegions : TeaModel {
                 /// <summary>
-                /// <para>The code of the region where deductions are applicable.</para>
+                /// <para>The code of the deductible region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The region where deductions are applicable.</para>
+                /// <para>The deductible region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Beijing</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public bool? EnableDeductRule { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether exchanges are supported.</para>
+            /// <para>Indicates whether exchange is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public bool? EnableRenew { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether upgrades are supported.</para>
+            /// <para>Indicates whether upgrade is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public bool? EnableUpgrade { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The expiration time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710604800000</para>
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string PeriodCapacityViewValue { get; set; }
 
             /// <summary>
-            /// <para>The period time unit, such as hour for hours.</para>
+            /// <para>The period time unit, such as hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -437,7 +437,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeFrInstancesResponseBodyDataProduct Product { get; set; }
             public class DescribeFrInstancesResponseBodyDataProduct : TeaModel {
                 /// <summary>
-                /// <para>The attribute code.</para>
+                /// <para>The property code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>slb</para>
@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The attribute name.</para>
+                /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Server Load Balancer</para>
@@ -472,14 +472,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Performance Testing</para>
+            /// <para>Performance testing</para>
             /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>The purchase time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The purchase time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1678939036000</para>
@@ -492,9 +492,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>cn-qingdao</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
@@ -511,19 +509,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string RegionName { get; set; }
 
             /// <summary>
-            /// <para>The specifications.</para>
+            /// <para>The specification.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>1000CU</para>
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public string Spec { get; set; }
 
             /// <summary>
-            /// <para>The effective period. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The effective period. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1678939035000</para>
@@ -540,7 +536,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeFrInstancesResponseBodyDataStatus Status { get; set; }
             public class DescribeFrInstancesResponseBodyDataStatus : TeaModel {
                 /// <summary>
-                /// <para>The attribute code.</para>
+                /// <para>The property code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>valid</para>
@@ -550,7 +546,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The attribute name.</para>
+                /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Valid</para>
@@ -589,7 +585,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeFrInstancesResponseBodyDataTemplate Template { get; set; }
             public class DescribeFrInstancesResponseBodyDataTemplate : TeaModel {
                 /// <summary>
-                /// <para>The attribute code.</para>
+                /// <para>The property code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alb_cubag*******</para>
@@ -599,10 +595,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The attribute name.</para>
+                /// <para>The property name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Mainland China</para>
+                /// <para>Chinese mainland region</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -631,7 +627,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The periodic capacity base unit.</para>
+            /// <para>The base unit of the period capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CU</para>
@@ -641,7 +637,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string PeriodCapacityBaseUnit { get; set; }
 
             /// <summary>
-            /// <para>The periodic capacity base value.</para>
+            /// <para>The base value of the period capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000.000000</para>

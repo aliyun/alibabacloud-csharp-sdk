@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, which is used to mark the request and facilitate troubleshooting.</para>
+        /// <para>The unique identifier of the request, which is used to mark a request and facilitate troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>

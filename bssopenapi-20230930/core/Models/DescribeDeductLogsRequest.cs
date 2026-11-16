@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BillInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The commodity code for deduction.</para>
+        /// <para>The commodity code of the deducted item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>snapshot</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BillingCommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The billing end time. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the billing cycle. The time is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? BillingEndTime { get; set; }
 
         /// <summary>
-        /// <para>The billing start time. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the billing cycle. The time is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The enterprise entity ID.</para>
+            /// <para>The ID of the enterprise entity.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The resource dimension.</para>
+        /// <para>The resource dimension to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss_rc</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSSBAG-cn******</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The ID of the level-1 marketplace. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of accounts for deduction.</para>
+        /// <para>The list of deduction accounts.</para>
         /// </summary>
         [NameInMap("RelationAccountIds")]
         [Validation(Required=false)]

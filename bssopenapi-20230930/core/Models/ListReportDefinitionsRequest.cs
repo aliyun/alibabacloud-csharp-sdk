@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ListReportDefinitionsRequest : TeaModel {
         /// <summary>
-        /// <para>Primary sales site ID. If empty, the current user\&quot;s site ID is used by default</para>
+        /// <para>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>

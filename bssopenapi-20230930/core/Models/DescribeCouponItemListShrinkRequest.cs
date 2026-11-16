@@ -30,24 +30,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</para>
+        /// <para>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public string EcIdAccountIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The product name. Fuzzy matching is supported.</para>
+        /// <para>The product name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>云服务器ECS</para>
+        /// <para>Elastic Compute Service</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The level-1 sales channel ID. If this parameter is left empty, the channel ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

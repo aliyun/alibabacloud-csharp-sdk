@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string BillNumber { get; set; }
 
             /// <summary>
-            /// <para>The external transaction serial number.</para>
+            /// <para>The external transaction reference number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20244389232</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The account name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample account name</para>
+            /// <para>Name of the user</para>
             /// </summary>
             [NameInMap("FundAccountName")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundType { get; set; }
 
             /// <summary>
-            /// <para>The primary marketplace.</para>
+            /// <para>The primary sales channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2684210001</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Site { get; set; }
 
             /// <summary>
-            /// <para>The corresponding transaction account, such as the Alipay top-up account or the counterparty account for a transfer.</para>
+            /// <para>The corresponding transaction account, such as the Alipay top-up account or the peer account for transfers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>186****3975</para>
@@ -167,16 +167,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TransactionAmount { get; set; }
 
             /// <summary>
-            /// <para>The list of transaction channels. If you specify this parameter, transactions are queried by channel. If you do not specify this parameter, all channels are queried by default. Valid values:</para>
+            /// <para>The list of transaction channels. If you specify transaction channels, the query returns results of the specified channels. If this parameter is not specified, all transaction channels are queried by default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ACCT_CASH: User balance.</description></item>
+            /// <item><description>ACCT_CASH: Account balance.</description></item>
             /// <item><description>ALIPAY: Alipay.</description></item>
             /// <item><description>ALIPAY_ZHIFUTONG: Alipay Zhifutong.</description></item>
-            /// <item><description>OFFLINE_REMIT: Corporate remittance.</description></item>
+            /// <item><description>OFFLINE_REMIT: Offline remittance.</description></item>
             /// <item><description>REFUND: Credit limit refund.</description></item>
             /// <item><description>UNION_PAY_BANK: Online banking.</description></item>
-            /// <item><description>CREDIT_CARD: Credit card. Available only on the international site.</description></item>
-            /// <item><description>AYPAL: PayPal. Available only on the international site.</description></item>
+            /// <item><description>CREDIT_CARD: Credit card. (Available only on the international site.)</description></item>
+            /// <item><description>PAYPAL: PayPal. (Available only on the international site.)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TransactionTime { get; set; }
 
             /// <summary>
-            /// <para>The transaction type. If you specify a transaction type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
+            /// <para>The transaction type. If you specify a transaction type, the query returns results of the specified type. If no results exist, an empty result is returned. If this parameter is not specified, all transaction types are returned by default. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CHARGE: Top-up.</description></item>
             /// <item><description>WITHDRAW: Withdrawal.</description></item>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <item><description>PAY: Payment.</description></item>
             /// <item><description>TRANSFER: Transfer.</description></item>
             /// <item><description>ADJUST: Adjustment.</description></item>
-            /// <item><description>PAY_FAILED: Refund for failed order.</description></item>
+            /// <item><description>PAY_FAILED: Refund for an invalid order.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

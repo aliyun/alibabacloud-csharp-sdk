@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</para>
+        /// <para>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public string EcIdAccountIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the level-1 sales site. If this parameter is left empty, the ID of the sales site to which the current user belongs is used by default.</para>
+        /// <para>The ID of the level-1 marketplace. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the owner account for the cost center.</para>
+        /// <para>The ID of the owner account of the cost center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

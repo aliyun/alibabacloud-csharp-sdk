@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The enterprise entity ID.</para>
+            /// <para>The ID of the enterprise entity.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The ID of the level-1 marketplace. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>

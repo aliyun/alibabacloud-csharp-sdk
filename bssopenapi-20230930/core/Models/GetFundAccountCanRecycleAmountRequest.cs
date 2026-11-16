@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Currency { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source account (payer account) from which funds are reclaimed. If not specified, the account ID owned by the current account is used by default.</para>
+        /// <para>The ID of the source account for reclamation (the payer account ID). If this parameter is not specified, the ID of the account owned by the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122321223</para>

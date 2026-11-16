@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<DescribeFrInstancesRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class DescribeFrInstancesRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The end time, specified as a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710604800000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The resource dimension.</para>
+        /// <para>The resource dimension to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cu</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The label value of the resource plan instance tag.</para>
+        /// <para>The tag value of the resource plan instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FR-***</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>The sorting collation.</para>
+        /// <para>The sorting rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string SortRule { get; set; }
 
         /// <summary>
-        /// <para>The specifications.</para>
+        /// <para>The specification.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The start time, specified as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1678939035000</para>

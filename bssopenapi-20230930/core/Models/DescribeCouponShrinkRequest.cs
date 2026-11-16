@@ -112,14 +112,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? IncludeShare { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request.</para>
+        /// <para>The maximum number of entries to return for a single query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The first-level site information.</para>
+        /// <para>The level-1 site information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -129,14 +132,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If this parameter is empty, no more pages are available.</para>
+        /// <para>The token used to start the next query. If this parameter is left empty, no more pages exist.</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of items per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,6 +151,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 
         /// <summary>
         /// <para>The product code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sfm</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]

@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CostCenterName { get; set; }
 
             /// <summary>
-            /// <para>The node level of the cost center.</para>
+            /// <para>The level of the cost center node.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>loose</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public int? Level { get; set; }
 
             /// <summary>
-            /// <para>The ID of the owner account for the cost center.</para>
+            /// <para>The ID of the owner account of the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1314839403940987</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The response metadata.</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

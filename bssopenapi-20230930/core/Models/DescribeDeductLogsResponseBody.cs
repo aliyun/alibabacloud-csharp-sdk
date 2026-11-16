@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The deducted commodity.</para>
+            /// <para>The offset commodity.</para>
             /// </summary>
             [NameInMap("BillingCommodity")]
             [Validation(Required=false)]
             public DescribeDeductLogsResponseBodyDataBillingCommodity BillingCommodity { get; set; }
             public class DescribeDeductLogsResponseBodyDataBillingCommodity : TeaModel {
                 /// <summary>
-                /// <para>The property code.</para>
+                /// <para>The attribute code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>snapshot</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The attribute name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Elastic Compute Service (ECS) - Snapshot</para>
+                /// <para>ECS - Snapshot</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
-            /// <para>The deducted commodity code.</para>
+            /// <para>The offset commodity code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>snapshot</para>
@@ -86,17 +86,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string BillingCommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the offset commodity.</para>
+            /// <para>The offset commodity name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Elastic Compute Service (ECS) - Snapshot</para>
+            /// <para>ECS - Snapshot</para>
             /// </summary>
             [NameInMap("BillingCommodityName")]
             [Validation(Required=false)]
             public string BillingCommodityName { get; set; }
 
             /// <summary>
-            /// <para>The expiration time, specified as a UNIX timestamp in milliseconds.</para>
+            /// <para>The expiration time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1679036400000</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeDeductLogsResponseBodyDataBillingPriceField BillingPriceField { get; set; }
             public class DescribeDeductLogsResponseBodyDataBillingPriceField : TeaModel {
                 /// <summary>
-                /// <para>The property code.</para>
+                /// <para>The attribute code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Storage</para>
@@ -133,10 +133,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The attribute name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Zero-discount used capacity</para>
+                /// <para>Fully offset used capacity</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -158,14 +158,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The offset billable item name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Zero-discount used capacity</para>
+            /// <para>Fully offset used capacity</para>
             /// </summary>
             [NameInMap("BillingPriceFieldName")]
             [Validation(Required=false)]
             public string BillingPriceFieldName { get; set; }
 
             /// <summary>
-            /// <para>The effective period, specified as a UNIX timestamp in milliseconds.</para>
+            /// <para>The effective period. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1679032800000</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? BillingStartTime { get; set; }
 
             /// <summary>
-            /// <para>The display unit of the capacity after deduction.</para>
+            /// <para>The display unit for capacity after offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GB</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CapacityAfterDeductViewUnit { get; set; }
 
             /// <summary>
-            /// <para>The display value of the capacity after deduction.</para>
+            /// <para>The display value for capacity after offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23.896484</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CapacityAfterDeductViewValue { get; set; }
 
             /// <summary>
-            /// <para>The display unit of the capacity before deduction.</para>
+            /// <para>The display unit for capacity before offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GB</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CapacityBeforeDeductViewUnit { get; set; }
 
             /// <summary>
-            /// <para>The display value of the capacity before deduction.</para>
+            /// <para>The display value for capacity before offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40.000000</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CapacityBeforeDeductViewValue { get; set; }
 
             /// <summary>
-            /// <para>The display unit of the deducted capacity.</para>
+            /// <para>The display unit for offset capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GB</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CapacityDeductedViewUnit { get; set; }
 
             /// <summary>
-            /// <para>The display value of the deducted capacity.</para>
+            /// <para>The display value for offset capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16.103515</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeDeductLogsResponseBodyDataCapacityType CapacityType { get; set; }
             public class DescribeDeductLogsResponseBodyDataCapacityType : TeaModel {
                 /// <summary>
-                /// <para>The property code.</para>
+                /// <para>The attribute code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>absolute</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The attribute name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Fixed total capacity</para>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeDeductLogsResponseBodyDataCommodity Commodity { get; set; }
             public class DescribeDeductLogsResponseBodyDataCommodity : TeaModel {
                 /// <summary>
-                /// <para>The property code.</para>
+                /// <para>The attribute code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ossbag</para>
@@ -301,10 +301,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The attribute name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Object Storage Service (OSS) resource plan (subscription)</para>
+                /// <para>OSS resource plan (subscription)</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The commodity name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Object Storage Service (OSS) resource plan (subscription)</para>
+            /// <para>OSS resource plan (subscription)</para>
             /// </summary>
             [NameInMap("CommodityName")]
             [Validation(Required=false)]
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CycleTypeName { get; set; }
 
             /// <summary>
-            /// <para>The deduction time. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The offset time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1679039572000</para>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? DeductTime { get; set; }
 
             /// <summary>
-            /// <para>The offset factor.</para>
+            /// <para>The deduction factor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Factor { get; set; }
 
             /// <summary>
-            /// <para>The account ID of the instance owner.</para>
+            /// <para>The ID of the account to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1990699401005016</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? InstanceBelongAccountId { get; set; }
 
             /// <summary>
-            /// <para>The account name of the instance owner.</para>
+            /// <para>The name of the account to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>icloudtest</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string InstanceBelongAccountName { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSSBAG-cn-****s</para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The display unit of the metered amount after offset.</para>
+            /// <para>The display unit of the usage after deduction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Byte</para>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string MeasureAfterDeductViewUnit { get; set; }
 
             /// <summary>
-            /// <para>The display value of the metered amount after offset.</para>
+            /// <para>The display value of the usage after deduction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string MeasureAfterDeductViewValue { get; set; }
 
             /// <summary>
-            /// <para>The display unit of the metered amount before offset.</para>
+            /// <para>The display unit of the usage before deduction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GB</para>
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string MeasureBeforeDeductViewUnit { get; set; }
 
             /// <summary>
-            /// <para>The display value of the metered amount before offset.</para>
+            /// <para>The display value of the usage before deduction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16.103515</para>
@@ -472,7 +472,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string MeasureBeforeDeductViewValue { get; set; }
 
             /// <summary>
-            /// <para>The display unit of the metered offset amount.</para>
+            /// <para>The display unit of the deducted usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GB</para>
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string MeasureDeductedViewUnit { get; set; }
 
             /// <summary>
-            /// <para>The display value of the metered offset amount.</para>
+            /// <para>The display value of the deducted usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16.103515</para>
@@ -499,7 +499,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeDeductLogsResponseBodyDataProduct Product { get; set; }
             public class DescribeDeductLogsResponseBodyDataProduct : TeaModel {
                 /// <summary>
-                /// <para>The property code.</para>
+                /// <para>The attribute code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The attribute name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Object Storage Service</para>
@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account for deduction.</para>
+            /// <para>The ID of the deduction account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1990699401005016</para>
@@ -568,7 +568,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public DescribeDeductLogsResponseBodyDataTemplate Template { get; set; }
             public class DescribeDeductLogsResponseBodyDataTemplate : TeaModel {
                 /// <summary>
-                /// <para>The property code.</para>
+                /// <para>The attribute code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FPT_ossbag********</para>
@@ -578,7 +578,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The attribute name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Standard storage plan</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetFundAccountLowAvailableAmountAlarmRequest : TeaModel {
         /// <summary>
-        /// <para>Fund account ID. If not specified, the account ID owned by the current account is used by default.</para>
+        /// <para>The ID of the fund account. If this parameter is not specified, the ID of the account owned by the current logon account is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12332112</para>

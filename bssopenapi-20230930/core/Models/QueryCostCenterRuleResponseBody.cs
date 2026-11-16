@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryCostCenterRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cost center ID.</para>
+        /// <para>The ID of the cost center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>597745</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The condition filter key name (deprecated).</para>
+                /// <para><b>[Deprecated]</b> The name of the condition filter key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string CodeName { get; set; }
 
                 /// <summary>
-                /// <para>The association between the code and value.</para>
+                /// <para>The association between code and value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IN</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 public string SelectType { get; set; }
 
                 /// <summary>
-                /// <para>The attribute value type corresponding to the module Code. Valid values:</para>
+                /// <para>The property value type corresponding to the module code. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>single_float: single value type.</description></item>
                 /// <item><description>range_float: range value type.</description></item>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
-            /// <para>The filter condition (deprecated).</para>
+            /// <para><b>[Deprecated]</b> The filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -148,19 +148,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The deletion status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Active.</description></item>
-        /// <item><description><b>1</b>: Inactive.</description></item>
+        /// <item><description><b>0</b>: active.</description></item>
+        /// <item><description><b>1</b>: inactive.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("IsDeleted")]
         [Validation(Required=false)]
         public int? IsDeleted { get; set; }
 
         /// <summary>
-        /// <para>The response struct metadata.</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The owner of the cost center.</para>
+        /// <para>The owner account of the cost center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1977800748053695</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The root cost center ID.</para>
+        /// <para>The ID of the root cost center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -202,8 +202,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Active.</description></item>
-        /// <item><description>off: Inactive.</description></item>
+        /// <item><description>on: valid.</description></item>
+        /// <item><description>off: invalid.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

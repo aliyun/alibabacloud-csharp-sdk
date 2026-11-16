@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<DescribeCouponItemListResponseBodyData> Data { get; set; }
         public class DescribeCouponItemListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The product code.</para>
+            /// <para>The commodity code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vm</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云服务器ECS</para>
+            /// <para>Elastic Compute Service</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

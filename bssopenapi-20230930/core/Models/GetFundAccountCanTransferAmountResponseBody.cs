@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetFundAccountCanTransferAmountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Available amount</para>
+        /// <para>The available amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string AvailableAmount { get; set; }
 
         /// <summary>
-        /// <para>Cash ledger balance</para>
+        /// <para>The cash ledger balance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CashAmount { get; set; }
 
         /// <summary>
-        /// <para>Currency</para>
+        /// <para>The currency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CNY</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Currency { get; set; }
 
         /// <summary>
-        /// <para>Enterprise entity ID of the account owner</para>
+        /// <para>The enterprise entity ID of the fund account owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2032121324</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string FundAccountEcid { get; set; }
 
         /// <summary>
-        /// <para>Account ID</para>
+        /// <para>The fund account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12332112</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? FundAccountId { get; set; }
 
         /// <summary>
-        /// <para>Account name</para>
+        /// <para>The fund account name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>云某的账户</para>
+        /// <para>Yun\&quot;s account</para>
         /// </summary>
         [NameInMap("FundAccountName")]
         [Validation(Required=false)]
         public string FundAccountName { get; set; }
 
         /// <summary>
-        /// <para>Alibaba Cloud account ID of the fund account owner</para>
+        /// <para>The Alibaba Cloud account ID of the fund account owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>154738212323</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? FundAccountOwnerAccountId { get; set; }
 
         /// <summary>
-        /// <para>Transferable amount</para>
+        /// <para>The maximum transferable amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string MaxTransferableAmount { get; set; }
 
         /// <summary>
-        /// <para>Response metadata</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>Primary marketplace</para>
+        /// <para>The primary sales site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684210001</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Site</para>
+        /// <para>The site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>26842</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Site { get; set; }
 
         /// <summary>
-        /// <para>Transfer ledger balance</para>
+        /// <para>The transfer ledger balance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
