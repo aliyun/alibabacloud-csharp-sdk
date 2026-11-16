@@ -1,3 +1,11 @@
+2026-11-16 Version: 1.5.0
+- Support API CreateCustomDomain.
+- Support API DeleteCustomDomain.
+- Support API GetCustomDomain.
+- Support API ListCustomDomains.
+- Support API UpdateCustomDomain.
+
+
 2026-11-14 Version: 1.4.0
 - Support API CreateWarmPool.
 - Support API DeleteWarmPool.

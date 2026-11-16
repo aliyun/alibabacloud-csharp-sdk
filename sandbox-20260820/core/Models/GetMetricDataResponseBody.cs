@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class GetMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>成功时为 200。失败时为对应的错误码。</para>
+        /// <para>The status code. A value of 200 indicates success. If the request fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>本次请求的结果说明。</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>各指标的查询结果及对应的时间和分组。</para>
+        /// <para>The query results of each metric, along with the corresponding time and grouping information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;period&quot;:60,&quot;startTime&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;endTime&quot;:&quot;2026-11-05T00:02:00Z&quot;,&quot;groupBy&quot;:[&quot;teamID&quot;],&quot;results&quot;:[{&quot;metricName&quot;:&quot;cpuUsedCores&quot;,&quot;unit&quot;:&quot;Core&quot;,&quot;series&quot;:[{&quot;dimensions&quot;:{&quot;teamID&quot;:&quot;70d1c834-0333-58d8-97ac-5336eb9179eb&quot;},&quot;points&quot;:[{&quot;timestamp&quot;:&quot;2026-11-05T00:00:00Z&quot;,&quot;value&quot;:0.25},{&quot;timestamp&quot;:&quot;2026-11-05T00:01:00Z&quot;,&quot;value&quot;:0.5}]}]}]}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public MetricData MetricData { get; set; }
 
         /// <summary>
-        /// <para>本次请求的唯一标识。</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-5678-9abc-123456789abc</para>
