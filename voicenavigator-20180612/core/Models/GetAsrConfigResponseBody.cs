@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AppKey { get; set; }
 
             /// <summary>
-            /// <para>The ASR acoustic model ID.</para>
+            /// <para>The ID of the ASR acoustic model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrAcousticModelId { get; set; }
 
             /// <summary>
-            /// <para>The ASR hotword ID.</para>
+            /// <para>The ID of the ASR class hotword.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
@@ -57,7 +57,17 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrClassVocabularyId { get; set; }
 
             /// <summary>
-            /// <para>The ASR dataset ID.</para>
+            /// <para>Indicates whether the ASR context is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("AsrContextEnabled")]
+            [Validation(Required=false)]
+            public string AsrContextEnabled { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the ASR dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
@@ -66,12 +76,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public string AsrCustomizationId { get; set; }
 
+            /// <summary>
+            /// <para>The ASR error correction dictionary.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;correctedText&quot;:&quot;Hello&quot;,&quot;misrecognizedText&quot;:&quot;Hi&quot;}]</para>
+            /// </summary>
             [NameInMap("AsrOverrides")]
             [Validation(Required=false)]
             public string AsrOverrides { get; set; }
 
             /// <summary>
-            /// <para>The ASR correction dictionary ID.</para>
+            /// <para>The ID of the ASR error correction dictionary.</para>
             /// 
             /// <b>Example:</b>
             /// <para>94001ae8-72fd-4f93-84dc-e58e2b20363b</para>
@@ -101,7 +117,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The iFLYTEK engine parameters.</para>
+            /// <para>The parameters of the iFLYTEK engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EngineXufei</para>
@@ -153,7 +169,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -1,3 +1,6 @@
+2026-11-17 Version: 2.0.8
+- Generated csharp 2018-06-12 for VoiceNavigator.
+
 2026-10-12 Version: 2.0.7
 - Update API ListConversations: add response parameters Body.Conversations.$.Voice.
 

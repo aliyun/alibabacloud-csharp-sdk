@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrAcousticModelId { get; set; }
 
         /// <summary>
-        /// <para>The ASR hotword ID.</para>
+        /// <para>The ASR class vocabulary ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
@@ -38,6 +38,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("AsrClassVocabularyId")]
         [Validation(Required=false)]
         public string AsrClassVocabularyId { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable the ASR context.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("AsrContextEnabled")]
+        [Validation(Required=false)]
+        public bool? AsrContextEnabled { get; set; }
 
         /// <summary>
         /// <para>The dataset ID.</para>
@@ -49,12 +59,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string AsrCustomizationId { get; set; }
 
+        /// <summary>
+        /// <para>The ASR error correction dictionary.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;misrecognizedText&quot;:&quot;Hello&quot;,&quot;correctedText&quot;:&quot;Hi&quot;}]</para>
+        /// </summary>
         [NameInMap("AsrOverrides")]
         [Validation(Required=false)]
         public string AsrOverrides { get; set; }
 
         /// <summary>
-        /// <para>The ASR error correction dictionary ID.</para>
+        /// <para>The ID of the ASR error correction dictionary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94001ae8-72fd-4f93-84dc-e58e2b20363b</para>
@@ -64,7 +80,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrOverridesUuid { get; set; }
 
         /// <summary>
-        /// <para>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</para>
+        /// <para>The hot word ID. You can view the ASR hot word ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hot Word Management page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
@@ -74,12 +90,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrVocabularyId { get; set; }
 
         /// <summary>
-        /// <para>The policy level. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: system.</description></item>
-        /// <item><description>1: tenant.</description></item>
-        /// <item><description>2: instance.</description></item>
-        /// </list>
+        /// <para>The policy level. Valid values: 0: system, 1: tenant, 2: instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -109,7 +120,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string EngineXunfei { get; set; }
 
         /// <summary>
-        /// <para>The entity ID corresponding to config_level.</para>
+        /// <para>The entity ID corresponding to the config level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
@@ -122,7 +133,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <para>NluServiceType</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Speech Recognition</para>
+        /// <para>Speech recognition</para>
         /// </summary>
         [NameInMap("NlsServiceType")]
         [Validation(Required=false)]

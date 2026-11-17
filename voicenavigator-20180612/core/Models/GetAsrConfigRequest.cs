@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class GetAsrConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The policy level. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: system.</description></item>
-        /// <item><description>1: tenant.</description></item>
-        /// <item><description>2: instance.</description></item>
-        /// </list>
+        /// <para>The policy level. Valid values: 0: system, 1: tenant, 2: instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

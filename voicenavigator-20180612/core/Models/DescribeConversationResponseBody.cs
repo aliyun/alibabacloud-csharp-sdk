@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The number of effective Q&amp;A pairs.</para>
+        /// <para>The number of valid Q&amp;A pairs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public bool? TransferredToAgent { get; set; }
 
         /// <summary>
-        /// <para>The number of user utterances.</para>
+        /// <para>The number of customer questions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

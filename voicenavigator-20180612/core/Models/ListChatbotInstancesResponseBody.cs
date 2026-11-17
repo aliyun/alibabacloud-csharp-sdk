@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListChatbotInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of instances.</para>
+        /// <para>The list of instance information.</para>
         /// </summary>
         [NameInMap("Bots")]
         [Validation(Required=false)]
         public List<ListChatbotInstancesResponseBodyBots> Bots { get; set; }
         public class ListChatbotInstancesResponseBodyBots : TeaModel {
             /// <summary>
-            /// <para>The icon of the instance.</para>
+            /// <para>The avatar of the chatbot instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://dss0.ali.com/70cFuHS.jpg">https://dss0.ali.com/70cFuHS.jpg</a></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string Avatar { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582266750353</para>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string LanguageCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试机器人</para>
+            /// <para>Test chatbot</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The array of instances.</para>
+        /// <para>The instance array.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The list of applicable operations for the instance.</para>
+            /// <para>The list of available operations for the instance.</para>
             /// </summary>
             [NameInMap("ApplicableOperations")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试的实例</para>
+            /// <para>Test instance</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582266750353</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The operator who performed the operation.</para>
+            /// <para>The operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试实例</para>
+            /// <para>Test instance</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The large language model service parameters in JSON format.</para>
+            /// <para>The JSON string of large language model service parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;agentId&quot;:&quot;1213503&quot;,&quot;isCCCAgent&quot;:&quot;true&quot;,&quot;agentKey&quot;:&quot;107e04a7519243eb83c9b549ea3b6829_p_ccc_public&quot;}</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             /// <summary>
             /// <para>The instance ID.</para>
             /// <remarks>
-            /// <para>When UnionSource is set to CCC, UnionInstanceId is set to the instance ID of Cloud Call Center.</para>
+            /// <para>If UnionSource is set to CCC, UnionInstanceId is the instance ID of Cloud Call Center.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string UnionInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The source.</para>
+            /// <para>The source. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CCC: Cloud Call Center.</description></item>
             /// </list>

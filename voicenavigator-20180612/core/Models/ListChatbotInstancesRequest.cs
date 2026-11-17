@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string NluServiceParamsJson { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CCC_AUTHORIZED</para>
+        /// </summary>
         [NameInMap("NluServiceType")]
         [Validation(Required=false)]
         public string NluServiceType { get; set; }
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CCC</para>
+        /// </summary>
         [NameInMap("UnionSource")]
         [Validation(Required=false)]
         public string UnionSource { get; set; }

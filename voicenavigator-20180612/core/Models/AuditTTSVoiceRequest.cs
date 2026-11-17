@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Authorized</para>
+        /// </summary>
         [NameInMap("NlsServiceType")]
         [Validation(Required=false)]
         public string NlsServiceType { get; set; }

@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ability type.<br>
-        /// DEFAULT: full abilities.<br>
-        /// VOICE_ONLY: only voice abilities, without dialog intervention.</para>
+        /// <para>The capability type of the instance.<br>Valid values:<br>- DEFAULT: All capabilities.<br>- VOICE_ONLY: Voice capabilities only, excluding dialog intervention.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VOICE_ONLY</para>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public List<string> ApplicableOperations { get; set; }
 
         /// <summary>
-        /// <para>The instance concurrency.</para>
+        /// <para>The concurrency of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -42,14 +40,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>导航测试实例描述信息</para>
+        /// <para>Description of the navigation test instance</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cd6fc91bc13445c2af7f2e3e31418520</para>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The user who last updated the instance.</para>
+        /// <para>The name of the user who updated the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2508711*******</para>
@@ -79,10 +77,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ModifyUserName { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>导航测试实例</para>
+        /// <para>Navigation test instance</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string NluServiceParamsJson { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>790B5EA3-D251-1666-B1E0-4D1F4B33A592</para>
@@ -112,10 +110,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>demo-llm-test</para>
+        /// </summary>
         [NameInMap("UnionInstanceId")]
         [Validation(Required=false)]
         public string UnionInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CCC</para>
+        /// </summary>
         [NameInMap("UnionSource")]
         [Validation(Required=false)]
         public string UnionSource { get; set; }

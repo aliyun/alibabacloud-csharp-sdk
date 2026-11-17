@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the newly created intelligent navigation scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. You can use the ID to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9ab43460-c0b9-40e2-8447-48d82c97fc67</para>
+        /// <para>01A1C878-63EC-50EF-B7A0-024F98B09129</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

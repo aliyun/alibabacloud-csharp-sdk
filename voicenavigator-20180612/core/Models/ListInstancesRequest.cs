@@ -20,33 +20,33 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceIdListJsonString { get; set; }
 
         /// <summary>
-        /// <para>The scenario name used as a filter condition.</para>
+        /// <para>The filter condition for the scenario name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The NLU type used to filter by dialog capability source. If this parameter is not specified, all types are selected.</para>
+        /// <para>The NLU type and the filter condition for the source of dialog capabilities. If you do not specify this parameter, all types are selected. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>MANAGED: managed (deprecated).</para>
+        /// <item><description><para>MANAGED: <b>[Deprecated]</b> Managed.</para>
         /// </description></item>
-        /// <item><description><para>AUTHORIZED: authorized. In the public cloud, this refers to Chatbot service.</para>
+        /// <item><description><para>AUTHORIZED: Authorized. Public cloud: Chatbot service.</para>
         /// </description></item>
-        /// <item><description><para>PROVIDED: private. Configured by specifying the AccessKey ID, AccessKey Secret, and chatEndpoint in the O&amp;M console.</para>
+        /// <item><description><para>PROVIDED: Private. Configured by specifying the AccessKey ID, AccessKey secret, and chatEndpoint in the O&amp;M console.</para>
         /// </description></item>
-        /// <item><description><para>CCC_AUTHORIZED: uses a Chatbot authorized by Cloud Call Center.</para>
+        /// <item><description><para>CCC_AUTHORIZED: Uses Chatbot authorized by Cloud Call Center.</para>
         /// </description></item>
-        /// <item><description><para>CCC_FUNCTION: uses Alibaba Cloud Function Compute.</para>
+        /// <item><description><para>CCC_FUNCTION: Uses Alibaba Cloud Function Compute.</para>
         /// </description></item>
-        /// <item><description><para>SSE_FUNCTION: uses a streaming function service. Function Compute that supports SSE, used to connect to third-party large language model chatbots.</para>
+        /// <item><description><para>SSE_FUNCTION: Uses streaming function services. Supports Function Compute with Server-Sent Events (SSE) for integrating third-party large language model chatbots.</para>
         /// </description></item>
-        /// <item><description><para>PROMPTS: connects to Qwen foundation models.</para>
+        /// <item><description><para>PROMPTS: Integrates with foundation models such as Qwen.</para>
         /// </description></item>
-        /// <item><description><para>LOCAL: private cloud, local Chatbot.</para>
+        /// <item><description><para>LOCAL: Apsara Stack. Local Chatbot.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string NluServiceTypeListJsonString { get; set; }
 
         /// <summary>
-        /// <para>The inbound number used as a filter condition.</para>
+        /// <para>The filter condition for the inbound number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>021xxxxxxx</para>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scenario status used as a filter condition. If this parameter is not specified, all statuses are selected.</para>
+        /// <para>The filter condition for the current scenario status. If you do not specify this parameter, all statuses are selected by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DISABLED: offline.</description></item>
-        /// <item><description>PUBLISHED: published.</description></item>
+        /// <item><description>DISABLED: Offline.</description></item>
+        /// <item><description>PUBLISHED: Published.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>When UnionSource is set to CCC, set UnionInstanceId to the instance ID of Cloud Call Center.</para>
+        /// <para>If UnionSource is set to CCC, set UnionInstanceId to the instance ID of Cloud Call Center.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string UnionInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The source.</para>
+        /// <para>The source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CCC: Cloud Call Center.</description></item>
         /// </list>

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the conversation.</para>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The initial context of the conversation.</para>
+        /// <para>The session information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -52,16 +52,22 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InitialContext { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8a503680-815d-473e-a9b0-e010f47a64d2</para>
+        /// <para>8a9bdaa895a748528a15b50c281e6474</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to use sandbox mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ShouldUseSandBox")]
         [Validation(Required=false)]
         public bool? ShouldUseSandBox { get; set; }

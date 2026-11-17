@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "VoiceNavigator";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("voicenavigator", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Chatbot instance.</para>
+        /// <para>Associates a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Chatbot instance.</para>
+        /// <para>Associates a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -163,7 +166,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Chatbot instance.</para>
+        /// <para>Associates a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -181,7 +184,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Chatbot instance.</para>
+        /// <para>Associates a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -831,8 +834,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Voice Navigator instance.</para>
+        /// <para>Creates an intelligent navigation instance, configures the instance name, description, and maximum number of concurrent sessions, and returns the ID of the new instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation to create an intelligent navigation instance as the configuration object for a digital worker scenario.
+        /// When you integrate with Cloud Call Center, specify the integration source and associated instance by using <c>UnionSource</c> and <c>UnionInstanceId</c>. After a successful call, <c>InstanceId</c> is returned for subsequent API calls.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateInstanceRequest
@@ -893,8 +902,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Voice Navigator instance.</para>
+        /// <para>Creates an intelligent navigation instance, configures the instance name, description, and maximum number of concurrent sessions, and returns the ID of the new instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation to create an intelligent navigation instance as the configuration object for a digital worker scenario.
+        /// When you integrate with Cloud Call Center, specify the integration source and associated instance by using <c>UnionSource</c> and <c>UnionInstanceId</c>. After a successful call, <c>InstanceId</c> is returned for subsequent API calls.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateInstanceRequest
@@ -955,8 +970,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Voice Navigator instance.</para>
+        /// <para>Creates an intelligent navigation instance, configures the instance name, description, and maximum number of concurrent sessions, and returns the ID of the new instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation to create an intelligent navigation instance as the configuration object for a digital worker scenario.
+        /// When you integrate with Cloud Call Center, specify the integration source and associated instance by using <c>UnionSource</c> and <c>UnionInstanceId</c>. After a successful call, <c>InstanceId</c> is returned for subsequent API calls.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateInstanceRequest
@@ -973,8 +994,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Voice Navigator instance.</para>
+        /// <para>Creates an intelligent navigation instance, configures the instance name, description, and maximum number of concurrent sessions, and returns the ID of the new instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation to create an intelligent navigation instance as the configuration object for a digital worker scenario.
+        /// When you integrate with Cloud Call Center, specify the integration source and associated instance by using <c>UnionSource</c> and <c>UnionInstanceId</c>. After a successful call, <c>InstanceId</c> is returned for subsequent API calls.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateInstanceRequest
@@ -991,7 +1018,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation in a debugging environment.</para>
+        /// <para>Starts a session in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1053,7 +1080,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation in a debugging environment.</para>
+        /// <para>Starts a session in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1115,7 +1142,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation in a debugging environment.</para>
+        /// <para>Starts a session in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1133,7 +1160,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation in a debugging environment.</para>
+        /// <para>Starts a session in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1287,7 +1314,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugs a conversation in the debug environment.</para>
+        /// <para>Tests a conversation in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1341,7 +1368,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugs a conversation in the debug environment.</para>
+        /// <para>Tests a conversation in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1395,7 +1422,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugs a conversation in the debug environment.</para>
+        /// <para>Tests a conversation in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1413,7 +1440,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugs a conversation in the debug environment.</para>
+        /// <para>Tests a conversation in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1551,7 +1578,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries conversation information.</para>
+        /// <para>Queries the conversation information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1589,7 +1616,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries conversation information.</para>
+        /// <para>Queries the conversation information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1627,7 +1654,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries conversation information.</para>
+        /// <para>Queries the conversation information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1645,7 +1672,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries conversation information.</para>
+        /// <para>Queries the conversation information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1887,7 +1914,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance information.</para>
+        /// <para>Retrieves the details of a navigation instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1925,7 +1952,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance information.</para>
+        /// <para>Retrieves the details of a navigation instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1963,7 +1990,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance information.</para>
+        /// <para>Retrieves the details of a navigation instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1981,7 +2008,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance information.</para>
+        /// <para>Retrieves the details of a navigation instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1999,7 +2026,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the instance IVR configuration.</para>
+        /// <para>Queries the IVR configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2037,7 +2064,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the instance IVR configuration.</para>
+        /// <para>Queries the IVR configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2075,7 +2102,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the instance IVR configuration.</para>
+        /// <para>Queries the IVR configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2093,7 +2120,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the instance IVR configuration.</para>
+        /// <para>Queries the IVR configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2111,7 +2138,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the recording of a conversation.</para>
+        /// <para>Retrieves the conversation recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2149,7 +2176,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the recording of a conversation.</para>
+        /// <para>Retrieves the conversation recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2187,7 +2214,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the recording of a conversation.</para>
+        /// <para>Retrieves the conversation recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2205,7 +2232,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the recording of a conversation.</para>
+        /// <para>Retrieves the conversation recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3607,7 +3634,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Lists instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3645,7 +3672,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Lists instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3683,7 +3710,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Lists instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3701,7 +3728,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Lists instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4071,7 +4098,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of intelligent navigation instances for the current tenant.</para>
+        /// <para>Queries a paginated list of intelligent navigation instances for the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4109,7 +4136,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of intelligent navigation instances for the current tenant.</para>
+        /// <para>Queries a paginated list of intelligent navigation instances for the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4147,7 +4174,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of intelligent navigation instances for the current tenant.</para>
+        /// <para>Queries a paginated list of intelligent navigation instances for the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4165,7 +4192,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of intelligent navigation instances for the current tenant.</para>
+        /// <para>Queries a paginated list of intelligent navigation instances for the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4211,6 +4238,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrClassVocabularyId))
             {
                 query["AsrClassVocabularyId"] = request.AsrClassVocabularyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrContextEnabled))
+            {
+                query["AsrContextEnabled"] = request.AsrContextEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrCustomizationId))
             {
@@ -4297,6 +4328,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrClassVocabularyId))
             {
                 query["AsrClassVocabularyId"] = request.AsrClassVocabularyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrContextEnabled))
+            {
+                query["AsrContextEnabled"] = request.AsrContextEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrCustomizationId))
             {
@@ -4535,7 +4570,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an instance.</para>
+        /// <para>Modifies an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4589,7 +4624,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an instance.</para>
+        /// <para>Modifies an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4643,7 +4678,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an instance.</para>
+        /// <para>Modifies an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4661,7 +4696,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify an instance.</para>
+        /// <para>Modifies an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

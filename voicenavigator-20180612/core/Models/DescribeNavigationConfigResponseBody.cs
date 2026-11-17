@@ -17,27 +17,27 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public DescribeNavigationConfigResponseBodyGreetingConfig GreetingConfig { get; set; }
         public class DescribeNavigationConfigResponseBodyGreetingConfig : TeaModel {
             /// <summary>
-            /// <para>The greeting message.</para>
+            /// <para>The greeting words.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>您好，欢迎致电智能导航</para>
+            /// <para>Hello, welcome to the intelligent navigation service</para>
             /// </summary>
             [NameInMap("GreetingWords")]
             [Validation(Required=false)]
             public string GreetingWords { get; set; }
 
             /// <summary>
-            /// <para>The intent trigger.</para>
+            /// <para>The trigger intent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>你好</para>
+            /// <para>Hello</para>
             /// </summary>
             [NameInMap("IntentTrigger")]
             [Validation(Required=false)]
             public string IntentTrigger { get; set; }
 
             /// <summary>
-            /// <para>The source of the configuration.</para>
+            /// <para>The configuration type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chatbotIntent</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public DescribeNavigationConfigResponseBodySilenceTimeoutConfig SilenceTimeoutConfig { get; set; }
         public class DescribeNavigationConfigResponseBodySilenceTimeoutConfig : TeaModel {
             /// <summary>
-            /// <para>The action to perform after the final silence prompt is played. Valid values: <c>TransferToAgent</c>, <c>TransferToIVR</c>, <c>RedirectToPage</c>, or <c>HangUp</c>.</para>
+            /// <para>The action to perform after the prompt. Valid values: TransferToAgent, TransferToIVR, RedirectToPage, and HangUp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HangUp</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string FinalAction { get; set; }
 
             /// <summary>
-            /// <para>Parameters for the final action, such as a redirection target.</para>
+            /// <para>The action parameters, such as the redirect target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string FinalActionParams { get; set; }
 
             /// <summary>
-            /// <para>The prompt that is played when the silence timeout threshold is reached.</para>
+            /// <para>The final silence prompt.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>抱歉，听不到您说话，请您稍后致电</para>
+            /// <para>Sorry, I cannot hear you. Please call back later</para>
             /// </summary>
             [NameInMap("FinalPrompt")]
             [Validation(Required=false)]
@@ -106,17 +106,17 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string IntentTrigger { get; set; }
 
             /// <summary>
-            /// <para>The prompt that is played when a silence timeout occurs.</para>
+            /// <para>The silence timeout prompt.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>抱歉，我没听到您说话</para>
+            /// <para>Sorry, I did not hear you</para>
             /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]
             public string Prompt { get; set; }
 
             /// <summary>
-            /// <para>The source of the configuration.</para>
+            /// <para>The source type of the configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chatbotIntent</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? Threshold { get; set; }
 
             /// <summary>
-            /// <para>The duration of the silence timeout.</para>
+            /// <para>The silence timeout period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -148,14 +148,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         }
 
         /// <summary>
-        /// <para>The configuration for handling unrecognized input.</para>
+        /// <para>The unrecognizing configuration.</para>
         /// </summary>
         [NameInMap("UnrecognizingConfig")]
         [Validation(Required=false)]
         public DescribeNavigationConfigResponseBodyUnrecognizingConfig UnrecognizingConfig { get; set; }
         public class DescribeNavigationConfigResponseBodyUnrecognizingConfig : TeaModel {
             /// <summary>
-            /// <para>The action to take when the number of unrecognized inputs reaches the threshold. Valid values: <c>TransferToAgent</c>, <c>TransferToIVR</c>, <c>RedirectToPage</c>, or <c>HangUp</c>.</para>
+            /// <para>The action to perform for unrecognized input. Valid values: TransferToAgent, TransferToIVR, RedirectToPage, and HangUp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TransferToAgent</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string FinalAction { get; set; }
 
             /// <summary>
-            /// <para>Parameters for the final action, such as a redirection target.</para>
+            /// <para>The action parameters, such as the redirect target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ \&quot;skillGroupId\&quot;: \&quot;fallbackSkillGroup\&quot; }</para>
@@ -175,27 +175,27 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string FinalActionParams { get; set; }
 
             /// <summary>
-            /// <para>The prompt that is played when the unrecognized input threshold is reached.</para>
+            /// <para>The final prompt for unrecognized input.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>抱歉，我暂时无法处理您的问题，即将为您转接人工</para>
+            /// <para>Sorry, I cannot process your request at the moment. I am transferring you to a human agent</para>
             /// </summary>
             [NameInMap("FinalPrompt")]
             [Validation(Required=false)]
             public string FinalPrompt { get; set; }
 
             /// <summary>
-            /// <para>The prompt that is played when user input is not recognized.</para>
+            /// <para>The prompt for unrecognized input.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>抱歉，我无法理解您的意思</para>
+            /// <para>Sorry, I do not understand what you mean</para>
             /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]
             public string Prompt { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of times the user\&quot;s input is not recognized.</para>
+            /// <para>The maximum number of unrecognized inputs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

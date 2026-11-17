@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ExportConversationDetailsRequest : TeaModel {
+        /// <summary>
+        /// <para>The ABTest ID.</para>
+        /// </summary>
         [NameInMap("AbTestId")]
         [Validation(Required=false)]
         public string AbTestId { get; set; }
 
         /// <summary>
-        /// <para>The left boundary of the start date range.</para>
+        /// <para>The lower bound of the start date range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1582266750353</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? BeginTimeLeftRange { get; set; }
 
         /// <summary>
-        /// <para>The right boundary of the start date range.</para>
+        /// <para>The upper bound of the start date range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1640793599000</para>
@@ -65,14 +68,26 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public List<string> Options { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public int? Result { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RoundsLeftRange")]
         [Validation(Required=false)]
         public int? RoundsLeftRange { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("RoundsRightRange")]
         [Validation(Required=false)]
         public int? RoundsRightRange { get; set; }

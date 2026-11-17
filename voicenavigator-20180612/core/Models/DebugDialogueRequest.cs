@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DebugDialogueRequest : TeaModel {
         /// <summary>
-        /// <para>The conversation context.</para>
+        /// <para>The session context.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>是的</para>
+        /// <para>Yes</para>
         /// </summary>
         [NameInMap("Utterance")]
         [Validation(Required=false)]

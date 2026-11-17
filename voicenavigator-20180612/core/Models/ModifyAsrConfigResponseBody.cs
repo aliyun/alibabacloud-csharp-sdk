@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public ModifyAsrConfigResponseBodyData Data { get; set; }
         public class ModifyAsrConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of affected rows.</para>
+            /// <para>Indicates whether rows are affected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
