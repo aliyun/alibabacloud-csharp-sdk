@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteApiDestinationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API operation status or POP error code. Valid values: Success: The operation is successful.</para>
+        /// <para>The API status or POP error code. Valid values: Success: Successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

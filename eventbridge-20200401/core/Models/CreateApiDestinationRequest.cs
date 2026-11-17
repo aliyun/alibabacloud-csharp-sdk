@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ApiDestinationName { get; set; }
 
         /// <summary>
-        /// <para>The name of the connection configuration. The name must be 2 to 127 characters in length.</para>
-        /// <para><notice>Before calling this operation, call the Connection operation to create a connection configuration. Set ConnectionName to the name of an existing connection.</para>
+        /// <para>The name of the connection configuration. The name must be 2 to 127 characters in length.
+        /// <notice>You must first call the Connection operation to create a connection configuration, and specify an existing connection name for ConnectionName.</notice></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The description of the API destination. The description can be up to 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Description of the connection configuration</para>
+        /// <para>This is the description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

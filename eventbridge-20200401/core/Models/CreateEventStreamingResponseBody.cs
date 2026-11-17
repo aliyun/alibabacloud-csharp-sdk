@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateEventStreamingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code of the API operation. Valid values:</para>
+        /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Success: The operation is successful.                                </description></item>
+        /// <item><description>Success: The request is successful.                                </description></item>
         /// <item><description>Other values: An error code. For more information, see Error codes.</description></item>
         /// </list>
         /// 

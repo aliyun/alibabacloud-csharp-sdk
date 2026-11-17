@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateEventSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API response code. Valid values:</para>
+        /// <para>The API return code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Success: The operation is successful.                                 </description></item>
-        /// <item><description>Other values: An error code.
+        /// <item><description>Other values: Error codes.
         /// For more information, see Error codes.</description></item>
         /// </list>
         /// 
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public CreateEventSourceResponseBodyData Data { get; set; }
         public class CreateEventSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The resource ARN.</para>
+            /// <para>The ARN of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:eventbridge:cn-hangzhou:164901546557****:eventbus/my-event-bus/eventsource/mymns.source</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -38,12 +38,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventTargetsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event pattern in JSON format. The following patterns are supported:</para>
-        /// <list type="bullet">
-        /// <item><description>stringEqual pattern</description></item>
-        /// <item><description>stringExpression pattern
-        /// Each field supports up to five expressions in a map structure.</description></item>
-        /// </list>
+        /// <para>The event pattern in JSON format. Valid values:
+        /// stringEqual mode.
+        /// stringExpression mode.
+        /// Up to 5 expressions are supported for each field (map structure).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,11 +80,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ENABLE: The rule is enabled. This is the default status.</description></item>
-        /// <item><description>DISABLE: The rule is disabled.</description></item>
-        /// </list>
+        /// <para>The status of the rule. Valid values:
+        /// ENABLE: The rule is enabled. This is the default status.
+        /// DISABLE: The rule is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>

@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The dead-letter queue. Unprocessed events or events that exceed the retry count are written to the dead-letter queue. Supported queue types include ApsaraMQ for RocketMQ, Simple Message Queue (formerly MNS), ApsaraMQ for Kafka, and EventBridge event buses.</para>
+            /// <para>The dead-letter queue. Unprocessed events or events that exceed the retry limit are written to the dead-letter queue. Supported queue types include ApsaraMQ for RocketMQ, Simple Message Queue (formerly MNS), ApsaraMQ for Kafka, and EventBridge event buses.</para>
             /// </summary>
             [NameInMap("DeadLetterQueue")]
             [Validation(Required=false)]
             public CreateRuleRequestEventTargetsDeadLetterQueue DeadLetterQueue { get; set; }
             public class CreateRuleRequestEventTargetsDeadLetterQueue : TeaModel {
                 /// <summary>
-                /// <para>The ARN of the dead-letter queue. Unprocessed events or events that exceed the retry count are written to the dead-letter queue. Simple Message Queue (formerly MNS) and ApsaraMQ for RocketMQ are supported.</para>
+                /// <para>The ARN of the dead-letter queue. Unprocessed events or events that exceed the retry limit are written to the dead-letter queue. Simple Message Queue (formerly MNS) and ApsaraMQ for RocketMQ are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue</para>
@@ -126,11 +126,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The fault tolerance strategy. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ALL: allows fault tolerance. Exceptions do not block execution. If the retry strategy is exhausted, messages are delivered to the dead-letter queue or discarded based on the configuration.</description></item>
-            /// <item><description>NONE: disables fault tolerance. Exceptions block execution when the retry strategy is exhausted.</description></item>
-            /// </list>
+            /// <para>The fault tolerance strategy. Valid values:
+            /// ALL: Fault tolerance is allowed. Exceptions are tolerated and do not block execution. If the retry strategy is exhausted, messages are delivered to the dead-letter queue or discarded based on the configuration.
+            /// NONE: Fault tolerance is disabled. Exceptions are not tolerated. If an exception occurs and the retry strategy is exhausted, execution is blocked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -178,7 +176,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string ResourceKey { get; set; }
 
                 /// <summary>
-                /// <para>The parameter template style of the event target.</para>
+                /// <para>The style of the event target parameter template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The value of ${key} is ${value}!</para>
@@ -200,11 +198,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The retry policy for pushing events. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>BACKOFF_RETRY: backoff retry policy. The system retries 3 times, with a random interval of 10 to 20 seconds between each retry.</description></item>
-            /// <item><description>EXPONENTIAL_DECAY_RETRY: exponential decay retry. The system retries 176 times, with the interval exponentially incrementing to 512 seconds. The total retry time is 1 day. The specific intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, and then 512 seconds for the remaining 167 retries.</description></item>
-            /// </list>
+            /// <para>The push retry policy. Valid values:
+            /// BACKOFF_RETRY: The backoff retry policy. The system retries 3 times. The interval between two consecutive retries is a random value between 10 and 20 seconds.
+            /// EXPONENTIAL_DECAY_RETRY: The exponential decay retry. The system retries 176 times. The intervals between consecutive retries exponentially increment up to 512 seconds. The total retry time is 1 day. The specific intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512...512 seconds (167 intervals of 512 seconds in total).</para>
             /// 
             /// <b>Example:</b>
             /// <para>BACKOFF_RETRY</para>
@@ -227,12 +223,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The event pattern in JSON format. The following patterns are supported:</para>
-        /// <list type="bullet">
-        /// <item><description>stringEqual pattern</description></item>
-        /// <item><description>stringExpression pattern
-        /// Each field supports up to five expressions in a map structure.</description></item>
-        /// </list>
+        /// <para>The event pattern in JSON format. Valid values:
+        /// stringEqual mode.
+        /// stringExpression mode.
+        /// Up to 5 expressions are supported for each field (map structure).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -271,11 +265,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ENABLE: The rule is enabled. This is the default status.</description></item>
-        /// <item><description>DISABLE: The rule is disabled.</description></item>
-        /// </list>
+        /// <para>The status of the rule. Valid values:
+        /// ENABLE: The rule is enabled. This is the default status.
+        /// DISABLE: The rule is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. If you do not specify this parameter, the created event bus belongs to the default resource group of the account.</para>
+        /// <para>The ID of the resource group. If you do not specify this parameter, the event bus belongs to the default resource group of the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the first tag in the tag list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>R&amp;D</para>

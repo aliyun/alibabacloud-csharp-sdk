@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The response code returned by the API operation:</para>
         /// <list type="bullet">
-        /// <item><description>Success: The request was successful.                                 </description></item>
-        /// <item><description>Other values: An error occurred. For more information, see Error codes.</description></item>
+        /// <item><description>Success: The request is successful.                                 </description></item>
+        /// <item><description>Other values: An error code. For more information, see Error codes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns true if the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

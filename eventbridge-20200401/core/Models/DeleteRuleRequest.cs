@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// <para>The name of the event rule that you want to delete.</para>
+        /// <para>The name of the rule to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

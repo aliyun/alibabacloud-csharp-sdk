@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventSourceName { get; set; }
 
         /// <summary>
-        /// <para>The external data source configuration.</para>
+        /// <para>The external datasource config.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;ConsumePosition\&quot;:\&quot;end\&quot;,\&quot;LogStore\&quot;:\&quot;oss_log\&quot;,\&quot;Project\&quot;:\&quot;slsaudit-center-5795350335281001-cn-beijing\&quot;,\&quot;RoleName\&quot;:\&quot;sls-beijing-tf\&quot;}</para>
+        /// <para>{&quot;IsBase64Decode&quot;:true,&quot;QueueName&quot;:&quot;queue-1&quot;}</para>
         /// </summary>
         [NameInMap("ExternalSourceConfig")]
         [Validation(Required=false)]
@@ -72,56 +72,56 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? LinkedExternalSource { get; set; }
 
         /// <summary>
-        /// <para>The SourceHttpEventParameters request parameter.</para>
+        /// <para>The request parameter SourceHttpEventParameters.</para>
         /// </summary>
         [NameInMap("SourceHttpEventParameters")]
         [Validation(Required=false)]
         public string SourceHttpEventParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The SourceKafkaParameters request parameter.</para>
+        /// <para>The request parameter SourceKafkaParameters.</para>
         /// </summary>
         [NameInMap("SourceKafkaParameters")]
         [Validation(Required=false)]
         public string SourceKafkaParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters for a Simple Message Queue (formerly MNS) event source.</para>
+        /// <para>The parameters for the Simple Message Queue (formerly MNS) event source.</para>
         /// </summary>
         [NameInMap("SourceMNSParameters")]
         [Validation(Required=false)]
         public string SourceMNSParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters for an OSS event source.</para>
+        /// <para>The parameters for the OSS event source.</para>
         /// </summary>
         [NameInMap("SourceOSSEventParameters")]
         [Validation(Required=false)]
         public string SourceOSSEventParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The SourceRabbitMQParameters request parameter.</para>
+        /// <para>The request parameter SourceRabbitMQParameters.</para>
         /// </summary>
         [NameInMap("SourceRabbitMQParameters")]
         [Validation(Required=false)]
         public string SourceRabbitMQParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The SourceRocketMQParameters request parameter.</para>
+        /// <para>The request parameter SourceRocketMQParameters.</para>
         /// </summary>
         [NameInMap("SourceRocketMQParameters")]
         [Validation(Required=false)]
         public string SourceRocketMQParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters for a Simple Log Service event source.</para>
+        /// <para>The parameters for the Simple Log Service event source.</para>
         /// </summary>
         [NameInMap("SourceSLSParameters")]
         [Validation(Required=false)]
         public string SourceSLSParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The SourceScheduledEventParameters request parameter.</para>
+        /// <para>The request parameter SourceScheduledEventParameters.</para>
         /// </summary>
         [NameInMap("SourceScheduledEventParameters")]
         [Validation(Required=false)]

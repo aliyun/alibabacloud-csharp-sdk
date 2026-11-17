@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public CreateConnectionRequestAuthParameters AuthParameters { get; set; }
         public class CreateConnectionRequestAuthParameters : TeaModel {
             /// <summary>
-            /// <para>The data structure of the API key.</para>
+            /// <para>The data structure of the API key authentication parameters.</para>
             /// </summary>
             [NameInMap("ApiKeyAuthParameters")]
             [Validation(Required=false)]
             public CreateConnectionRequestAuthParametersApiKeyAuthParameters ApiKeyAuthParameters { get; set; }
             public class CreateConnectionRequestAuthParametersApiKeyAuthParameters : TeaModel {
                 /// <summary>
-                /// <para>The key of the API key.</para>
+                /// <para>The key name of the API key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Token</para>
@@ -46,14 +46,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The authentication type:</para>
+            /// <para>The authentication type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>BASIC: BASIC_AUTH. This authorization method is a basic authorization method implemented by browsers in compliance with the HTTP protocol. During HTTP communication, the HTTP protocol defines a basic authentication method that allows an HTTP server to authenticate clients. Add Authorization: Basic Base64-encoded(<c>username:password</c>) in the fixed format to the request header. Username and Password are required.</para>
-            /// </description></item>
-            /// <item><description><para>API KEY: API_KEY_AUTH. Add Token: Token value in the fixed format to the request header. ApiKeyName and ApiKeyValue are required.</para>
-            /// </description></item>
-            /// <item><description><para>OAUTH: OAUTH_AUTH. OAuth 2.0 is an authorization mechanism. Normally, without an authorization mechanism such as OAuth 2.0, clients can directly access resources on the resource server. To ensure secure data access, an Access Token mechanism is added. Clients must carry an Access Token to access protected resources. OAuth 2.0 ensures that resources are not accessed by malicious clients, which improves system security. AuthorizationEndpoint, OAuthHttpParameters, and HttpMethod are required.</para>
-            /// </description></item>
+            /// <item><description>BASIC: Basic authentication. This is a standard authentication method defined by the HTTP protocol. Add the Authorization header in the format of Basic followed by a space and the Base64-encoded username:password. Username and Password are required.</description></item>
+            /// <item><description>API KEY: API key authentication. Add the Token header with the token value. ApiKeyName and ApiKeyValue are required.</description></item>
+            /// <item><description>OAUTH: OAuth 2.0 authentication. OAuth 2.0 is an authorization framework that uses access tokens to protect resources. Clients must include an access token in their requests to access protected resources. AuthorizationEndpoint, OAuthHttpParameters, and HttpMethod are required.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +61,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string AuthorizationType { get; set; }
 
             /// <summary>
-            /// <para>The data structure of basic authentication.</para>
+            /// <para>The data structure of the basic authentication parameters.</para>
             /// </summary>
             [NameInMap("BasicAuthParameters")]
             [Validation(Required=false)]
@@ -93,14 +90,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The data structure of OAuth authentication parameters.</para>
+            /// <para>The data structure of the OAuth authentication parameters.</para>
             /// </summary>
             [NameInMap("OAuthParameters")]
             [Validation(Required=false)]
             public CreateConnectionRequestAuthParametersOAuthParameters OAuthParameters { get; set; }
             public class CreateConnectionRequestAuthParametersOAuthParameters : TeaModel {
                 /// <summary>
-                /// <para>The authorization endpoint address. Maximum length: 127 characters.</para>
+                /// <para>The endpoint URL for authorization. Maximum length: 127 characters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></para>
@@ -110,14 +107,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string AuthorizationEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The client parameters data structure.</para>
+                /// <para>The data structure of the client parameters.</para>
                 /// </summary>
                 [NameInMap("ClientParameters")]
                 [Validation(Required=false)]
                 public CreateConnectionRequestAuthParametersOAuthParametersClientParameters ClientParameters { get; set; }
                 public class CreateConnectionRequestAuthParametersOAuthParametersClientParameters : TeaModel {
                     /// <summary>
-                    /// <para>The client ID.</para>
+                    /// <para>The ID of the client.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ClientID</para>
@@ -139,7 +136,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The HTTP method for the probe. Valid values:</para>
+                /// <para>The HTTP method for probing. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>GET</description></item>
                 /// <item><description>POST</description></item>
@@ -164,14 +161,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParameters OAuthHttpParameters { get; set; }
                 public class CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParameters : TeaModel {
                     /// <summary>
-                    /// <para>The list of body request parameter data structures.</para>
+                    /// <para>The list of structures for body request parameters.</para>
                     /// </summary>
                     [NameInMap("BodyParameters")]
                     [Validation(Required=false)]
                     public List<CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersBodyParameters> BodyParameters { get; set; }
                     public class CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersBodyParameters : TeaModel {
                         /// <summary>
-                        /// <para>Specifies whether the value is used for authentication.</para>
+                        /// <para>Specifies whether the value is a secret.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -210,7 +207,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public List<CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters> HeaderParameters { get; set; }
                     public class CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters : TeaModel {
                         /// <summary>
-                        /// <para>Specifies whether the value is used for authentication.</para>
+                        /// <para>Specifies whether the value is a secret.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -242,14 +239,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The data structure of the URI of the request path parameters.</para>
+                    /// <para>The structure of URI of the request path parameters.</para>
                     /// </summary>
                     [NameInMap("QueryStringParameters")]
                     [Validation(Required=false)]
                     public List<CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters> QueryStringParameters { get; set; }
                     public class CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters : TeaModel {
                         /// <summary>
-                        /// <para>Specifies whether the value is used for authentication.</para>
+                        /// <para>Specifies whether the value is a secret.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -287,7 +284,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The connection configuration name. Maximum length: 127 characters. Minimum length: 2 characters.</para>
+        /// <para>The name of the connection configuration. The length must be 2 to 127 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -308,7 +305,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The network configuration data structure.</para>
+        /// <para>The data structure of the network configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkParameters")]
@@ -316,15 +313,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public CreateConnectionRequestNetworkParameters NetworkParameters { get; set; }
         public class CreateConnectionRequestNetworkParameters : TeaModel {
             /// <summary>
+            /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Public network: PublicNetwork</para>
-            /// </description></item>
-            /// <item><description><para>Virtual private cloud (VPC): PrivateNetwork</para>
-            /// </description></item>
+            /// <item><description>PublicNetwork: public network</description></item>
+            /// <item><description>PrivateNetwork: VPC
+            /// <notice>If you select PrivateNetwork, VpcId, VswitcheId, and SecurityGroupId are required.</notice></description></item>
             /// </list>
-            /// <remarks>
-            /// <para>Notice: If you select PrivateNetwork, VpcId, VswitcheId, and SecurityGroupId are required.</para>
-            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -335,7 +329,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The ID of the security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eb-167adad548759-security_grop/sg-bp1addad26peuh9qh9****</para>
@@ -355,7 +349,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>The ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1iu4x7aeradadown1og8,vsw-bp193sqmadadlaszpeq****</para>
@@ -367,7 +361,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The data source connection parameters (JSON object). This parameter is required when Type is a data source type. It is not required for the Http type. For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</para>
+        /// <para>The data source connection parameters in JSON format. This parameter is required when Type is set to a data source type, and is not required when Type is set to Http. For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</para>
@@ -377,7 +371,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public object Parameters { get; set; }
 
         /// <summary>
-        /// <para>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, and Http. This parameter is required for data source type connections. If this parameter is not specified, the default value Http is used. The Http type is used for API Destination and other HTTP protocol targets. Hive and Iceberg are used for the corresponding data lakehouse sources. lakehouse is used only for compatibility with existing connections. Other data source types are used for data connections in the integration marketplace.</para>
+        /// <para>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, and Http. This parameter is required for data source connections. If you do not specify this parameter, the default value Http is used. The Http type is used for HTTP protocol targets such as API Destination. Hive and Iceberg are used for their respective data lakehouse data sources. The lakehouse type is used only for compatibility with existing connections. Other data source types are used for data connections in the integration marketplace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Http</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateServiceLinkedRoleForProductResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code of the API operation. A value of Success indicates that the request is successful. Other values indicate error codes. For more information, see Error codes.</para>
+        /// <para>The response code. A value of Success indicates success. Other values indicate error codes. For more information, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. If the request is successful, the value is success.</para>
+        /// <para>The response message. The value is success if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

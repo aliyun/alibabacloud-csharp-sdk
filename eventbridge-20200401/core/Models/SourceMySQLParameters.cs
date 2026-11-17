@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class SourceMySQLParameters : TeaModel {
         /// <summary>
-        /// <para>The name of the database.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>database1</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The hostname or IP address of the database server.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>rm-bp1vxxx.mysql.rds.aliyuncs.com</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether database structure schema evolution is included.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -40,8 +34,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string IncludeSchemaChanges { get; set; }
 
         /// <summary>
-        /// <para>The network type.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>PrivateNetwork</para>
         /// </summary>
@@ -50,8 +42,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The password of the database user.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>
@@ -60,8 +50,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The port of the database server.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>80</para>
         /// </summary>
@@ -70,8 +58,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the data source is located.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -80,8 +66,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>sg-a1b2c3d4e5f6g7h8i9j0</para>
         /// </summary>
@@ -90,8 +74,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot mode.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>when_needed</para>
         /// </summary>
@@ -100,8 +82,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SnapshotMode { get; set; }
 
         /// <summary>
-        /// <para>The names of the tables to synchronize. Separate multiple table names with commas.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>database1.table1</para>
         /// </summary>
@@ -110,8 +90,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string TableNames { get; set; }
 
         /// <summary>
-        /// <para>The database username.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>example_user</para>
         /// </summary>
@@ -120,8 +98,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string User { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch IDs. Separate multiple IDs with commas.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>[vsw-a1b2c3d4e5f6g7h8i9j0k]</para>
         /// </summary>
@@ -130,8 +106,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
-        /// 
         /// <b>Example:</b>
         /// <para>vpc-a1b2c3d4e5f6g7h8i9j0k</para>
         /// </summary>

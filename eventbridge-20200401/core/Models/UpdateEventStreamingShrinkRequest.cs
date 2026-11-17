@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventStreamingName { get; set; }
 
         /// <summary>
-        /// <para>The event filtering rule. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns</a>.</para>
+        /// <para>The event filter pattern. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">Event patterns</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string FilterPattern { get; set; }
 
         /// <summary>
-        /// <para>The common JSON Configurations for event providers. This parameter is mutually exclusive with Source.</para>
+        /// <para>The common JSON configurations for the event provider. This parameter is mutually exclusive with Source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RunOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event target. You must select one sink, and you can configure only one sink.</para>
+        /// <para>The event target. You must select exactly one sink.</para>
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
         public string SinkShrink { get; set; }
 
         /// <summary>
-        /// <para>The event provider. You must select exactly one source type and configure its parameters.</para>
+        /// <para>The event provider. You must specify one and only one source type.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

@@ -1,3 +1,12 @@
+2026-11-17 Version: 7.7.3
+- Update API CreateEventStreaming: add request parameters Sink.SinkAgentCoreKnowledgeBaseParameters.
+- Update API GetEventStreaming: add response parameters Body.Data.Sink.SinkAgentCoreKnowledgeBaseParameters.
+- Update API GetEventStreaming: add response parameters Body.Data.Source.SourceOSSParameters.FileExtensions.
+- Update API ListEventStreamings: add response parameters Body.Data.EventStreamings.$.Sink.SinkAgentCoreKnowledgeBaseParameters.
+- Update API ListEventStreamings: add response parameters Body.Data.EventStreamings.$.Source.SourceOSSParameters.FileExtensions.
+- Update API UpdateEventStreaming: add request parameters Sink.SinkAgentCoreKnowledgeBaseParameters.
+
+
 2026-11-11 Version: 7.7.2
 - Update API CreateEventBus: add request parameters ResourceGroupId.
 - Update API CreateEventBus: add request parameters Tags.

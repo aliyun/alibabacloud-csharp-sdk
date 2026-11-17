@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateEventSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API response code:</para>
+        /// <para>The API return code:</para>
         /// <list type="bullet">
         /// <item><description><para>Success: indicates success.</para>
         /// </description></item>
-        /// <item><description><para>Other values: indicate error codes. For more information, see Error codes.</para>
+        /// <item><description><para>Other values: indicate an error code. For more information, see Error codes.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

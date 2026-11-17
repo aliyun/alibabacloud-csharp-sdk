@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListEventStreamingsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the maximum number of entries to return per request. You can use this parameter together with NextToken to paginate results.&gt;Notice: The maximum number of entries returned per request cannot exceed 100.</para>
+        /// <para>Specifies the maximum number of entries to return per request. You can use this parameter with NextToken to paginate results. <notice>The maximum number of entries returned per request cannot exceed 100.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NamePrefix { get; set; }
 
         /// <summary>
-        /// <para>The token that is returned when Limit is specified and additional results are available.</para>
+        /// <para>The pagination token. If you specify Limit and more results are available, this token is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

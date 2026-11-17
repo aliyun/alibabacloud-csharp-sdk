@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteEventStreamingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
-        /// <para>Success: The request was successful.    </para>
-        /// <para>Other values: An error occurred. For more information about error codes, see error codes.</para>
+        /// <para>The return code of the API operation:</para>
+        /// <para>Success: indicates success.    </para>
+        /// <para>Other values: indicate error codes. For more information about error codes, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns true if the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

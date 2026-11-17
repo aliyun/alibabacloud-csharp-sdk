@@ -2187,12 +2187,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</para>
+        /// <para>Creates a service-linked role based on the service-linked role name associated with a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</para>
+        /// <para>Creates a service-linked role based on the service-linked role name associated with a product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2234,12 +2234,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</para>
+        /// <para>Creates a service-linked role based on the service-linked role name associated with a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</para>
+        /// <para>Creates a service-linked role based on the service-linked role name associated with a product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2281,12 +2281,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</para>
+        /// <para>Creates a service-linked role based on the service-linked role name associated with a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</para>
+        /// <para>Creates a service-linked role based on the service-linked role name associated with a product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2304,12 +2304,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</para>
+        /// <para>Creates a service-linked role based on the service-linked role name associated with a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</para>
+        /// <para>Creates a service-linked role based on the service-linked role name associated with a product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3904,7 +3904,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event rule.</para>
+        /// <para>Deletes an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3955,7 +3955,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event rule.</para>
+        /// <para>Deletes an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4006,7 +4006,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event rule.</para>
+        /// <para>Deletes an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4029,7 +4029,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event rule.</para>
+        /// <para>Deletes an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16143,12 +16143,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
+        /// <para>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
+        /// <para>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16236,12 +16236,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
+        /// <para>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
+        /// <para>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16329,12 +16329,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
+        /// <para>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
+        /// <para>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16352,12 +16352,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
+        /// <para>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
+        /// <para>Modifies the basic information, event source, event filter pattern, or event target of an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
