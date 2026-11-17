@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>Image of the after-sales Credential&gt;Notice: If the after-sales order rendering API returns that an after-sales image is required, this field is mandatory.</notice></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>https://</para>
         /// </summary>
         [NameInMap("picture")]
         [Validation(Required=false)]

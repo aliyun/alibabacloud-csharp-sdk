@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ConfirmDisburseRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for confirming the receipt of goods.</para>
+        /// <para>The request parameters for confirming receipt.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

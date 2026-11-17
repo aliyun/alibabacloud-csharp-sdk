@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>The brand name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Apple/苹果</para>
+        /// <para>Apple</para>
         /// </summary>
         [NameInMap("brandName")]
         [Validation(Required=false)]
         public string BrandName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the product is available for sale. This is a calculated value.</para>
+        /// <para>The calculated value indicating whether the product is available for sale.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? CategoryLeafId { get; set; }
 
         /// <summary>
-        /// <para>The product description URL.</para>
+        /// <para>The product details URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://img.alicdn.com/descpath/O1CN01wciRDp22AEU1*******f34">https://img.alicdn.com/descpath/O1CN01wciRDp22AEU1*******f34</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DescPath { get; set; }
 
         /// <summary>
-        /// <para>The region code.</para>
+        /// <para>The division code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110000</para>
@@ -67,31 +67,31 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DivisionCode { get; set; }
 
         /// <summary>
-        /// <para>The product\&quot;s extended properties.</para>
+        /// <para>The extended product properties.</para>
         /// </summary>
         [NameInMap("extendProperties")]
         [Validation(Required=false)]
         public List<ProductExtendProperty> ExtendProperties { get; set; }
 
         /// <summary>
-        /// <para>The stock status.</para>
+        /// <para>The approximate inventory.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>有货</para>
+        /// <para>In stock</para>
         /// </summary>
         [NameInMap("fuzzyQuantity")]
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
 
         /// <summary>
-        /// <para>The product images.</para>
+        /// <para>images</para>
         /// </summary>
         [NameInMap("images")]
         [Validation(Required=false)]
         public List<string> Images { get; set; }
 
         /// <summary>
-        /// <para>The warehousing status.</para>
+        /// <para>The warehousing status of the product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string LmItemId { get; set; }
 
         /// <summary>
-        /// <para>The main product image URL.</para>
+        /// <para>The product main image.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://img.alicdn.com/imgextra/i3/221*******988/O1CN01w4vomR1QYYEx6nyr5_!!221******988.jpg">https://img.alicdn.com/imgextra/i3/221*******988/O1CN01w4vomR1QYYEx6nyr5_!!221******988.jpg</a></para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The product attributes.</para>
+        /// <para>The product properties.</para>
         /// </summary>
         [NameInMap("properties")]
         [Validation(Required=false)]
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>The inventory.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is fixed at -1 and can be ignored.</description></item>
+        /// <item><description>This field is currently a fixed value of -1 and can be ignored.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The API request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3239281273******823</para>
@@ -197,14 +197,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service promises.&gt;Notice:  Suppliers maintain all service promises. If a supplier fails to update this information in a timely manner, the service promise labels for some products may be inaccurate. Distributors should display this information to their customers with caution.</para>
+        /// <para>The service commitments.<notice>Service commitments are maintained by suppliers. If suppliers fail to maintain or update them promptly, the service commitment labels for some products may be inaccurate. Distributors should display these commitments to their customers with caution.</notice></para>
         /// </summary>
         [NameInMap("servicePromises")]
         [Validation(Required=false)]
         public List<string> ServicePromises { get; set; }
 
         /// <summary>
-        /// <para>The channel shop ID.</para>
+        /// <para>The channel store ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210*****7</para>
@@ -214,14 +214,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopId { get; set; }
 
         /// <summary>
-        /// <para>The product SKUs.</para>
+        /// <para>skus</para>
         /// </summary>
         [NameInMap("skus")]
         [Validation(Required=false)]
         public List<Sku> Skus { get; set; }
 
         /// <summary>
-        /// <para>The quantity sold.</para>
+        /// <para>The sales volume.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100+</para>
@@ -251,10 +251,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? TaxRate { get; set; }
 
         /// <summary>
-        /// <para>The product title.</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>发财树</para>
+        /// <para>Money tree</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

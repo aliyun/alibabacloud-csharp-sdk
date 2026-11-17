@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>Purchaser ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PID56****2304</para>
+        /// <para>56****2304</para>
         /// </summary>
         [NameInMap("purchaserId")]
         [Validation(Required=false)]

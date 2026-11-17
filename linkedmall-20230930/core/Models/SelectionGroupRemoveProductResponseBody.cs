@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SelectionGroupRemoveProductResponseBody : TeaModel {
         /// <summary>
-        /// <para>A collection of IDs for the products that were successfully removed.</para>
+        /// <para>The set of successfully dispatched product IDs.</para>
         /// </summary>
         [NameInMap("productIds")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class OrderRenderResult : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the item can be sold.</para>
+        /// <para>Indicates whether the item is sellable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public Dictionary<string, object> ExtInfo { get; set; }
 
         /// <summary>
-        /// <para>The reason why the item is unavailable.</para>
+        /// <para>The unsellable reason.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>库存为0</para>
+        /// <para>Inventory is 0</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The list of products.</para>
+        /// <para>The product collection.</para>
         /// </summary>
         [NameInMap("productList")]
         [Validation(Required=false)]

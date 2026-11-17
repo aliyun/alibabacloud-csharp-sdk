@@ -10,14 +10,24 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class OrderPageQuery : TeaModel {
         /// <summary>
-        /// <para>Collection of primary order IDs</para>
+        /// <para>The collection of primary order IDs.</para>
         /// </summary>
         [NameInMap("orderIdList")]
         [Validation(Required=false)]
         public List<string> OrderIdList { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The external purchase order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6692****56121</para>
+        /// </summary>
+        [NameInMap("outPurchaseOrderId")]
+        [Validation(Required=false)]
+        public string OutPurchaseOrderId { get; set; }
+
+        /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +38,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Quantity per page</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +49,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Purchase order ID</para>
+        /// <para>The purchase order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6692****5696</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class CreateAliPayUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the applied shop.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class EticketInfo : TeaModel {
         /// <summary>
-        /// <para>The number of available units.</para>
+        /// <para>The number of unredeemed voucher electronic credentials.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? AvailableNum { get; set; }
 
         /// <summary>
-        /// <para>The unique code for the e-ticket.</para>
+        /// <para>The code of the voucher electronic credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>taobao******tpg</para>
@@ -30,20 +30,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The status of the e-ticket.</para>
+        /// <para>The status of the voucher electronic credential.</para>
         /// <remarks>
-        /// <para>Valid enum values:</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: valid</para>
-        /// </description></item>
-        /// <item><description><para>-1: redeemed</para>
-        /// </description></item>
-        /// <item><description><para>-2: expired</para>
-        /// </description></item>
-        /// <item><description><para>-5: expired</para>
-        /// </description></item>
-        /// <item><description><para>-8: expired</para>
-        /// </description></item>
+        /// <item><description>1: valid</description></item>
+        /// <item><description>-1: redeemed</description></item>
+        /// <item><description>-2: expired</description></item>
+        /// <item><description>100: locked</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -55,7 +49,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? CodeStatus { get; set; }
 
         /// <summary>
-        /// <para>The end time of the e-ticket validity period.</para>
+        /// <para>The end time of the validity period for the voucher electronic credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-02T23:59:59.000+08:00</para>
@@ -65,7 +59,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of locked units.</para>
+        /// <para>The number of voucher electronic credentials in locked status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -75,10 +69,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? LockNum { get; set; }
 
         /// <summary>
-        /// <para>The URL of the QR code image for the e-ticket.</para>
-        /// <remarks>
-        /// <para>This field is not currently populated. Distributors must generate the QR code using the <c>code</c> field.</para>
-        /// </remarks>
+        /// <para>The URL of the QR code image for the voucher electronic credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://qrcode.alicdn.com/img.jpg">http://qrcode.alicdn.com/img.jpg</a></para>
@@ -88,7 +79,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string QrcodeUrl { get; set; }
 
         /// <summary>
-        /// <para>The start time of the e-ticket validity period.</para>
+        /// <para>The start time of the validity period for the voucher electronic credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-02-04T00:00:00.000+08:00</para>
@@ -98,7 +89,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time the e-ticket was redeemed.</para>
+        /// <para>The redemption time of the voucher electronic credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-02-04T15:07:59.000+08:00</para>
@@ -108,7 +99,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string UseTime { get; set; }
 
         /// <summary>
-        /// <para>The number of redeemed units.</para>
+        /// <para>The number of redeemed voucher electronic credentials.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

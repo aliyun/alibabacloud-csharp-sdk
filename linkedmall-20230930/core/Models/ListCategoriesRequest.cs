@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ListCategoriesRequest : TeaModel {
         /// <summary>
-        /// <para>Category query parameters</para>
+        /// <para>The category query parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

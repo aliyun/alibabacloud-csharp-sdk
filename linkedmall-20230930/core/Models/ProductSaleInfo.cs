@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSaleInfo : TeaModel {
         /// <summary>
-        /// <para>Is sellable, calculated value</para>
+        /// <para>The calculated value that indicates whether the product is sellable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public bool? CanSell { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The division code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>330106109</para>
@@ -30,24 +30,24 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DivisionCode { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy inventory quantity.</para>
+        /// <para>The fuzzy inventory.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>有货</para>
+        /// <para>In stock</para>
         /// </summary>
         [NameInMap("fuzzyQuantity")]
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
 
         /// <summary>
-        /// <para>Purchase limit configuration</para>
+        /// <para>The purchase limit configuration.</para>
         /// </summary>
         [NameInMap("limitRules")]
         [Validation(Required=false)]
         public List<LimitRule> LimitRules { get; set; }
 
         /// <summary>
-        /// <para>LM product ID</para>
+        /// <para>The LM product ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21000017-4580902812</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string LmItemId { get; set; }
 
         /// <summary>
-        /// <para>Product ID</para>
+        /// <para>The product ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>660460842235822080</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>Product status</para>
+        /// <para>The product status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Online</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductStatus { get; set; }
 
         /// <summary>
-        /// <para>Inventory</para>
+        /// <para>The inventory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// <para>API request ID</para>
+        /// <para>The API request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3239281273464326823</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Channel shop ID</para>
+        /// <para>The channel shop ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21000017</para>
@@ -107,17 +107,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopId { get; set; }
 
         /// <summary>
-        /// <para>SKU collection</para>
+        /// <para>The SKU collection.</para>
         /// </summary>
         [NameInMap("skus")]
         [Validation(Required=false)]
         public List<SkuSaleInfo> Skus { get; set; }
 
         /// <summary>
-        /// <para>Title</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>发财树</para>
+        /// <para>Money tree</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

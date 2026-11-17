@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SelectionGroupRemoveProductRequest : TeaModel {
         /// <summary>
-        /// <para>A list of IDs for the products to be removed from stock.</para>
+        /// <para>The list of product IDs to be dispatched.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>A single call supports a maximum of 30 products.</description></item>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public List<string> ProductIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the purchaser.</para>
+        /// <para>The purchaser ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

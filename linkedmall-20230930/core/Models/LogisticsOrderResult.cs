@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class LogisticsOrderResult : TeaModel {
         /// <summary>
-        /// <para>The data provider.</para>
+        /// <para>The data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>菜鸟</para>
+        /// <para>Cainiao</para>
         /// </summary>
         [NameInMap("dataProvider")]
         [Validation(Required=false)]
         public string DataProvider { get; set; }
 
         /// <summary>
-        /// <para>The display title of the data provider.</para>
+        /// <para>The data text.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>菜鸟裹裹</para>
+        /// <para>Cainiao Guoguo</para>
         /// </summary>
         [NameInMap("dataProviderTitle")]
         [Validation(Required=false)]
         public string DataProviderTitle { get; set; }
 
         /// <summary>
-        /// <para>Details of the goods.</para>
+        /// <para>The product details.</para>
         /// </summary>
         [NameInMap("goods")]
         [Validation(Required=false)]
@@ -41,56 +41,31 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ZTKY</c> - China Railway Logistics</para>
-        /// </description></item>
-        /// <item><description><para><c>POST</c> - China Post</para>
-        /// </description></item>
-        /// <item><description><para><c>DBKD</c> - Deppon Express</para>
-        /// </description></item>
-        /// <item><description><para><c>JT</c> - J\&amp;T Express</para>
-        /// </description></item>
-        /// <item><description><para><c>QFKD</c> - Quanfeng Express</para>
-        /// </description></item>
-        /// <item><description><para><c>EYB</c> - China Post E-commerce Express</para>
-        /// </description></item>
-        /// <item><description><para><c>STO</c> - STO Express</para>
-        /// </description></item>
-        /// <item><description><para><c>SF</c> - SF Express</para>
-        /// </description></item>
-        /// <item><description><para><c>ZTO</c> - ZTO Express</para>
-        /// </description></item>
-        /// <item><description><para><c>YTO</c> - YTO Express</para>
-        /// </description></item>
-        /// <item><description><para><c>TTKDEX</c> - Tiantian Express</para>
-        /// </description></item>
-        /// <item><description><para><c>JDLEx</c> - JD Express</para>
-        /// </description></item>
-        /// <item><description><para><c>ETICKET</c> - e-ticket</para>
-        /// </description></item>
-        /// <item><description><para><c>HTKY</c> - Best Express</para>
-        /// </description></item>
-        /// <item><description><para><c>SHQ</c> - Huaqiang Logistics</para>
-        /// </description></item>
-        /// <item><description><para><c>TAOBAO</c> - Taobao Logistics</para>
-        /// </description></item>
-        /// <item><description><para><c>YUNDA</c> - Yunda Express</para>
-        /// </description></item>
-        /// <item><description><para><c>ZJS</c> - ZJS Express</para>
-        /// </description></item>
-        /// <item><description><para><c>FEDEX</c> - FedEx</para>
-        /// </description></item>
-        /// <item><description><para><c>EMS</c> - EMS</para>
-        /// </description></item>
-        /// <item><description><para><c>POSTB</c> - China Post Parcel</para>
-        /// </description></item>
-        /// <item><description><para><c>OTHER</c> - other</para>
-        /// </description></item>
-        /// <item><description><para><c>CNDJWL</c> - Cainiao Heavy Parcel Logistics</para>
-        /// </description></item>
-        /// <item><description><para><c>TN</c> - T-neng Logistics</para>
-        /// </description></item>
-        /// <item><description><para><c>ZMKM</c> - Cainiao Express</para>
-        /// </description></item>
+        /// <item><description>ZTKY: China Railway Logistics</description></item>
+        /// <item><description>POST: China Post</description></item>
+        /// <item><description>DBKD: Deppon Express</description></item>
+        /// <item><description>JT: J&amp;T Express</description></item>
+        /// <item><description>QFKD: Quanfeng Express</description></item>
+        /// <item><description>EYB: China Post E-commerce Express EYB</description></item>
+        /// <item><description>STO: STO Express</description></item>
+        /// <item><description>SF: SF Express</description></item>
+        /// <item><description>ZTO: ZTO Express</description></item>
+        /// <item><description>YTO: YTO Express</description></item>
+        /// <item><description>TTKDEX: Tiantian Express</description></item>
+        /// <item><description>JDLEx: JD Express</description></item>
+        /// <item><description>ETICKET: Electronic vouchers</description></item>
+        /// <item><description>HTKY: Best Express</description></item>
+        /// <item><description>SHQ: Huaqiang Logistics</description></item>
+        /// <item><description>TAOBAO: Taobao Logistics</description></item>
+        /// <item><description>YUNDA: Yunda Express</description></item>
+        /// <item><description>ZJS: ZJS Express</description></item>
+        /// <item><description>FEDEX: FedEx</description></item>
+        /// <item><description>EMS: EMS</description></item>
+        /// <item><description>POSTB: China Post Parcel</description></item>
+        /// <item><description>OTHER: Other</description></item>
+        /// <item><description>CNDJWL: Cainiao Large Item Logistics</description></item>
+        /// <item><description>TN: Teneng</description></item>
+        /// <item><description>ZMKM: Cainiao Express</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -102,26 +77,26 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string LogisticsCompanyCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the logistics company.</para>
+        /// <para>The logistics company name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>顺丰</para>
+        /// <para>SF Express</para>
         /// </summary>
         [NameInMap("logisticsCompanyName")]
         [Validation(Required=false)]
         public string LogisticsCompanyName { get; set; }
 
         /// <summary>
-        /// <para>A list of logistics details.</para>
+        /// <para>The logistics details.</para>
         /// </summary>
         [NameInMap("logisticsDetailList")]
         [Validation(Required=false)]
         public List<LogisticsDetail> LogisticsDetailList { get; set; }
 
         /// <summary>
-        /// <para>The tracking number.</para>
+        /// <para>The logistics tracking number.</para>
         /// <remarks>
-        /// <para>For an e-ticket, the tracking number is a fixed value: \*</para>
+        /// <para>The logistics tracking number for electronic vouchers is a fixed value: *.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

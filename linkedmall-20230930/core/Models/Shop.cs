@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>The partner shops.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12***01</para>
+        /// <para>[{&quot;shopId&quot;:&quot;22000019&quot;,&quot;cooperationCompanyId&quot;:&quot;11200003&quot;,&quot;cooperationShopId&quot;:&quot;21000026&quot;}]</para>
         /// </summary>
         [NameInMap("cooperationShops")]
         [Validation(Required=false)]
         public List<CooperationShop> CooperationShops { get; set; }
 
         /// <summary>
-        /// <para>The ID of the distributor.</para>
+        /// <para>The distributor ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12****09</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the purchaser.</para>
+        /// <para>The purchaser ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PID56****2304</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string PurchaserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>48A34399-A72C-1E23-8388-7E63****E927</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shop.</para>
+        /// <para>The shop ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22****09</para>
@@ -70,17 +70,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopId { get; set; }
 
         /// <summary>
-        /// <para>The name of the shop.</para>
+        /// <para>The shop name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>儿童分销店铺</para>
+        /// <para>Children\&quot;s distribution shop</para>
         /// </summary>
         [NameInMap("shopName")]
         [Validation(Required=false)]
         public string ShopName { get; set; }
 
         /// <summary>
-        /// <para>The type of the shop.</para>
+        /// <para>The shop type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DistributorQYG</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The status of the shop.</para>
+        /// <para>The shop status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Working</para>

@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SF145****4353</para>
+        /// <para>SF145****4351</para>
         /// </summary>
         [NameInMap("logisticsNo")]
         [Validation(Required=false)]

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>billId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bill_demo_001</para>
         /// </summary>
         [NameInMap("billId")]
         [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>billPeriod</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2022-08</para>
         /// </summary>
         [NameInMap("billPeriod")]
         [Validation(Required=false)]
@@ -53,6 +59,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>pageNumber</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
@@ -60,6 +69,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>pageSize</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
@@ -67,6 +79,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>shopId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21000017</para>
         /// </summary>
         [NameInMap("shopId")]
         [Validation(Required=false)]

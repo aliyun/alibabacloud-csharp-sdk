@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ShopCreateResult : TeaModel {
         /// <summary>
+        /// <para>The store ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopId { get; set; }
 
         /// <summary>
+        /// <para>The store status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WORKING</para>
         /// </summary>

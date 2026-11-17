@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SkuSaleInfoListResult : TeaModel {
         /// <summary>
-        /// <para>Request ID of the API call</para>
+        /// <para>The API request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3239281273464326823</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Collection of SKU inventory records</para>
+        /// <para>The SKU inventory collection.</para>
         /// </summary>
         [NameInMap("skuSaleInfos")]
         [Validation(Required=false)]

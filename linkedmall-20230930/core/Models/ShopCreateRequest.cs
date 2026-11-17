@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ShopCreateRequest : TeaModel {
         /// <summary>
+        /// <para>The after-sales DingTalk ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12344335</para>
         /// </summary>
@@ -18,16 +20,18 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string AfterSaleDingTalkId { get; set; }
 
         /// <summary>
+        /// <para>The shop description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>店铺描述</para>
+        /// <para>Shop description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The operations DingTalk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string OperatorDingTalkId { get; set; }
 
         /// <summary>
+        /// <para>The pre-sales DingTalk ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12344335</para>
         /// </summary>
@@ -46,10 +52,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string PreSaleDingTalkId { get; set; }
 
         /// <summary>
+        /// <para>The shop name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>店铺名称</para>
+        /// <para>Shop name</para>
         /// </summary>
         [NameInMap("shopName")]
         [Validation(Required=false)]

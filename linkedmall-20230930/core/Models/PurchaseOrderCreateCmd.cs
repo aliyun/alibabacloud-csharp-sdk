@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class PurchaseOrderCreateCmd : TeaModel {
         /// <summary>
-        /// <para>User ID in the distributor\&quot;s business, customized by the distributor.</para>
+        /// <para>The user ID in the distributor business, which is defined by the distributor.</para>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: Assign different buyerIds to different buyers.</notice></para>
         /// </remarks>
-        /// <para>Allocate different buyer IDs for different buyers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +24,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string BuyerId { get; set; }
 
         /// <summary>
-        /// <para>Address information.</para>
+        /// <para>The address information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("deliveryAddress")]
@@ -33,14 +32,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public AddressInfo DeliveryAddress { get; set; }
 
         /// <summary>
-        /// <para>Extension information.</para>
+        /// <para>The extended information.</para>
         /// </summary>
         [NameInMap("extInfo")]
         [Validation(Required=false)]
         public Dictionary<string, object> ExtInfo { get; set; }
 
         /// <summary>
-        /// <para>Order ID in the distributor\&quot;s business, customized by the distributor.</para>
+        /// <para>The order ID in the distributor business, which is defined by the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,9 +50,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string OuterPurchaseOrderId { get; set; }
 
         /// <summary>
-        /// <para>Product collection.</para>
+        /// <para>The product list.</para>
         /// <remarks>
-        /// <para>Maximum number of SKUs per purchase order: 20.</para>
+        /// <para>Maximum number of SKUs per purchase order: 20</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>

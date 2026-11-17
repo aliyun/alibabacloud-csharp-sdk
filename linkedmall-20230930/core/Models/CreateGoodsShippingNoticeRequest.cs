@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class CreateGoodsShippingNoticeRequest : TeaModel {
         /// <summary>
-        /// <para>Submit shipping notice information.</para>
+        /// <para>Submits the waybill information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

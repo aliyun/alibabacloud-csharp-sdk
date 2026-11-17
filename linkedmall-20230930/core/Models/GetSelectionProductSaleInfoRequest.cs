@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class GetSelectionProductSaleInfoRequest : TeaModel {
         /// <summary>
-        /// <para>Administrative division code. We recommend using a five-level code (township or subdistrict level).</para>
+        /// <para>The division code. A level-5 address code for a town or sub-district is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>330106109</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DivisionCode { get; set; }
 
         /// <summary>
-        /// <para>Purchaser ID</para>
+        /// <para>The purchaser ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

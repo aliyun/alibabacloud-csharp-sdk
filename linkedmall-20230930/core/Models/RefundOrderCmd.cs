@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundOrderCmd : TeaModel {
         /// <summary>
-        /// <para>Refund reason ID</para>
+        /// <para>The refund reason ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? ApplyReasonTextId { get; set; }
 
         /// <summary>
-        /// <para>Refund reason text</para>
+        /// <para>The refund reason text.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>不想要了</para>
+        /// <para>I no longer want it</para>
         /// </summary>
         [NameInMap("applyReasonTips")]
         [Validation(Required=false)]
         public string ApplyReasonTips { get; set; }
 
         /// <summary>
-        /// <para>Number of items to return</para>
+        /// <para>The return quantity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? ApplyRefundCount { get; set; }
 
         /// <summary>
-        /// <para>Refund amount in cents</para>
+        /// <para>The requested refund amount in cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? ApplyRefundFee { get; set; }
 
         /// <summary>
-        /// <para>Refund type
-        /// 1: Refund only
-        /// 3: Return and refund</para>
+        /// <para>The refund type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Refund only. </description></item>
+        /// <item><description>3: Return and refund.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,10 +68,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? BizClaimType { get; set; }
 
         /// <summary>
-        /// <para>Item status
-        /// 4: Not shipped
-        /// 1: Not received
-        /// 2: Received</para>
+        /// <para>The goods status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>4: Not shipped. </description></item>
+        /// <item><description>1: Not received.</description></item>
+        /// <item><description>2: Received.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,24 +84,24 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? GoodsStatus { get; set; }
 
         /// <summary>
-        /// <para>Customer message</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>不想要了</para>
+        /// <para>I no longer want it</para>
         /// </summary>
         [NameInMap("leaveMessage")]
         [Validation(Required=false)]
         public string LeaveMessage { get; set; }
 
         /// <summary>
-        /// <para>Collection of images</para>
+        /// <para>The image list.</para>
         /// </summary>
         [NameInMap("leavePictureLists")]
         [Validation(Required=false)]
         public List<LeavePictureList> LeavePictureLists { get; set; }
 
         /// <summary>
-        /// <para>Sub-distribution order ID</para>
+        /// <para>The sub-distribution order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

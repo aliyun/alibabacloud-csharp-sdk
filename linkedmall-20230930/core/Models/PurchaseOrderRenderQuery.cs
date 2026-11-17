@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class PurchaseOrderRenderQuery : TeaModel {
         /// <summary>
-        /// <para>The ID of the end buyer.&gt;Notice: Assign a unique ID to each buyer.</para>
+        /// <para>The actual buyer ID for distribution. <notice>Assign a unique ID to each buyer. Do not use the same ID for different buyers.</notice></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string BuyerId { get; set; }
 
         /// <summary>
-        /// <para>Delivery address information.</para>
+        /// <para>The address information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("deliveryAddress")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public AddressInfo DeliveryAddress { get; set; }
 
         /// <summary>
-        /// <para>Extended information.</para>
+        /// <para>The extension information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public Dictionary<string, object> ExtInfo { get; set; }
 
         /// <summary>
-        /// <para>A collection of products.</para>
+        /// <para>The product list.</para>
         /// <remarks>
-        /// <para>A single purchase order can contain a maximum of 20 SKUs.</para>
+        /// <para>Maximum number of SKUs per purchase order: 20.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>

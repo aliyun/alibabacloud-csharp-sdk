@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>The level-4 address code for the district or county. This parameter is recommended.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>330106</para>
+        /// <para>610102</para>
         /// </summary>
         [NameInMap("divisionCode")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>The level-5 address code for the town or street. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>330106109</para>
+        /// <para>61010212</para>
         /// </summary>
         [NameInMap("townDivisionCode")]
         [Validation(Required=false)]

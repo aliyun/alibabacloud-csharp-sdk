@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>Dispute creation time</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-09-15T19:23:59.000+08:00</para>
+        /// <para>2023-09-02T00:00:00.000Z</para>
         /// </summary>
         [NameInMap("disputeCreateTime")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>Reverse process end time</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-09-15T19:23:59.000+08:00</para>
+        /// <para>2023-09-02T12:00:00.000Z</para>
         /// </summary>
         [NameInMap("disputeEndTime")]
         [Validation(Required=false)]

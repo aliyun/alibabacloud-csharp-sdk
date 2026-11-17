@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
     public class Money : TeaModel {
         /// <summary>
         /// <para>amount</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>128</para>
         /// </summary>
         [NameInMap("amount")]
         [Validation(Required=false)]
@@ -32,6 +35,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>cent</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12800</para>
         /// </summary>
         [NameInMap("cent")]
         [Validation(Required=false)]
@@ -46,6 +52,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public class MoneyCurrency : TeaModel {
             /// <summary>
             /// <para>currencyCode</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CNY</para>
             /// </summary>
             [NameInMap("currencyCode")]
             [Validation(Required=false)]
@@ -53,6 +62,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
             /// <summary>
             /// <para>defaultFractionDigits</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("defaultFractionDigits")]
             [Validation(Required=false)]
@@ -60,6 +72,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
             /// <summary>
             /// <para>displayName</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CNY</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -67,6 +82,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
             /// <summary>
             /// <para>numericCode</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>156</para>
             /// </summary>
             [NameInMap("numericCode")]
             [Validation(Required=false)]
@@ -74,6 +92,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
             /// <summary>
             /// <para>symbol</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>￥</para>
             /// </summary>
             [NameInMap("symbol")]
             [Validation(Required=false)]
@@ -83,6 +104,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 
         /// <summary>
         /// <para>currencyCode</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CNY</para>
         /// </summary>
         [NameInMap("currencyCode")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class Sku : TeaModel {
         /// <summary>
-        /// <para>69 barcode</para>
+        /// <para>The barcode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6922454329176</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string Barcode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the SKU is available for sale</para>
+        /// <para>Indicates whether the SKU is available for sale.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,14 +30,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public bool? CanSell { get; set; }
 
         /// <summary>
-        /// <para>Reserved field</para>
+        /// <para>The reserved field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("discountRetailPrice")]
         [Validation(Required=false)]
         public long? DiscountRetailPrice { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110000</para>
@@ -47,19 +50,19 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DivisionCode { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy inventory availability</para>
+        /// <para>The fuzzy available inventory.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>有货
-        /// 无货
-        /// 库存紧张</para>
+        /// <para>In stock
+        /// Out of stock
+        /// Low stock</para>
         /// </summary>
         [NameInMap("fuzzyQuantity")]
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
 
         /// <summary>
-        /// <para>Strikethrough price, in cents</para>
+        /// <para>The list price in cents.</para>
         /// 
         /// <b>Example:</b>
         /// <para>999900</para>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? MarkPrice { get; set; }
 
         /// <summary>
-        /// <para>SKU image URL</para>
+        /// <para>The SKU image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https:////img.alicdn.com/imgextra///img.alicdn.com/imgextra/i2/2216003305543/O1CN010DEQCX1qokFYGRfPE_!!2216003305543.png</para>
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string PicUrl { get; set; }
 
         /// <summary>
-        /// <para>Suggested retail price, in cents</para>
+        /// <para>The suggested retail price in cents.</para>
         /// 
         /// <b>Example:</b>
         /// <para>999900</para>
@@ -89,7 +92,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? PlatformPrice { get; set; }
 
         /// <summary>
-        /// <para>Distributor purchase price, in cents</para>
+        /// <para>The distributor purchase price in cents.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19800</para>
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? Price { get; set; }
 
         /// <summary>
-        /// <para>Product ID</para>
+        /// <para>The product ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>660460842235822080</para>
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>Available inventory. Note: This field is currently set to -1 for all SKUs and has no practical meaning.</para>
+        /// <para>The available inventory. <notice>Currently, the value of this field is uniformly set to -1 and has no practical significance.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// <para>SKU sort order</para>
+        /// <para>The SKU sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? RankValue { get; set; }
 
         /// <summary>
-        /// <para>Shop ID</para>
+        /// <para>The shop ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21000017</para>
@@ -139,14 +142,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopId { get; set; }
 
         /// <summary>
-        /// <para>SKU note</para>
+        /// <para>The SKU remark.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample SKU remark</para>
         /// </summary>
         [NameInMap("skuAlias")]
         [Validation(Required=false)]
         public string SkuAlias { get; set; }
 
         /// <summary>
-        /// <para>SKU ID</para>
+        /// <para>skuId</para>
         /// 
         /// <b>Example:</b>
         /// <para>660460842235822081</para>
@@ -156,24 +162,24 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string SkuId { get; set; }
 
         /// <summary>
-        /// <para>SKU specifications</para>
+        /// <para>sku</para>
         /// </summary>
         [NameInMap("skuSpecs")]
         [Validation(Required=false)]
         public List<SkuSpec> SkuSpecs { get; set; }
 
         /// <summary>
-        /// <para>SKU sales specification code. Used by the frontend to filter SKUs</para>
+        /// <para>The SKU sales specifications used to assist frontend filtering.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>颜色分类:天蓝色</para>
+        /// <para>Color:Sky blue</para>
         /// </summary>
         [NameInMap("skuSpecsCode")]
         [Validation(Required=false)]
         public string SkuSpecsCode { get; set; }
 
         /// <summary>
-        /// <para>SKU control status</para>
+        /// <para>The SKU control status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Online</para>
@@ -183,17 +189,20 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string SkuStatus { get; set; }
 
         /// <summary>
-        /// <para>Reserved field</para>
+        /// <para>The reserved field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("suggestedRetailPrice")]
         [Validation(Required=false)]
         public long? SuggestedRetailPrice { get; set; }
 
         /// <summary>
-        /// <para>SKU title. Note: We recommend that distributors build the customer-facing SKU title by concatenating the value or valueAlias field from the SkuSpec struct (use <c>valueAlias</c> if it is present). Do not use this field directly as the customer-facing SKU title.</para>
+        /// <para>The SKU title. <notice>Distributors should concatenate the value or valueAlias (if available) from the SkuSpec struct to form the SKU title for customer display. Do not use this field directly as the SKU title for customer display.</notice></para>
         /// 
         /// <b>Example:</b>
-        /// <para>天蓝色</para>
+        /// <para>Sky blue</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

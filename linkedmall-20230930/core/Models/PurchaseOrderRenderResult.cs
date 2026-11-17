@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class PurchaseOrderRenderResult : TeaModel {
         /// <summary>
-        /// <para>A collection of addresses.</para>
+        /// <para>The address list.</para>
         /// </summary>
         [NameInMap("addressList")]
         [Validation(Required=false)]
         public List<AddressInfo> AddressList { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the item can be sold.</para>
+        /// <para>Indicates whether the item is sellable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -27,31 +27,31 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public bool? CanSell { get; set; }
 
         /// <summary>
-        /// <para>Extended information.</para>
+        /// <para>The extended information.</para>
         /// </summary>
         [NameInMap("extInfo")]
         [Validation(Required=false)]
         public Dictionary<string, object> ExtInfo { get; set; }
 
         /// <summary>
-        /// <para>The reason why the item cannot be sold.</para>
+        /// <para>The reason why the item is unsellable.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>库存为0</para>
+        /// <para>Out of stock</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A collection of sellable main orders.</para>
+        /// <para>The list of sellable primary orders.</para>
         /// </summary>
         [NameInMap("orderList")]
         [Validation(Required=false)]
         public List<OrderRenderResult> OrderList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>841471F6-5D61-1331-8C38-2****B55</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A collection of unsellable main orders.</para>
+        /// <para>The list of unsellable primary orders.</para>
         /// </summary>
         [NameInMap("unsellableOrderList")]
         [Validation(Required=false)]

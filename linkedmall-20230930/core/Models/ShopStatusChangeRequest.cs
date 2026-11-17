@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ShopStatusChangeRequest : TeaModel {
         /// <summary>
+        /// <para>The shop ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopId { get; set; }
 
         /// <summary>
+        /// <para>The shop status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

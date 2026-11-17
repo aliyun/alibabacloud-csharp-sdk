@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>API Request requestId</para>
         /// 
         /// <b>Example:</b>
-        /// <para>841471F6-5D61-1331-8C38-2****B55</para>
+        /// <para>3239281273464326823</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

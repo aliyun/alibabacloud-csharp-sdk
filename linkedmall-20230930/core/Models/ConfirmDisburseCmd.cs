@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ConfirmDisburseCmd : TeaModel {
-        [NameInMap("disputeId")]
-        [Validation(Required=false)]
-        public string DisputeId { get; set; }
-
         /// <summary>
         /// <para>The primary distribution order ID.</para>
         /// 

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ShopPageDataResult : TeaModel {
         /// <summary>
-        /// <para>Partner shops</para>
+        /// <para>The partner shops.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12****01</para>
+        /// <para>[{&quot;shopId&quot;:&quot;22000019&quot;,&quot;cooperationCompanyId&quot;:&quot;11200003&quot;,&quot;cooperationShopId&quot;:&quot;21000026&quot;}]</para>
         /// </summary>
         [NameInMap("cooperationShops")]
         [Validation(Required=false)]
         public List<CooperationShop> CooperationShops { get; set; }
 
         /// <summary>
-        /// <para>End time</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-11T12:22:24.000+08:00</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Purchaser ID</para>
+        /// <para>The purchaser ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PID56****2304</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string PurchaserId { get; set; }
 
         /// <summary>
-        /// <para>Shop ID</para>
+        /// <para>The shop ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22****09</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopId { get; set; }
 
         /// <summary>
-        /// <para>Shop name</para>
+        /// <para>The shop name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>儿童座椅分销店铺</para>
+        /// <para>Child seat distribution shop</para>
         /// </summary>
         [NameInMap("shopName")]
         [Validation(Required=false)]
         public string ShopName { get; set; }
 
         /// <summary>
-        /// <para>Shop type</para>
+        /// <para>The shop type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DistributorQYG</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ShopType { get; set; }
 
         /// <summary>
-        /// <para>Start time</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-11T12:22:24.000+08:00</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>Shop status</para>
+        /// <para>The shop status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Working</para>

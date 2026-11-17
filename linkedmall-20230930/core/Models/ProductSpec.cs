@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSpec : TeaModel {
         /// <summary>
-        /// <para>The name of the specification key.</para>
+        /// <para>The specification key name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>颜色分类</para>
+        /// <para>Color category</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>Specification</para>
+        /// <para>The specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? KeyId { get; set; }
 
         /// <summary>
-        /// <para>The values of the rule key.</para>
+        /// <para>The specification key values.</para>
         /// </summary>
         [NameInMap("values")]
         [Validation(Required=false)]

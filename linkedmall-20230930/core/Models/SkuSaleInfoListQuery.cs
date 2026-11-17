@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SkuSaleInfoListQuery : TeaModel {
         /// <summary>
-        /// <para>Region code. Use a five-level administrative division code, such as a town or subdistrict code.</para>
+        /// <para>The division code. A level-5 township or sub-district address code is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>330106109</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DivisionCode { get; set; }
 
         /// <summary>
-        /// <para>Purchaser ID</para>
+        /// <para>The purchaser ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string PurchaserId { get; set; }
 
         /// <summary>
-        /// <para>Product query parameters</para>
+        /// <para>The product query parameters.</para>
         /// <remarks>
-        /// <para>You can query up to 20 SKUs per request.</para>
+        /// <para>The maximum number of SKUs that can be queried in a single request is 20.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>

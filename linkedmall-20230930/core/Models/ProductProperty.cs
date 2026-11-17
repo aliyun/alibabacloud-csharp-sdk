@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductProperty : TeaModel {
         /// <summary>
-        /// <para>The text of the property.</para>
+        /// <para>The attribute text.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>颜色</para>
+        /// <para>Color</para>
         /// </summary>
         [NameInMap("text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// <para>A collection of property values.</para>
+        /// <para>The attribute value set.</para>
         /// </summary>
         [NameInMap("values")]
         [Validation(Required=false)]

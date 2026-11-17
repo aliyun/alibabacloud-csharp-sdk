@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         /// <para>Area code (recommended to use a five-level township/street-level address code)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>330106109</para>
+        /// <para>110000</para>
         /// </summary>
         [NameInMap("divisionCode")]
         [Validation(Required=false)]

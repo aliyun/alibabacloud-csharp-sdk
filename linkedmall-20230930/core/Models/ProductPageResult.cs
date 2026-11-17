@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductPageResult : TeaModel {
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The cursor value for the next page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7091510713</para>
+        /// </summary>
+        [NameInMap("nextCursor")]
+        [Validation(Required=false)]
+        public string NextCursor { get; set; }
+
+        /// <summary>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +31,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The page size.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,14 +42,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Collection of products</para>
+        /// <para>The product collection.</para>
         /// </summary>
         [NameInMap("products")]
         [Validation(Required=false)]
         public List<Product> Products { get; set; }
 
         /// <summary>
-        /// <para>Request ID for the API call</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3239281273464326823</para>
@@ -49,7 +59,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total count</para>
+        /// <para>The total count.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

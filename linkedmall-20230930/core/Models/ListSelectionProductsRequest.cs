@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ListSelectionProductsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. The value must be 1 or greater.</para>
+        /// <para>The cursor.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>134412333321</para>
+        /// </summary>
+        [NameInMap("cursor")]
+        [Validation(Required=false)]
+        public string Cursor { get; set; }
+
+        /// <summary>
+        /// <para>The current page number. Pages start from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

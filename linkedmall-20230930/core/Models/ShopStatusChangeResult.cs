@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ShopStatusChangeResult : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the operation is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

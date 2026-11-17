@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "linkedmall";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -96,12 +99,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a refund order.</para>
+        /// <para>Cancels an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancel a refund order.</para>
+        /// <para>Cancels an after-sales ticket.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -137,12 +140,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a refund order.</para>
+        /// <para>Cancels an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancel a refund order.</para>
+        /// <para>Cancels an after-sales ticket.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -178,12 +181,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a refund order.</para>
+        /// <para>Cancels an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancel a refund order.</para>
+        /// <para>Cancels an after-sales ticket.</para>
         /// </description>
         /// 
         /// <returns>
@@ -198,12 +201,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a refund order.</para>
+        /// <para>Cancels an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancel a refund order.</para>
+        /// <para>Cancels an after-sales ticket.</para>
         /// </description>
         /// 
         /// <returns>
@@ -218,12 +221,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Confirms the receipt of goods.</para>
+        /// <para>Confirms receipt.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Confirms the receipt of goods.</para>
+        /// <para>Confirms receipt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -264,12 +267,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Confirms the receipt of goods.</para>
+        /// <para>Confirms receipt.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Confirms the receipt of goods.</para>
+        /// <para>Confirms receipt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -310,12 +313,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Confirms the receipt of goods.</para>
+        /// <para>Confirms receipt.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Confirms the receipt of goods.</para>
+        /// <para>Confirms receipt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -334,12 +337,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Confirms the receipt of goods.</para>
+        /// <para>Confirms receipt.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Confirms the receipt of goods.</para>
+        /// <para>Confirms receipt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -358,12 +361,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backfill shipping notice information.</para>
+        /// <para>Backfills the waybill information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Backfill shipping notice information.</para>
+        /// <para>Backfills the waybill information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -404,12 +407,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backfill shipping notice information.</para>
+        /// <para>Backfills the waybill information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Backfill shipping notice information.</para>
+        /// <para>Backfills the waybill information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -450,12 +453,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backfill shipping notice information.</para>
+        /// <para>Backfills the waybill information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Backfill shipping notice information.</para>
+        /// <para>Backfills the waybill information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -474,12 +477,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backfill shipping notice information.</para>
+        /// <para>Backfills the waybill information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Backfill shipping notice information.</para>
+        /// <para>Backfills the waybill information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -498,15 +501,15 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a purchase order and returns the purchase order ID. The specific result of order creation is communicated through messages. After the order is created, you can query the order details associated with the purchase order using the order API.</para>
+        /// <para>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a purchase order and returns the purchase order ID. Messages communicate the specific result of order creation. After the order is created, you can query the order details associated with the purchase order using the order API.</para>
+        /// <para>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</para>
         /// <remarks>
-        /// <para>Warning: Note: Purchase order creation is an asynchronous task. If a distributor calls this API and receives an abnormal status (such as error code 503), do not immediately process customer refunds. Distributors must wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to determine the order status—for example, by consuming the order status synchronization message—before proceeding with business logic. This prevents financial losses.
-        /// Notice: Note: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after calling the purchase order creation API, submit a ticket to the technical support team to inquire about the cause.</para>
+        /// <para>Warning: Because purchase order creation is an asynchronous task, if an error (such as a 503 error code) is returned when a distributor calls this API, do not immediately process consumer refunds on the business side. Wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to check the order status (for example, consume the order status synchronization message to check the order status) before you process business logic to prevent financial losses.
+        /// Notice: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after you call the purchase order creation API, submit a ticket in the technical integration group to check the cause.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -548,15 +551,15 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a purchase order and returns the purchase order ID. The specific result of order creation is communicated through messages. After the order is created, you can query the order details associated with the purchase order using the order API.</para>
+        /// <para>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a purchase order and returns the purchase order ID. Messages communicate the specific result of order creation. After the order is created, you can query the order details associated with the purchase order using the order API.</para>
+        /// <para>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</para>
         /// <remarks>
-        /// <para>Warning: Note: Purchase order creation is an asynchronous task. If a distributor calls this API and receives an abnormal status (such as error code 503), do not immediately process customer refunds. Distributors must wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to determine the order status—for example, by consuming the order status synchronization message—before proceeding with business logic. This prevents financial losses.
-        /// Notice: Note: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after calling the purchase order creation API, submit a ticket to the technical support team to inquire about the cause.</para>
+        /// <para>Warning: Because purchase order creation is an asynchronous task, if an error (such as a 503 error code) is returned when a distributor calls this API, do not immediately process consumer refunds on the business side. Wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to check the order status (for example, consume the order status synchronization message to check the order status) before you process business logic to prevent financial losses.
+        /// Notice: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after you call the purchase order creation API, submit a ticket in the technical integration group to check the cause.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -598,15 +601,15 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a purchase order and returns the purchase order ID. The specific result of order creation is communicated through messages. After the order is created, you can query the order details associated with the purchase order using the order API.</para>
+        /// <para>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a purchase order and returns the purchase order ID. Messages communicate the specific result of order creation. After the order is created, you can query the order details associated with the purchase order using the order API.</para>
+        /// <para>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</para>
         /// <remarks>
-        /// <para>Warning: Note: Purchase order creation is an asynchronous task. If a distributor calls this API and receives an abnormal status (such as error code 503), do not immediately process customer refunds. Distributors must wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to determine the order status—for example, by consuming the order status synchronization message—before proceeding with business logic. This prevents financial losses.
-        /// Notice: Note: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after calling the purchase order creation API, submit a ticket to the technical support team to inquire about the cause.</para>
+        /// <para>Warning: Because purchase order creation is an asynchronous task, if an error (such as a 503 error code) is returned when a distributor calls this API, do not immediately process consumer refunds on the business side. Wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to check the order status (for example, consume the order status synchronization message to check the order status) before you process business logic to prevent financial losses.
+        /// Notice: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after you call the purchase order creation API, submit a ticket in the technical integration group to check the cause.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -626,15 +629,15 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a purchase order and returns the purchase order ID. The specific result of order creation is communicated through messages. After the order is created, you can query the order details associated with the purchase order using the order API.</para>
+        /// <para>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a purchase order and returns the purchase order ID. Messages communicate the specific result of order creation. After the order is created, you can query the order details associated with the purchase order using the order API.</para>
+        /// <para>Creates a purchase order and returns the purchase order ID. The order creation result is notified through messages. After the order is created, you can query the orders associated with the purchase order by calling the order API.</para>
         /// <remarks>
-        /// <para>Warning: Note: Purchase order creation is an asynchronous task. If a distributor calls this API and receives an abnormal status (such as error code 503), do not immediately process customer refunds. Distributors must wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to determine the order status—for example, by consuming the order status synchronization message—before proceeding with business logic. This prevents financial losses.
-        /// Notice: Note: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after calling the purchase order creation API, submit a ticket to the technical support team to inquire about the cause.</para>
+        /// <para>Warning: Because purchase order creation is an asynchronous task, if an error (such as a 503 error code) is returned when a distributor calls this API, do not immediately process consumer refunds on the business side. Wait for and consume the PurchaseOrderCreate message (the purchase order creation result message) to check the order status (for example, consume the order status synchronization message to check the order status) before you process business logic to prevent financial losses.
+        /// Notice: If you do not receive the PurchaseOrderCreate message (the purchase order creation result message) after you call the purchase order creation API, submit a ticket in the technical integration group to check the cause.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -654,12 +657,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a support ticket.</para>
+        /// <para>Creates an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a refund order.</para>
+        /// <para>Creates an after-sales ticket.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -700,12 +703,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a support ticket.</para>
+        /// <para>Creates an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a refund order.</para>
+        /// <para>Creates an after-sales ticket.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -746,12 +749,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a support ticket.</para>
+        /// <para>Creates an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a refund order.</para>
+        /// <para>Creates an after-sales ticket.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -770,12 +773,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a support ticket.</para>
+        /// <para>Creates an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a refund order.</para>
+        /// <para>Creates an after-sales ticket.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -794,7 +797,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an order.</para>
+        /// <para>Queries the details of the main order.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -830,7 +833,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an order.</para>
+        /// <para>Queries the details of the main order.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -866,7 +869,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an order.</para>
+        /// <para>Queries the details of the main order.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -881,7 +884,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an order.</para>
+        /// <para>Queries the details of the main order.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -896,12 +899,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the purchase order status.</para>
+        /// <para>Retrieves the status of a purchase order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve the transaction order status.</para>
+        /// <para>Retrieves the status of a transaction order.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -937,12 +940,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the purchase order status.</para>
+        /// <para>Retrieves the status of a purchase order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve the transaction order status.</para>
+        /// <para>Retrieves the status of a transaction order.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -978,12 +981,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the purchase order status.</para>
+        /// <para>Retrieves the status of a purchase order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve the transaction order status.</para>
+        /// <para>Retrieves the status of a transaction order.</para>
         /// </description>
         /// 
         /// <returns>
@@ -998,12 +1001,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the purchase order status.</para>
+        /// <para>Retrieves the status of a purchase order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve the transaction order status.</para>
+        /// <para>Retrieves the status of a transaction order.</para>
         /// </description>
         /// 
         /// <returns>
@@ -1018,12 +1021,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the purchaser\&quot;s shop.</para>
+        /// <para>Retrieves the purchaser store.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the purchaser\&quot;s shop.</para>
+        /// <para>Retrieves the purchaser store.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -1059,12 +1062,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the purchaser\&quot;s shop.</para>
+        /// <para>Retrieves the purchaser store.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the purchaser\&quot;s shop.</para>
+        /// <para>Retrieves the purchaser store.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -1100,12 +1103,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the purchaser\&quot;s shop.</para>
+        /// <para>Retrieves the purchaser store.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the purchaser\&quot;s shop.</para>
+        /// <para>Retrieves the purchaser store.</para>
         /// </description>
         /// 
         /// <returns>
@@ -1120,12 +1123,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the purchaser\&quot;s shop.</para>
+        /// <para>Retrieves the purchaser store.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the purchaser\&quot;s shop.</para>
+        /// <para>Retrieves the purchaser store.</para>
         /// </description>
         /// 
         /// <returns>
@@ -1140,12 +1143,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of an after-sales order.</para>
+        /// <para>Retrieves the details of an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve after-sales order details</para>
+        /// <para>Retrieves the details of an after-sales ticket.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -1181,12 +1184,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of an after-sales order.</para>
+        /// <para>Retrieves the details of an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve after-sales order details</para>
+        /// <para>Retrieves the details of an after-sales ticket.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -1222,12 +1225,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of an after-sales order.</para>
+        /// <para>Retrieves the details of an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve after-sales order details</para>
+        /// <para>Retrieves the details of an after-sales ticket.</para>
         /// </description>
         /// 
         /// <returns>
@@ -1242,12 +1245,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of an after-sales order.</para>
+        /// <para>Retrieves the details of an after-sales ticket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve after-sales order details</para>
+        /// <para>Retrieves the details of an after-sales ticket.</para>
         /// </description>
         /// 
         /// <returns>
@@ -1262,12 +1265,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of a product in the selection pool.</para>
+        /// <para>Queries the details of products in the selection pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve product details from the selection pool using the product ID. You can also specify a region code to check regional inventory.</para>
+        /// <para>Queries the details of products in the selection pool by product ID. You can specify a division code to query the regional inventory of the product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1317,12 +1320,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of a product in the selection pool.</para>
+        /// <para>Queries the details of products in the selection pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve product details from the selection pool using the product ID. You can also specify a region code to check regional inventory.</para>
+        /// <para>Queries the details of products in the selection pool by product ID. You can specify a division code to query the regional inventory of the product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1372,12 +1375,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of a product in the selection pool.</para>
+        /// <para>Queries the details of products in the selection pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve product details from the selection pool using the product ID. You can also specify a region code to check regional inventory.</para>
+        /// <para>Queries the details of products in the selection pool by product ID. You can specify a division code to query the regional inventory of the product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1396,12 +1399,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of a product in the selection pool.</para>
+        /// <para>Queries the details of products in the selection pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve product details from the selection pool using the product ID. You can also specify a region code to check regional inventory.</para>
+        /// <para>Queries the details of products in the selection pool by product ID. You can specify a division code to query the regional inventory of the product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1420,12 +1423,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sales information for products in the selection pool.</para>
+        /// <para>Queries the sales information of products in the selection pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries sales information for products in the selection pool. Distributors can call this operation to check product sales details, such as product status. Use the divisionCode input parameter to check whether a product is available for sale in a specific region. We recommend using a five-level administrative division code (township or subdistrict level).</para>
+        /// <para>Queries the sales information of products in the selection pool. Distributors can call this operation to query product sales information, such as product status. Pass the divisionCode parameter (a level-5 address code for a town or sub-district is recommended) to check whether the product is available for sale in the specified region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1475,12 +1478,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sales information for products in the selection pool.</para>
+        /// <para>Queries the sales information of products in the selection pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries sales information for products in the selection pool. Distributors can call this operation to check product sales details, such as product status. Use the divisionCode input parameter to check whether a product is available for sale in a specific region. We recommend using a five-level administrative division code (township or subdistrict level).</para>
+        /// <para>Queries the sales information of products in the selection pool. Distributors can call this operation to query product sales information, such as product status. Pass the divisionCode parameter (a level-5 address code for a town or sub-district is recommended) to check whether the product is available for sale in the specified region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1530,12 +1533,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sales information for products in the selection pool.</para>
+        /// <para>Queries the sales information of products in the selection pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries sales information for products in the selection pool. Distributors can call this operation to check product sales details, such as product status. Use the divisionCode input parameter to check whether a product is available for sale in a specific region. We recommend using a five-level administrative division code (township or subdistrict level).</para>
+        /// <para>Queries the sales information of products in the selection pool. Distributors can call this operation to query product sales information, such as product status. Pass the divisionCode parameter (a level-5 address code for a town or sub-district is recommended) to check whether the product is available for sale in the specified region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1554,12 +1557,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sales information for products in the selection pool.</para>
+        /// <para>Queries the sales information of products in the selection pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries sales information for products in the selection pool. Distributors can call this operation to check product sales details, such as product status. Use the divisionCode input parameter to check whether a product is available for sale in a specific region. We recommend using a five-level administrative division code (township or subdistrict level).</para>
+        /// <para>Queries the sales information of products in the selection pool. Distributors can call this operation to query product sales information, such as product status. Pass the divisionCode parameter (a level-5 address code for a town or sub-district is recommended) to check whether the product is available for sale in the specified region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1578,13 +1581,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists categories.</para>
+        /// <para>Queries a list of categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves all subcategories for a parent category ID, or the details for a specific category ID.
-        /// If the parent category ID (parentCategoryId) is 0, the API returns the top-level categories under the root category.</para>
+        /// <para>Queries all subcategories based on a parent category ID, or queries category details based on a category ID. If the parent category ID (parentCategoryId) is set to 0, the first-level categories under the root category are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1625,13 +1627,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists categories.</para>
+        /// <para>Queries a list of categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves all subcategories for a parent category ID, or the details for a specific category ID.
-        /// If the parent category ID (parentCategoryId) is 0, the API returns the top-level categories under the root category.</para>
+        /// <para>Queries all subcategories based on a parent category ID, or queries category details based on a category ID. If the parent category ID (parentCategoryId) is set to 0, the first-level categories under the root category are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1672,13 +1673,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists categories.</para>
+        /// <para>Queries a list of categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves all subcategories for a parent category ID, or the details for a specific category ID.
-        /// If the parent category ID (parentCategoryId) is 0, the API returns the top-level categories under the root category.</para>
+        /// <para>Queries all subcategories based on a parent category ID, or queries category details based on a category ID. If the parent category ID (parentCategoryId) is set to 0, the first-level categories under the root category are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1697,13 +1697,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists categories.</para>
+        /// <para>Queries a list of categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves all subcategories for a parent category ID, or the details for a specific category ID.
-        /// If the parent category ID (parentCategoryId) is 0, the API returns the top-level categories under the root category.</para>
+        /// <para>Queries all subcategories based on a parent category ID, or queries category details based on a category ID. If the parent category ID (parentCategoryId) is set to 0, the first-level categories under the root category are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1722,12 +1721,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query logistics information for an order.</para>
+        /// <para>Queries the logistics information of an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves logistics information for an order.</para>
+        /// <para>Queries the logistics information of an order.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -1763,12 +1762,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query logistics information for an order.</para>
+        /// <para>Queries the logistics information of an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves logistics information for an order.</para>
+        /// <para>Queries the logistics information of an order.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -1804,12 +1803,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query logistics information for an order.</para>
+        /// <para>Queries the logistics information of an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves logistics information for an order.</para>
+        /// <para>Queries the logistics information of an order.</para>
         /// </description>
         /// 
         /// <returns>
@@ -1824,12 +1823,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query logistics information for an order.</para>
+        /// <para>Queries the logistics information of an order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves logistics information for an order.</para>
+        /// <para>Queries the logistics information of an order.</para>
         /// </description>
         /// 
         /// <returns>
@@ -1844,12 +1843,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists purchaser shops.</para>
+        /// <para>Retrieves a list of purchaser shops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists purchaser shops.</para>
+        /// <para>Retrieves a list of purchaser shops.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1899,12 +1898,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists purchaser shops.</para>
+        /// <para>Retrieves a list of purchaser shops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists purchaser shops.</para>
+        /// <para>Retrieves a list of purchaser shops.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1954,12 +1953,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists purchaser shops.</para>
+        /// <para>Retrieves a list of purchaser shops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists purchaser shops.</para>
+        /// <para>Retrieves a list of purchaser shops.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1978,12 +1977,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists purchaser shops.</para>
+        /// <para>Retrieves a list of purchaser shops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists purchaser shops.</para>
+        /// <para>Retrieves a list of purchaser shops.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2002,12 +2001,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query product sales information for the selection pool in batches.</para>
+        /// <para>Queries the sales information of products in the selection pool in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query product sales information for the selection pool in batches. Distributors can call this operation to retrieve product sales details, such as product status. Use the divisionCode input parameter to check whether products are available for sale in a specific region. We recommend that you pass a five-level address code (town or street level).</para>
+        /// <para>Queries the sales information of products in the selection pool in batches. Distributors can call this operation to batch query product sales information, such as product status. You can use the divisionCode parameter (we recommend passing a level-5 address code for a town or sub-district) to batch query whether a product is available for sale in a specific region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2048,12 +2047,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query product sales information for the selection pool in batches.</para>
+        /// <para>Queries the sales information of products in the selection pool in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query product sales information for the selection pool in batches. Distributors can call this operation to retrieve product sales details, such as product status. Use the divisionCode input parameter to check whether products are available for sale in a specific region. We recommend that you pass a five-level address code (town or street level).</para>
+        /// <para>Queries the sales information of products in the selection pool in batches. Distributors can call this operation to batch query product sales information, such as product status. You can use the divisionCode parameter (we recommend passing a level-5 address code for a town or sub-district) to batch query whether a product is available for sale in a specific region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2094,12 +2093,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query product sales information for the selection pool in batches.</para>
+        /// <para>Queries the sales information of products in the selection pool in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query product sales information for the selection pool in batches. Distributors can call this operation to retrieve product sales details, such as product status. Use the divisionCode input parameter to check whether products are available for sale in a specific region. We recommend that you pass a five-level address code (town or street level).</para>
+        /// <para>Queries the sales information of products in the selection pool in batches. Distributors can call this operation to batch query product sales information, such as product status. You can use the divisionCode parameter (we recommend passing a level-5 address code for a town or sub-district) to batch query whether a product is available for sale in a specific region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2118,12 +2117,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query product sales information for the selection pool in batches.</para>
+        /// <para>Queries the sales information of products in the selection pool in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query product sales information for the selection pool in batches. Distributors can call this operation to retrieve product sales details, such as product status. Use the divisionCode input parameter to check whether products are available for sale in a specific region. We recommend that you pass a five-level address code (town or street level).</para>
+        /// <para>Queries the sales information of products in the selection pool in batches. Distributors can call this operation to batch query product sales information, such as product status. You can use the divisionCode parameter (we recommend passing a level-5 address code for a town or sub-district) to batch query whether a product is available for sale in a specific region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2142,7 +2141,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of products from a product selection pool.</para>
+        /// <para>Queries the list of products in the product selection pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2162,6 +2161,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
+            {
+                query["cursor"] = request.Cursor;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -2196,7 +2199,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of products from a product selection pool.</para>
+        /// <para>Queries the list of products in the product selection pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2216,6 +2219,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
+            {
+                query["cursor"] = request.Cursor;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -2250,7 +2257,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of products from a product selection pool.</para>
+        /// <para>Queries the list of products in the product selection pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2269,7 +2276,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of products from a product selection pool.</para>
+        /// <para>Queries the list of products in the product selection pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2288,12 +2295,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SKU sales information for items in the selection pool in batch.</para>
+        /// <para>Queries the sales information of SKUs in a selection pool in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query SKU sales information for items in the selection pool in batch. Distributors can call this API to retrieve batch details about SKU sales status and other attributes. To determine whether SKUs are sellable in a specific region, use the divisionCode parameter—preferably a five-level administrative division code for townships or subdistricts.</para>
+        /// <para>Batch query of SKU sales information in a selection pool: Distributors can call this operation to query SKU sales information in batches, such as SKU status. You can use the divisionCode parameter to query whether SKUs are available for sale in a specific region in batches. We recommend that you specify a level-5 division code, such as a town or sub-district code.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2334,12 +2341,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SKU sales information for items in the selection pool in batch.</para>
+        /// <para>Queries the sales information of SKUs in a selection pool in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query SKU sales information for items in the selection pool in batch. Distributors can call this API to retrieve batch details about SKU sales status and other attributes. To determine whether SKUs are sellable in a specific region, use the divisionCode parameter—preferably a five-level administrative division code for townships or subdistricts.</para>
+        /// <para>Batch query of SKU sales information in a selection pool: Distributors can call this operation to query SKU sales information in batches, such as SKU status. You can use the divisionCode parameter to query whether SKUs are available for sale in a specific region in batches. We recommend that you specify a level-5 division code, such as a town or sub-district code.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2380,12 +2387,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SKU sales information for items in the selection pool in batch.</para>
+        /// <para>Queries the sales information of SKUs in a selection pool in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query SKU sales information for items in the selection pool in batch. Distributors can call this API to retrieve batch details about SKU sales status and other attributes. To determine whether SKUs are sellable in a specific region, use the divisionCode parameter—preferably a five-level administrative division code for townships or subdistricts.</para>
+        /// <para>Batch query of SKU sales information in a selection pool: Distributors can call this operation to query SKU sales information in batches, such as SKU status. You can use the divisionCode parameter to query whether SKUs are available for sale in a specific region in batches. We recommend that you specify a level-5 division code, such as a town or sub-district code.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2404,12 +2411,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SKU sales information for items in the selection pool in batch.</para>
+        /// <para>Queries the sales information of SKUs in a selection pool in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query SKU sales information for items in the selection pool in batch. Distributors can call this API to retrieve batch details about SKU sales status and other attributes. To determine whether SKUs are sellable in a specific region, use the divisionCode parameter—preferably a five-level administrative division code for townships or subdistricts.</para>
+        /// <para>Batch query of SKU sales information in a selection pool: Distributors can call this operation to query SKU sales information in batches, such as SKU status. You can use the divisionCode parameter to query whether SKUs are available for sale in a specific region in batches. We recommend that you specify a level-5 division code, such as a town or sub-district code.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2428,12 +2435,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries child division codes.</para>
+        /// <para>Queries the sub-region codes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries child division codes.</para>
+        /// <para>Queries the sub-region codes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2474,12 +2481,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries child division codes.</para>
+        /// <para>Queries the sub-region codes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries child division codes.</para>
+        /// <para>Queries the sub-region codes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2520,12 +2527,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries child division codes.</para>
+        /// <para>Queries the sub-region codes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries child division codes.</para>
+        /// <para>Queries the sub-region codes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2544,12 +2551,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries child division codes.</para>
+        /// <para>Queries the sub-region codes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries child division codes.</para>
+        /// <para>Queries the sub-region codes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2568,12 +2575,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Lists orders.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Lists orders.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2614,12 +2621,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Lists orders.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Lists orders.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2660,12 +2667,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Lists orders.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Lists orders.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2684,12 +2691,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Lists orders.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Lists orders.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2860,12 +2867,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverse Single Rendering</para>
+        /// <para>Renders a reverse order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Renders a refund order.</para>
+        /// <para>Renders an after-sales order.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2906,12 +2913,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverse Single Rendering</para>
+        /// <para>Renders a reverse order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Renders a refund order.</para>
+        /// <para>Renders an after-sales order.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2952,12 +2959,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverse Single Rendering</para>
+        /// <para>Renders a reverse order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Renders a refund order.</para>
+        /// <para>Renders an after-sales order.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2976,12 +2983,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reverse Single Rendering</para>
+        /// <para>Renders a reverse order.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Renders a refund order.</para>
+        /// <para>Renders an after-sales order.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3000,8 +3007,13 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The product search API is a paginated interface for searching products based on various criteria.</para>
+        /// <para>Queries products based on various conditions and returns paginated results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query on the product list based on the page number and paging size.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchProductsRequest
@@ -3035,6 +3047,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateStartTime))
             {
                 body["createStartTime"] = request.CreateStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
+            {
+                body["cursor"] = request.Cursor;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributionHighPrice))
             {
@@ -3162,8 +3178,13 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The product search API is a paginated interface for searching products based on various criteria.</para>
+        /// <para>Queries products based on various conditions and returns paginated results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query on the product list based on the page number and paging size.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchProductsRequest
@@ -3197,6 +3218,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateStartTime))
             {
                 body["createStartTime"] = request.CreateStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
+            {
+                body["cursor"] = request.Cursor;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributionHighPrice))
             {
@@ -3324,8 +3349,13 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The product search API is a paginated interface for searching products based on various criteria.</para>
+        /// <para>Queries products based on various conditions and returns paginated results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query on the product list based on the page number and paging size.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchProductsRequest
@@ -3343,8 +3373,13 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The product search API is a paginated interface for searching products based on various criteria.</para>
+        /// <para>Queries products based on various conditions and returns paginated results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query on the product list based on the page number and paging size.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchProductsRequest
@@ -3362,14 +3397,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The distributor takes delivery of goods.</para>
+        /// <para>Adds products to the selection pool for a distributor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Distributors use this API to add products to their selection group.</para>
+        /// <para>Distributors can use this API operation to add products to the selection pool.</para>
         /// <remarks>
-        /// <para>We recommend that distributors who onboard on or after January 1, 2025 use this API. For more information about adding products and the related impact, see the <a href="https://help.aliyun.com/zh/linkedmall/user-guide/product-interface-best-practices?spm=a2c4g.11186623.help-menu-88587.d_2_2_0_8_0.58122056oN3crP%5C&scm=20140722.H_2869668._.OR_help-T_cn~zh-V_1#lFENl">product best practices</a>.</para>
+        /// <para>Integrate this API operation if you are a distributor customer who registered on or after January 1, 2025. For details about the import operations and their impacts, refer to <a href="https://www.alibabacloud.com/help/en/linkedmall/user-guide/product-interface-best-practices#lFENl">Product best practices</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3420,14 +3455,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The distributor takes delivery of goods.</para>
+        /// <para>Adds products to the selection pool for a distributor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Distributors use this API to add products to their selection group.</para>
+        /// <para>Distributors can use this API operation to add products to the selection pool.</para>
         /// <remarks>
-        /// <para>We recommend that distributors who onboard on or after January 1, 2025 use this API. For more information about adding products and the related impact, see the <a href="https://help.aliyun.com/zh/linkedmall/user-guide/product-interface-best-practices?spm=a2c4g.11186623.help-menu-88587.d_2_2_0_8_0.58122056oN3crP%5C&scm=20140722.H_2869668._.OR_help-T_cn~zh-V_1#lFENl">product best practices</a>.</para>
+        /// <para>Integrate this API operation if you are a distributor customer who registered on or after January 1, 2025. For details about the import operations and their impacts, refer to <a href="https://www.alibabacloud.com/help/en/linkedmall/user-guide/product-interface-best-practices#lFENl">Product best practices</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3478,14 +3513,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The distributor takes delivery of goods.</para>
+        /// <para>Adds products to the selection pool for a distributor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Distributors use this API to add products to their selection group.</para>
+        /// <para>Distributors can use this API operation to add products to the selection pool.</para>
         /// <remarks>
-        /// <para>We recommend that distributors who onboard on or after January 1, 2025 use this API. For more information about adding products and the related impact, see the <a href="https://help.aliyun.com/zh/linkedmall/user-guide/product-interface-best-practices?spm=a2c4g.11186623.help-menu-88587.d_2_2_0_8_0.58122056oN3crP%5C&scm=20140722.H_2869668._.OR_help-T_cn~zh-V_1#lFENl">product best practices</a>.</para>
+        /// <para>Integrate this API operation if you are a distributor customer who registered on or after January 1, 2025. For details about the import operations and their impacts, refer to <a href="https://www.alibabacloud.com/help/en/linkedmall/user-guide/product-interface-best-practices#lFENl">Product best practices</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3505,14 +3540,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The distributor takes delivery of goods.</para>
+        /// <para>Adds products to the selection pool for a distributor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Distributors use this API to add products to their selection group.</para>
+        /// <para>Distributors can use this API operation to add products to the selection pool.</para>
         /// <remarks>
-        /// <para>We recommend that distributors who onboard on or after January 1, 2025 use this API. For more information about adding products and the related impact, see the <a href="https://help.aliyun.com/zh/linkedmall/user-guide/product-interface-best-practices?spm=a2c4g.11186623.help-menu-88587.d_2_2_0_8_0.58122056oN3crP%5C&scm=20140722.H_2869668._.OR_help-T_cn~zh-V_1#lFENl">product best practices</a>.</para>
+        /// <para>Integrate this API operation if you are a distributor customer who registered on or after January 1, 2025. For details about the import operations and their impacts, refer to <a href="https://www.alibabacloud.com/help/en/linkedmall/user-guide/product-interface-best-practices#lFENl">Product best practices</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3532,12 +3567,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes products from a distributor\&quot;s stock.</para>
+        /// <para>Dispatches products for a distributor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Distributors use this API to remove products from their stock.</para>
+        /// <para>Allows a distributor to dispatch products.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3587,12 +3622,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes products from a distributor\&quot;s stock.</para>
+        /// <para>Dispatches products for a distributor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Distributors use this API to remove products from their stock.</para>
+        /// <para>Allows a distributor to dispatch products.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3642,12 +3677,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes products from a distributor\&quot;s stock.</para>
+        /// <para>Dispatches products for a distributor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Distributors use this API to remove products from their stock.</para>
+        /// <para>Allows a distributor to dispatch products.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3666,12 +3701,12 @@ namespace AlibabaCloud.SDK.Linkedmall20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes products from a distributor\&quot;s stock.</para>
+        /// <para>Dispatches products for a distributor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Distributors use this API to remove products from their stock.</para>
+        /// <para>Allows a distributor to dispatch products.</para>
         /// </description>
         /// 
         /// <param name="request">

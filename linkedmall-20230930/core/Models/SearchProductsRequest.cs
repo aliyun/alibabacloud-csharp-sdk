@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SearchProductsRequest : TeaModel {
         /// <summary>
-        /// <para>Brand name</para>
+        /// <para>The brand name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>绿植</para>
+        /// <para>Plants</para>
         /// </summary>
         [NameInMap("brandName")]
         [Validation(Required=false)]
         public string BrandName { get; set; }
 
         /// <summary>
-        /// <para>Collection of category IDs</para>
+        /// <para>The list of category IDs.</para>
         /// </summary>
         [NameInMap("categoryIds")]
         [Validation(Required=false)]
         public List<string> CategoryIds { get; set; }
 
         /// <summary>
-        /// <para>Creation end time</para>
+        /// <para>The end time of the creation. The format is yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-02 12:23:34
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string CreateEndTime { get; set; }
 
         /// <summary>
-        /// <para>Creation start time</para>
+        /// <para>The start time of the creation. The format is yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-02 12:23:34
@@ -49,67 +49,77 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string CreateStartTime { get; set; }
 
         /// <summary>
-        /// <para>Upper limit of distribution purchase price</para>
+        /// <para>The cursor.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100（单位：分）</para>
+        /// <para>899192313AB192938441CCW</para>
+        /// </summary>
+        [NameInMap("cursor")]
+        [Validation(Required=false)]
+        public string Cursor { get; set; }
+
+        /// <summary>
+        /// <para>The maximum distribution purchase price, in cents.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("distributionHighPrice")]
         [Validation(Required=false)]
         public long? DistributionHighPrice { get; set; }
 
         /// <summary>
-        /// <para>Upper limit of distribution premium rate</para>
+        /// <para>The maximum distribution premium rate. A value of 244 indicates 2.44%.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>244（2.44%）</para>
+        /// <para>244</para>
         /// </summary>
         [NameInMap("distributionHighPriceRatio")]
         [Validation(Required=false)]
         public long? DistributionHighPriceRatio { get; set; }
 
         /// <summary>
-        /// <para>Lower limit of distribution purchase price</para>
+        /// <para>The minimum distribution purchase price, in cents.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100（单位：分）</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("distributionLowPrice")]
         [Validation(Required=false)]
         public long? DistributionLowPrice { get; set; }
 
         /// <summary>
-        /// <para>Lower limit of distribution premium rate</para>
+        /// <para>The minimum distribution premium rate. A value of 133 indicates 1.33%.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>133（1.33%）</para>
+        /// <para>133</para>
         /// </summary>
         [NameInMap("distributionLowPriceRatio")]
         [Validation(Required=false)]
         public long? DistributionLowPriceRatio { get; set; }
 
         /// <summary>
-        /// <para>Upper limit of strikethrough price</para>
+        /// <para>The maximum strikethrough price, in cents.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100（单位：分）</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("highMarkPrice")]
         [Validation(Required=false)]
         public long? HighMarkPrice { get; set; }
 
         /// <summary>
-        /// <para>Upper limit of suggested retail price</para>
+        /// <para>The maximum suggested retail price, in cents.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100（单位：分）</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("highPrice")]
         [Validation(Required=false)]
         public long? HighPrice { get; set; }
 
         /// <summary>
-        /// <para>Whether the product is in inventory</para>
+        /// <para>Specifies whether the product is added to the inventory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -119,7 +129,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public bool? InGroup { get; set; }
 
         /// <summary>
-        /// <para>End time of the product’s entry period.</para>
+        /// <para>The end time when the product was added to the inventory. The format is yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-02 12:23:34
@@ -130,7 +140,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string InGroupEndTime { get; set; }
 
         /// <summary>
-        /// <para>Inventory start time</para>
+        /// <para>The start time when the product was added to the inventory. The format is yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-02 12:23:34
@@ -141,7 +151,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string InGroupStartTime { get; set; }
 
         /// <summary>
-        /// <para>Inventory risk level</para>
+        /// <para>The inventory risk level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Low</para>
@@ -151,7 +161,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string InventoryRiskLevel { get; set; }
 
         /// <summary>
-        /// <para>LM product ID</para>
+        /// <para>The LM product ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx-xxxxx</para>
@@ -161,27 +171,27 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string LmItemId { get; set; }
 
         /// <summary>
-        /// <para>Lower limit of strikethrough price</para>
+        /// <para>The minimum strikethrough price, in cents.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100（单位：分）</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("lowMarkPrice")]
         [Validation(Required=false)]
         public long? LowMarkPrice { get; set; }
 
         /// <summary>
-        /// <para>Lower limit of suggested retail price</para>
+        /// <para>The minimum suggested retail price, in cents.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100（单位：分）</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("lowPrice")]
         [Validation(Required=false)]
         public long? LowPrice { get; set; }
 
         /// <summary>
-        /// <para>Modification end time</para>
+        /// <para>The end time of the modification. The format is yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-02 12:23:34
@@ -192,7 +202,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ModifyEndTime { get; set; }
 
         /// <summary>
-        /// <para>Modification start time</para>
+        /// <para>The start time of the modification. The format is yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-02 12:23:34
@@ -203,25 +213,25 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ModifyStartTime { get; set; }
 
         /// <summary>
-        /// <para>Sort field</para>
+        /// <para>The sort field.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Used in combination with the sort direction field</description></item>
+        /// <item><description>This parameter must be used in combination with the sort direction parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>soldQuantity（按销量排序，不填默认创建时间倒序)</para>
+        /// <para>soldQuantity (sorts by sales volume. If not specified, the default is descending order of creation time)</para>
         /// </summary>
         [NameInMap("orderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>Sort direction</para>
+        /// <para>The sort direction.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Used in combination with the sort field</description></item>
+        /// <item><description>This parameter must be used in combination with the sort field parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -233,7 +243,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -244,10 +254,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of items per page.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Maximum of 20 items per page</description></item>
+        /// <item><description>Maximum value: 20.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -260,19 +270,19 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Source platform</para>
+        /// <para>The source platform.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Taobao（来源淘宝）
-        /// Tmall（来源天猫）
-        /// Cbu（来源1688分销货盘）</para>
+        /// <para>Taobao (sourced from Taobao)
+        /// Tmall (sourced from Tmall)
+        /// Cbu (sourced from the 1688 distribution platform)</para>
         /// </summary>
         [NameInMap("platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>Product ID</para>
+        /// <para>The product ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxx</para>
@@ -282,17 +292,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>Product name</para>
+        /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>绿植</para>
+        /// <para>Plants</para>
         /// </summary>
         [NameInMap("productName")]
         [Validation(Required=false)]
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>Product status</para>
+        /// <para>The product status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sellable</para>
@@ -302,7 +312,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductStatus { get; set; }
 
         /// <summary>
-        /// <para>Purchaser ID</para>
+        /// <para>The ID of the purchaser.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -313,13 +323,11 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string PurchaserId { get; set; }
 
         /// <summary>
-        /// <para>Tax rate</para>
+        /// <para>The tax rate.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Supports combining multiple tax rate enumeration values as request parameters. Use commas to separate them, for example: Rate0,Rate1.</para>
-        /// </description></item>
-        /// <item><description><para>HasRate cannot be combined with other enumeration values as request parameters.</para>
-        /// </description></item>
+        /// <item><description>You can combine multiple tax rate enum values. Separate the values with commas (,). Example: Rate0,Rate1.</description></item>
+        /// <item><description>HasRate cannot be combined with other enum values.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -331,7 +339,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string TaxRate { get; set; }
 
         /// <summary>
-        /// <para>Sales pattern</para>
+        /// <para>The sales mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JingXiao</para>

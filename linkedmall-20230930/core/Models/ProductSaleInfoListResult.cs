@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSaleInfoListResult : TeaModel {
         /// <summary>
-        /// <para>Product sales information</para>
+        /// <para>The commodity sales information.</para>
         /// </summary>
         [NameInMap("productSaleInfos")]
         [Validation(Required=false)]
         public List<ProductSaleInfo> ProductSaleInfos { get; set; }
 
         /// <summary>
-        /// <para>The request ID of the API call</para>
+        /// <para>The ID of the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3239281273464326823</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SkuSaleInfo : TeaModel {
         /// <summary>
-        /// <para>Reason for not being sellable</para>
+        /// <para>The unsellable reason.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>不可售</para>
+        /// <para>Unsellable</para>
         /// </summary>
         [NameInMap("canNotSellReason")]
         [Validation(Required=false)]
         public string CanNotSellReason { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the SKU is sellable</para>
+        /// <para>The sellable status of the SKU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public bool? CanSell { get; set; }
 
         /// <summary>
-        /// <para>Area code</para>
+        /// <para>The division code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>330106109</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string DivisionCode { get; set; }
 
         /// <summary>
-        /// <para>Blur inventory availability</para>
+        /// <para>The fuzzy available inventory.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>有货</para>
+        /// <para>In stock</para>
         /// </summary>
         [NameInMap("fuzzyQuantity")]
         [Validation(Required=false)]
         public string FuzzyQuantity { get; set; }
 
         /// <summary>
-        /// <para>Strikethrough price, in cents</para>
+        /// <para>The strikethrough price in cents.</para>
         /// 
         /// <b>Example:</b>
         /// <para>999900</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? MarkPrice { get; set; }
 
         /// <summary>
-        /// <para>Distributor purchase price, in cents</para>
+        /// <para>The distributor purchase price in cents.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19800</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? Price { get; set; }
 
         /// <summary>
-        /// <para>Product ID</para>
+        /// <para>The product ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>660460842235822080</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>Available inventory</para>
+        /// <para>The available inventory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// <para>Shop ID</para>
+        /// <para>The store ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21000017</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string SkuId { get; set; }
 
         /// <summary>
-        /// <para>SKU control status</para>
+        /// <para>The control status of the SKU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Online</para>
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string SkuStatus { get; set; }
 
         /// <summary>
-        /// <para>SKU title</para>
+        /// <para>The SKU title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>天蓝色</para>
+        /// <para>Sky blue</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

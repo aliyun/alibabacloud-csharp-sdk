@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundRenderResult : TeaModel {
         /// <summary>
-        /// <para>The return methods supported for the order.</para>
+        /// <para>The supported order return methods.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public int? BizClaimType { get; set; }
 
+        /// <summary>
+        /// <para>The refund fee.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;minRefundFee&quot;:1,&quot;maxRefundFee&quot;:100}</para>
+        /// </summary>
         [NameInMap("maxRefundFeeData")]
         [Validation(Required=false)]
         public DistributionMaxRefundFee MaxRefundFeeData { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sub-distribution order.</para>
+        /// <para>The sub-distribution order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6692****5458</para>
@@ -34,14 +40,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string OrderLineId { get; set; }
 
         /// <summary>
-        /// <para>A collection of refund reasons.</para>
+        /// <para>The refund reason list.</para>
         /// </summary>
         [NameInMap("refundReasonList")]
         [Validation(Required=false)]
         public List<RefundReason> RefundReasonList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The API request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>841471F6-5D61-1331-8C38-2****B55</para>

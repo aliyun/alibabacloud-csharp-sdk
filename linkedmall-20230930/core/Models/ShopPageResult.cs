@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ShopPageResult : TeaModel {
         /// <summary>
-        /// <para>API request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>841471F6-5D61-1331-8C38-2****B55</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Shop collection</para>
+        /// <para>The shop list.</para>
         /// </summary>
         [NameInMap("shopList")]
         [Validation(Required=false)]
         public List<ShopPageDataResult> ShopList { get; set; }
 
         /// <summary>
-        /// <para>Total count</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>

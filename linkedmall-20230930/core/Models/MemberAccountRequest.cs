@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class MemberAccountRequest : TeaModel {
         /// <summary>
+        /// <para>The shop ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

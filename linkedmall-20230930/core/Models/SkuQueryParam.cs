@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SkuQueryParam : TeaModel {
         /// <summary>
-        /// <para>Quantity</para>
+        /// <para>The quantity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? BuyAmount { get; set; }
 
         /// <summary>
-        /// <para>Product ID</para>
+        /// <para>The commodity ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
