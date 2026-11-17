@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerConsoleSummariesRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition. Valid values: all, granted, and disabled. If this parameter is omitted, all is used.</para>
+        /// <para>The filter condition. Valid values: all, granted, and disabled. Default value: all.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The target AI gateway instance ID. Consumer identities are shared across the region, and authorizations are isolated by instance.</para>
+        /// <para>The target AI gateway instance ID. Consumer identities are shared across the region, while authorizations are isolated by instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. This parameter is required. Token-based pagination is used instead of pageNumber and pageSize.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 100. This parameter is required. Token-based pagination is used instead of pageNumber and pageSize.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy search keyword for the consumer name. This parameter does not change the total counts.</para>
+        /// <para>The keyword for fuzzy search by consumer name. This parameter does not affect the total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beta</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned from the previous page. Omit this parameter for the first page. For the last page, this value is empty or omitted.</para>
+        /// <para>The pagination token returned from the previous page. Omit this parameter when querying the first page. An empty or omitted value indicates the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwfQ==</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? DeployedCnt { get; set; }
 
         /// <summary>
-        /// <para>The total number of operations.</para>
+        /// <para>The total number of API operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

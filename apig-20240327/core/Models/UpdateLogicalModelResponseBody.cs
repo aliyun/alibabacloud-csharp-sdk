@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateLogicalModelResponseBodyData Data { get; set; }
         public class UpdateLogicalModelResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The intersection of all supported paths for the primary targets.</para>
+            /// <para>The intersection of supported paths for all primary targets.</para>
             /// </summary>
             [NameInMap("availablePaths")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Returned for the new Auto version as balanced, cheap, fast, or quality. Omitted for legacy configurations, where the base name remains balanced. Omitted for Mapping and Weighted configurations.</para>
+            /// <para>Returned in the new version of Auto mode. Valid values: balanced, cheap, fast, and quality. This field may be omitted for legacy configurations, where the base name remains balanced. Omitted for Mapping and Weighted modes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>balanced</para>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string CallStrategy { get; set; }
 
             /// <summary>
-            /// <para>The independent configuration delivery corresponding to the save intent. Acceptance does not indicate that the configuration has taken effect.</para>
+            /// <para>The deployment of the independent configuration corresponding to the save intent. Acceptance does not indicate that the configuration has taken effect.</para>
             /// </summary>
             [NameInMap("deployment")]
             [Validation(Required=false)]
             public UpdateLogicalModelResponseBodyDataDeployment Deployment { get; set; }
             public class UpdateLogicalModelResponseBodyDataDeployment : TeaModel {
                 /// <summary>
-                /// <para>The ID of the current shared configuration delivery.</para>
+                /// <para>The operation ID for the current shared configuration deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>op-d00000000000000000000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string OperationId { get; set; }
 
                 /// <summary>
-                /// <para>The configuration version of the object.</para>
+                /// <para>The revision of the object configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The ordered fallback targets. A maximum of 5 targets are supported. The targets are deduplicated by actual card ID. This can be an empty array.</para>
+            /// <para>The ordered fallback targets. A maximum of 5 targets are supported. The targets are deduplicated by the actual card ID. This can be an empty array.</para>
             /// </summary>
             [NameInMap("fallbackTargets")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The intersection of Boolean features for the primary targets.</para>
+            /// <para>The intersection of boolean features for the primary target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;nativeStreaming&quot;:true}</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public Dictionary<string, object> Features { get; set; }
 
             /// <summary>
-            /// <para>The associated instance.</para>
+            /// <para>The ID of the associated instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-d00000000000000000000</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The logical model ID of the independent VM.</para>
+            /// <para>The logical model ID of the independent virtual machine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vm-d00000000000000000000</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public UpdateLogicalModelResponseBodyDataMeta Meta { get; set; }
             public class UpdateLogicalModelResponseBodyDataMeta : TeaModel {
                 /// <summary>
-                /// <para>The minimum value when all primary targets are known. Otherwise, this field is omitted.</para>
+                /// <para>The minimum value among all primary targets when known. Otherwise, this field is omitted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32768</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? MaxInputTokens { get; set; }
 
                 /// <summary>
-                /// <para>The minimum value when all primary targets are known. Otherwise, this field is omitted.</para>
+                /// <para>The minimum value among all primary targets when known. Otherwise, this field is omitted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8192</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? MaxOutputTokens { get; set; }
 
                 /// <summary>
-                /// <para>The minimum value when all primary targets are known. Otherwise, this field is omitted.</para>
+                /// <para>The minimum value among all primary targets when known. Otherwise, this field is omitted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>40960</para>
@@ -192,14 +192,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? MaxTokens { get; set; }
 
                 /// <summary>
-                /// <para>The intersection of supported input modalities for the primary targets.</para>
+                /// <para>The intersection of supported input modalities for the primary target.</para>
                 /// </summary>
                 [NameInMap("supportedInputModalities")]
                 [Validation(Required=false)]
                 public List<string> SupportedInputModalities { get; set; }
 
                 /// <summary>
-                /// <para>The intersection of supported input modalities for the primary targets.</para>
+                /// <para>The intersection of supported input modalities for the primary target.</para>
                 /// </summary>
                 [NameInMap("supportedOutputModalities")]
                 [Validation(Required=false)]
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The client logical call name. It can be up to 256 bytes in UTF-8 encoding, must not contain spaces or slashes, and must not start with auto.</para>
+            /// <para>The client logical invocation name. It must be encoded in UTF-8 and can be up to 256 bytes in length. It cannot contain spaces or slashes, and cannot start with auto.</para>
             /// 
             /// <b>Example:</b>
             /// <para>beta-chat</para>
@@ -218,14 +218,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Returned only for Auto. Set to true if the AI Credits Router commodity is not activated, and false if it is activated. Omitted if the read fails or the status is unknown. Omitted for Mapping and Weighted configurations.</para>
+            /// <para>Returned only in Auto mode. Set to true if the AI Credits Router commodity is not activated, and false if it is activated. Omitted if the read fails or the status is unknown. Omitted for Mapping and Weighted modes.</para>
             /// </summary>
             [NameInMap("requiresActivation")]
             [Validation(Required=false)]
             public bool? RequiresActivation { get; set; }
 
             /// <summary>
-            /// <para>The response model. Actual returns the public name of the actual model, and Logical returns the entry name, including Server-Sent Events (SSE).</para>
+            /// <para>The response model. If set to Actual, the public name of the actual model is returned. If set to Logical, the entry name is returned, including Server-Sent Events (SSE).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Actual</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ResponseModel { get; set; }
 
             /// <summary>
-            /// <para>The revision number. Initialized to 1 upon creation and incremented upon each successful update.</para>
+            /// <para>The revision number. The initial value is 1 upon creation, and it increments upon each successful update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RoutingPolicy { get; set; }
 
             /// <summary>
-            /// <para>Returned only for Auto. Includes 1 to 3 source cards for simple, standard, or complex configurations. The three slots are globally deduplicated by modelCardId. Omitted for Mapping and Weighted configurations.</para>
+            /// <para>Returned only in Auto mode. Includes 1 to 3 source cards for simple, standard, or complex types. The three slots are globally deduplicated by modelCardId. Omitted for Mapping and Weighted modes.</para>
             /// </summary>
             [NameInMap("slots")]
             [Validation(Required=false)]
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<UpdateLogicalModelResponseBodyDataSlotsComplex> Complex { get; set; }
                 public class UpdateLogicalModelResponseBodyDataSlotsComplex : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                    /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. VMs or service overrides are not supported.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<UpdateLogicalModelResponseBodyDataSlotsSimple> Simple { get; set; }
                 public class UpdateLogicalModelResponseBodyDataSlotsSimple : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                    /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. VMs or service overrides are not supported.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<UpdateLogicalModelResponseBodyDataSlotsStandard> Standard { get; set; }
                 public class UpdateLogicalModelResponseBodyDataSlotsStandard : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                    /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. VMs or service overrides are not supported.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<UpdateLogicalModelResponseBodyDataTargets> Targets { get; set; }
             public class UpdateLogicalModelResponseBodyDataTargets : TeaModel {
                 /// <summary>
-                /// <para>The ID of the actual source model card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                /// <para>The ID of the actual source model card in the same instance. The ID starts with msc-. VMs or service overrides are not supported.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelCardId { get; set; }
 
                 /// <summary>
-                /// <para>The weight. Valid values: integers from 0 to 10000. The original value is saved. For Mapping, 0 is allowed.</para>
+                /// <para>The weight. Valid values: integers from 0 to 10000. The original value is preserved. For Mapping, 0 is allowed.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The business modification time. Dry runs do not advance this time. The time is formatted in ISO 8601 (RFC 3339) in the UTC time zone, such as 2026-11-12T00:00:00Z.</para>
+            /// <para>The time when the business was updated. This time is not updated during dry runs. The time is formatted in the ISO 8601 (RFC 3339) standard in UTC, such as 2026-11-12T00:00:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-11-12T00:00:00Z</para>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message that describes the result of the request.</para>
+        /// <para>The response message that describes the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

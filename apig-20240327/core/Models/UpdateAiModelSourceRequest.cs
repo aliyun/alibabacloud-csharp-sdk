@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? ExpectedVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AI service bound to the model source.</para>
+        /// <para>The ID of the actual AI service bound to the model source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>svc-d00000000000000000000</para>

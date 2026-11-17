@@ -112,14 +112,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The ordered fallback targets. A maximum of 5 fallback targets are supported. The targets are deduplicated by the actual card ID. This can be an empty array.</para>
+                /// <para>The ordered fallback targets. A maximum of 5 fallback targets are supported. The targets are deduplicated by the actual card ID. This parameter can be an empty array.</para>
                 /// </summary>
                 [NameInMap("fallbackTargets")]
                 [Validation(Required=false)]
                 public List<ListLogicalModelsResponseBodyDataItemsFallbackTargets> FallbackTargets { get; set; }
                 public class ListLogicalModelsResponseBodyDataItemsFallbackTargets : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the actual source model card within the same instance.</para>
+                    /// <para>The ID of the actual source card within the same instance.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the logical model. The ID starts with &quot;vm-&quot;.</para>
+                /// <para>The logical model ID. The ID starts with &quot;vm-&quot;.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vm-xxxxxxxx</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The client logical call name. The name must be encoded in UTF-8, up to 256 bytes in length, contain no whitespace or slashes, and not start with &quot;auto&quot;.</para>
+                /// <para>The client logical call name. It supports a maximum of 256 bytes in UTF-8, must not contain spaces or slashes, and must not start with &quot;auto&quot;.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>chat-entry</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResponseModel { get; set; }
 
                 /// <summary>
-                /// <para>The object version number. The initial value is 1 upon creation and increments with each successful update.</para>
+                /// <para>The object version number. The initial value is 1 upon creation and increments after each successful update.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<ListLogicalModelsResponseBodyDataItemsSlotsComplex> Complex { get; set; }
                     public class ListLogicalModelsResponseBodyDataItemsSlotsComplex : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the actual source model card within the same instance. The ID starts with &quot;msc-&quot;. VMs or service overrides are not supported.</para>
+                        /// <para>The ID of the actual source card within the same instance. The ID starts with &quot;msc-&quot;. VMs or service overrides are not supported.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<ListLogicalModelsResponseBodyDataItemsSlotsSimple> Simple { get; set; }
                     public class ListLogicalModelsResponseBodyDataItemsSlotsSimple : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the actual source model card within the same instance. The ID starts with &quot;msc-&quot;. VMs or service overrides are not supported.</para>
+                        /// <para>The ID of the actual source card within the same instance. The ID starts with &quot;msc-&quot;. VMs or service overrides are not supported.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<ListLogicalModelsResponseBodyDataItemsSlotsStandard> Standard { get; set; }
                     public class ListLogicalModelsResponseBodyDataItemsSlotsStandard : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the actual source model card within the same instance. The ID starts with &quot;msc-&quot;. VMs or service overrides are not supported.</para>
+                        /// <para>The ID of the actual source card within the same instance. The ID starts with &quot;msc-&quot;. VMs or service overrides are not supported.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The primary targets. For the Mapping policy, exactly one target is allowed. For the Weighted policy, the sum of the original relative weights must be greater than 0. For the Auto policy, this must be an empty array.</para>
+                /// <para>The primary targets. For the Mapping policy, exactly one target is allowed. For the Weighted policy, the sum of original relative weights must be greater than 0. For the Auto policy, this must be an empty array.</para>
                 /// </summary>
                 [NameInMap("targets")]
                 [Validation(Required=false)]
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ModelCardId { get; set; }
 
                     /// <summary>
-                    /// <para>The weight. The value must be an integer from 0 to 10000 and is saved as is. A value of 0 is allowed for the Mapping policy.</para>
+                    /// <para>The weight. The value is an integer from 0 to 10000 and is saved as the original value. A value of 0 is allowed for the Mapping policy.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The cursor token for querying the next page. This parameter is not returned if no more data exists.</para>
+            /// <para>The cursor token for querying the next page. This parameter is not returned if no more data is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>next-token-xxxxxxxx</para>

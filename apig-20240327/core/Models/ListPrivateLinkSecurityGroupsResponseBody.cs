@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The security group name.</para>
+                /// <para>The name of the security group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Product Center Cluster Security Group</para>
+                /// <para>Product Center cluster security group</para>
                 /// </summary>
                 [NameInMap("securityGroupName")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned in this query.</para>
+            /// <para>The maximum number of results returned in this query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The next token.</para>
+            /// <para>The token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>

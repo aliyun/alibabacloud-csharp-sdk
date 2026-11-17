@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerModelCardGrantsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters by model card ID for reverse lookup.</para>
+        /// <para>Filters results by model card ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>msc-d00000000000000000000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters by principal ID. This parameter must be used together with principalType.</para>
+        /// <para>Filters results by principal ID. This parameter must be specified together with principalType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-d00000000000000000000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PrincipalId { get; set; }
 
         /// <summary>
-        /// <para>Filters by principal type. Valid values: Consumer and ConsumerGroup. This parameter must be used together with principalId.</para>
+        /// <para>Filters results by principal type. Valid values: Consumer and ConsumerGroup. This parameter must be specified together with principalId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Consumer</para>

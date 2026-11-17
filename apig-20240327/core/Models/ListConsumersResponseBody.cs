@@ -27,7 +27,36 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListConsumersResponseBodyData Data { get; set; }
         public class ListConsumersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of consumers.</para>
+            /// <para>The expiration reminder count for all consumers under the same account and gateway type. This count is not affected by name filters, status filters, or pagination. This field is returned only when includeExpirationSummary is set to true.</para>
+            /// </summary>
+            [NameInMap("expirationSummary")]
+            [Validation(Required=false)]
+            public ListConsumersResponseBodyDataExpirationSummary ExpirationSummary { get; set; }
+            public class ListConsumersResponseBodyDataExpirationSummary : TeaModel {
+                /// <summary>
+                /// <para>The number of unexpired consumers with a remaining validity period of no more than seven days, including those that are manually disabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("aboutToExpire")]
+                [Validation(Required=false)]
+                public long? AboutToExpire { get; set; }
+
+                /// <summary>
+                /// <para>The number of expired consumers, including those that are manually disabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("expired")]
+                [Validation(Required=false)]
+                public long? Expired { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The list of consumer information.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -74,7 +103,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the consumer is enabled.</para>
+                /// <para>Specifies whether the consumer is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -82,6 +111,26 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [NameInMap("enable")]
                 [Validation(Required=false)]
                 public bool? Enable { get; set; }
+
+                /// <summary>
+                /// <para>The expiration time of the consumer, in UTC UNIX seconds. A null value indicates that the consumer is permanently valid.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1893456000</para>
+                /// </summary>
+                [NameInMap("expireAt")]
+                [Validation(Required=false)]
+                public long? ExpireAt { get; set; }
+
+                /// <summary>
+                /// <para>The validity status. Valid values: Permanent, InEffect, AboutToExpire, and Expired. The status is accurate to the second. A remaining time of exactly seven days is classified as AboutToExpire, and an exact expiration time is classified as Expired.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>InEffect</para>
+                /// </summary>
+                [NameInMap("expireStatus")]
+                [Validation(Required=false)]
+                public string ExpireStatus { get; set; }
 
                 /// <summary>
                 /// <para>The consumer name.</para>

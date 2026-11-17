@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDirectSupplyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the gateway instance for which to query direct-supply models.</para>
+        /// <para>The ID of the gateway instance for which you want to query direct-supply models.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

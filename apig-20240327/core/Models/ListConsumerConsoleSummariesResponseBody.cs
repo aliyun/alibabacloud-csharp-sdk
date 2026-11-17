@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerConsoleSummariesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. A value of Ok indicates success. If the call fails, a specific business error code is returned.</para>
+        /// <para>The response status code. A value of Ok indicates a successful request. A specific business error code is returned for a failed request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Complete { get; set; }
 
             /// <summary>
-            /// <para>The statistics of the complete consumer set in the local region. This value is not affected by the current pagination.</para>
+            /// <para>The statistics of the complete consumer set in the local region, which are not affected by the current pagination.</para>
             /// </summary>
             [NameInMap("counts")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListConsumerConsoleSummariesResponseBodyDataItems> Items { get; set; }
             public class ListConsumerConsoleSummariesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the authorization scope of this resource includes all models.</para>
+                /// <para>Indicates whether the authorization scope of the resource includes all models.</para>
                 /// </summary>
                 [NameInMap("allModels")]
                 [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The description of the consumer.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Consumer used for business integration</para>
+                    /// <para>Consumer for service integration</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The consumer ID returned by the create or query consumer API.</para>
+                /// <para>The consumer ID returned by the create or query consumer API operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cs-d00000000000000000000</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The summary of credential types and quantities for the consumer. The actual credential content is not returned.</para>
+                /// <para>The summary of credential types and quantities for the consumer. The credential content is not returned.</para>
                 /// </summary>
                 [NameInMap("credentials")]
                 [Validation(Required=false)]
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The description of the consumer.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Consumer used for business integration</para>
+                /// <para>Consumer for service integration</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -222,14 +222,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The number of authorization configurations in the current gateway, counted by resource type.</para>
+                /// <para>The number of authorization configurations in the current gateway, aggregated by resource type.</para>
                 /// </summary>
                 [NameInMap("localAccess")]
                 [Validation(Required=false)]
                 public ListConsumerConsoleSummariesResponseBodyDataItemsLocalAccess LocalAccess { get; set; }
                 public class ListConsumerConsoleSummariesResponseBodyDataItemsLocalAccess : TeaModel {
                     /// <summary>
-                    /// <para>The number of agent APIs that have authorizations configured.</para>
+                    /// <para>The number of agent APIs with configured authorizations.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? AgentApis { get; set; }
 
                     /// <summary>
-                    /// <para>The number of MCP servers that have authorizations configured.</para>
+                    /// <para>The number of MCP servers with configured authorizations.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? McpServers { get; set; }
 
                     /// <summary>
-                    /// <para>The number of model APIs that have authorizations configured.</para>
+                    /// <para>The number of model APIs with configured authorizations.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page.</para>
+            /// <para>The maximum number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The pagination token returned from the previous page. Do not specify this parameter when you query the first page.</para>
+            /// <para>The pagination token returned from the previous page. Omit this parameter when querying the first page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJvZmZzZXQiOjIwfQ==</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries that match the current query conditions.</para>
+            /// <para>The total number of records that match the current query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>

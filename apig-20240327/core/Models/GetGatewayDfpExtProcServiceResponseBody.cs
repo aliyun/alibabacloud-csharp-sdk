@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The request result description, which contains the fault message if the request fails.</para>
+        /// <para>The request result message. If the request fails, this parameter contains the error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateAiModelSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned upon success, and a specific business error code is returned upon failure.</para>
+        /// <para>The response status code. Ok indicates success, and a specific business error code indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AI service bound to the model source.</para>
+            /// <para>The ID of the actual AI service bound to the model source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>svc-d00000000000000000000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The time of the most recent business update, in RFC 3339 format and the UTC time zone.</para>
+            /// <para>The time of the most recent business update. The time is in RFC 3339 format and in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-11-12T00:00:00Z</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The current version of the object, used for conditional validation during update or delete operations.</para>
+            /// <para>The current version of the object. This version is used for conditional validation during updates or deletions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message that describes the result of the request.</para>
+        /// <para>The response message that describes the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

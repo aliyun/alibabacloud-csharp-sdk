@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeleteModelApiRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotent request token. For the same tenant, model API, and parameters, you can use the original client token to retry the deletion if a background deletion fails. A conflict is returned if an active operation is in progress or if the configuration has been replaced by a newer operation. A replay of a fully completed deletion returns an empty success response, but using the same token for a different target is still rejected.</para>
+        /// <para>The idempotency token. Using the original clientToken for the same tenant, model API, and parameters allows you to retry the deletion if a background deletion fails. A conflict is returned if an active operation is still in progress or if the configuration has been replaced by a newer operation. A replay of a fully completed deletion returns a successful response with empty content, but using the same token for a different target is still rejected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>delete-model-api-client-token-001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. If you set this parameter to true, the system performs the same synchronous admission checks as a real deletion, but does not create a deletion run or idempotent record, stop the service, or delete the API or associated configurations. If you set this parameter to false or leave it empty, the actual deletion is accepted.</para>
+        /// <para>Specifies whether to perform only a dry run. If you set this parameter to true, the system performs the same synchronous validation checks as a real deletion, but does not create a deletion execution or idempotent record, stop the service, or delete the API or associated configurations. If you set this parameter to false or leave it empty, the actual deletion is accepted.</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

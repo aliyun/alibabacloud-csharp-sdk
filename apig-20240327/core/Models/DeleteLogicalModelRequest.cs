@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeleteLogicalModelRequest : TeaModel {
         /// <summary>
-        /// <para>The expected version number of the object.</para>
+        /// <para>The expected object version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

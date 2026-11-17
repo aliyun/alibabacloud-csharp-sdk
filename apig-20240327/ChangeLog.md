@@ -1,3 +1,24 @@
+2026-11-17 Version: 11.9.2
+- Update API CreateConsumer: add request parameters body.expireAt.
+- Update API CreateMcpServer: add request parameters body.instructions.
+- Update API GetConsumer: add response parameters Body.data.expireAt.
+- Update API GetConsumer: add response parameters Body.data.expireStatus.
+- Update API GetMcpServer: add response parameters Body.data.instructions.
+- Update API ListConsumers: add request parameters expireStatus.
+- Update API ListConsumers: add request parameters includeExpirationSummary.
+- Update API ListConsumers: add request parameters status.
+- Update API ListConsumers: add response parameters Body.data.expirationSummary.
+- Update API ListConsumers: add response parameters Body.data.items.$.expireAt.
+- Update API ListConsumers: add response parameters Body.data.items.$.expireStatus.
+- Update API ListMcpServers: add response parameters Body.data.items.$.instructions.
+- Update API UpdateConsumer: add request parameters body.clearExpireAt.
+- Update API UpdateConsumer: add request parameters body.enableAfterRenewal.
+- Update API UpdateConsumer: add request parameters body.expireAt.
+- Update API UpdateConsumer: add request parameters body.renew.
+- Update API UpdateMcpServer: add request parameters body.instructions.
+- Update API UpdateModelApi: add request parameters body.modelSelectionDelta.
+
+
 2026-11-17 Version: 11.9.1
 - Generated csharp 2024-03-27 for APIG.
 

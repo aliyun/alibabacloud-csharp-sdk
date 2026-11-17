@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public KMSConfig KmsConfig { get; set; }
 
         /// <summary>
-        /// <para>The name of the secret. The name can contain letters, digits, and underscores (_) and cannot exceed 64 characters in length.</para>
+        /// <para>The name of the secret. The name can contain letters, digits, and underscores (_) and can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_secret</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The KMS secret value.</para>
+        /// <para>The KMS secret value. This parameter is required. If this parameter is omitted, the API returns InvalidParameter.IsEmpty(400). Because secretSource only supports KMS, you must always provide this parameter in actual calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apikey-123456xxxxxxxx</para>

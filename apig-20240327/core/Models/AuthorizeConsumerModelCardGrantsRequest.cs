@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AuthorizeConsumerModelCardGrantsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the selected model cards for this API. You can leave this parameter empty or omit it, but at least one of modelCardIds and modelGroupIds must be specified.</para>
+        /// <para>The collection of selected model card IDs for this API. This parameter can be empty or omitted, but at least one of modelCardIds and modelGroupIds must be non-empty.</para>
         /// </summary>
         [NameInMap("modelCardIds")]
         [Validation(Required=false)]
         public List<string> ModelCardIds { get; set; }
 
         /// <summary>
-        /// <para>The actual model group IDs of the current instance. You can leave modelCardIds empty only when you grant group entitlements. Group entitlements allow zero intersection with the current API, but you cannot save principal relationships if both target types are empty.</para>
+        /// <para>The actual model group IDs of the current instance. The modelCardIds parameter can be empty only when group licenses are granted. Group licenses allow zero intersection with the current API, but principal relationships with both target types empty cannot be saved.</para>
         /// </summary>
         [NameInMap("modelGroupIds")]
         [Validation(Required=false)]
         public List<string> ModelGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The immutable ID of the authorization principal. This is not the name.</para>
+        /// <para>The immutable ID of the authorization principal, not the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

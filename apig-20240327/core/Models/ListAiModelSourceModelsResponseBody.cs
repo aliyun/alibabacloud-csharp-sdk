@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListAiModelSourceModelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. A value of Ok indicates success, and a specific business error code indicates failure.</para>
+        /// <para>The response status code. Ok is returned for successful requests, and a specific business error code is returned for failed requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business result returned for the model source operation.</para>
+        /// <para>The business result returned by the model source operation.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListAiModelSourceModelsResponseBodyData Data { get; set; }
         public class ListAiModelSourceModelsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of models in the model source returned on the current page.</para>
+            /// <para>The list of models in the source returned on the current page.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public float? OutputCost { get; set; }
 
                     /// <summary>
-                    /// <para>The pricing method. Valid values: fixed (fixed credit pricing).</para>
+                    /// <para>The pricing method. Currently, only fixed is supported, which indicates fixed credit pricing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>fixed</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The model identifier. The source model card ID is used for standard models, and the vm- prefix is used for logical model entries.</para>
+                /// <para>The model identifier. Standard models use the source model card ID, and logical model entries use the vm- prefix.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>msc-d00000000000000000000</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelSourceName { get; set; }
 
                 /// <summary>
-                /// <para>The current version of the model source to which the model belongs.</para>
+                /// <para>The current version of the associated model source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ModelSourceVersion { get; set; }
 
                 /// <summary>
-                /// <para>The synchronization status of the model pricing configuration. A value of Pending indicates that the current version is not synchronized, and Ready indicates that it is synchronized.</para>
+                /// <para>The synchronization status of the model pricing configuration. Pending indicates that the current version is not synchronized, and Ready indicates that it is synchronized.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Ready</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The pagination token returned from the previous page. Omit this parameter when querying the first page.</para>
+            /// <para>The pagination token returned from the previous page. Do not specify this parameter when you query the first page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJvZmZzZXQiOjIwfQ==</para>

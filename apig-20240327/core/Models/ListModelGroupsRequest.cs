@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to match model groups by name, description, membership, or invocation name.</para>
+        /// <para>The keyword used to match model groups by name, description, member identity, or invocation name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beta</para>

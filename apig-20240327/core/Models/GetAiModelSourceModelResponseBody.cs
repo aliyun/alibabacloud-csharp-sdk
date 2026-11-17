@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetAiModelSourceModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. A value of Ok indicates success, and a specific business error code indicates failure.</para>
+        /// <para>The response status code. The value is Ok for successful requests and a specific business error code for failed requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business result returned by the in-source model operation.</para>
+        /// <para>The business result returned by the model source operation.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetAiModelSourceModelResponseBodyData Data { get; set; }
         public class GetAiModelSourceModelResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The protocols and call paths supported by the model.</para>
+            /// <para>The protocols and invocation paths supported by the model.</para>
             /// </summary>
             [NameInMap("availablePaths")]
             [Validation(Required=false)]
             public List<GetAiModelSourceModelResponseBodyDataAvailablePaths> AvailablePaths { get; set; }
             public class GetAiModelSourceModelResponseBodyDataAvailablePaths : TeaModel {
                 /// <summary>
-                /// <para>The call path for the model.</para>
+                /// <para>The invocation path of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/v1/chat/completions</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The protocol type used for the call path.</para>
+                /// <para>The protocol type used by the invocation path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OpenAI/v1</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The credit pricing configuration for the model.</para>
+            /// <para>The credit pricing configuration of the model.</para>
             /// </summary>
             [NameInMap("credit")]
             [Validation(Required=false)]
             public GetAiModelSourceModelResponseBodyDataCredit Credit { get; set; }
             public class GetAiModelSourceModelResponseBodyDataCredit : TeaModel {
                 /// <summary>
-                /// <para>The number of credits per million input tokens that hit the cache. This must be a non-negative number. A value of 0 indicates that cached input is free.</para>
+                /// <para>The number of credits per million input tokens that hit the cache. The value must be a non-negative number. A value of 0 indicates that cached input is free of charge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? CacheCost { get; set; }
 
                 /// <summary>
-                /// <para>The number of credits per million input tokens. This must be a non-negative number. A value of 0 indicates that input is free.</para>
+                /// <para>The number of credits per million input tokens. The value must be a non-negative number. A value of 0 indicates that the input is free of charge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? InputCost { get; set; }
 
                 /// <summary>
-                /// <para>The number of credits per million output tokens. This must be a non-negative number. A value of 0 indicates that output is free.</para>
+                /// <para>The number of credits per million output tokens. The value must be a non-negative number. A value of 0 indicates that the output is free of charge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? OutputCost { get; set; }
 
                 /// <summary>
-                /// <para>The pricing method. Currently, only fixed (fixed credit pricing) is supported.</para>
+                /// <para>The pricing method. Valid values: fixed: fixed credit pricing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fixed</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The token limits and the input and output modality information of the model.</para>
+            /// <para>The token limits and input and output modality information of the model.</para>
             /// </summary>
             [NameInMap("meta")]
             [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The model identifier. For standard models, use the source model card ID. For logical model entries, use the vm- prefix.</para>
+            /// <para>The model identifier. Use the source model card ID for standard models and the vm- identifier for logical model entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>msc-d00000000000000000000</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelSourceName { get; set; }
 
             /// <summary>
-            /// <para>The current version of the model source to which the model belongs.</para>
+            /// <para>The current version of the associated model source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ModelSourceVersion { get; set; }
 
             /// <summary>
-            /// <para>The synchronization status of the model pricing configuration. A value of Pending indicates that the current version is not synchronized, and a value of Ready indicates that it is synchronized.</para>
+            /// <para>The synchronization status of the model pricing configuration. A value of Pending indicates that the current version is not synchronized. A value of Ready indicates that the current version is synchronized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ready</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PricingStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the actual AI service that is bound to the model source.</para>
+            /// <para>The ID of the AI service bound to the model source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>svc-d00000000000000000000</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The source of the model asset. A value of user indicates a user model, and a value of builtin indicates a built-in system model.</para>
+            /// <para>The source of the model asset. A value of user indicates a user-defined model, and a value of builtin indicates a system built-in model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The time of the last business update. The time is in RFC 3339 format and the UTC time zone.</para>
+            /// <para>The time of the last business update. The time is in RFC 3339 format and in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-11-12T00:00:00Z</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The current version of the object. This version is used for conditional validation during update or delete operations.</para>
+            /// <para>The current version of the object. This version is used for conditional validation during updates or deletions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message that describes the result of the request.</para>
+        /// <para>The response message that indicates the result of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. This ID is generated by the system to trace the call.</para>
+        /// <para>The request ID generated by the system to trace the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

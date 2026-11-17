@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The error message returned when the model catalog query fails. This parameter is not returned if the query succeeds.</para>
+            /// <para>The error message returned when the model catalog query fails. This parameter is not returned when the query succeeds.</para>
             /// </summary>
             [NameInMap("catalogError")]
             [Validation(Required=false)]
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Failed to query the model catalog</para>
+                /// <para>Model catalog query failed</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]

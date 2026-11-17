@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateMcpServerRequest : TeaModel {
         /// <summary>
-        /// <para>The list of assembly sources. This parameter is required when type is set to AssemblyMCP.</para>
+        /// <para>The list of assembly sources. This parameter is required when the type is AssemblyMCP.</para>
         /// </summary>
         [NameInMap("assembledSources")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateMcpServerRequestBackendConfig BackendConfig { get; set; }
         public class CreateMcpServerRequestBackendConfig : TeaModel {
             /// <summary>
-            /// <para>The backend service scenario.</para>
+            /// <para>The backend service scene.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SingleService</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The service protocol. Valid values:</para>
+                /// <para>The service protocol:</para>
                 /// <list type="bullet">
                 /// <item><description>HTTP.</description></item>
                 /// <item><description>HTTPS.</description></item>
@@ -129,11 +129,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The creation source type.</para>
-        /// <para>ApiGatewayHttpToMCP: API gateway-hosted HTTP-to-MCP
-        /// ApiGatewayProxyMcpHosting: API gateway-hosted MCP direct proxy
-        /// ApiGatewayAssembly: API gateway MCP assembly
-        /// NacosHttpToMCP: API gateway-hosted Nacos-synchronized HTTP-to-MCP
-        /// NacosMcpHosting: API gateway-hosted Nacos-synchronized MCP direct proxy</para>
+        /// <para>ApiGatewayHttpToMCP: Gateway-managed HTTP-to-MCP conversion.
+        /// ApiGatewayProxyMcpHosting: Gateway-managed MCP direct proxy.
+        /// ApiGatewayAssembly: Gateway MCP assembly.
+        /// NacosHttpToMCP: Gateway-managed Nacos-synchronized HTTP-to-MCP conversion.
+        /// NacosMcpHosting: Gateway-managed Nacos-synchronized MCP direct proxy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ApiGatewayMcpHosting</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> DomainIds { get; set; }
 
         /// <summary>
-        /// <para>The exposed URI path. This parameter is required when protocol is set to SSE or StreamableHTTP and type is set to RealMCP.</para>
+        /// <para>The exposed URI path. This parameter is required when the protocol is SSE or StreamableHTTP and the type is RealMCP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/sse</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The canary route configurations.</para>
+        /// <para>The canary release route configurations.</para>
         /// </summary>
         [NameInMap("grayMcpServerConfigs")]
         [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public CreateMcpServerRequestGrayMcpServerConfigsBackendConfig BackendConfig { get; set; }
             public class CreateMcpServerRequestGrayMcpServerConfigsBackendConfig : TeaModel {
                 /// <summary>
-                /// <para>The backend scenario.</para>
+                /// <para>The backend scene.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SingleService</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The route match rule.</para>
+            /// <para>The route matching rule.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
@@ -285,7 +285,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route match rule. If type is set to RealMCP, the match parameter is required and a route match rule must be provided.</para>
+        /// <para>The instructions for the MCP service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Used to query the order status. The order number is required for queries</para>
+        /// </summary>
+        [NameInMap("instructions")]
+        [Validation(Required=false)]
+        public string Instructions { get; set; }
+
+        /// <summary>
+        /// <para>The route match rule. When the type is RealMCP, the match parameter is required and you must provide a route matching rule.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -309,7 +319,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerSpec { get; set; }
 
             /// <summary>
-            /// <para>The Swagger document for HTTP-to-MCP. The document must comply with the OpenAPI 3.0 specification.</para>
+            /// <para>The Swagger document for HTTP-to-MCP conversion. The document must comply with the OpenAPI 3.0 specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swagger.yaml</para>
@@ -331,7 +341,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? McpStatisticsEnable { get; set; }
 
         /// <summary>
-        /// <para>The name of the MCP server. The name must match the regular expression ^<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?(\.<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?)*$ and be up to 64 characters in length.</para>
+        /// <para>The name of the MCP server. The name must match the regular expression ^<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?(\.<a href="%5B-a-z0-9%5D*%5Ba-z0-9%5D">a-z0-9</a>?)*$ and cannot exceed 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -352,8 +362,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The type.</para>
-        /// <para>RealMCP: Standard MCP service</para>
+        /// <para>The type.
+        /// RealMCP: Standard MCP service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

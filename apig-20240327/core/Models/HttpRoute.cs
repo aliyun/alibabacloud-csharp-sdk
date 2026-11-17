@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The route description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>商品中心预发路由</para>
+        /// <para>Product center staging route</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ExtProc service selection for fixed dynamic forwarding routes. This field is not returned when no matching binding exists.</para>
+        /// <para>The ExtProc service selection mounted for fixed dynamic forwarding routes. This field is not returned when no matching binding exists.</para>
         /// </summary>
         [NameInMap("dfpConfig")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The list of domain name information.</para>
+        /// <para>The domain name information list.</para>
         /// </summary>
         [NameInMap("domainInfos")]
         [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The alias of the environment name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>商品中心预发环境</para>
+            /// <para>Product center staging environment</para>
             /// </summary>
             [NameInMap("alias")]
             [Validation(Required=false)]
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of default subdomains for the environment.</para>
+            /// <para>The list of default second-level domain names of the environment.</para>
             /// </summary>
             [NameInMap("subDomains")]
             [Validation(Required=false)]
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HttpRouteMcpServerInfoMcpRouteConfig McpRouteConfig { get; set; }
             public class HttpRouteMcpServerInfoMcpRouteConfig : TeaModel {
                 /// <summary>
-                /// <para>mcp route path</para>
+                /// <para>The URI path exposed by the MCP route.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mcp</para>

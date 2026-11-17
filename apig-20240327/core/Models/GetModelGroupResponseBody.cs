@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetModelGroupResponseBodyData Data { get; set; }
         public class GetModelGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The summary of the latest group configuration deployment, which is independent of API release and entitlement status. This field is not returned when no deployment task exists, and its presence does not indicate success. It represents the current version only when the revision matches the current version. List operations do not guarantee that this field is populated.</para>
+            /// <para>The summary of the latest group configuration deployment, which is independent of API release and entitlement status. This parameter is not returned when no deployment task exists, and its return does not indicate success. It represents the current version only when the revision matches the current version. List operations do not guarantee that this parameter is populated.</para>
             /// </summary>
             [NameInMap("configurationDeployment")]
             [Validation(Required=false)]
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The model group description.</para>
+            /// <para>The description of the model group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A model group for conversation scenarios</para>
+            /// <para>A model group for conversational scenarios</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? DesiredRevision { get; set; }
 
                 /// <summary>
-                /// <para>The error message when entitlement fails. This field is not returned when no error occurs.</para>
+                /// <para>The error message when entitlement fails. This parameter is not returned when no error occurs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Entitlement synchronization failed</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The entitlement status. Valid values: Pending, Applying, Committed, and Failed. Committed only indicates that the control plane has successfully submitted and read back the configuration, and does not guarantee that all nodes have acknowledged it.</para>
+                /// <para>The entitlement status. Valid values: Pending, Applying, Committed, and Failed. Committed only indicates that the control plane has successfully submitted and read back the status, and does not mean that all nodes have acknowledged it.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Committed</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The gateway instance ID.</para>
+            /// <para>The ID of the gateway instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-xxxxxxxx</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> ModelCardIds { get; set; }
 
             /// <summary>
-            /// <para>The model group ID.</para>
+            /// <para>The ID of the model group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mg-xxxxxxxx</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelGroupId { get; set; }
 
             /// <summary>
-            /// <para>The model group name.</para>
+            /// <para>The name of the model group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chat-group</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The model group version number.</para>
+            /// <para>The version number of the model group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

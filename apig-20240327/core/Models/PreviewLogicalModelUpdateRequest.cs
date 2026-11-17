@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class PreviewLogicalModelUpdateRequest : TeaModel {
         /// <summary>
-        /// <para>The call strategy. This parameter is required for new Auto write requests. Valid values: balanced, cheap, fast, or quality. The new version uses only the basic call name. Do not submit this parameter for Mapping or Weighted. The server performs conditional validation.</para>
+        /// <para>The call strategy, which is required for new Auto write requests. Valid values: balanced, cheap, fast, and quality. The new version uses only the basic call name. Do not submit this parameter for Mapping or Weighted. The server performs conditional validation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>balanced</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CallStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ordered fallback targets. A maximum of 5 targets are allowed. The targets are deduplicated by actual card ID. This can be an empty array.</para>
+        /// <para>An ordered list of up to 5 fallback targets. The targets are deduplicated by the actual card ID. This can be an empty array.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("fallbackTargets")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<PreviewLogicalModelUpdateRequestFallbackTargets> FallbackTargets { get; set; }
         public class PreviewLogicalModelUpdateRequestFallbackTargets : TeaModel {
             /// <summary>
-            /// <para>The ID of the actual source card in the same instance.</para>
+            /// <para>The actual source card ID within the same instance.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The client logical call name. The name can be up to 256 bytes in UTF-8 encoding, must not contain spaces or slashes, and must not start with auto.</para>
+        /// <para>The client logical call name. The value can be up to 256 bytes in UTF-8 encoding, must not contain spaces or slashes, and must not start with auto.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The response model. If Actual is specified, the public name of the actual model is returned. If Logical is specified, the entry name is returned, including Server-Sent Events (SSE).</para>
+        /// <para>The response model type. If set to Actual, the public name of the actual model is returned. If set to Logical, the entry name is returned, including SSE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResponseModel { get; set; }
 
         /// <summary>
-        /// <para>The routing policy. Valid values: Mapping, Weighted, or Auto. If Auto is specified, targets must be an empty array and slots is required.</para>
+        /// <para>The routing policy. Valid values: Mapping, Weighted, and Auto. If you set this parameter to Auto, targets must be an empty array and slots is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RoutingPolicy { get; set; }
 
         /// <summary>
-        /// <para>The slots. This parameter is submitted only for Auto. Each of the simple, standard, and complex slots requires 1 to 3 source cards. The three slots are globally deduplicated by modelCardId. Omit this parameter for Mapping or Weighted.</para>
+        /// <para>The slots configuration, which is submitted only for Auto. Each of the simple, standard, and complex slots requires 1 to 3 source cards. Cards across the three slots are globally deduplicated by modelCardId. Omit this parameter for Mapping or Weighted.</para>
         /// </summary>
         [NameInMap("slots")]
         [Validation(Required=false)]
         public PreviewLogicalModelUpdateRequestSlots Slots { get; set; }
         public class PreviewLogicalModelUpdateRequestSlots : TeaModel {
             /// <summary>
-            /// <para>The complex slot. Requires 1 to 3 source cards. The three slots are globally deduplicated by modelCardId.</para>
+            /// <para>The complex slot, which requires 1 to 3 source cards. Cards across the three slots are globally deduplicated by modelCardId.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("complex")]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<PreviewLogicalModelUpdateRequestSlotsComplex> Complex { get; set; }
             public class PreviewLogicalModelUpdateRequestSlotsComplex : TeaModel {
                 /// <summary>
-                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                /// <para>The actual source card ID within the same instance, which starts with msc-. VM or service overrides are not supported.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The simple slot. Requires 1 to 3 source cards. The three slots are globally deduplicated by modelCardId.</para>
+            /// <para>The simple slot, which requires 1 to 3 source cards. Cards across the three slots are globally deduplicated by modelCardId.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("simple")]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<PreviewLogicalModelUpdateRequestSlotsSimple> Simple { get; set; }
             public class PreviewLogicalModelUpdateRequestSlotsSimple : TeaModel {
                 /// <summary>
-                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                /// <para>The actual source card ID within the same instance, which starts with msc-. VM or service overrides are not supported.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The standard slot. Requires 1 to 3 source cards. The three slots are globally deduplicated by modelCardId.</para>
+            /// <para>The standard slot, which requires 1 to 3 source cards. Cards across the three slots are globally deduplicated by modelCardId.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("standard")]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<PreviewLogicalModelUpdateRequestSlotsStandard> Standard { get; set; }
             public class PreviewLogicalModelUpdateRequestSlotsStandard : TeaModel {
                 /// <summary>
-                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                /// <para>The actual source card ID within the same instance, which starts with msc-. VM or service overrides are not supported.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The primary targets. For Mapping, exactly one item is allowed. For Weighted, the sum of original relative weights must be greater than 0. For Auto, this must be an empty array.</para>
+        /// <para>The primary targets. For Mapping, exactly one item is required. For Weighted, the sum of the original relative weights must be greater than 0. For Auto, this must be an empty array.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("targets")]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<PreviewLogicalModelUpdateRequestTargets> Targets { get; set; }
         public class PreviewLogicalModelUpdateRequestTargets : TeaModel {
             /// <summary>
-            /// <para>The ID of the actual source model card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+            /// <para>The actual source model card ID within the same instance, which starts with msc-. VM or service overrides are not supported.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelCardId { get; set; }
 
             /// <summary>
-            /// <para>The weight. Valid values: integers from 0 to 10000. The original value is saved. For Mapping, 0 is allowed.</para>
+            /// <para>The weight value. Valid values: integers from 0 to 10000. The original value is preserved. For Mapping, 0 is allowed.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

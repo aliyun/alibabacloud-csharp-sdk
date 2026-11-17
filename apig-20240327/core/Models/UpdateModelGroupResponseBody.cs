@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateModelGroupResponseBodyData Data { get; set; }
         public class UpdateModelGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The summary of the most recent group configuration delivery returned by GetModelGroup. This is independent of API publishing and entitlement status. It is omitted when no task exists and does not indicate success. The configuration applies to the current version only when the revision matches the current version. List operations do not guarantee this field is populated.</para>
+            /// <para>The summary of the most recent group configuration delivery returned by GetModelGroup. It is independent of API publishing and entitlement status. It is omitted when there is no task and does not indicate success. The revision matches the current version only when it represents the current version. List operations do not guarantee this field is populated.</para>
             /// </summary>
             [NameInMap("configurationDeployment")]
             [Validation(Required=false)]
             public UpdateModelGroupResponseBodyDataConfigurationDeployment ConfigurationDeployment { get; set; }
             public class UpdateModelGroupResponseBodyDataConfigurationDeployment : TeaModel {
                 /// <summary>
-                /// <para>The identity of the group configuration task, which is used for tracking only. It cannot be accessed by GetLogicalModelDeployment or RetryLogicalModelDeployment.</para>
+                /// <para>The identity of the group configuration task, used for tracking only. It cannot be accessed by GetLogicalModelDeployment or RetryLogicalModelDeployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>op-d00000000000000000000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string OperationId { get; set; }
 
                 /// <summary>
-                /// <para>The group version corresponding to this task, which may be earlier than the current group version.</para>
+                /// <para>The group version corresponding to this task. It may be earlier than the current group version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? Revision { get; set; }
 
                 /// <summary>
-                /// <para>The status. Valid values: Pending, Running, Succeeded, Failed, or PartiallyFailed.</para>
+                /// <para>Pending, Running, Succeeded, Failed, or PartiallyFailed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Succeeded</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The description of the model group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Model group for business integration</para>
+            /// <para>Model group for service integration</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public UpdateModelGroupResponseBodyDataEntitlementState EntitlementState { get; set; }
             public class UpdateModelGroupResponseBodyDataEntitlementState : TeaModel {
                 /// <summary>
-                /// <para>The applied authorization revision number.</para>
+                /// <para>The applied entitlement revision number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? AppliedRevision { get; set; }
 
                 /// <summary>
-                /// <para>The expected authorization revision number to be delivered.</para>
+                /// <para>The expected entitlement revision number to be delivered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? DesiredRevision { get; set; }
 
                 /// <summary>
-                /// <para>The error description when processing fails. This field is empty when no errors occur.</para>
+                /// <para>The error description when processing fails. It is empty when there are no errors.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Configuration delivery failed</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The status. Valid values: Pending, Applying, Committed, or Failed. Committed only indicates that the control plane has submitted and read back the configuration, and does not guarantee ACK from all pods.</para>
+                /// <para>Pending, Applying, Committed, or Failed. Committed only indicates that the control plane has submitted and read back the configuration, and does not guarantee ACK from all pods.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Committed</para>
@@ -135,14 +135,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The collection of model card identifiers.</para>
+            /// <para>The collection of model card IDs.</para>
             /// </summary>
             [NameInMap("modelCardIds")]
             [Validation(Required=false)]
             public List<string> ModelCardIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the model group. Use the modelGroupId returned by CreateModelGroup.</para>
+            /// <para>The model group ID. Use the modelGroupId returned by CreateModelGroup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mg-d00000000000000000000</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The update time in RFC 3339 format.</para>
+            /// <para>The update time in RFC3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-11-12T00:00:00Z</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The current version of the object, which is used for conditional validation during updates or deletions.</para>
+            /// <para>The current version of the object. It is used for conditional validation during updates or deletions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message, which describes the request processing result.</para>
+        /// <para>The response message. It describes the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is generated by the system and used to locate this call.</para>
+        /// <para>The request ID. It is generated by the system and used to locate this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

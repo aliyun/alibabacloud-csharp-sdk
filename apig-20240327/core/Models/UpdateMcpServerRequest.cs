@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
-            /// <para>The MCP server name.</para>
+            /// <para>The name of the MCP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-mcp</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The service protocol. Valid values:</para>
+                /// <para>The protocol. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>TCP.</description></item>
                 /// <item><description>HTTP.</description></item>
@@ -130,11 +130,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The creation source type. Valid values:</para>
-        /// <para>ApiGatewayHttpToMCP: API Gateway-managed HTTP-to-MCP.
-        /// ApiGatewayProxyMcpHosting: API Gateway-managed MCP direct proxy.
-        /// ApiGatewayAssembly: API Gateway MCP assembly.
-        /// NacosHttpToMCP: API Gateway-managed Nacos-synchronized HTTP-to-MCP.
-        /// NacosMcpHosting: API Gateway-managed Nacos-synchronized MCP direct proxy.</para>
+        /// <list type="bullet">
+        /// <item><description>ApiGatewayHttpToMCP: API Gateway-managed HTTP-to-MCP</description></item>
+        /// <item><description>ApiGatewayProxyMcpHosting: API Gateway-managed direct MCP proxy</description></item>
+        /// <item><description>ApiGatewayAssembly: API Gateway MCP assembly</description></item>
+        /// <item><description>NacosHttpToMCP: API Gateway-managed Nacos-synchronized HTTP-to-MCP</description></item>
+        /// <item><description>NacosMcpHosting: API Gateway-managed Nacos-synchronized direct MCP proxy</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ApiGatewayMcpHosting</para>
@@ -171,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExposedUriPath { get; set; }
 
         /// <summary>
-        /// <para>The list of canary MCP server route configurations.</para>
+        /// <para>The list of canary release MCP server route configurations.</para>
         /// </summary>
         [NameInMap("grayMcpServerConfigs")]
         [Validation(Required=false)]
@@ -212,7 +214,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The service protocol.</para>
+                    /// <para>The protocol.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HTTP</para>
@@ -275,6 +277,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The MCP service description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Used to query order status. An order number is required for the query</para>
+        /// </summary>
+        [NameInMap("instructions")]
+        [Validation(Required=false)]
+        public string Instructions { get; set; }
+
+        /// <summary>
         /// <para>The route match rules. This parameter is conditionally required. If it is not provided, the API returns InvalidParameter.IsEmpty(400).</para>
         /// </summary>
         [NameInMap("match")]
@@ -299,7 +311,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerSpec { get; set; }
 
             /// <summary>
-            /// <para>The Swagger document for HTTP-to-MCP, which must comply with the OpenAPI 3.0 specification.</para>
+            /// <para>The Swagger document for HTTP-to-MCP. The document must comply with the OpenAPI 3.0 specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swagger-content</para>
@@ -321,11 +333,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? McpStatisticsEnable { get; set; }
 
         /// <summary>
-        /// <para>The protocol type. Valid values:
-        /// HTTP: HTTP protocol.
-        /// HTTPS: HTTPS protocol.
-        /// SSE: Server-Sent Events protocol.
-        /// StreamableHTTP: Streaming HTTP protocol.</para>
+        /// <para>The protocol type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP: HTTP</description></item>
+        /// <item><description>HTTPS: HTTPS</description></item>
+        /// <item><description>SSE: Server-Sent Events</description></item>
+        /// <item><description>StreamableHTTP: Streamable HTTP</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

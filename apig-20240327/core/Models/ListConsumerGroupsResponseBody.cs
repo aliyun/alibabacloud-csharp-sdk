@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned if the request succeeds.</para>
+        /// <para>The response status code. Ok is returned when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The description of the consumer group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Used to group online API callers</para>
+                /// <para>Used for grouping online API callers</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of matched consumer groups.</para>
+            /// <para>The total number of consumer groups that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

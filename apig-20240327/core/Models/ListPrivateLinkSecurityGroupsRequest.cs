@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPrivateLinkSecurityGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next token.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-xxxxxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC owned by the currently authorized user. The candidate security groups must belong to this VPC.</para>
+        /// <para>The ID of the VPC owned by the authorized user. The candidate security groups must belong to this VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

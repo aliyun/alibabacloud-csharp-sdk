@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeleteModelGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the expected version to delete. Saved-state API references prevent deletion, and authorization references are cleared.</para>
+        /// <para>The expected version. Only this version is deleted. API saved-state references prevent deletion, and authorization references are cleared.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The name for an exact search.</para>
+        /// <para>The API name for exact search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beta-model-api</para>

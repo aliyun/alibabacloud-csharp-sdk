@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants model card entitlements to a consumer.</para>
+        /// <para>Grants model card licenses to a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -608,7 +608,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants model card entitlements to a consumer.</para>
+        /// <para>Grants model card licenses to a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -666,7 +666,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants model card entitlements to a consumer.</para>
+        /// <para>Grants model card licenses to a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -685,7 +685,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants model card entitlements to a consumer.</para>
+        /// <para>Grants model card licenses to a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2248,7 +2248,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an independent AI model source.</para>
+        /// <para>Creates a standalone AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2312,7 +2312,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an independent AI model source.</para>
+        /// <para>Creates a standalone AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2376,7 +2376,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an independent AI model source.</para>
+        /// <para>Creates a standalone AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2395,7 +2395,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an independent AI model source.</para>
+        /// <para>Creates a standalone AI model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2414,7 +2414,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AI model in a model source.</para>
+        /// <para>Creates an in-source AI model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2486,7 +2486,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AI model in a model source.</para>
+        /// <para>Creates an in-source AI model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2558,7 +2558,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AI model in a model source.</para>
+        /// <para>Creates an in-source AI model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2577,7 +2577,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AI model in a model source.</para>
+        /// <para>Creates an in-source AI model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2973,6 +2973,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireAt))
+            {
+                body["expireAt"] = request.ExpireAt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
             {
                 body["gatewayType"] = request.GatewayType;
@@ -3052,6 +3056,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireAt))
+            {
+                body["expireAt"] = request.ExpireAt;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
             {
@@ -5651,6 +5659,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates a Model Context Protocol (MCP) server.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update Ingress listener configurations.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMcpServerRequest
         /// </param>
@@ -5699,6 +5712,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayMcpServerConfigs))
             {
                 body["grayMcpServerConfigs"] = request.GrayMcpServerConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["instructions"] = request.Instructions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
@@ -5749,6 +5766,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates a Model Context Protocol (MCP) server.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update Ingress listener configurations.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMcpServerRequest
         /// </param>
@@ -5797,6 +5819,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayMcpServerConfigs))
             {
                 body["grayMcpServerConfigs"] = request.GrayMcpServerConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["instructions"] = request.Instructions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
@@ -5847,6 +5873,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates a Model Context Protocol (MCP) server.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update Ingress listener configurations.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMcpServerRequest
         /// </param>
@@ -5865,6 +5896,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Creates a Model Context Protocol (MCP) server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update Ingress listener configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMcpServerRequest
@@ -8080,8 +8116,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <h2>Before you begin</h2>
         /// <para>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</para>
         /// <list type="bullet">
-        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as kmsConfig.kmsInstanceId.</description></item>
-        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as kmsConfig.kmsKeyId.
+        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as the kmsConfig.kmsInstanceId parameter.</description></item>
+        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as the kmsConfig.kmsKeyId parameter.
         /// When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</description></item>
         /// </list>
         /// </description>
@@ -8157,8 +8193,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <h2>Before you begin</h2>
         /// <para>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</para>
         /// <list type="bullet">
-        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as kmsConfig.kmsInstanceId.</description></item>
-        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as kmsConfig.kmsKeyId.
+        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as the kmsConfig.kmsInstanceId parameter.</description></item>
+        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as the kmsConfig.kmsKeyId parameter.
         /// When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</description></item>
         /// </list>
         /// </description>
@@ -8234,8 +8270,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <h2>Before you begin</h2>
         /// <para>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</para>
         /// <list type="bullet">
-        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as kmsConfig.kmsInstanceId.</description></item>
-        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as kmsConfig.kmsKeyId.
+        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as the kmsConfig.kmsInstanceId parameter.</description></item>
+        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as the kmsConfig.kmsKeyId parameter.
         /// When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</description></item>
         /// </list>
         /// </description>
@@ -8264,8 +8300,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <h2>Before you begin</h2>
         /// <para>Before calling this operation, you must prepare the following resources in Key Management Service (KMS):</para>
         /// <list type="bullet">
-        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as kmsConfig.kmsInstanceId.</description></item>
-        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as kmsConfig.kmsKeyId.
+        /// <item><description>KMS instance: Create an instance in KMS and obtain the instance ID. Pass the instance ID as the kmsConfig.kmsInstanceId parameter.</description></item>
+        /// <item><description>KMS key: Create a key in the instance and obtain the key ID. Pass the key ID as the kmsConfig.kmsKeyId parameter.
         /// When calling this operation, you must set secretSource to KMS and pass the preceding two identifiers in kmsConfig. After the secret is created, you can call ListSecrets to query the list of secrets under your account.</description></item>
         /// </list>
         /// </description>
@@ -10574,7 +10610,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified logical model.</para>
+        /// <para>Deletes the specified logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10620,7 +10656,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified logical model.</para>
+        /// <para>Deletes the specified logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10666,7 +10702,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified logical model.</para>
+        /// <para>Deletes the specified logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10685,7 +10721,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified logical model.</para>
+        /// <para>Deletes the specified logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10929,7 +10965,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you delete a published new-version model API, the system automatically stops the service and cleans up the resources owned by the API. A successful response indicates that the request has been accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are completed. You can monitor the progress by checking the deleteStatus parameter in the GetModelApi operation. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully completed. The object is retained during deletion or if the deletion fails. Shared model sources, model groups, models, services, consumers, or keys are not deleted.</para>
+        /// <para>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10984,7 +11020,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you delete a published new-version model API, the system automatically stops the service and cleans up the resources owned by the API. A successful response indicates that the request has been accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are completed. You can monitor the progress by checking the deleteStatus parameter in the GetModelApi operation. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully completed. The object is retained during deletion or if the deletion fails. Shared model sources, model groups, models, services, consumers, or keys are not deleted.</para>
+        /// <para>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11039,7 +11075,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you delete a published new-version model API, the system automatically stops the service and cleans up the resources owned by the API. A successful response indicates that the request has been accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are completed. You can monitor the progress by checking the deleteStatus parameter in the GetModelApi operation. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully completed. The object is retained during deletion or if the deletion fails. Shared model sources, model groups, models, services, consumers, or keys are not deleted.</para>
+        /// <para>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11063,7 +11099,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you delete a published new-version model API, the system automatically stops the service and cleans up the resources owned by the API. A successful response indicates that the request has been accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are completed. You can monitor the progress by checking the deleteStatus parameter in the GetModelApi operation. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully completed. The object is retained during deletion or if the deletion fails. Shared model sources, model groups, models, services, consumers, or keys are not deleted.</para>
+        /// <para>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13722,7 +13758,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI models in a source.</para>
+        /// <para>Queries AI models in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13762,7 +13798,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI models in a source.</para>
+        /// <para>Queries AI models in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13802,7 +13838,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI models in a source.</para>
+        /// <para>Queries AI models in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13821,7 +13857,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI models in a source.</para>
+        /// <para>Queries AI models in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14446,7 +14482,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access overview for a consumer.</para>
+        /// <para>Queries the access overview of a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14492,7 +14528,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access overview for a consumer.</para>
+        /// <para>Queries the access overview of a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14538,7 +14574,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access overview for a consumer.</para>
+        /// <para>Queries the access overview of a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14557,7 +14593,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access overview for a consumer.</para>
+        /// <para>Queries the access overview of a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17348,7 +17384,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery of logical model configurations.</para>
+        /// <para>Queries the configuration delivery of a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17388,7 +17424,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery of logical model configurations.</para>
+        /// <para>Queries the configuration delivery of a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17428,7 +17464,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery of logical model configurations.</para>
+        /// <para>Queries the configuration delivery of a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17447,7 +17483,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery of logical model configurations.</para>
+        /// <para>Queries the configuration delivery of a logical model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17829,7 +17865,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission errors, or storage errors do not indicate that the deletion is complete.</para>
+        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed, and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission issues, or storage errors do not indicate that the deletion is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17874,7 +17910,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission errors, or storage errors do not indicate that the deletion is complete.</para>
+        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed, and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission issues, or storage errors do not indicate that the deletion is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17919,7 +17955,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission errors, or storage errors do not indicate that the deletion is complete.</para>
+        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed, and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission issues, or storage errors do not indicate that the deletion is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17943,7 +17979,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission errors, or storage errors do not indicate that the deletion is complete.</para>
+        /// <para>During deletion, check deleteStatus for Deleting or DeleteFailed, and review deployErrorMessage. The NotFound.ModelApi error is returned only after the target model API is completely deleted. Missing dependencies, permission issues, or storage errors do not indicate that the deletion is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22504,7 +22540,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumer groups.</para>
+        /// <para>Queries consumer groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22562,7 +22598,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumer groups.</para>
+        /// <para>Queries consumer groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22620,7 +22656,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumer groups.</para>
+        /// <para>Queries consumer groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22639,7 +22675,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumer groups.</para>
+        /// <para>Queries consumer groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22658,7 +22694,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the model card entitlements for consumers.</para>
+        /// <para>Queries the list of model card entitlements for consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22720,7 +22756,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the model card entitlements for consumers.</para>
+        /// <para>Queries the list of model card entitlements for consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22782,7 +22818,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the model card entitlements for consumers.</para>
+        /// <para>Queries the list of model card entitlements for consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22801,7 +22837,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the model card entitlements for consumers.</para>
+        /// <para>Queries the list of model card entitlements for consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23002,9 +23038,17 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireStatus))
+            {
+                query["expireStatus"] = request.ExpireStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
             {
                 query["gatewayType"] = request.GatewayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeExpirationSummary))
+            {
+                query["includeExpirationSummary"] = request.IncludeExpirationSummary;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
             {
@@ -23017,6 +23061,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -23060,9 +23108,17 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireStatus))
+            {
+                query["expireStatus"] = request.ExpireStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
             {
                 query["gatewayType"] = request.GatewayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeExpirationSummary))
+            {
+                query["includeExpirationSummary"] = request.IncludeExpirationSummary;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
             {
@@ -23075,6 +23131,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -27470,7 +27530,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model groups.</para>
+        /// <para>Queries a list of model groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27528,7 +27588,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model groups.</para>
+        /// <para>Queries a list of model groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27586,7 +27646,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model groups.</para>
+        /// <para>Queries a list of model groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27605,7 +27665,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model groups.</para>
+        /// <para>Queries a list of model groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29288,12 +29348,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unmanaged security groups available for a private endpoint.</para>
+        /// <para>Queries the unmanaged security groups available for private endpoints.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29347,12 +29407,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unmanaged security groups available for a private endpoint.</para>
+        /// <para>Queries the unmanaged security groups available for private endpoints.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29406,12 +29466,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unmanaged security groups available for a private endpoint.</para>
+        /// <para>Queries the unmanaged security groups available for private endpoints.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29430,12 +29490,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unmanaged security groups available for a private endpoint.</para>
+        /// <para>Queries the unmanaged security groups available for private endpoints.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports creating multiple services.</para>
+        /// <para>The API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31926,7 +31986,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Simulates the impact of modifying a logical model.</para>
+        /// <para>Simulates the impact of logical model modifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31996,7 +32056,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Simulates the impact of modifying a logical model.</para>
+        /// <para>Simulates the impact of logical model modifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32066,7 +32126,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Simulates the impact of modifying a logical model.</para>
+        /// <para>Simulates the impact of logical model modifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32085,7 +32145,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Simulates the impact of modifying a logical model.</para>
+        /// <para>Simulates the impact of logical model modifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33124,7 +33184,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries the delivery of the logical model configuration.</para>
+        /// <para>Retries the delivery of logical model configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33174,7 +33234,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries the delivery of the logical model configuration.</para>
+        /// <para>Retries the delivery of logical model configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33224,7 +33284,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries the delivery of the logical model configuration.</para>
+        /// <para>Retries the delivery of logical model configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33243,7 +33303,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries the delivery of the logical model configuration.</para>
+        /// <para>Retries the delivery of logical model configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33400,7 +33460,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes model card entitlements for a consumer.</para>
+        /// <para>Revokes the model card entitlements for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33458,7 +33518,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes model card entitlements for a consumer.</para>
+        /// <para>Revokes the model card entitlements for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33516,7 +33576,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes model card entitlements for a consumer.</para>
+        /// <para>Revokes the model card entitlements for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33535,7 +33595,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes model card entitlements for a consumer.</para>
+        /// <para>Revokes the model card entitlements for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35270,7 +35330,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an AI model in a model source.</para>
+        /// <para>Updates an AI model in a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35336,7 +35396,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an AI model in a model source.</para>
+        /// <para>Updates an AI model in a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35402,7 +35462,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an AI model in a model source.</para>
+        /// <para>Updates an AI model in a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35421,7 +35481,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an AI model in a model source.</para>
+        /// <para>Updates an AI model in a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35914,6 +35974,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["apikeyIdentityConfig"] = request.ApikeyIdentityConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearExpireAt))
+            {
+                body["clearExpireAt"] = request.ClearExpireAt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -35922,9 +35986,21 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAfterRenewal))
+            {
+                body["enableAfterRenewal"] = request.EnableAfterRenewal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireAt))
+            {
+                body["expireAt"] = request.ExpireAt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtIdentityConfig))
             {
                 body["jwtIdentityConfig"] = request.JwtIdentityConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Renew))
+            {
+                body["renew"] = request.Renew;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -35976,6 +36052,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["apikeyIdentityConfig"] = request.ApikeyIdentityConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearExpireAt))
+            {
+                body["clearExpireAt"] = request.ClearExpireAt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -35984,9 +36064,21 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAfterRenewal))
+            {
+                body["enableAfterRenewal"] = request.EnableAfterRenewal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireAt))
+            {
+                body["expireAt"] = request.ExpireAt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtIdentityConfig))
             {
                 body["jwtIdentityConfig"] = request.JwtIdentityConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Renew))
+            {
+                body["renew"] = request.Renew;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -38869,7 +38961,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configurations.</para>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the configurations of listening Ingresses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38916,6 +39008,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayMcpServerConfigs))
             {
                 body["grayMcpServerConfigs"] = request.GrayMcpServerConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["instructions"] = request.Instructions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
@@ -38964,7 +39060,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configurations.</para>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the configurations of listening Ingresses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39011,6 +39107,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayMcpServerConfigs))
             {
                 body["grayMcpServerConfigs"] = request.GrayMcpServerConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
+            {
+                body["instructions"] = request.Instructions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
@@ -39059,7 +39159,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configurations.</para>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the configurations of listening Ingresses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39083,7 +39183,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configurations.</para>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the configurations of listening Ingresses.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39336,6 +39436,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["modelSelection"] = request.ModelSelection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelSelectionDelta))
+            {
+                body["modelSelectionDelta"] = request.ModelSelectionDelta;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
@@ -39413,6 +39517,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelSelection))
             {
                 body["modelSelection"] = request.ModelSelection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelSelectionDelta))
+            {
+                body["modelSelectionDelta"] = request.ModelSelectionDelta;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -40703,7 +40811,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>container service</b> type are allowed to update Ingress listener configurations.</para>
+        /// <para>Updates a secret. Only sources of the <b>Container Service</b> type are allowed to update Ingress listener configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40754,7 +40862,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>container service</b> type are allowed to update Ingress listener configurations.</para>
+        /// <para>Updates a secret. Only sources of the <b>Container Service</b> type are allowed to update Ingress listener configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40805,7 +40913,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>container service</b> type are allowed to update Ingress listener configurations.</para>
+        /// <para>Updates a secret. Only sources of the <b>Container Service</b> type are allowed to update Ingress listener configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40829,7 +40937,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>container service</b> type are allowed to update Ingress listener configurations.</para>
+        /// <para>Updates a secret. Only sources of the <b>Container Service</b> type are allowed to update Ingress listener configurations.</para>
         /// </description>
         /// 
         /// <param name="request">

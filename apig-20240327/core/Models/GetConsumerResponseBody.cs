@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetConsumerResponseBodyData Data { get; set; }
         public class GetConsumerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AKSK identity authentication configuration.</para>
+            /// <para>The AccessKey pair identity authentication configuration.</para>
             /// </summary>
             [NameInMap("akSkIdentityConfigs")]
             [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<GetConsumerResponseBodyDataConsumerGroups> ConsumerGroups { get; set; }
             public class GetConsumerResponseBodyDataConsumerGroups : TeaModel {
                 /// <summary>
-                /// <para>The consumer group ID.</para>
+                /// <para>The ID of the consumer group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>csg-8c13d2b4f8a1</para>
@@ -58,17 +58,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The consumer group description.</para>
+                /// <para>The description of the consumer group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Grouping for production API call invokers</para>
+                /// <para>Used to group production API call invokers</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The time when the consumer joined the consumer group, represented as a UNIX timestamp in milliseconds.</para>
+                /// <para>The time when the consumer joined the consumer group, as a Unix timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1715769600000</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? JoinTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The consumer group name.</para>
+                /// <para>The name of the consumer group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-consumer-group</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The consumer ID.</para>
+            /// <para>The ID of the consumer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cs-cvgbtk6m1hkji5sb8dr0</para>
@@ -123,14 +123,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test consumer</para>
+            /// <para>Consumer dedicated for testing</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the consumer is enabled.</para>
+            /// <para>Specifies whether the consumer is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -140,6 +140,26 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the consumer in UTC Unix seconds. A null value indicates permanent validity and does not affect the enable or disable semantics of the enable parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1893456000</para>
+            /// </summary>
+            [NameInMap("expireAt")]
+            [Validation(Required=false)]
+            public long? ExpireAt { get; set; }
+
+            /// <summary>
+            /// <para>The validity status calculated based on the current time. Valid values: Permanent: permanently valid. InEffect: more than seven days remaining. AboutToExpire: more than zero and up to seven days remaining. Expired: the expiration time has been reached.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>InEffect</para>
+            /// </summary>
+            [NameInMap("expireStatus")]
+            [Validation(Required=false)]
+            public string ExpireStatus { get; set; }
+
+            /// <summary>
             /// <para>The JWT identity authentication configuration.</para>
             /// </summary>
             [NameInMap("jwtIdentityConfig")]
@@ -147,7 +167,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public JwtIdentityConfig JwtIdentityConfig { get; set; }
 
             /// <summary>
-            /// <para>The consumer name.</para>
+            /// <para>The name of the consumer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>consumer-1</para>

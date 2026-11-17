@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateModelGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. The value is Ok if the request is successful, or a specific business error code if the request fails.</para>
+        /// <para>The response status code. The value is Ok for successful requests, or a specific business error code for failed requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateModelGroupResponseBodyData Data { get; set; }
         public class CreateModelGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The summary of the most recent group configuration deployment returned by GetModelGroup. This is independent of the API release and entitlement status. It is omitted when no task exists and does not indicate success. A revision that matches the current version indicates the current version. This field is not guaranteed to be populated in list operations.</para>
+            /// <para>The summary of the most recent group configuration deployment returned by GetModelGroup. This is independent of the API release and entitlement status. It is omitted when no task exists and does not indicate success. The deployment represents the current version only when the revision matches the current version. This field is not guaranteed to be populated in list operations.</para>
             /// </summary>
             [NameInMap("configurationDeployment")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string OperationId { get; set; }
 
                 /// <summary>
-                /// <para>The group version corresponding to the task. It may be earlier than the current group version.</para>
+                /// <para>The group version corresponding to the task. This version may be earlier than the current group version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? Revision { get; set; }
 
                 /// <summary>
-                /// <para>The deployment status. Valid values: Pending, Running, Succeeded, Failed, and PartiallyFailed.</para>
+                /// <para>The status of the deployment. Valid values: Pending, Running, Succeeded, Failed, and PartiallyFailed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Succeeded</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? AppliedRevision { get; set; }
 
                 /// <summary>
-                /// <para>The expected entitlement revision number to be delivered.</para>
+                /// <para>The desired entitlement revision number to be delivered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? DesiredRevision { get; set; }
 
                 /// <summary>
-                /// <para>The error message when processing fails. This parameter is empty if no error occurs.</para>
+                /// <para>The error message when processing fails. This field is empty if no errors occur.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Configuration delivery failed</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The entitlement status. Valid values: Pending, Applying, Committed, and Failed. Committed only indicates that the control plane has submitted and read back the configuration, and does not guarantee acknowledgment from all pods.</para>
+                /// <para>The status of the entitlement. Valid values: Pending, Applying, Committed, and Failed. Committed indicates that the control plane has submitted and read back the configuration, but does not guarantee acknowledgment from all pods.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Committed</para>

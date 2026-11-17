@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<CreateAiModelSourceModelRequestAvailablePaths> AvailablePaths { get; set; }
         public class CreateAiModelSourceModelRequestAvailablePaths : TeaModel {
             /// <summary>
-            /// <para>The invocation path for the model.</para>
+            /// <para>The invocation path of the model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/v1/chat/completions</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The protocol type used for the invocation path.</para>
+            /// <para>The protocol type used by the invocation path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The credit pricing configuration for the model.</para>
+        /// <para>The credit pricing configuration of the model.</para>
         /// </summary>
         [NameInMap("credit")]
         [Validation(Required=false)]
         public CreateAiModelSourceModelRequestCredit Credit { get; set; }
         public class CreateAiModelSourceModelRequestCredit : TeaModel {
             /// <summary>
-            /// <para>The number of credits per million cached input tokens. The value must be a non-negative number. A value of 0 indicates that the cached input is free of charge.</para>
+            /// <para>The number of credits per million cached input tokens. The value must be a non-negative number. A value of 0 indicates free.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? CacheCost { get; set; }
 
             /// <summary>
-            /// <para>The number of credits per million input tokens. The value must be a non-negative number. A value of 0 indicates that the input is free of charge.</para>
+            /// <para>The number of credits per million input tokens. The value must be a non-negative number. A value of 0 indicates free.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? InputCost { get; set; }
 
             /// <summary>
-            /// <para>The number of credits per million output tokens. The value must be a non-negative number. A value of 0 indicates that the output is free of charge.</para>
+            /// <para>The number of credits per million output tokens. The value must be a non-negative number. A value of 0 indicates free.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? OutputCost { get; set; }
 
             /// <summary>
-            /// <para>The pricing method. Currently, only fixed (fixed credit pricing) is supported.</para>
+            /// <para>The pricing method. Valid values: fixed (fixed credit pricing).</para>
             /// 
             /// <b>Example:</b>
             /// <para>fixed</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The set of capabilities declared for the model. The key is the capability name and the value indicates whether the capability is supported.</para>
+        /// <para>The set of capabilities declared by the model. The key is the capability name, and the value indicates whether the capability is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;nativeStreaming&quot;:true}</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public Dictionary<string, object> Features { get; set; }
 
         /// <summary>
-        /// <para>The token limits and the input and output modality information for the model.</para>
+        /// <para>The token limits and input and output modality information of the model.</para>
         /// </summary>
         [NameInMap("meta")]
         [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model source. Use the modelSourceId returned by the CreateAiModelSource operation.</para>
+        /// <para>The ID of the model source. Use the modelSourceId returned by CreateAiModelSource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelSourceId { get; set; }
 
         /// <summary>
-        /// <para>The client token generated by the caller to identify the same creation or retry operation.</para>
+        /// <para>The idempotency token generated by the caller to identify the same creation or retry operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b1907ca4-952c-4c5f-8d1f-0aa6ae339c96</para>

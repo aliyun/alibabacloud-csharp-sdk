@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateLogicalModelRequest : TeaModel {
         /// <summary>
-        /// <para>The call strategy. This parameter is required for new Auto write requests. Valid values: balanced, cheap, fast, and quality. The new version uses only the basic call name. Do not submit this parameter for Mapping and Weighted. The server performs conditional validation.</para>
+        /// <para>The call strategy. This parameter is required for new Auto write requests. Valid values: balanced, cheap, fast, and quality. The new version uses only the basic invocation name. Do not submit this parameter for Mapping and Weighted. The server performs conditional validation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>balanced</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CallStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ordered fallback targets. A maximum of 5 targets are supported. The targets are deduplicated by actual card ID. This can be an empty array.</para>
+        /// <para>The ordered fallback targets. A maximum of 5 targets are supported. The targets are deduplicated by the actual card ID. This can be an empty array.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("fallbackTargets")]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The client logical call name. It can be up to 256 bytes in UTF-8 encoding, must not contain spaces or slashes, and must not start with auto.</para>
+        /// <para>The client logical invocation name. It must be encoded in UTF-8 and can be up to 256 bytes in length. It cannot contain spaces or slashes, and cannot start with auto.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The response model. Actual returns the public name of the actual model, and Logical returns the entry name, including Server-Sent Events (SSE).</para>
+        /// <para>The response model. If set to Actual, the public name of the actual model is returned. If set to Logical, the entry name is returned, including Server-Sent Events (SSE).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<UpdateLogicalModelRequestSlotsComplex> Complex { get; set; }
             public class UpdateLogicalModelRequestSlotsComplex : TeaModel {
                 /// <summary>
-                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. VMs or service overrides are not supported.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<UpdateLogicalModelRequestSlotsSimple> Simple { get; set; }
             public class UpdateLogicalModelRequestSlotsSimple : TeaModel {
                 /// <summary>
-                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. VMs or service overrides are not supported.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<UpdateLogicalModelRequestSlotsStandard> Standard { get; set; }
             public class UpdateLogicalModelRequestSlotsStandard : TeaModel {
                 /// <summary>
-                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+                /// <para>The ID of the actual source card in the same instance. The ID starts with msc-. VMs or service overrides are not supported.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<UpdateLogicalModelRequestTargets> Targets { get; set; }
         public class UpdateLogicalModelRequestTargets : TeaModel {
             /// <summary>
-            /// <para>The ID of the actual source model card in the same instance. The ID starts with msc-. Virtual machines or service overrides are not supported.</para>
+            /// <para>The ID of the actual source model card in the same instance. The ID starts with msc-. VMs or service overrides are not supported.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelCardId { get; set; }
 
             /// <summary>
-            /// <para>The weight. Valid values: integers from 0 to 10000. The original value is saved. For Mapping, 0 is allowed.</para>
+            /// <para>The weight. Valid values: integers from 0 to 10000. The original value is preserved. For Mapping, 0 is allowed.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The confirmation token returned by the configuration update dry run. Pass this token as is when submitting the update.</para>
+        /// <para>The confirmation token returned by the configuration update dry run. Pass this token as is when you submit the update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6b8e7d61b3a94c7285cf0d9ee1a72c836b8e7d61b3a94c7285cf0d9ee1a72c83</para>

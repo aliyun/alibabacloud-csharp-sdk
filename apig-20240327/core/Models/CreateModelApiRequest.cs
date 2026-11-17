@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateModelApiRequest : TeaModel {
         /// <summary>
-        /// <para>The API access prefix. The default value is / for creation. If this parameter is omitted during an update, the original value is retained.</para>
+        /// <para>The API access prefix. The default value is / during creation. If omitted during an update, the original value is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/beta</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BasePath { get; set; }
 
         /// <summary>
-        /// <para>The description of the model API. If this parameter is omitted during an update, the original value is retained.</para>
+        /// <para>The description of the model API. If omitted during an update, the original value is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Model API for service integration</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the direct supply fallback. If this parameter is omitted during creation, the default value is false. This does not implicitly generate paid fallback traffic. Only an explicit value of true is allowed to enable this feature.</para>
+        /// <para>Specifies whether to enable direct supply fallback. If omitted during creation, the default value is false, which does not implicitly generate pay-as-you-go tail charges. Only an explicit true value is allowed.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DirectSupplyFallbackEnabled { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the selected custom or default instance domain names. This parameter must be explicitly specified and cannot be empty during creation. If this parameter is omitted during an update, the original value is retained. If this parameter is submitted, it replaces the entire list and cannot be empty.</para>
+        /// <para>The IDs of the selected custom or default domain names of the instance. This parameter must be explicitly specified and non-empty during creation. If omitted during an update, the original value is retained. Submitted values replace the entire list and cannot be empty.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>if can be null:</b>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> DomainIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable consumer API key authentication. If this parameter is omitted during an update, the original value is retained. The type is fixed to Apikey or Custom.</para>
+        /// <para>Specifies whether to enable API key authentication for consumers. If omitted during an update, the original value is retained. The type is fixed to Apikey or Custom.</para>
         /// </summary>
         [NameInMap("enableAuth")]
         [Validation(Required=false)]
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The time to first byte (TTFB) timeout.</para>
+        /// <para>The time to first byte timeout.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30000</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to explicitly perform the initial configuration. If this parameter is omitted or set to false, the standard multi-API creation is retained. If this parameter is set to true, the name must be explicitly set to default, the basePath must be set to /, and the clientToken must not be empty. Additionally, when saving, multi-API management must be disabled and the number of complete new-version APIs must be zero.</para>
+        /// <para>Specifies whether to explicitly perform the initial configuration. If omitted or set to false, standard multi-API creation is retained. If set to true, name=default, basePath=/, and a non-empty clientToken are required. Additionally, multi-API management must be disabled and the number of complete new-version APIs must be zero when saving.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? InitialConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The model selection. This parameter is required for creation. If this parameter is omitted during an update, the original value is retained. If this parameter is submitted, it replaces the entire configuration.</para>
+        /// <para>The model selection. This parameter is required during creation. If omitted during an update, the original value is retained. Submitted values replace the entire configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>if can be null:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configurations for AI request logging and AI security protection. If this parameter is omitted during an update, the original value is retained. If this parameter is submitted, it replaces the inline policies of both types. An empty array clears both types. Independent token quotas are not affected.</para>
+        /// <para>The configurations for AI request logging and AI security protection. If omitted during an update, the original value is retained. Submitted values replace the two types of inline policies entirely. An empty array clears both types. Independent token quotas are not affected.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. It is a globally unique value generated by the caller, such as a UUID, and can be up to 64 characters in length. If a repeated request with the same client token and identical request parameters is sent within 24 hours after the first request succeeds, the system directly returns the result of the first creation. If the parameters are inconsistent or the first request is still being processed, the system returns a corresponding idempotency error. If this parameter is not specified, the original creation behavior is maintained.</para>
+        /// <para>The idempotency identity. It is a globally unique value generated by the invoker, such as a UUID, and cannot exceed 64 characters in length. Within approximately 24 hours after the initial request succeeds, repeated requests with the same clientToken and identical request parameters return the result of the initial creation. If the request parameters are inconsistent or the initial request is still being processed, a corresponding idempotency error is returned. If this parameter is omitted, the default creation behavior applies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create-model-api-client-token-001</para>

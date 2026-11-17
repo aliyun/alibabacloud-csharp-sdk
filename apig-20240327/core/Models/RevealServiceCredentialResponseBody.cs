@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The currently active credential data.</para>
+        /// <para>The active credential data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;serviceId&quot;:&quot;svc-xxxxxxxx&quot;,&quot;provider&quot;:&quot;qwen&quot;,&quot;credentialType&quot;:&quot;apiKey&quot;,&quot;configRevision&quot;:&quot;1&quot;,&quot;credential&quot;:{&quot;apiKeyGenerateMode&quot;:&quot;Custom&quot;,&quot;apiKeys&quot;:[&quot;sk-xxxxxxxx&quot;]}}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConfigRevision { get; set; }
 
             /// <summary>
-            /// <para>The credential object of the currently active type. Only the fields corresponding to credentialType are populated.</para>
+            /// <para>The credential object for the active type. Only the fields corresponding to the credentialType are populated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKeyGenerateMode&quot;:&quot;Custom&quot;,&quot;apiKeys&quot;:[&quot;sk-xxxxxxxx&quot;]}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ApiKeyGenerateMode { get; set; }
 
                 /// <summary>
-                /// <para>The list of Key Management Service (KMS) reference names. This parameter is returned only in Reference mode. The reference values are not returned.</para>
+                /// <para>The list of KMS reference names. This parameter is returned only in Reference mode. The reference values are not returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;my-kms-ref&quot;]</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<string> ApiKeyReferences { get; set; }
 
                 /// <summary>
-                /// <para>The list of custom API keys. This parameter is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in the original order without deduplication.</para>
+                /// <para>The list of custom API keys. This parameter is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in their original order without deduplication.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;sk-xxxxxxxx&quot;,&quot;sk-yyyyyyyy&quot;]</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<string> ApiKeys { get; set; }
 
                 /// <summary>
-                /// <para>The AWS access key ID for Bedrock.</para>
+                /// <para>The Bedrock AWS access key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AKIAxxxxxxxx</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AwsAccessKey { get; set; }
 
                 /// <summary>
-                /// <para>The AWS region for Bedrock.</para>
+                /// <para>The region where Bedrock AWS is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>us-east-1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AwsRegion { get; set; }
 
                 /// <summary>
-                /// <para>The AWS secret access key for Bedrock.</para>
+                /// <para>The Bedrock AWS secret access key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string CredentialSource { get; set; }
 
                 /// <summary>
-                /// <para>The Bedrock endpoint mode. The value is runtime for historical null values.</para>
+                /// <para>The Bedrock endpoint mode. Historical null values return runtime.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>runtime</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string EndpointMode { get; set; }
 
                 /// <summary>
-                /// <para>The access key ID for Kling.</para>
+                /// <para>The Kling access key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AKxxxxxxxx</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string KlingAccessKey { get; set; }
 
                 /// <summary>
-                /// <para>The secret access key for Kling.</para>
+                /// <para>The Kling secret access key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sk-kling-9f2c1d7e</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string KlingSecretKey { get; set; }
 
                 /// <summary>
-                /// <para>The original JSON text of the Vertex service account. The text is neither parsed nor reordered.</para>
+                /// <para>The raw JSON text of the Vertex service account. The text is not parsed or reordered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;type&quot;:&quot;service_account&quot;,&quot;private_key&quot;:&quot;********&quot;}</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string VertexProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The Vertex region.</para>
+                /// <para>The region where Vertex is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>us-central1</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The currently active credential type. Valid values: apiKey, bedrock, vertex, and kling.</para>
+            /// <para>The type of the active credential. Valid values: apiKey, bedrock, vertex, and kling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apiKey</para>

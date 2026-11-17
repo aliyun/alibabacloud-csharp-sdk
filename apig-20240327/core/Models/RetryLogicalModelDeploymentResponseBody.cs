@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class RetryLogicalModelDeploymentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned for a successful request, and a specific business error code is returned for a failed request.</para>
+        /// <para>The response status code. Returns Ok upon success and a specific business error code upon failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string OperationId { get; set; }
 
             /// <summary>
-            /// <para>The configuration version.</para>
+            /// <para>The configuration revision.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<RetryLogicalModelDeploymentResponseBodyDataTargets> Targets { get; set; }
             public class RetryLogicalModelDeploymentResponseBodyDataTargets : TeaModel {
                 /// <summary>
-                /// <para>The semantic version of the target configuration. It is used only for delivery recovery and does not record the API release time.</para>
+                /// <para>The semantic version of the target configuration. This version is used only for delivery recovery and does not record the API release time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7e4f52a9b0c34d16a268e913f5c2087b</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConfigRevision { get; set; }
 
                 /// <summary>
-                /// <para>The related configuration environment.</para>
+                /// <para>The associated configuration environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env-d00000000000000000000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Error { get; set; }
 
                 /// <summary>
-                /// <para>The related API configuration target.</para>
+                /// <para>The associated API configuration target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-d00000000000000000000</para>
